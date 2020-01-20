@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HeadQuartersChapterSkin1" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="m_pItemRoot" top="0" bottom="0" width="1334" horizontalCenter="0">
+		<e:Image y="-1.33" horizontalCenter="0.5" source="2效果图_jpg"/>
+		<e:Image id="m_BackGround" source="gk-fb05_jpg" horizontalCenter="0" height="750" y="0" anchorOffsetX="0" visible="false"/>
+		<ns1:HeadQuartersItem id="Item0" x="199.37" y="353.49" skinName="HeadQuartersItemSkin" currentState="Normal" anchorOffsetX="55" anchorOffsetY="140"/>
+		<ns1:HeadQuartersItem id="Item1" x="298.02" y="414.37" skinName="HeadQuartersItemSkin" anchorOffsetX="55" anchorOffsetY="140"/>
+		<ns1:HeadQuartersItem id="Item2" x="433.21" y="407.2" skinName="HeadQuartersItemSkin" currentState="Boss" anchorOffsetX="60" anchorOffsetY="170"/>
+		<ns1:HeadQuartersItem id="Item3" x="555.86" y="390.14" skinName="HeadQuartersItemSkin" currentState="Normal" anchorOffsetX="55" anchorOffsetY="140"/>
+		<ns1:HeadQuartersItem id="Item4" x="661.85" y="376.68" skinName="HeadQuartersItemSkin" anchorOffsetX="55" anchorOffsetY="140"/>
+		<ns1:HeadQuartersItem id="Item5" x="772.18" y="363.92" skinName="HeadQuartersItemSkin" currentState="Boss" anchorOffsetX="60" anchorOffsetY="170"/>
+		<ns1:HeadQuartersItem id="Item6" x="868.91" y="330.7" skinName="HeadQuartersItemSkin" currentState="Normal" anchorOffsetX="55" anchorOffsetY="140"/>
+		<ns1:HeadQuartersItem id="Item7" x="940.27" y="278.76" skinName="HeadQuartersItemSkin" anchorOffsetX="55" anchorOffsetY="140" currentState="Normal"/>
+		<ns1:HeadQuartersItem id="Item8" x="1040.42" y="253.04" skinName="HeadQuartersItemSkin" currentState="Boss" anchorOffsetX="60" anchorOffsetY="170"/>
+		<ns1:HeadQuartersItem id="Item9" x="1149.9" y="275.88" skinName="HeadQuartersItemSkin" anchorOffsetX="55" anchorOffsetY="140"/>
+		<ns1:HeadQuartersItem id="Item10" x="1124.98" y="515.69" skinName="HeadQuartersItemSkin" currentState="Normal" anchorOffsetX="55" anchorOffsetY="140"/>
+		<ns1:HeadQuartersItem id="Item11" x="931.97" y="647.47" skinName="HeadQuartersItemSkin" currentState="BossEx" anchorOffsetX="60" anchorOffsetY="170"/>
+		<e:Group id="m_ArrowRoot" x="199.67" y="309" touchChildren="false" touchEnabled="false" anchorOffsetX="25.33" anchorOffsetY="109" width="50.67" height="109">
+			<e:Image id="m_Arrow" source="tx-jt_png" scaleX="1" scaleY="1" horizontalCenter="0" y="0"/>
+		</e:Group>
+		<e:Image width="20" height="20" x="190" y="612"/>
+	</e:Group>
+</e:Skin>

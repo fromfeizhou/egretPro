@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="66" height="45" tilewidth="32" tileheight="32" infinite="0" nextobjectid="17982">
+ <tileset firstgid="1" name="出生点" tilewidth="319" tileheight="191" tilecount="1" columns="1">
+  <image source="map_xiangyang_base.png" width="319" height="191"/>
+ </tileset>
+ <tileset firstgid="2" name="西门" tilewidth="129" tileheight="134" tilecount="1" columns="1">
+  <image source="map_xiangyang_door_105.png" width="129" height="134"/>
+ </tileset>
+ <tileset firstgid="3" name="东门" tilewidth="129" tileheight="135" tilecount="1" columns="1">
+  <image source="map_xiangyang_door_104.png" width="129" height="135"/>
+ </tileset>
+ <tileset firstgid="4" name="南门" tilewidth="164" tileheight="159" tilecount="1" columns="1">
+  <image source="map_xiangyang_door_106.png" width="164" height="159"/>
+ </tileset>
+ <tileset firstgid="5" name="北门" tilewidth="117" tileheight="143" tilecount="1" columns="1">
+  <image source="map_xiangyang_door_107.png" width="117" height="143"/>
+ </tileset>
+ <tileset firstgid="6" name="城中心" tilewidth="153" tileheight="130" tilecount="1" columns="1">
+  <image source="map_xiangyang_door_108.png" width="153" height="130"/>
+ </tileset>
+ <imagelayer name="地图">
+  <image source="皇帝战底图.jpg" width="2115" height="1438"/>
+ </imagelayer>
+ <imagelayer name="襄阳战底图">
+  <image source="皇帝战效果图.jpg" width="2115" height="1438"/>
+ </imagelayer>
+ <objectgroup name="city108-襄阳-中心">
+  <object id="17981" gid="6" x="1005" y="735" width="153" height="130"/>
+ </objectgroup>
+ <objectgroup name="city107-襄阳-北门">
+  <object id="17980" gid="5" x="839" y="671" width="117" height="143"/>
+ </objectgroup>
+ <objectgroup name="city106-襄阳-南门">
+  <object id="17979" gid="4" x="1183" y="863" width="164" height="159"/>
+ </objectgroup>
+ <objectgroup name="city105-襄阳-西门">
+  <object id="17977" gid="2" x="847" y="853" width="129" height="134"/>
+ </objectgroup>
+ <objectgroup name="city104-襄阳-东门">
+  <object id="17978" gid="3" x="1192" y="676" width="129" height="135"/>
+ </objectgroup>
+ <objectgroup name="city103-本阵-吴国">
+  <object id="17976" gid="1" x="1553" y="1149" width="319" height="191"/>
+ </objectgroup>
+ <objectgroup name="city102-本阵-蜀国">
+  <object id="17975" gid="1" x="262" y="1153" width="319" height="191"/>
+ </objectgroup>
+ <objectgroup name="city101-本阵-魏国">
+  <object id="17974" gid="1" x="316" y="477" width="319" height="191"/>
+ </objectgroup>
+</map>

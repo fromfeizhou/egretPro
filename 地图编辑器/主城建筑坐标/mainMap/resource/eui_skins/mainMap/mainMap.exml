@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="mainMap" width="3433" height="2292" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="166ecf969c3"/>
+	<e:Image id="m_pBG" x="0" y="0" source="mainMapAll_jpg"/>
+	<!--<e:Image source="map_main_build1_jpg" x="0" y="0"/>-->
+	
+	<e:Group width="3433" height="2292" x="0" y="0">
+		<e:Image x="1587" y="10" source="EMap_Waterfall_xiao1_json.EMap_Waterfall_xiao1_0_png"/>
+		<e:Group x="2402" y="504" anchorOffsetX="283" anchorOffsetY="233">
+			<e:Image id="bulid_0" source="map_main_build0_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name0" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="304" y="17">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName0" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-32" y="-238" scaleX="1" scaleY="1" source="EBuild_UpGrade_Big_json.EBuild_UpGrade_Big_8_png"/>
+		</e:Group>
+		<e:Group x="2229" y="1669" anchorOffsetX="88" anchorOffsetY="55">
+			<e:Image id="tian_1" source="map_main_build1_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-80" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group x="2103" y="1737" anchorOffsetX="88" anchorOffsetY="55">
+			<e:Image source="map_main_build1_png" id="tian_2" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-83" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group x="2279" y="1767" anchorOffsetX="88" anchorOffsetY="55">
+			<e:Image source="map_main_build1_png" id="tian_3" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-83" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group x="2153" y="1840.5" anchorOffsetX="88" anchorOffsetY="55">
+			<e:Image source="map_main_build1_png" id="tian_4" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-83" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group x="2878" y="1645" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image id="mu_1"  source="map_main_build18_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group x="2736" y="1727" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image source="map_main_build18_png"  id="mu_2" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="3014.5" y="1720" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image source="map_main_build18_png" id="mu_3" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="2883" y="1800" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image id="mu_4" source="map_main_build18_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="2377.5" y="1545" anchorOffsetX="90" anchorOffsetY="63">
+			<e:Image id="market_1" source="map_main_build2_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="2531.5" y="1473" anchorOffsetX="90" anchorOffsetY="63">
+			<e:Image source="map_main_build2_png"  id="market_2" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="2649" y="1541.5" anchorOffsetX="90" anchorOffsetY="63">
+			<e:Image source="map_main_build2_png"  id="market_3" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="2499" y="1624" anchorOffsetX="90" anchorOffsetY="63">
+			<e:Image source="map_main_build2_png"  id="market_4" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="2988.5" y="1223.5" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image id="tie_1"  source="map_main_build19_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-27.5" y="-66.5" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="2929.5" y="1342" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image source="map_main_build19_png"  id="tie_2" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-24" y="-70" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="3126.5" y="1291.5" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image source="map_main_build19_png"  id="tie_3" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-22.5" y="-64.5" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+		<e:Group  x="3074" y="1423" anchorOffsetX="91" anchorOffsetY="65">
+			<e:Image source="map_main_build19_png"  id="tie_4" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-26" y="-68" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		</e:Group>
+
+		<e:Group  x="962" y="337" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image id="bulid_157"  source="map_main_build157_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="1616" y="395" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" visible="true">
+			<e:Image id="bulid_158" source="map_main_build158_png" x="0"  scaleX="1" scaleY="1"/>
+			<e:Group id="p_name2" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="100" y="0">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName3" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+		</e:Group>
+		<e:Group  x="1870" y="626" anchorOffsetX="136" anchorOffsetY="116">
+			<e:Image id="bulid_5" source="map_main_build5_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name5" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="145" y="-7">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName1" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-42" y="-75" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Image id="bulid_22" x="1356" y="1079" source="map_main_build22_png" anchorOffsetX="144" anchorOffsetY="103"/>
+		<e:Group  x="1027" y="1020" anchorOffsetX="137" anchorOffsetY="87">
+			<e:Group id="p_name6" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="131" y="-10.5">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName2" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image id="bulid_6" source="map_main_build6_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image x="-50" y="-122" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="1536" y="597" anchorOffsetX="130" anchorOffsetY="110">
+			<e:Image id="bulid_7" source="map_main_build7_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name7" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" y="0" horizontalCenter="0">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName4" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-35" y="-114" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="1284" y="854" anchorOffsetX="146" anchorOffsetY="113">
+			<e:Image id="bulid_8" source="map_main_build8_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name8" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="113" y="-16">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName5" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-69" y="-94" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="2276.5" y="836" anchorOffsetX="146" anchorOffsetY="114">
+			<e:Image id="bulid_10" source="map_main_build10_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name10" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="119" y="-9">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName6" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-50" y="-93" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="2679" y="907" anchorOffsetX="138" anchorOffsetY="103">
+			<e:Image id="bulid_12" source="map_main_build12_png" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name12" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="103" y="-16">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName7" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-42" y="-106" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+
+		<e:Group  x="1848" y="886" anchorOffsetX="88" anchorOffsetY="97">
+			<e:Image  id="bulid_13" source="map_main_build13_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name13" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="76" y="-12">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName8" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65" y="-82" x="-40"/>
+		</e:Group>
+		<e:Group  x="2389" y="1026" anchorOffsetX="127" anchorOffsetY="106">
+			<e:Image  id="bulid_14"  source="map_main_build14_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name14" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" y="-9" x="113">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName9" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-73" y="-92" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="1799" y="1153" anchorOffsetX="140" anchorOffsetY="99">
+			<e:Image  id="bulid_15" source="map_main_build15_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name15" scaleX="1" scaleY="1" anchorOffsetX="55" anchorOffsetY="16" y="0" x="157">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName10" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-64" y="-98" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="2029" y="1251" anchorOffsetX="139" anchorOffsetY="114">
+			<e:Image  id="bulid_16" source="map_main_build16_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name16" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="145" y="-13">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName11" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-54" y="-136" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group  x="1785" y="1379" anchorOffsetX="143" anchorOffsetY="111">
+			<e:Image  id="bulid_17" source="map_main_build17_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="p_name17" scaleX="1" scaleY="1" anchorOffsetX="50" anchorOffsetY="16" x="157" y="16">
+				<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+				<e:Label id="m_pLbName12" text="藏经过 1级" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-54" y="-127" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group x="1560" y="1267" anchorOffsetX="138" anchorOffsetY="108">
+			<e:Image id="bulid_1" x="0" y="0" scaleX="1" scaleY="1" source="map_main_build23_png"/>
+			<e:Group id="p_name1" scaleX="1" scaleY="1" anchorOffsetX="55" anchorOffsetY="16" y="30" x="104">
+			<e:Image source="border_1028_png" left="2" right="2" scale9Grid="8,3,50,24" verticalCenter="-1.5"/>
+			<e:Label id="m_pLbName14" text="枪兵营" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" verticalAlign="middle" anchorOffsetY="0" horizontalCenter="0" height="30" left="12" right="9" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image x="-64" y="-98" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Image id="solider_1" x="1403" y="1193" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_2" x="1428" y="1180" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_3" x="1451" y="1167" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_0" x="1608" y="1083" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_4" x="1680" y="998" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_5" x="1715" y="973" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_6" x="1738" y="958" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_7" x="1758" y="943" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_2_1" x="1903" y="871" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_2_0" x="1930" y="855" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_2_2" x="2072" y="772" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_2_3" x="2150" y="662" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_2_4" x="2238" y="615" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image id="solider_2_5" x="2258" y="601" source="EMap_Solider_Right_0_png" anchorOffsetX="51" anchorOffsetY="51"/>
+		<e:Image x="2718" y="1838" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Left_Up_json.EMap_Farmer_Left_Up_0_png"/>
+		<e:Image x="2515" y="1747" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Left_Up_json.EMap_Farmer_Left_Up_0_png"/>
+		<e:Image x="2576" y="1689" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Left_Up_json.EMap_Farmer_Left_Up_0_png" scaleX="-1"/>
+		<e:Image x="2650" y="1640" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Left_Up_json.EMap_Farmer_Left_Up_0_png" scaleX="-1"/>
+		<e:Image x="2780" y="1599" anchorOffsetX="17" anchorOffsetY="23" scaleX="-1" source="EMap_Farmer_Right_down_json.EMap_Farmer_Right_down_0_png"/>
+		<e:Image id="farmer1" x="2631" y="1319" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Right_down_json.EMap_Farmer_Right_down_0_png" visible="false"/>
+		<e:Image id="farmer2" x="2655" y="1331" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Right_down_json.EMap_Farmer_Right_down_0_png" visible="false"/>
+		<e:Image x="2756" y="1382" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Right_down_json.EMap_Farmer_Right_down_0_png" id="farmer0" visible="false"/>
+		<e:Image x="2880" y="1448" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Right_down_json.EMap_Farmer_Right_down_0_png" id="farmer3" visible="false"/>
+		<e:Image x="3057" y="1567" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Right_down_json.EMap_Farmer_Right_down_0_png" id="farmer4" visible="false"/>
+		<e:Image x="3081" y="1584" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Right_down_json.EMap_Farmer_Right_down_0_png" id="farmer5" visible="false"/>
+		<e:Image id="boss0" x="1779" y="646" anchorOffsetX="17" anchorOffsetY="23" source="EWorld_Monster_2001_0_png" scaleX="2" scaleY="2" visible="false"/>
+		<e:Image id="boss1" x="748.6" y="1480" anchorOffsetX="0" anchorOffsetY="0" source="EWorld_Monster_2003_0_png" scaleX="2" scaleY="2" visible="false"/>
+		<e:Image id="boss2" x="2637" y="1220" anchorOffsetX="17" anchorOffsetY="23" source="EWorld_Monster_2003_0_png" scaleX="2" scaleY="2" visible="false"/>
+		<e:Image id="balltePlayer1" x="1020" y="1705" anchorOffsetX="17" anchorOffsetY="23" source="EMap_Farmer_Right_down_0_png" visible="false"/>
+		<e:Image x="1700" y="1500" source="EBuild_UpGrade_MId_json.EBuild_UpGrade_MId_8_png" scaleX="0.65" scaleY="0.65"/>
+		<e:Image id="map_main_build24" source="map_main_build24_png" x="629.41" y="1206.16" anchorOffsetX="108" anchorOffsetY="112"/>
+		<e:Image id="map_main_build25" x="1241.64" y="1503.47" anchorOffsetX="108" anchorOffsetY="116" source="map_main_build25_png"/>
+		<e:Image id="map_main_build32" source="map_main_build32_png" x="826.88" y="1486.42"/>
+		<e:Image id="map_main_build33" x="1016.54" y="1618.92" source="map_main_build33_png"/>
+		<e:Image id="map_main_build31" source="map_main_build31_png" x="538.67" y="390"/>
+		<e:Image id="map_main_build34" source="map_main_build34_png" x="2385.65" y="1785"/>
+		<e:Image id="map_main_build37" source="map_main_build21_png" x="1103" y="1305" anchorOffsetX="230" anchorOffsetY="187"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="51" height="24" tilewidth="32" tileheight="32" infinite="0" nextobjectid="7">
+ <tileset firstgid="1" name="头像位置" tilewidth="157" tileheight="180" tilecount="1" columns="1">
+  <image source="zyt_38.png" width="157" height="180"/>
+ </tileset>
+ <imagelayer name="图像图层 1">
+  <image source="lszybj_3.jpg" width="1623" height="750"/>
+ </imagelayer>
+ <objectgroup name="头像位置">
+  <object id="1" name="1" gid="1" x="413" y="426" width="157" height="180"/>
+  <object id="3" name="2" gid="1" x="630.5" y="330" width="157" height="180"/>
+  <object id="4" name="3" gid="1" x="816.5" y="439" width="157" height="180"/>
+  <object id="5" name="4" gid="1" x="1042.5" y="515" width="157" height="180"/>
+  <object id="6" name="5" gid="1" x="1086.5" y="295" width="157" height="180"/>
+ </objectgroup>
+</map>

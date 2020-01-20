@@ -1,0 +1,405 @@
+{
+	"groups": [
+		{
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,db-qp_png,db-qp2_png,db-yy_png,gk-fb01_jpg,gk-fb02_jpg,gk-fb03_jpg,gk-fb04_jpg,gk-fb05_jpg,tx-jt_png,tx-pt_png,tx-sj_png,1效果图_jpg,2效果图_jpg,3效果图_jpg,4效果图_jpg,5效果图_jpg,mainMapAll_jpg,border_1028_png,buildOpenIcon_png,buildOpenIconLocked_png,buildOpenIconMask_png,common_red_flag3_png,com_state_up_png,map_main_build0_png,map_main_build1_png,map_main_build10_png,map_main_build12_png,map_main_build13_png,map_main_build14_png,map_main_build15_png,map_main_build155_png,map_main_build157_png,map_main_build158_png,map_main_build16_png,map_main_build17_png,map_main_build18_png,map_main_build19_png,map_main_build2_png,map_main_build22_png,map_main_build23_png,map_main_build5_png,map_main_build6_png,map_main_build7_png,map_main_build8_png,map_main_build34_png,map_main_build31_png,map_main_build32_png,map_main_build33_png,map_main_build24_png,map_main_build25_png,map_6_jpg,wall_png,map_main_build21_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "b_head_quarters/db-qp.png",
+			"type": "image",
+			"name": "db-qp_png"
+		},
+		{
+			"url": "b_head_quarters/db-qp2.png",
+			"type": "image",
+			"name": "db-qp2_png"
+		},
+		{
+			"url": "b_head_quarters/db-yy.png",
+			"type": "image",
+			"name": "db-yy_png"
+		},
+		{
+			"url": "b_head_quarters/gk-fb01.jpg",
+			"type": "image",
+			"name": "gk-fb01_jpg"
+		},
+		{
+			"url": "b_head_quarters/gk-fb02.jpg",
+			"type": "image",
+			"name": "gk-fb02_jpg"
+		},
+		{
+			"url": "b_head_quarters/gk-fb03.jpg",
+			"type": "image",
+			"name": "gk-fb03_jpg"
+		},
+		{
+			"url": "b_head_quarters/gk-fb04.jpg",
+			"type": "image",
+			"name": "gk-fb04_jpg"
+		},
+		{
+			"url": "b_head_quarters/gk-fb05.jpg",
+			"type": "image",
+			"name": "gk-fb05_jpg"
+		},
+		{
+			"url": "b_head_quarters/tx-jt.png",
+			"type": "image",
+			"name": "tx-jt_png"
+		},
+		{
+			"url": "b_head_quarters/tx-pt.png",
+			"type": "image",
+			"name": "tx-pt_png"
+		},
+		{
+			"url": "b_head_quarters/tx-sj.png",
+			"type": "image",
+			"name": "tx-sj_png"
+		},
+		{
+			"url": "b_head_quarters/1效果图.jpg",
+			"type": "image",
+			"name": "1效果图_jpg"
+		},
+		{
+			"url": "b_head_quarters/2效果图.jpg",
+			"type": "image",
+			"name": "2效果图_jpg"
+		},
+		{
+			"url": "b_head_quarters/3效果图.jpg",
+			"type": "image",
+			"name": "3效果图_jpg"
+		},
+		{
+			"url": "b_head_quarters/4效果图.jpg",
+			"type": "image",
+			"name": "4效果图_jpg"
+		},
+		{
+			"url": "b_head_quarters/5效果图.jpg",
+			"type": "image",
+			"name": "5效果图_jpg"
+		},
+		{
+			"url": "assets/mainMap/newBuild/mainMapAll.jpg",
+			"type": "image",
+			"name": "mainMapAll_jpg"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/border_1028.png",
+			"type": "image",
+			"name": "border_1028_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/buildOpenIcon.png",
+			"type": "image",
+			"name": "buildOpenIcon_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/buildOpenIconLocked.png",
+			"type": "image",
+			"name": "buildOpenIconLocked_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/buildOpenIconMask.png",
+			"type": "image",
+			"name": "buildOpenIconMask_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/common_red_flag3.png",
+			"type": "image",
+			"name": "common_red_flag3_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/com_state_up.png",
+			"type": "image",
+			"name": "com_state_up_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build0.png",
+			"type": "image",
+			"name": "map_main_build0_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build1.png",
+			"type": "image",
+			"name": "map_main_build1_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build10.png",
+			"type": "image",
+			"name": "map_main_build10_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build12.png",
+			"type": "image",
+			"name": "map_main_build12_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build13.png",
+			"type": "image",
+			"name": "map_main_build13_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build14.png",
+			"type": "image",
+			"name": "map_main_build14_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build15.png",
+			"type": "image",
+			"name": "map_main_build15_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build155.png",
+			"type": "image",
+			"name": "map_main_build155_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build157.png",
+			"type": "image",
+			"name": "map_main_build157_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build158.png",
+			"type": "image",
+			"name": "map_main_build158_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build16.png",
+			"type": "image",
+			"name": "map_main_build16_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build17.png",
+			"type": "image",
+			"name": "map_main_build17_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build18.png",
+			"type": "image",
+			"name": "map_main_build18_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build19.png",
+			"type": "image",
+			"name": "map_main_build19_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build2.png",
+			"type": "image",
+			"name": "map_main_build2_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build22.png",
+			"type": "image",
+			"name": "map_main_build22_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build23.png",
+			"type": "image",
+			"name": "map_main_build23_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build5.png",
+			"type": "image",
+			"name": "map_main_build5_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build6.png",
+			"type": "image",
+			"name": "map_main_build6_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build7.png",
+			"type": "image",
+			"name": "map_main_build7_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build8.png",
+			"type": "image",
+			"name": "map_main_build8_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build34.png",
+			"type": "image",
+			"name": "map_main_build34_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build31.png",
+			"type": "image",
+			"name": "map_main_build31_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build32.png",
+			"type": "image",
+			"name": "map_main_build32_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build33.png",
+			"type": "image",
+			"name": "map_main_build33_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build24.png",
+			"type": "image",
+			"name": "map_main_build24_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build25.png",
+			"type": "image",
+			"name": "map_main_build25_png"
+		},
+		{
+			"url": "assets/map_6.jpg",
+			"type": "image",
+			"name": "map_6_jpg"
+		},
+		{
+			"url": "assets/wall.png",
+			"type": "image",
+			"name": "wall_png"
+		},
+		{
+			"url": "assets/mainMap/b_mainBuilding/map_main_build21.png",
+			"type": "image",
+			"name": "map_main_build21_png"
+		}
+	]
+}
