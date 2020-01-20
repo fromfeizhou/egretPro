@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainSceneBarSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group id="m_group" left="8" top="113" touchEnabled="false" width="92" height="227">
+		<e:Image source="com_toolBg1_png" touchEnabled="false" height="100%" width="100%" />
+		<e:Image source="line_1006_png" y="175.16" left="4" right="4" />
+		<com_main:BuildQueueCell id="m_buildQueue_0" skinName="build_queue_cell_skin" y="47.1" anchorOffsetX="45"
+		                         anchorOffsetY="38" x="45" />
+		<com_main:BuildQueueCell id="m_buildQueue_1" skinName="build_queue_cell_skin" y="125.1" anchorOffsetX="45"
+		                         anchorOffsetY="38" x="45" />
+		<com_main:ComButton id="m_btnBuildAll" y="198.2" skinName="com_button" currentState="style9" anchorOffsetX="41"
+		                    anchorOffsetY="17" x="45" />
+		<com_main:ComButton id="m_btnLevyAll" y="240.85" skinName="com_button" currentState="style9" anchorOffsetX="41"
+		                    anchorOffsetY="17" x="45" visible="false" />
+	</e:Group>
+</e:Skin>

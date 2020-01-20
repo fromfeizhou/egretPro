@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PlayerInfoWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="560" height="680">
+	<e:Group width="560" height="680">
+		<com_main:APopUp id="m_PopUp" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" height="680"/>
+		<e:Image source="border_1008_png" width="546" horizontalCenter="0" height="644" y="-343" touchEnabled="false"/>
+		<com_main:ComHeadItem id="m_comHead" x="31" y="67" width="115" height="127"/>
+		<com_main:ComState id="m_comState" x="378.32" y="92.51" skinName="ComStateSkin" currentState="nor5" scaleX="0.4" scaleY="0.4"/>
+		<e:List id="m_ItemList" anchorOffsetX="0" anchorOffsetY="0" name="m_finishList" y="385.67" horizontalCenter="-6" height="145">
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="-31"/>
+		</e:layout>
+		</e:List>
+		<e:Label id="m_labName" text="玩家名字" x="161" y="85.99" size="24" textColor="0xe9e9e6"/>
+		<e:Label text="联盟: " x="160" y="129.35" size="22" textColor="0x8a8a9e"/>
+		<e:Label id="m_labGuildName" text="联盟名字" x="228" y="129.35" size="22" textColor="0xe9e9e6"/>
+		<e:Label text="职位:" x="160" y="162" size="22" textColor="0x8a8a9e"/>
+		<e:Label id="m_labGuildPos" text="团长" x="228" y="162" size="22" textColor="0xe9e9e6"/>
+		<e:Label text="等级：" x="39.98" y="201.66" size="20" textColor="0x8A8A9E"/>
+		<e:Label id="m_labLevel" text="2" x="99.33" y="201.66" size="20" textColor="0xe9e9e6"/>
+		<e:Group x="19.65" y="236.02" anchorOffsetY="0" anchorOffsetX="0">
+			<e:Image source="border_1001_png" scale9Grid="45,11,14,5" anchorOffsetY="0" height="55" width="100%" alpha="0.8"/>
+			<e:Image y="-2" anchorOffsetY="0" source="line_009_png" width="350" horizontalCenter="0" height="4"/>
+			<e:Image y="44.64" anchorOffsetY="0" source="line_005_png" height="15"/>
+			<com_main:CImage x="67.01" y="6.68" source="lb_zdl_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+			<e:BitmapLabel id="m_labFight" width="182" height="44" x="141.68" y="9.34" font="fight_font_fnt" text="99999" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-15" scaleX="0.75" scaleY="0.75"/>
+		</e:Group>
+		<e:Group width="538" height="66" x="9" y="318.65" anchorOffsetY="0" anchorOffsetX="0">
+			<e:Image x="-10" y="21" scale9Grid="45,11,14,5" anchorOffsetY="0" source="line_003_png" width="177"/>
+			<e:Image x="548" y="21" source="line_003_png" scale9Grid="45,11,14,5" anchorOffsetY="0" width="177" scaleX="-1"/>
+			<e:Label id="m_title" text="最强阵容" y="9.66" size="30" textAlign="center" x="210" textColor="0xe9e9e6"/>
+		</e:Group>
+		<e:Group id="m_pIconRoot" y="577.5" width="457" horizontalCenter="-1.5" height="75">
+			<com_main:ComIcon id="m_iconReport" x="0" y="0" skinName="ComIconSkin"/>
+			<com_main:ComIcon id="m_iconHide" x="20" y="20" skinName="ComIconSkin"/>
+			<com_main:ComIcon id="m_iconChat" x="30" y="30" skinName="ComIconSkin"/>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="47"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

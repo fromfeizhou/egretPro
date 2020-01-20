@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossHurtWndSkin" width="683" height="708" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="683" x="0" height="708" y="0">
+		<com_main:APopUp id="m_APopUp" anchorOffsetY="0" scaleX="1" scaleY="1" currentState="size6" skinName="APopUpSkin" anchorOffsetX="0" width="683" height="708"/>
+		<com_main:CScroller id="m_scroller" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" left="9" top="145" bottom="122" right="9">
+			<e:List id="m_hurtList" anchorOffsetY="0" y="38.67">
+			</e:List>
+		</com_main:CScroller>
+		<e:Group x="7.98" y="72.02">
+			<e:Image source="border_022_png" x="0" y="0" anchorOffsetX="0" width="665" scaleX="1" scaleY="1"/>
+			<e:Image source="line_008_png" scaleX="0.5" scaleY="1" rotation="269.81" width="135" y="67.98" x="129.02"/>
+			<e:Image source="line_008_png" scaleX="0.5" scaleY="1" rotation="269.81" width="135" y="67.98" x="319.67"/>
+			<e:Image source="line_008_png" scaleX="0.5" scaleY="1" rotation="269.81" width="135" y="67.98" x="508.36"/>
+			<e:Label text="排行" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" y="23.98" x="44.02"/>
+			<e:Label text="玩家名称" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" x="174.02" y="23.98"/>
+			<e:Label text="玩家战力" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" x="365.36" y="23.98"/>
+			<e:Label text="总伤害" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" x="547.36" y="23.98"/>
+		</e:Group>
+		<com_main:CLabel id="m_hurtTip" text="尚未有人上榜" textAlign="center" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="24" border="false" textColor="0xEFEFF4" anchorOffsetX="0" width="233" horizontalCenter="0" verticalCenter="-25"/>
+		<e:Group width="665" height="111" x="11" y="588" scaleX="1" scaleY="1">
+			<e:Image source="border_1034_png" scale9Grid="19,19,115,114" scaleX="1" scaleY="1" y="-20" x="-20"/>
+			<e:Image id="m_myHurtCoin" source="Icon_List_NO1_png" x="6" y="20.5" scaleX="1" scaleY="1"/>
+			<com_main:ComState id="m_comState" x="136" y="39" skinName="ComStateSkin"/>
+			<com_main:CLabel id="m_roleName" text="玩家的名字" textAlign="left" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="24" border="false" textColor="0xEFEFF4" x="180" y="46.5" anchorOffsetX="0" width="143"/>
+			<com_main:CLabel id="m_hurtCount" text="9999999" textAlign="left" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="24" border="false" textColor="0xEFEFF4" x="521" y="48.5" anchorOffsetX="0" width="137"/>
+			<com_main:CLabel id="m_hurtPower" text="9999999" textAlign="left" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="24" border="false" x="355" y="48.5" anchorOffsetX="0" width="137" textColor="0xFFFF99"/>
+			<e:Label id="m_rankingNum" text="1" size="30" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" horizontalCenter="-276.5" verticalCenter="-1.5" textAlign="center"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

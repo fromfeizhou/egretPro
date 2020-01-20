@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SelectRewardSkin" width="852" height="528" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+    <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" width="847" x="3" height="522" y="1" locked="true"/>
+	<e:Image source="border_1037_png" y="64.5" width="503" height="503" alpha="0.7" x="175" locked="true"/>
+	<e:Image source="border_1008_png" y="167" horizontalCenter="0" width="833" height="104" scaleY="-1" locked="true"/>
+	<e:Scroller width="813" height="310" x="21" y="75">
+        <e:Group id="m_showList">
+					<e:layout>
+						<e:TileLayout horizontalGap="14" verticalGap="15" paddingLeft="16" paddingTop="10"/>
+					</e:layout>
+				</e:Group>
+	</e:Scroller>
+	<e:Image source="border_1019_png" x="8.67" y="345.69" anchorOffsetX="0" width="834" anchorOffsetY="0" height="40" alpha="0.8" locked="true"/>
+	<e:Image source="line_1006_png" y="384.69" x="123" locked="true"/>
+	<e:Group width="832" height="122" x="11" y="393" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:ComItemNew id="m_staticItem" x="26" y="14" skinName="com_item_new" scaleX="1" scaleY="1"/>
+		<e:Image source="btn_025_up_png" x="129" y="30" scaleX="1" scaleY="1"/>
+		<e:Group id="m_itemBack" width="438" height="109" x="197" y="10" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Group width="100" height="100" x="115" y="5">
+				<e:Image source="Qualitykuang0_png" anchorOffsetX="0" width="100" anchorOffsetY="0" height="100" scaleX="1" scaleY="1"/>
+				<e:Image source="border_006_png" x="0" y="0" width="100" height="100" alpha="0.3"/>
+			</e:Group>
+			<e:Group width="100" height="100" x="125" y="15">
+				<e:Image source="Qualitykuang0_png" anchorOffsetX="0" width="100" anchorOffsetY="0" height="100" scaleX="1" scaleY="1"/>
+				<e:Image source="border_006_png" x="0" y="0" width="100" height="100" alpha="0.3"/>
+			</e:Group>
+			<e:Group width="100" height="100" x="135" y="25">
+				<e:Image source="Qualitykuang0_png" anchorOffsetX="0" width="100" anchorOffsetY="0" height="100" scaleX="1" scaleY="1"/>
+				<e:Image source="border_006_png" x="0" y="0" width="100" height="100" alpha="0.3"/>
+			</e:Group>
+			<e:Group width="100" height="100" x="145" y="35">
+				<e:Image source="Qualitykuang0_png" anchorOffsetX="0" width="100" anchorOffsetY="0" height="100" scaleX="1" scaleY="1"/>
+				<e:Image source="border_006_png" x="0" y="0" width="100" height="100" alpha="0.3"/>
+			</e:Group>
+			<e:layout>
+				<e:HorizontalLayout gap="9" paddingLeft="6" paddingTop="4"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="m_selectItemList" width="438" height="109" x="197" y="10" anchorOffsetX="0" anchorOffsetY="0">
+			<e:layout>
+			<e:HorizontalLayout gap="9" paddingLeft="6" paddingTop="4"/>
+			</e:layout>
+		</e:Group>
+		<e:Label id="m_lbSelectNum" text="已选择奖励0/4" x="668" y="18" size="20" fontFamily="Microsoft YaHei"/>
+		<com_main:ComButton id="m_btnSure" skinName="com_button" currentState="style1" horizontalCenter="321.5" verticalCenter="18" x="430" y="-102" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

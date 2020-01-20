@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="generalHeadTitleSkin" width="211" height="110" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:BattleHeadInfo id="m_headInfo" y="78" skinName="roel_battle_head_info" horizontalCenter="0.5"/>
+	<e:Label id="m_factionName" text="大哥大哥【副团长】" y="61" horizontalCenter="0.5" size="18" textColor="0x00c6ff" stroke="2" fontFamily="Microsoft YaHei" verticalAlign="middle"/>
+	<e:Image id="m_playerTitle" source="playerTitle_1_png" y="10" horizontalCenter="0.5"/>
+</e:Skin>

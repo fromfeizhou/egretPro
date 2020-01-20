@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PayRechargePanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="common,recharge"   xmlns:com_main="com_main.*" width="1159" height="676">
+	<e:Group width="100%" height="100%" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="m_imgIcon" y="0" left="0" right="-2" source="hd_20101_jpg"/>
+		<e:Group id="m_pTimeGroup" left="10" top="20" top.common="45">
+			<e:Image source="border_1058_png" y="0" left="0" y.common="0"/>
+			<com_main:CLabel id="m_labOpenTime" text="2月17日23时-2月18日23时" textColor="0xE5E3E3" fontFamily="Microsoft YaHei" size="20" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+			<com_main:CLabel id="m_labDesc" text="本礼包不会激活首充，累计充值，原有充值档位双倍效果，可以正常获得贵族经验" textColor="0xE9e9e9" fontFamily="Microsoft YaHei" size="18" scaleX="1" scaleY="1" stroke="2" strokeColor="0xb7524a" left="30" top="85" width="340" lineSpacing="7" visible.common="false"/>
+		<com_main:CScroller id="m_scroller" anchorOffsetX="0" anchorOffsetY="0" width.common="1096" height.common="511" width="1096" height="511" x="62" y="155">
+			<e:List id="m_pItemRoot" name="m_finishList" x="0" y="98.67" anchorOffsetY="0" anchorOffsetX="0">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+		</com_main:CScroller>
+		<e:Group id="m_pBoxRoot" y="17" anchorOffsetY="0" anchorOffsetX="0" right="5">
+			<e:Image id="m_btnBox" anchorOffsetX="48.5" anchorOffsetY="50.5" scaleX="1" scaleY="1" source="bx-open_png" horizontalCenter="0" y="36.5"/>
+			<e:Group id="m_AllOutRoot" y="24" horizontalCenter="0.5">
+				<e:Image source="border_1001_png" horizontalCenter="-1" verticalCenter="0"/>
+				<e:Label text="已领取" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x00FF00" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="m_boxRoot" width="90" height="90" y="-15" horizontalCenter="0.5"/>
+			<e:Group x="0" y="97">
+				<e:Image y="0" x="0" source="com_wzk7_png"/>
+				<com_main:CLabel text="七日奖励" fontFamily="Microsoft YaHei" size="22" scaleX="1" scaleY="1" textColor="0xe7c772" x="29" y="7"/>
+				<com_main:CLabel id="m_labPro" text="0/7" fontFamily="Microsoft YaHei" size="22" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="42.5" textColor="0xe5e3e3"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pBtnBuy" y="42" right="44" visible="false">
+			<com_main:ComPayButton id="m_btnGrowBuy" skinName="com_cost_button" currentState="style2" anchorOffsetX="72.5" anchorOffsetY="30" horizontalCenter="0" y="38"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

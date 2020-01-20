@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="building_info_newview" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<com_main:CImage scaleX="1" scaleY="1" source="border_004_jpg" left="0" top="0" right="0" bottom="0" />
+	</e:Group>
+	<e:Group id="m_pViewRoot" horizontalCenter="0" verticalCenter="26.5" touchEnabled="false">
+		<e:Group id="m_pGoFunc" y="39" x="24">
+			<com_main:CImage id="m_pGoFuncImg" anchorOffsetX="0" source="city_icon_kj_png" y="0"  horizontalCenter="0" width="76" height="75"/>
+			<com_main:CImage anchorOffsetX="0" source="lb_djqw_png"   y="82"/>
+			<com_main:CImage anchorOffsetX="0" source="btn_037_up_png"   y="106" rotation="-90" x="73" scaleX="0.5" scaleY="0.5"/>
+		</e:Group>
+		<e:Group id="m_buildGroup" anchorOffsetY="0" width="425" x="141" height="400" y="41">
+			<e:Group horizontalCenter="-3.5" verticalCenter="48" width="425" height="401">
+				<com_main:CImage anchorOffsetX="0" source="border_1027_png" scaleX="1" scaleY="1" width="425" x="0" y="0"  height="401"/>
+				<com_main:CImage id="m_pBuildIcon" scaleX="1" scaleY="1" source="" horizontalCenter="0" verticalCenter="0" />
+			</e:Group>
+			<com_main:CImage y="0" source="border_1013_png" anchorOffsetX="0" x="0" width="424.82" />
+			<com_main:CLabel id="m_pLbBuildName" text="主殿" x="12.95" y="13.67" textColor="0xf9e84a" size="30" anchorOffsetY="0"
+			                 anchorOffsetX="0" width="205.33" textAlign="right" />
+			<com_main:CLabel id="m_pLbCurLv" text="等级 4" x="235.82" y="17" textAlign="left" size="26" />
+		</e:Group>
+		<e:Group width="546" x="752" height="677" y="0">
+			<com_main:CImage source="frame_001_jpg" left="0" right="0" top="0" x="-371" y="32" scaleX="1" scaleY="1" />
+			<com_main:CImage source="frame_101_jpg" scale9Grid="16,13,89,80" top="62" bottom="0" right="0" left="0" x="-365"
+			                 y="12" scaleX="1" scaleY="1" anchorOffsetY="0" />
+			<com_main:CLabel id="m_pLbNextLv" text="下一等级 5" y="32" textAlign="center" width="320" height="40" anchorOffsetX="160"
+			                 anchorOffsetY="20" horizontalCenter="0" verticalAlign="middle" size="28" textColor="0xFFFDDD"
+			                 stroke="2" fontFamily="Microsoft YaHei" />
+			<com_main:CImage id="m_BottomBorder0" source="frame_201_png" bottom="5" scaleX="1" scaleY="1" anchorOffsetY="0"
+			                 width="552" x="0" left="3" right="3" />
+			<com_main:CScroller id="m_Scroller" anchorOffsetY="0" anchorOffsetX="0" width="496.67" scaleX="1" scaleY="1"
+			                    bottom="138" horizontalCenter="1.5" top="75">
+				<e:List id="m_materialList" width="1032" anchorOffsetX="0" height="396" anchorOffsetY="0" name="m_finishList"
+				        x="-44" y="1">
+					<e:layout>
+						<e:TileLayout horizontalGap="20" verticalGap="20" />
+					</e:layout>
+				</e:List>
+			</com_main:CScroller>
+			<com_main:ComCostTextButton id="m_pBtnLvUp" x="411" y="615.33" skinName="com_cost_text_button" currentState="size6"
+			                            anchorOffsetX="100" anchorOffsetY="41" />
+			<com_main:ComCostTextButton id="m_pBtnFastFinis" y="615.33" skinName="com_cost_text_button" currentState="size5"
+			                            anchorOffsetX="100" anchorOffsetY="41" horizontalCenter="-112" />
+		</e:Group>
+		<e:Group id="m_upGroup" height="180" anchorOffsetX="0" width="735" x="0" y="456">
+			<com_main:CImage y="-3" anchorOffsetX="0" width="735" anchorOffsetY="0" height="182" source="border_1005_png"
+			                 scale9Grid="55,3,528,52" horizontalCenter="0" />
+			<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" x="10" source="border_1011_png" top="17"
+			                 height="33" />
+			<com_main:CImage y="5.5" anchorOffsetX="0" anchorOffsetY="0" source="line_1003_png" rotation="-180"
+			                 horizontalCenter="0" height="6" width="208" />
+			<com_main:CLabel text="升级效果" size="30" fontFamily="Microsoft YaHei" horizontalCenter="0" top="16" />
+			<com_main:CImage source="line_1005_png" rotation="-90" height="674" horizontalCenter="0" width="4" top="-2" />
+			<com_main:CImage source="line_1005_png" rotation="-90" height="674" horizontalCenter="0" y="184" />
+			<com_main:CLabel id="m_pLbLvUpDesc" text="木材" x="96.33" y="101.83" anchorOffsetX="0" width="620.67" size="24"
+			                 fontFamily="Microsoft YaHei" />
+			<e:Group id="m_effectValueRoot" x="330" y="101.5" visible="false">
+				<com_main:CLabel id="m_pLbCurLvValue" text="140000" x="0.33" y="0" anchorOffsetX="0" scaleX="1" scaleY="1" size="24"
+				                 fontFamily="Microsoft YaHei" />
+				<e:Group width="40" height="29" x="119" y="4">
+					<com_main:CImage source="com_state_up_png" scaleX="1" scaleY="1" anchorOffsetX="10" anchorOffsetY="15"
+					                 rotation="90" x="23" y="13" />
+				</e:Group>
+				<com_main:CLabel id="m_pLbNextLvValue" text="1500000" x="62" y="271.5" size="24" fontFamily="Microsoft YaHei" />
+				<e:layout>
+					<e:HorizontalLayout gap="20" />
+				</e:layout>
+			</e:Group>
+			<com_main:CScroller id="m_pEffectScroller" anchorOffsetY="0" anchorOffsetX="0" width="611" horizontalCenter="0"
+			                    y="64.27" height="106" x="41" scaleX="1" scaleY="1">
+				<e:List id="m_pEffectList" anchorOffsetX="0" anchorOffsetY="0" name="m_finishList" x="13" y="-27">
+					<e:layout>
+						<e:VerticalLayout horizontalAlign="center" paddingLeft="36" verticalAlign="middle" paddingTop="5"  gap="6"/>
+					</e:layout>
+				</e:List>
+			</com_main:CScroller>
+		</e:Group>
+	</e:Group>
+	<com_main:MainTopNew id="m_pTitle" skinName="new_top_main" width="100%"/>
+	<!--<com_main:ConsumesPrice id="m_pPriceWidget" y="675.32" skinName="consumes_price" horizontalCenter="0" />
+	-->
+</e:Skin>

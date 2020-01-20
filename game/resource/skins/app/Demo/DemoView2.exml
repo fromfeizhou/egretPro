@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DemoView2" width="400" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0xd77879"/>
+	<e:Image source="Main_Resource_Diamond_png" x="73" y="73"/>
+	<e:Image source="Main_Resource_Gold_png" x="137" y="73"/>
+	<e:Image id="Btn_Test" source="Main_Queue_png" horizontalCenter="0" verticalCenter="70"/>
+	<e:Label text="面板2" x="182" y="31"/>
+	<e:Label id="Lbl_Test" text="1" x="200" y="84"/>
+</e:Skin>

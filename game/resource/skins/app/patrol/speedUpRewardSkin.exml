@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="speedUpRewardSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1072" height="572" x="130" y="94" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:APopUp id="ApopUp" skinName="APopUpSkin" scaleX="1" scaleY="1" width="1044" height="556" horizontalCenter="-1" verticalCenter="2" currentState="size3"/>
+		<e:Group x="23" y="85">
+			<e:Image x="0" y="0" source="hang_bg_png" width="1026" height="352"/>
+			<e:Image x="306.83" y="36.01" source="hang_btd_png"/>
+			<e:Image y="126" x="166" source="hang_ct_png"/>
+			<e:Label text="资源" x="220.68" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+			<e:Label text="获得数量" x="336.34" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+			<e:Label text="贵族加成" x="520.33" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+			<e:Label text="科技加成" x="685.35" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+			<e:Image y="192" x="166" source="hang_ct_png"/>
+			<e:Image y="258" x="166" source="hang_ct_png"/>
+		</e:Group>
+		<e:Label id="speedUpTime_lb" text="立即获得1小时加速" y="129.15" size="30" fontFamily="Microsoft YaHei" horizontalCenter="1" x="398" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+		<e:Label text="今日次数：" y="488" size="24" fontFamily="Microsoft YaHei" horizontalCenter="219" x="408" scaleX="1" scaleY="1" textColor="0x8a8a9e"/>
+		<e:Label id="todayNum_lb" text="8" y="488.21" size="24" fontFamily="Microsoft YaHei" horizontalCenter="289.5" x="418" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+		<e:Group width="822" height="55" y="273" anchorOffsetX="0" anchorOffsetY="0" x="183" scaleX="1" scaleY="1">
+			<e:Image x="6" y="0" source="border_1063_png"/>
+			<e:Image source="com_copper_png" x="17" y="9"/>
+			<e:Label text="银两" x="62" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE7D7A7"/>
+			<e:Label id="silver_res" text="+20000" x="179" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" textAlign="center"/>
+			<e:Label id="silver_vip" text="0%" x="369.34" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" textAlign="center" anchorOffsetX="0" width="69"/>
+			<e:Label id="silver_tec" text="0%" x="531.38" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" verticalAlign="justify" textAlign="center" anchorOffsetX="0" width="85"/>
+			<e:Image x="436" y="13" source="com_state_up_png" scaleX="1" scaleY="1"/>
+			<e:Image source="com_state_up_png" x="608.01" y="13" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="822" height="53" x="183" y="332" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image x="6" y="4" source="border_1063_png"/>
+			<e:Image x="17" y="11" source="com_exp_png"/>
+			<e:Label text="经验" x="62" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE7D7A7"/>
+			<e:Label id="exp_res" text="+20000" x="179" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" textAlign="center"/>
+			<e:Label id="exp_vip" text="0%" x="369.34" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" rotation="359.91" textAlign="center" anchorOffsetX="0" width="69"/>
+			<e:Label id="exp_tec" text="0%" x="558.38" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" textAlign="center"/>
+			<e:Image source="com_state_up_png" x="436" y="20.65" scaleX="1" scaleY="1"/>
+			<e:Image source="com_state_up_png" x="608.01" y="20.65" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="confirm_btn" width="254.55" height="92.42" y="447" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image source="btn_002_up_png" x="6" y="8"/>
+
+
+			<e:Group id="m_pConsume" x="61" y="10">
+				<e:Label text="消耗" x="0" y="14" size="24" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" strokeColor="0x885a2a" stroke="2"/>
+				<e:Label id="consumeNum_lb" text="x50" x="93.34" y="13" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" strokeColor="0x885A2A" stroke="2"/>
+				<e:Image id="consume_icon" source="icon_source_gold_png" x="49" y="0" width="50" height="50"/>
+			</e:Group>
+			<e:Label id="m_labFree" text="免费" y="24" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" strokeColor="0x885A2A" stroke="2" horizontalCenter="-0.2750000000000057"/>
+			<e:Label text="收益加速" x="69.34" y="53" size="30" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" strokeColor="0x885A2A" stroke="2"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

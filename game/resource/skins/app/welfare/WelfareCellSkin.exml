@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WelfareCellSkin" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" height="145" width="142" states="base" >
+	<w:Declarations>
+		<tween:TweenGroup id="actionGroup">
+			<tween:TweenItem target="{m_imgSelect}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.3}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{0.3}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group x="0" y="0">
+		<com_main:CImage anchorOffsetX="0" source="welfare_kuangbg_png" x="15" y="16" touchEnabled="false"/>
+		<com_main:ComItemNew id="m_pIconItem" currentState="count" skinName="com_item_new" x="21" y="23"/>
+		<e:Group id="m_groupGetFlag" width="142" height="145" x="0" y="0" touchChildren="false" touchEnabled="false" visible="false">
+			<com_main:CImage y="64" x="17" anchorOffsetX="0" scaleX="1" scaleY="1" source="welfare_tips_png"/>
+			<e:Label id="m_phaveLevel" text="已领取" size="25" y="65" scaleX="1" scaleY="1" horizontalCenter="0.5" textColor="0xe9e9e6"/>
+		</e:Group>
+		<e:Image id="m_imgSelect" source="SelectKuang_png" x="7" y="9"/>
+	</e:Group>
+	<e:Group id="m_dobuleGroup" width="142" height="145" touchChildren="false" touchEnabled="false">
+		<com_main:CImage y="7" x="2" anchorOffsetX="0" source="welfare_xiebg_png" scaleX="1" scaleY="1"/>
+		<e:Label id="m_pLbDoubleStr" text="贵1双倍" textColor="0xFFF7DD" size="20" y="53" x="1" rotation="-45" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

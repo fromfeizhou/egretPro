@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PromptTipsWnd" width="560" height="503"  xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="560" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" height="503" verticalCenter="0">
+		<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size1" left="0" right="0" top="0" bottom="0"/>
+		<com_main:CLabel id="m_pTipsText" text="是否投票解散该房间？" fontColor="Normal" y="72.67" anchorOffsetX="0" width="533.67" size="28" textAlign="center" horizontalCenter="2" anchorOffsetY="0" height="292.33" verticalAlign="middle"/>
+		<com_main:ComButton id="m_pBtnCancel" skinName="com_button" y="406.85" horizontalCenter="130"/>
+		<com_main:ComButton id="m_pBtnSure" skinName="com_button" y="406.85" horizontalCenter="-130"/>
+	</e:Group>
+	
+</e:Skin>

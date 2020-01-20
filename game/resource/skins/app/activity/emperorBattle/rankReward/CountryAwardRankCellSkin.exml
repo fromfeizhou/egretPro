@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryAwardRankCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="132" width="1135">
+	<e:Group left="0" right="0" bottom="0" top="0">
+		<com_main:CImage scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="0" right="0" source="line_008_png"/>
+		<e:Group width="70" verticalCenter="0" height="74" y="-35" scaleX="1" scaleY="1" left="68" anchorOffsetY="0">
+			<com_main:CImage source="border_1034_png" alpha="0.4" scaleX="1" scaleY="1" width="132" height="132" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" horizontalCenter="0"/>
+			<com_main:CLabel id="m_RankLab" text="999" verticalCenter="0" horizontalCenter="0" textColor="0xe9e9e6" fontFamily="Microsoft YaHei" size="32"/>
+			<com_main:CImage id="m_RankImg"  horizontalCenter="0" verticalCenter="0" />
+		</e:Group>
+		<com_main:CLabel id="m_pMilitoryValue" text="99999" verticalCenter="0" y="-15"  textColor="0xffff99" size="24" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="181" horizontalCenter="-26" textAlign="center"/>
+		<com_main:ComState id="m_comState" skinName="ComStateSkin" x="300" y="46"/>
+
+	</e:Group>
+	<com_main:CLabel id="m_plbNoAward" text="未进100名无奖励"  left="720"  fontFamily="Microsoft YaHei" textColor="0xe9e9e6" size="24" verticalCenter="0"/>
+		<e:Scroller width="453" height="100" x="680" scrollPolicyH="auto" scrollPolicyV="off" verticalCenter="0" anchorOffsetX="0">
+				<e:viewport>
+					<e:List id="m_RewardRoot" x="1" anchorOffsetX="0" width="452">
+						<e:layout>
+							<e:HorizontalLayout verticalAlign="middle" gap="0"/>
+						</e:layout>
+					</e:List>
+				</e:viewport>
+		</e:Scroller>
+</e:Skin>

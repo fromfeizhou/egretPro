@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIILoginPanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="1059" height="557">
+		<e:Image id="m_imgTips" x="71.25" y="0" source="lb_7t_dlzsdl_png"/>
+		<e:Group x="41" y="408.98" anchorOffsetX="0" width="1012.33">
+			<e:Image source="zyt_30_png" x="0" y="0"/>
+			<com_main:CScroller id="m_scroller" anchorOffsetX="0" anchorOffsetY="0" width="604" height="103" x="153.65" y="24.36">
+				<e:Group id="m_pItemRoot" name="m_finishList" x="0" y="1.33" anchorOffsetY="0" anchorOffsetX="0">
+					<e:layout>
+						<e:HorizontalLayout gap="24"/>
+					</e:layout>
+					<com_main:ComItemNew x="1.33" y="13.33" skinName="com_item_new"/>
+					<com_main:ComItemNew x="11.33" y="23.33" skinName="com_item_new"/>
+					<com_main:ComItemNew x="21.33" y="33.33" skinName="com_item_new"/>
+					<com_main:ComItemNew x="31.33" y="43.33" skinName="com_item_new"/>
+					<com_main:ComItemNew x="41.33" y="53.33" skinName="com_item_new"/>
+				</e:Group>
+			</com_main:CScroller>
+			<e:Group x="831" y="33.34">
+				<com_main:ComButton id="m_btnGet" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style1" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label id="m_labTip" text="一天后开启" strokeColor="0x383838" size="24" anchorOffsetX="0" textAlign="center" fontFamily="Microsoft YaHei" textColor="0xabb7d1" horizontalCenter="0" verticalCenter="0"/>
+				<e:Group id="m_pState" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0">
+					<e:Image id="m_imgBg" source="com_wzk8_png" scaleX="0.7" scaleY="0.7" rotation="-15" horizontalCenter="0" verticalCenter="0"/>
+					<e:Label id="m_labState" text="已领取" size="24" textColor="0xE9E9E9" rotation="-20" fontFamily="Microsoft YaHei" x="40" y="47"/>
+				</e:Group>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pBtnRoot" name="m_finishList" x="132.7" y="83.51" anchorOffsetY="0" anchorOffsetX="0" width="866.67" height="320">
+			<e:layout>
+			<e:HorizontalLayout gap="-6"/>
+			</e:layout>
+		</e:Group>
+		<e:Image source="lb_7t_hdjl_png" x="84.98" y="436.02"/>
+		<e:Image source="btn_024_up_png" x="186.65" y="465.68" scaleX="-0.6" scaleY="0.6"/>
+	</e:Group>
+</e:Skin>

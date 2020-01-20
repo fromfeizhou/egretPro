@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipComposeViewSkin" width="1164" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group anchorOffsetY="0" left="0" right="0" top="0" bottom="0">
+		<e:Group scaleX="1" scaleY="1" right="0" left="0" top="56" bottom="0">
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" right="0" top="0" bottom="0" width="507" touchChildren="false" touchEnabled="false">
+			<e:Image source="border_006_png" top="0" right="0" bottom="0" left="0"/>
+			<e:Image source="border_1008_png" scaleY="-1" top="0" right="0" left="0" anchorOffsetY="0" bottom="0"/>
+				<com_main:EquipInfoItem id="m_equipInfo" skinName="EquipInfoItemSkin" left="0" top="0" right="0" bottom="0"/>
+				<e:Group id="m_pEffRoot" width="100" height="100" x="81" y="85" anchorOffsetX="50" anchorOffsetY="50"/>
+			</e:Group>
+			<e:Group width="507" right="0" bottom="0" height="100">
+				<e:Image right="0" left="0" x="-657" scaleX="1" scaleY="1" source="border_009_png" bottom="0" height="108" anchorOffsetY="0" y="-8"/>
+				<com_main:ComButton id="m_btnAll" y="50" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" x="374"/>
+				<com_main:ComButton id="m_btnCompose" y="50" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" x="142" currentState="style6"/>
+			</e:Group>
+			<e:Image source="border_1019_png" left="4" bottom="4" touchEnabled="false" right="509" height="122"/>
+			<e:Scroller anchorOffsetX="0" anchorOffsetY="0" left="0" top="0" right="509" height="681">
+				<e:List id="m_listEquip" width="1164">
+					<e:layout>
+						<e:TileLayout horizontalGap="52" rowHeight="154" columnWidth="100" paddingLeft="35" paddingTop="35" paddingBottom="100"/>
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+			<e:Image source="line_1001_png" top="0" bottom="0" right="506"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

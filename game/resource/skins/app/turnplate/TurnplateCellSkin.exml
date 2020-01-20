@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TurnplateCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="148" height="148" horizontalCenter="0">
+		<com_main:ComItemNew id="m_pItem" skinName="com_item_new" scaleX="1.15" scaleY="1.15" horizontalCenter="0" verticalCenter="0" currentState="base"/>
+		<com_main:CImage id="m_pSelectState" source="SelectKuang_png" horizontalCenter="0" verticalCenter="0" width="148" height="148" visible="false"/>
+	</e:Group>
+</e:Skin>

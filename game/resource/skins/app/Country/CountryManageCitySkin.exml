@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryManageCitySkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="145" width="319"  >
+	<e:Group left="0" top="0" bottom="0" right="0">
+		<com_main:CImage id="m_CityImg" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-11" scaleY="0.6" scaleX="0.6" verticalCenter="1" source=""/>
+		<e:Group height="31" bottom="0" left="65" right="65" anchorOffsetY="0">
+			<com_main:CImage scaleX="1" scaleY="1" source="border_013_png" right="0" left="0" scale9Grid="34,0,0,31"  anchorOffsetX="0" top="0" bottom="0"/>
+			<com_main:CLabel id="m_Label" text="名称X数量" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" left="0" top="0" bottom="0" right="0" size="22" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

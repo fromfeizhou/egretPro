@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossRankRewardWndSkin" width="678" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="678" height="680" anchorOffsetX="0" x="0" y="0" anchorOffsetY="0">
+		<com_main:APopUp id="m_APopUp" anchorOffsetY="0" scaleX="1" scaleY="1" currentState="size6" x="0" y="0" skinName="APopUpSkin" anchorOffsetX="0" width="678" height="681"/>
+		<e:Group x="7.33" y="72">
+			<e:Image source="border_022_png" x="0" y="0" anchorOffsetX="0" width="665"/>
+			<e:Image source="line_008_png" x="159.67" y="68" scaleX="0.5" scaleY="1" rotation="269.81" width="135"/>
+			<e:Label text="排行" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" x="48.67" y="23"/>
+			<e:Label text="奖励" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" x="377.67" y="23"/>
+		</e:Group>
+		<com_main:CScroller id="m_Scroller" anchorOffsetY="0" anchorOffsetX="0" width="665" x="8.33" height="533" y="141">
+			<e:List id="m_rankRewardCellList" itemRendererSkinName="BossRankRewardCellSkin">
+			</e:List>
+		</com_main:CScroller>
+	</e:Group>
+</e:Skin>

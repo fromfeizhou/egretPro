@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BoxProSkin" width="684" height="106" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Image id="m_proBg" source="proBg_001_png" x="7" y="47" scale9Grid="61,3,36,18" anchorOffsetX="0" width="675"/>
+	<e:Image id="m_pro" source="pro_006_png" x="43" y="49" anchorOffsetY="0" height="20" width="601"/>
+	<com_main:BoxComponet id="box0" y="-1.5" skinName="BoxComponetSkin" x="47"/>
+	<com_main:BoxComponet id="box1" y="-1.5" skinName="BoxComponetSkin" x="196"/>
+	<com_main:BoxComponet id="box2" y="-1.5" skinName="BoxComponetSkin" x="349"/>
+	<com_main:BoxComponet id="box3" y="-1.5" skinName="BoxComponetSkin" x="544"/>
+</e:Skin>

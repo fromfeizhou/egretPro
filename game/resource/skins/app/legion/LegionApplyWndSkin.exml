@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionApplyWndSkin" width="1047" height="564.91" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<com_main:APopUp id="m_PopUp" x="-3" y="0" currentState="size2" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" width="1048.33" height="559"/>
+	<com_main:CScroller id="m_Scroller" anchorOffsetY="0" anchorOffsetX="0" width="986.96" x="31" top="79" bottom="26.91">
+		<e:List id="m_ItemList" width="100%" anchorOffsetX="0" height="100%" anchorOffsetY="0" name="m_finishList" x="0" y="8" itemRendererSkinName="LegionApplyCellSkin">
+		<e:layout>
+			<e:TileLayout horizontalGap="80" verticalGap="20"/>
+		</e:layout>
+		</e:List>
+	</com_main:CScroller>
+</e:Skin>

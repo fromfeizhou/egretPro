@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewGenTapSkin" width="91" height="135" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="m_img" x="0" y="-1" source="btn_144_png"/>
+	<e:Label id="m_lb" text="拜访" x="29" y="35" size="28" fontFamily="Microsoft YaHei" width="35" lineSpacing="6" strokeColor="0xb15c3c" stroke="2"/>
+</e:Skin>

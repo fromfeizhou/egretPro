@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChatPrivateCellSkin"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group anchorOffsetX="0" width="328" height="123" touchEnabled="false">
+		<e:Image source="border_019_png" width="95%" height="88%" scale9Grid="18,16,31,32" horizontalCenter="0" verticalCenter="0"/>
+		<com_main:ComHeadItem id="m_comHead" scaleX="0.8" scaleY="0.8" x="14" y="10" touchEnabled="false" width="115" height="127"/>
+		<com_main:ComState id="m_comState" x="106.64" y="19.33" skinName="ComStateSkin" scaleY="1" touchEnabled="false"/>
+		<e:Label id="m_labName" text="名字" x="141.98" y="23.66" textColor="0xabb7d1" size="20" touchEnabled="false"/>
+		<e:Label id="m_labTime" text="293" x="112.64" y="75.66" size="20" textColor="0x8a8a9e" touchEnabled="false"/>
+		<e:Group id="m_btnDel" x="285" y="85" anchorOffsetX="28" anchorOffsetY="27">
+			<e:Image source="btn_029_up_png" y="-2.67" scaleX="0.8" scaleY="0.8"/>
+		</e:Group>
+		<e:Image id="m_imgSelected" source="border_015_png" scale9Grid="30,27,24,25" width="100%" height="100%" touchEnabled="false"/>
+	</e:Group>
+	<!--<com_main:CLabel  verticalAlign="bottom" size="40" textAlign="center"  fontColor.up="White" fontColor.down="TagdownYellow" horizontalCenter="-60" verticalCenter="-12.5" text="{data}"  />-->
+</e:Skin>

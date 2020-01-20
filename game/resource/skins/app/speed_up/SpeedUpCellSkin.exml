@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SpeedUpCellSkin" width="120" height="168" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="120" height="148">
+		<com_main:ComItemNew id="m_pItem" xmlns:com_main="com_main.*" skinName="com_item_new" horizontalCenter="0" top="10" currentState="base"/>
+		<com_main:CImage id="m_pSelectState" xmlns:com_main="com_main.*" source="SelectKuang_png" horizontalCenter="0" top="-3"/>
+		<com_main:CImage xmlns:com_main="com_main.*" horizontalCenter="0" source="border_1001_png" height="22" width="78" top="66"/>
+		<com_main:CLabel id="m_pLbTime" xmlns:com_main="com_main.*" text="" size="18" fontFamily="Microsoft YaHei" horizontalCenter="0" top="67" textColor="0x00FF00" stroke="2"/>
+		<com_main:CLabel id="m_pLbName" xmlns:com_main="com_main.*" text="2小时加2小" horizontalCenter="0" size="22" textColor="0x8A8A9E" fontFamily="Microsoft YaHei" width="93" top="118" textAlign="center"/>
+		<com_main:CLabel id="m_pLbNum" xmlns:com_main="com_main.*" text="11" fontFamily="Microsoft YaHei" size="24" right="9" stroke="1" top="86"/>
+	</e:Group>
+</e:Skin>

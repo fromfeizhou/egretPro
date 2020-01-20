@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CSBMapSkin" width="1851" height="1100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Scroller width="100%" height="100%" x="1" anchorOffsetX="0" anchorOffsetY="0" bounces="false">
+		<e:Group id="m_allGroup">
+		<e:Image id="m_map" source="map_kfz_000_jpg" x="0" y="0"/>
+		<com_main:CSBBuildingComp id="m_build_3" x="551" y="112" skinName="CSBBuildingSkin" currentState="build_3"/>
+		<com_main:CSBBuildingComp id="m_build_1" x="725.31" y="375" skinName="CSBBuildingSkin" currentState="build_1"/>
+		<com_main:CSBBuildingComp id="m_build_2" x="1311" y="554" skinName="CSBBuildingSkin" currentState="build_2"/>
+		<com_main:CSBBuildingComp id="m_build_4" x="142" y="335" skinName="CSBBuildingSkin" currentState="build_4"/>
+		<com_main:CSBBuildingComp id="m_build_5" x="913.5" y="696" skinName="CSBBuildingSkin" currentState="build_5"/>
+		<com_main:CSBBuildingComp id="m_build_7" x="1199" y="159" skinName="CSBBuildingSkin" currentState="build_7"/>
+		<com_main:CSBBuildingComp id="m_build_6" x="171" y="677" skinName="CSBBuildingSkin" currentState="build_6"/>
+		<e:Group id="m_wayGroup" width="100%" height="100%" x="0" y="0" touchChildren="false" touchEnabled="false"/>
+		<e:Group id="m_heroGroup" width="100%" height="100%" x="0" y="0" touchChildren="false" touchEnabled="false"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Group horizontalCenter="0" touchEnabled="false" touchChildren="false" width="241" top="20">
+		<e:Image source="border_1030_png" alpha="0.7" width="100%"/>
+		<e:Label id="m_labAttTime" text="30:00后开始进攻" size="24" touchEnabled="false" horizontalCenter="0" textColor="0xE9E9E6" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

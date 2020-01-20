@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_item_widget" width="121" height="150" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="m_pLbName" text="{data.name}" textColor="0xb9b7a2" size="22" left="0" right="0" bottom="4"/>
+	<e:Group id="m_pGMain" height="122" left="0" right="0" bottom="28">
+		<e:Image id="m_pImgQuality" source="Qualitykuang2_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image x="0" y="0" scaleX="1" scaleY="1" source=""/>
+		<e:Image id="m_pImgMain" source="common_prop_2007_png" x="0" y="5" anchorOffsetX="0" width="121" anchorOffsetY="0" height="111" scaleX="1" scaleY="1"/>
+		<e:Label id="m_pLbNum" text="99/99" x="60.5" y="92.5" size="25" textColor="0xfff7dd" textAlign="left" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

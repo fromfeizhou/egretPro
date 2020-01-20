@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PatrolInfoViewSkin" currentState="nor" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*" states="nor,award,max" >
+	<e:Group width="137" height="247">
+		<e:Image source="hang_wj_png" y="111" x="8.01" touchEnabled="false"/>
+		<e:Group id="m_pEffRoot" scaleX="1" scaleY="1" touchEnabled="false" touchThrough="false" touchChildren="false" y="136" x="69.67"/>
+		<e:Group id="m_pTips" x="153" y="5" anchorOffsetY="0" anchorOffsetX="0" touchEnabled="false" touchChildren="false" visible="false">
+			<e:Image source="hang_db_png" scale9Grid="36,6,59,42" left="-38" top="-10" right="-15" bottom="-12"/>
+			<e:Label id="m_labTips" text="领取奖励" size="18" textColor="0x000000" verticalCenter="0"/>
+		</e:Group>
+		<e:Group x="12" y="152" touchEnabled="false" touchChildren="false" visible.nor="false" visible.max="false">
+			<e:Image source="btn_135_png" x="0" y="0"/>
+			<e:Image source="lb_klq_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group x="0" y="160" touchEnabled="false" touchChildren="false" visible.award="false" visible.max="false">
+			<e:Image x="0" width="135" height="21" alpha="0.7" source="border_1030_png"/>
+			<e:Label id="m_labAwardTips" text="通关20关送关羽" size="18" stroke="2" y="2" textColor="0xf8f3b6" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pFightRoot" x="-1" y="176" touchChildren="false" touchEnabled="false" visible.award="false" visible.max="false">
+			<e:Group x="22.34" y="9" height="16" width="115">
+				<e:Image source="proBg_003_png" left="0" top="0" bottom="0" right="0"/>
+				<e:Image id="m_imgPro" source="pro_026_png" width="90" y="0.33"/>
+				<e:Label id="m_labPro" text="19/20" textColor="0xe9e9e6" size="16" stroke="2" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group y="0" x="0">
+				<e:Image source="border_016_png" scaleX="0.5" scaleY="0.5" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image source="icon_zd_png"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_btnMask" height="201" width="137" height.max="174">
+		</e:Group>
+		<AGame:AComponent id="m_btnAuto" skinName="HangBtnSkin" anchorOffsetX="56" anchorOffsetY="21.5" x="72" y="225" visible.award="false" y.max="201"/>
+	</e:Group>
+</e:Skin>

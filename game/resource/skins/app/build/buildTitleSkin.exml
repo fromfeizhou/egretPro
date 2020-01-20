@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="buildTitleSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="34">
+	<e:Group x="0" height="26" verticalCenter="0">
+		<com_main:CImage source="border_1028_png" left="-15" top="0" right="-15" bottom="0" scale9Grid="30,4,9,17" width="50"/>
+		<e:Group id="m_lbGroup" horizontalCenter="0" verticalCenter="0">
+			<e:Group id="m_pTipsRoot" height="29" y="1" width="0" left="0">
+				<com_main:CImage id="m_pTips" y="0" source="com_state_up_png" scaleX="1" scaleY="1" height="29" width="0" x="-10"/>
+			</e:Group>
+			<com_main:CLabel id="m_pLbName" text="" size="16" fontFamily="Microsoft YaHei" anchorOffsetX="0" anchorOffsetY="0" height="25" scaleX="1" scaleY="1" verticalAlign="middle" textColor="0xfffbd0" x="0" y="1"/>
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

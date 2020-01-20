@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryPlayerJobSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"   height="110">
+	<com_main:ComHeadItem id="m_Head" verticalCenter="0" left="0" width="115" height="127"/>
+	<com_main:CImage source="line_009_png" left="0" right="0" bottom="0" height="5"/>
+	<e:Group left="100" top="0" bottom="0" right="0">
+		<com_main:CLabel id="m_PlayerName" text="玩家名字" bottom="20" anchorOffsetX="1" anchorOffsetY="1" y="91.21" scaleX="1" scaleY="1" horizontalCenter="0" size="22" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle"/>
+		<e:Group top="20" horizontalCenter="0">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1.2" scaleY="1" source="border_1025_png" verticalCenter="0" horizontalCenter="0"/>
+		<com_main:CLabel id="m_JobName" text="车骑将军" scaleX="1" scaleY="1" size="24" fontFamily="Microsoft YaHei" verticalCenter="-1" horizontalCenter="0" textColor="0xE7D7A7"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

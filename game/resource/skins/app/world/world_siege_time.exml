@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_siege_time" width="320" height="150" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  states="time,base,xTime,xBase" >
+	<e:Group id="m_pBtnAttack" width="84" height="84" y="46.59" anchorOffsetX="42" anchorOffsetY="42" horizontalCenter="1" verticalCenter.base="0" horizontalCenter.xTime="1" y.xTime="25" horizontalCenter.xBase="1" y.xBase="25">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" y="61" horizontalCenter="0.5" source="build_pp_png" horizontalCenter.xTime="0" y.xTime="2" horizontalCenter.xBase="0" y.xBase="2" visible.time="false" visible.base="false"/>
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" y="0" x.base="0" x.time="0" source="btn_039_up_png" scaleX.xTime="0.9" scaleY.xTime="0.9" y.xTime="2" scaleX.xBase="0.9" scaleY.xBase="0.9" y.xBase="2" horizontalCenter.xBase="0" horizontalCenter.xTime="0"/>
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" y="61" horizontalCenter="0.5" source="lb_zc_png" visible.xTime="false" visible.xBase="false"/>
+	</e:Group>
+	<e:Group width="294" height="50" y="94" horizontalCenter="0" includeIn="time,xTime" scaleY.xTime="0.7" scaleX.xTime="0.7" horizontalCenter.xTime="0" y.xTime="114">
+		<com_main:CImage scaleX="1" scaleY="1" source="border_1001_png" scale9Grid="46,8,12,9" width="294" height="50" horizontalCenter="0" anchorOffsetY="0"/>
+		<com_main:CImage scaleX="1" scaleY="1" y="-1" anchorOffsetY="0" height="8.6" horizontalCenter="0" source="line_009_png" width="294"/>
+		<com_main:CImage scaleX="1" scaleY="-1" y="9" horizontalCenter="0" source="line_1003_png"/>
+		<com_main:CImage scaleX="1" scaleY="1" y="45" anchorOffsetY="0" height="8.6" horizontalCenter="0" source="line_009_png" width="294"/>
+		<com_main:CImage scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" height="20.6" horizontalCenter="0" width="228" y="37"/>
+		<e:Label text="倒计时：" x="46" verticalCenter="0" textColor="0xe7c772"/>
+		<e:Label id="m_pLbTime" text="00:00:00" verticalCenter="0" right="26" textColor="0xe9e9e6"/>
+	</e:Group>
+</e:Skin>

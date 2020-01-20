@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionDonationCellSkin" width="376" height="169" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<w:Config id="1598d236115"/>
+	<e:Group width="376" height="169" x="0" y="0">
+		<e:Image source="border_018_png" scaleX="1" scaleY="1" scale9Grid="23,26,64,66" anchorOffsetY="0" width="376" height="177" y="0" x="0"/>
+		<e:Group id="m_pIconRoot" x="17" y="19" scaleX="1" scaleY="1">
+			<com_main:CImage source="Image_general_open_kuang_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage id="m_imgIcon" horizontalCenter="0" verticalCenter="0" scaleX="1" scaleY="1" source="hjbl_png"/>
+		</e:Group>
+		<e:Label id="m_labLevel" y="136" x="20" textColor="0xe9e9e6" size="22" fontFamily="Microsoft YaHei" text="等级99" scaleX="1" scaleY="1" anchorOffsetX="0" width="92" textAlign="center"/>
+		<e:Label id="m_labName" y="28" x="139" textColor="0xe9e9e6" size="28" fontFamily="Microsoft YaHei" text="军团" scaleX="1" scaleY="1"/>
+		<e:Label id="m_labDes" y="83" size="24" textColor="0xa89c83" anchorOffsetY="0" height="43" anchorOffsetX="0" width="206" x="138" fontFamily="Microsoft YaHei" text="增加" scaleX="1" scaleY="1"/>
+		<e:Image source="line_1006_png" x="129" y="15" rotation="90" width="150"/>
+	</e:Group>
+</e:Skin>

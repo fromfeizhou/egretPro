@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipAddPropCompSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="418" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="border_1013_png" left="0" right="0" top="-9" scale9Grid="184,20,175,15"/>
+		<e:Label id="m_labTitle" text="套装属性" y="9" size="26" textColor="0xe8d7a6" horizontalCenter="0"/>
+		<e:Group id="m_pPropItem" x="27" y="41" width="360">
+			<e:layout>
+				<e:VerticalLayout gap="0" paddingBottom="12" paddingTop="19"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralAttriViewSkin" width="653" height="604" currentState="owner" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="owner,collect" >
+    <e:Group id="group_att" anchorOffsetX="0" anchorOffsetY="0" width.owner="653" height.owner="604" width="653" height="604" x="0" y="0">
+			<e:Group id="group_xiangxishuxing" height="114" y="0" right="0" left="0" anchorOffsetX="0" anchorOffsetY="0" includeIn="collect">
+				<e:Group x="31" y="46">
+					<e:Image x="-0.67" y="-0.67" anchorOffsetX="0" width="22" anchorOffsetY="0" height="22.71" source="common_pow_png"/>
+					<e:Label text="武力:" x="27.01" y="0" size="22" textColor="0x8A8A9E"/>
+					<e:Label id="m_labPower" text="18540" y="0" x="94.32" size="22" textColor="0xE9E9E6" anchorOffsetX="0" width="104.67" textAlign="left"/>
+				</e:Group>
+				<e:Group x="239" y="47">
+					<e:Image x="0.67" y="-1.34" anchorOffsetX="0" anchorOffsetY="0" width="21.99" height="21.99" source="common_intell_png"/>
+					<e:Label text="智力:" x="29.71" y="0" size="22" textColor="0x8A8A9E"/>
+					<e:Label id="m_labIntell" text="6340" y="0" size="22" x="98.69" textColor="0xE9E9E6" textAlign="left" anchorOffsetX="0" width="107.67"/>
+				</e:Group>
+				<e:Group x="445.36" y="47">
+					<e:Label text="统帅:" x="24" y="0" size="22" textColor="0x8A8A9E"/>
+					<e:Image x="-2.66" y="-1.33" width="22" height="22" source="common_leader_png"/>
+					<e:Label id="m_labLeader" text="356200" y="0" textColor="0xE9E9E6" size="22" anchorOffsetX="0" width="105.34" textAlign="left" x="93.33"/>
+				</e:Group>
+				<e:Group x="31" y="87">
+					<e:Image source="common_att_png" x="0" y="0" anchorOffsetX="0" width="22" anchorOffsetY="0" height="22.71"/>
+					<e:Label text="攻击:" x="27.01" y="0" size="22" textColor="0x8a8a9e"/>
+					<e:Label id="m_labAtk" text="18540" y="0" x="94.32" size="22" textColor="0xe9e9e6" anchorOffsetX="0" width="104.67" textAlign="left"/>
+				</e:Group>
+				<e:Group x="237.67" y="88">
+					<e:Image source="common_defense_png" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="21.99" height="21.99"/>
+					<e:Label text="防御:" x="29.71" y="0" size="22" textColor="0x8a8a9e"/>
+					<e:Label id="m_labDef" text="6340" y="0" size="22" x="98.69" textColor="0xe9e9e6" textAlign="left" anchorOffsetX="0" width="107.67"/>
+				</e:Group>
+				<e:Group x="443.68" y="88">
+					<e:Label text="气血:" x="24" y="0" size="22" textColor="0x8a8a9e"/>
+					<e:Image source="common_blood_png" x="0" y="0" width="22" height="22"/>
+					<e:Label id="m_labHp" text="356200" y="0" textColor="0xe9e9e6" size="22" anchorOffsetX="0" width="105.34" textAlign="left" x="93.33"/>
+				</e:Group>
+			</e:Group>
+			<e:Group y="142" horizontalCenter="0" includeIn="collect">
+				<e:Image anchorOffsetX="0" source="border_1013_png" anchorOffsetY="0" x="0" y="0" scaleX="1" scaleY="1"/>
+				<e:Label text="武将技能" y="18" size="26" textColor="0xe7d7a7" x="258" scaleX="1" scaleY="1" horizontalCenter.collect="0"/>
+			</e:Group>
+			<e:Group height="133.32" y="225" anchorOffsetX="0" width="521" x="66" anchorOffsetY="0" includeIn="collect">
+				<com_main:GeneralSkillIconView id="m_skillIcon1" x="56" y="72" skinName="General_skill_icon_view" currentState="name"/>
+				<com_main:GeneralSkillIconView id="m_skillIcon2" x="56" y="72" skinName="General_skill_icon_view" currentState="name"/>
+				<com_main:GeneralSkillIconView id="m_skillIcon3" x="266" y="72" skinName="General_skill_icon_view" currentState="name"/>
+				<com_main:GeneralSkillIconView id="m_skillIcon4" x="56" y="72" skinName="General_skill_icon_view" currentState="name"/>
+				<e:layout>
+				<e:HorizontalLayout gap="7.5"/>
+				</e:layout>
+			</e:Group>
+			<e:Group y="382.67" horizontalCenter="0" includeIn="collect">
+				<e:Image source="border_1013_png" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" scaleX="1" scaleY="1"/>
+				<e:Label text="宝物" y="18" size="26" textColor="0xE7D7A7" textAlign="center" x="285" scaleX="1" scaleY="1" text.collect="收集进度" horizontalCenter.collect="0"/>
+			</e:Group>
+			<e:Group x="79" y="454.67" includeIn="collect">
+				<com_main:ComItemNew id="m_itemSource" y="12" currentState="base" anchorOffsetX="0" anchorOffsetY="0" skinName="com_item_new" visible.owner="false" x="0"/>
+				<e:Label id="m_labItemCount" text="0/40" x="111" y="73.68" size="22" includeIn="collect" textColor="0xe9e9e9" textAlign="left"/>
+				<e:Label id="m_labItemName" text="刘备碎片" x="111" y="33.03" size="22" textColor="0xE9E9E9" includeIn="collect" textAlign="left"/>
+				<com_main:ComButton id="m_btnItemAward" includeIn="collect" skinName="com_button" currentState="style2" anchorOffsetX="120" anchorOffsetY="37.5" x="376.81" y="67.47"/>
+				<com_main:ComButton id="m_btnItemRecruited" includeIn="collect" skinName="com_button" currentState="style2" y="67.48" x="376.84" anchorOffsetX="120" anchorOffsetY="37.5"/>
+			</e:Group>
+			<e:Scroller includeIn="owner" width="653" height="596" x="0" y="4">
+				<e:Group id="m_pGenrealAttri">
+				<e:layout>
+					<e:VerticalLayout gap="0"/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+</e:Skin>

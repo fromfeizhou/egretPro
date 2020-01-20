@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RoleLevelPanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*"  width="1334" height="750">
+	<w:Declarations>
+		<tween:TweenGroup id="actionGroup">
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{2.3}" alpha="{0.3}" scaleX="{2.5}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{1}" scaleX="{0.7}" scaleY="{0.7}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="17">
+					<tween:props>
+						<e:Object scaleY="{1}" scaleX="{1}" alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:Wait duration="83"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{1}" scaleX="{1}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{border_1001}">
+				<tween:Set>
+					<tween:props>
+						<e:Object height="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object height="{550}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group width="100%" height="100%">
+	<e:Image source="zyt_10_png"  horizontalCenter="84"  y="60.15" width="746" height="165"/>
+	<e:Group width="894" height="443" touchEnabled="false" anchorOffsetY="0"  verticalCenter="55.5" horizontalCenter="50">
+		<e:Group id="m_pGobal" touchChildren="false" touchEnabled="false" y="0" height="410" anchorOffsetY="0" horizontalCenter="50">
+			<e:Image id="m_pBg" source="zyt_12_png"  horizontalCenter="0" width="894" height="412"/>
+			<e:Image source="zyt_11_png"  horizontalCenter="16.5"  y="-106.85"/>
+			<e:Image source="zyt_13_png"  horizontalCenter="14"  y="38" />
+			<!--<e:Image id="border_1001" width="1334" height="28" x="0" y="-94" source="border_1001_png" scaleX="1" scaleY="1" alpha="1" visible="false" anchorOffsetY="0"/>-->
+			<e:Rect id="border_1001" width="1334" height="28" x="0" y="-94" fillAlpha="0.8" alpha="1"/>
+			<e:Group horizontalCenter="15" y="84">
+		<e:BitmapLabel id="m_rLev" font="role_level_fnt" text="10"  horizontalCenter="0"/>
+		<com_main:CImage  left="0"   source="pro_005_png" scale9Grid="3,3,18,18" width="400" height="21" y="80"/>
+		<com_main:CImage id="m_Bar" left="0"  source="pro_006_png" fillMode="clip" width="400" height="21" y="78.5"/>
+		<com_main:CImage id="m_LightBar" left="-13"  source="pro_025_png" fillMode="clip" scale9Grid="20,10,10,10" width="425" height="50" y="63" anchorOffsetX="0" visible="false"/>
+		<e:Label id="m_genLevel"  text="武将等级上限提升至15" size="24" y="110" fontFamily="Microsoft YaHei"
+			         textColor="0xaac7ff"  horizontalCenter="0"/>
+		</e:Group>
+		
+	<e:Group y="401.64" touchEnabled="false" touchChildren="false" horizontalCenter="0.5">
+			<com_main:CImage xmlns:com_main="com_main.*" source="border_1001_png" anchorOffsetY="0" height="37.67"
+			                 anchorOffsetX="0" width="356.67" x="0" y="0" />
+			<com_main:CLabel xmlns:com_main="com_main.*" text="点击任意区域关闭" fontFamily="Microsoft YaHei" horizontalCenter="0"
+			                 verticalCenter="0" size="24" textColor="0x8a8a9e" />
+		</e:Group>
+		</e:Group>
+		<com_main:ComGenCard id="m_genCard" skinName="ComGenCardSkin" scaleX="0.85" scaleY="0.85" horizontalCenter="-391" y="441" anchorOffsetY="735" anchorOffsetX="290"/>
+		<e:Group id="group" horizontalCenter="64" y="12" anchorOffsetY="48" anchorOffsetX="187">
+			<e:Image id="m_tName" source="lb_jzdjts_png"  horizontalCenter="0" />
+		</e:Group>
+		<e:Group id="m_pFunc" horizontalCenter="63" y="216" anchorOffsetY="0" height="157" width="502" alpha="0">
+			<e:Image id="" x="-8" y="16" width="200" height="17" scaleX="1" scaleY="1" source="line_003_png"/>
+	<e:Label  text="功能预告" y="10" size="24" horizontalCenter="0" x="272" scaleX="1" scaleY="1" textColor="0xaac7ff"/>
+	<e:Image id="" x="502" y="16" width="200" height="17" scaleX="-1" scaleY="1" source="line_003_png"/>
+	
+		<com_main:CImage id="m_pFuncIcon"  left="0"   source="city_icon_jb_png"  y="50" scaleX="0.9" scaleY="0.9"/>
+		
+			<com_main:CLabel id="m_pFuncName" text="计策" fontFamily="Microsoft YaHei" size="24"
+		                 textColor="0xffff99" touchEnabled="false" y="55"  left="105"/>
+			<com_main:CLabel id="m_pFuncLev" text="4级提升" fontFamily="Microsoft YaHei" size="20"
+		                 textColor="0xff0000" touchEnabled="false" y="58"  right="10"/>
+			<com_main:CLabel id="m_pFuncDesc" text="计策能大幅提升部队战斗力，并提升所有英雄属性" fontFamily="Microsoft YaHei" size="18"
+		                 textColor="0xffff99" touchEnabled="false" y="88"  left="104" width="350" lineSpacing="7"/>
+		<!--<e:Image id="border_func"   source="border_1001_png" scaleX="1" scaleY="1" alpha="1" anchorOffsetY="0" width="900"  height="0" horizontalCenter="0" y="-10" anchorOffsetX="0"/>-->
+		</e:Group>
+	</e:Group>
+	</e:Group>
+</e:Skin>

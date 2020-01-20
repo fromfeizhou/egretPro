@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ServicecCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="473">
+
+	<e:Group anchorOffsetX="0" anchorOffsetY="0">
+
+
+
+
+		<e:Group x="0" y="0">
+			<e:Image source="border_1065_png" scale9Grid="26,4,156,28" anchorOffsetX="0" width="473" alpha="0.5"/>
+
+			<e:Label id="m_labTitle" text="1.专属通道" y="5.66" size="26" fontFamily="Microsoft YaHei" textColor="0xe7d7a7" x="9"/>
+			<e:Scroller y="48" anchorOffsetY="0" anchorOffsetX="0" width="460">
+				<e:Group>
+					<e:Label id="m_labDoc" text="的的的的方法2'服1对1服务，优先为您解答问题晚上你的的的的的方法2'" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xe9e9e6" y="2" wordWrap="true" width="460" lineSpacing="10"/>
+					<e:layout>
+						<e:VerticalLayout paddingLeft="9" paddingTop="4"/>
+					</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+
+
+
+
+
+
+
+
+
+
+
+	</e:Group>
+</e:Skin>

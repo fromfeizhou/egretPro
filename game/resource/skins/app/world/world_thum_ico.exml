@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_thum_ico" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="28" height="27">
+		<e:Image id="m_pMain" source="icon_map_xc1_png" bottom="0" horizontalCenter="0"/>
+		<e:Label id="m_pName" text="城池" size="20" stroke="1" strokeColor="0x757575" textColor="0xe9e9e6" horizontalCenter="0" bottom="-23"/>
+	</e:Group>
+</e:Skin>

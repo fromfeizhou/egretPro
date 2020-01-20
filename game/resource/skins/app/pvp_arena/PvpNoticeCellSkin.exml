@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpNoticeCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1034" height="144" anchorOffsetY="0">
+		<e:Group width="36" height="40" scaleX="1" scaleY="1" x="142" y="24.2">
+			<com_main:CImage y="45.46" source="line_009_png" width="299" height="6" alpha="0.5" x="-30" scaleX="1" scaleY="1"/>
+			<com_main:CImage x="-59.5" y="90.96" alpha="1" source="line_005_png" height="13.5" width="310.5" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1"/>
+			<com_main:CLabel id="m_pPlayerName" text="玩家" x="44.02" y="8.14" fontFamily="Microsoft YaHei" size="24" scaleX="1" scaleY="1"/>
+			<e:Group x="5.17" y="54.3" scaleX="1" scaleY="1">
+				<com_main:CImage x="0" y="0.36" source="lb_zdl_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+				<e:BitmapLabel id="m_pLbForce" width="182" height="44" x="67.33" y="0" font="fight_font_fnt" text="999999" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-15" scaleX="0.75" scaleY="0.75"/>
+			</e:Group>
+			<com_main:ComState id="m_comState" x="0" y="0" skinName="ComStateSkin"/>
+		</e:Group>
+		<com_main:CImage id="m_pBattleState" x="687" y="60" source="lb_cg_png"/>
+		<com_main:CImage id="m_pScoreState" x="873.65" y="58.66" source="com_state_up_png"/>
+		<com_main:CImage y="138.46" width="1034" alpha="1" scaleX="1" scaleY="1" source="line_008_png" height="2"/>
+		<com_main:CLabel id="m_pRank" text="123" y="63" size="24" fontFamily="Microsoft YaHei" textColor="0xffffff" x="908" scaleX="1" scaleY="1"/>
+		<com_main:CLabel id="m_pTime" text="1天前" y="61" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E" horizontalCenter="8.5" x="492" scaleX="1" scaleY="1"/>
+		<com_main:ComHeadItem id="m_pHead" x="28" y="9" width="115" height="127"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="360" height="119" states="up,down,disabled">
+	<e:Group y="0" x="0" width="360" height="119">
+		<com_main:CImage id="m_pPanel" scale9Grid="33,31,14,18" source="border_018_png" left="0" right="0" top="0" bottom="0"/>
+		<com_main:GeneralHeadRender id="m_pHero" skinName="com_general_head_render" scaleX="0.7" scaleY="0.7" currentState="star" verticalCenter="-4" left="10"/>
+		<com_main:CLabel id="m_labLevel" text="200级" right="20" top="16" size="22" textColor="0xe9e9e6"/>
+		<com_main:CLabel id="m_labName" text="张辽" top="18" size="22" left="110" textColor="0xe9e9e6"/>
+		<com_main:CLabel id="m_labSkill" text="技能：" top="50" size="22" left="110" y="48" textColor="0xabb7d1"/>
+		<com_main:CLabel id="m_labExp" text="经验：" top="82" size="22" left="110" textColor="0xabb7d1"/>
+        <e:Group x="176" y="79" height="24" width="152">
+            <e:Image anchorOffsetX="0" anchorOffsetY="0" source="pro_002_png" left="0" top="0" right="0" bottom="0"/>
+            <e:Image id="m_imgExpPro" width="100" left="0" top="0" bottom="0" source="pro_003_png"/>
+            <e:Label id="m_labExpPro" text="8000/0000" size="24" horizontalCenter="0" verticalCenter="0" textColor="0xe9e9e6"/>
+        </e:Group>
+        <com_main:CImage id="m_pImgLight" scale9Grid="33,31,14,18" source="border_015_png" touchEnabled="false" left="-4" right="-4" top="-4" bottom="-4" includeIn="down" locked="true"/>
+		<e:Group id="m_gDone" horizontalCenter="0" bottom="4" visible="false">
+			<com_main:CImage touchEnabled="false" source="zyt_10_png"/>
+			<com_main:CImage touchEnabled="false" source="lb_jswcdjlj_png" horizontalCenter="0" bottom="4"/>
+		</e:Group>
+		<e:Group id="m_gBuilding" verticalCenter="0" touchEnabled="false" horizontalCenter="0" visible="false">
+			<com_main:CImage touchEnabled="false" source="border_020_png" alpha="0.5" height="127" scale9Grid="8,8,48,48" width="368" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage touchEnabled="false" source="zyt_06_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage touchEnabled="false" source="icon_time_png" horizontalCenter="10" verticalCenter="-1"/>
+			<com_main:CLabel id="m_labBB" text="成都建设中" size="24" x="68" verticalCenter="0" stroke="2" textColor="0xffff99"/>
+			<com_main:CLabel id="m_labBT" text="00:59:00" size="24" x="252" verticalCenter="0" stroke="2" textColor="0xff0000"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

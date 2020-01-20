@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_search_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" y="89" horizontalCenter="5" width="1200" height="630.66">
+		<com_main:CImage xmlns:com_main="com_main.*" y="0" source="frame_101_jpg" anchorOffsetX="0" width="1200" anchorOffsetY="0" height="630.67" scale9Grid="15,50,92,22"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="-0.66" source="frame_002_jpg" anchorOffsetX="0" width="1202"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" y="32.82" anchorOffsetX="57.5" anchorOffsetY="38.5" right="-8">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" source="btn_009_up_png" x="-0.98"/>
+		</e:Group>
+		<e:Label text="搜索" y="14" textColor="0xffff99" size="38" horizontalCenter="0"/>
+		<com_main:CImage y="303.58" anchorOffsetY="0" anchorOffsetX="0" source="line_009_png" width="100%" horizontalCenter="0"/>
+		<com_main:CImage y="314.25" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="4" x="10" source="line_1003_png" scaleY="-1"/>
+		<e:Scroller width="1148.49" height="221.21" y="74.21" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:List id="m_pTabList" anchorOffsetX="0" width="1166.67" x="12.12" y="0">
+				<e:layout>
+					<e:HorizontalLayout gap="12"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Scroller id="m_pCSroller" width="1169.22" height="306.06" y="316.61" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="6.5">
+			<e:List id="m_pContentList" anchorOffsetX="0" width="1169.22" x="-6.67" y="0">
+				<e:layout>
+					<e:TileLayout horizontalGap="18" verticalGap="10"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

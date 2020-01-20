@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BattleNumEffect" width="129" height="122" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="animation">
+			<tween:TweenItem target="{label}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0.5}" scaleY="{0.5}" alpha="{0.1}" y="{83}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="350" ease="backOut">
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}" alpha="{1}" y="{-30}"/>
+					</tween:props>
+				</tween:To>
+				<tween:Wait duration="1000"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:BitmapLabel id="label" y="31" text="+100%" letterSpacing="-10" horizontalCenter="0" font="effectRedNum_fnt"/>
+</e:Skin>

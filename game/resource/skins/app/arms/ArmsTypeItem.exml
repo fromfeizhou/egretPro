@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ArmsTypeItem" width="180" height="155" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="m_imgBg" source="junbei_frame_png" y="24.5" x="25"/>
+	<e:Image id="m_imgSelect" source="junbei_frame_selected_png" x="0" y="0"/>
+	<e:Image id="m_imgArms" x="97" y="73" source="junbei_bubing_png" anchorOffsetX="80" anchorOffsetY="73"/>
+	<e:Image id="m_imgName" source="lb_bubing_png" x="50.5" y="118"/>
+</e:Skin>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpArenaShopViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" right="0" top="0" bottom="0" width="1334" height="750">
+		<com_main:CImage source="border_004_jpg" scaleX="1" scaleY="1" left="0" top="0" right="0" bottom="0" x="0" y="0"/>
+		<com_main:CImage source="border_1019_png" anchorOffsetX="0" bottom="0" left="0" right="0" height="122"/>
+		<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+		<e:Group scaleX="1" scaleY="1" top="103" left="257">
+			<com_main:CLabel text="自动刷新" y="0" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E" x="0" scaleX="1" scaleY="1"/>
+			<com_main:CLabel id="m_pTime" text="00:00:00" y="0" size="24" fontFamily="Microsoft YaHei" x="108.17" scaleX="1" scaleY="1" textColor="0xffffff"/>
+		</e:Group>
+		<com_main:ComButton id="m_pBtnRefresh" skinName="com_button" currentState="style2" top="76" right="148"/>
+		<e:Scroller width="1101.52" anchorOffsetX="0" anchorOffsetY="0" top="171" bottom="12" horizontalCenter="2">
+			<e:Group id="m_pShopItemRoot">
+				<e:layout>
+					<e:TileLayout horizontalGap="24" verticalGap="18" requestedColumnCount="5" paddingLeft="28" paddingTop="6"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

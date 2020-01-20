@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralGetInfoWndSkin" width="1334" height="750" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:tween="egret.tween.*" states="base,tavern" >
+	<w:Declarations>
+		<tween:TweenGroup id="infoAction">
+			<tween:TweenItem target="{m_leftInfoMask}">
+				<tween:Set/>
+				<tween:To duration="300">
+					<tween:props>
+						<e:Object height="{300}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_rightInfoMask}">
+				<tween:Set/>
+				<tween:To duration="300">
+					<tween:props>
+						<e:Object height="{300}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_btnSure}">
+				<tween:Wait duration="50"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{1}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="infoAction1">
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0}" scaleY="{0}" alpha="{0.3}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250" ease="backOut">
+					<tween:props>
+						<e:Object alpha="{1}" scaleY="{0.9}" scaleX="{0.9}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="250"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_btnSure}">
+				<tween:Wait duration="350"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{1}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_leftInfoMask}">
+				<tween:Wait duration="250"/>
+				<tween:Set/>
+				<tween:To duration="200">
+					<tween:props>
+						<e:Object height="{300}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_rightInfoMask}">
+				<tween:Wait duration="250"/>
+				<tween:Set/>
+				<tween:To duration="200">
+					<tween:props>
+						<e:Object height="{300}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Rect left="0" top="0" bottom="0" right="0" fillColor="0x000000" strokeAlpha.base="1" fillAlpha.base="0" strokeColor.tavern="0x000000" strokeAlpha.tavern="1" fillColor.base="0x444444" strokeColor.base="0x000000" fillColor.tavern="0x000000" fillAlpha.tavern="0.2" fillAlpha="0"/>
+	<e:Group anchorOffsetY="0" height="733" anchorOffsetX="0" verticalCenter="0" width="1090" horizontalCenter="0" alpha="1">
+		<e:Group id="m_groupInfo" height="733" horizontalCenter="0" verticalCenter="0" width.tavern="1090" width.base="1090" width="1090">
+			<e:Group id="group" anchorOffsetX="0" anchorOffsetY="0" width="368.33" height="500" scaleX.tavern="0.9" scaleY.tavern="0.9" horizontalCenter.tavern="0" verticalCenter.tavern="-45" horizontalCenter="0" verticalCenter="-23.5" alpha="0">
+				<com_main:CImage id="m_imgCardBg" scaleX="1" scaleY="1" source="general_card_bg3_jpg" left="0" top="0" right="0" bottom="0"/>
+				<e:Image id="m_imgCard" scaleX="0.7" scaleY="0.7" horizontalCenter="0" verticalCenter="0" source="icon_wj_b_0_png"/>
+				<com_main:CImage id="m_imgCardMask" scaleX="0.5" scaleY="0.5" anchorOffsetY="0" source="border_006_png" left="9" top="8" bottom="8" right="5.33" anchorOffsetX="0" alpha="0.1"/>
+				<e:Group x="289.66" y="14" visible="false">
+				<com_main:CImage x="-2.66" y="0" source="general_grow_bg_png"/>
+				<e:Label text="资质" size="18" textColor="0xe9e9e6" y="13" textAlign="center" horizontalCenter="0"/>
+				<e:Label id="m_labGroupNum" text="99" size="20" y="34" textColor="0xe7d7a7" textAlign="center" horizontalCenter="0"/>
+				</e:Group>
+				<com_main:CImage scaleY="-1" source="border_1001_png" bottom="7" anchorOffsetY="0" height="52.67" left="5" right="5.33" anchorOffsetX="0"/>
+				<com_main:CImage source="line_1003_png" scaleY="-1" y="445.01" horizontalCenter="0"/>
+				<e:Label id="m_labName" text="刘备" horizontalCenter="0" size="30" textColor="0xf9f9f9" y="451.67" fontFamily.base="Microsoft YaHei" size.base="30" fontFamily="Microsoft YaHei"/>
+				<com_main:CImage id="m_imgCardMk" scaleX="1" scaleY="1" source="general_card_bgmk1_png" y="-23" x="-31"/>
+				<e:Group id="m_conEffect" width="0" height="0" x="184" y="246.92" />
+				<e:Group id="m_gStar" width="255" height="57" y="386" anchorOffsetX="0" anchorOffsetY="0" x="55">
+					<e:Group id="m_star1" width="50" height="57" x="13" y="12">
+						<e:Image source="gen_starbg1_png" horizontalCenter="0" verticalCenter="0"/>
+						<e:Image horizontalCenter="0" verticalCenter="0" source="gen_star1_png" visible="false"/>
+					</e:Group>
+					<e:Group width="50" height="57" x="33" y="32" id="m_star2">
+						<e:Image source="gen_starbg1_png" horizontalCenter="0" verticalCenter="0"/>
+						<e:Image source="gen_star1_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+					</e:Group>
+					<e:Group width="50" height="57" x="43" y="42" id="m_star3">
+						<e:Image source="gen_starbg1_png" horizontalCenter="0" verticalCenter="0"/>
+						<e:Image source="gen_star1_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+					</e:Group>
+					<e:Group width="50" height="57" x="53" y="52" id="m_star4">
+						<e:Image source="gen_starbg1_png" horizontalCenter="0" verticalCenter="0"/>
+						<e:Image source="gen_star1_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+					</e:Group>
+					<e:Group width="50" height="57" x="63" y="62" id="m_star5">
+						<e:Image source="gen_starbg1_png" horizontalCenter="0" verticalCenter="0"/>
+						<e:Image source="gen_star1_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+					</e:Group>
+					<e:layout>
+						<e:HorizontalLayout gap="1"/>
+					</e:layout>
+				</e:Group>
+				<com_main:CLabel id="m_labExtend" text="额外获得【】x999" y="517.72" horizontalCenter="-0.16" textColor="0xe9e9e6" size="30" includeIn="tavern" x="61" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Image id="image" source="lb_hdyx_png" source.tavern="lb_ewhd_png" horizontalCenter="0" y="0" alpha="0"/>
+			<com_main:ComButton id="m_btnSure" skinName="com_button" anchorOffsetX="135" anchorOffsetY="47.5" currentState="style4" horizontalCenter="0" bottom="23" bottom.tavern="33" scaleY="0"/>
+			<e:Group id="m_leftInfo" width="408" height="200" x="-55" y="200" scaleX="1" scaleY="1" anchorOffsetX="0">
+				<e:Image source="line_009_png" x="11.07" y="94.94" scale9Grid="84,1,217,7" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+				<e:Label id="m_labType" text="强攻/控制" y="44" size="30" fontFamily="Microsoft YaHei" left="41"/>
+				<e:Label id="m_labTypeDis" text="擅长突破敌军防线，控制敌方移动和攻击" size="24" fontFamily="Microsoft YaHei" width="313" lineSpacing="10" left="41" y="121"/>
+			</e:Group>
+			<e:Group id="m_leftInfoMask" width="408" height="0" x="-55" scaleX="1" scaleY="1" anchorOffsetX="0" verticalCenter="-66.5">
+				<e:Image scaleX="1" scaleY="1" source="border_023_png" left="0" right="0" top="0" bottom="0"/>
+			</e:Group>
+			<e:Group id="m_rightInfo" width="408" height="200" x="737" y="275" scaleX="1" scaleY="1" anchorOffsetX="0">
+				<e:Image source="line_009_png" x="11.07" y="94.94" scale9Grid="84,1,217,7" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+				<e:Label id="m_labRightDis" text="非凡的麒麟儿，一登场即有强大的战力" y="121" size="24" fontFamily="Microsoft YaHei" width="313" lineSpacing="10" left="41"/>
+				<e:Image x="43" y="26" source="border_016_png"/>
+				<e:Image id="m_imgSoldierType" y="28" source="general_type_qibing2_png" left="47"/>
+				<e:Label id="m_labSoldierType" text="骑兵" y="40" size="30" fontFamily="Microsoft YaHei" left="108" x="-696" scaleX="1" scaleY="1" textColor="0xe7c772"/>
+			</e:Group>
+			<e:Group id="m_rightInfoMask" width="408" height="0" x="737" scaleX="1" scaleY="1" anchorOffsetX="0" verticalCenter="8.5">
+				<e:Image scaleX="1" scaleY="1" source="border_023_png" left="0" right="0" top="0" bottom="0" x="-792" y="-75"/>
+			</e:Group>
+			<com_main:CLabel id="m_labOwner" text="拥有数量:00" fontFamily="Microsoft YaHei" includeIn="tavern" right="15" bottom="10"/>
+		</e:Group>
+		<e:Group id="m_conEffEnter" width="1090" height="735" horizontalCenter="0" verticalCenter="0">
+			<e:Group id="m_getCardEffect" horizontalCenter="0" verticalCenter="-23.5" width="0" height="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaIconViewSkin" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="normal,bagua"  width="300" height="200">
+	<e:Image source="trea_bgdt_png" scaleX="1" scaleY="1" includeIn="bagua" horizontalCenter="0" bottom="-5" smoothing="true"/>
+	<e:Group id="m_pEffRoot" width="10" height="10" y="76" x="145" touchEnabled="false" touchChildren="false" scaleX="0.65" scaleY="0.65"/>
+	<e:Group id="m_iconRoot" height="200" touchChildren="false" touchEnabled="false" width="300">
+		<e:Image id="m_imgIcon" source="icon_trea_b_1055_png" scaleX="1" scaleY="1" horizontalCenter="0" bottom="0" source.normal="icon_trea_b_1045_png" bottom.bagua="65" smoothing="true"/>
+		<e:Group id="m_pMcRoot" width="10" height="10" x="155" touchEnabled="false" touchChildren="false" y.normal="177" includeIn="normal" y="190"/>
+	</e:Group>
+</e:Skin>

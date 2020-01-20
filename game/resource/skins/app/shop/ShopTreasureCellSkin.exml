@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopTreasureCellSkin" width="363" height="264" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<w:Config id="1598d236115"/>
+	<com_main:CImage anchorOffsetX="0" x="7" y="5" width="357" anchorOffsetY="0" height="257" scale9Grid="53,25,9,7" source="border_018_png"/>
+	<com_main:CImage anchorOffsetX="0" x="10" y="179" width="348" anchorOffsetY="0" height="80" source="border_035_png" scale9Grid="53,25,9,7"/>
+	<com_main:CImage anchorOffsetX="0" x="16" y="133" anchorOffsetY="0" source="line_1006_png" width="333"/>
+	<com_main:CImage anchorOffsetX="0" x="76" y="14" anchorOffsetY="0" source="line_1003_png" scaleY="-1"/>
+	<com_main:CImage anchorOffsetX="0" x="137" y="29" anchorOffsetY="0" source="border_1036_png"/>
+	<com_main:ComItemNew id="m_ComItem" x="38" y="23" currentState="count" skinName="com_item_new" width="100" scaleX="1" scaleY="1"/>
+	<e:Group id="m_discountGroup" width="100%" height="100%" touchEnabled="false" touchChildren="false">
+		<e:Image id="m_discountbg" x="-7" y="-2" source="border_1032_png" anchorOffsetY="0" anchorOffsetX="0" width="109" height="83" scaleX="1" scaleY="1"/>
+		<e:Label id="m_discount" y="31" x="13" text="1折" textColor="0xe9e9e6" size="24" rotation="-35" scaleX="1" scaleY="1"/>
+		<e:Group y="149" left="206">
+			<e:Label id="m_oldPlace" y="0" text="100" size="25" textColor="0xE9E9E6" x="7" scaleX="1" scaleY="1"/>
+			<com_main:CImage id="m_line" anchorOffsetX="0" x="0" y="10" anchorOffsetY="0" source="line_006_png" width="57" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="m_consumeGroup" right="168" verticalCenter="28">
+			<com_main:CImage id="m_pCostIcon" x="11" y="-4" source="icon_decorationLan_png"/>
+			<e:BitmapLabel id="m_pLbCost" font="font_vip_fnt" text="20" letterSpacing="-5" scaleX="0.8" scaleY="0.8" left="61" verticalCenter="-1"/>
+		</e:Group>
+	</e:Group>
+	<e:Label id="propName" y="33" textColor="0xe9e9e6" x="148" text=""/>
+	<e:Label id="m_stock" y="85" text="10" size="25" textColor="0xe9e9e6" x="152"/>
+	<e:Group id="m_unDiscountGroup" width="100" horizontalCenter="2.5" verticalCenter="26" visible="false">
+		<com_main:CImage id="m_pCostIcon0" x="-2" y="0" source="icon_decorationLan_png"/>
+		<e:BitmapLabel id="m_pLbCost0" font="font_vip_fnt" text="20" scaleX="0.8" scaleY="0.8" letterSpacing="-5" left="53" verticalCenter="1"/>
+	</e:Group>
+	<com_main:ComButton id="m_btnbuy" anchorOffsetX="72" anchorOffsetY="30.67" currentState="style1" skinName="com_button" x="182" y="220.67"/>
+	<e:Image id="m_imgSoldOut" source="lb_ysq_png" horizontalCenter="0" verticalCenter="90"/>
+</e:Skin>

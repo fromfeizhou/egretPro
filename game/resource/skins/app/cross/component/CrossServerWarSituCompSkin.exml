@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossServerWarSituCompSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+		<e:Group x="0" y="0">
+		<e:Group horizontalCenter="0">
+		<e:Group>
+		<e:Image id="m_flag" source="zyt_vs_blue_png"/>
+			<com_main:CLabel id="m_lbFlag" text="我" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right"  horizontalCenter="0" textColor="0xe9e9e9" verticalCenter="-3"/>
+			</e:Group>
+		<com_main:CLabel  text="战场战况" fontFamily="Microsoft YaHei" size="28" verticalAlign="middle" textAlign="right"  horizontalCenter="32" y="15" textColor="0xe7d7a7"/>
+			<e:layout>
+				<e:HorizontalLayout gap="0" horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+		<e:Image source="zyt_13_png" width="300" height="17" top="58"/>
+		<e:Group top="90" left="0">
+				<com_main:CLabel id="m_areaCout"  text="占领区域：2个" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right"  textColor="0xabb7d1"/>
+				<com_main:CLabel id="m_arrowCout" text="建造箭塔：2个" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right"  textColor="0xabb7d1"/>
+				<com_main:CLabel id="m_curTeamCout" text="当前部队：2个" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right"  textColor="0xabb7d1"/>
+				<com_main:CLabel id="m_surTeamCout" text="剩余部队：2个" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right"  textColor="0xabb7d1"/>
+			<e:layout>
+				<e:VerticalLayout gap="18"/>
+			</e:layout>
+		</e:Group>
+		</e:Group>
+</e:Skin>

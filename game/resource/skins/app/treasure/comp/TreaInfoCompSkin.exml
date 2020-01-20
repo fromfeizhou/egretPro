@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaInfoCompSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="504" height="685">
+		<e:Group id="m_pTempRoot" width="100%" height="200" visible="false">
+		</e:Group>
+		<e:Scroller width="100%" height="99%">
+			<e:Group id="m_pViewRoot" touchChildren="false">
+				<e:Group x="0" y="20" width="100%">
+					<e:Group height="10" horizontalCenter="0" touchChildren="false" touchEnabled="false" top="-20">
+						<e:Image source="border_1008_png" width="550" height="340" touchEnabled="false" scaleY="-1" y="340" locked="true"/>
+					</e:Group>
+					<e:Image source="line_011_png" x="40.66" y="4" alpha="0.5" scaleX="1" scaleY="1"/>
+					<e:Image source="line_011_png" x="465.68" y="4" scaleX="-1" alpha="0.5" scaleY="1"/>
+					<e:Label text="宝物属性" y="0" size="26" x="200" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+					<e:List id="m_listAttri" y="64" anchorOffsetX="0" anchorOffsetY="0" width="100%" x="0" scaleX="1" scaleY="1" itemRendererSkinName="ComAttriRenderSkin">
+						<e:layout>
+						<e:TileLayout requestedColumnCount="2" horizontalGap="34" verticalGap="12" paddingLeft="74" columnWidth="200"/>
+						</e:layout>
+					</e:List>
+				</e:Group>
+				<e:Group id="m_pSkillRoot" x="0" y="97" width="100%" scaleX="1" scaleY="1">
+					<e:Image alpha="0.5" scaleX="1" scaleY="1" source="border_1013_png" width="100%"/>
+					<e:Label text="宝物技能" size="24" scaleX="1" scaleY="1" textColor="0xaac7ff" y="18" x="204"/>
+					<e:List id="m_listSkill" y="71" anchorOffsetX="0" anchorOffsetY="0" width="100%" x="0" scaleX="1" scaleY="1" itemRendererSkinName="ComAttriRenderSkin">
+					<e:layout>
+						<e:VerticalLayout paddingLeft="75" gap="13"/>
+					</e:layout>
+					</e:List>
+				</e:Group>
+				<e:Group id="m_pGenRoot" x="10" y="30" width="100%">
+					<e:Image alpha="0.5" scaleX="1" scaleY="1" source="border_1013_png" width="100%"/>
+					<e:Label text="专属武将" size="24" scaleX="1" scaleY="1" textColor="0xAAC7FF" y="18" x="204"/>
+					<com_main:GeneralHeadRender id="m_generalHead" skinName="com_general_head_render" currentState="none" scaleX="0.65" scaleY="0.65" y="71" x="75"/>
+					<e:Label id="m_labGenName" text="曹操" size="20" scaleX="1" scaleY="1" y="73" x="171" textColor="0xe9e9e6"/>
+					<e:List id="m_listAttriGen" y="110.04" anchorOffsetX="0" anchorOffsetY="0" itemRendererSkinName="ComAttriRenderSkin" x="170.52">
+						<e:layout>
+						<e:VerticalLayout gap="6"/>
+						</e:layout>
+					</e:List>
+				</e:Group>
+				<e:Group x="10" y="30" width="100%">
+					<e:Image alpha="0.5" scaleX="1" scaleY="1" source="border_1013_png" width="100%"/>
+					<e:Label text="宝石套装" size="24" scaleX="1" scaleY="1" textColor="0xAAC7FF" y="18" x="204"/>
+					<e:Group y="70.36" horizontalCenter="0" width="100%">
+						<com_main:ComStoneSuitCell id="m_stoneSuitCell0" x="106" y="0" skinName="ComStoneSuitCellSkin"/>
+						<com_main:ComStoneSuitCell id="m_stoneSuitCell1" x="159" y="0" skinName="ComStoneSuitCellSkin"/>
+						<com_main:ComStoneSuitCell id="m_stoneSuitCell2" x="0" y="0" skinName="ComStoneSuitCellSkin"/>
+						<com_main:ComStoneSuitCell id="m_stoneSuitCell3" x="53" y="0" skinName="ComStoneSuitCellSkin"/>
+						<e:layout>
+						<e:HorizontalLayout gap="-1" paddingLeft="51"/>
+						</e:layout>
+					</e:Group>
+					<e:Group x="73" y="164.35" anchorOffsetY="0" anchorOffsetX="0">
+						<e:Image source="border_1020_png" x="20" y="8" height="26" anchorOffsetX="0" width="257"/>
+						<e:Group id="m_groupSuit0" x="0" y="0">
+						<e:Image source="border_016_png" scaleX="0.7" scaleY="0.7" x="0" y="0"/>
+						<e:BitmapLabel x="10" y="4" text="2" font="font_vip_fnt"/>
+						</e:Group>
+						<e:Label id="m_labSuitAttri0" text="行军速度+100" x="53" size="20" y="10"/>
+					</e:Group>
+					<e:Group x="73" y="218.89" anchorOffsetY="0" anchorOffsetX="0">
+						<e:Image source="border_1020_png" x="20" y="8" width="257" height="26" anchorOffsetX="0"/>
+						<e:Group id="m_groupSuit1" x="0" y="0">
+						<e:Image source="border_016_png" scaleX="0.7" scaleY="0.7" x="0" y="0"/>
+						<e:BitmapLabel x="10" y="5" text="3" font="font_vip_fnt"/>
+						</e:Group>
+						<e:Label id="m_labSuitAttri1" text="行军速度+100" x="53" y="10" size="20"/>
+					</e:Group>
+					<e:Group x="73" y="265.89" anchorOffsetY="0" anchorOffsetX="0">
+						<e:Image source="border_1020_png" x="20" y="8" width="257" height="26" anchorOffsetX="0"/>
+						<e:Group id="m_groupSuit2" x="0" y="0">
+						<e:Image source="border_016_png" scaleX="0.7" scaleY="0.7" x="0" y="0"/>
+						<e:BitmapLabel x="7" y="5" text="4" font="font_vip_fnt"/>
+						</e:Group>
+						<e:Label id="m_labSuitAttri2" text="行军速度+100" x="53" y="10" size="20"/>
+					</e:Group>
+				</e:Group>
+				<e:layout>
+					<e:VerticalLayout paddingLeft="0" paddingTop="20" gap="13" paddingBottom="80"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Image source="border_1019_png" width="100%" touchEnabled="false" bottom="0" height="122" locked="true"/>
+		<e:Group id="m_pFromRoot" left="0" right="0" bottom="0">
+			<e:Image scaleX="1" scaleY="1" source="border_009_png" anchorOffsetY="0" scale9Grid="7,7,46,46" left="1" right="0" bottom="0" height="80"/>
+			<com_main:ComButton id="m_btnFrom" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37" horizontalCenter="0" verticalCenter="0" currentState="style1"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

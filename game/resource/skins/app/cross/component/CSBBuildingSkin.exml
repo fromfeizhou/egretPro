@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CSBBuildingSkin" width="400" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="build_1,build_2,build_3,build_4,build_5,build_6,build_7" >
+	<e:Image id="m_buildImg" x="28.66" y="11" source="build_kfz_1_png" source.build_2="build_kfz_2_png" y.build_2="-61" x.build_2="-55.34" source.build_3="build_kfz_3_png" x.build_3="-62.34" y.build_3="17" source.build_4="build_kfz_4_png" x.build_4="-69.34" y.build_4="10" source.build_5="build_kfz_5_png" y.build_5="37" x.build_5="-49.34" source.build_6="build_kfz_6_png" x.build_6="58.66" y.build_6="3" source.build_7="build_kfz_7_png" x.build_7="63" y.build_7="7"/>
+	<e:Group id="m_effNode" width="1" height="1" x="0" y="0" touchChildren="false" touchEnabled="false"/>
+	<e:Group width="182" height="192" y="-111" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" touchEnabled="false" horizontalCenter.build_6="0" touchThrough="false">
+		<e:Group id="m_title" width="148" height="68" y="113" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" x="13" scaleX="1" scaleY="1">
+			<e:Image source="border_11028_png" y="10.33" width="88" height="33" scale9Grid="17,0,37,26" x="53"/>
+			<e:Image id="m_flagImg" x="3" y="5" source="zyt_vs_red_png"/>
+			<e:Label id="m_faction" text="敌" x="23.66" y="17.68" size="24" strokeColor="0x961717" stroke="2" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_cityName" text="东部城区" y="17.67" size="16" fontFamily="Microsoft YaHei" horizontalCenter="23"/>
+		</e:Group>
+		<e:Group id="m_topBtn" width="92" height="100" y="29" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="4" visible.build_6="false" visible.build_7="false" visible="false">
+			<e:Image source="build_pp_png" y="6" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Image source="build_pp_jj_png" y="11" horizontalCenter="0.5" visible="false"/>
+			<e:Image source="lb_bk_png" y="57" horizontalCenter="0"/>
+			<e:Label id="m_bili" text="100%" y="33" textColor="0xfff9db" size="22" fontFamily="Microsoft YaHei" strokeColor="0x1c0e03" stroke="2" horizontalCenter="0.5" visible="true"/>
+		</e:Group>
+		<e:Group id="m_warBtn" width="92" height="100" y="29" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="4" touchThrough="false" visible="false">
+			<e:Image y="8" horizontalCenter="-1" source="btn_039_up_png"/>
+			<e:Image y="65" horizontalCenter="0.5" source="lb_zc_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

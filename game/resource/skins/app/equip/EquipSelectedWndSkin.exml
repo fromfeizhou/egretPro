@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipSelectedWndSkin" width="1110" height="635" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="635" anchorOffsetX="0" anchorOffsetY="0" width="1110">
+		<com_main:APopUp id="m_apopUp" anchorOffsetY="0" scaleX="1" scaleY="1" currentState="size2" top="0" bottom="0" skinName="APopUpSkin"/>
+		<e:Group left="4" right="4" bottom="5"/>
+		<e:Group id="m_pEquipInfo" height="572" y="58" left="603" right="3">
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" right="0" top="0" bottom="0" width="507" touchChildren="false" touchEnabled="false">
+				<e:Image source="border_006_png" top="0" right="0" bottom="0" left="0" visible="false"/>
+				<e:Image source="border_1008_png" scaleY="-1" top="3" right="5" left="7" anchorOffsetY="0" bottom="4" anchorOffsetX="0"/>
+			</e:Group>
+			<e:Image source="line_1006_png" y="152.02" right="0" left="0" x="0" scaleX="1" scaleY="1"/>
+			<e:Image source="line_1006_png" y="354.68" right="0" left="0" x="-600" scaleX="1" scaleY="1"/>
+			<e:Image right="0" left="0" x="-600" scaleX="1" scaleY="1" source="border_009_png" bottom="0" height="100" scale9Grid="7,7,46,46"/>
+			<e:Label id="m_labEquipName" text="装备名称" x="147.4" y="18.52" size="26" scaleX="1" scaleY="1"/>
+			<e:Group x="145" y="56.67" scaleX="1" scaleY="1">
+			<e:Image source="border_1036_png" x="18" y="1" height="30"/>
+			<e:Image x="0" y="0" scaleX="0.8" scaleY="0.8" source="common_fight2_png"/>
+			<e:Label id="m_labFight" text="战力：99999" x="30" y="7" size="20" textColor="0xffff99"/>
+			</e:Group>
+			<e:Group x="145" y="89.4" scaleX="1" scaleY="1">
+			<e:Image source="border_1036_png" x="18" y="1" height="30"/>
+			<e:Image id="m_imgAttriIcon" x="0" scaleX="0.8" scaleY="0.8" verticalCenter="1.5" source="common_armyhp_png"/>
+			<e:Label id="m_labAttri" text="战力：99999" x="30" size="20" textColor="0x00ff00" y="7"/>
+			</e:Group>
+			<e:Label id="m_labSuitName" text="套装" y="163.2" size="24" textColor="0x8a8a9e" scaleX="1" scaleY="1" horizontalCenter="0" fontFamily="Microsoft YaHei"/>
+			<e:Group x="33" y="16.34">
+				<com_main:EquipItem id="m_euipItem" x="0" y="0" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+				<e:Label id="m_labLevel" text="装备名称" y="106.84" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textAlign="center" textColor="0xABB7D1" horizontalCenter="0"/>
+			</e:Group>
+			<com_main:EquipItem id="m_suitItem0" x="33" y="197" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+			<com_main:EquipItem id="m_suitItem1" x="149.02" y="197" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1"/>
+			<com_main:EquipItem id="m_suitItem2" x="267.03" y="197" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+			<com_main:EquipItem id="m_suitItem3" x="381.66" y="197" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+			<e:Group id="m_pAttriCon" height="94" y="375.67" anchorOffsetX="0" anchorOffsetY="0" width="454" horizontalCenter="0">
+			<e:layout>
+				<e:VerticalLayout gap="0"/>
+			</e:layout>
+			</e:Group>
+			<com_main:ComButton id="m_btnEquip" y="525.1" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" x="251.5"/>
+		</e:Group>
+		<e:Scroller anchorOffsetX="0" anchorOffsetY="0" left="4" top="62" right="516" bottom="15">
+			<e:List id="m_listEquip" anchorOffsetY="0" height="561" y="-1">
+				<e:layout>
+					<e:TileLayout paddingLeft="15" paddingTop="17" horizontalGap="53" verticalGap="9" rowHeight="154" columnWidth="100" paddingBottom="60"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Image source="border_1019_png" width="596" left="4" bottom="4" touchEnabled="false" height="122"/>
+		<e:Image source="line_1001_png" top="65" bottom="1" right="506"/>
+	</e:Group>
+</e:Skin>

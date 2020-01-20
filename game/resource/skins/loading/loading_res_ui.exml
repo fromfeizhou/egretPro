@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="loading_res_ui" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Image id="m_imgLoginBg" horizontalCenter="0" verticalCenter="0" source="loadingBg_jpg"/>
+
+	<e:Group id="m_pProgressGroup" height="100" bottom="0" anchorOffsetX="0" left="0" right="0">
+		<com_main:CImage bottom="0" left="0" right="0" source="border_1019_png" height="122"/>
+		<com_main:CLabel id="m_pLblProgress" text="正在疯狂加载。。。" horizontalCenter="0" size="18" textColor="0x8a8a9e" y="62"/>
+
+
+		<com_main:CImage bottom="0" left="0" right="0" height="9" source="proBg_003_png"/>
+
+
+
+
+		<com_main:CImage id="m_pProgressImg" width="1291" anchorOffsetX="0" bottom="0" left="0" source="pro_001_png" height="9"/>
+
+
+
+
+
+
+	</e:Group>
+	<e:Image id="m_imgLogo" right="15" top="8" source=""/>
+</e:Skin>

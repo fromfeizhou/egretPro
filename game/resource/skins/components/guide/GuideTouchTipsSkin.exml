@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GuideTouchTipsSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="m_pTargetBroderRoot" width="167" height="106" touchChildren="false" touchEnabled="false">
+		<com_main:CImage id="m_pTouchEffect1" y="68" source="guide_icon_png" width="128" height="158" anchorOffsetY="145" scaleX="1" scaleY="1" x="83" anchorOffsetX="18"/>
+	</e:Group>
+</e:Skin>

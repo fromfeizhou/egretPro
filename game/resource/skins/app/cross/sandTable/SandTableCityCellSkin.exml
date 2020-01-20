@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SandTableCityCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="city_4,city_3,city_2,city_1" >
+	<e:Group id="m_pRoot" y="0" x="0">
+		<com_main:CImage id="m_pPanel" scale9Grid="33,31,14,18" source="map_build_1_png" width="248" height="154" source.city_4="map_build_icon21_png" width.city_4="97" height.city_4="79" horizontalCenter="0" verticalCenter="0" horizontalCenter.city_4="0" source.city_3="map_build_4_png" width.city_3="150" height.city_3="88" source.city_2="map_build_2_png" width.city_2="195" height.city_2="116"/>
+		<e:Group touchEnabled="false" horizontalCenter="0" bottom="0" bottom.city_4="0" top.city_4="100" horizontalCenter.city_4="0" top.city_3="100" top.city_2="120" top.city_1="170" top="170">
+			<com_main:CImage touchEnabled="false" verticalCenter="0" scale9Grid="13,3,78,21" source="zyt_20_png" horizontalCenter="0" scaleX="0.6" scaleY="0.8"/>
+			<com_main:CLabel id="m_labName" text="县城小沛" size="20" textColor="0xe9e9e6" horizontalCenter="0" stroke="1" verticalCenter="-2" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

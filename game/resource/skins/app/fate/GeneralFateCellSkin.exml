@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralFateCellSkin" width="1070" height="200" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1070" height="200" x="0" y="0">
+		<e:Group>
+			<e:Image source="border_1020_png" width="1094" anchorOffsetX="0" top="0" />
+			<e:Group anchorOffsetY="0" height="44" left="20">
+				<e:Label id="m_lbName" text="【龙飞凤舞】" textColor="0xe7c772" size="26" verticalCenter="0" />
+				<e:Label id="m_lbContent" text="当前减少行军时间所需剩余时间的20%" textColor="0xaac7ff" size="26" verticalCenter="0" />
+				<e:layout>
+					<e:HorizontalLayout verticalAlign="middle"  gap="10"/>
+				</e:layout>
+			</e:Group>
+			<e:Label id="m_lbEffect" text="攻击20%" textColor="0x878585" size="26" verticalCenter="0"  right="100"/>
+		</e:Group>
+		<com_main:CImage id="m_pActiveState" source="lb_yjh_png" anchorOffsetX="0" right="90" verticalCenter="25" />
+		<e:Label id="m_lbStar" text="下一级：6星" size="24" textAlign="center" verticalCenter="-22" right="34"  textColor="0xabb7d1" anchorOffsetX="0" width="200"/>
+		<com_main:ComButton id="m_pBtn" y="125.89" skinName="com_button" currentState="style1" anchorOffsetX="72.5"
+		                    anchorOffsetY="30" right="60" />
+		
+		<e:Group id="m_pAcCondition" y="58" x="6">
+			<e:Group id="m_pro" x="96" y="44">
+				<com_main:FateProComp skinName="FateProCompSkin" currentState="unlock" x="1" />
+				<com_main:FateProComp skinName="FateProCompSkin" currentState="unlock" />
+				<com_main:FateProComp skinName="FateProCompSkin" currentState="unlock" />
+				<e:layout>
+					<e:HorizontalLayout gap="90" />
+				</e:layout>
+			</e:Group>
+			<e:Group id="m_phead">
+				<com_main:GeneralHeadRender skinName="com_general_head_render" currentState="fate" scaleX="0.8" scaleY="0.8" />
+				<com_main:GeneralHeadRender skinName="com_general_head_render" currentState="fate" scaleX="0.8" scaleY="0.8" x="170" />
+				<com_main:GeneralHeadRender skinName="com_general_head_render" currentState="fate" scaleX="0.8" scaleY="0.8" x="170" />
+				<e:layout>
+					<e:HorizontalLayout gap="70" />
+				</e:layout>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="top_other" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="scene,world,hang,xiangyang,base" >
+	<w:Config id="16c94818feb"/>
+
+	<com_main:MainToolsBar id="m_mainToolsBar" bottom="0" left="0" right="0" skinName="new_tool_main"/>
+	<e:Group id="m_sceneGroup" width="153" height="136" bottom="-8" y="612" right="-16">
+		<e:Group id="m_pSceneBtn" width="112" height="112" x="78" y="73" anchorOffsetX="56" anchorOffsetY="56" x.world="-46" x.scene="202" visible.scene="false" x.base="-46">
+			<com_main:CImage scaleX="1" scaleY="1" visible.scene="false" source="city_icon_zc_png"/>
+			<e:Group id="m_mrp" width="16" height="22" x="4" y="4" anchorOffsetX="0" anchorOffsetY="0"/>
+		</e:Group>
+		<e:Group id="m_pHangBtn" width="112" height="112" x="-46" y="73" anchorOffsetX="56" anchorOffsetY="56" x.world="78" x.scene="78" x.hang="202" visible.hang="false" x.base="78">
+			<com_main:CImage scaleX="1" scaleY="1" x.hang="0" y="0" source="city_icon_fight_png"/>
+		</e:Group>
+		<e:Group id="m_pWorldBtn" width="112" height="112" x="-46" y="73" anchorOffsetX="56" anchorOffsetY="56" visible.world="false" visible.base="false">
+			<com_main:CImage scaleX="1" scaleY="1" x="0" y="0" source="city_icon_sjdt_png"/>
+			<e:Group id="m_pWorldRed" touchEnabled="false" width="112" height="112"/>
+		</e:Group>
+	</e:Group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<e:Group id="m_conTop" right="141" height="167" top="70" anchorOffsetX="0" width="900" touchEnabled="false" right.world="356" width.world="679" visible.xiangyang="false" visible.base="false">
+		<e:layout>
+			<e:TileLayout horizontalAlign="right" horizontalGap="25" verticalGap="25"/>
+		</e:layout>
+
+
+
+
+
+
+	</e:Group>
+	<e:Group id="m_conBottom" right="243" bottom="-2" height="100" anchorOffsetX="0" width="600"  touchEnabled="false">
+		<e:layout>
+			<e:TileLayout horizontalAlign="right" horizontalGap="0"/>
+		</e:layout>
+
+
+
+
+
+
+
+	</e:Group>
+
+	<e:Group id="m_conRight" right="113" bottom="120" height="75" anchorOffsetX="0" width="766.67"  touchEnabled.hang="false" touchEnabled="false" visible.base="false">
+		<e:layout>
+			<e:TileLayout horizontalAlign="right" horizontalGap="13"/>
+		</e:layout>
+
+	</e:Group>
+	<e:Group id="m_conMoreRoot" right="61" bottom="190" visible="false">
+		<e:Image source="com_toolBg2_png" scale9Grid="23,19,122,28" alpha="0.65" y="0" left="45" right="-18" visible.base="false" visible.xiangyang="false"/>
+		<e:Group id="m_conRightSec" height="75" anchorOffsetX="0"  right="-37" y="-6" visible.base="false">
+		<e:layout>
+			<e:TileLayout horizontalGap="13" horizontalAlign="right"/>
+		</e:layout>
+		</e:Group>
+	</e:Group>
+	<e:Group id="m_pMoreBtn" width="76" height="75" anchorOffsetX="38" anchorOffsetY="37.5" right="24" bottom="120" visible.base="false">
+		<e:Image scaleX="1" scaleY="1" y="0" x="0" source="city_icon_gd_png"/>
+	</e:Group>
+	<com_main:MissionTipsView id="m_pMissionTipsViewRoot" skinName="MissionTipsViewSkin" left="15" bottom="74" visible.xiangyang="false" visible.base="false"/>
+
+
+
+
+
+
+
+</e:Skin>

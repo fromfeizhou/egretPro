@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="map_build_pp" width="74" height="90" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage x="0" y="0" source="build_pp_png"/>
+	<com_main:CImage id="m_pIcon" horizontalCenter="0" verticalCenter="-7.5" source="common_prop_2_png" scaleX="0.7" scaleY="0.7"/>
+	<e:Label id="m_pNum" text="" size="20" stroke="2" horizontalCenter="0" verticalCenter="22" textColor="0xffff99"/>
+</e:Skin>

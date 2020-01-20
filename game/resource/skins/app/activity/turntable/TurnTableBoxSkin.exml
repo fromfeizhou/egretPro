@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TurnTableBoxSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group>
+		<e:Image source="junbei_frame_png" alpha="0.3"/>
+		<e:Image id="m_imgBox" y="10" horizontalCenter="0" source="hang_bx_png"/>
+		<e:Group id="m_pEffectRoot" width="100" height="100" horizontalCenter="0" anchorOffsetX="50" anchorOffsetY="50" verticalCenter="0"/>
+		<e:Label id="m_labName" text="5次" size="22" horizontalCenter="0.5" y="87" fontFamily="Microsoft YaHei" x="41" scaleX="1" scaleY="1" textColor="0xffff99"/>
+	</e:Group>
+</e:Skin>

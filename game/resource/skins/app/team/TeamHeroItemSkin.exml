@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TeamHeroItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" width="138" height="120">
+	<e:Group height="120" touchEnabled="false" anchorOffsetY="0" touchChildren="false" width="138" anchorOffsetX="0">
+		<com_main:GeneralHeadRender id="m_pHero" skinName="com_general_head_render" scaleX="0.8" scaleY="0.8" currentState="base_right" x="12" y="15"/>
+		<e:Group id="m_pTeamRoot" x="1" y="13">
+			<e:Image source="com_wzk4_png" x="0" y="0"/>
+			<e:Label id="m_labTeamId" text="部队1" y="8" size="16" width="20" textAlign="center" horizontalCenter="0.5" textColor="0xe9e9e6"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

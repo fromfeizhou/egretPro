@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaTabStrengSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="m_pViewRoot" anchorOffsetX="0" anchorOffsetY="0" width="1158" height="685" horizontalCenter="0" verticalCenter="0">
+		<e:Image source="trea_bg_jpg"/>
+		<e:Group x="187.66" y="22.68">
+			<e:Image source="com_wzk5_png" x="0" y="0" height="65" width="277" alpha="0.65"/>
+			<e:Label id="m_labName" text="青龙刀" textColor="0xe9e9e6" size="36" horizontalCenter="0" y="15"/>
+		</e:Group>
+		<com_main:TreaIconView id="m_treaIcon" y="190" skinName="TreaIconViewSkin" scaleX="1.8" scaleY="1.8" x="37"/>
+		<com_main:ComFightItem id="m_comFightItem" x="142.02" y="517" skinName="ComFightItemSkin"/>
+		<e:Group width="263" anchorOffsetX="0" y="600" anchorOffsetY="0" x="190.34" height="55">
+			<e:layout>
+			<e:HorizontalLayout gap="11" paddingLeft="6" paddingTop="6" paddingBottom="0"/>
+			</e:layout>
+			<e:Image source="common_star_empty_png" x="0" y="8" scaleX="1" scaleY="1"/>
+			<e:Image source="common_star_empty_png" x="10" y="18" scaleX="1" scaleY="1"/>
+			<e:Image source="common_star_empty_png" x="20" y="28" scaleX="1" scaleY="1"/>
+			<e:Image source="common_star_empty_png" x="30" y="38" scaleX="1" scaleY="1"/>
+			<e:Image source="common_star_empty_png" x="40" y="48" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="m_pStarRoot" anchorOffsetX="0" y="600" anchorOffsetY="0" x="190.34" width="263" height="55">
+			<e:layout>
+			<e:HorizontalLayout gap="-3"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="504" anchorOffsetX="0" height="685" x="654" y="0">
+			<e:Image source="border_006_png" width="100%" height="100%"/>
+			<e:Image source="line_008_png" rotation="90" left="0" y="0" width="685"/>
+			<com_main:TreaInfoComp id="m_treaInfo" skinName="TreaInfoCompSkin" visible="false"/>
+			<com_main:TreaLvComp id="m_treaLvComp" skinName="TreaLvCompSkin"/>
+			<com_main:TreaStarComp id="m_treaStar" skinName="TreaStarCompSkin" visible="false"/>
+			<com_main:TreaInlayComp id="m_treaInlay" skinName="TreaInlayCompSkin" visible="false"/>
+		</e:Group>
+		<e:Group id="m_btnLeft" left="0" anchorOffsetY="0" height="200" anchorOffsetX="0" width="80" verticalCenter="242.5">
+			<e:Image source="btn_024_up_png" verticalCenter="0" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_btnRight" right="508" width="80" height="200" anchorOffsetX="0" anchorOffsetY="0" x="10" verticalCenter="242.5">
+			<e:Image source="btn_024_up_png" verticalCenter="0" horizontalCenter="0" scaleX="-1"/>
+		</e:Group>
+		<e:Group id="m_pInlayRoot" x="27.33" y="163.17" touchEnabled="false">
+			<com_main:TreaInlayStone id="m_stone0" x="0" skinName="TreaInlayStoneSkin"/>
+			<com_main:TreaInlayStone id="m_stone1" x="496" y="67" skinName="TreaInlayStoneSkin"/>
+			<com_main:TreaInlayStone id="m_stone2" y="136.92" skinName="TreaInlayStoneSkin"/>
+			<com_main:TreaInlayStone id="m_stone3" x="496" y="198.59" skinName="TreaInlayStoneSkin"/>
+		</e:Group>
+		<e:Group id="m_pLabEffRoot" width="10" height="10" x="340" y="508" touchChildren="false" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

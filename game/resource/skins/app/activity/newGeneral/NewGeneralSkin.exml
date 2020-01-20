@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewGeneralSkin" width="1240" height="690.36" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group id="m_allGroup" width="1240" height="630" x="0" y="0">
+		<e:Image source="zyt_xwj_bf_png" x="226" y="-8"/>
+		<e:Image id="m_titleImg" horizontalCenter="146.5" verticalCenter="-250.5" source="lb_01jdbw_png"/>
+		<com_main:ComGenCard id="m_genImg" skinName="ComGenCardSkin" horizontalCenter="-325" verticalCenter="12.5"/>
+		<e:Group id="m_video" width="540" height="274" x="57" y="414" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="cover_01_png" x="30" y="4" scaleX="1" scaleY="1"/>
+			<e:Image source="zyt_42_png" x="99" y="87" scaleX="1" scaleY="1"/>
+			<e:Image source="lb_wjzs_png" x="157" y="133" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="m_panelGroup" width="1240" height="630" x="0" y="0">
+		</e:Group>
+		<com_main:NewGenTab id="m_btn0" x="1170" y="217" skinName="NewGenTapSkin" anchorOffsetX="45" anchorOffsetY="68"/>
+		<com_main:NewGenTab id="m_btn1" x="1152" y="368" skinName="NewGenTapSkin" anchorOffsetX="45" anchorOffsetY="68"/>
+		<com_main:NewGenTab id="m_btn2" x="1135" y="521" skinName="NewGenTapSkin" anchorOffsetX="45" anchorOffsetY="68"/>
+		<e:Image id="m_btnClose" x="1163" y="98" source="btn_142_png" anchorOffsetX="23" anchorOffsetY="23"/>
+		<e:Label id="m_lbDowntime" text="活动结束倒计时：6天" y="652" size="26" fontFamily="Microsoft YaHei" textColor="0xfff6c7" scaleX="1" scaleY="1" left="610"/>
+		<e:Image id="m_playBtn" source="btn_147_png" x="281" y="472" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

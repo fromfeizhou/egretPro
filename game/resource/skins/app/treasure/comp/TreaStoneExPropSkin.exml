@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaStoneExPropSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="189" height="82">
+		<e:Label text="此孔镶嵌：" x="7" y="11" size="20" textColor="0xabb7d1"/>
+		<e:Label id="m_labTile" text="绿松石" x="111" y="11" size="20" textColor="0xe9e9e6"/>
+		<e:Group x="18" y="41">
+			<e:Image source="border_1001_png" x="0" y="0" alpha="0.7" width="171"/>
+			<e:Label id="m_labAttri" text="攻击+1000" x="45" y="5" textColor="0xABB7D1" size="18"/>
+		</e:Group>
+		<e:Group x="0" y="30">
+			<e:Image source="com_wzk4_png" y="39" rotation="270" x="0" scaleX="0.9" scaleY="0.9"/>
+			<e:Label text="激活" size="18" textColor="0xffff99" y="16" x="9"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

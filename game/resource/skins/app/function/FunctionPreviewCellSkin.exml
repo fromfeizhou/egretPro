@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FunctionPreviewCellSkin" width="1000" height="124" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage  source="border_018_png" scale9Grid="27,31,61,54" anchorOffsetX="0" width="995.28" verticalCenter="0"/>
+	<e:Group left="107" y="22.23">
+	<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="border_1036_png"  />
+	<e:Label id="m_pLbName" text="攻城中"  size="24" textAlign="left"  verticalCenter="0" x="18"/>
+	</e:Group>
+	<e:Group left="17" anchorOffsetY="0" height="98" y="17">
+	<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="Qualitykuang0_png" scaleX="0.7" scaleY="0.7" verticalCenter="0"/>
+	<com_main:CImage id="m_pIco" width="76" height="75" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="tb-gch_png" verticalCenter="0" horizontalCenter="0"/>
+	</e:Group>
+	<e:Label id="m_pLbContent" text="攻城中hsdhshdsdsdsd攻城中hsdhshdsdsdsd攻城中hsdhshdsdsdsd攻城中hsdhshdsdsdsd攻城中hsdhshdsdsdsd攻城中hsdhshdsdsdsd攻城中hsdhshdsdsdsd" y="67.2" size="18" textAlign="left" lineSpacing="7" left="121" textColor="0xabb7d1" width="668" anchorOffsetX="0"/>
+	<e:Group id="m_pBtnGo"   right="26" verticalCenter="-0.5" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:ComButton id="m_pBtn" skinName="com_button" currentState="style6" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Label id="m_pOpenLev" text="30级开启"  size="26" textAlign="left" textColor="0xff0000" verticalCenter="-30" horizontalCenter="0"/>
+</e:Skin>

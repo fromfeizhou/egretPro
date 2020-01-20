@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TipsNorWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetY="0" x="0" y="0">
+		<e:Image anchorOffsetY="0" left="0" right="1" top="0" bottom="0" anchorOffsetX="0" source="border_039_png" scale9Grid="26,16,11,17"/>
+		<e:Label id="m_labTitle" text="袁绍将魂" y="6" fontFamily="Microsoft YaHei" horizontalCenter="-2" size="26" textColor="0xe9e9e6"/>
+		<e:Image y="43" horizontalCenter="0" source="line_1003_png" scaleY="-1"/>
+		<e:Group y="52" horizontalCenter="0">
+			<com_main:CLabel id="m_labDes" text="顶顶顶顶" verticalAlign="middle" lineSpacing="5" stroke="0" size="24" fontFamily="Microsoft YaHei" textAlign="left" textColor="0x8a8a9e" scaleX="1" scaleY="1"/>
+			<e:layout>
+				<e:VerticalLayout paddingBottom="17" paddingLeft="20" paddingRight="20" horizontalAlign="center"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

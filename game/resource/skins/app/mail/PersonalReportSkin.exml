@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PersonalReportSkin" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="714" height="588">
+	<e:Group width="714" height="588" x="3" y="0">
+		<e:Group width="710.61" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image source="yj_zyd_png" anchorOffsetY="0" height="136" anchorOffsetX="0" width="100%" x="0"/>
+			<e:Label text="获得" x="332.46" y="9" size="24" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Group width="712" height="73" x="-0.87" y="136" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image source="border_006_png" anchorOffsetY="0" height="36" anchorOffsetX="0" width="100%" scaleX="1" scaleY="1"/>
+			<e:Image source="line_1007_png" x="171.55" height="100%" scaleX="1" scaleY="1"/>
+			<e:Image source="line_1007_png" x="353.55" scaleX="1" scaleY="1" height="100%" y="0"/>
+			<e:Image source="line_1007_png" x="530.55" y="0" height="100%" scaleX="1" scaleY="1"/>
+			<e:Label text="部队数量" x="41.69" y="6.64" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c"/>
+			<e:Label text="阵亡士兵" x="213.01" y="5.59" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c"/>
+			<e:Label text="击杀部队" x="399.65" y="5.63" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c"/>
+			<e:Label text="杀死敌兵" x="579.22" y="5.34" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c"/>
+			<e:Label id="m_lbArmNum" text="2" x="22.92" y="43" size="22" width="120" textAlign="center" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Label id="m_lbDeathNum" text="6999" x="202.99" y="43" size="22" width="120" textAlign="center" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Label id="m_lbKillArmsNum" text="120" x="378.32" y="43" size="22" width="120" textAlign="center" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Label id="m_lbKillNum" text="24446" x="561.54" y="43" size="22" width="120" textAlign="center" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			</e:Group>
+			<com_main:ComItemNew id="m_itemAward" y="41" skinName="com_item_new" x="305" currentState="count" scaleX="0.9" scaleY="0.9"/>
+		</e:Group>
+		<e:Scroller width="710" scrollPolicyV="on" scrollPolicyH="off" top="211" bottom="0">
+				<e:List id="m_listWarResult" x="0" scaleX="1" scaleY="1" itemRendererSkinName="PersonWarItemSkin">
+				</e:List>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

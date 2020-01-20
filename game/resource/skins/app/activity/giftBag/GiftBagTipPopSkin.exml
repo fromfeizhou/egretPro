@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GiftBagTipPopSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:tween="egret.tween.*" width="1334" height="750">
+	<w:Declarations>
+		<tween:TweenGroup id="actionGroup">
+			<tween:TweenItem target="{group1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="50"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0.3}" scaleY="{0.3}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150" ease="backOut">
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{group2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}" alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="200"/>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object scaleY="{1}" alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{group3}">
+				<tween:Set/>
+				<tween:Wait duration="250"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<com_main:CImage id="m_BackGround" top="0" left="1" right="-1" bottom="0" alpha="0.1" source="border_006_png"/>
+	<e:Group width="1080" height="240" horizontalCenter="0" verticalCenter="0">
+		<e:Group id="group2" height="240" scaleX="1" scaleY="1" width="1080" x="0" y="0">
+		<e:Image scaleX="1" scaleY="1" top="0" left="0" bottom="0" right="0" source="border_1030_png"/>
+		<e:Image scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" top="-24" left="100" right="100"/>
+		<e:Image scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" left="100" right="100" bottom="-16"/>
+		<e:Image id="m_btnHide" y="0" scaleX="1" scaleY="1" source="btn_036_up_png" x="985"/>
+		<e:Group x="0" y="0" touchEnabled="false" touchChildren="false">
+			<e:Image source="border_1008_png" y="278" scaleY="-1" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="40,9,242,57" height="278" alpha="1" width="1080" x="0"/>
+			<e:Image source="border_1008_png" y="278" scaleY="-1" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="40,9,242,57" height="278" alpha="1" width="1080" x="0"/>
+		</e:Group>
+		<e:Group id="group3" anchorOffsetX="0" anchorOffsetY="0" y="77" horizontalCenter="0">
+			<com_main:CLabel id="m_labTips" text="点击任意区域关闭" fontFamily="Microsoft YaHei" size="24" touchEnabled="false" textColor="0x8A8A9E" y="0" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<com_main:ComButton id="m_btnGoto" skinName="com_button" currentState="style2" y="70" horizontalCenter="0" x="-39" scaleX="1" scaleY="1"/>
+		</e:Group>
+		</e:Group>
+		<e:Group id="group1" width="1" height="1" anchorOffsetX="0" anchorOffsetY="0" y="26" x="540">
+		<e:Image source="Image_general_levelup_suc_bg_png" y="-86" scaleX="0.7" scaleY="0.7" horizontalCenter="0" x="-309"/>
+		<e:Image y="-125.15" scaleX="1" scaleY="1" horizontalCenter="0" source="lb_gxn_png" width="254" height="110"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

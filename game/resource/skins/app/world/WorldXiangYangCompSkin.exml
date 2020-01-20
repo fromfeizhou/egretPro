@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldXiangYangCompSkin" width="74"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*">
+	<com_main:CImage scaleX="1" scaleY="1" source="city_icon_gzc_png" verticalCenter="0"/>
+</e:Skin>

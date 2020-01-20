@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TextTipScroll" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="600" height="98" horizontalCenter="0" verticalCenter="0">
+		<!--<e:Image width="800" height="98" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" x="0" y="-1" source="tongyong_bg_11_shen_png"  scale9Grid="8,8,5,5"/>-->
+		<com_main:CLabel xmlns:com_main="com_main.*" id="m_pTipsText" text="网络不稳定，正在努加载中（30s）..." anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" size="32" scaleX="1" scaleY="1" horizontalCenter="0" bold="true" verticalCenter="0" x="20" y="19" textColor="0xffffff" strokeColor="0x0e80cf" stroke="3"/>
+	</e:Group>
+</e:Skin>

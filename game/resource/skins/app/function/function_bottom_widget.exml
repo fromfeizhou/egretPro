@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="function_bottom_widget" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="106" height="106">
+	<com_main:CImage y="76" source="tool_bg_2_png" horizontalCenter="0" visible="false"/>
+	<com_main:CImage id="m_pImgBg" y="0" source="tool_logo_1_png" width="90" height="90" horizontalCenter="0"/>
+	<com_main:CImage id="m_pImgFont" y="58.5" source="" horizontalCenter="0"/>
+	<com_main:CImage id="m_pImgMask" x="68" y="-4" source="" width="34" height="66" visible="false"/>
+</e:Skin>

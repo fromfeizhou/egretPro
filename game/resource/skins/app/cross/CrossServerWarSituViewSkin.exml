@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossServerWarSituViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" alpha="1" anchorOffsetX="0" anchorOffsetY="0" width="1116" height="637">
+		<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" currentState="size7" height="637" width="1116" y="0" x="0"/>
+		<com_main:CImage touchEnabled="false"  scaleX="1" scaleY="1" source="zyt_kfz_jpg"   anchorOffsetX="0" anchorOffsetY="0" verticalCenter="30.5" horizontalCenter="0" width="1092" height="552"/>
+		<e:Group top="68" x="7" width="350">
+		<com_main:CImage touchEnabled="false" width="350" height="562" scaleX="1" scaleY="1" source="border_006_png" alpha="0.65"  anchorOffsetX="0" x="0" y="0" anchorOffsetY="0"/>
+		<com_main:CrossServerWarSituComp id="ownSituComp" skinName="CrossServerWarSituCompSkin" horizontalCenter="0" top="10"/>
+		<com_main:CImage source="line_1006_png" width="300" horizontalCenter="0" verticalCenter="-2.5"/>
+			<com_main:CrossServerWarSituComp id="enemySituComp" skinName="CrossServerWarSituCompSkin" horizontalCenter="0" bottom="30"/>
+		</e:Group>
+		<e:Group horizontalCenter="170" top="80">
+			<com_main:CImage source="world_title_png" horizontalCenter="0"/>
+			<com_main:CLabel id="m_lbCity"  text="荆州城大殿" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right"  textColor="0xe7d7a7" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group left="362" top="75" anchorOffsetY="0" height="546" anchorOffsetX="0" width="735">
+			<com_main:CrossServerWarNameComp id="m_build_1"  skinName="CrossServerWarNameCompSkin" verticalCenter="-32" scaleX="0.8" scaleY="0.8" x="293"/>
+			<com_main:CrossServerWarNameComp id="m_build_5"  skinName="CrossServerWarNameCompSkin" verticalCenter="116" scaleX="0.8" scaleY="0.8" x="367"/>
+			<com_main:CrossServerWarNameComp id="m_build_2"  skinName="CrossServerWarNameCompSkin" verticalCenter="-10" scaleX="0.8" scaleY="0.8" x="563"/>
+			<com_main:CrossServerWarNameComp id="m_build_3"  skinName="CrossServerWarNameCompSkin" verticalCenter="-133" scaleX="0.8" scaleY="0.8" x="210"/>
+			<com_main:CrossServerWarNameComp id="m_build_4"  skinName="CrossServerWarNameCompSkin" verticalCenter="-37" scaleX="0.8" scaleY="0.8" x="44"/>
+			<com_main:CrossServerWarNameComp id="m_build_6"  skinName="CrossServerWarNameCompSkin" verticalCenter="107" scaleX="0.8" scaleY="0.8" x="59"/>
+			<com_main:CrossServerWarNameComp id="m_build_7"  skinName="CrossServerWarNameCompSkin" verticalCenter="-118" scaleX="0.8" scaleY="0.8" x="505"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

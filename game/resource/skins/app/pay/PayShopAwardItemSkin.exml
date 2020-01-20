@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PayShopAwardItemSkin" width="1100" height="197" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+
+
+	<e:Group x="0" y="0" width="100%" height="181">
+		<e:Group x="0" y="0" width="100%">
+			<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" rotation="359.75" source="welfareLogintipcellbg_png" width="100%" x="0" y="0"/>
+			<e:Label id="m_labTip" text="累计充值" size="25" x="13" strokeColor="0x707070" fontFamily="Microsoft YaHei" textColor="0xabb7d1" verticalCenter="2"/>
+			<e:Label id="m_labtxt" text="元宝" x="187" stroke="1" strokeColor="0x383838" size="25" fontFamily="Microsoft YaHei" textColor="0xe7c772" verticalCenter="2"/>
+			<e:BitmapLabel id="m_pLbGold" x="117" font="font_vip_fnt" text="300" verticalCenter="0"/>
+		</e:Group>
+		<e:List id="m_group" x="10" y="61" anchorOffsetX="0">
+			<e:layout>
+			<e:HorizontalLayout gap="35"/>
+			</e:layout>
+		</e:List>
+		<e:Group width="250" height="133" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" y="48" right="46">
+			<com_main:CLabel id="m_labOpDay" text="第几天开启" fontFamily="Microsoft YaHei" size="24" scaleX="1" scaleY="1" textColor="0xabb7d1" y="59" right="73" visible="false"/>
+			<e:Group id="m_pAwardState" x="38" y="19" scaleX="1" scaleY="1">
+			<e:Image id="m_imgBg" source="com_wzk8_png" scaleX="0.7" scaleY="0.7" rotation="-15" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="m_labState" text="已领取" size="24" textColor="0xE9E9E9" rotation="-20" fontFamily="Microsoft YaHei" x="40" y="47"/>
+			</e:Group>
+			<e:Group id="m_pPlanRoot" y="26.5" anchorOffsetX="0" scaleX="1" scaleY="1" width="240" x="4">
+			<e:Label id="m_pLbPercent" text="进度200000/200000" y="0" textColor="0xE4BF66" stroke="1" strokeColor="0x383838" size="24" anchorOffsetX="0" horizontalCenter="0" textAlign="center" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<com_main:ComButton id="m_pBtnGet" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" y="94" x="116.5" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

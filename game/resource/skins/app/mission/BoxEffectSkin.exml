@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BoxEffectSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" width="150" height="150">
+	<w:Declarations>
+		<tween:TweenGroup id="m_pBoxEffect">
+			<tween:TweenItem target="{m_pEffectRoot}">
+				<tween:Set/>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{-12}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{9}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{-12}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{9}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="650">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group width="150" height="150" anchorOffsetX="75" anchorOffsetY="75" x="75" y="75" touchChildren="false" touchEnabled="false">
+		<e:Group id="m_pEffectRoot" width="150" height="150" horizontalCenter="0" verticalCenter="0" anchorOffsetX="75" anchorOffsetY="75">
+			<com_main:CImage id="m_pIcon" horizontalCenter="0" verticalCenter="0" x="75" y="76" scaleX="1" scaleY="1" source="bx-bu_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ServiceWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="1114" height="635">
+		<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" height="635" width="1114" scaleX="1" scaleY="1" currentState="size3" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image source="zyt_VIPkf_png" x="8.67" y="64.67" anchorOffsetX="0" width="1097" anchorOffsetY="0" height="561"/>
+		<e:Label text="联系美女客服-领取专属豪礼" y="95.01" size="44" fontFamily="Microsoft YaHei" textColor="0xffcded" horizontalCenter="0" stroke="2" strokeColor="0x9f5291" bold="true"/>
+		<e:Group x="29" y="166.34">
+			<e:Image id="m_imgGM" x="0" y="0" source=""/>
+			<e:Group x="414" y="39.33">
+				<e:Label id="m_labMsg0" text="单身" y="0" size="22" fontFamily="Microsoft YaHei" x="0" textAlign="left" textColor="0xe9e9e6"/>
+				<e:Label id="m_labMsg1" text="22岁" y="35" size="22" fontFamily="Microsoft YaHei" x="0" textAlign="left" textColor="0xe9e9e6"/>
+				<e:Label id="m_labMsg2" text="165cm" y="70" size="22" fontFamily="Microsoft YaHei" x="0" textAlign="left" textColor="0xe9e9e6"/>
+				<e:Label id="m_labMsg3" text="48kg" y="105" size="22" fontFamily="Microsoft YaHei" x="0" textAlign="left" textColor="0xe9e9e6"/>
+				<e:Label id="m_labMsg4" text="射手座" y="140" size="22" fontFamily="Microsoft YaHei" x="0" textAlign="left" textColor="0xe9e9e6"/>
+				<e:Label id="m_labMsg5" text="广州" y="175" size="22" fontFamily="Microsoft YaHei" x="0" textAlign="left" textColor="0xe9e9e6"/>
+			</e:Group>
+		</e:Group>
+		<e:Group x="103.33" y="455">
+			<e:Image source="border_1064_png" x="0" y="0" scale9Grid="7,7,42,42" anchorOffsetX="0" width="400.43" alpha="0.5"/>
+			<e:Label id="m_labWx" text="VIP客服微信：vipkefu77" y="16.66" textColor="0xE9E9E6" size="24" horizontalCenter="0" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+		<e:Group id="m_pBtnCopy" x="300" y="567" anchorOffsetX="266" anchorOffsetY="33" visible="false">
+			<e:Image source="btn_150_png" x="0" y="0" anchorOffsetX="0" width="532" scale9Grid="8,8,50,50"/>
+			<e:Label text="复制" size="24" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0" textColor="0xe9e9e6"/>
+		</e:Group>
+		<e:Group x="26" y="-22.98">
+			<e:Image source="zyt_10_png" x="0" y="0" anchorOffsetX="0" width="983.67"/>
+			<e:Image source="lb_vipkf_png" y="14.31" x="417"/>
+		</e:Group>
+		<e:Group x="601" y="178" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="lb_vipkfzsfw_png" y="0" horizontalCenter="0"/>
+			<e:Scroller width="473" height="395.67" x="0" y="40.68" anchorOffsetY="0">
+				<e:Group id="m_pRoot">
+					<e:layout>
+						<e:VerticalLayout gap="10"/>
+					</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Image source="border_1019_png" y="562.06" scaleX="1" scaleY="1" anchorOffsetX="0" width="518.55" x="589.39" touchEnabled="false" alpha="0.6"/>
+
+
+
+
+
+
+
+	</e:Group>
+</e:Skin>

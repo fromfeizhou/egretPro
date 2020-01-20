@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NoticeDlgSkin" width="1207" height="637.33" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<com_main:APopUp id="m_PopUp" x="-2" y="-2" anchorOffsetX="0" currentState="size2" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" height="632.79" width="1207"/>
+	<com_main:ComTabGroup id="m_comTabGroup" left="6" top="64" bottom="16.33" anchorOffsetY="0" skinName="com_tab_group" currentState="top"/>
+	<e:Scroller width="892" height="518" x="244" y="96" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group anchorOffsetX="0" width="862">
+			<e:Label id="m_contentText" text="你好中国：\n\n大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好大家好才是真的好" x="0" y="0" width="892" size="24" fontFamily="Microsoft YaHei" lineSpacing="15" textColor="0x8a8a9e" anchorOffsetX="0"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Image x="180" y="502" source="border_1019_png" anchorOffsetX="0" width="1018" height="122"/>
+</e:Skin>

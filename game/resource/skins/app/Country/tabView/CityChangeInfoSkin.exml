@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CityChangeInfoSkin" width="1160" height="690" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Scroller id="m_scroll" width="1102.67" height="596" x="29" y="33" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group>
+			<e:List id="m_infoList" width="1100" x="0" y="0" itemRendererSkinName="CityChangeRenderSkin">
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

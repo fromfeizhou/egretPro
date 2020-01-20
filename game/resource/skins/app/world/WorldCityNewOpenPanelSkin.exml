@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldCityNewOpenPanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="m_touchGroup" width="1334" height="600" touchEnabled="true" anchorOffsetY="300" x="686" y="300" anchorOffsetX="686">
+		<e:Group x="0" y="0" height="600" anchorOffsetY="0">
+			<e:Image source="border_1039_png" scale9Grid="154,32,924,197" anchorOffsetY="0" top="370" bottom="7" height="50"
+			         width="1375" horizontalCenter="-6" anchorOffsetX="0" />
+			<e:Image source="jscc_bj_png" scale9Grid="154,32,924,197" anchorOffsetY="0" top="0" horizontalCenter="0" />
+			<e:Image source="lb_cckq_png" y="-19.85" horizontalCenter="0.5" />
+			<e:Group horizontalCenter="0"  y="106">
+			<e:Image source="jscc_zyt_png" horizontalCenter="0.5" />
+			<e:Label text="恭喜解锁"  textColor="0xe9e9e6" horizontalCenter="0.5"  size="18" stroke="2" strokeColor="0x453111" y="69"/>
+			<e:Label id="m_pName" text="洛阳"  textColor="0xffff99" horizontalCenter="0.5"  size="30" stroke="2" strokeColor="0x453111" y="100"/>
+			</e:Group>
+			<e:Image source="line_007_png" y="394" horizontalCenter="-140" />
+			<e:Label text="获得奖励"  textColor="0xe9e9e6" horizontalCenter="0.5"  size="30"  y="406"/>
+			<e:Image source="line_007_png" y="394" horizontalCenter="141"   scaleX="-1"/>
+		</e:Group>
+		<!--<e:Scroller width="800" height="100" y="450" scrollPolicyH="auto" scrollPolicyV="off" horizontalCenter="0.5">
+				<e:viewport>-->
+					<e:Group id="m_RewardRoot"  width="800" height="100" y="450" horizontalCenter="0">
+						<!--<e:layout>
+							<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="20"/>
+						</e:layout>-->
+					</e:Group>
+				<!--</e:viewport>
+		</e:Scroller>-->
+	</e:Group>
+	<e:Group id="m_pBtnShowNext" left="0" top="0" right="0" bottom="0">
+	</e:Group>
+</e:Skin>

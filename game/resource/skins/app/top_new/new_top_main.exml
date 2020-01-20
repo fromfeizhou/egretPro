@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="new_top_main" width="1334" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="69">
+	<e:Image source="border_007_png" scale9Grid="26,27,5,3" y="0" left="0" right="0"/>
+	<e:Image scale9Grid="26,27,5,3" source="border_003_png"/>
+	<e:Label id="m_TileName" text="商城" size="36" stroke="2" strokeColor="0x453A38" x="199.04" y="11" fontFamily="Microsoft YaHei" textColor="0xe0d5a8"/>
+	<com_main:CImage id="m_BtnBack" x="0" y="0" source="btn_008_up_png"/>
+	<e:Group id="m_groupSource" width="845.33" anchorOffsetX="0" anchorOffsetY="0" left="390" height="57" verticalCenter="-5">
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle" gap="15"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

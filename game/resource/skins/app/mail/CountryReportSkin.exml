@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryReportSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="714" height="588">
+		<e:Image source="border_1039_png" y="-4" width="100%" scale9Grid="571,32,94,197" height="168"/>
+		<e:Image source="com_jian_png" alpha="0.3" width="130" height="130" y="16" x="293.64"/>
+		<e:Image source="lb_VS_png" x="318.66" y="34.97" scaleX="1" scaleY="1"/>
+		<e:Group x="13.31" y="4">
+			<e:Image source="border_038_png" x="0" y="0"/>
+			<e:Label text="攻" size="24" textColor="0xe9e9e6" horizontalCenter="0" verticalCenter="-5"/>
+		</e:Group>
+		<e:Group x="638" y="4">
+			<e:Image source="border_037_png" x="0" y="0"/>
+			<e:Label text="守" size="24" textColor="0xe9e9e6" x="17" y="12"/>
+		</e:Group>
+		<e:Image id="m_imgRes0" x="71" y="39" scaleX="0.55" scaleY="0.55" source="lb_ty1_s_png"/>
+		<e:Image id="m_imgRes1" source="lb_ty4_b_png" x="568" y="39" scaleX="0.55" scaleY="0.55"/>
+		<com_main:ComState id="m_comState0" x="150" y="-5" skinName="ComStateSkin" currentState="nor5" scaleX="0.35" scaleY="0.35"/>
+		<com_main:ComState id="m_comState1" x="427" y="-5" skinName="ComStateSkin" currentState="nor5" scaleX="0.35" scaleY="0.35"/>
+		<e:Group y="169" horizontalCenter="0" width="517" height="39">
+			<e:Image source="border_1030_png" x="0" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scaleX="1" scaleY="1" alpha="0.3" top="0"/>
+			<e:Image source="line_009_png" x="5" y="-3" width="100%" alpha="0.4" height="6"/>
+			<e:Image source="line_009_png" x="5" width="100%" alpha="0.4" height="6" bottom="-3"/>
+			<e:Label text="部队总数" x="212" size="22" textColor="0xe7d7a7" scaleX="1" scaleY="1" y="10"/>
+			<e:Label id="m_labMaxNum0" text="999" size="20" scaleX="1" scaleY="1" y="10" textColor="0xe9e9e6" horizontalCenter="-131.5"/>
+			<e:Label id="m_labMaxNum1" text="999" size="20" textColor="0xE9E9E6" scaleX="1" scaleY="1" y="10" horizontalCenter="133.5"/>
+		</e:Group>
+		<e:Group y="215.97" horizontalCenter="0.5" width="517" height="39">
+			<e:Image source="border_1030_png" x="0" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scaleX="1" scaleY="1" alpha="0.3" top="0"/>
+			<e:Image source="line_009_png" x="5" y="-3" width="100%" alpha="0.4" height="6"/>
+			<e:Image source="line_009_png" x="5" width="100%" alpha="0.4" height="6" bottom="-3"/>
+			<e:Label text="阵亡数量" x="212" size="22" scaleX="1" scaleY="1" y="10" textColor="0xff0000"/>
+			<e:Label id="m_labLose0" text="999" size="20" textColor="0xE9E9E6" scaleX="1" scaleY="1" y="10" horizontalCenter="-131.5"/>
+			<e:Label id="m_labLose1" text="999" size="20" textColor="0xE9E9E6" scaleX="1" scaleY="1" y="10" horizontalCenter="133.5"/>
+		</e:Group>
+		<e:Group y="259.9" horizontalCenter="0.5" width="517" height="39">
+			<e:Image source="border_1030_png" x="0" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scaleX="1" scaleY="1" alpha="0.3" top="0"/>
+			<e:Image source="line_009_png" x="5" y="-3" width="100%" alpha="0.4" height="6"/>
+			<e:Image source="line_009_png" x="5" width="100%" alpha="0.4" height="6" bottom="-3"/>
+			<e:Label text="剩余数量" x="212" size="22" scaleX="1" scaleY="1" y="10" textColor="0x00ff00"/>
+			<e:Label id="m_labLeft0" text="999" size="20" textColor="0xE9E9E6" scaleX="1" scaleY="1" y="10" horizontalCenter="-131.5"/>
+			<e:Label id="m_labLeft1" text="999" size="20" textColor="0xE9E9E6" scaleX="1" scaleY="1" y="10" horizontalCenter="133.5"/>
+		</e:Group>
+		<e:Group x="0" width="714" height="279" y="309">
+			<e:Image source="line_1007_png" x="358.67" y="5.67" height="100%" scaleX="1" scaleY="1" alpha="0.8"/>
+			<e:Group x="0" y="0" width="100%">
+				<e:Image source="border_006_png" y="0" anchorOffsetY="0" height="36" anchorOffsetX="0" width="100%" scaleX="1" scaleY="1" x="0"/>
+				<e:Label text="排名" x="7.97" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c" y="7"/>
+				<e:Label text="联盟杀敌榜" x="104.31" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c" y="7"/>
+				<e:Label text="杀敌数" x="282.69" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c" y="7"/>
+				<e:Label text="排名" x="374.57" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c" y="7"/>
+				<e:Label text="个人战功榜" x="460.91" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c" y="7"/>
+				<e:Label text="杀敌数" x="635.31" size="22" scaleX="1" scaleY="1" textColor="0x8a8a9c" y="7"/>
+			</e:Group>
+		
+			<e:Scroller width="345" height="239" y="38.52" scrollPolicyV="on" scrollPolicyH="off">
+				<e:List id="m_listTeam" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" itemRendererSkinName="MailCnWarItemSkin" scaleX="1" scaleY="1">
+					<e:layout>
+					<e:VerticalLayout gap="0" paddingLeft="0" paddingTop="5"/>
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+			<e:Scroller width="342" height="239" x="361" y="37" scrollPolicyH="off" scrollPolicyV="on">
+				<e:List id="m_listPersonal" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" itemRendererSkinName="MailCnWarItemSkin" scaleX="1" scaleY="1">
+					<e:layout>
+					<e:VerticalLayout gap="0" paddingLeft="0" paddingTop="5"/>
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+		</e:Group>
+	</e:Group>
+</e:Skin>

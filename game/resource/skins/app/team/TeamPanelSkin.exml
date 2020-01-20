@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TeamPanelSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*" states="normal,embattle,pvpDef">
+	<com_main:CImage source="map_battle_3_000_jpg" x="0" y="0" horizontalCenter="0" verticalCenter="0"  width="100%" height="100%"/>
+	<com_main:CImage width="100%" height="100%" source="btm_png" touchEnabled="false" y="0" x="0"/>
+	<e:Group touchChildren="true" touchEnabled="false" left="0" top="0" bottom="0" right="0" x="0" y="0">
+		<e:Group width="663.64" height="137.88" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" top="0" touchEnabled="false" touchChildren="false">
+		<com_main:CImage scaleX="1" scaleY="1" y="16.94" source="border_1001_png" width="258" height="58" horizontalCenter="0" anchorOffsetY="0"/>
+		<e:Label id="m_pLbName" text="部队一" y="30.67" horizontalCenter="0.18" textColor="0xFFFF99"/>
+		<com_main:ComFightItem id="m_comFightItem" skinName="ComFightItemSkin" y="74.26" x="133.31"/>
+		</e:Group>
+		<e:Group id="m_RTraint" touchEnabled="true" touchChildren="false" cacheAsBitmap="true" horizontalCenter="290">
+		<com_main:CImage scaleX="1" scaleY="1" source="zyt_02_png" alpha="0.6"/>
+		<e:Group width="58" height="58" horizontalCenter="0" verticalCenter="0" scaleX="0.8" scaleY="0.8">
+			<e:Image source="border_016_png"/>
+			<e:Image source="general_type_gongbing2_png" horizontalCenter="-2.5" verticalCenter="-0.5"/>
+		</e:Group>
+		<e:Group width="58" height="58" horizontalCenter="56" verticalCenter="-24" scaleX="0.8" scaleY="0.8">
+			<e:Image source="border_016_png"/>
+			<e:Image source="general_type_qiangbing2_png" horizontalCenter="-2.5" verticalCenter="-0.5"/>
+		</e:Group>
+		<e:Group width="58" height="58" horizontalCenter="0" verticalCenter="57" scaleX="0.8" scaleY="0.8">
+			<e:Image source="border_016_png"/>
+			<e:Image source="general_type_qibing2_png" horizontalCenter="-2.5" verticalCenter="-0.5"/>
+		</e:Group>
+		<e:Group width="58" height="58" horizontalCenter="-50" verticalCenter="-26" scaleX="0.8" scaleY="0.8">
+			<e:Image source="border_016_png"/>
+			<e:Image source="general_type_bubing2_png" horizontalCenter="-2.5" verticalCenter="-0.5"/>
+		</e:Group>
+		<e:Image source="zyt_03_png" rotation="240" y="140" x="56"/>
+		<e:Image source="zyt_03_png" y="92" x="143" rotation="120"/>
+		<e:Image source="zyt_03_png" y="35" x="65"/>
+		<e:Label text="克制" textColor="0xabb7d1" size="14" stroke="1" strokeColor="0x000000" y="109" x="12"/>
+		<e:Label text="克制" textColor="0xabb7d1" size="14" stroke="1" strokeColor="0x000000" x="130" y="110"/>
+		<e:Label text="克制" textColor="0xabb7d1" size="14" stroke="1" strokeColor="0x000000" y="19" x="81"/>
+		</e:Group>
+		<e:Group horizontalCenter="292" y="175">
+			<e:Image source="border_1001_png"  width="220" x="-12"/>
+			<com_main:CImage source="line_009_png" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1"
+		                 scaleY="1" top="0" width="200" height="2" alpha="0.6"/>
+			<com_main:CImage source="line_009_png" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1"
+		                 scaleY="1" bottom="-2" width="200" height="2" alpha="0.6"/>
+			<e:Label text="兵种克制造成" textColor="0xe9e9e9" size="18" stroke="1" strokeColor="0x000000" x="4" verticalCenter="0.5"/>
+			<e:Label text="120%" textColor="0x00ff00" size="18"  verticalCenter="0.5" x="111"/>
+			<e:Label text="伤害" textColor="0xe9e9e9" size="18" stroke="1" strokeColor="0x000000" x="159" verticalCenter="0.5"/>
+		</e:Group>
+		<e:Group y="533" left="12" id="m_pLuck" touchEnabled="false">
+		<e:Image id="m_pLuckImg" source="btn_131_png" horizontalCenter="0"/>
+		<e:Image id="m_teamImg" source="btn_155_png" horizontalCenter="49"/>
+			<e:layout>
+				<e:HorizontalLayout gap="10" verticalAlign="middle" horizontalAlign="center"/>
+			</e:layout>
+		</e:Group>
+		<e:Group horizontalCenter="-3.5" verticalCenter="21" id="m_pTeam" height="376" width="738">
+		<e:Image source="wxzdx2_png" x="0" y="0"/>
+		<com_main:TeamGirdView id="m_pItem0" skinName="TeamGirdViewSkin" touchChildren="true" touchEnabled="false" x="96" y="-1"/>
+		<com_main:TeamGirdView id="m_pItem1" skinName="TeamGirdViewSkin" touchChildren="true" touchEnabled="false" x="248" y="75"/>
+		<com_main:TeamGirdView id="m_pItem2" skinName="TeamGirdViewSkin" touchEnabled="false" touchChildren="true" x="399" y="152"/>
+		<com_main:TeamGirdView id="m_pItem3" skinName="TeamGirdViewSkin" touchChildren="true" touchEnabled="false" x="-9" y="128"/>
+		<com_main:TeamGirdView id="m_pItem4" skinName="TeamGirdViewSkin" touchChildren="true" touchEnabled="false" x="141" y="204"/>
+		<e:Group id="m_pUnlock0" touchEnabled="false" x="96" y="-1" width="337" height="170">
+			<e:Image source="xzzt_hs_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="m_pUnlockLb0" text="50等级开启" size="20" textColor="0xff0000" horizontalCenter="0" verticalCenter="0" stroke="2" strokeColor="0x000000"/>
+		</e:Group>
+		<e:Group id="m_pUnlock1" touchEnabled="false" x="248" y="75" width="337" height="170">
+			<e:Image source="xzzt_hs_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="m_pUnlockLb1" text="50等级开启" size="20" textColor="0xff0000" horizontalCenter="0" verticalCenter="0" stroke="2" strokeColor="0x000000"/>
+		</e:Group>
+		<e:Group id="m_pUnlock2" touchEnabled="false" x="399" y="152" width="337" height="170">
+			<e:Image source="xzzt_hs_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="m_pUnlockLb2" text="50等级开启" size="20" textColor="0xff0000" horizontalCenter="0" verticalCenter="0" stroke="2" strokeColor="0x000000"/>
+		</e:Group>
+		<e:Group id="m_pUnlock3" touchEnabled="false" x="-9" y="128" width="337" height="170">
+			<e:Image source="xzzt_hs_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="m_pUnlockLb3" text="50等级开启" size="20" textColor="0xff0000" horizontalCenter="0" verticalCenter="0" stroke="2" strokeColor="0x000000"/>
+		</e:Group>
+		<e:Group id="m_pUnlock4" touchEnabled="false" x="141" y="204" width="337" height="170">
+			<e:Image source="xzzt_hs_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="m_pUnlockLb4" text="50等级开启" size="20" textColor="0xff0000" horizontalCenter="0" verticalCenter="0" stroke="2" strokeColor="0x000000"/>
+		</e:Group>
+		</e:Group>
+		<e:Group width="100%" height="123" anchorOffsetY="0" bottom="0" x="0" scaleX="1" scaleY="1">
+		<com_main:CImage width="100%" height="122" scaleX="1" scaleY="1" source="border_009_png" scale9Grid="26,4,10,49" anchorOffsetY="0"/>
+		<com_main:CImage width="100%" scaleX="1" scaleY="1" source="zyt_01_png" y="-8"/>
+		<e:Scroller id="m_pHeroScroll" anchorOffsetX="0" anchorOffsetY="0" height="120" y="3" left="201" right="201">
+			<e:List id="m_pHeroList" useVirtualLayout="true" anchorOffsetX="0" height="120" anchorOffsetY="0" x="0" y="2">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="5"/>
+			</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Image anchorOffsetX="0" touchEnabled="false" source="equip_left_png" x="0" y="4" anchorOffsetY="0" height="115"/>
+		<e:Image anchorOffsetX="0" touchEnabled="false" source="equip_right_png" y="0" right="0" anchorOffsetY="0" height="122"/>
+		<e:Group left="92" verticalCenter="0">
+			<e:Image id="m_btnLeft" source="btn_024_up_png" x="22" y="30" anchorOffsetX="21.5" anchorOffsetY="30"/>
+		</e:Group>
+		<e:Group height="60" width="43" scaleX="-1" right="100" verticalCenter="0">
+			<e:Image id="m_btnRight" source="btn_024_up_png"/>
+		</e:Group>
+		<e:Group id="m_pGroupBtn" y="-79" right="1" width="316" height="60">
+			<e:Group id="m_pGFightBtn" x.pvpDef="0" x.embattle="0" y="0" y.normal="-91" anchorOffsetX.normal="0" width.normal="170" anchorOffsetY.normal="0" height.normal="159" right.normal="66">
+			<com_main:ComButton id="m_pBtnOneKey" x.normal="72.5" y="30" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style10" x.embattle="166.5" x.pvpDef="158.5" scaleX.embattle="1" scaleY.embattle="1" y.embattle="18" y.normal="120"/>
+			<com_main:ComButton id="m_pBtnFight" x.pvpDef="243" x.embattle="243" y="30" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style1" scaleX="1" scaleY="1" visible.embattle="false" visible.pvpDef="false" y.normal="34" horizontalCenter.normal="0"/>
+			</e:Group>
+			<e:Group id="m_pGChangBtn">
+			<com_main:ComButton id="m_pBtnSave" x="72.5" y="30" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style6" scaleX="1" scaleY="1"/>
+			<com_main:ComButton id="m_pBtnReset" x="243" y="30" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style1"/>
+			</e:Group>
+		</e:Group>
+		</e:Group>
+	</e:Group>
+	
+</e:Skin>

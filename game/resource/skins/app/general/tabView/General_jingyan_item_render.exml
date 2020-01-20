@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="General_jingyan_item_render" width="122" height="132" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<com_main:ComItemNew id="m_comItem" skinName="com_item_new" currentState="count" scaleX="0.9" scaleY="0.9" horizontalCenter="0" top="0"/>
+	<e:Label id="lb_name" text="经验+300" size="18" textColor="0x8a8a9e" horizontalCenter="0" bottom="14"/>
+	<e:Rect id="m_rect" width="90" height="90" x="16" y="0" fillAlpha="0.5"/>
+	<e:Image id="image_add" horizontalCenter="0" source="btn_025_up_png" verticalCenter="-22"/>
+</e:Skin>

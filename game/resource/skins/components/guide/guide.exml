@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="guide" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Rect width="53.04" height="49.15" x="0" y="0" alpha="1" fillAlpha="0.8" fillColor="0x000000" anchorOffsetX="0" anchorOffsetY="0" name="mask1" visible="false"/>
+	<e:Rect width="56.07" height="49.15" x="75.03" y="0" alpha="1" fillAlpha="0.8" fillColor="0x000000" anchorOffsetX="0" anchorOffsetY="0" name="mask2" visible="false"/>
+	<e:Rect width="62.13" height="55.21" x="161.33" y="0" alpha="1" fillAlpha="0.8" fillColor="0x000000" anchorOffsetX="0" anchorOffsetY="0" name="mask3" visible="false"/>
+	<e:Rect width="56.07" height="46.12" x="257.03" y="1.51" alpha="1" fillAlpha="0.8" fillColor="0x000000" anchorOffsetX="0" anchorOffsetY="0" name="mask4" visible="false"/>
+	<e:Rect width="56.07" height="46.12" x="318.93" y="470.18" alpha="1" fillAlpha="0" anchorOffsetX="0" anchorOffsetY="0" name="mask5" strokeColor="0xef6813" strokeWeight="2" fillColor="0xffffff" visible="false"/>
+	<com_main:CImage id="m_pArrow" y="1124" x="658" source="" anchorOffsetX="47" anchorOffsetY="120" rotation="0" width="94" height="120" visible="false"/>
+	<com_main:CImage id="m_pFinger" y="1135" x="518" anchorOffsetX="19" anchorOffsetY="19.5" rotation="0" source="" width="42" height="43" visible="false"/>
+	<e:Label id="m_pSkip" text="跳过新手" y="10.91" right="13" visible="false"/>
+
+	<e:Rect id="m_pMask1" width="750" height="25%" x="0" y="0" alpha="1" fillAlpha="1" fillColor="0x000000" anchorOffsetX="0" anchorOffsetY="0" visible="false"/>
+	<e:Rect id="m_pMask2" width="750" height="25%" x="0" alpha="1" fillAlpha="1" fillColor="0x000000" anchorOffsetX="0" anchorOffsetY="0" y="1000" visible="false"/>
+</e:Skin>

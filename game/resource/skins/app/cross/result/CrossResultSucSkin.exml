@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossResultSucSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*"  states="success,fail" >
+	<e:Rect id="rect" width="100%" height="100%" x="0" y="0" fillAlpha="0.8"/>
+	<e:Group id="shake_group" width="1334" height="750" x="0" y="0">
+		<e:Image id="border_0" y="-99" scaleX="2" scaleY="2" source="zyt_gj_wug_png" horizontalCenter="0"/>
+		<e:Image id="border_1" width="1334" height="414.67" x="0" y="153" scaleX="1" scaleY="1" anchorOffsetY="0" source="slsb_beijing_png"/>
+		<e:Image source="lb_gxbfhdkfzsl_png" x="345.5" y="152" visible.fail="false"/>
+		<e:Image source="gen_star1_png" x="374" y="317" width="25" height="25" visible.fail="false"/>
+		<e:Label text="最佳表现:" x="403" y="319" size="24" fontFamily="Microsoft YaHei" textColor="0xe7d7a7" visible.fail="false"/>
+		<e:Group id="m_best0" width="163" height="35" x="527" y="319" anchorOffsetX="0" anchorOffsetY="0" visible.fail="false" visible="false">
+			<e:Label id="playerName0" text="全宇宙霸王" x="7" y="4" size="24" fontFamily="Microsoft YaHei"/>
+			<e:Image source="zyt_qz01_png" x="119" y="12"/>
+			<e:layout>
+				<e:HorizontalLayout gap="6" paddingRight="0"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="m_best1" width="163" height="35" x="694" y="319" anchorOffsetX="0" anchorOffsetY="0" visible.fail="false" visible="false">
+			<e:Label text="全宇宙霸王" x="7" y="4" size="24" fontFamily="Microsoft YaHei" id="playerName1"/>
+			<e:Image source="zyt_qz01_png" x="119" y="12"/>
+			<e:layout>
+			<e:HorizontalLayout gap="6" paddingRight="0"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="m_best2" width="163" height="35" x="854" y="319" anchorOffsetX="0" anchorOffsetY="0" visible.fail="false" visible="false">
+			<e:Label text="全宇宙霸王" x="7" y="4" size="24" fontFamily="Microsoft YaHei" id="playerName2"/>
+			<e:Image source="zyt_qz01_png" x="119" y="12"/>
+			<e:layout>
+			<e:HorizontalLayout gap="6" paddingRight="0"/>
+			</e:layout>
+		</e:Group>
+		<e:Image y="365" source="line_1013_png" horizontalCenter="0" height="46"/>
+		<e:Label text="全服奖励" y="373" textColor="0xffff99" size="30" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+		<e:Group id="m_rewardList" width="685" height="117" y="425" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" paddingTop="8"/>
+			</e:layout>
+		</e:Group>
+		<e:Label text="很遗憾本服在本次跨服战中失利！" includeIn="fail" y="270" size="36" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+	</e:Group>
+	<e:Image id="image_result_1" x="595" y="153" anchorOffsetX="90" anchorOffsetY="86" scaleX="1" scaleY="1" source="lb_ty1_s_png" source.fail="lb_ty3_z_png"/>
+	<e:Image id="image_result_2" x="750" y="155.65" anchorOffsetX="90" anchorOffsetY="86" scaleX="1" scaleY="1" source="lb_ty2_l_png" source.fail="lb_ty4_b_png"/>
+	<e:Group y="563" horizontalCenter="0">
+		<e:Image source="border_1001_png" y="-1" scaleX="1" scaleY="1" scale9Grid="13,3,78,21" anchorOffsetX="0" width="318" x="0" height="32"/>
+		<e:Label text="点击任意区域关闭" size="22" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" y="2" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

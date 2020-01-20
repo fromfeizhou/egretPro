@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldRankViewSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:TeamPanel id="m_teamPanel" skinName="TeamPanelSkin" width="100%" height="100%" horizontalCenter="0"
+	                    verticalCenter="0" />
+	<e:Group id="m_pBtnBack" width="194" height="65" anchorOffsetY="32.5" anchorOffsetX="97" left="0" top="0">
+		<com_main:CImage width="100%" height="100%" scaleX="1" scaleY="1" source="btn_008_up_png" />
+	</e:Group>
+	<e:Group id="m_pCheckBox" verticalCenter="-53" right="67" anchorOffsetX="0" width="138">
+	<e:Label  text="自动补兵"  verticalCenter="0" size="24" textColor="0xfff9db" />
+	<e:CheckBox id="m_checkBox" label="" x="102"  scaleX="0.8" scaleY="0.8">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image  source="btn_031_up_png" />
+				<e:Image includeIn="down" source="btn_031_sel_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:CheckBox>
+	</e:Group>
+	<com_main:ComCostTextButton id="m_pQuickAddBtn" y="364.23" skinName="com_cost_text_button"  right="58"/>
+	<com_main:ComButton id="m_pAddBtn" y="490" skinName="com_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" right="63"/>
+	<e:Group id="m_pArmyStatus" width="318" height="60" horizontalCenter="0" y="539">
+		<com_main:CImage scaleX="1" scaleY="1" source="border_1001_png" width="100%" height="100%" anchorOffsetY="0" y="0"
+		                 anchorOffsetX="0" x="0" />
+		<e:Label id="m_pLbArmyStatus"  text="行军中" horizontalCenter="0" verticalCenter="0" size="36" textColor="0x00FF00" />
+		<com_main:CImage id="m_pback" scaleX="1" scaleY="1" source="icon_hc_png"  anchorOffsetY="0"
+		                 anchorOffsetX="0"  verticalCenter="0" right="0" visible="false"/>
+	</e:Group>
+	<e:Group y="32" right="0" width="279.67" height="255" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:CImage touchEnabled="false" width="279" height="256" scaleX="1" scaleY="1" source="border_006_png" alpha="0.65"  anchorOffsetX="0" x="2" y="0" anchorOffsetY="0"/>
+		<e:Group id="m_pGTroops" width="245" height="213" anchorOffsetY="0" anchorOffsetX="0" scaleX="1"
+		         scaleY="1" horizontalCenter="-2.34" verticalCenter="-12">
+			<e:layout>
+				<e:VerticalLayout verticalAlign="middle" gap="10"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="m_pArmy" y="221" x="26" anchorOffsetX="0" width="228">
+		<e:Label  text="点击前往募兵" size="22" textColor="0xfde99a" stroke="2" strokeColor="0x000000" verticalCenter="0.5" x="10"/>
+		<e:Image source="btn_112_png"  x="206"/>
+		</e:Group>
+	</e:Group>
+
+		<e:Group id="m_pItemRoot" width="60" height="408" x="25.33" y="120" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false">
+			<e:Image source="border_1030_png" alpha="0.6" width="100%" height="90%" rotation="90" horizontalCenter="0" scale9Grid="24,3,57,21"/>
+			<e:Group x="-9" y="-13.63" touchEnabled="false">
+			<com_main:WorldQueTroopItem id="queItem0" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem1" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem2" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem3" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem4" skinName="WorldQueTroopItemSkin"/>
+			<e:layout>
+				<e:VerticalLayout gap="0"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+	<e:Group right="0" top="0" width="500" height="58" touchChildren="false" touchEnabled="false" visible="false">
+	<e:Image source="border_041_png" scale9Grid="7,6,42,42" left="0" top="0" right="0" bottom="0" />
+	<e:Group width="58" height="58" y="0" x="0">
+		<e:Image source="border_016_png" />
+		<e:Image x="9.66" y="3.62" source="general_type_bubing_png" />
+		<e:Label id="m_pLbBBNum" text="3000" size="23" x="67" verticalCenter="0.5" />
+	</e:Group>
+	<e:Group width="58" height="58" y="0" x="167">
+		<e:Image source="border_016_png" />
+		<e:Image x="9.66" y="3.62" source="general_type_qibing_png" />
+		<e:Label id="m_pLbQBNum" text="3000" size="23" x="67" verticalCenter="0.5" />
+	</e:Group>
+	<e:Group width="58" height="58" y="0" x="331">
+		<e:Image source="border_016_png" />
+		<e:Image source="general_type_gongbing_png" x="9.66" y="3.62" />
+		<e:Label id="m_pLbGBNum" text="3000" size="23" x="67" verticalCenter="0.5" />
+	</e:Group>
+</e:Group>
+
+<com_main:ComIndexBar id="m_comIndexBar" right="58" bottom="136" skinName="ComIndexBarSkin"  visible="false"/>
+</e:Skin>

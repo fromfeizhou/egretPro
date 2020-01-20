@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_accelerate_panel" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" left="156" top="108" right="144" bottom="99" width="1038">
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" y="0" source="frame_101_jpg" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scale9Grid="15,50,92,22"/>
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" y="0" source="frame_002_jpg" anchorOffsetX="0" width="1034.78"/>
+		<e:Label text="加速" y="18.36" textAlign="right" size="34" horizontalCenter="0" textColor="0xffff99"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" anchorOffsetX="57.5" anchorOffsetY="38.5" right="-10" top="-7">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" source="btn_009_up_png"/>
+		</e:Group>
+		<e:Group width="990" height="141" x="23.5" y="204" anchorOffsetY="0">
+			<com_main:CImage x="0" y="0" source="border_005_jpg" scale9Grid="7,7,49,49" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scaleX="1" scaleY="1"/>
+			<e:Label id="m_pLbName1" text="初级行军令" textAlign="right" size="30" scaleX="1" scaleY="1" textColor="0xe9e9e6" left="146" verticalCenter="-16.5"/>
+			<e:Label text="使用后减少当前行军所需剩余时间的" textAlign="right" size="24" scaleX="1" scaleY="1" verticalCenter="25.5" left="146" textColor="0x8a8a9a"/>
+			<e:Label text="25%" textAlign="right" size="24" scaleX="1" scaleY="1" textColor="0xe7d7a7" verticalCenter="25.5" left="530"/>
+			<com_main:ComItemNew id="m_pItem1" skinName="com_item_new" scaleX="1" scaleY="1" currentState="count" verticalCenter="0" left="26"/>
+			<e:Group id="m_pBtnOk1" width="232" height="66" anchorOffsetX="116" anchorOffsetY="33" scaleX="1" scaleY="1" name="1" verticalCenter="3.5" right="53">
+				<!--<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" scale9Grid="69,26,2,9" width="239" height="71" source="btn_001_up_png" verticalCenter="0" horizontalCenter="0"/>
+				<e:Label text="使用" size="24" textColor="0xE9E9E6" stroke="2" strokeColor="0x885a2a" horizontalCenter="0" verticalCenter="0"/>-->
+				<com_main:ComButton id="m_btnOk1" currentState="style2" skinName="com_button" anchorOffsetX="0" anchorOffsetY="0"  horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<com_main:ComCostTextButton id="m_btnGoldOK1" skinName="com_cost_text_button" currentState="size3" scaleX="1" scaleY="1" verticalCenter="3.5" right="47" visible="false"/>
+		</e:Group>
+		<e:Group width="990" height="141" x="23.5" y="366" anchorOffsetY="0">
+			<com_main:CImage x="0" y="0" source="border_005_jpg" scale9Grid="7,7,49,49" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scaleX="1" scaleY="1"/>
+			<e:Label id="m_pLbName2" text="高级行军令" textAlign="right" size="30" scaleX="1" scaleY="1" textColor="0xE9E9E6" left="146" verticalCenter="-16.5"/>
+			<e:Label text="使用后减少当前行军所需剩余时间的" textAlign="right" textColor="0x8A8A9A" size="24" scaleX="1" scaleY="1" verticalCenter="25.5" left="146"/>
+			<e:Label text="50%" textAlign="right" size="24" scaleX="1" scaleY="1" textColor="0xE7D7A7" y="84" x="529"/>
+			<com_main:ComItemNew id="m_pItem2" skinName="com_item_new" scaleX="1" scaleY="1" currentState="count" verticalCenter="0" left="26"/>
+			<e:Group id="m_pBtnOk2"  width="232" height="66" anchorOffsetX="116" anchorOffsetY="33" scaleX="1" scaleY="1" name="1" verticalCenter="3.5" right="53">
+			<com_main:ComButton id="m_btnOk2" currentState="style2" skinName="com_button" anchorOffsetX="0" anchorOffsetY="0"  horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<com_main:ComCostTextButton id="m_btnGoldOK2" skinName="com_cost_text_button" currentState="size3" scaleX="1" scaleY="1" verticalCenter="3.5" right="47" visible="false"/>
+		</e:Group>
+		<e:Group width="928" height="58" x="62" y="106" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Label text="列队行军时间" textAlign="right" size="30" scaleX="1" scaleY="1" textColor="0xE9E9E6" left="3" verticalCenter="0" x="-46" y="134"/>
+			<e:Label id="m_pLbTime" text="00:00:00" textAlign="right" size="24" scaleX="1" scaleY="1" textColor="0xE9E9E6" left="511" verticalCenter="-28" x="-36" y="144"/>
+			<com_main:CImage x="200.9" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="proBg_001_png" width="713.2" height="24" scale9Grid="46,12,61,0" verticalCenter="0"/>
+			<com_main:CImage id="m_pPrTime" x="241.09" source="pro_006_png" anchorOffsetY="0" height="21" verticalCenter="0.5" anchorOffsetX="0" width="631.6"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

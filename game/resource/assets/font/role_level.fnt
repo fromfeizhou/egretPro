@@ -1,0 +1,13 @@
+{"file":"role_level.png","frames":{
+"队":{"x":2,"y":2,"w":61,"h":62,"offX":1,"offY":0,"sourceW":62,"sourceH":62},
+"0":{"x":118,"y":2,"w":44,"h":61,"offX":2,"offY":1,"sourceW":48,"sourceH":62},
+"1":{"x":160,"y":130,"w":29,"h":60,"offX":6,"offY":1,"sourceW":48,"sourceH":62},
+"2":{"x":213,"y":2,"w":41,"h":60,"offX":3,"offY":1,"sourceW":48,"sourceH":62},
+"3":{"x":213,"y":66,"w":39,"h":61,"offX":5,"offY":1,"sourceW":48,"sourceH":62},
+"4":{"x":67,"y":2,"w":47,"h":59,"offX":0,"offY":2,"sourceW":48,"sourceH":62},
+"5":{"x":2,"y":68,"w":38,"h":60,"offX":6,"offY":2,"sourceW":48,"sourceH":62},
+"6":{"x":67,"y":65,"w":43,"h":61,"offX":3,"offY":1,"sourceW":48,"sourceH":62},
+"7":{"x":160,"y":67,"w":43,"h":59,"offX":3,"offY":2,"sourceW":48,"sourceH":62},
+"8":{"x":166,"y":2,"w":43,"h":61,"offX":3,"offY":1,"sourceW":48,"sourceH":62},
+"9":{"x":114,"y":67,"w":42,"h":61,"offX":3,"offY":1,"sourceW":48,"sourceH":62},
+"x":{"x":44,"y":130,"w":46,"h":43,"offX":1,"offY":18,"sourceW":48,"sourceH":62}}}

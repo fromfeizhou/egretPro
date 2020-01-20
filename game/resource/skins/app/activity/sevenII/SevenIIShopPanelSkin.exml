@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIIShopPanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group>
+		<e:Image id="m_imgTips" x="71.25" y="0" source="lb_7t_dchl_png"/>
+		<com_main:CScroller id="m_scroller" anchorOffsetX="0" anchorOffsetY="0" width="1059" height="450" x="0" y="106.04">
+			<e:List id="m_pItemRoot" name="m_finishList" x="0" y="98.67" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="SevenIIShopItemSkin">
+				<e:layout>
+					<e:TileLayout horizontalGap="21" paddingLeft="135" paddingTop="4" rowHeight="220"/>
+				</e:layout>
+			</e:List>
+		</com_main:CScroller>
+		<com_main:ComButton id="m_btnRefresh" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style1" y="54.93" x="878.95"/>
+	</e:Group>
+</e:Skin>

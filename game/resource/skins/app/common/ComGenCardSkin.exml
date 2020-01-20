@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComGenCardSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group>
+		<com_main:CImage id="m_imgMask" source="border_1045_png" width="522" height="686"/>
+		<com_main:CImage id="m_imgIcon" horizontalCenter="0" bottom="0" x="0" y="0" source=""/>
+		<e:Group id="m_pMcRoot" width="1" height="1" horizontalCenter="0" bottom="0" x="290" y="716"/>
+	</e:Group>
+</e:Skin>

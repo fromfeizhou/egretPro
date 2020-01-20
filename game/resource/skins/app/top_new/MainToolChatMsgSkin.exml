@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainToolChatMsgSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="464" height="24">
+	<e:Image source="border_023_png" width="464" height="24" alpha="0"/>
+	<e:Label id="m_labMsg" text="Label" textColor="0xabb7d1" size="20" width="464" y="2"/>
+</e:Skin>

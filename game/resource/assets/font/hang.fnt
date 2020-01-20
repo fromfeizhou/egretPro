@@ -1,0 +1,5 @@
+{"file":"hang.png","frames":{
+".":{"x":93,"y":5,"w":10,"h":10,"offX":4,"offY":14,"sourceW":18,"sourceH":38},
+"挂":{"x":5,"y":5,"w":34,"h":35,"offX":1,"offY":2,"sourceW":36,"sourceH":38},
+"机":{"x":49,"y":5,"w":34,"h":35,"offX":2,"offY":2,"sourceW":36,"sourceH":38},
+"中":{"x":5,"y":50,"w":31,"h":35,"offX":2,"offY":2,"sourceW":36,"sourceH":38}}}

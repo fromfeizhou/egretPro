@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FateProCompSkin" width="87" height="18" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" states="lock,unlock" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="87" height="18" x="0" y="0">
+		<e:Image source="proBg_015_png"   top="0"/>
+		<e:Image source="pro_026_png"   verticalCenter="0" width="85" horizontalCenter="0" height="12" visible.lock="false"/>
+		<e:Image source="com_lock2_png"    scaleX="0.5" scaleY="0.5" horizontalCenter="0" verticalCenter="-3.5" top="-13" visible.unlock="false"/>
+	</e:Group>
+	
+</e:Skin>

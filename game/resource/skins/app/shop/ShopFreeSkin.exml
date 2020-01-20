@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopFreeSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image left="0" top="0" right="0" bottom="0" source="shop_free_bj_jpg"/>
+	<e:Group touchEnabled="false" touchChildren="false" top="101" width="1154" horizontalCenter="0">
+		<e:Label text="活动结束倒计时 " x="61" y="2" size="24" textColor="0x8a8a9e"/>
+		<e:Label id="m_labLeftTime" text="4 天 8 时" x="242" y="2" size="24" textColor="0xe9e9e6"/>
+		<e:Label text="已免单黄金：" x="482.53" y="0" size="30" textColor="0xe7c772"/>
+		<e:Label id="m_labFreeGold" text="0" x="666.77" y="0" size="30" textColor="0xffff99"/>
+		<e:Label text="剩余购买次数：" x="927.73" y="36" size="20" textColor="0x8a8a9e"/>
+		<e:Label id="m_labLeftBuy" text="0" x="1074.73" y="36" size="20" textColor="0xe9e9e6"/>
+		<e:Image source="line_009_png" y="59.59" left="0" right="0"/>
+	</e:Group>
+	<com_main:ComButton id="m_btnRecord" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style6" top="70" horizontalCenter="447.5"/>
+	<e:Scroller anchorOffsetX="0" anchorOffsetY="0" left="140" right="140" bottom="24" top="171">
+		<e:Group id="m_groupItems">
+			<e:layout>
+				<e:TileLayout horizontalGap="22" verticalGap="22" paddingTop="20" paddingBottom="40"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<e:Image source="border_1019_png" bottom="0" left="0" right="0" touchEnabled="false" height="122"/>
+</e:Skin>

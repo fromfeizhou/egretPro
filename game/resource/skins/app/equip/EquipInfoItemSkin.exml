@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipInfoItemSkin" width="507" height="694" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group scaleX="1" scaleY="1" left="0" top="0" right="0" bottom="0" touchEnabled="false" touchChildren="false">
+		<e:Image source="line_1006_png" y="184.09" right="0" left="0" x="0" scaleX="1" scaleY="1"/>
+		<e:Image source="line_1006_png" y="422.44" right="0" left="0" x="-600" scaleX="1" scaleY="1"/>
+		<e:Label id="m_labEquipName" text="装备名称" x="147.4" y="35.52" size="26" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+		<e:Group x="145" y="73.67" scaleX="1" scaleY="1">
+		<e:Image source="border_1036_png" x="18" y="1" height="30"/>
+		<e:Image x="0" y="0" scaleX="0.8" scaleY="0.8" source="common_fight2_png"/>
+		<e:Label id="m_labFight" text="战力：99999" x="30" y="7" size="20" textColor="0xFFFF99"/>
+		</e:Group>
+		<e:Group x="145" y="106.4" scaleX="1" scaleY="1">
+		<e:Image source="border_1036_png" x="18" y="1" height="30"/>
+		<e:Image id="m_imgAttriIcon" x="0" scaleX="0.8" scaleY="0.8" verticalCenter="1.5" source="common_armyhp_png"/>
+		<e:Label id="m_labAttri" text="战力：99999" x="30" size="20" textColor="0x00FF00" y="7"/>
+		</e:Group>
+		<e:Label id="m_labSuitName" text="套装" y="210.95" size="24" textColor="0x8A8A9E" scaleX="1" scaleY="1" horizontalCenter="0.5" fontFamily="Microsoft YaHei"/>
+		<e:Group x="29.96" y="33.32">
+			<com_main:EquipItem id="m_euipItem" x="0" y="0" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+			<e:Label id="m_labLevel" text="装备名称" y="105.52" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textAlign="center" textColor="0xABB7D1" horizontalCenter="0"/>
+		</e:Group>
+		<com_main:EquipItem xmlns:com_main="com_main.*" id="m_suitItem0" x="29.96" y="257.3" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+		<com_main:EquipItem xmlns:com_main="com_main.*" id="m_suitItem1" x="145.98" y="257.3" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+		<com_main:EquipItem xmlns:com_main="com_main.*" id="m_suitItem2" x="263.99" y="257.3" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+		<com_main:EquipItem xmlns:com_main="com_main.*" id="m_suitItem3" x="380.14" y="257.3" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1"/>
+		<e:Group id="m_pAttriCon" height="133.58" y="448.01" anchorOffsetX="0" anchorOffsetY="0" width="461" horizontalCenter="0">
+		<e:layout>
+			<e:VerticalLayout gap="0"/>
+		</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

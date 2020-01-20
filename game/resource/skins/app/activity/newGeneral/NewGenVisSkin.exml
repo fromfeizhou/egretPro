@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewGenVisSkin" width="1240" height="650" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group id="m_allGroup" width="1240" height="650" x="0" y="0" touchEnabled="false">
+		<e:Image source="lb_bfzxjl_png" horizontalCenter="152.5" verticalCenter="-175.5"/>
+        <com_main:ComButton id="m_btnChange" skinName="com_button" currentState="style12" horizontalCenter="335" verticalCenter="-175" />
+		<e:Group id="m_itemList" width="616" height="116" x="465" y="172" anchorOffsetX="0" anchorOffsetY="0">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="13" paddingLeft="0" paddingTop="3"/>
+			</e:layout>
+		</e:Group>
+        <!--<com_main:ComButton id="m_btnVis" skinName="com_button" currentState="style4" horizontalCenter="150" verticalCenter="74.5" />-->
+		<com_main:ComButton id="m_btnVis" skinName="com_button" currentState="style5" horizontalCenter="-11" verticalCenter="29.5"/>
+		<com_main:ComButton id="m_btnVisTen" skinName="com_button" currentState="style4" horizontalCenter="312" verticalCenter="29.5"/>
+		<e:Group horizontalCenter="-11" touchChildren="false" touchEnabled="false" verticalCenter="100">
+			<com_main:CImage id="m_pCostIcon0" x="53" y="-10" touchEnabled="false" width="50" height="50" source="common_prop_1001_png"/>
+			<com_main:CLabel id="m_pLbCostName0" size="24" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="20" x="0" y="0" textColor="0xffffff"  height="50" touchEnabled="false"/>
+			<com_main:CLabel id="m_pLbCost0" size="24" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="20" x="10" y="10" textColor="0xFFFFFF" height="50" touchEnabled="false"/>
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+		<e:Group horizontalCenter="312" touchChildren="false" touchEnabled="false" verticalCenter="100">
+			<com_main:CImage id="m_pCostIcon1" x="53" y="-10" source="common_prop_1001_png" touchEnabled="false" width="50" height="50"/>
+			<com_main:CLabel id="m_pLbCostName1" size="24" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="20" x="0" y="0" textColor="0xFFFFFF" height="50" touchEnabled="false"/>
+			<com_main:CLabel id="m_pLbCost1" size="24" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="20" x="10" y="10" textColor="0xFFFFFF" height="50" touchEnabled="false"/>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+		<e:Image source="zyt_30_png" x="412" y="445" anchorOffsetX="0" width="710" scale9Grid="121,101,729,28" anchorOffsetY="0" height="188"/>
+		<e:Image source="line_009_png" x="443" y="486" height="4" width="664"/>
+		<e:Label id="m_lbUseDes" text="累计消耗信物:" y="458" size="24" fontFamily="Microsoft YaHei" textColor="0xffff99" right="412"/>
+		<e:Label id="m_lbUseNum" text="X0" y="458" size="26" fontFamily="Microsoft YaHei" left="840"/>
+		<e:Label id="m_lbResetDes" text="攻打boss、敌将来袭、参与国战等活动有几率掉落信物" y="607" size="20" fontFamily="Microsoft YaHei" textColor="0xffff99" left="565"/>
+		<com_main:BoxPro id="m_boxPro" x="426" y="492" skinName="BoxProSkin" anchorOffsetX="0"/>
+	</e:Group>
+</e:Skin>

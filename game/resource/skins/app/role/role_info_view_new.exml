@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="role_info_view_new" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" alpha="1" anchorOffsetX="0" anchorOffsetY="0" width="1116" height="637">
+		<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" currentState="size3" height="637" width="1116" y="0" x="0"/>
+		<e:Group x="444.34" y="64">
+			<e:Image source="border_022_png" x="4.66" y="0" scale9Grid="8,8,54,54" anchorOffsetX="0" width="589" anchorOffsetY="0" height="18"/>
+			<e:Image source="border_022_png" x="5.66" y="8" scale9Grid="8,8,54,54" anchorOffsetX="0" width="659" anchorOffsetY="0" height="435"/>
+			<e:Image source="border_1008_png" x="4.66" y="183" scaleY="-1" anchorOffsetX="0" width="590.67" anchorOffsetY="0" height="182"/>
+			<e:Image source="frame_201_png" x="3.67" y="437.62" width="658" anchorOffsetY="0"/>
+			<e:Image source="line_1007_png" x="0" y="24" height="531"/>
+			<e:Image source="line_1006_png" x="38.66" y="214" scaleX="1" scaleY="1"/>
+			<com_main:ComButton id="m_btnExchange" skinName="com_button" anchorOffsetX="75" anchorOffsetY="30" currentState="style1" y="513.26" x="545"/>
+		</e:Group>
+		<e:Group x="485.62" y="93.63">
+			<e:Image source="border_1006_png" x="0" y="0" scale9Grid="44,11,269,67" anchorOffsetY="0" height="30"/>
+			<e:Label id="m_labRoleName" text="ddddd" x="9.04" size="24" fontFamily="Microsoft YaHei" width="184" textColor="0xe9e9e6" anchorOffsetX="0" anchorOffsetY="0" height="30" verticalCenter="0"/>
+			<e:Group id="m_labChangeName" x="197.03" y="3.7">
+				<e:Label text="改名" x="0" y="0" size="18" fontFamily="Microsoft YaHei" textColor="0x00fcff"/>
+				<e:Image source="line_1019_png" y="21.64" scaleX="1" scaleY="1" horizontalCenter="0.5"/>
+			</e:Group>
+		</e:Group>
+		<e:Group x="485" y="200">
+			<e:Label text="等级" x="4.68" y="1.52" size="22" fontFamily="Microsoft YaHei" textColor="0xabb7d1" width="67"/>
+			<e:Label id="m_labRoleExp" text="33" x="106.68" y="2" size="22" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" textAlign="right" width="224" anchorOffsetY="0" height="26" anchorOffsetX="0"/>
+			<e:Label id="m_labRoleLv" text="6" x="60.15" y="2" size="22" fontFamily="Microsoft YaHei" textColor="0xE9E9E6"/>
+			<e:Group x="0" y="30">
+				<e:Image source="pro_005_png" x="1" y="0" anchorOffsetY="0" height="23" anchorOffsetX="0" width="339" scale9Grid="3,3,18,18"/>
+				<e:Image id="m_imgPro" source="pro_006_png" x="0" y="0" height="23" width="340" scale9Grid="39,4,241,26"/>
+				<e:Image id="m_addExp" source="btn_011_up_png" x="330" scaleX="0.7" scaleY="0.7" y="-12"/>
+			</e:Group>
+		</e:Group>
+		<e:Group x="923" y="74">
+			<e:Group height="146" width="146" horizontalCenter="0">
+				<e:Image id="m_imgVipShop" y="73" anchorOffsetX="81" anchorOffsetY="80.5" scaleX="1" scaleY="1" source="vip_png" horizontalCenter="0"/>
+			</e:Group>
+			<e:BitmapLabel id="m_labPlayerVip" y="150.1" font="font_vip_fnt" text="贵族3" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group y="121.2" touchEnabled="false" touchChildren="false" x="456.93" scaleX="1" scaleY="1">
+			<com_main:ComFightItem id="m_comFightItem" skinName="ComFightItemSkin"/>
+		</e:Group>
+		<e:Group x="487" y="304">
+			<e:Image source="border_1030_png" x="30" y="11" anchorOffsetX="0" width="487" alpha="0.3" height="30"/>
+			<e:Label text="未获得" x="145.68" size="22" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" verticalCenter="0"/>
+			<e:Label text="称号：" x="71.68" size="22" fontFamily="Microsoft YaHei" textColor="0xABB7D1" verticalCenter="0"/>
+			<e:Image source="icon_ch_png" x="0" y="0"/>
+		</e:Group>
+		<e:Group x="488" y="373">
+			<e:Image source="border_1030_png" x="29" y="9" anchorOffsetX="0" width="487" alpha="0.3" height="30"/>
+			<e:Label text="城主府：" x="70.68" y="15" size="22" fontFamily="Microsoft YaHei" textColor="0xABB7D1"/>
+			<e:Label id="m_labLevel" text="40级" x="161.68" y="14" size="22" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+			<e:Image source="icon_czf_png" x="0" y="0"/>
+		</e:Group>
+		<e:Group x="488" y="443">
+			<e:Image source="border_1030_png" x="29" y="10" anchorOffsetX="0" width="487" alpha="0.3" height="30"/>
+			<e:Label text="联盟：" x="70.68" y="13" size="22" fontFamily="Microsoft YaHei" textColor="0xABB7D1"/>
+			<e:Label id="m_labLegion" text="午夜俱乐部" x="138.68" y="14" size="22" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" anchorOffsetX="0" width="179"/>
+			<e:Image source="icon_lm_png" x="0" y="0"/>
+		</e:Group>
+		<e:Group x="504" y="537">
+			<e:Image id="m_imgMusic" source="btn_126_png" x="0" y="1"/>
+			<e:Image id="m_imgSound" source="btn_127_png" x="193" y="0"/>
+			<e:Image source="lb_yy_png" x="85" y="25"/>
+			<e:Image source="lb_yx_png" x="277" y="24"/>
+		</e:Group>
+		<e:Group x="9" y="78.97">
+			<e:Image source="border_1037_png" y="46.7" scaleX="0.8" scaleY="0.8" alpha="0.4" x="15" width="503" height="503"/>
+			<e:Group y="0" horizontalCenter="0">
+			<e:Image id="m_imgRole" scaleX="0.7" scaleY="0.7" horizontalCenter="0" verticalCenter="4" source="icon_wj_b_21_png"/>
+			</e:Group>
+			<e:Image source="border_1019_png" y="427.03" anchorOffsetX="0" width="433" x="0" height="122"/>
+			<e:Image source="border_1014_png" y="395.03" horizontalCenter="0"/>
+			<com_main:ComButton id="m_btnHeadICon" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style6" scaleX="0.7" scaleY="0.7" y="502.66" x="397.31"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComStoneSuitCellSkin" width="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="btn_031_up_png" horizontalCenter="0"/>
+	<e:Image id="m_imgIcon" source="com_stone_icon1_png" scaleX="0.5" scaleY="0.5" y="-2" horizontalCenter="0"/>
+	<e:Label id="m_labName" text="青光石" y="52" horizontalCenter="0" size="20" textColor="0xe9e9e6"/>
+</e:Skin>

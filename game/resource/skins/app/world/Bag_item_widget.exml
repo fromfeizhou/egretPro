@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Bag_item_widget" width="130" height="130" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*">
+	<com_main:CImage scaleX="1" scaleY="1" source="Qualitykuang1_png" anchorOffsetX="0" width="130" anchorOffsetY="0" height="130" scale9Grid="14,14,64,65" horizontalCenter="0" verticalCenter="0"/>
+	<com_main:CImage scaleX="0.4" scaleY="0.4" source="icon_cangbaohulu_png" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

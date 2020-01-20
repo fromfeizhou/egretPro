@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryManageViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="689" width="1169">
+	<e:Group right="0" top="0" bottom="0" anchorOffsetX="0" left="330">
+		<e:Group left="0" top="0" right="0" anchorOffsetY="0">
+			<com_main:CountryManageCity id="m_CityItem0" width="280" x="290" y="36" anchorOffsetX="0" anchorOffsetY="0" skinName="CountryManageCitySkin" currentState="City1" scaleX="1"/>
+		<com_main:CountryManageCity id="m_CityItem1" width="280" x="290" y="36" anchorOffsetX="0" anchorOffsetY="0" skinName="CountryManageCitySkin" currentState="City2"/>
+		<com_main:CountryManageCity id="m_CityItem2" width="280" x="300" y="46" anchorOffsetX="0" anchorOffsetY="0" skinName="CountryManageCitySkin" currentState="City3"/>
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="0"/>
+		</e:layout>
+		</e:Group>
+		<e:Group bottom="0" left="0" right="0" top="150">
+		<e:Group id="m_pTitle" height="77" top="0" left="0" right="0">
+			<com_main:CImage left="0" right="0" source="border_011_png" bottom="0" top="0"/>
+			<com_main:CImage left="0" right="0" top="0" source="line_009_png" visible="false"/>
+			<com_main:CImage left="0" right="0" bottom="0" source="line_009_png" visible="false"/>
+			<e:Group bottom="0" top="0" left="0" right="166" anchorOffsetX="0" visible="false">
+			<com_main:CLabel id="m_city" text="城镇" x="80.48" y="-37" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" size="24" textColor="0xe7d7a7"/>
+			<com_main:CLabel id="m_scale" text="规模" x="144" y="-37" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" size="24" textColor="0xe7d7a7"/>
+			<com_main:CLabel id="m_power" text="掌权" x="154" y="-37" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" size="24" textColor="0xe7d7a7"/>
+			<com_main:CLabel id="m_union" text="所属联盟" x="164" y="-37" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" size="24" textColor="0xe7d7a7"/>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="112" paddingLeft="-54"/>
+			</e:layout>
+			</e:Group>
+			<com_main:ComTabTopGroup id="m_comTabTopGroup" skinName="com_tab_top_country_group" y="5" width="647"  anchorOffsetX="0" anchorOffsetY="0"  x="-7"/>
+		</e:Group>
+		<e:Scroller top="80" left="0" right="0" bottom="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" anchorOffsetX="0">
+			<e:List id="m_ItemList">
+				<e:layout>
+					<e:VerticalLayout horizontalAlign="left" verticalAlign="top" paddingRight="0"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		</e:Group>
+	</e:Group>
+	<e:Group width="330" left="0" bottom="0" top="0">
+		<com_main:CountryPlayerJob id="m_PlayerJob" skinName="CountryPlayerJobSkin" anchorOffsetX="0" width="324" horizontalCenter="0" top="45"/>
+		<com_main:CImage id="m_CountryFlag" source="common_country5_1_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="2" scaleY="2" width="156" height="210" y="211" horizontalCenter="0"/>
+		<e:Group bottom="55" horizontalCenter="0" id="m_taxBox" anchorOffsetY="0" height="200">
+			<com_main:CImage  source="vip_baoxiangkuang_png" horizontalCenter="0" y="59"/>
+			<com_main:CImage  source="zyt_22_png" y="39" horizontalCenter="0"/>
+			<com_main:CImage id="m_box"  source="bx_gj_png"  horizontalCenter="0" scaleX="0.9" scaleY="0.9" y="60"/>
+			
+			<com_main:CImage  source="com_wzk7_png"  horizontalCenter="0.5" bottom="1"/>
+			<com_main:CLabel text="税收宝箱" bottom="8"  textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" size="24" textColor="0xffff99" horizontalCenter="0"/>
+			<!--<com_main:CImage   source="common_red_flag2_png"   scaleX="0.75" scaleY="0.75" y="165" x="186"/>-->
+			
+		</e:Group>
+		<com_main:CLabel id="m_helpDesc" text="各城在23点给太守所属联盟成员交税" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" size="20" textColor="0xabb7d1" horizontalCenter="0" bottom="28"/>
+	</e:Group>
+</e:Skin>

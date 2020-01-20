@@ -1,0 +1,13 @@
+{"file":"attack_effect.png","frames":{
+"HongDaoGuangXia_1":{"x":637,"y":146,"w":119,"h":75,"offX":13,"offY":5,"sourceW":139,"sourceH":112},
+"HongDaoGuangXia_2":{"x":17,"y":159,"w":111,"h":112,"offX":28,"offY":0,"sourceW":139,"sourceH":112},
+"HongDaoGuangXia_0":{"x":334,"y":17,"w":125,"h":91,"offX":0,"offY":5,"sourceW":139,"sourceH":112},
+"HongDaoGuangShang_0":{"x":656,"y":17,"w":112,"h":95,"offX":0,"offY":5,"sourceW":138,"sourceH":109},
+"HongDaoGuangShang_1":{"x":790,"y":160,"w":123,"h":63,"offX":8,"offY":5,"sourceW":138,"sourceH":109},
+"HongDaoGuangShang_2":{"x":802,"y":17,"w":95,"h":109,"offX":43,"offY":0,"sourceW":138,"sourceH":109},
+"LanDaoGuangShang_1":{"x":493,"y":17,"w":129,"h":86,"offX":7,"offY":5,"sourceW":142,"sourceH":118},
+"LanDaoGuangShang_2":{"x":17,"y":305,"w":96,"h":118,"offX":46,"offY":0,"sourceW":142,"sourceH":118},
+"LanDaoGuangShang_0":{"x":182,"y":17,"w":118,"h":97,"offX":0,"offY":5,"sourceW":142,"sourceH":118},
+"LanDaoGuangXia_0":{"x":334,"y":142,"w":132,"h":74,"offX":0,"offY":0,"sourceW":137,"sourceH":108},
+"LanDaoGuangXia_1":{"x":500,"y":137,"w":103,"h":94,"offX":29,"offY":0,"sourceW":137,"sourceH":108},
+"LanDaoGuangXia_2":{"x":17,"y":17,"w":131,"h":108,"offX":6,"offY":0,"sourceW":137,"sourceH":108}}}

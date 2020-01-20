@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TipsEquipAddAttriSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" width="450">
+	<e:Group width="100%" y="0" x="0" anchorOffsetY="0">
+		<com_main:CLabel id="m_labCurLv" text="攻击+" textAlign="left" size="20" fontFamily="Microsoft YaHei" textColor="0xABB7D1" scaleX="1" scaleY="1" x="0" y="0"/>
+		<com_main:CLabel id="m_labCurLv0" text="22222222" textAlign="left" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xffffff" x="58"/>
+		<com_main:CLabel id="m_labCurLv1" text="攻击" y="0" textAlign="left" size="20" fontFamily="Microsoft YaHei" textColor="0xABB7D1" x="279" scaleX="1" scaleY="1"/>
+		<com_main:CLabel id="m_labCurLv2" text="+22222222" y="0" textAlign="left" size="20" fontFamily="Microsoft YaHei" x="332" scaleX="1" scaleY="1" textColor="0x00ff00"/>
+		<e:Image source="common_jt_png" y="0" scaleX="0.8" scaleY="0.8" horizontalCenter="-12"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewGenDetailSkin" width="1240" height="630" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group id="m_allGroup" width="1240" height="630" x="0" y="0" touchEnabled="false">
+		<e:Group width="586" height="48" x="483" y="153" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="zyt_37_png" x="74" y="15" scaleX="1" scaleY="1"/>
+			<e:Image source="zyt_37_png" x="496" y="15" scaleX="-1" scaleY="1"/>
+			<e:Image source="lb_sx_png" x="253" y="5" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="586" height="48" x="483" y="344" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="zyt_37_png" x="74" y="15" scaleX="1" scaleY="1"/>
+			<e:Image source="zyt_37_png" x="496" y="15" scaleX="-1" scaleY="1"/>
+			<e:Image x="253" y="5" scaleX="1" scaleY="1" source="lb_jn_png"/>
+		</e:Group>
+		<e:Group id="group_xiangxishuxing" height="133" y="192" anchorOffsetX="0" anchorOffsetY="0" width="655" x="481" scaleX="1" scaleY="1">
+			<e:Image source="zyt_xj_wug_png" y="37.65" scaleX="1" scaleY="1" horizontalCenter="-36.5" width="712"/>
+			<e:Image source="zyt_xj_wug_png" y="84.32" scaleX="1" scaleY="1" horizontalCenter="-36.5" width="712"/>
+			<e:Group x="29" y="44">
+			<e:Image x="-0.67" y="-0.67" anchorOffsetX="0" anchorOffsetY="0" source="common_pow_png"/>
+			<e:Label text="武力" x="32.01" y="3" size="22" textColor="0xffffff" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_labPower" text="999" y="3" x="85.32" size="22" anchorOffsetX="0" width="104.67" textAlign="left" textColor="0xffff99" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<e:Group x="231" y="44">
+			<e:Image x="4" anchorOffsetX="0" anchorOffsetY="0" source="common_intell_png" y="-1"/>
+			<e:Label text="智力" x="34.01" y="3" size="22" textColor="0xFFFFFF" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_labIntell" text="999999" y="3" x="87.32" size="22" textColor="0xFFFF99" anchorOffsetX="0" width="104.67" textAlign="left" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<e:Group x="434" y="43">
+			<e:Image x="4" anchorOffsetX="0" anchorOffsetY="0" y="-1" source="common_leader_png"/>
+			<e:Label text="统帅" x="36.01" y="3" size="22" textColor="0xFFFFFF" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_labLeader" text="999999" y="3" x="93.32" size="22" textColor="0xFFFF99" anchorOffsetX="0" width="104.67" textAlign="left" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<e:Group x="24" y="91">
+			<e:Image x="4" anchorOffsetX="0" anchorOffsetY="0" y="-1" source="common_att_png" width="27" height="27"/>
+			<e:Label text="攻击" x="36.01" y="4" size="22" textColor="0xFFFFFF" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_labAtk" text="999999" y="4" x="93.32" size="22" textColor="0xFFFF99" anchorOffsetX="0" width="104.67" textAlign="left" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<e:Group x="226" y="91">
+			<e:Image x="8" anchorOffsetX="0" anchorOffsetY="0" y="2" source="common_defense_png" width="24" height="24"/>
+			<e:Label text="防御" x="38.01" y="4" size="22" textColor="0xFFFFFF" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_labDef" text="999999" y="4" x="94.32" size="22" textColor="0xFFFF99" anchorOffsetX="0" width="104.67" textAlign="left" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<e:Group x="428" y="91">
+			<e:Image x="9" anchorOffsetX="0" anchorOffsetY="0" y="-1" width="27" height="27" source="common_blood_png"/>
+			<e:Label text="气血" x="41.01" y="4" size="22" textColor="0xFFFFFF" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_labHp" text="999999" y="4" x="98.32" size="22" textColor="0xFFFF99" anchorOffsetX="0" width="104.67" textAlign="left" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+
+	<e:Group height="133.32" y="414" anchorOffsetX="0" width="571" x="490" anchorOffsetY="0">
+		<com_main:GeneralSkillIconView id="m_skillIcon1" x="1" y="-67.5" skinName="General_skill_icon_view" currentState="name1"/>
+		<com_main:GeneralSkillIconView id="m_skillIcon2" x="56" y="72" skinName="General_skill_icon_view" currentState="name1"/>
+		<com_main:GeneralSkillIconView id="m_skillIcon3" x="266" y="72" skinName="General_skill_icon_view" currentState="name1"/>
+		<com_main:GeneralSkillIconView id="m_skillIcon4" x="56" y="72" skinName="General_skill_icon_view" currentState="name1"/>
+		<e:layout>
+		<e:HorizontalLayout gap="20"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComIconSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="76" height="75">
+	<e:Group id="m_pRoot" width="76" height="75" anchorOffsetX="38" anchorOffsetY="37.5" x="38" y="37.5">
+		<e:Image id="m_imgBg" x="0" y="0" source="btn_124_png"/>
+		<e:Image id="m_imgLab" y="48" horizontalCenter="0" source="lb_lt_sl_png"/>
+	</e:Group>
+</e:Skin>

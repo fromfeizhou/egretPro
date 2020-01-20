@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="General_slider_render" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="522" height="686" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="upAction">
+			<tween:TweenItem target="{m_upAc}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0.3}" scaleY="{0.3}" alpha="{0.3}"/>
+					</tween:props>
+				</tween:Set>
+
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{1}" scaleX="{1}" scaleY="{1}" y="{265}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="500"/>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group top="0" left="0" right="0" bottom="0" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:ComGenCard id="m_genCard" skinName="ComGenCardSkin" horizontalCenter="0" verticalCenter="0"/>
+		<e:Group top="7" right="19">
+		<com_main:CImage id="image_country"  source="lb_sg_png" horizontalCenter="0"/>
+		<e:Group  id="image_fate" top="75" >
+		<com_main:CImage  source="btn_131_png" scaleX="1" width="66" height="66"/>
+		<!--<com_main:CImage  source="common_red_flag3_png" scaleX="0.78" x="45" scaleY="0.78" y="3"/>-->
+		</e:Group>
+		</e:Group>
+		<e:Group top="-3" left="3">
+			<com_main:CImage source="border_1015_png" anchorOffsetX="0" anchorOffsetY="0" x="2.98" y="45.3"/>
+			<com_main:CImage source="border_016_png" scaleX="1" scaleY="1" y="27" x="4" width="68" height="68"/>
+			<com_main:CImage id="image_general_type" anchorOffsetX="0" anchorOffsetY="0" x="11.33" y="28.33" source="general_type_qibing2_png" scaleX="1.25" scaleY="1.25"/>
+			<com_main:CLabel id="m_labName" text="颜良" x="6.98" y="105.66" size="45" anchorOffsetX="0" width="64" anchorOffsetY="0" textAlign="center" lineSpacing="16"/>
+			<e:Group id="m_pIcon" x="17" y="274">
+				<e:Image id="m_imgIcon0" x="0" y="0" source="lb_pos_6_png"/>
+				<e:Image id="m_imgXian" x="0" y="67" source="lb_xiegang_png"/>
+				<e:Image id="m_imgIcon1" x="0" y="87" source="lb_pos_2_png"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_conEffCard" width="0" height="0" horizontalCenter="0" verticalCenter="0"/>
+		<e:Group bottom="0" left="0" right="0" height="173">
+			<com_main:CImage source="border_1019_png" left="0" right="0" bottom="-3" height="122"/>
+			<e:Group x="78.31">
+				<com_main:ComFightItem id="m_comFightItem" skinName="ComFightItemSkin"/>
+				<e:Label id="m_labAddFight" text="+100" scaleX="1" scaleY="1" verticalCenter="3" textColor="0x00ff00" alpha="0" size="30" x="325"/>
+				<e:Group id="m_conEffNum" width="0" height="0" x="175" y="37"/>
+				<e:Group id="m_conEffLab" y="2" anchorOffsetX="0" anchorOffsetY="0" width="1" height="1" x="194"/>
+			</e:Group>
+			<com_main:CImage id="m_imgSorceEff" anchorOffsetX="0" anchorOffsetY="0" source="" x="172.66" y="8.33" width="234" height="60" locked="true"/>
+			<e:Group id="group_starBg" width="264" height="55" anchorOffsetX="0" y="78" anchorOffsetY="0" horizontalCenter="0">
+				<e:layout>
+				<e:HorizontalLayout gap="11" horizontalAlign="left" verticalAlign="middle"/>
+				</e:layout>
+			</e:Group>
+		<e:Group id="group_star" width="264" height="55" anchorOffsetX="0" y="78" anchorOffsetY="0" horizontalCenter="0">
+			<e:layout>
+			<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle" gap="11"/>
+			</e:layout>
+		</e:Group>
+		</e:Group>
+		<e:Group x="248" y="358" id="m_pStar">
+		
+		</e:Group>
+		<e:Group x="262" y="358" id="m_upAc" anchorOffsetX="357.5" anchorOffsetY="43.5" visible="false">
+		<com_main:CImage  scaleX="1.3" scaleY="1.3" source="line_1009_png" verticalCenter="0"/>
+		<com_main:CImage   source="lb_zc_sjcg_png" verticalCenter="0" horizontalCenter="3.5" scaleX="0.9" scaleY="0.9"/>
+		</e:Group>
+		<e:Group id="m_pLvRoot" width="143" height="35" anchorOffsetY="0" x="192" y="478" visible="false">
+			<e:Image source="border_1030_png" width="100%" height="100%" alpha="0.8"/>
+			<e:Group y="2" width="77" height="32" horizontalCenter="0">
+				<e:BitmapLabel id="m_labPlayerVip" y="0" font="font_vip_fnt" text="10" x="0"/>
+				<e:Image id="m_imgLvPic" source="lb_j_png" x="50" y="4"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

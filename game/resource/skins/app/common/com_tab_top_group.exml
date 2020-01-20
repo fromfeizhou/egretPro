@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="com_tab_top_group" width="648" height="70" currentState="state1" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="state1,state2,state3" width.state3="1161"  width.state2="772" width.state1="634">
+	<e:Group top="0" left="0" right="0" bottom="0">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1" scaleY="1" top="2" height="67" includeIn="state2,state3" source="border_005_jpg" scale9Grid="28,35,13,10"/>
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1" scaleY="1" top="2" source="border_1008_png" scale9Grid="152,36,10,9" height="67" source.state1="border_005_jpg" scale9Grid.state1="20,36,22,9"/>
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1" scaleY="1" top="2" source="border_1008_png" scale9Grid="152,36,10,9" height="67" includeIn="state1"/>
+		<com_main:CImage source="line_1002_png" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1" scaleY="1" top="2"/>
+		<com_main:CImage source="line_1002_png" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1" scaleY="1" bottom="2"/>
+		<e:Group id="m_groupLine" right="0" left="156.5" left.state2="190.5" left.state3="216" top="0" bottom="0" right.state3="-2" top.state3="0" bottom.state3="0" anchorOffsetX.state3="0">
+		<e:layout>
+			<e:HorizontalLayout gap="155" gap.state2="189" gap.state3="179"/>
+		</e:layout>
+		</e:Group>
+		<e:TabBar id="m_tabBtn" itemRendererSkinName="tab_btntop_render" top="0" bottom="0" left="0" right="0" itemRendererSkinName.state2="tab_btntop_renderII" itemRendererSkinName.state3="tab_btntop_render1" left.state3="34" right.state3="-1" top.state3="0" bottom.state3="0" anchorOffsetX.state3="0">
+			<e:ArrayCollection>
+				<e:Array>
+					<e:Object name="测试"/>
+					<e:Object name="测试"/>
+					<e:Object name="测试"/>
+					<e:Object name="测试"/>
+					<e:Object name="测试"/>
+					<e:Object name="测试"/>
+				</e:Array>
+			</e:ArrayCollection>
+		<e:layout>
+			<e:HorizontalLayout gap="0"/>
+		</e:layout>
+		</e:TabBar>
+	</e:Group>
+</e:Skin>

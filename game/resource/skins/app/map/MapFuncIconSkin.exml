@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MapFuncIconSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+
+
+
+	<com_main:CImage id="m_imgIcon" source="map_main_build40_png"/>
+
+
+
+	<e:Group id="m_pTitleRoot" y="-37" horizontalCenter="30">
+		<com_main:CImage y="0" source="border_1028_png" scale9Grid="8,3,50,24" left="-24" right="-24" width="40" scaleX="1.5" scaleY="1.5"/>
+		<e:Label id="m_labName" text="123" size="24" fontFamily="Microsoft YaHei" textAlign="center" textColor="0xfffbd0" x="0" y="9"/>
+	</e:Group>
+
+</e:Skin>

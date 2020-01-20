@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_rule_panel" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="546" height="674" x="392.33" y="33.33" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:CImage xmlns:com_main="com_main.*" source="frame_101_jpg" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scale9Grid="15,50,92,22" scaleX="1" scaleY="1"/>
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" width="100%" source="frame_001_jpg"/>
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="-1" top="90" source="border_005_jpg" anchorOffsetX="0" width="507.87" anchorOffsetY="0" height="164.87" horizontalCenter="0"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" x="496" y="32.67" anchorOffsetX="57.5" anchorOffsetY="38.5" scaleX="1" scaleY="1">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" source="btn_009_up_png" right="0" top="0"/>
+		</e:Group>
+		<e:Label id="m_LbName" text="规则" y="23" textColor="0xFFFF99" horizontalCenter="0" size="28"/>
+	</e:Group>
+</e:Skin>

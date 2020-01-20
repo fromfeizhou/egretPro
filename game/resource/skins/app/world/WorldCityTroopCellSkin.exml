@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldCityTroopCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="51" width="529">
+	<e:Group left="0" right="0" bottom="4" top="0" anchorOffsetY="0">
+		<com_main:CImage scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="-5" right="0" source="line_008_png"/>
+		<e:Group x="2" verticalCenter="0.5" anchorOffsetX="0" width="134">
+		<com_main:CLabel id="m_pTroopName"  text="99999" verticalCenter="0"   textColor="0xe9e9e9" size="24" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group x="381" width="100" verticalCenter="0.5" anchorOffsetX="0">
+		<com_main:CLabel id="m_pTroopCount" text="99999" verticalCenter="0"  textColor="0xe9e9e6" size="24" fontFamily="Microsoft YaHei" horizontalCenter="-1.5"/>
+		</e:Group>
+		<e:Group anchorOffsetY="0" height="51" anchorOffsetX="0" width="187" horizontalCenter="-24">
+		<com_main:CLabel id="m_pTroop" text="100" verticalCenter="0"  fontFamily="Microsoft YaHei" textColor="0xe9e9e6" size="24" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group x="836" verticalCenter="0" anchorOffsetX="0" width="300">
+		<com_main:CLabel id="m_pKillValue" text="99999" verticalCenter="0"   textColor="0xe9e9e9" size="24" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+		
+</e:Skin>

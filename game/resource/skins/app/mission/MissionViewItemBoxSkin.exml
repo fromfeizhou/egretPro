@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MissionViewItemBoxSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="148" width="120">
+	<e:Group id="m_ActiveRoot" width="120" height="120" touchChildren="false" touchEnabled="false">
+		<com_main:CImage horizontalCenter="0.5" anchorOffsetX="48" anchorOffsetY="50" verticalCenter="5.5" x="0" y="0" scaleX="1" scaleY="1" source="bx-open_png"/>
+		<com_main:CImage y="46" x="9" source="welfare_tips_png" scaleX="1" scaleY="1"/>
+		<com_main:CLabel id="m_pLbLevel" text="已领奖" size="24" y="47" x="26" textColor="0x28bc10"/>
+	</e:Group>
+	<e:Group id="m_groupBase" width="120" height="148" touchChildren="false">
+	</e:Group>
+	<com_main:CLabel id="m_pLbValue" text="30" horizontalCenter="0.5" verticalCenter="55" fontFamily="Microsoft YaHei" size="26" touchEnabled="false"/>
+</e:Skin>

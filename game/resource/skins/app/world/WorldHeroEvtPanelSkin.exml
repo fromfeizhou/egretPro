@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldHeroEvtPanelSkin" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1100" height="600">
+	<e:Group x="0" y="0" width="1100" height="600">
+		<com_main:APopUp id="m_aPopUp" skinName="APopUpSkin" currentState="size7" x="0" y="0"/>
+		<e:Scroller id="m_pSroller" width="1025" height="463" x="44" y="77" anchorOffsetX="0" anchorOffsetY="0">
+			<e:List id="m_pList" anchorOffsetY="0" height="490.33">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="top"/>
+			</e:layout>
+			</e:List>
+		</e:Scroller>
+		<com_main:CImage anchorOffsetX="0" width="100%" source="border_1019_png" touchEnabled="false" height="122" bottom="0"/>
+		<e:Label textColor="0xE9E9E6" size="24" text="点击部队既进行出征" bottom="21" horizontalCenter="0" touchEnabled="false"/>
+	</e:Group>
+
+</e:Skin>

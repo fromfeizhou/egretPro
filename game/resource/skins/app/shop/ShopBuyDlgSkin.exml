@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopBuyDlgSkin" width="676" height="490.76" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<com_main:APopUp id="m_PopUp" x="1" y="0" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" height="487.58" width="673" currentState="size1"/>
+	<e:Image x="0" y="99" anchorOffsetY="0" anchorOffsetX="0" source="border_1008_png" width="675.03"/>
+	<e:Image x="0" y="179" anchorOffsetY="0" anchorOffsetX="0" width="675.03" source="line_1006_png"/>
+	<e:Image x="0" y="278.96" anchorOffsetY="0" anchorOffsetX="0" source="line_1006_png" width="675.03"/>
+	<com_main:ComCostTextButton  id="m_comCostTextButton" currentState="size3" y="427" skinName="com_cost_text_button" x="337" anchorOffsetX="124.5" anchorOffsetY="41"/>
+	<com_main:ComItemNew id="m_ComItem" x="29" y="73" currentState="base" skinName="com_item_new"/>
+	<com_main:CLabel id="m_ItemName" text="物品名字" x="137" y="81" size="26"/>
+	<com_main:CLabel id="m_Description" text="物品描述物品描述述物品描述物品描述物品描述物品描述物品描述物品描述" y="190.33" anchorOffsetY="0" anchorOffsetX="0" size="26" x="27" textColor="0x8a8a9e" width="625.63" height="77.51"/>
+	<com_main:CLabel text="拥有：" textAlign="left" verticalAlign="middle" size="26" y="134.77" anchorOffsetX="0" anchorOffsetY="0" x="140.42" textColor="0x8A8A9E"/>
+	<com_main:CLabel id="m_ItemNum" text="5" textAlign="left" verticalAlign="middle" size="28" y="134.77" anchorOffsetX="0" anchorOffsetY="0" x="213.68"/>
+	<e:Image x="32.12" y="303.88" source="border_006_png" anchorOffsetY="0" height="41" anchorOffsetX="0" width="128"/>
+	<e:Group x="26.12" y="303.88" width="138" height="41">
+		<e:Image anchorOffsetY="0" anchorOffsetX="0" source="border_008_png" scale9Grid="52,17,13,13" left="0" right="0" top="0" bottom="0"/>
+		<com_main:CLabel id="m_ItemSelectNum" text="1/20" textAlign="center" verticalAlign="middle" size="24" anchorOffsetX="0" anchorOffsetY="0" height="38" width="129" horizontalCenter="0" verticalCenter="0" fontFamily="Microsoft YaHei"/>
+	</e:Group>
+	<e:Group x="172.07" y="291.58">
+		<e:Image id="m_btnSub" x="0" y="-2" source="btn_010_up_png"/>
+		<e:Image id="m_btnAdd" x="417.34" y="-2" source="btn_011_up_png"/>
+		<ns1:Hslider id="m_slider" x="92.38" y="12.02" anchorOffsetX="0" width="308" skinName="HsliderSkin" scaleX="1" scaleY="1" height="38"/>
+	</e:Group>
+</e:Skin>

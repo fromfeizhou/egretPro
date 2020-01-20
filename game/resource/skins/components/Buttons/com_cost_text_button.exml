@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="com_cost_text_button" width="151" height="67" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="size1,size2,size3,size4,size5,size6,size7"  width.size2="308" height.size2="114" width.size3="249" height.size3="82" width.size4="249" height.size4="82" width.size5="200" height.size5="82" width.size6="200" height.size6="82" width.size7="308" height.size7="114">
+	<e:Group x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="100%" height="100%">
+		<com_main:CImage id="m_pBtnBg" xmlns:com_main="com_main.*" source="btn_001_up_png" source.size2="btn_004_up_png" source.size3="btn_002_up_png" source.size4="btn_003_up_png" source.size5="btn_002_up_png" width.size5="100%" height.size5="100%" scale9Grid.size5="29,29,189,24" source.size6="btn_003_up_png" scale9Grid.size6="39,28,181,27" width="100%" height="100%" source.size7="btn_005_up_png"/>
+		<e:Group y="-3" horizontalCenter="0"  y.size2="19" touchChildren="false" touchEnabled="false"  y.size3="6"  y.size4="6"  y.size5="6" y.size6="6" y.size7="19">
+			<com_main:CImage id="m_pCostIcon" x="53" y="-10" source="icon_source_gold_png" y.size3="-1" touchEnabled="false" y.size4="-1" y.size5="-1" y.size6="-1" width="50" height="50"/>
+			<com_main:CLabel id="m_pLbCost" size="24" stroke="2" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="20" x="0" y="0" textColor="0xffffff"  height="50" y.size3="-1" touchEnabled="false" y.size4="-1" textColor.size4="0xe9e9e6" strokeColor.size4="0x24629a" y.size5="-1" y.size6="-1" textColor.size6="0xe9e9e6" strokeColor.size6="0x24629a" strokeColor.size7="0x24629a" height.size7="56" height.size2="56"/>
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle" verticalAlign.size2="top" verticalAlign.size7="top"/>
+			</e:layout>
+		</e:Group>
+		<com_main:CLabel id="m_pLbText" size="22" stroke="2" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="刷新" y="38" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" horizontalCenter="0" y.size2="67"  y.size3="50" touchEnabled="false"  y.size4="50" strokeColor.size4="0x24629a" textColor.size4="0xe9e9e6" y.size6="50" strokeColor.size6="0x24629a" textColor.size6="0xe9e9e6" y.size7="67" strokeColor.size7="0x24629a" y.size5="50" horizontalCenter.size2="0" size.size2="24" size.size7="24"/>
+	</e:Group>
+</e:Skin>

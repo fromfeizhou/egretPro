@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ObserveResult" width="519" height="106" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="border_1020_png" x="81.5" y="28.5" width="423"/>
+	<com_main:ComHeadItem id="comHead" x="15" scaleX="0.65" scaleY="0.65" currentState="yuandi" y="12" width="115" height="127"/>
+	<e:Label id="lb_name" text="玩家【小学生的书包】已战败" x="89" y="39" size="25" fontFamily="Microsoft YaHei" textColor="0xffffff"/>
+</e:Skin>

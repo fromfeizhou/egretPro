@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="testWarSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1334" height="750" x="0" y="0">
+		<e:Image top="0" bottom="0" right="0" left="0" x="0" y="0" scaleX="1" scaleY="1" source="frame_101_jpg" scale9Grid="43,22,37,36"/>
+		<e:Label text="武将名称：" x="57.96" y="158" scaleX="1" scaleY="1"/>
+
+		<e:EditableText id="generalLb" width="210.61" height="40.91" text="吕布" x="240.48" y="152.55" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1"/>
+		<e:EditableText id="generalLb0" width="210.61" height="40.91" text="0" x="1064.82" y="788.59" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1"/>
+		<e:Label id="activeSkill" text="主动技能：" x="51" y="218.02" scaleX="1" scaleY="1"/>
+		<e:Label id="activeSkillLabel" text="主动技能1" x="236.52" y="216.6" scaleX="1" scaleY="1"/>
+		<e:Label id="passiveSkill" text="被动技能：" x="50.36" y="265.92" scaleX="1" scaleY="1"/>
+		<e:Label id="passiveSkillLabal1" text="被动技能1" x="240.48" y="265.92" scaleX="1" scaleY="1"/>
+		<e:Label id="passiveSkillLabal2" text="被动技能2" x="469.88" y="265.92" scaleX="1" scaleY="1"/>
+		<e:Label id="passiveSkillLabal3" text="被动技能3" x="704.12" y="265.92" scaleX="1" scaleY="1"/>
+		<e:CheckBox id="m_passiveCheckBox1" label="" horizontalCenter="-449.5" verticalCenter="-94.5" x="195" y="258" scaleX="1" scaleY="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:CheckBox>
+		<e:CheckBox id="m_passiveCheckBox2" label="" horizontalCenter="-215.5" verticalCenter="-94.5" x="429" y="258" scaleX="1" scaleY="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:CheckBox>
+		<e:CheckBox id="m_passiveCheckBox3" label="" horizontalCenter="14.5" verticalCenter="-94.5" x="659" y="258" scaleX="1" scaleY="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:CheckBox>
+		<e:Label id="attr_Lb_1" text="攻击：" x="60" y="356.96" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_2" text="防御：" x="60" y="399.43" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_3" text="智力：" x="60" y="441.47" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_4" text="统帅：" x="60" y="482.57" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_5" text="武力：" x="60" y="524.09" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_6" text="暴击率：" x="32.08" y="562.91" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_7" text="暴击伤害加成：" x="7.23" y="606.26" scaleX="1" scaleY="1" size="20"/>
+		<e:Label id="attr_Lb_8" text="闪避：" x="50.36" y="646.46" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_9" text="初始值怒气：" x="254" y="322.88" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_10" text="血量：" x="60" y="688.85" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_11" text="兵力：" x="263.98" y="368.8" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_12" text="伤害减免：" x="263.98" y="405.2" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_13" text="伤害加成：" x="260.81" y="443.92" scaleX="1" scaleY="1"/>
+		<e:Label id="attr_Lb_1003" text="重置怒气：" x="3.19" y="311.77" scaleX="1" scaleY="1"/>
+		<e:EditableText id="attr_edit_1003" width="100" height="40.91" text="75" x="154" y="308.44" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_1" width="100" height="30" text="100" x="156" y="357.81" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_2" width="100" height="30" text="100" x="156" y="399.88" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_3" width="100" height="30" text="100" x="156" y="441.77" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_4" width="100" height="30" text="100" x="156" y="482.18" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_5" width="100" height="30" text="100" x="156" y="524.17" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_6" width="100" height="30" text="100" x="159.93" y="564.51" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_7" width="100" height="30" text="100" x="160.81" y="600.29" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_8" width="100" height="30" text="100" x="156.64" y="646.32" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_9" width="100" height="30" text="100" x="430.96" y="323.49" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_10" width="100" height="30" text="100" x="156" y="688.48" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_11" width="100" height="30" text="100" x="353.98" y="369.88" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_12" width="100" height="30" text="100" x="413.98" y="403.4" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:EditableText id="attr_edit_13" width="100" height="30" text="100" x="417" y="443.92" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" scaleX="1" scaleY="1" size="20"/>
+		<e:Group id="atk_team" width="396.98" height="253.03" x="556.08" y="330" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xb4d843"/>
+			<e:Group id="atkPos1" width="158" height="66" x="314" y="43.26" anchorOffsetX="80" anchorOffsetY="33" name="atk_1" scaleX="0.6" scaleY="0.6">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="atkPos2" width="158" height="66" x="314" y="131.26" anchorOffsetX="80" anchorOffsetY="33" name="atk_2" scaleX="0.6" scaleY="0.6">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="atkPos3" width="158" height="66" x="315" y="199.14" anchorOffsetX="80" anchorOffsetY="33" name="atk_3" scaleX="0.6" scaleY="0.6">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="atkPos4" width="158" height="66" x="165" y="84.24" anchorOffsetX="80" anchorOffsetY="33" name="atk_4" scaleX="0.6" scaleY="0.6">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="atkPos5" width="158" height="66" x="169" y="172.24" anchorOffsetX="80" anchorOffsetY="33" name="atk_5" scaleX="0.6" scaleY="0.6">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="atkPos6" width="158" height="66" x="44" y="109" anchorOffsetX="80" anchorOffsetY="33" name="atk_6" scaleX="0.6" scaleY="0.6">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="def_team" width="396.98" height="253.03" x="932.74" y="330.88" anchorOffsetX="0" anchorOffsetY="0">
+            <e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x44bad6"/>
+			<e:Group id="defPos1" width="158" height="66" x="102" y="43.77" anchorOffsetX="80" anchorOffsetY="33" name="def_1">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="defPos2" width="158" height="66" x="100" y="125.77" anchorOffsetX="80" anchorOffsetY="33" name="def_2">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="defPos3" width="158" height="66" x="101.39" y="199.12" anchorOffsetX="80" anchorOffsetY="33" name="def_3">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="defPos4" width="158" height="66" x="310" y="116" anchorOffsetX="80" anchorOffsetY="33" name="def_4">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="defPos5" width="158" height="66" x="312" y="206" anchorOffsetX="80" anchorOffsetY="33" name="def_5">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0" size="20"/>
+			</e:Group>
+			<e:Group id="defPos6" width="158" height="66" x="322" y="216" anchorOffsetX="80" anchorOffsetY="33" name="def_5" visible="false">
+				<e:Image source="btn_001_up_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Button id="outputBtn" label="导出" x="1016.35" y="6.68">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_006_up_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="inputBtn" label="导入" x="851.49" y="6.93">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_006_up_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="saveVideoBtn" label="保存录像" x="554.49" y="7.5">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_006_up_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="runVideoBtn" label="读取录像" x="554.49" y="74.5">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_006_up_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="clearnVideo" label="清理录像缓存" x="554.49" y="128.96">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_006_up_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:EditableText id="inputText" width="129.33" height="44" text="导入数据" x="721" y="19" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Group width="480" height="152" x="720" y="79" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x604444" anchorOffsetY="0"/>
+			<e:CheckBox id="m_onlyGeneralCherkBox" label="" x="15" y="19" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:CheckBox>
+			<e:Label text="只有武将" x="59.62" y="22.39" scaleX="1" scaleY="1"/>
+			<e:CheckBox id="m_oneSoldierCherkBox" label="" x="292" y="19" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:CheckBox>
+			<e:CheckBox id="m_enemySkillCherkBox" label="" x="15" y="94.02" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:CheckBox>
+			<e:CheckBox id="m_skillStopCherkBox" label="" x="291.51" y="92.6" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:CheckBox>
+			<e:Label text="单个兵" x="333.15" y="22.87" scaleX="1" scaleY="1"/>
+			<e:Label text="敌方自动技能" x="60" y="99.46" scaleX="1" scaleY="1"/>
+			<e:Label text="强制技能暂停" x="340" y="104.46" scaleX="1" scaleY="1" size="25"/>
+		</e:Group>
+		<e:Button id="saveGeneral" label="保存" x="467" y="188.05">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_001_up_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="startBattle" label="开始战斗" x="1098.15" y="640.18">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_001_up_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<com_main:DropList id="dixing_dropListView" x="47" y="29" skinName="DropList" scaleX="1" scaleY="1"/>
+	<com_main:DropList id="wujiang_dropListView" x="273.66" y="29" skinName="DropList" scaleX="1" scaleY="1" locked="true"/>
+	<e:Button id="closeBtn" label="" right="34" top="19">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_009_up_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Label text="配置表id(填了配置表id 其他属性忽略)：" x="541" y="753" scaleX="1" scaleY="1"/>
+</e:Skin>

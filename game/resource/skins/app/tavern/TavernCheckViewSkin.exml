@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TavernCheckViewSkin" width="1115" height="638" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" anchorOffsetX="0">
+		<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" currentState="size3" width="1114.73" height="637.88" x="0" y="0"/>
+		<e:Scroller id="m_tavernScroller" width="1080" height="530" y="85" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:List id="m_List" y="-1.52" x="1.52" anchorOffsetX="0" width="1089.4">
+				<e:layout>
+					<e:TileLayout horizontalGap="-1" verticalGap="47" paddingBottom="50"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

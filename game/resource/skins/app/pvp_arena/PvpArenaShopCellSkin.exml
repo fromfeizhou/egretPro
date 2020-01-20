@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpArenaShopCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="190" height="250">
+		<e:Group y="0" width="190" height="226" x="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1">
+			<com_main:CImage xmlns:com_main="com_main.*" source="border_018_png" scale9Grid="22,20,71,76" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" top="0" bottom="0"/>
+			<com_main:CImage xmlns:com_main="com_main.*" source="border_1029_png" anchorOffsetX="0" scale9Grid="107,6,12,42" left="4" top="0" right="4" anchorOffsetY="0" height="46.67"/>
+			<e:Group width="6" right="3" top="13" bottom="18">
+			<com_main:CImage xmlns:com_main="com_main.*" source="line_009_png" rotation="90" anchorOffsetX="0" scaleX="1" scaleY="1" left="-1" top="0" bottom="0" right="0"/>
+			</e:Group>
+			<e:Group width="6" left="0" top="13" bottom="18">
+			<com_main:CImage xmlns:com_main="com_main.*" source="line_009_png" rotation="90" anchorOffsetX="0" scaleX="1" scaleY="1" left="0" top="0" bottom="1" right="-1"/>
+			</e:Group>
+			<com_main:CLabel id="m_pLbName" xmlns:com_main="com_main.*" text="Label" scaleX="1" scaleY="1" left="0" right="0" textAlign="center" anchorOffsetY="0" height="37.34" verticalAlign="middle" fontFamily="Microsoft YaHei" size="24" top="8"/>
+		</e:Group>
+		<com_main:ComCostButton id="m_pBtnBuy" x="21.83" y="184.83" skinName="com_cost_button" scaleX="1" scaleY="1"/>
+		<com_main:ComItemNew skinName="com_item_new" horizontalCenter="0" verticalCenter="-11"/>
+	</e:Group>
+</e:Skin>

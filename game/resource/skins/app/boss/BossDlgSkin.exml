@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossDlgSkin" width="1207" height="637.33" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<com_main:APopUp id="m_PopUp" x="-2" y="-2" anchorOffsetX="0" currentState="size2" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" height="632.79" width="1207"/>
+	<e:Image x="8" y="73" source="bossbg_png" anchorOffsetX="0" width="1187" anchorOffsetY="0" height="548"/>
+	<e:Image id="image_general_all" anchorOffsetX="0" scaleX="1" scaleY="1" verticalCenter="11.83" horizontalCenter="-308" source=""/>
+	<e:Image id="m_mask" source="border_1045_png" x="-15" y="-63.9" width="522" height="686"/>
+	<e:Group id="m_dargonLayer" width="1" height="1" anchorOffsetY="0" horizontalCenter="-357" bottom="6.33"/>
+	<e:Group width="768" height="162" x="434" y="66" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image x="128" y="18" source="border_1001_png" anchorOffsetY="0" height="53" anchorOffsetX="0" width="250"/>
+		<e:Image x="86" y="11" anchorOffsetY="0" anchorOffsetX="0" source="border_016_png" scaleX="1.2" scaleY="1.2"/>
+		<e:Image id="m_ImageType" x="96" y="13" anchorOffsetY="0" anchorOffsetX="0" scaleX="1.2" scaleY="1.2" source=""/>
+		<e:Image x="17" y="152" anchorOffsetY="0" anchorOffsetX="0" scaleX="1.2" scaleY="1.2" source="line_008_png" width="626"/>
+		<e:Image x="447" y="-1" anchorOffsetY="0" anchorOffsetX="0" scaleX="1.2" scaleY="1.2" source="line_1001_png" height="132"/>
+		<e:Label id="m_generalName" text="" x="184" y="22" size="40" fontFamily="Microsoft YaHei"/>
+		<e:Label text="推荐战力" y="32" textColor="0xe9e9e6" x="546"/>
+		<e:Label id="m_fight" text="" y="86" fontFamily="Microsoft YaHei" textColor="0xffff99" size="40" horizontalCenter="225.5"/>
+		<e:Group height="45" width="254" x="145" y="91" anchorOffsetY="0">
+			<e:layout>
+			<e:HorizontalLayout gap="10" horizontalAlign="left"/>
+			</e:layout>
+			<e:Image x="-2" y="5" source="common_star_empty_png"/>
+			<e:Image x="8" y="15" source="common_star_empty_png"/>
+			<e:Image x="18" y="25" source="common_star_empty_png"/>
+			<e:Image x="28" y="35" source="common_star_empty_png"/>
+			<e:Image x="38" y="45" source="common_star_empty_png"/>
+		</e:Group>
+		<e:Group id="m_startGroup" height="45" width="254" x="143" y="85" anchorOffsetY="0">
+			<e:layout>
+			<e:HorizontalLayout gap="-6" horizontalAlign="left"/>
+			</e:layout>
+			<e:Image id="m_start0" x="77" y="15" source="common_star_png" visible="false"/>
+			<e:Image id="m_start1" x="87" y="25" source="common_star_png" visible="false"/>
+			<e:Image id="m_start2" x="97" y="35" source="common_star_png" visible="false"/>
+			<e:Image id="m_start3" x="107" y="45" source="common_star_png" visible="false"/>
+			<e:Image id="m_start4" x="117" y="55" source="common_star_png" visible="false"/>
+		</e:Group>
+	</e:Group>
+	<e:Group width="686" height="276" x="504" y="234" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Label text="挑战奖励" x="304" y="0" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+		<e:Label id="m_needCondition" text="需要大殿等级1级" y="272.18" fontFamily="Microsoft YaHei" size="24" anchorOffsetY="0" height="22" horizontalCenter="13.5" textColor="0xf21809"/>
+		<e:Image x="5" y="34" source="border_1039_png" width="676" scale9Grid="613,32,2,197" anchorOffsetY="0" height="189"/>
+		<e:Group id="m_contentGroup" width="685" height="111" y="78" anchorOffsetY="0" anchorOffsetX="0" x="14">
+			<e:layout>
+			<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+	<e:Group width="1168" height="102" x="24" y="518" anchorOffsetY="0" anchorOffsetX="0">
+		<com_main:ComButton id="m_BtnchangeGeneral" anchorOffsetX="0" anchorOffsetY="0" currentState="style3" skinName="com_button" y="10" x="155" scaleX="1" scaleY="1" visible="false"/>
+		<com_main:ComButton id="m_BtnChallenge" anchorOffsetX="0" anchorOffsetY="0" currentState="style2" skinName="com_button" y="10" x="717" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

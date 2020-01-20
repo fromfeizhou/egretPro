@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CScroller" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+    <e:Image id="up_btn" source="icon_xiala_png" top="-5" scaleY="-1" right="0" visible="false"/>
+    <e:Image id="down_btn" source="icon_xiala_png" bottom="-7" right="0" visible="false"/>
+	<e:Group id="emptyContent" width="489" height="265" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" horizontalCenter="0" visible="false">
+		<com_main:CLabel id="m_ContentTip" text="暂无内容哦，稍后再来吧~~" y="126" anchorOffsetX="0" fontColor="Gray" size="25" horizontalCenter="-3.5"/>
+	</e:Group>
+	
+</e:Skin>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_card_panel" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1159" height="676">
+	<e:Group id="m_pCardRoot" y="0" x="0" width="100%" height="100%">
+		<e:Image id="m_imgIcon" y="0" left="0" right="-2" source="hd_20101_jpg"/>
+		<e:Group width="391" height="512" scaleX="1" scaleY="1" verticalCenter="77" left="121">
+			<com_main:CImage width="391" height="512" x="0" y="0" scaleX="1" scaleY="1" source="pay_card_1_png"/>
+			<e:Label id="m_labWeekDay" text="剩余33天" y="387.98" size="20" textColor="0xE9E9E6" x="154" textAlign="center"/>
+			<com_main:ComPayButton id="m_pBtnWeek" skinName="com_cost_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" horizontalCenter="0" y="448"/>
+			<com_main:CImage width="278" height="183" scaleX="1" scaleY="1" source="pay_card_bg1_png" top="150" horizontalCenter="0.5"/>
+			<com_main:CImage scaleX="1" scaleY="1" top="327" horizontalCenter="58.5" source="icon_source_gold_png"/>
+			<e:Label text="连续7天每天可领取" x="53.33" y="340.98" size="20" textColor="0xFFE5A8"/>
+			<e:Label id="m_pLbWeek" text="999" y="342.31" size="20" textColor="0xFFE5A8" right="62"/>
+		</e:Group>
+		<e:Group width="391" height="512" scaleX="1" scaleY="1" verticalCenter="77" right="140">
+			<com_main:CImage width="391" height="512" x="0" y="-1.33" scaleX="1" scaleY="1" source="pay_card_2_png"/>
+			<com_main:CImage width="278" height="183" scaleX="1" scaleY="1" top="150" horizontalCenter="0.5" source="pay_card_bg2_png"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="icon_source_gold_png" horizontalCenter="63.5" y="326.85"/>
+			<com_main:ComPayButton id="m_pBtnMonth" skinName="com_cost_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" horizontalCenter="0" y="448"/>
+			<e:Label text="连续30天每天可领取" x="44.01" y="340.98" size="20" textColor="0xFFE5A8"/>
+			<e:Label id="m_labMonthDay" text="剩余33天" y="387.98" size="20" x="154" textAlign="center" textColor="0xe9e9e6" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_pLbMonth" text="999" y="342.31" size="20" textColor="0xFFE5A8" x="295"/>
+		</e:Group>
+			<com_main:CLabel id="m_labDesc" text="本礼包不会激活首充，累计充值，原有充值档位双倍效果，可以正常获得贵族经验。" textColor="0xE9e9e9" fontFamily="Microsoft YaHei" size="18" scaleX="1" scaleY="1" stroke="2" strokeColor="0xb7524a" left="24" top="14" width="150" lineSpacing="7" />
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldResEventFinishCompSkin" width="550" height="60" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*">
+<e:Group id="m_pRes" width="550" height="60" anchorOffsetY="30" y="30" anchorOffsetX="275" x="275">
+	<com_main:CImage id="m_pResBg"  scaleX="1" scaleY="1" source="line_1009_png" verticalCenter="0"/>
+	<com_main:CImage id="m_pResName" scaleX="1" scaleY="1" source="lb_zc_cjwc_png" verticalCenter="0" horizontalCenter="0"/>
+</e:Group>
+</e:Skin>

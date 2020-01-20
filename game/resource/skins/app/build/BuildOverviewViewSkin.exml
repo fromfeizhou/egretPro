@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuildOverviewViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<!--<e:Group touchEnabled="false" y="0" x="0">
+		<e:Group id="m_pContent" width="596" x="0" height="720">
+			<e:Group id="mainGroup" width="596" anchorOffsetY="0" anchorOffsetX="0" alpha="1" x="0" scaleX="1" scaleY="1" top="0" bottom="0">
+				<com_main:CImage source="frame_101_jpg" scale9Grid="16,13,89,80" scaleX="1" scaleY="1" anchorOffsetY="0" left="0" right="0" top="0" rotation="180" height="61"/>
+				<com_main:CImage scale9Grid="16,13,89,80" scaleX="1" scaleY="1" anchorOffsetY="0" left="0" right="0" top="61" bottom="0" source="frame_101_jpg"/>
+				<com_main:CImage scaleX="1" scaleY="1" anchorOffsetY="0" source="line_003_png" top="29" horizontalCenter="-156"/>
+				<com_main:CImage scaleX="-1" scaleY="1" anchorOffsetY="0" source="line_003_png" top="29" horizontalCenter="149"/>
+				<com_main:CLabel text="总览" fontFamily="Microsoft YaHei" size="30" top="19" horizontalCenter="-3"/>
+			</e:Group>
+			<e:Scroller id="scroller" width="598" top="67" bottom="20">
+			<e:Group id="m_pCellRoot">
+				<e:layout>
+				<e:VerticalLayout/>
+				</e:layout>
+			</e:Group>
+			</e:Scroller>
+			<com_main:CImage id="bg_imgae" bottom="3" source="border_1019_png" alpha="1" left="2" right="2" anchorOffsetY="0" height="59.34" touchEnabled="false"/>
+		</e:Group>
+	</e:Group>-->
+</e:Skin>

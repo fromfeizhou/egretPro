@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TeamFateCellSkin" width="1070"  xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1070" height="100%" x="0" y="0">
+		<e:Group>
+		<e:Image source="border_1020_png"  width="1094" anchorOffsetX="0" top="0"/>
+		<e:Group anchorOffsetY="0" height="44" left="20">
+			<e:Label id="m_lbName" text="吕布"  size="26" verticalCenter="0" textColor="0xe9e9e9"/>
+			<e:Label  text="缘分"  size="26" verticalCenter="0" textColor="0xe9e9e9"/>
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle" gap="0"/>
+			</e:layout>
+		</e:Group>
+		</e:Group>
+		<e:Group id="m_pContent" x="15" top="60">
+		<e:Label  text="当前减少行军时间所需剩余时间的20%,当前减少行军时间所需剩余时间的20%,当前减少行军时间所需剩余时间的20%当前减少行军时间所需剩余时间的20%" textColor="0xaac7ff" size="24" verticalCenter="0" maxWidth="1000" lineSpacing="6"/>
+		<e:Label  text="当前减少行军时间所需剩余时间的20%,当前减少行军时间所需剩余时间的20%" textColor="0xaac7ff" size="24" verticalCenter="0" maxWidth="1000" lineSpacing="4" fontFamily="Arial"/>
+		<e:Label  text="当前减少行军时间所需剩余时间的20%,当前减少行军时间所需剩余时间的20%" textColor="0xaac7ff" size="24" verticalCenter="0" maxWidth="1000" lineSpacing="4"/>
+		<e:Label  text="当前减少行军时间所需剩余时间的20%,当前减少行军时间所需剩余时间的20%" textColor="0xaac7ff" size="24" verticalCenter="0" maxWidth="1000" lineSpacing="4"/>
+			<e:layout>
+				<e:VerticalLayout paddingBottom="25" gap="10"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+	
+</e:Skin>

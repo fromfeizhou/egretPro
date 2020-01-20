@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuildOverviewFuncSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="590" height="62">
+		<e:Group height="24" left="128" verticalCenter="0">
+			<com_main:CLabel id="m_pLbTitle" text="队列" fontFamily="Microsoft YaHei" size="24" verticalCenter="0" textColor="0x8A8A9E" left="0" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group width="16" height="24" x="14" y="1"/>
+			<com_main:CLabel id="m_pLbCount" text="" fontFamily="Microsoft YaHei" size="24" verticalCenter="0" left="0" x="10" y="10" scaleX="1" scaleY="1" textColor="0xffffff"/>
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+		<com_main:CLabel id="m_pLbDoStr" xmlns:com_main="com_main.*" text="研究中" fontFamily="Microsoft YaHei" size="20" verticalCenter="-2" textColor="0x8A8A9E" right="38"/>
+		<e:Group id="m_pTimeRoot" width="226.5" height="22" x="218.5" verticalCenter="0" anchorOffsetX="0" visible="false">
+		<e:Image source="pro_005_png" scale9Grid="3,3,18,18" scaleX="1" scaleY="1" height="22" verticalCenter="0" width="226" x="0" anchorOffsetX="0"/>
+		<e:Image id="m_pTimeImage" source="pro_003_png" scale9Grid="12,11,8,3" anchorOffsetX="0" scaleX="1" scaleY="1" height="18" verticalCenter="0" width="222" x="2"/>
+			<com_main:CLabel id="m_pLbTime" text="00:00:00" horizontalCenter="0" verticalCenter="0" fontFamily="Microsoft YaHei" size="22"/>
+		</e:Group>
+		<e:Group width="24" height="28" x="90" verticalCenter="0">
+		<com_main:CImage id="m_pTitleIcon" xmlns:com_main="com_main.*" source="common_intell_png" scaleX="1" scaleY="1" horizontalCenter="-0.5" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pBtn" width="106" height="46" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="221" anchorOffsetX="53" anchorOffsetY="23" touchEnabled="true" touchChildren="false">
+			<com_main:ComButton id="m_pBtnName" skinName="com_button" currentState="style6" scaleX="0.76" scaleY="0.76"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

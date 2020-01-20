@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CollectionReportSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*">
+	<e:Group width="714" height="588" y="-30">
+		<e:Image source="yj_zbxq_picture01_png" x="0" y="30.44" width="711" height="166"/>
+		<e:Image id="m_imgIcon" source="map_build_icon2_png" scaleX="1.5" scaleY="1.5" bottom="400" horizontalCenter="4"/>
+		<e:Group x="335.82" y="139.34">
+			<e:Image source="border_016_png" x="0" y="0" scaleX="0.8" scaleY="0.8"/>
+			<e:Label id="m_labLevel" text="88" size="24" scaleX="1" scaleY="1" textColor="0xe7d7a7" horizontalCenter="0" verticalCenter="0.5"/>
+		</e:Group>
+		<e:Group x="0" y="197.44" anchorOffsetY="0" height="156">
+			<e:Image source="yj_zyd_png" anchorOffsetY="0" anchorOffsetX="0" width="714" x="0" scaleY="1" height="100%" y="0"/>
+			<e:Label text="获得" x="336" y="13" size="24" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Group id="m_groupReward" width="637" y="52.65" anchorOffsetX="0" anchorOffsetY="0" x="39" height="90">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="22"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group x="0" y="353.44" height="175">
+			<e:Image source="yj_zyd_png" anchorOffsetY="0" anchorOffsetX="0" width="714" x="0" height="100%" y="0"/>
+			<e:Label text="采集部队" y="16" size="24" scaleX="1" scaleY="1" x="311" textColor="0xe9e9e6"/>
+			<e:Group id="m_groupArms" width="637" height="106" y="57.3" anchorOffsetX="0" anchorOffsetY="0" x="39">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="16"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

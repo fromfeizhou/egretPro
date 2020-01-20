@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_search_tab" width="153" height="207" currentState="icon" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"   states="icon,sprite" >
+	<e:Image source="border_018_png" scale9Grid="28,35,54,49" anchorOffsetY="0" height="203" anchorOffsetX="0" width="149" x="3" y="2"/>
+	<e:Image id="m_imgIcon"  anchorOffsetY="0" anchorOffsetX="0" source="icon_zy_bf_png" horizontalCenter="0" verticalCenter="-15" visible.sprite="false"/>
+	<e:Label id="m_labName" text="名字" y="164.56" size="24" horizontalCenter="0.5" textColor="0xe9e9e6" touchEnabled="false" />
+	<com_main:CImage id="m_imgLight" scaleX="1" scaleY="1" anchorOffsetX="0" width="149" scale9Grid="33,31,14,18" anchorOffsetY="0" height="203" source="border_015_png" touchEnabled="false" horizontalCenter="0" verticalCenter="0" visible="false"/>
+</e:Skin>

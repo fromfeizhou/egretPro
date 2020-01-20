@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuildInfoViewSkin" width="1110" height="630" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1110" height="630" x="0" y="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="2" top="2" bottom="2" right="2"/>
+		<com_main:CImage y="139" scaleY="-1" horizontalCenter="0" width="1072" source="border_1008_png" touchEnabled="false"/>
+		<e:Scroller width="1000" height="500" top="80" horizontalCenter="0">
+			<e:List id="m_listGeneral" x="25" y="41">
+			<e:layout>
+				<e:VerticalLayout gap="0"/>
+			</e:layout>
+			</e:List>
+		</e:Scroller>
+		<com_main:CImage source="border_1019_png" bottom="0" height="122" touchEnabled="false" left="0" right="0"/>
+	</e:Group>
+</e:Skin>

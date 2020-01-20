@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="role_replace_Item" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="120" height="120">
+		<e:Image id="Image_back_di" source="small_general_head_bg_1_png" horizontalCenter="0" verticalCenter="0" x="16" y="16" width="100" height="100"/>
+		<e:Image id="Image_head" horizontalCenter="0" verticalCenter="0" width="90" height="90" source="icon_wj_0_png"/>
+		<e:Image id="Image_mask" source="general_head_mask2_png" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0" verticalCenter="0" width="101" height="101"/>
+		<e:Group id="m_pSelected" width="100" height="100" horizontalCenter="0" verticalCenter="0"/>
+		<e:Group id="m_imgWear" y="3" scaleX="1" scaleY="1" x="42" anchorOffsetX="0">
+			<e:Image source="border_1032_png" y="0" scaleX="-1" x="77"/>
+			<e:Label text="穿戴中" y="4.26" size="18" fontFamily="Microsoft YaHei" rotation="45" textColor="0xffff99" x="36"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

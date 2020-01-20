@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpPlayerCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="226" height="350" y="30" x="0">
+		<e:Group y="0" width="230" horizontalCenter="0">
+			<com_main:CImage y="0" source="border_018_png" scale9Grid="22,20,71,76" anchorOffsetX="0" width="230" anchorOffsetY="0" height="311" horizontalCenter="0"/>
+			<com_main:CImage source="border_1029_png" width="222" horizontalCenter="0" y="0"/>
+			<com_main:CImage source="line_009_png" rotation="90" x="6.5" height="8" y="14.67" anchorOffsetX="0" width="279.33"/>
+			<com_main:CImage source="line_009_png" rotation="90" x="227.68" width="279.33" height="8" y="14.67" anchorOffsetX="0"/>
+		</e:Group>
+		<e:Group y="98.1" horizontalCenter="0">
+			<com_main:CImage x="0" y="0" source="border_020_png" anchorOffsetX="0" width="198" anchorOffsetY="0" height="151" scale9Grid="21,19,29,29" alpha="0.46"/>
+			<e:Group y="14.5" x="8">
+			<com_main:CImage x="0" y="0" source="border_1001_png" anchorOffsetX="0" width="182" scaleX="1" scaleY="1"/>
+			<com_main:CLabel id="m_pLbPlayerName" text="玩家名字" textAlign="center" horizontalCenter="0" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" y="2"/>
+			</e:Group>
+			<e:Group y="62" scaleX="1" scaleY="1" horizontalCenter="0">
+			<com_main:CLabel text="排名：" x="0" y="0.5" fontFamily="Microsoft YaHei" size="22" textColor="0x8a8a93"/>
+			<com_main:CLabel id="m_pLbRank" text="4252" x="65.5" y="0" fontFamily="Microsoft YaHei" size="22" textColor="0xe7d7a7"/>
+			<com_main:CLabel id="m_pLbPower" text="122266" x="65.5" y="38" fontFamily="Microsoft YaHei" size="22" textColor="0xE7D7A7"/>
+			<com_main:CLabel text="战力：" x="0" y="38" fontFamily="Microsoft YaHei" size="22" textColor="0x8A8A93"/>
+			</e:Group>
+			<com_main:CImage x="0.83" y="125.96" source="line_005_png" height="16" anchorOffsetX="0" width="190.67"/>
+		</e:Group>
+		<com_main:ComButton id="m_pBtnChallenge" skinName="com_button" currentState="style6" anchorOffsetX="72" anchorOffsetY="30" x="113" y="297"/>
+		<com_main:ComHeadItem id="m_pHead" y="-34" scaleX="1" scaleY="1" horizontalCenter="0.5" width="115" height="127"/>
+	</e:Group>
+</e:Skin>

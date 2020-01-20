@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin width="1164" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" class="ComRewardWndSkin" height="313">
+	<e:Group left="0" right="0" anchorOffsetY="0" top="0" bottom="0">
+
+
+
+		<e:Group y="0" touchEnabled="false" touchChildren="false" anchorOffsetY="0" height="313">
+			<com_main:CImage id="m_pBg" scale9Grid="8,4,48,19" anchorOffsetY="0" anchorOffsetX="0" width="1164" touchEnabled="false" source="border_1030_png" height="265" y="6" alpha="0.7"/>
+			<e:Image anchorOffsetX="0" width="1164" source="line_009_png" horizontalCenter="0" y="0"/>
+			<e:Image source="line_009_png" y="270" width="1164" horizontalCenter="0"/>
+
+
+			<e:Image source="border_1001_png" y="279" scaleX="1" scaleY="1" scale9Grid="13,3,78,21" anchorOffsetX="0" width="318" x="425"/>
+			<e:Label text="点击空白区域关闭" size="22" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" y="281" horizontalCenter="0"/>
+			<e:Label id="m_LabTitle" text="累计伤害奖励" size="30" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" y="23" horizontalCenter="0"/>
+			<e:Image source="line_1003_png" x="476" y="66" scaleX="1" scaleY="-1"/>
+		</e:Group>
+		<e:Scroller width="800" anchorOffsetX="0" height="134" horizontalCenter="0" verticalCenter="-8.5">
+			<e:Group id="m_pItemsRoot">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+
+	</e:Group>
+</e:Skin>

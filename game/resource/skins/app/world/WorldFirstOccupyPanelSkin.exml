@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldFirstOccupyPanelSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="873" height="504" y="120" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<com_main:CImage scaleX="1" scaleY="1"  source="huodeyuanbao_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:ComGenCard id="m_genCard" skinName="ComGenCardSkin" scaleX="0.85" scaleY="0.85" horizontalCenter="-307.5" y="-79" anchorOffsetY="0" anchorOffsetX="0"/>
+			<com_main:CImage  scaleX="1" scaleY="1"  source="lb_szjl_png" right="0" top="50"/>
+			<com_main:CImage  scaleX="1" scaleY="1"  source="zyt_yuanbao_png" bottom="-19" left="-271"/>
+			<com_main:CImage id="m_gold" scaleX="1" scaleY="1"  source="world_5000_png" bottom="-8" x="-50"/>
+			<e:Label id="m_name" text="曹操"  size="48" verticalCenter="-8" textColor="0xff0000" bold="true" x="554"/>
+	</e:Group>
+</e:Skin>

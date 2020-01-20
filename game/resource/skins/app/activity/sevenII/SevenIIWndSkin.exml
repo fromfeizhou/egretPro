@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIIWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" width="1334" height="750">
+	<e:Group width="1334" height="750">
+		<e:Image id="m_imgBg" source="zyt_7t_dbj_png" scaleX="1" scaleY="1"/>
+		<e:Group x="877.08" y="63.76">
+			<e:Label id="m_labTimeStr" text="活动结束倒计时：" size="26" fontFamily="Microsoft YaHei" anchorOffsetX="0" strokeColor="0xfff6c7" anchorOffsetY="0" lineSpacing="5" y="2.16" textColor="0xfff6c7" left="0"/>
+		</e:Group>
+		<e:Group id="m_panelGroup" width="100%" height="100%" x="0" y="0"/>
+		<!--<com_main:SevenIILoginPanel id="panel0" x="136" y="108" skinName="SevenIILoginPanelSkin"/>
+		<com_main:SevenIIChargePanel id="panel1" x="136" y="108" skinName="SevenIIChargePanelSkin" visible="false"/>
+		<com_main:SevenIIChargePanel id="panel2" x="136" y="108" skinName="SevenIIChargePanelSkin" visible="false"/>
+		<com_main:SevenIIShopPanel id="panel3" x="136" y="108" skinName="SevenIIShopPanelSkin" visible="false"/>
+		<com_main:SevenIICornucopiaPanel id="panel4" x="136" y="108" skinName="SevenIICornucopiaSkin" visible="false"/>-->
+		<e:Group x="88.94" y="82.91">
+			<com_main:SevenIITabBtn id="m_btn0" scaleX="1" scaleY="1" skinName="SevenIITabBtnSkin" x="-25.76" y="13.64"/>
+			<com_main:SevenIITabBtn id="m_btn1" scaleX="1" scaleY="1" skinName="SevenIITabBtnSkin" x="34.22" y="126.72" rotation="-10"/>
+			<com_main:SevenIITabBtn id="m_btn2" scaleX="1" scaleY="1" skinName="SevenIITabBtnSkin" x="-34.52" y="212.43"/>
+			<com_main:SevenIITabBtn id="m_btn3" scaleX="1" scaleY="1" skinName="SevenIITabBtnSkin" x="33.02" y="314.92" rotation="-10"/>
+			<com_main:SevenIITabBtn id="m_btn4" scaleX="1" scaleY="1" skinName="SevenIITabBtnSkin" x="-24.37" y="411.69"/>
+		</e:Group>
+		<e:Image id="m_btnClose" source="btn_142_png" x="1165.64" y="118.68"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopCloudSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="750" width="1334">
+	<w:Config id="1598d7ea2ba"/>
+	<e:Image source="border_004_jpg" width="100%" height="100%"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<e:Image x="0" source="border_009_png" scale9Grid="19,29,18,9" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="120.6" bottom="1"/>
+	<com_main:CScroller id="m_shopScroller" anchorOffsetY="0" anchorOffsetX="0" width="1270" x="35" top="89" bottom="126">
+		<e:List id="m_List" width="694" anchorOffsetX="0" height="846.09" anchorOffsetY="0" name="m_finishList" x="-7" y="0" itemRendererSkinName="ShopTreasureCellSkin">
+		<e:layout>
+			<e:TileLayout horizontalGap="40" verticalGap="20"/>
+		</e:layout>
+		</e:List>
+	</com_main:CScroller>
+	<e:Group id="timegroup" anchorOffsetY="0" anchorOffsetX="0" width="1" height="1" horizontalCenter="21.5" bottom="356">
+		<e:Label id="m_lastTimeLabel" text="剩余时间:" y="285" scaleX="1" scaleY="1" size="25" x="-455" textColor="0xb4b4b4"/>
+		<e:Label id="m_lastTimeValue" text="00:00:00" y="284" scaleX="1" scaleY="1" size="28" x="-322"/>
+		<e:Label id="m_lastRefreshNum" text="剩余刷新次数" y="286" scaleX="1" scaleY="1" size="25" x="-115" textColor="0xb4b4b4"/>
+		<e:Label id="m_lastRefreshNumValue" text="1/1" y="284" scaleX="1" scaleY="1" size="28" x="58"/>
+		<e:Group id="m_btnRefresh" width="308" height="114" x="262.59" y="238.7">
+			<e:Image scaleX="1" scaleY="1" source="btn_004_up_png"/>
+			<e:Image scaleX="1" scaleY="1" x="100.7" y="11.58" source="icon_source_gold_png"/>
+			<e:Label id="m_lastRefreshCoin" text="25" y="23.2" scaleX="1" scaleY="1" size="28" x="155.82" textColor="0xffff00"/>
+			<e:Label id="m_lastRefreshtitle" text="刷新" y="57.2" scaleX="1" scaleY="1" size="28" horizontalCenter="-1"/>
+		</e:Group>
+	</e:Group>
+	<e:Group anchorOffsetY="0" anchorOffsetX="0" width="1" height="1" y="322" x="368">
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" x="-357" y="173" source="come_Leftline_png" visible="false"/>
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" x="365" y="295" source="come_Leftline_png" visible="false"/>
+	</e:Group>
+</e:Skin>

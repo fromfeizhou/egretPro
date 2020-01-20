@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_thum_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="m_pMask" width="100%" x="0" source="border_007_png" scale9Grid="26,27,5,3" scaleX="1" scaleY="1" height="100%"/>
+	<e:Scroller width="1623" horizontalCenter="0" anchorOffsetX="0" anchorOffsetY="0" top="66" height="598">
+		<e:Group id="m_pMainBg" height="750" width="1623">
+		</e:Group>
+	</e:Scroller>
+	<e:Group width="100%" height="68.18" anchorOffsetX="0" horizontalCenter="0" anchorOffsetY="0" top="0" touchEnabled="true">
+		<e:Image width="100%" x="0" source="border_007_png" scale9Grid="26,27,5,3" y="0" scaleX="1" scaleY="1"/>
+		<e:Image scale9Grid="26,27,5,3" source="border_003_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		<com_main:CImage id="m_BtnBack" x="0" y="0" source="btn_008_up_png"/>
+		<e:Label text="世界地图" x="193.97" y="16.58" textColor="0xe7d7a7"/>
+		<e:Label text="城池数量" x="669.15" y="20.51" textColor="0x8a8a9e" size="24"/>
+		<e:Group width="51.6" height="55.2" x="795.72" y="1.66">
+			<com_main:CImage source="common_country1_1_png" x="-12"/>
+			<e:Label id="m_pNum1" text="99" y="18.33" size="26" textColor="0xE9E9E6" x="50"/>
+		</e:Group>
+		<e:Group width="51.6" height="55.2" x="913.52" y="1.66">
+			<com_main:CImage source="common_country1_3_png" x="-12"/>
+			<e:Label id="m_pNum3" text="99" y="18.33" size="26" textColor="0xe9e9e6" x="50"/>
+		</e:Group>
+		<e:Group width="51.6" height="55.2" x="1030.12" y="1.66">
+			<com_main:CImage source="common_country1_2_png" x="-12"/>
+			<e:Label id="m_pNum2" text="99" y="18.33" size="26" textColor="0xE9E9E6" x="50"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="m_pViewRoot" width="100%" height="84.33" horizontalCenter="0" anchorOffsetY="0" bottom="0" touchEnabled="false">
+		<e:Image width="100%" scale9Grid="26,27,5,3" scaleX="1" scaleY="1" source="border_009_png" height="100%" touchEnabled="false"/>
+		<e:Group width="175" height="100%" x="66" y="0" anchorOffsetX="0" touchChildren="false" touchEnabled="false">
+			<com_main:CImage id="m_pSelect1" x="7.31" y="20.01" scaleX="1" scaleY="1" source="common_y_png"/>
+			<com_main:CImage x="60.64" scaleX="1" scaleY="1" source="icon_map_dc1_png" verticalCenter="0"/>
+			<e:Label text="都城" y="29.65" size="26" textColor="0xE9E9E6" x="119.33"/>
+		</e:Group>
+		<e:Group width="175" height="100%" x="292" y="0" anchorOffsetX="0" touchChildren="false" touchEnabled="false">
+			<com_main:CImage id="m_pSelect2" x="7.31" y="20.01" scaleX="1" scaleY="1" source="common_y_png"/>
+			<com_main:CImage x="60.64" scaleX="1" scaleY="1" source="icon_map_jc1_png" verticalCenter="0"/>
+			<e:Label text="郡城" y="29.65" size="26" textColor="0xE9E9E6" x="119.33"/>
+		</e:Group>
+		<e:Group width="175" height="100%" x="522" y="0" anchorOffsetX="0" touchChildren="false" touchEnabled="false">
+			<com_main:CImage id="m_pSelect3" x="7.31" y="20.01" scaleX="1" scaleY="1" source="common_y_png"/>
+			<com_main:CImage x="68.62" scaleX="1" scaleY="1" source="icon_map_xc1_png" verticalCenter="0.5"/>
+			<e:Label text="县城" y="29.65" size="26" textColor="0xE9E9E6" x="113.99"/>
+		</e:Group>
+		<e:Group id="m_pBtnGo" width="151" anchorOffsetX="75.5" y="40.93" anchorOffsetY="33.5" touchChildren="true" touchEnabled="true" right="43">
+			<com_main:CImage scaleX="1" scaleY="1" source="btn_001_up_png"/>
+			<e:Label text="跳转" size="26" textColor="0xE9E9E6" stroke="2" strokeColor="0x885a2a" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group y="15.33" right="357">
+			<com_main:CImage x="0" y="0" scaleX="1" scaleY="1" source="icon_map_location_png" touchEnabled="false"/>
+			<e:Label id="m_pPoint" text="(0,0)" textColor="0x8a8a9e" size="28" touchEnabled="false" x="43.66" y="12.67"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BattleTalkSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="normal,mapboss" >
+	<e:Group left="0" top="0" bottom="0" right="0">
+		<e:Image source="border_039_png" scale9Grid="14,14,34,20" left="-14" top="-20" right="-14" bottom="-20" source.mapboss="border_026_png" top.mapboss="-5" bottom.mapboss="-5" left.mapboss="-5" right.mapboss="-5" alpha.mapboss="0.75" source.normal="hang_db_png" bottom.normal="-10" top.normal="-10" scale9Grid.normal="51,12,37,6" left.normal="-37"/>
+		<e:Image source="border_042_png" includeIn="mapboss" anchorOffsetX="0" right="-25" bottom="0"/>
+		<e:Label id="m_lbContent" text="白bossboss对白boss" size="24" scaleX="1" scaleY="1" textAlign="center" horizontalCenter="0" verticalCenter="0" width.mapboss="100" size.mapboss="16" textColor.normal="0x000000" size.normal="16" minWidth.normal="40" text.normal="撒旦贺卡收到就卡圣诞节爱神的" maxWidth.normal="180" lineSpacing.normal="3" verticalAlign.normal="middle" textAlign.normal="left"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionShopViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="683" width="1161">
+	<e:Image source="line_009_png" y="100.52" width="100%" x="-11"/>
+	<e:Scroller id="m_shopScroller" anchorOffsetY="0" anchorOffsetX="0" top="113" horizontalCenter="0" width="1132" height="564">
+		<e:List id="m_List" anchorOffsetY="0" height="617" anchorOffsetX="0" itemRendererSkinName="ShopTreasureCellSkin">
+		<e:layout>
+			<e:TileLayout horizontalGap="20" verticalGap="6"/>
+		</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Group id="m_rightGroup" width="596.91" height="87.76" y="2.91" anchorOffsetY="0" anchorOffsetX="0" right="111">
+		<e:Label id="m_surplus" text="剩余刷新次数:10" scaleX="1" scaleY="1" size="25" y="18.09" textAlign="left" textColor="0xE9E9E6" x="0.4"/>
+		<e:Label id="m_refreshTime" text="下次刷新时间: 00:00:00" scaleX="1" scaleY="1" size="25" y="55.09" textAlign="left" textColor="0xE9E9E6" x="0.52"/>
+		<com_main:ComCostTextButton id="m_comCostTextButton" y="4.2" currentState="size3" skinName="com_cost_text_button" right="37" x="307" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

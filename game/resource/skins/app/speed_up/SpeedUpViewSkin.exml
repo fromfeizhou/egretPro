@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SpeedUpViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="688" height="682">
+	<e:Group id="m_pRoot" x="0" y="0" width="688" height="682">
+		<e:Group width="688" height="682">
+			<com_main:APopUp id="m_pAPopUp" skinName="APopUpSkin" currentState="size6" anchorOffsetY="0" anchorOffsetX="0" width="688" scaleX="1" scaleY="1" horizontalCenter="-4" top="0" bottom="0"/>
+			<e:Group width="200" height="46" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" top="72">
+				<com_main:CImage source="icon_time_png" scaleX="0.7" scaleY="0.7" x="-25" y="16"/>
+				<com_main:CLabel id="m_pLbCurTime" text="00:00:00" scaleX="1" scaleY="1" size="20" fontFamily="Microsoft YaHei" left="7" top="18"/>
+				<com_main:ComButton id="m_pBtnGoto" skinName="com_button" currentState="style6" anchorOffsetX="72" anchorOffsetY="30" scaleX="1" scaleY="1" x="317" y="55"/>
+				<e:Group x="-182.73" y="49.33" scaleX="1" scaleY="1">
+					<com_main:CImage x="0" width="406" scale9Grid="11,11,4,2" anchorOffsetY="0" height="20" anchorOffsetX="0" source="proBg_003_png" verticalCenter="0"/>
+					<com_main:CImage id="m_pImageProgress2" width="402" scale9Grid="7,7,4,6" height="16" anchorOffsetX="0" x="2" verticalCenter="0" source="pro_001_png"/>
+					<com_main:CImage id="m_pImageProgress" width="402" scale9Grid="7,7,4,6" height="16" anchorOffsetX="0" source="pro_003_png" x="2" verticalCenter="0"/><!---->
+				</e:Group>
+			</e:Group>
+			<e:Group horizontalCenter="-4.5" top="196" width="675" height="21">
+				<com_main:CImage x="675" y="0" source="line_003_png" scaleX="-1" scaleY="1"/>
+				<com_main:CImage x="0" y="0" source="line_003_png" scaleX="1" scaleY="1"/>
+				<com_main:CLabel text="点击使用加速道具" fontFamily="Microsoft YaHei" size="30" top="-12" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group id="m_pScrollRoot" width="660" height="192" x="9.34" anchorOffsetY="0" top="217">
+				<e:Scroller id="m_pScrller" width="394" height="168" verticalCenter="16" horizontalCenter="0">
+				<e:Group id="m_pCellRoot">
+					<e:layout>
+						<e:HorizontalLayout gap="0"/>
+					</e:layout>
+				</e:Group>
+				</e:Scroller>
+				<com_main:CImage x="54.33" y="56" source="btn_024_up_png" visible="false"/>
+				<com_main:CImage x="612" y="56" source="btn_024_up_png" scaleX="-1" visible="false"/>
+				<com_main:CLabel id="m_pNotPropTips" text="无加速道具" verticalCenter="0" horizontalCenter="0" fontFamily="Microsoft YaHei" size="30"/>
+			</e:Group>
+			<e:Group id="m_pSliderRoot" width="651" x="14" scaleX="1" scaleY="1" top="421" height="126">
+				<e:Image id="m_btnSub" y="-4.01" source="btn_010_up_png" horizontalCenter="-263.5"/>
+				<e:Image id="m_btnAdd" y="-5.35" source="btn_011_up_png" horizontalCenter="115.5"/>
+				<ns1:Hslider id="m_slider" xmlns:ns1="*" anchorOffsetX="0" width="261" skinName="HsliderSkin" scaleX="1" scaleY="1" height="30" horizontalCenter="-78" y="15"/>
+				<e:Group x="495.67" y="4" width="130" height="44">
+					<com_main:CImage y="0" source="border_008_png" x="0"/>
+					<com_main:CLabel id="m_pNum" text="" left="0" right="0" top="0" bottom="0" textAlign="center" fontFamily="Microsoft YaHei" size="30" verticalAlign="middle"/>
+				</e:Group>
+				<e:Group x="110" y="79" touchEnabled="false" touchChildren="false">
+					<com_main:CLabel text="加速时间" y="0" size="22" fontFamily="Microsoft YaHei" x="0"/>
+					<com_main:CLabel id="m_pLbSpeedUpTime" text="加速时间" y="0" size="22" fontFamily="Microsoft YaHei" x="114"/>
+				</e:Group>
+			</e:Group>
+			<com_main:ComButton id="m_pBtnUse" skinName="com_button" currentState="style3" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="149" x="224" bottom="29"/>
+			<com_main:ComCostTextButton id="m_pBtnFast" x="187" y="614" skinName="com_cost_text_button" currentState="size3" anchorOffsetX="124.5" anchorOffsetY="41"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

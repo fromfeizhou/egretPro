@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PatrolBoxViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:tween="egret.tween.*" xmlns:w="http://ns.egret.com/wing">
+	<w:Declarations>
+		<tween:TweenGroup id="m_pBoxEffect">
+			<tween:TweenItem target="{m_pEffectRoot}">
+				<tween:Set/>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{-12}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{9}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{-12}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{9}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="1000">
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group id="m_pRoot" width="100" height="104" anchorOffsetX="50" anchorOffsetY="52" x="50" y="52">
+		<e:Group id="m_pEffectRoot"  width="100" height="104" horizontalCenter="0" verticalCenter="0" anchorOffsetX="50" anchorOffsetY="52">
+			
+		</e:Group>
+		<e:Image id="m_imgAwardBg" horizontalCenter="0" verticalCenter="0" source="hang_bx2_png" visible="false"/>
+		<e:Image id="m_imgAwardFull" touchEnabled="false" source="qianbi_2_png" horizontalCenter="85" bottom="-11"/>
+		<e:Image id="m_imgAward" source="qianbi_1_png" horizontalCenter="17.5" bottom="-11"/>
+		<e:Image id="m_imgAwardDes" source="lb_gj_zlp_png" horizontalCenter="0" bottom="3"/>
+	
+	</e:Group>
+</e:Skin>

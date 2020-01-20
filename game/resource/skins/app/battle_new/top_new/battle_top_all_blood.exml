@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="battle_top_all_blood" width="1023" height="113" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:ns1="*">
+	<e:Image source="border_009_png" x="94" y="41" scaleY="-1" width="334"/>
+	<e:Image source="border_009_png" x="598" y="41" scaleY="-1" width="334"/>
+	<e:Image id="proBg_1" source="proBg_003_png" x="101" y="4.5" height="25" width="321"/>
+	<e:Image id="boold_1" source="pro_007_png" y="4" width="313" left="103"/>
+	<e:Image id="proBg_2" x="599" y="4.5" height="25" width="321" source="proBg_003_png"/>
+	<e:Image id="boold_2" y="4" width="313" source="pro_008_png" right="105"/>
+	<e:Image id="image_time_bg" source="fight_time_bg_img_png" y="0" horizontalCenter="0"/>
+	<e:Image id="gong_bg" source="fight_blue_flag_img_png" x="38" y="-10"/>
+	<e:Image id="shou_bg" x="906" y="-10" source="fight_red_flag_img_png"/>
+	<e:Image id="image_word_gong" source="figth_word_gong_png" x="55" y="7"/>
+	<e:Image id="image_word_shou" source="figth_word_shou_png" x="923" y="6"/>
+	<com_main:CLabel id="lb_act_blood" text="9999/9999" y="7" size="20" fontFamily="Microsoft YaHei" right="617"/>
+	<com_main:CLabel id="lb_def_blood" text="9999/9999" y="7" size="20" fontFamily="Microsoft YaHei" left="619"/>
+	<com_main:CLabel id="lb_act_name" text="" size="20" fontFamily="Microsoft YaHei" verticalCenter="-40.5" verticalAlign="middle" left="115"/>
+	<com_main:CLabel id="lb_def_name" text="" size="20" fontFamily="Microsoft YaHei" right="118" verticalCenter="-40.5" verticalAlign="middle"/>
+	<com_main:CLabel id="lb_time" text="02:00" y="13" size="28" horizontalCenter="0"/>
+	<e:BitmapLabel id="lb_att_team" y="41" font="role_level_fnt" text="100队" scaleX="0.3" scaleY="0.3" letterSpacing="-4" left="113" visible="false"/>
+	<e:BitmapLabel id="lb_def_team" y="41" font="role_level_fnt" text="100队" scaleX="0.3" scaleY="0.3" letterSpacing="-4" right="115" visible="false"/>
+	<e:Group id="atkGroup" width="99" height="99" y="68" anchorOffsetX="0" anchorOffsetY="0" left="116" scaleX="0.6" scaleY="0.6" visible="false">
+		<e:Image x="0" y="0" source="Image_general_open_kuang_png"/>
+		<e:Image id="atk_img" x="0" y="0" source="cityBuff_13_png"/>
+		<e:Label id="atk_lbArrogance" text="1" x="74" y="65" size="36" stroke="3" fontFamily="Microsoft YaHei"/>
+	</e:Group>
+	<e:Group id="defGroup" width="99" height="99" y="68" anchorOffsetX="0" anchorOffsetY="0" right="116" scaleX="0.6" scaleY="0.6" visible="false">
+		<e:Image x="0" y="0" source="Image_general_open_kuang_png"/>
+		<e:Image id="def_img" x="0" y="0" source="cityBuff_13_png"/>
+		<e:Label id="def_lbArrogance" text="1" x="74" y="65" size="36" stroke="3" textColor="0xffffff" fontFamily="Microsoft YaHei"/>
+	</e:Group>
+	<com_main:BattleDebuffInfo id="m_debuffInfo" x="373" y="99" skinName="battle_debuff_info" visible="false"/>
+</e:Skin>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossChallViewSkin" width="1164" height="750" currentState="single" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*"  states="single,rank,world" >
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Scroller anchorOffsetX="0" anchorOffsetY="0" left="32" right="32" y="80" height="550" height.world="550" left.world="32" right.world="32" y.world="80">
+			<e:List id="m_listCard" y="-22">
+				<e:layout>
+					<e:HorizontalLayout gap="5"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Group id="m_pViewRoot" bottom="0" width="100%" x.world="0" left="0">
+			<e:Image source="border_009_png" scale9Grid="7,7,46,46" height="116" anchorOffsetY="0" y="0" x="0" width="100%"/>
+			<e:Group x="40" y="8" visible.rank="false" height="105" visible.single="false">
+				<e:Group width="240" height="20" x="0" y="54.5" touchChildren="false" touchEnabled="false" scaleX="1" scaleY="1">
+				<com_main:CImage id="m_imgProBg" source="pro_005_png" top="0" bottom="0" scale9Grid="3,3,18,18" width="240" x="0" y="0" scaleX="1" scaleY="1"/>
+				<com_main:CImage id="m_imgPro" source="pro_006_png" scale9Grid="3,4,313,26" scaleX="1" scaleY="1" width="242" x="-2" bottom="-1" top="-2"/>
+				<e:Group id="m_pHurtLab" x="36" y="-31" anchorOffsetX="0" width="170">
+					<e:Label text="累计目标伤害" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" x="0" y="2"/>
+					<e:Label id="m_hurtCount" text="10000" size="20" textColor="0xE9E9E6" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" x="88" y="0" x.world="121" y.world="2"/>
+				</e:Group>
+				</e:Group>
+				<e:Image id="m_btnBox" anchorOffsetX="48.5" anchorOffsetY="50.5" scaleX="1" scaleY="1" source="bx-open_png" horizontalCenter="122" verticalCenter="0"/>
+				<e:Group id="m_AllOutRoot" x="241.5" y="45">
+				<e:Image source="border_1001_png" horizontalCenter="-1" verticalCenter="0"/>
+				<e:Label text="已领取" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x00ff00" horizontalCenter="0" verticalCenter="0"/>
+				</e:Group>
+				<e:Group id="m_boxRoot" width="90" height="90" x="253" y="6"/>
+			</e:Group>
+			<e:Group id="m_pRankTime" width="263" height="100" y="14" scaleX="1" scaleY="1" visible.world="false" anchorOffsetX.rank="0" width.rank="263" x.rank="516.67" right="384" visible.single="false">
+				<e:Image source="border_006_png" x="20.04" y="24.23" scaleX="1" scaleY="1" anchorOffsetY="0" height="46" anchorOffsetX="0" width="234" width.rank="234" x.rank="20.04" y.rank="24.23"/>
+				<e:Label text="恢复时间：" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" top="35" left="34" includeIn="rank"/>
+				<e:Label id="m_downCount" text="07：06" size="26" textColor="0xE9E9E6" fontFamily="Microsoft YaHei" horizontalCenter="65" verticalCenter="-2" horizontalCenter.rank="65" verticalCenter.rank="-2"/>
+			</e:Group>
+			<e:Group y="14" right="47" x.rank="845" x.world="845" x.single="845">
+				<e:Group height="100" anchorOffsetX="0" y="0" scaleX="1" scaleY="1" x="0" right.rank="43" right.world="43" right.single="43">
+					<e:Image source="border_006_png" x="124" y="23" scaleX="1" scaleY="1" anchorOffsetY="0" height="49" anchorOffsetX="0" width="104.33"/>
+					<e:Label text="挑战次数" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8a8a9e" x="15" y="35"/>
+					<e:Label id="m_labPro" text="8/8" size="26" textColor="0xE9E9E6" fontFamily="Microsoft YaHei" text.rank="10/10" y="37" horizontalCenter="50.5"/>
+				</e:Group>
+				<e:Image id="m_btnAdd" source="btn_011_up_png" x="239.81" y="47" anchorOffsetX="32" anchorOffsetY="31.5" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<com_main:CImage id="m_pBtnShop" source="city_icon_sc_png" verticalCenter="0" left="10" left.world="420"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="offLineRewardSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1072" height="572" x="130" y="94" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:APopUp id="ApopUp" skinName="APopUpSkin" horizontalCenter="0" verticalCenter="5" height="556" width="1046" x="14" y="8" scaleX="1" scaleY="1" currentState="size3"/>
+		<e:Group x="23" y="85">
+			<e:Image x="0" y="0" source="hang_bg_png" width="1026" height="352"/>
+			<e:Image x="306.83" y="36.01" source="hang_btd_png"/>
+			<e:Image y="126" x="166" source="hang_ct_png"/>
+			<e:Label text="资源" x="220.68" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+			<e:Label text="获得数量" x="336.34" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xe7d7a7"/>
+			<e:Label text="贵族加成" x="520.33" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+			<e:Label text="科技加成" x="685.35" y="136" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+			<e:Image y="192" x="166" source="hang_ct_png"/>
+			<e:Image y="258" x="166" source="hang_ct_png"/>
+		</e:Group>
+		<e:Label id="rewardTime_lb" text="离线时长: 0小时48分" y="131" size="30" fontFamily="Microsoft YaHei" horizontalCenter="0.5" x="398" scaleX="1" scaleY="1" textColor="0xe7d7a7"/>
+		<e:Label id="maxRewardTime_lb" text="离线收益最多: 0小时" y="178" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x4d3322" horizontalCenter="0"/>
+		<e:Group width="822" height="55" y="273" anchorOffsetX="0" anchorOffsetY="0" x="183" scaleX="1" scaleY="1">
+			<e:Image x="6" y="0" source="border_1063_png"/>
+			<e:Image source="com_copper_png" x="17" y="9"/>
+			<e:Label text="银两" x="62" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE7D7A7"/>
+			<e:Label id="silver_res" text="+20000" x="172" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6"/>
+			<e:Label id="silver_vip" text="+20%" x="369.34" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" textAlign="center"/>
+			<e:Label id="silver_tec" text="30%" x="533.38" y="15" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" textAlign="center" anchorOffsetX="0" width="80"/>
+			<e:Image x="436" y="13" source="com_state_up_png" scaleX="1" scaleY="1"/>
+			<e:Image source="com_state_up_png" x="608" y="13" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="822" height="53" x="183" y="332" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image x="6" y="4" source="border_1063_png"/>
+			<e:Image x="17" y="11" source="com_exp_png"/>
+			<e:Label text="经验" x="62" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE7D7A7"/>
+			<e:Label id="exp_res" text="+20000" x="172" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6"/>
+			<e:Label id="exp_vip" text="+20%" x="369.34" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6"/>
+			<e:Label id="exp_tec" text="+20%" x="533.38" y="21" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" width="80" textAlign="center"/>
+			<e:Image source="com_state_up_png" x="436" y="20" scaleX="1" scaleY="1"/>
+			<e:Image source="com_state_up_png" x="608" y="20" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Label id="tips_lb" text="(在游戏左下角宝箱中领取奖励，提升贵族等级可延长收益时间)" y="411" size="20" horizontalCenter="0" x="404" scaleX="1" scaleY="1" textColor="0x4d3322" fontFamily="Microsoft YaHei"/>
+		<com_main:ComButton id="get_btn" skinName="com_button" currentState="style2" horizontalCenter="0" verticalCenter="214.5"/>
+	</e:Group>
+</e:Skin>

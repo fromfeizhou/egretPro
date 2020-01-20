@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="rewardChangeSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1072" height="572" x="130" y="94" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" horizontalCenter="0" verticalCenter="5" height="556" width="1046" x="14" y="8" scaleX="1" scaleY="1" currentState="size3"/>
+		<e:Group x="23" y="85">
+			<e:Image scaleX="1" scaleY="1" x="1" y="1" source="hang_bg_png" width="1026" height="352"/>
+		</e:Group>
+		<e:Image x="330" y="121" source="hang_btd_png"/>
+		<e:Label id="m_labName" text="关" y="131" size="30" fontFamily="Microsoft YaHei" horizontalCenter="0.5" x="398" scaleX="1" scaleY="1" textColor="0xE7D7A7"/>
+		<e:Image y="270" horizontalCenter="0" anchorOffsetX="0" source="hang_ct_png"/>
+		<e:Image y="336" horizontalCenter="0" anchorOffsetX="0" source="hang_ct_png"/>
+		<e:Group x="190" y="204">
+			<e:Image y="0" x="0" source="hang_ct_png"/>
+			<e:Label text="资源" x="59" y="9" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xe7d7a7"/>
+			<e:Label text="原始收益" x="298" y="9" size="24" fontFamily="Microsoft YaHei" textColor="0xE7D7A7" scaleX="1" scaleY="1"/>
+			<e:Label text="当前收益" x="524" y="9" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xe7d7a7"/>
+		</e:Group>
+		<e:Group width="711" height="55" y="261" anchorOffsetX="0" anchorOffsetY="0" x="192" scaleX="1" scaleY="1">
+			<e:Image x="-3" y="0" source="border_1063_png" scaleX="1" scaleY="1"/>
+			<e:Image source="com_copper_png" x="8" y="9" scaleX="1" scaleY="1"/>
+			<e:Label text="银两" x="58" y="19" size="24" fontFamily="Microsoft YaHei" textColor="0xe7d7a7"/>
+			<e:Label id="m_labSilver_old" text="+20000/小时" y="19" size="24" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" horizontalCenter="-18"/>
+			<e:Label id="M_labSilver_cur" text="+20%小时" y="19" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" horizontalCenter="210.5"/>
+			<e:Image source="com_state_up_png" x="474" y="22" rotation="90"/>
+			<e:Image source="com_state_up_png" x="632.5" y="18"/>
+			<e:Image source="com_state_up_png" x="632.5" y="83.5"/>
+		</e:Group>
+		<e:Group width="711" height="55" y="325" anchorOffsetX="0" anchorOffsetY="0" x="192" scaleX="1" scaleY="1">
+			<e:Image x="-3" y="0" source="border_1063_png"/>
+			<e:Image x="8" y="9" source="com_exp_png"/>
+			<e:Label text="经验" x="58" y="20" size="24" fontFamily="Microsoft YaHei" textColor="0xe7d7a7"/>
+			<e:Label id="m_labExp_old" text="+20000/小时" y="23" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" horizontalCenter="-18"/>
+			<e:Label id="m_labExp_cur" text="+20%小时" y="22" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" horizontalCenter="210.5"/>
+			<e:Image source="com_state_up_png" x="474" y="22" rotation="90"/>
+		</e:Group>
+		<com_main:ComButton id="m_btnConfirm" skinName="com_button" currentState="style2" horizontalCenter="0" verticalCenter="212"/>
+	</e:Group>
+</e:Skin>

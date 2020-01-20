@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="tavern_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<com_main:CImage left="0" top="0" bottom="0" right="0" source="bg_jg_jpg" locked="true"/>
+	<e:Group id="m_pViewRoot" anchorOffsetY="0" width="1334" height="688" verticalCenter="29" horizontalCenter="0">
+		<e:Group width="98" height="464" x="96" y="68" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+		<e:Image source="line_1007_png" x="10" y="62"/>
+		<e:Image source="line_1007_png" x="85" y="62"/>
+		<e:Label text="汇\n聚\n九\n州\n才\n俊\n平\n定\n乱\n世" x="38" y="29" size="28" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" lineSpacing="5"/>
+		</e:Group>
+		<e:Group width="60" height="288" x="189" y="44" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image x="0" y="3" source="border_1044_png"/>
+			<e:Label text="求\n才\n若\n渴" x="16" y="17" size="32" fontFamily="Microsoft YaHei" lineSpacing="14" textColor="0x44d0f3"/>
+		</e:Group>
+		<e:Group width="60" height="288" x="1072" y="44" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image source="border_1044_png" x="0" y="3"/>
+			<e:Label text="招\n募\n英\n杰" x="16" y="19" size="32" fontFamily="Microsoft YaHei" lineSpacing="14" textColor="0xf3a549"/>
+		</e:Group>
+		<e:Group width="98" height="464" x="1134" y="70" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+		<e:Image source="line_1007_png" x="10" y="62"/>
+		<e:Image source="line_1007_png" x="85" y="62"/>
+		<e:Label text="邀\n请\n四\n海\n群\n英\n共\n创\n大\n业" x="38" y="27" size="28" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" lineSpacing="5"/>
+		</e:Group>
+		<e:Group width="346" height="506" x="264.2" y="9.9" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="icon_wj_jg_1_png" x="0" y="0"/>
+		</e:Group>
+		<e:Group width="346" height="506" x="692.35" y="11.64" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="icon_wj_jg_2_png"/>
+		</e:Group>
+		<e:Group id="m_BuyOneTimes" x="294.31" y="533" anchorOffsetX="0" anchorOffsetY="0" width="270" height="97">
+			<com_main:CImage x="-19" y="-8" source="btn_005_up_png"/>
+			<com_main:CLabel id="m_labFree" size="32" stroke="0" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="免费" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" touchEnabled="false" horizontalCenter="0" verticalCenter="0"/>
+			<e:Group id="m_pCostOne" y="16" horizontalCenter="0">
+				<com_main:CImage x="7" y="-3" scaleX="0.5" scaleY="0.5" touchEnabled="false" source="icon_zy_zmlp_png"/>
+				<com_main:CLabel size="24" stroke="2" strokeColor="0x295d87" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="1" x="53" y="11" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" touchEnabled="false"/>
+				<com_main:CLabel size="22" stroke="0" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="招募1次" y="42" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" touchEnabled="false" x="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_BuyTenTimes" x="769.37" y="533" anchorOffsetX="0" anchorOffsetY="0" width="270" height="97">
+			<com_main:CImage x="-19" y="-8" source="btn_004_up_png"/>
+			<com_main:CImage x="93" y="11" source="icon_zy_zmlp_png" scaleX="0.5" scaleY="0.5" touchEnabled="false"/>
+			<com_main:CLabel size="24" stroke="2" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="9" y="23" textColor="0xE9E9E6" fontFamily="Microsoft YaHei" touchEnabled="false" x="143"/>
+			<com_main:CLabel size="22" stroke="0" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="招募10次" y="56" textColor="0xE9E9E6" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" horizontalCenter="-4" touchEnabled="false"/>
+			<e:Image source="border_1032_png" x="-9.12" y="-6.08"/>
+			<e:Label text="9折" y="27.36" fontFamily="Microsoft YaHei" size="22" textColor="0xE9E9E6" x="0" scaleX="1" scaleY="1" rotation="318.71"/>
+		</e:Group>
+		<e:Label id="m_extral" text="招募10次可获得稀有武将" y="630" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" textColor="0xe9e9e6"/>
+		<e:Group y="660" horizontalCenter="0">
+			<e:Image source="zyt_xj_wug_png" height="24" width="840" x="0" y="0"/>
+			<com_main:CLabel id="m_labRare" text="招募10次可获得稀有武将" fontFamily="Microsoft YaHei" size="20" textColor="0xE9E9E6" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pcheckRoot" x="33.32" bottom="53">
+			<e:Image source="btn_102_up_png" x="0" y="0"/>
+			<e:Image source="lb_yl_png" x="19" y="62"/>
+		</e:Group>
+		<e:Group id="m_pBtnInfo" width="74" height="74" anchorOffsetX="37" anchorOffsetY="37" bottom="157" x="77">
+			<com_main:CImage source="btn_093_up_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage horizontalCenter="0" y="55" source="lb_gze_png"/>
+		</e:Group>
+		<e:Group id="m_pBtnSafety" x="1221" y="549" anchorOffsetX="105" anchorOffsetY="105">
+			<e:Image source="zyt_33_png" width="210" height="210" scaleX="1" scaleY="1"/>
+			<e:Group width="120" height="120" horizontalCenter="0" verticalCenter="0">
+				<e:Image horizontalCenter="0" verticalCenter="0" x="16" y="16" width="100" height="100" source="small_general_head_bg_5_png"/>
+				<e:Image horizontalCenter="0" verticalCenter="0" width="90" height="90" source="icon_wj_0_png"/>
+				<e:Group x="15" y="80.56">
+					<e:Image source="gen_star1_png" x="0" y="0" scaleX="0.5" scaleY="0.5"/>
+					<e:Image source="gen_star1_png" x="20" y="0" scaleX="0.5" scaleY="0.5"/>
+					<e:Image source="gen_star1_png" x="40" y="0" scaleX="0.5" scaleY="0.5"/>
+					<e:Image source="gen_star1_png" x="60" y="0.18" scaleX="0.5" scaleY="0.5"/>
+				</e:Group>
+			</e:Group>
+			<e:Group id="m_pEffRoot" width="1" height="1" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+
+			<e:Group id="m_proRoot" x="28" y="156.67">
+				<com_main:ComProRdBar id="m_proHB" y="-1.3500000000000227" skinName="ComProRdBarSkin" width="117" horizontalCenter="0.5" x="19" scaleX="1" scaleY="1"/>
+
+				<e:Label id="m_pScore" text="0/80000" y="17.55" size="20" fontFamily="Microsoft YaHei" width="154" anchorOffsetX="0" textAlign="center" textColor="0xe9e9e6" x="0"/>
+			</e:Group>
+			<e:Image source="lb_bchj_png" horizontalCenter="0" verticalCenter="0"/>
+
+		</e:Group>
+		<com_main:ComButton id="m_pBtnCall" skinName="com_button" currentState="style12" anchorOffsetX="60" anchorOffsetY="26" scaleX="1" scaleY="1" y="622.96" x="1222"/>
+	</e:Group>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+</e:Skin>

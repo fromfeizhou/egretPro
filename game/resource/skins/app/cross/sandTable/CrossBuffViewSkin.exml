@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossBuffViewSkin" width="690" height="490" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="690" height="490" x="0" y="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size9" left="2" top="2" bottom="2" right="2"/>
+		<com_main:CrossBuffCell id="m_pPerson" y="121" skinName="CrossBuffCellSkin" horizontalCenter="0"/>
+		<com_main:CrossBuffCell id="m_pServer" y="285" skinName="CrossBuffCellSkin" horizontalCenter="0"/>
+		<e:Label id="m_labDesc" text="强力BUFF加持，战场所向披靡！" y="80" size="26" horizontalCenter="0" textColor="0xabb7d1"/>
+	</e:Group>
+</e:Skin>

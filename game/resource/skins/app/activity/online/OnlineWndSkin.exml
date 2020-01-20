@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OnlineWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" width="1334" height="750">
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Group x="0" y="0">
+			<e:Image x="10.72" y="120.37" scaleX="1" scaleY="1" source="acti_line_png" width="1179" height="514"/>
+			<e:Image source="icon_wj_b_6_png" x="41.34" y="0" scaleX="0.85" scaleY="0.85"/>
+			<e:Image id="m_imgBtnClose" x="1078.77" y="115.71" source="btn_110_png"/>
+			<e:Image source="lb_dljl_axdfs_png" x="503.05" y="41.05"/>
+			<e:Image source="lb_dljl_hdqj_png" x="545.08" y="195.37"/>
+			<e:Group x="661.02" y="248.69">
+				<e:Image source="border_1035_png" x="0" y="0" scale9Grid="94,8,212,48"/>
+				<e:Label id="m_labOnline" text="3分55秒后" size="25" y="17.64" textColor="0xCECECC" stroke="1" strokeColor="0x707070" textAlign="center" horizontalCenter="0" width="183"/>
+			</e:Group>
+			<e:Group width="525" height="150" x="590.69" y="335" anchorOffsetY="0" anchorOffsetX="0">
+				<e:Scroller y="0" anchorOffsetY="0" scaleX="1" scaleY="1" anchorOffsetX="0" height="150" width="520" horizontalCenter="0">
+					<e:Group id="m_pOnlineGroup" anchorOffsetY="0" anchorOffsetX="0" x="-1.33">
+					<e:layout>
+						<e:HorizontalLayout gap="27" horizontalAlign="center"/>
+					</e:layout>
+					</e:Group>
+				</e:Scroller>
+			</e:Group>
+			<com_main:ComButton id="m_pBtnGet" x="781.35" y="548.86" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" currentState="style4"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

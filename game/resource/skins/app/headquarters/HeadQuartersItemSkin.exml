@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HeadQuartersItemSkin" currentState="BossExPass" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="110" height="140" states="Normal,NormalPass,Boss,BossPass,BossEx,BossExPass"  width.Boss="120" height.Boss="170" width.BossPass="120" height.BossPass="170" width.BossEx="120" height.BossEx="170" width.BossExPass="120" height.BossExPass="170">
+	<e:Rect left="0" top="0" right="0" bottom="0" strokeAlpha="0" fillAlpha="0" fillColor="0xFFFFFF"/>
+	<com_main:CImage includeIn="Boss,BossPass,BossEx,BossExPass" source="db-yy_png" horizontalCenter="0" bottom="30" touchEnabled="false" horizontalCenter.Boss="0" bottom.Boss="18" horizontalCenter.BossPass="0" bottom.BossPass="18" horizontalCenter.BossEx="0" bottom.BossEx="18" horizontalCenter.BossExPass="0" bottom.BossExPass="18"/>
+	<com_main:CImage id="m_imgQuality" includeIn="Boss,BossPass,BossEx,BossExPass" horizontalCenter="0.5" x="10" source="tx-pt_png" touchEnabled="false" bottom="41" source.BossExPass="tx-sj_png" source.Boss="headQuarter1_png" source.BossEx="BossEs1_png"/>
+	<com_main:CImage id="m_RoleHead" includeIn="Boss,BossPass,BossEx,BossExPass" horizontalCenter="0" x="39" source="" width="100" height="100" touchEnabled="false" bottom="61" horizontalCenter.Boss="0"/>
+	<e:Group id="m_conStar" height="50" bottom="44" includeIn="BossPass,BossExPass" touchChildren="false" touchEnabled="false" horizontalCenter="0">
+		<e:layout>
+		<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="0"/>
+		</e:layout>
+	</e:Group>
+	<com_main:CImage includeIn="Normal,NormalPass" source="db-qp_png" bottom="30" horizontalCenter="0" touchEnabled="false" source.NormalPass="db-qp2_png" bottom.NormalPass="3" horizontalCenter.Normal="0" bottom.Normal="18" horizontalCenter.NormalPass="0.5"/>
+	<e:Rect id="m_mask" width="100" height="100" ellipseWidth="360" horizontalCenter="-1" bottom="60" anchorOffsetY="0" anchorOffsetX="0" ellipseHeight="360" includeIn="Boss,BossPass,BossEx,BossExPass" horizontalCenter.BossEx="2" bottom.BossEx="60" horizontalCenter.BossExPass="2"/>
+
+</e:Skin>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TeamFateItemSkin" currentState="hide" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:w="http://ns.egret.com/wing" states="hide,show" >
+	<e:Group width="145">
+		<e:Label id="m_labFateName" text="桃园结义" y="14" size="20" textColor="0xe7d7a7" x="19"/>
+		<e:Image id="m_imgBtnMask" source="com_wzk3_png" x="3.5"/>
+		<e:Image x="104" source="btn_037_up_png" width="30" height="30" scaleY.show="-1" touchEnabled="false" y="9" y.show="40"/>
+		<e:Group width="145" y="40" touchChildren="false" touchEnabled="false" visible.hide="false">
+			<e:Group id="m_pPropRoot" width="145" x="76" y="16">
+				<e:layout>
+					<e:VerticalLayout paddingTop="14" paddingBottom="0" paddingBottom.show="9" gap.show="6" gap.hide="0"/>
+				</e:layout>
+			</e:Group>
+			<e:Image source="line_1006_png" width="126"/>
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" gap="0" paddingBottom.show="5" paddingBottom="0"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

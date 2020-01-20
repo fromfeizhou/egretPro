@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralStrengViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="653" height="604">
+	<w:Config id="16547d94282"/>
+	<e:Group y="1" anchorOffsetX="0" right="0" left="0">
+		<e:Image anchorOffsetX="0" source="border_1013_png" anchorOffsetY="0" y="6.66" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Label text="升星" y="24.66" size="26" scaleX="1" scaleY="1" textColor="0xe7d7a7" horizontalCenter="0.5" textAlign="center"/>
+		<e:Label id="m_labStarFull" text="已满星" x="153" y="106" size="24" textAlign="left" textColor="0xff0000"/>
+		<e:Group id="m_groupSoul" x="114" y="88">
+			<e:Label text="将魂:" x="0" y="18" size="24" textColor="0x8a8a9e" textAlign="left"/>
+			<e:Label id="m_labSoulNum" text="10/200" x="76.98" y="18" size="24" textColor="0xe9e9e6" textAlign="left"/>
+			<com_main:ComButton id="m_btnUpStart" y="27" skinName="com_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" x="448"/>
+		</e:Group>
+		<com_main:ComItemNew id="m_comItem" x="27" y="73" skinName="com_item_new" currentState="base" scaleX="0.8" scaleY="0.8"/>
+	</e:Group>
+	<e:Group y="177" left="0" right="0" anchorOffsetY="0" height="165">
+		<e:Image anchorOffsetX="0" source="border_1013_png" anchorOffsetY="0" y="-7" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Label id="m_labTitle" text="升级" y="11" size="26" textColor="0xE7D7A7" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Group id="m_pProRoot" x="32" y="88">
+			<e:Label text="等级:" x="0" y="2" size="24" textColor="0x8a8a9e" textAlign="left"/>
+			<e:Label id="m_labLevel" text="999" y="2" size="24" textColor="0xe9e9e6" x="76" textAlign="left"/>
+			<e:Group x="155" y="0" anchorOffsetY="0" height="24" anchorOffsetX="0" width="290">
+				<e:Image anchorOffsetX="0" anchorOffsetY="0" source="pro_002_png" left="0" top="0" right="0" bottom="0"/>
+				<e:Image id="m_imgExpPro" width="220" left="0" top="0" bottom="0" source="pro_003_png"/>
+				<e:Label id="m_labExpPro" text="8000/0000" size="24" horizontalCenter="0" verticalCenter="0" textColor="0xe9e9e6"/>
+			</e:Group>
+		</e:Group>
+		<com_main:ComButton id="m_btnUpLevel" y="103" skinName="com_button" currentState="style1" anchorOffsetX="76.5" anchorOffsetY="33.5" x="566.5"/>
+		<e:Label id="m_labGenLevel" text="999" size="24" textAlign="center" y="49" touchEnabled="false" horizontalCenter="0" textColor="0x8a8a9e"/>
+		<e:Group id="m_pTupoRoot" x="29" y="62">
+			<com_main:ComItemNew id="m_comTuPoItem" skinName="com_item_new" currentState="base_num" scaleX="0.8" scaleY="0.8"/>
+			<e:Label id="m_labtuPName" text="999" size="24" textColor="0xE9E9E6" x="89" textAlign="left" verticalCenter="0"/>
+			<e:Label id="m_labtuPNum" text="999" size="24" textColor="0xE9E9E6" x="154" textAlign="left" verticalCenter="0"/>
+		</e:Group>
+	</e:Group>
+	<e:Image anchorOffsetX="0" source="border_1013_png" anchorOffsetY="0" y="333" scaleX="1" scaleY="1" x="30"/>
+	<e:Label text="武将兵书" y="350" size="26" textColor="0xE7D7A7" scaleX="1" scaleY="1" x="273"/>
+	<e:Group left="0" right="0" bottom="0">
+		<com_main:CImage source="border_011_png" anchorOffsetY="0" x="0" y="0" height="38" width="653"/>
+		<e:Label text="提示：长按可连续使用兵书" size="20" textAlign="center" textColor="0x8a8a9e" anchorOffsetX="0" anchorOffsetY="0" y="11" horizontalCenter="0.5"/>
+	</e:Group>
+	<e:Group width="100%" height="139" y="423" anchorOffsetY="0" x="0">
+		<com_main:GeneralExpItemRender id="m_expItem0" x="16" y="12" skinName="General_jingyan_item_render"/>
+		<com_main:GeneralExpItemRender id="m_expItem1" x="26" y="22" skinName="General_jingyan_item_render"/>
+		<com_main:GeneralExpItemRender id="m_expItem2" x="36" y="32" skinName="General_jingyan_item_render"/>
+		<com_main:GeneralExpItemRender id="m_expItem3" x="46" y="42" skinName="General_jingyan_item_render"/>
+		<com_main:GeneralExpItemRender id="m_expItem4" x="56" y="52" skinName="General_jingyan_item_render"/>
+		<e:layout>
+		<e:HorizontalLayout horizontalAlign="center" gap="1"/>
+		</e:layout>
+	</e:Group> 
+
+</e:Skin>

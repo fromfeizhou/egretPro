@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="com_tab_activity_group" width="111" height="475" currentState="base" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" >
+	<e:Group left="0" right="0" top="0" bottom="125" anchorOffsetY="0">
+		<com_main:CScroller width="100%" top="0">
+			<e:Group name="m_finishList" x="32" y="0">
+				<e:TabBar id="m_tabBtn" itemRendererSkinName="tab_btn_activity_render" scaleX="1" scaleY="1" anchorOffsetX="0" width="111" >
+					<e:layout>
+						<e:VerticalLayout verticalAlign="top" gap="0" />
+					</e:layout>
+					<e:ArrayCollection>
+						<e:Array>
+							<e:Object name="第一天" />
+							<e:Object name="第二天"  />
+								<e:Object name="第三天" />
+							<e:Object name="第四天"  />
+								<e:Object name="第五天" />
+							<e:Object name="第六天"  />
+								<e:Object name="第七天" />
+						</e:Array>
+					</e:ArrayCollection>
+				</e:TabBar>
+			</e:Group>
+		</com_main:CScroller>
+	</e:Group>
+</e:Skin>

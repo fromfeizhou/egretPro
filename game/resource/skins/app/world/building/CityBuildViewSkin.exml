@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CityBuildViewSkin" width="1120" height="644" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1120" height="644" x="0" y="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="2" top="2" bottom="2" right="2" locked="true"/>
+		<e:Image y="139" scaleY="-1" horizontalCenter="0" width="1072" source="border_1008_png"/>
+		<e:Scroller width="360" height="556" enabled="false" left="10" top="80">
+			<e:Group>
+				<com_main:CImage right="0" bottom="0" alpha="0.6" source="border_026_png" scale9Grid="8,8,50,50" left="0" top="0"/>
+				<com_main:CImage source="zyt_07_png" right="0" scaleX="3.2" scaleY="4" bottom="0" alpha="0.6"/>
+				<com_main:CImage alpha="0.6" source="border_1002_png" right="0" bottom="0"/>
+				<com_main:CImage alpha="0.6" source="zyt_17_png" left="0" bottom="0" rotation="90" width="580" height="180"/>
+			</e:Group>
+		</e:Scroller>
+		<com_main:CImage top="80" left="374" source="line_1006_png" rotation="90" width="540"/>
+		<com_main:CImage top="80" source="line_1006_png" rotation="90" width="400" right="324"/>
+		<e:Scroller width="360" height="540" top="80" left="10">
+			<e:List id="m_listGeneral" x="25" y="41">
+				<e:layout>
+					<e:VerticalLayout gap="0"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Group id="m_gCityEffect" width="410" height="400" horizontalCenter="24" top="80">
+			<com_main:CImage id="m_imgCity" source="map_build_1_png" top="0" horizontalCenter="0" x="-15" y="0" scaleX="1" scaleY="1"/>
+			<com_main:CImage source="border_1003_png" x="32" y="170" scale9Grid="6,6,38,38" height="35" width="68"/>
+			<com_main:CLabel id="m_labLv" text="等级10" size="20" x="35" y="178"/>
+			<e:Group x="102" y="171" height="32" width="284">
+				<e:Image anchorOffsetX="0" anchorOffsetY="0" left="0" top="0" right="0" bottom="0" source="pro_005_png" scale9Grid="3,3,18,18"/>
+				<e:Image id="m_imgExpPro" width="240" left="0" top="0" bottom="0" source="pro_006_png"/>
+				<e:Label id="m_labExpPro" text="建设度：9万/10万" size="24" verticalCenter="0" textColor="0xe9e9e6" left="10"/>
+			</e:Group>
+			<com_main:CLabel id="m_labTips" text="提示：" size="18" x="35" y="210" textColor="0xabb7d1" width="350"/>
+			<com_main:CImage source="border_1013_png" y="248" width="420" height="42" horizontalCenter="0"/>
+			<com_main:CLabel id="m_labGName" text="武将名称" size="22" y="259" horizontalCenter="0"/>
+			<e:Group y="285" horizontalCenter="0">
+				<com_main:RewardCell id="m_rcItem0" x="0" y="0" skinName="RewardCellSkin"/>
+				<com_main:RewardCell id="m_rcItem1" y="0" skinName="RewardCellSkin" x="158"/>
+				<com_main:RewardCell id="m_rcItem2" y="0" skinName="RewardCellSkin" x="316"/>
+				<e:layout>
+					<e:HorizontalLayout gap="46"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_gCityLv" width="310" height="400" top="80" right="10">
+			<com_main:CLabel id="m_labCName" text="城池名称" size="26" horizontalCenter="0" y="20"/>
+			<com_main:CLabel id="m_labCLv" text="建筑等级6" size="22" horizontalCenter="0" y="54" textColor="0xaac7ff"/>
+			<e:Image source="zyt_13_png" y="86" horizontalCenter="0"/>
+			<e:Scroller width="300" height="280" top="113" horizontalCenter="0">
+			<e:Group id="m_gEffect" x="25" y="41">
+				<e:layout>
+					<e:VerticalLayout gap="16" paddingTop="4"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		</e:Group>
+		<e:Group right="8" bottom="8" width="734" height="148">
+			<com_main:CImage width="734" height="148" source="border_009_png" scale9Grid="7,7,46,46" x="0" y="0"/>
+			<e:Group id="m_gFree" width="734" height="148" verticalCenter="0" horizontalCenter="0">
+				<com_main:ComResCost id="m_costItem0" y="4" skinName="ComResCostSkin" horizontalCenter="-240"/>
+				<com_main:ComResCost id="m_costItem1" y="4" skinName="ComResCostSkin" horizontalCenter="0"/>
+				<com_main:ComResCost id="m_costItem2" y="4" skinName="ComResCostSkin" horizontalCenter="240"/>
+				<com_main:ComCostTextButton id="m_pBtnFastFinis" skinName="com_cost_text_button" currentState="size5" anchorOffsetX="100" anchorOffsetY="41" horizontalCenter="-200" verticalCenter="30"/>
+				<com_main:ComCostTextButton id="m_pBtnLvUp" skinName="com_cost_text_button" currentState="size6" anchorOffsetX="100" anchorOffsetY="41" verticalCenter="30" horizontalCenter="200"/>
+			</e:Group>
+			<e:Group id="m_gBuilding" width="734" height="148" verticalCenter="0" horizontalCenter="0" x="20" y="20" visible="false">
+				<com_main:ComCostTextButton id="m_pBtnFast" currentState="size6" horizontalCenter="0" verticalCenter="30" skinName="com_cost_text_button"/>
+			</e:Group>
+			<e:Group id="m_gDone" width="734" height="148" verticalCenter="0" horizontalCenter="0" x="10" y="10" visible="false">
+				<com_main:ComButton id="m_pBtnReward" currentState="style2" horizontalCenter="0" verticalCenter="30" skinName="com_button"/>
+				<com_main:CLabel id="m_labCTips" text="主公，" size="24" horizontalCenter="0" x="527" scaleX="1" scaleY="1" top="20" textColor="0xffffff"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

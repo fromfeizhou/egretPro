@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComHeadItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="115" height="127">
+		<e:Image id="m_imgMask" source="border_006_png" width="95" height="95" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image source="border_032_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="m_imgHead" source="border_030_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="m_imgBg" horizontalCenter="0" verticalCenter="0" source="vipBg0_png"/>
+		<e:Image id="m_imgVip" horizontalCenter="0.5" source="" top="7"/>
+
+		<e:Group id="m_pOfficial" x="25" bottom="-1">
+			<e:Image source="lt_zwmc_png" y="0" x="0"/>
+			<e:Label id="m_labOfficial" text="骠骑将军" size="14" textColor="0xfef5c1" horizontalCenter="0" y="5"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

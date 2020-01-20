@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaStonePropSkin" currentState="inlay" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="inlay,unInlay" >
+	<e:Group width="189" height="82">
+		<e:Group id="m_pTitleRoot" x="0" y="0">
+			<e:Image x="0" y="0" width="38" height="82" source="zyt_04_png"/>
+			<e:Label id="m_labTile" text="孔1" textColor="0xe7d7a7" size="20" width="20" horizontalCenter="0" lineSpacing="6" textAlign="center" verticalCenter="0"/>
+		</e:Group>
+		<e:Label id="m_labName" text="绿松石" x="44.5" y="10" size="20" textColor="0xe9e9e6" x.unInlay="72" y.unInlay="31" textColor.unInlay="0x878785" text.unInlay="未镶嵌"/>
+		<e:Group x="18" y="41" visible.unInlay="false">
+			<e:Image source="border_1001_png" x="0" y="0" alpha="0.7" width="171"/>
+			<e:Label id="m_labAttri" text="攻击+1000" x="27" y="4" textColor="0xabb7d1" size="18"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

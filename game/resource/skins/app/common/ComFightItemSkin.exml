@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComFightItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group touchEnabled="false" touchChildren="false" scaleX="1" scaleY="1" width="358" height="72">
+		<com_main:CImage xmlns:com_main="com_main.*" y="16.92" source="border_1001_png" anchorOffsetX="0" anchorOffsetY="0" height="47.2" width="276" x="58"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="10.41" source="line_1003_png" x="91"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="15" source="line_009_png" height="4" width="296" horizontalCenter="15"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="71.24" scaleY="-1" source="line_005_png" anchorOffsetY="0" height="15"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="7.1" source="border_016_png" x="29"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="11.74" source="common_fight_png" x="36.5"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="19.42" anchorOffsetX="0" anchorOffsetY="0" source="lb_zdl_png" x="94"/>
+		<e:BitmapLabel id="m_labfightNum" text="999" font="fight_font_fnt" letterSpacing="-15" scaleX="1" scaleY="1" verticalCenter="0" left="164"/>
+		<e:Group id="m_pEffRoot" width="280" height="46" x="58" y="18" anchorOffsetY="0" anchorOffsetX="0"/>
+	</e:Group>
+</e:Skin>

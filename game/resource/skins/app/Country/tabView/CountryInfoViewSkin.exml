@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryInfoViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="1160" height="690">
+	<e:Group width="560" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" right="47" top="10" bottom="10">
+		<com_main:APopUp id="m_APopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" x="0" top="0" bottom="0"/>
+		<e:Group id="m_BtnEdit" width="70" height="70" horizontalCenter="0" bottom="31">
+			<com_main:CImage horizontalCenter="0" top="0" source="btn_038_up_png"/>
+			<com_main:CImage horizontalCenter="0" bottom="0" source="lb_bj_png"/>
+		</e:Group>
+		<e:Group left="30" right="30" anchorOffsetY="0" top="93" bottom="165">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="border_005_jpg" scaleX="1" scaleY="1" left="0" top="0" bottom="0" right="0" x="-58" y="-233"/>
+			<e:EditableText id="m_Notice" text="Label" anchorOffsetX="0" anchorOffsetY="0" lineSpacing="18" scaleX="1" scaleY="1" maxChars="120" touchEnabled="false" multiline="true" fontFamily="Microsoft YaHei" size="28" textColor="0x8a8a9e" width="480" x="11" y="16" height="388"/>
+
+		</e:Group>
+		<com_main:ComButton id="m_BtnConfirm" anchorOffsetX="0" anchorOffsetY="0" skinName="com_button" scaleX="1" scaleY="1" verticalCenter="247" y="770" left="100" visible="false"/>
+		<com_main:ComButton id="m_BtnCancel" skinName="com_button" currentState="style6" scaleX="1" scaleY="1" verticalCenter="248" y="770" right="100" visible="false"/>
+	</e:Group>
+	<e:Group width="528" left="0" bottom="0" top="0">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" source="border_1014_png" top="181"/>
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" top="0" source="t-gs_png"/>
+		<com_main:ComState id="m_comState" skinName="ComStateSkin" currentState="nor5" scaleX="0.9" scaleY="0.9" y="11" x="85"/>
+		<com_main:CountryPlayerJob id="m_PlayerJob" skinName="CountryPlayerJobSkin" horizontalCenter="0" bottom="49"/>
+	</e:Group>
+</e:Skin>

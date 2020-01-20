@@ -1,0 +1,11 @@
+{"file":"soldierLevelFont.png","frames":{
+"4":{"x":182,"y":1,"w":46,"h":30,"offX":1,"offY":7,"sourceW":49,"sourceH":43},
+"5":{"x":52,"y":1,"w":44,"h":41,"offX":2,"offY":1,"sourceW":49,"sourceH":43},
+"6":{"x":182,"y":33,"w":37,"h":37,"offX":6,"offY":3,"sourceW":49,"sourceH":43},
+"7":{"x":137,"y":1,"w":43,"h":33,"offX":2,"offY":5,"sourceW":49,"sourceH":43},
+"8":{"x":98,"y":42,"w":47,"h":28,"offX":1,"offY":7,"sourceW":49,"sourceH":43},
+"9":{"x":1,"y":1,"w":49,"h":43,"offX":0,"offY":0,"sourceW":49,"sourceH":43},
+"级":{"x":52,"y":44,"w":37,"h":33,"offX":0,"offY":0,"sourceW":37,"sourceH":33},
+"1":{"x":1,"y":46,"w":47,"h":13,"offX":1,"offY":15,"sourceW":49,"sourceH":43},
+"2":{"x":221,"y":33,"w":26,"h":29,"offX":11,"offY":7,"sourceW":49,"sourceH":43},
+"3":{"x":98,"y":1,"w":37,"h":39,"offX":6,"offY":2,"sourceW":49,"sourceH":43}}}

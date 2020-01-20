@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopFreeRecordSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="560" height="344">
+		<com_main:APopUp id="m_APopUp" xmlns:com_main="com_main.*" x="0" skinName="APopUpSkin" anchorOffsetY="0" scaleX="1" scaleY="1" currentState="size102" top="0" bottom="0"/>
+		<e:Scroller height="215.61" y="78.66" scaleX="1" scaleY="1" anchorOffsetY="0" left="44">
+		<e:Group id="m_groupRecord" anchorOffsetY="0">
+			<e:layout>
+			<e:VerticalLayout gap="6" verticalAlign="top" paddingLeft="0"/>
+			</e:layout>
+		</e:Group>
+		</e:Scroller>
+		<e:Image source="com_help_png" x="24.66" y="304.66"/>
+		<e:Label text="最多保留30条免单记录" x="64.33" y="308.67" size="18"/>
+	</e:Group>
+</e:Skin>

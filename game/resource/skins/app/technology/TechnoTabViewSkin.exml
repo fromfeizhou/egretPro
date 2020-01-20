@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TechnoTabViewSkin" width="1164" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*">
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Scroller height="450" verticalCenter="0" left="0" right="0">
+			<e:Group id="m_pCellRoot" anchorOffsetY="0" height="416">
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

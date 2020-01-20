@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_siege_rank_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<w:Config id="167a6c32dd4" visible="false"/>
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" y="89" horizontalCenter="7.5" width="1100" height="630">
+		<com_main:CImage xmlns:com_main="com_main.*" y="0" source="frame_101_jpg" anchorOffsetX="0" width="1100" anchorOffsetY="0" height="630" scale9Grid="15,50,92,22"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="-0.66" source="frame_002_jpg" anchorOffsetX="0" width="1100"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" y="32.82" anchorOffsetX="57.5" anchorOffsetY="38.5" right="-10">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" source="btn_009_up_png" x="-0.98"/>
+		</e:Group>
+		<e:Label text="国战排行" y="14" textColor="0xFFFF99" size="38" horizontalCenter="0"/>
+		<com_main:WorldSiegeRankBox id="m_pPlayer" x="2" y="64" skinName="world_siege_rank_box" currentState="right" siegeType="0"/>
+		<com_main:WorldSiegeRankBox id="m_pAlly" y="64" skinName="world_siege_rank_box" titleSource="lb_gz-lmb_png" right="2" currentState="left" title="排名,联盟,杀敌数" siegeType="1"/>
+	</e:Group>
+</e:Skin>

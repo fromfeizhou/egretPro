@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionRecordCellSkin" width="635" height="35"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CLabel id="m_Name" text="职位" size="24" x="12" verticalCenter="1.5" fontFamily="Microsoft YaHei"/>
+	<!--<com_main:CLabel  verticalAlign="bottom" size="40" textAlign="center"  fontColor.up="White" fontColor.down="TagdownYellow" horizontalCenter="-60" verticalCenter="-12.5" text="{data}"  />-->
+</e:Skin>

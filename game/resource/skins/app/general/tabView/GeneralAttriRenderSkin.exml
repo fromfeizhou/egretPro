@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralAttriRenderSkin" currentState="Icon22" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="style22,Icon22" >
+	<e:Image id="m_imgIcon" x="12" y="8.5" anchorOffsetX="11.5" anchorOffsetY="11.5" includeIn="Icon22" source="common_leader_png"/>
+	<e:Group height.Icon22="23" x.Icon22="27">
+		<e:Label id="m_labName" text="攻击 " x="16" y="14" size="20" textColor="0xabb7d1" size.style22="22" fontFamily.style22="Microsoft YaHei" text.style22="攻击 " size.Icon22="22" fontFamily.Icon22="Microsoft YaHei" text.Icon22=" 攻击 " x.Icon22="25" fontFamily="Microsoft YaHei" y.Icon22="2"/>
+		<e:Label id="m_labVal" text="18540" x="110" y="69" size="20" textColor="0xe9e9e6" size.style22="22" fontFamily.style22="Microsoft YaHei" text.style22="8888" size.Icon22="22" fontFamily.Icon22="Microsoft YaHei" text.Icon22="888811"/>
+		<e:layout>
+			<e:HorizontalLayout gap="1" verticalAlign.Icon22="middle" paddingLeft.Icon22="0" paddingTop.Icon22="0"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

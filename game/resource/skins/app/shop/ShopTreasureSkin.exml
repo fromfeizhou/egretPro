@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopTreasureSkin" currentState="nor" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="750" width="1334" states="nor,vip,ploit" >
+	<w:Config id="1598d7ea2ba"/>
+	<e:Image width="100%" height="100%" source="border_004_jpg"/>
+	<e:Group id="Preloading" width="200" height="56" x="304" y="4" anchorOffsetY="0">
+		<e:Image x="54" y="4" source="icon_source_gold_png" scaleX="1" scaleY="1"/>
+		<e:Image x="110" y="4" source="icon_source_sliver_png" scaleX="1" scaleY="1"/>
+		<e:Image x="173" y="8" source="icon_decorationLan_png" scaleX="1" scaleY="1"/>
+	</e:Group>
+
+
+	<com_main:ComTabGroup id="m_comTabGroup" skinName="com_tab_group" left="0" top="0" bottom="0" width="174"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<e:Group id="m_pTimeRoot" y="20" right="100" visible.nor="false" visible.vip="false">
+		<com_main:CLabel text="重置时间：" fontFamily="Microsoft YaHei" textColor="0xAAC7FF" size="24" y="0" x="0"/>
+		<com_main:CLabel id="m_pCDTtime" text="1天24时40分" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" size="24" y="1" x="109"/>
+	</e:Group>
+
+
+
+	<e:Group id="m_pAllGroup" x="188" y="60.91" width="1135" height="684">
+		<e:Image source="line_009_png" y="103" width="100%" x="0"/>
+		<e:Scroller id="m_shopScroller" anchorOffsetY="0" width="100%" x="0" top="112" bottom="0">
+			<e:List id="m_List" itemRendererSkinName="ShopTreasureCellSkin">
+			<e:layout>
+				<e:TileLayout horizontalGap="20" verticalGap="6"/>
+			</e:layout>
+			<e:ArrayCollection>
+				<e:Array/>
+			</e:ArrayCollection>
+			</e:List>
+		</e:Scroller>
+
+
+		<e:Group y="13" right="103" width="566" height="82">
+			<e:Label id="m_surplus" text="剩余刷新次数:10" scaleX="1" scaleY="1" size="25" y="15.09" textAlign="left" textColor="0xe9e9e6" x="0" width="279" y.vip="36" visible.ploit="false"/>
+			<e:Label id="m_refreshTime" text="下次刷新时间: 00:00:00" scaleX="1" scaleY="1" size="25" y="52.09" textAlign="left" textColor="0xe9e9e6" x="0" visible.vip="false" y.ploit="30"/>
+			<com_main:ComButton id="m_btnVip" y="40.5" skinName="com_button" currentState="style2" anchorOffsetX="120" anchorOffsetY="37.5" x="440.53" visible.ploit="false"/>
+			<com_main:ComCostTextButton id="m_comCostTextButton" y="40.5" currentState="size3" skinName="com_cost_text_button" scaleX="1" scaleY="1" anchorOffsetX="124" anchorOffsetY="41" x="440.53" visible.vip="false" visible.ploit="false"/>
+		</e:Group>
+		<e:Label id="m_labReset" text="每天6点重置" scaleX="1" scaleY="1" size="25" textAlign="left" textColor="0xE9E9E6" left="41" x="0" y="45" visible.nor="false" visible.ploit="false"/>
+
+	</e:Group>
+</e:Skin>

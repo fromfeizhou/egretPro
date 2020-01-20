@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_city_info_panel" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="546" height="674" x="392.33" y="33.33" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:CImage source="frame_101_jpg" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scale9Grid="15,50,92,22" scaleX="1" scaleY="1"/>
+		<com_main:CImage scaleX="1" scaleY="1" width="100%" source="frame_001_jpg"/>
+		<com_main:CImage scaleX="1" scaleY="1" source="line_003_png" y="266" horizontalCenter="-157"/>
+		<com_main:CImage source="line_003_png" scaleX="-1" scaleY="1" horizontalCenter="157" y="265"/>
+		<com_main:CImage scaleX="1" scaleY="-1" top="535" source="border_005_jpg" anchorOffsetX="0" width="508.67" anchorOffsetY="0" height="129.67" horizontalCenter="0"/>
+		<com_main:CImage scaleX="1" scaleY="-1" top="439" source="border_1008_png" horizontalCenter="0" width="100%"/>
+		<com_main:CImage scaleX="1" scaleY="1" top="461" source="border_1008_png" horizontalCenter="0" width="100%"/>
+		<com_main:CImage x="0" scaleX="1" scaleY="-1" top="439" source="line_1002_png" width="100%"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" x="496" y="32.67" anchorOffsetX="57.5" anchorOffsetY="38.5" scaleX="1" scaleY="1">
+			<com_main:CImage scaleX="1" scaleY="1" source="btn_009_up_png" right="0" top="0"/>
+		</e:Group>
+		<e:Group id="m_pBtnInfo" width="115" height="77" x="51" y="32.67" anchorOffsetX="57.5" anchorOffsetY="38.5" scaleX="1" scaleY="1">
+			<com_main:CImage scaleX="1" scaleY="1" right="0" top="0" source="btn_040_up_png"/>
+		</e:Group>
+		<e:Label id="m_pLbType" text="税收" y="262" horizontalCenter="0" textColor="0xe9e9e6"/>
+		<e:Label id="m_pLbName" text="城池名" y="16" textColor="0xffff99" horizontalCenter="0" size="34"/>
+		<com_main:ComState id="m_comState" x="44" y="87" skinName="ComStateSkin" currentState="nor5" scaleX="0.35" scaleY="0.35"/>
+		<e:Group y="92" horizontalCenter="0">
+		<com_main:ComHeadItem id="comHead" x="1" y="1.25" scaleX="1" scaleY="1" currentState="yuandi" anchorOffsetY="0"  anchorOffsetX="0"  width="115" height="127"/>
+		<!--<com_main:CImage x="-3" y="-5" source="top_head_bg_png"/>
+		<com_main:CImage id="m_imgHead" x="3.4" y="0.88" anchorOffsetX="0.46" anchorOffsetY="0.46" source="role_b_3_png" width="90" height="91"/>
+		<com_main:CImage x="-3" y="-5" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" width="101" height="101" source="top_head_frame_png"/>-->
+		</e:Group>
+		<e:Label id="m_pLbPlayerName" text="太守：随便玩玩" y="227" textColor="0xe9e9e6" horizontalCenter="0" size="16"/>
+		<e:Scroller  width="506" height="80" y="320" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Group id="m_pGScroller" y="-19">
+				<e:layout>
+					<e:HorizontalLayout gap="10" horizontalAlign="center"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Label text="驻军等级：" y="464.67" size="22" horizontalCenter="-22" textColor="0xe9e9e6" x="197" scaleX="1" scaleY="1"/>
+		<e:Label text="驻军数量：" y="500.67" size="22" horizontalCenter="-22" textColor="0xE9E9E6" x="197" scaleX="1" scaleY="1"/>
+		<e:Label id="m_pLbContent" text="" y="555.67" size="22" scaleX="1" scaleY="1" textAlign="left" verticalAlign="top" left="32" width="481" anchorOffsetY="0" height="91" textColor="0x8a8a9e"/>
+		<e:Label id="m_pLbLevel" text="99" y="464.67" size="22" horizontalCenter="52" textAlign="left" textColor="0xffff99" x="313.67" scaleX="1" scaleY="1"/>
+		<e:Label id="m_pLbNum" text="99" y="500.67" size="22" horizontalCenter="52" textAlign="left" textColor="0xffff99" x="313.67" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

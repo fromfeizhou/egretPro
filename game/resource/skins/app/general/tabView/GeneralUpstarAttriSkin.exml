@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralUpstarAttriSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" xmlns:com_main="com_main.*" width="367">
+	<w:Declarations>
+		<tween:TweenGroup id="action">
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object scaleX="{0.8}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_imgMask}">
+				<tween:Wait duration="250"/>
+				<tween:Set/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object scaleX="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group width="100%" y="0" x="0" anchorOffsetY="0" height="23">
+		<com_main:CLabel id="m_labAttriName" xmlns:com_main="com_main.*" text="攻击" textAlign="left" size="20" fontFamily="Microsoft YaHei" textColor="0xABB7D1" scaleX="1" scaleY="1" x="0" y="0"/>
+		<com_main:CLabel id="m_labCur" xmlns:com_main="com_main.*" text="22222222" textAlign="left" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="61"/>
+		<e:Image id="image" source="common_jt_png" y="0" scaleX="0" scaleY="0.8" x="197"/>
+		<e:Group x="260" y="0" width="101">
+			<com_main:CLabel id="m_labNext" text="22222222" y="0" textAlign="left" size="20" fontFamily="Microsoft YaHei" x="7" scaleX="1" scaleY="1" textColor="0x00FF00"/>
+			<e:Image id="m_imgMask" source="border_005_jpg" height="22" scaleX="0" width="110" left="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

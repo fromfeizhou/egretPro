@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_fortune_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="164f5bcdc8d"/>
+	<e:Rect id="m_pMask" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" alpha="1" fillAlpha="0.5" strokeAlpha="0"/>
+	<e:Group height="563" width="563" horizontalCenter="0.5" top="37">
+		<com_main:CImage x="0" y="0" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_bg_png"/>
+		<e:Group id="m_pItem_1" width="114" height="114" x="223.48" y="-24.37" name="1" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_1" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="225" anchorOffsetX="137" anchorOffsetY="57" x="3.76" y="-2.92"/>
+			<com_main:CImage id="m_pImgItem_1" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pItem_2" width="114" height="114" x="396.96" y="47.3" name="2" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_2" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage x="1" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="270" verticalCenter="0"/>
+			<com_main:CImage id="m_pImgItem_2" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0" x="-160.48" y="-58.67"/>
+		</e:Group>
+		<e:Group id="m_pItem_3" width="114" height="114" x="464.96" y="217.3" name="3" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_3" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="310" y="65" x="-20.7"/>
+			<com_main:CImage id="m_pImgItem_3" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0" x="-55" y="-157"/>
+		</e:Group>
+		<e:Group id="m_pItem_4" width="114" height="114" x="399.13" y="393.28" name="4" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_4" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="0" y="0" x="0"/>
+			<com_main:CImage id="m_pImgItem_4" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0" x="78.83" y="-162.98"/>
+		</e:Group>
+		<e:Group id="m_pItem_5" width="114" height="114" x="224.13" y="460.28" name="5" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_5" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="45" y="-22.68" x="58.34"/>
+			<com_main:CImage id="m_pImgItem_5" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0" x="188" y="-54"/>
+		</e:Group>
+		<e:Group id="m_pItem_6" width="114" height="114" x="44.12" y="393.95" name="6" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_6" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="4.5" verticalCenter="0"/>
+			<com_main:CImage alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="90" y="0.67" x="119.51"/>
+			<com_main:CImage id="m_pImgItem_6" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0" x="193.01" y="79.33"/>
+		</e:Group>
+		<e:Group id="m_pItem_7" width="114" height="114" x="-13.37" y="218.27" name="7" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_7" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="135" y="60.03" x="134.93"/>
+			<com_main:CImage id="m_pImgItem_7" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0" x="70.49" y="188.68"/>
+		</e:Group>
+		<e:Group id="m_pltem_8" width="114" height="114" x="48.95" y="48.96" name="8" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pItem_select_8" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_select_png" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CImage x="114.5" y="113.68" alpha="1" scaleX="1" scaleY="1" source="pay_fortune_item_png" rotation="180"/>
+			<com_main:CImage id="m_pImgItem_8" alpha="1" scaleX="1" scaleY="1" source="common_prop_2007_png" horizontalCenter="0" verticalCenter="0" x="-49.32" y="182.31"/>
+		</e:Group>
+		<e:Group id="m_pBtnBuy" width="193" height="220" x="280.13" y="274.3" scaleX="1" scaleY="1" anchorOffsetX="96.5" anchorOffsetY="110">
+			<com_main:CImage x="96.5" y="110" alpha="1" source="pay_fortune_buy_png" scaleX="1" scaleY="1" anchorOffsetX="96.5" anchorOffsetY="110"/>
+			<e:Label id="m_pLbFree" text="免费" size="24" stroke="1" textColor="0xFFFFFF" scaleX="1" scaleY="1" touchEnabled="false" horizontalCenter="-0.5" verticalCenter="8"/>
+			<e:Group id="m_pGBuy" width="100%" height="100%" x="0" y="0" visible="false">
+				<e:Label id="m_pLbPrice" text="18" x="97.5" y="90" size="22" stroke="1" textColor="0xffc18e" strokeColor="0x333333" scaleX="1" scaleY="1" touchEnabled="false"/>
+				<e:Label text="购买一次" y="116.5" size="24" stroke="1" textColor="0xffffff" x="49.5" scaleX="1" scaleY="1" touchEnabled="false"/>
+				<com_main:CImage x="63" y="89.5" alpha="1" source="icon_source_gold_png" scaleX="1" scaleY="1" touchEnabled="false"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="506" height="38" horizontalCenter="0.5" bottom="-104">
+			<com_main:CImage x="0" y="0" alpha="1" scaleX="1" scaleY="1" source="border_1005_png" anchorOffsetX="0" width="506"/>
+			<e:Label text="活动时间：" x="22.48" y="7.33" size="24" textColor="0xc1c1c1" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+			<e:Label id="m_pLbDate" text="2018年7月1日~2018年7月1日" x="146.79" y="7.33" size="24" textColor="0xC1C1C1" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

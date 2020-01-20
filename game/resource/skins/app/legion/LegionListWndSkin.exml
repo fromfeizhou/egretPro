@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionListWndSkin" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="normal"  height="750" width="1334">
+	<e:Image source="border_004_jpg" left="0" right="0" top="0" bottom="0"/>
+	<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" width="100%" x="1" scale9Grid="34,29,3,2" source="border_009_png" bottom="2" height="108"/>
+	<e:Group anchorOffsetY="0" anchorOffsetX="0" width="385" height="62" bottom="21" right="122">
+		<com_main:CImage x="0" y="-1" scale9Grid="4,4,18,17" width="385" source="border_026_png" anchorOffsetX="0"/>
+		<e:EditableText id="InputLabel" width="272" height="48.99" promptColor="0xBFBEBB" textColor="0xFFFFFF" anchorOffsetX="0" anchorOffsetY="0" size="30" verticalAlign="middle" x="14" y="7" scaleX="1" scaleY="1" prompt="输入联盟名称" text="" rotation="359.92"/>
+		<com_main:CImage x="296" y="1" anchorOffsetX="0" source="line_1004_png"/>
+		<com_main:CImage id="m_btnFind" x="306" y="2" anchorOffsetX="0" source="tb-fdj_png"/>
+	</e:Group>
+	<e:Group id="m_pViewRoot" horizontalCenter="56" verticalCenter="-42">
+		<com_main:CScroller id="m_legionScroller" anchorOffsetY="0" anchorOffsetX="0" width="1105.33" x="0" y="76">
+			<e:List id="m_legionList" width="1269.33" anchorOffsetX="0" height="430" anchorOffsetY="0" name="m_finishList" itemRendererSkinName="LegionListCellSkin">
+			<e:layout>
+				<e:TileLayout horizontalGap="45" verticalGap="20"/>
+			</e:layout>
+			</e:List>
+		</com_main:CScroller>
+		<com_main:ComTabTopGroup id="m_comTabTopGroup" skinName="com_tab_top_group" currentState="state2" y="0" width="965" height="70" x="10"/>
+	</e:Group>
+	<com_main:ComButton id="m_btnCreate" anchorOffsetX="120" anchorOffsetY="36.67" currentState="style2" skinName="com_button" bottom="17" left="137"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+</e:Skin>

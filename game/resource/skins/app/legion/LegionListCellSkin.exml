@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionListCellSkin" width="1090" height="90" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Label id="legionName" text="联盟名字" size="30" textColor="0xffffff" y="28.44" horizontalCenter="-434" fontFamily="Microsoft YaHei"/>
+	<e:Label id="playerName" text="你好中号" textColor="0xffffff" y="28.44" horizontalCenter="-244" fontFamily="Microsoft YaHei"/>
+	<e:Label id="fightText" text="200" anchorOffsetX="0" textColor="0xffff00" horizontalCenter="-51.5" y="28.44" fontFamily="Microsoft YaHei"/>
+	<e:Label id="LegionPeopleText" text="200" textColor="0xffffff" y="28.44" horizontalCenter="128.5" fontFamily="Microsoft YaHei"/>
+	<com_main:ComButton id="m_BtnReject" anchorOffsetX="72" anchorOffsetY="30.67" currentState="style1" verticalCenter="-6" skinName="com_button" x="880"/>
+	<e:Image x="6" y="84" source="line_008_png" width="1076"/>
+</e:Skin>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="boss_result_win_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="actionGroup">
+			<tween:TweenItem target="{border_1037}">
+				<tween:Wait duration="400" />
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{0}" />
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="300" />
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{1}" alpha="{1}" />
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{border_043}">
+				<tween:Wait duration="400" />
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{0}" />
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="300" />
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{0.05}" alpha="{1}" />
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="200">
+					<tween:props>
+						<e:Object scaleY="{1}" />
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{rect}">
+				<tween:Wait duration="200" />
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.1}" />
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{1}" />
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="actionItem1">
+			<tween:TweenItem target="{group_itemList}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}" y="{373}" />
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="450" />
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.1}" x="{512}" />
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="700">
+					<tween:props>
+						<e:Object alpha="{1}" x="{257}" y="{373}" />
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{button_group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}" y="{575}" />
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="750" />
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.1}" y="{673}" />
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="650" ease="quadOut">
+					<tween:props>
+						<e:Object y="{575}" alpha="{1}" />
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{reward_group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}" />
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="550">
+					<tween:props>
+						<e:Object alpha="{1}" />
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="actionItem2">
+		<tween:TweenItem target="{group_itemList}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{373}"  alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="450" />
+				<tween:Set>
+					<tween:props>
+						<e:Object  alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="700">
+					<tween:props>
+						<e:Object y="{373}"  alpha="{0}" x="{512}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+				<tween:TweenItem target="{group_itemList1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}" y="{373}" />
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="1150" />
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.1}" x="{512}" />
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object alpha="{1}" y="{373}" />
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image id="shakeImage" horizontalCenter="0" verticalCenter="0"/>
+	<e:Rect id="rect" width="100%" height="100%" x="-1" y="0" fillAlpha="0.8" alpha="0"/>
+	<e:Group id="group_all" width="1334" height="750" horizontalCenter="0" verticalCenter="0">
+		<e:Group id="shake_group" width="1334" height="750" x="0" y="0">
+		<e:Image id="border_1037" y="7" source="border_1037_png" scaleX="1" scaleY="1" alpha="0" horizontalCenter="0" width="503" height="503"/>
+		<e:Image id="border_043" width="1334" height="400" x="0" y="155" scaleX="1" scaleY="1" alpha="0" source="slsb_beijing_png"/>
+		<e:Image id="image_result_1" x="606" y="148" source="lb_ty1_s_png" anchorOffsetX="90" anchorOffsetY="86" scaleX="1" scaleY="1" alpha="0"/>
+		<e:Image id="image_result_2" x="747" y="151" source="lb_ty2_l_png" anchorOffsetX="90" anchorOffsetY="86" scaleX="1" scaleY="1" alpha="0"/>
+		</e:Group>
+		<e:Group id="reward_group" y="221.84" anchorOffsetX="0" anchorOffsetY="0" alpha="0" horizontalCenter="0">
+		<e:Image source="lb_boss_zhyj_png" y="0" x="0"/>
+		</e:Group>
+		<e:Group id="group_itemList" y="373.24" alpha="0" x="257">
+		<e:Image source="line_1013_png" y="0" x="0"/>
+		<e:Image source="line_1013_png" x="0" y="79"/>
+		<e:BitmapLabel id="m_labDamage" x="545" y="90.48" font="font_vip_fnt" text="100000"/>
+		<e:BitmapLabel id="m_labRank" x="545" y="14.11" font="font_vip_fnt" text="第10名"/>
+		<e:Label text="取得名次" x="172" y="13" size="26" fontFamily="Microsoft YaHei" textColor="0xABB7D1"/>
+		<e:Label text="造成伤害" x="172" y="92" textColor="0xABB7D1" size="26" fontFamily="Microsoft YaHei"/>
+		<e:Label id="m_notRank" text="未上榜" x="545" y="13" fontFamily="Microsoft YaHei" textColor="0xE7D7A7"/>
+		</e:Group>
+		<e:Group id="group_itemList1" width="500" height="100" x="417" y="392" />
+		<e:Group id="button_group" width="240" height="75" y="561" anchorOffsetX="0" anchorOffsetY="0" alpha="0" horizontalCenter="0">
+		<com_main:ComButton id="button_continue" y="0" skinName="com_button" currentState="style2" scaleX="1" scaleY="1" x="0"/>
+		</e:Group>
+		<e:Group id="sueecssEffect_group" x="662" y="164" width="0" height="0"/>
+	</e:Group>
+</e:Skin>

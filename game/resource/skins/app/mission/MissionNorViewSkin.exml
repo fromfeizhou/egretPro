@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MissionNorViewSkin" width="1164" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="base,foster" >
+	<e:Group id="m_pViewRoot" anchorOffsetY="0" right="0" bottom="0" touchEnabled="false" left="0" top="61">
+		<e:Group scaleX="1" scaleY="1" width="1093" x="71" top="1" height.foster="579" anchorOffsetY.foster="0" top.foster="1" bottom="0">
+			<e:Scroller id="m_scroll" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" width="100%" height="100%">
+				<e:List id="m_listItem" y="0" scaleX="1" scaleY="1" horizontalCenter="0" anchorOffsetY="0" horizontalCenter.foster="0" height.foster="580" height="689.58">
+					<e:layout>
+						<e:VerticalLayout paddingBottom="106"/>
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+		</e:Group>
+		<e:Group includeIn="foster" left="0" right="0" bottom="-1">
+			<e:Image source="border_009_png" includeIn="foster" scale9Grid="7,7,46,46" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="110" left="0" y="0"/>
+			<com_main:ComButton id="m_pBtnAll" x="1032.97" skinName="com_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" includeIn="foster" verticalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

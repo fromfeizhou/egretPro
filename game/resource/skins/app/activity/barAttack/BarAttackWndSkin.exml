@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BarAttackWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="644" width="1112">
+		<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" top="2" bottom="2" x="2" y="-236" scaleX="1" scaleY="1"/>
+		<e:Label id="m_labTitle" text="黄巾军正在攻打城池" y="85" textColor="0xaac7ff" size="24" horizontalCenter="0"/>
+		<e:Scroller width="1067" height="512" x="23" y="113">
+			<e:Group id="m_pScrollRoot" width="1067">
+				<e:Group id="m_pRoot0" width="1067" x="105" y="113">
+					<e:layout>
+						<e:TileLayout horizontalGap="14" verticalGap="5" rowHeight="184" columnWidth="200"/>
+					</e:layout>
+				</e:Group>
+				<e:Group id="m_pRoot1" width="1067" x="105" y="113">
+					<e:layout>
+					<e:TileLayout horizontalGap="14" verticalGap="5" rowHeight="184" columnWidth="200"/>
+					</e:layout>
+				</e:Group>
+				<e:Group id="m_pRoot2" width="1067" x="115" y="123">
+					<e:layout>
+					<e:TileLayout horizontalGap="14" verticalGap="5" rowHeight="184" columnWidth="200"/>
+					</e:layout>
+				</e:Group>
+				<e:layout>
+					<e:VerticalLayout paddingBottom="100" gap="6"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Image source="border_1019_png" width="100%" bottom="0" touchEnabled="false" height="122"/>
+		<e:Label text="点击城池图标前往查看敌军详情" y="607" size="24" horizontalCenter="0" textColor="0xabb7d1" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

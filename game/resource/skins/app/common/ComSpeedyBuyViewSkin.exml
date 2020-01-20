@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComSpeedyBuyViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1075" height="554" states="resource,more,ten" >
+	<e:Group anchorOffsetX="0" left="0" top="0" bottom="0" right="0">
+		<com_main:APopUp id="m_APopUp" skinName="APopUpSkin" anchorOffsetY="0" scaleX="1" scaleY="1" currentState="size3" anchorOffsetX="0" left="-2" right="2" top="1" bottom="-1"/>
+		<e:Image source="line_001_png" y="86" rotation="90" horizontalCenter="0" scale9Grid="20,0,126,1" width="450"/>
+		<e:Group width="531" height="474" x="7" y="70" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image anchorOffsetY="0" anchorOffsetX="0" source="border_1008_png" scaleX="1" scaleY="1" left="0" right="0" top="11" height="100"/>
+			<e:Image y="109" anchorOffsetY="0" anchorOffsetX="0" source="line_1006_png" scaleX="1" scaleY="1" left="0" right="0"/>
+			<e:Image y="214.96" anchorOffsetY="0" anchorOffsetX="0" source="line_1006_png" scaleX="1" scaleY="1" left="0" right="0"/>
+			<com_main:ComItemNew id="m_ComItem" x="38" y="9" currentState="base" skinName="com_item_new" scaleX="1" scaleY="1"/>
+			<com_main:CLabel id="m_ItemName" text="物品名字" x="146" y="22" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+			<com_main:CLabel id="m_Description" text="物品物品描述物品描述物品描述物品描述物品描述品描述述物品描述物品描述物品描述物品描述物品描述物品描述" y="121.33" anchorOffsetY="0" anchorOffsetX="0" size="22" textColor="0x8A8A9E" width="450.63" height="92.51" scaleX="1" scaleY="1" horizontalCenter="0.5" lineSpacing="8" fontFamily="Microsoft YaHei"/>
+			<com_main:CLabel text="拥有：" textAlign="left" verticalAlign="middle" size="20" y="70.77" anchorOffsetX="0" anchorOffsetY="0" x="149.42" textColor="0xadd7d1" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+			<com_main:CLabel id="m_ItemNum" text="5" textAlign="left" verticalAlign="middle" size="20" y="72.77" anchorOffsetX="0" anchorOffsetY="0" x="201.68" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+			<com_main:CLabel id="m_labFullTip" text="已达购买上限" size="30" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" horizontalCenter="0.5" y="402"/>
+			<e:Group id="m_pComRoot" x="25" y="229.88" width="482" height="224">
+				<com_main:ComCostTextButton id="m_comCostTextButton" currentState="size3" skinName="com_cost_text_button" anchorOffsetX="124.5" anchorOffsetY="41" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="71"/>
+				<e:Group horizontalCenter="0" verticalCenter="-37" width="163" height="60" includeIn="resource">
+					<com_main:CLabel text="购买数量：" x="0" y="0" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+					<com_main:CLabel id="m_labBuyNum" text="10万" x="110" y="0" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+					<com_main:CLabel text="购买次数：" x="0" y="36" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+					<com_main:CLabel text="不限" x="110" y="36" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+				</e:Group>
+				<e:Group y="0" scaleX="1" scaleY="1" width="482" x="0" visible.resource="false" includeIn="resource,more">
+					<e:Image id="m_btnSub" x="32" y="86.7" source="btn_010_up_png" anchorOffsetX="32" anchorOffsetY="32"/>
+					<ns1:Hslider id="m_slider" xmlns:ns1="*" y="66.72" anchorOffsetX="0" width="308" skinName="HsliderSkin" scaleX="1" scaleY="1" height="38" horizontalCenter="0"/>
+					<e:Image id="m_btnAdd" x="450" y="86.7" source="btn_011_up_png" anchorOffsetX="32" anchorOffsetY="32"/>
+					<e:Group x="85" y="0" width="312" height="44">
+						<e:Image x="0" anchorOffsetY="0" anchorOffsetX="0" source="border_008_png" scale9Grid="52,17,13,13" width="312" y="0" scaleX="1" scaleY="1"/>
+						<com_main:CLabel id="m_ItemSelectNum" text="1000000/10000000" textAlign="center" verticalAlign="middle" size="28" y="4" anchorOffsetX="0" anchorOffsetY="0" height="38" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" horizontalCenter="0"/>
+					</e:Group>
+				</e:Group>
+				<e:Group width="501" height="103" includeIn="ten" y="24" horizontalCenter="-2.5" anchorOffsetX="0" anchorOffsetY="0">
+					<e:Group id="m_pLessTen" x="0" y="36">
+						<e:Image source="btn_115_png" x="0" y="0" width="100" scale9Grid="7,6,44,36"/>
+						<com_main:CLabel text="-10" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="76" textAlign="center" horizontalCenter="0" verticalCenter="0" textColor="0xabb7d1"/>
+					</e:Group>
+					<e:Group id="m_pLessOne" x="109" y="36">
+						<e:Image source="btn_115_png" x="0" y="0"/>
+						<com_main:CLabel text="-1" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="42" textAlign="center" horizontalCenter="0" verticalCenter="0" textColor="0xabb7d1"/>
+					</e:Group>
+					<e:Group id="m_pAddTen" x="389" y="36">
+						<e:Image source="btn_115_png" x="0" y="0" width="100" scale9Grid="7,6,44,36"/>
+						<com_main:CLabel text="+10" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="67" textAlign="center" verticalCenter="0" horizontalCenter="0" textColor="0xabb7d1"/>
+					</e:Group>
+					<e:Group x="178" y="38">
+						<e:Image source="border_008_png" y="0" x="0"/>
+						<!--<com_main:CLabel id="m_labBuyCount" text="600000" y="11" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="107" textAlign="center" x="12" textColor="0xabb7d1"/>-->
+						<e:EditableText id="m_labBuyCount" width="130" height="45" promptColor="0xabb7d1" textColor="0xabb7d1" anchorOffsetX="0" anchorOffsetY="0" size="24" textAlign="center"  text="10"  verticalCenter="0" verticalAlign="middle"/>
+					</e:Group>
+					<e:Group id="m_pAddOne" x="318" y="36">
+						<e:Image source="btn_115_png" x="0" y="0"/>
+						<com_main:CLabel text="+1" size="24" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="42" textAlign="center" horizontalCenter="0" verticalCenter="0" textColor="0xabb7d1"/>
+					</e:Group>
+					<com_main:CLabel text="购买数量" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" horizontalCenter="0" y="2" textAlign="center" includeIn="ten" x="205" textColor="0x8a8a9e"/>
+				</e:Group>
+			</e:Group>
+		</e:Group>
+		<e:Group x="538" y="70">
+			<e:Image source="border_005_jpg" x="0" y="3.17" scale9Grid="7,7,49,49" anchorOffsetX="0" width="525" anchorOffsetY="0" height="472" scaleX="1" scaleY="1" alpha="0.5"/>
+			<e:Group x="46.98" y="17">
+				<e:Image source="line_011_png" x="0" y="7" alpha="0.5"/>
+				<e:Image source="line_011_png" x="436.67" y="7" scaleX="-1" alpha="0.5"/>
+				<com_main:CLabel id="m_labName" text="物品名" size="30" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" horizontalCenter="0" y="0" textAlign="center"/>
+			</e:Group>
+			<e:Scroller width="522" height="400" x="5" y="67" anchorOffsetX="0" anchorOffsetY="0">
+				<e:List id="m_groupRender" anchorOffsetX="0" x="-2.5" y="8">
+					<e:layout>
+						<e:VerticalLayout/>
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+		</e:Group>
+	</e:Group>
+</e:Skin>

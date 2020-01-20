@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TeamFateViewSkin" width="1120" height="644" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1120" height="644" x="0" y="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="2" top="2" bottom="2" right="2"/>
+		<e:Image y="141" source="border_1008_png" scaleY="-1" horizontalCenter="3" width="1094" anchorOffsetX="0"/>
+		<e:Image source="zyt_07_png" horizontalCenter="1.5" y="66" alpha="0.5" fillMode="scale" anchorOffsetX="0" width="1103" anchorOffsetY="0" height="572"/>
+		<e:Image source="zyt_17_png" horizontalCenter="-69.5" alpha="0.5" fillMode="scale" anchorOffsetX="0" anchorOffsetY="0" width="959" height="163" bottom="12"/>
+		<e:Scroller id="m_fateScroller" width="1070" height="490" y="102" anchorOffsetX="0" anchorOffsetY="0" x="40">
+			<e:List id="m_List" y="-69" x="-1" anchorOffsetX="0" width="1070" itemRendererSkinName="TeamFateCellSkin">
+				<e:layout>
+					<e:VerticalLayout gap="0"/>
+				</e:layout>
+				<e:ArrayCollection>
+			<e:Array>
+				<e:Object asdasd="null"/>
+				<e:Object asdasd="null"/>
+				<e:Object asdasd="null"/>
+			</e:Array>
+			</e:ArrayCollection>
+			</e:List>
+		</e:Scroller>
+		<e:Image source="border_1019_png" width="100%" bottom="0" touchEnabled="false" height="84" alpha="0.8" anchorOffsetY="0" x="0"/>
+	</e:Group>
+</e:Skin>

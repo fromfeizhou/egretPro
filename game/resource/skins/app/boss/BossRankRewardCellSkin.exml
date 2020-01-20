@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossRankRewardCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="665" height="108">
+	<e:Group anchorOffsetY="0" anchorOffsetX="0" left="0" top="0" bottom="0" right="0">
+		<e:Group x="3" y="-21">
+			<e:Image source="border_1034_png" y="0" scale9Grid="19,19,115,114" scaleX="1" scaleY="1" x="0"/>
+			<e:Label id="m_rankingNum" text="" size="24" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" textColor="0xededf4"/>
+			<e:Image id="m_rankingCoin" source="Icon_List_NO1_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+		</e:Group>
+		<e:Image source="line_008_png" x="0" y="105" width="665" scale9Grid="98,0,593,2"/>
+		<e:Scroller bottom="0" left="200" right="8" top="0">
+		<e:Group id="m_rItemsRoot">
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" gap="25"/>
+			</e:layout>
+		</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

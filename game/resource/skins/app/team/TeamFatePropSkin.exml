@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TeamFatePropSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="145" height="20" touchEnabled="false" anchorOffsetY="0" touchChildren="false">
+		<e:Image id="m_imgIcon" source="common_armyhp_png" x="6.8" scaleX="0.6" scaleY="0.6" verticalCenter="-0.5"/>
+		<e:Label id="m_labProp" text="兵力:10000" x="29.8" size="16" textColor="0xe9e9e6" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

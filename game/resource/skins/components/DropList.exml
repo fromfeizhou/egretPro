@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DropList" width="200" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="15905981324"/>
+	<e:Group width="100%" height="100%" x="0" y="0" touchEnabled="false">
+		<e:Scroller id="scView" scrollPolicyH="off" scrollPolicyV="on" width="100%" height="100%" y="0" anchorOffsetX="0" anchorOffsetY="0" bounces="false" left="0">
+			<e:List id="listView" left="0" anchorOffsetY="0" height="100%">
+				<e:itemRendererSkinName>
+					<e:Skin>
+						<e:Label text="{data.type}" size="100"/>
+					</e:Skin>
+				</e:itemRendererSkinName> 
+				<!--<e:ArrayCollection>
+					<e:Array>
+						<e:Object type="枪兵"/>
+						<e:Object type="投石车"/>
+						<e:Object type="弓箭手"/>
+					</e:Array>
+				</e:ArrayCollection>-->
+			</e:List>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

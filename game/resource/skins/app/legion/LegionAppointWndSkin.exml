@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionAppointWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="560">
+	<e:Group width="560" height="600" horizontalCenter="0" verticalCenter="0">
+		<com_main:APopUp id="m_PopUp" x="1" y="0" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1"/>
+		<com_main:CLabel text="职位" top="75" left="50" size="32" x="50" y="75" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+		<com_main:CLabel text="数量" horizontalCenter="0" top="75" size="32" x="248" y="75" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+		<com_main:CLabel text="操作" top="75" right="50" size="32" x="446" y="75" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="line_1002_png" left="5" right="5" top="113" x="5" y="113" scaleX="1" scaleY="1"/>
+		<e:Scroller id="m_Scroller" left="30" right="30" bottom="16" top="113" anchorOffsetY="0" anchorOffsetX="0" x="30" y="113" scaleX="1" scaleY="1" scrollPolicyH="off" scrollPolicyV="on">
+			<e:List id="m_ItemList" x="240" y="305" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="LegionAppointCellSkin">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="top"/>
+			</e:layout>
+			</e:List>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

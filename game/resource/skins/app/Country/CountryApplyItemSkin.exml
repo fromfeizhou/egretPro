@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryApplyItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" width="1334" states="Job,Manage" height="100">
+	<com_main:ComHeadItem id="m_RoleHead" anchorOffsetX="0" anchorOffsetY="0" y="-6.34" x="27.33" scaleX="0.9" scaleY="0.9" width="115" height="127"/>
+	<com_main:CLabel id="m_playerName" text="" x="172" verticalCenter="0" fontFamily="Microsoft YaHei" />
+	<e:Group x="362" verticalCenter="0">
+		<com_main:CImage source="lb_zdl_png" horizontalCenter="-43" verticalCenter="0" />
+		<com_main:CLabel id="m_pAggressivity" text="hhhhhhh" verticalCenter="0.5" size="28"
+		                 fontFamily="Microsoft YaHei"  anchorOffsetX="0" width="188" x="76"/>
+	</e:Group>
+	<com_main:CLabel id="m_pMilitary" text="" x="678" verticalCenter="0" />
+	<com_main:CLabel id="m_pLegion" text="大师大师" size="22" x="800" width="154" textAlign="center" verticalCenter="0"
+	                 fontFamily="Microsoft YaHei" anchorOffsetX="0"  verticalCenter.Job="0" x.Job="867"/>
+	<com_main:CLabel id="m_pCityNum" size="22" verticalCenter="0" fontFamily="Microsoft YaHei" includeIn="Manage" text="0"
+	                 anchorOffsetX="0" width="150" horizontalCenter="358" textAlign="center" />
+	<e:Group width="200" right="0" top="0" bottom="0">
+		<com_main:ComButton id="m_Btn" currentState="style1" skinName="com_button" verticalCenter="0" y="-12" scaleX="1"
+		                    scaleY="1" horizontalCenter="0" />
+	</e:Group>
+	<e:Image anchorOffsetX="0" width="1334" scaleX="1" scaleY="1" anchorOffsetY="0" x="1" y="98" source="line_001_png" />
+</e:Skin>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_box_widget" width="132" height="114" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*">
+	<com_main:CImage scaleX="1" scaleY="1" source="border_1001_png" width="100%" height="100%" horizontalCenter="0" anchorOffsetY="0" verticalCenter="0"/>
+	<com_main:CImage scaleX="1" scaleY="1" anchorOffsetY="0" height="8.6" horizontalCenter="0" source="line_009_png" width="100%" bottom="0" alpha="0.5"/>
+	<com_main:CImage scaleX="1" scaleY="1" anchorOffsetY="0" height="8.6" horizontalCenter="0" source="line_009_png" width="100%" top="0" alpha="0.5"/>
+</e:Skin>

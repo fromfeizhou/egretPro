@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankActViewSkin" width="1159" height="676" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="power,country,legion" >
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Image id="m_imgIcon" y="0" left="0" right="-2" x="0" scaleX="1" scaleY="1" source="hd_10201_jpg"/>
+		<e:Group y="56.33" left="41" x="89" scaleX="1" scaleY="1" left.country="39" y.country="21.33" y.legion="2.33" left.legion="39">
+			<e:Image source="border_1058_png" x="0" y="0" x.legion="-3.04"/>
+			<com_main:CLabel id="m_labOpenTime" text="2月17日23时-2月18日23时" textColor="0xE5E3E3" fontFamily="Microsoft YaHei" size="20" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<com_main:CLabel text="活动结束时奖励通过系统邮件发送！" textColor="0xE5E3E3" fontFamily="Microsoft YaHei" size="24" scaleX="1" scaleY="1" y="116.96" x="45.01" stroke="2" strokeColor="0xb7524a" y.legion="119.96" x.power="49.55"/>
+		<com_main:CLabel text="各国前10名可获得对应奖励" fontFamily="Microsoft YaHei" size="24" scaleX="1" scaleY="1" x="76.45" y="85.33" includeIn="country,legion" textColor="0xe5e3e3" strokeColor="0xb7524a" stroke="2" text.legion="排名前三联盟盟主和该盟前三战力玩家可获得奖励" x.legion="52.54" wordWrap.legion="true" y.legion="60.33" anchorOffsetX.legion="0" width.legion="338" lineSpacing.legion="5" x.country="88.94"/>
+
+		<e:Group id="m_pViewRoot" x="0" y="151" height="525" width="1159">
+			<e:Group height="60" y="0" width="100%" x="0">
+				<com_main:CImage scaleX="1" scaleY="1" left="0" top="0" bottom="-5" right="0" source="border_007_png"/>
+				<com_main:CImage scaleX="1" scaleY="1" left="0" right="0" source="border_1008_png" top="0" bottom="0"/>
+				<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="576" verticalCenter.country="0.5" x.country="466.89"/>
+				<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="250"/>
+				<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="850" verticalCenter.country="0.5" x.country="655.64"/>
+				<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" bottom="0" left="0" right="0" height="5"/>
+				<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0"/>
+				<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" left="0" right="0" top="0" height="5"/>
+				<com_main:CLabel text="排名" x="99.41" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E"/>
+				<com_main:CLabel text="玩家名称" x="350" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E" text.country="国家" verticalCenter.country="0" x.country="338.83" text.legion="联盟名称"/>
+				<com_main:CLabel text="奖励" x="975" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E" verticalCenter.country="0" x.country="865.93"/>
+				<com_main:CLabel id="m_labTitle" text="战斗力" x="675" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E" verticalCenter.country="0" x.country="534.97" text.country="城市" text.legion="总战力"/>
+				<com_main:CLabel text="战斗力" x="428" verticalCenter="0" textColor="0x8A8A9E" size="24" visible="false"/>
+			</e:Group>
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" width="100%" x="0" top="65" bottom="1">
+				<e:Scroller anchorOffsetY="0" left="0" right="0" top="0" bottom="0">
+				<e:List id="m_listItem">
+					<e:layout>
+					<e:VerticalLayout paddingBottom="80"/>
+					</e:layout>
+
+				</e:List>
+				</e:Scroller>
+			</e:Group>
+		</e:Group>
+		<e:Group bottom="-1" right="0" left="0" touchEnabled="false" touchThrough="false">
+			<e:Image source="border_1019_png" left="0" right="0" bottom="-2" height="122"/>
+			<e:Group horizontalCenter="0" bottom="7" width="284" includeIn="power">
+				<e:Image source="zyt_xj_wg_png" scale9Grid="25,5,155,30" y="0" width="284" x="0"/>
+				<com_main:CLabel id="m_labCurrRank" text="你目前排名：" textColor="0xE5E3E3" fontFamily="Microsoft YaHei" size="20" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

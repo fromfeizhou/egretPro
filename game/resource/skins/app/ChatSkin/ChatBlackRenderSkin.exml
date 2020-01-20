@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChatBlackRenderSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1045" height="127">
+	<e:Group x="0" y="0" width="100%" height="100%">
+		<e:Group width="100%" anchorOffsetX="0" anchorOffsetY="0" height="100%" x="0" y="0" touchChildren="false" touchEnabled="false">
+			<e:Image id="m_imgLine" source="line_1006_png" y="122.02" width="100%" horizontalCenter="-0.16"/>
+			<e:Label id="m_labLegion" text="一二三" x="129" y="59.01" textColor="0xABB7D1" size="22"/>
+			<e:Group x="121" touchChildren="false" touchEnabled="false" scaleX="1" scaleY="1" y="7.99">
+			<com_main:ComState id="m_comState" x="0" y="0" skinName="ComStateSkin"/>
+			<e:Label id="m_labTitle" text="一二三" x="61" y="13" textColor="0xABB7D1" size="22"/>
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle" gap="6"/>
+			</e:layout>
+			</e:Group>
+			<e:Label text="等级" x="435.34" y="39" textColor="0xABB7D1" size="24" visible="false"/>
+			<e:Label id="m_labLevel" text="88" x="494.35" y="39.01" size="24" textColor="0xe9e9e6" visible="false"/>
+			<e:Label text="屏蔽时间" x="610.34" y="39" textColor="0xABB7D1" size="24" visible="false"/>
+			<e:Label id="m_labTime" text="88" x="724.36" y="39" size="24" textColor="0xe9e9e6" visible="false"/>
+		</e:Group>
+		<com_main:ComHeadItem id="m_comHead" scaleX="1" scaleY="1" width="115" height="127"/>
+		<com_main:ComButton id="m_btnOpen" y="53.33" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" right="8"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BaojiSkin" width="237" height="92" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:BitmapLabel id="num" font="baojiNum_fnt" text="暴击111" letterSpacing="-6" horizontalCenter="0" anchorOffsetY="28" y="46"/>
+</e:Skin>

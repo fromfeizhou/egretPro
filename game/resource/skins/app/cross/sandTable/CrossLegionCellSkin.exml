@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossLegionCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" >
+	<e:Group width="1099" height="123" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:CImage scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="line_008_png" y="121" left="0" right="0"/>
+		<com_main:CLabel id="m_RankLab" text="1" verticalCenter="0.5" textColor="0xe9e9e6" fontFamily="Microsoft YaHei" size="24" x="39.64" textAlign="center"/>
+
+		<com_main:CLabel id="m_pLegionName" text="倚天屠龙级一"  size="24" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" x="504.7" textColor="0xe9e9e6" verticalCenter="0" width="144"/>
+		<com_main:CLabel id="m_pPower" text="989879659" verticalCenter="0" y="-5" size="24" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" x="777.39" textColor="0xffff99" width="127"/>
+		<com_main:CLabel id="m_pTroops" text="50%" verticalCenter="0" y="5" size="24" fontFamily="Microsoft YaHei" anchorOffsetX="0" textAlign="center" x="1009.03" width="64" textColor="0x00ff00"/>
+		<e:Group x="132.67" anchorOffsetY="0" verticalCenter="0.5" width="115" height="120">
+
+		<com_main:CLabel id="m_PlayerName" x="116.02" text="霸王别姬" verticalCenter="0"  fontFamily="Microsoft YaHei" textColor="0xe9e9e6" size="24"/>
+
+		<com_main:ComHeadItem id="m_PlayerHead"  verticalCenter="0" x="0"/>
+		</e:Group>
+	</e:Group>
+
+
+</e:Skin>

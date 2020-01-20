@@ -1,0 +1,180 @@
+/**
+ * Created by CJS on 2017/5/31.
+ * 创建 白鹭极速格式 的动画。不涉及回收，使用时请注意！！！！！
+ * 1)白鹭极速格式 的原理是将复杂的动画直接缓存到二进制数据中，这样就不需要在运行时缓存，也不需要复杂的解析数据过程，
+ * 更不需要创建中间数据结构，优化了动画初始化的性能和内存的开支，相应的将不支持融合动画、混合动画、网格动画，
+ * 由于运行时没有皮肤、骨骼、插槽的概念，所以不支持获取骨骼或插槽的位置，无法修改骨骼或插槽的任何属性，也就不支持换装。
+ * 2)白鹭极速格式 适用于那些完全不需要在播放中改变的动画（或称之为静态动画），可以理解为动画设计师把动画制作成什么样子，
+ * 动画在程序中播放就是什么样子，程序没有办法动态的改变动画中的任何元素。
+ * 使用时，初始化一次
+ * 在打开界面时play()
+ * 关闭界面时remove2Clock()
+ */
+class MovieDragonBones extends egret.DisplayObjectContainer {
+    public constructor() {
+        super();
+        this.touchEnabled = false;
+        this.touchChildren = false;
+    }
+    /**龙骨动画*/
+    private _mDBMovie: dragonBones.Movie = null;
+    private _mInit: boolean = false;//是否已初始化过
+    private _mDBName: string = null;//龙骨名字    
+    private m_pIsLoadDbmv: boolean = false;//是否已加载完龙骨二进制文件
+    private m_pIsLoadPng: boolean = false; //是否已加载完龙骨图片
+    private m_pPlayName: string = null;
+    private m_pPlayTimes: number = 0;
+    private m_pTimeScale: number = 1;//时间加速
+    private m_pIsRemoveAll: boolean = false; //是否已经移除
+    private m_pIsPlay: boolean = false;      //是否在播放
+    private m_pAddEvent: any = null;
+
+    private _scaleX = 1;
+    private _scaleY = 1;
+
+    public init(dbName: string) {
+        if (this._mInit) return;
+        this._mDBMovie = DragonBonesManager.getDragonBonesMovie(dbName);
+        this.addChild(this._mDBMovie);
+        this._mInit = true;
+        this._mDBMovie.scaleX = this._scaleX;
+        this._mDBMovie.scaleY = this._scaleY;
+    }
+
+    /**异步加载资源 */
+    public initAsync(dbName: string) {
+        this._mDBName = dbName;
+        if (this.checkData(dbName) == false) {
+           // error("没有龙骨资源=" + dbName);
+            this.downloadData(dbName);
+        } else {
+            this.init(dbName);
+        }
+    }
+    public stop() {
+        this.m_pIsPlay = false;
+        error("stop()-" + this._mDBName);
+        if (this._mDBMovie != null) {
+            this._mDBMovie.stop();
+        }
+    }
+    public dbTimeScale(_timeScale: number) {
+        if (this._mDBMovie) {
+            this._mDBMovie.timeScale = _timeScale;
+        }
+        this.m_pTimeScale = _timeScale;
+    }
+    public setScale( scaleX:number,scaleY:number, ){
+        this._scaleX = scaleX;
+        this._scaleY = scaleY;
+    }
+    public addDBEventListener(eventType: string, onResourceLoadError: Function, target: any) {
+        if (this._mDBMovie) {
+            this._mDBMovie.addEventListener(eventType, onResourceLoadError, target);
+        } else {
+            this.m_pAddEvent = [eventType, onResourceLoadError, target];
+        }
+    }
+    public removeDBEventListener(eventType: string, onResourceLoadError: Function, target: any) {
+        if (this._mDBMovie) {
+            this._mDBMovie.removeEventListener(eventType, onResourceLoadError, target);
+        } else {
+            if (this.m_pAddEvent) {
+                this.m_pAddEvent[0] = null;
+                this.m_pAddEvent[1] = null;
+                this.m_pAddEvent[2] = null;
+            }
+            this.m_pAddEvent = null;
+        }
+    }
+    public gotoAndPlay( clipName: string | null | undefined, time: number, playTimes?: number) {
+        if (this._mDBMovie == null) {
+            this.m_pPlayName = clipName;
+            this.m_pPlayTimes = playTimes;
+            this.m_pIsPlay = true;
+            return;
+        } else {
+            this._mDBMovie.gotoAndPlay(clipName, time, playTimes );
+        }
+    }
+    public play(clipName?: string | null, playTimes?: number) {
+         if (this._mDBMovie == null) {
+            this.m_pPlayName = clipName;
+            this.m_pPlayTimes = playTimes;
+            this.m_pIsPlay = true;
+            return;
+        } else {
+            this._mDBMovie.play( clipName,  playTimes );
+        }
+    }
+    public getRemainTime() {
+        if (this._mDBMovie != null) {
+            return this._mDBMovie.totalTime - this._mDBMovie.currentTime;
+        }
+        return 0;
+    }
+    // public get movie() {
+    //     return this._mDBMovie;
+    // }
+    public removeAll() {
+        this.m_pIsPlay = false;
+        this.m_pIsRemoveAll = true;
+        if (!this._mInit) return;
+        this._mInit = false;
+        this.removeChildren();
+        this.stop();
+        if (this._mDBMovie) {
+            this._mDBMovie.dispose();
+        }
+        this._mDBMovie = null;
+        this._mDBName = null;
+        this.m_pPlayName = null;
+        if (this.m_pAddEvent) {
+            this.m_pAddEvent[0] = null;
+            this.m_pAddEvent[1] = null;
+            this.m_pAddEvent[2] = null;
+        }
+        this.m_pAddEvent = null;
+    }
+    public destroy(){
+        this.visible = false;
+        this.removeAll();
+        this.parent.removeChild( this );
+    }
+    //检查是否已存在龙骨数据
+    private checkData(dbName: string): boolean {
+        let skeletonData = RES.getRes(dbName + "_ske_dbmv");
+        let textureData = RES.getRes(dbName + "_tex_png");
+        if (skeletonData == null || textureData == null) {
+            return false;
+        }
+        return true;
+    }
+    //下载相关数据
+    private downloadData(dbName: string) {
+        let _dbmvStr: string = dbName + "_ske_dbmv";
+        let _pngStr: string = dbName + "_tex_png";
+        let resArr: Array<string> = [_dbmvStr, _pngStr];
+        RES.addEventListener( RES.ResourceEvent.GROUP_COMPLETE, this.downloadFinsh, this );
+        RES.loadGroup(dbName);
+      //  ResLoadManager.getInstance().addLoadPriorityResArr(resArr, this.downloadFinsh, null, null, this);
+    }
+    //下载完成
+    private downloadFinsh() {
+        if (this.checkData(this._mDBName) == false) {
+            this.downloadData(this._mDBName);
+        } else {
+            this.init(this._mDBName);
+            if (this.m_pPlayName != null && this.m_pIsPlay == true) {
+                this.dbTimeScale(this.m_pTimeScale);
+                if (this.m_pAddEvent) {
+                    this.addDBEventListener(this.m_pAddEvent[0], this.m_pAddEvent[1], this.m_pAddEvent[2])
+                }
+                this.play(this.m_pPlayName, this.m_pPlayTimes);
+            }
+        }
+    }
+    public getDBName(){
+        return this._mDBName;
+    }
+}

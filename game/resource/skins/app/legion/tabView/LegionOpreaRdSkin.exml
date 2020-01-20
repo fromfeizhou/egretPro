@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionOpreaRdSkin" xmlns:e="http://ns.egret.com/eui">
+	<e:Group width="166" height="63">
+		<e:Image source="btn_042_up_png" x="-2.8" y="-2.8"/>
+		<e:Label id="m_pTitleLabel" size="24" stroke="2" strokeColor="0x885A2A" textColor="0xE9E9E6" verticalAlign="middle" textAlign="center" borderColor="0x000000"  touchEnabled="false" horizontalCenter="0" verticalCenter="0" text="{data.name}"/>
+	</e:Group>
+</e:Skin>

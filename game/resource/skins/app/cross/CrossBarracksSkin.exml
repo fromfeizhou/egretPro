@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossBarracksSkin" width="682" height="491" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="682" height="491" x="0" y="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size1" left="0" top="0" bottom="0" right="0"/>
+		<e:Label id="m_content" text="跨服战\n可使用元宝\n兵库每30秒" x="32" y="80" fontFamily="Microsoft YaHei" size="24" textColor="0xabb7d1" width="612" anchorOffsetY="0" height="97" lineSpacing="9"/>
+		<e:Label text="后自动恢复" x="317" y="251" textColor="0xabb7d1" size="22" fontFamily="Microsoft YaHei" visible="false"/>
+		<e:Label id="m_autoAdd" text="00:19" x="254" y="251" size="22" fontFamily="Microsoft YaHei" textColor="0xff0202" scaleX="1" scaleY="1" visible="false"/>
+		<e:Group width="542" height="54" x="79" y="200" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image width="471" x="40" y="14" source="pro_005_png" scale9Grid="3,3,18,18" anchorOffsetX="0" scaleX="1" scaleY="1"/>
+			<e:Image id="m_hpImg" width="466" height="20" x="43" y="16" source="pro_003_png"/>
+			<e:Image x="13.019999999999996" y="7.710000000000008" scaleX="0.74" scaleY="0.74" touchEnabled="false" source="gt_bg_png"/>
+			<e:Image x="18.319999999999993" y="15.300000000000011" touchEnabled="false" source="common_armyhp_png" scaleX="1" scaleY="1"/>
+			<e:Label id="m_hpLb" text="剩余总兵力：1000000000" y="15" size="20" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+		</e:Group>
+		<e:Label id="m_lbAddHelp" text="" y="331" horizontalCenter="0.5" size="24" fontFamily="Microsoft YaHei" visible="false"/>
+        <com_main:ComCostTextButton id="m_pAddBtn" skinName="com_cost_text_button" currentState="size3"  anchorOffsetX="125" anchorOffsetY="41" y="425" x="342" visible="false"/>
+	</e:Group>
+</e:Skin>

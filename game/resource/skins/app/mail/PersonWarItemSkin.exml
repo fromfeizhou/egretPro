@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PersonWarItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:AGame="AGame.*" >
+	<e:Group width="710" height="188" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="line_1007_png" horizontalCenter="0" height="100%" y="0"/>
+		<e:Image source="border_006_png" anchorOffsetY="0" height="34" anchorOffsetX="0" width="100%" x="4.47" scaleX="1" scaleY="1"/>
+		<e:Label id="m_lbIndex" text="第一战" x="292.46" y="7.51" size="22" textAlign="center" width="120" scaleX="1" scaleY="1" textColor="0x8a8a9c"/>
+		<e:Group width="350" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" height="150" y="36.52" x="1.52">
+			<com_main:ComState id="m_comState0" x="78" y="9" skinName="ComStateSkin"/>
+		<e:Label id="m_playerName0" text="玩家的名称" x="118.73" y="18.67" size="22" stroke="0.5" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Group x="19.55" y="58.84" height="40">
+				<e:Image source="border_1011_png" horizontalCenter="0" bottom="3" locked="true"/>
+				<e:Image source="line_1003_png" scaleY="-1" bottom="-2" horizontalCenter="0"/>
+				<e:Label id="m_armsName0" text="部队的名称" x="25.12" y="6" size="22" scaleX="1" scaleY="1" textColor="0xE7C772"/>
+				<e:Label id="m_power0" text="999999" x="221.24" y="6" size="22" scaleX="1" scaleY="1" textColor="0xE7C772"/>
+				<e:Image source="border_016_png" x="181" y="0" scaleX="0.6" scaleY="0.6"/>
+				<e:Image source="common_fight_png" x="181.62" y="-4" scaleX="0.8" scaleY="0.8"/>
+			</e:Group>
+			<e:Group x="8" y="112" width="50" height="35">
+				<e:Image source="border_1003_png" x="0" y="0" anchorOffsetY="0" height="100%" anchorOffsetX="0" width="100%" scale9Grid="6,6,38,38"/>
+				<e:Label text="兵力" size="16" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" textColor="0xe9e9e6"/>
+			</e:Group>
+			<e:Group x="62" y="115">
+				<e:Image source="pro_005_png" x="1" y="0"  height="25" width="280" scale9Grid="3,3,18,18"/>
+				<e:Image id="m_imgPro0" source="pro_003_png" y="2" width="223" x="2"/>
+				<e:Label id="m_lbArmsCount0" text="10000/15205" size="20" scaleX="1" scaleY="1" textAlign="center" horizontalCenter="0" verticalCenter="0" textColor="0xe9e9e6"/>
+			</e:Group>
+			<e:Group id="m_groupGenerals0" height="187" x="6.47" y="151" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" width="277" visible="false">
+				<e:layout>
+					<e:TileLayout requestedColumnCount="3" horizontalGap="-7" verticalGap="0" horizontalAlign="left" columnWidth="97"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group width="350" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" height="154" y="36.52" x="355.52">
+			<com_main:ComState id="m_comState1" x="78" y="9" skinName="ComStateSkin"/>
+			<e:Label id="m_playerName1" text="玩家的名称" x="118.73" y="18.67" size="22" stroke="0.5" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Group x="19.55" y="58.84" height="40">
+			<e:Image source="border_1011_png" horizontalCenter="0" bottom="3"/>
+			<e:Image source="line_1003_png" scaleY="-1" bottom="-2" horizontalCenter="0"/>
+			<e:Label id="m_armsName1" text="部队的名称" x="25.12" y="6" size="22" scaleX="1" scaleY="1" textColor="0xE7C772"/>
+			<e:Label id="m_power1" text="999999" x="221.24" y="6" size="22" scaleX="1" scaleY="1" textColor="0xE7C772"/>
+			<e:Image source="border_016_png" x="181" y="0" scaleX="0.6" scaleY="0.6"/>
+			<e:Image source="common_fight_png" x="181.62" y="-4" scaleX="0.8" scaleY="0.8"/>
+			</e:Group>
+			<e:Group x="8" y="112" width="50" height="35">
+			<e:Image source="border_1003_png" x="0" y="0" anchorOffsetY="0" height="100%" anchorOffsetX="0" width="100%" scale9Grid="6,6,38,38"/>
+			<e:Label text="兵力" size="16" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" textColor="0xe9e9e6"/>
+			</e:Group>
+			<e:Group x="62" y="115">
+			<e:Image source="pro_005_png" x="1" y="0" height="25" width="280" scale9Grid="3,3,18,18"/>
+			<e:Image id="m_imgPro1" source="pro_003_png" y="2" width="223" x="2"/>
+			<e:Label id="m_lbArmsCount1" text="10000/15205" size="20" scaleX="1" scaleY="1" textAlign="center" textColor="0xE9E9E6" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="m_groupGenerals1" height="187" x="79.24" y="151" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" width="277" visible="false">
+			<e:layout>
+				<e:TileLayout requestedColumnCount="3" horizontalGap="-7" verticalGap="0" horizontalAlign="right" columnWidth="97"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group y="27" scaleX="0.5" scaleY="0.5" horizontalCenter="0">
+			<e:Image source="border_1034_png" x="0" y="0" scaleX="1.2" scaleY="1.2"/>
+			<e:Image id="m_imgResult" scaleX="0.6" scaleY="0.6" horizontalCenter="4.5" verticalCenter="-2" source="lb_ty4_b_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_rank_army" width="245" height="40" currentState="solider1" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="cross,solider4,solider3,solider2,solider1" >
+	<e:Group height="40" anchorOffsetX="0" width="245">
+		<e:Group x="28.93"  verticalCenter="0" width="210">
+		<e:Image width="215"  scale9Grid="3,3,18,18"  height="28" source="pro_005_png"/>
+		<e:Image id="m_pTroops" width="213" source="pro_003_png" height="24"  verticalCenter="0"/>
+		</e:Group>
+		<e:Group width="40" height="40" x="2" y="0">
+		<e:Image source="border_016_png" width="40" height="40" />
+		<e:Image source="general_type_gongbing2_png" source.cross="common_armyhp_png" source.solider4="general_type_qiangbing2_png" source.solider2="general_type_qibing2_png" source.solider1="general_type_bubing2_png" y="-4" x.solider4="0" y.solider4="-5" scaleY.solider4="0.9" scaleX.solider4="0.9" verticalCenter.cross="0" left.cross="5"/>
+		</e:Group>
+		<e:Label id="m_pLbPower" text="3000" size="18" verticalCenter="0" x="102" horizontalCenter.cross="0" verticalCenter.cross="1"/>
+		<e:Group id="m_pArmyAddBtn" x="25.37" width="75" height="75" anchorOffsetX="37.5" anchorOffsetY="37.5" y="29.5" visible="false">
+			<e:Image source="btn_097_up_png" anchorOffsetX="25" anchorOffsetY="24" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="m_pImgEffect" source="border_1046_png" anchorOffsetX="37.5" anchorOffsetY="37.5" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

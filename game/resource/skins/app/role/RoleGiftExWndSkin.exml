@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RoleGiftExWndSkin" width="750" height="500" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="500">
+		<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" x="0" y="0" width="750" currentState="size1" height="500"/>
+		<e:Label id="m_labTitle" text="请输入" y="158" size="24" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" anchorOffsetX="0" width="358" horizontalCenter="0" textAlign="center"/>
+		<com_main:ComButton id="m_btnExchange" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style2" y="438" horizontalCenter="0"/>
+		<e:Group x="108" y="203.67">
+			<e:Image source="border_031_png" y="0" anchorOffsetX="0" width="533.33" scale9Grid="16,15,47,50" anchorOffsetY="0" height="62.67" x="0"/>
+			<e:EditableText id="InputLabel" width="479" height="48" promptColor="0x5d5f64" anchorOffsetX="0" anchorOffsetY="0" size="20" verticalAlign="middle" y="7.46" scaleX="1" scaleY="1" prompt="请输入兑换码" text="" rotation="359.92" fontFamily="Microsoft YaHei" textAlign="center" horizontalCenter="0" textColor="0xe9e9e6"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

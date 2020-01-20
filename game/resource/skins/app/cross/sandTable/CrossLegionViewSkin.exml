@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossBuffViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1118" height="651" anchorOffsetX="0" anchorOffsetY="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="2" top="2" bottom="2" right="2"/>
+		<e:Label id="m_labLegionState" text="【皇帝】" y="76.32" size="26" fontFamily="Microsoft YaHei" textColor="0xe7c772" x="27.44" width="628"/>
+		<e:Group scaleX="1" scaleY="1" height="60" y="116.68" x="7.55" anchorOffsetX="0" width="1102">
+			<com_main:CImage scaleX="1" scaleY="1" source="border_007_png" width="100%"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="border_1008_png" left="0" right="0" top="0" bottom="0"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="95.73" y="173.31999999999996"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="439.21" y="183.31999999999996"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="706.79" y="193.31999999999996"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="951.79" y="203.31999999999996"/>
+			<e:Label text="序号" size="24" fontFamily="Microsoft YaHei" textColor="0xabb7d1" x="27.31" y="20"/>
+			<e:Label text="玩家名称" size="24" fontFamily="Microsoft YaHei" textColor="0xABB7D1" y="20.61" x="214.58"/>
+			<e:Label text="帮会" size="24" fontFamily="Microsoft YaHei" textColor="0xABB7D1" y="18.5" x="544.27"/>
+			<e:Label text="战力" size="24" fontFamily="Microsoft YaHei" textColor="0xABB7D1" y="20.19" x="803.31"/>
+			<e:Label text="剩余兵力" size="24" fontFamily="Microsoft YaHei" textColor="0xABB7D1" y="19.19" x="980.27"/>
+		</e:Group>
+		<e:Scroller x="7.41" y="179.89" height="457">
+			<e:List id="m_ItemList" itemRendererSkinName="CrossLegionCellSkin">
+				<e:ArrayCollection>
+					<e:Array>
+						<e:Object null=""/>
+						<e:Object null=""/>
+						<e:Object null=""/>
+						<e:Object null=""/>
+						<e:Object null=""/>
+					</e:Array>
+				</e:ArrayCollection>
+			</e:List>
+		</e:Scroller>
+	</e:Group>
+	<e:Image source="border_1019_png" left="0" right="0" bottom="0" height="122" touchEnabled="false"/>
+</e:Skin>

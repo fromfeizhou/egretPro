@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpArenaRankCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1034" height="114">
+	<e:Group width="1034" height="114" anchorOffsetY="0" anchorOffsetX="0">
+		<com_main:CLabel id="m_pLbPlayerName" text="玩家名称" y="50" scaleX="1" scaleY="1" size="24" fontFamily="Microsoft YaHei" left="172"/>
+		<e:Group y="21.5" anchorOffsetX="0" width="400" left="325">
+			<com_main:GeneralPvpHeadItem id="m_pGeneral0" x="-254.91" y="2.65" scaleX="0.65" scaleY="0.65" currentState="arena_base" width="121" height="117"/>
+			<com_main:GeneralPvpHeadItem id="m_pGeneral1" x="-254.91" y="36.65" scaleX="0.65" scaleY="0.65" currentState="arena_base" width="121" height="117"/>
+			<com_main:GeneralPvpHeadItem id="m_pGeneral2" x="-254.91" y="36.65" scaleX="0.65" scaleY="0.65" currentState="arena_base" width="121" height="117"/>
+			<com_main:GeneralPvpHeadItem id="m_pGeneral3" x="-254.91" y="36.65" scaleX="0.65" scaleY="0.65" currentState="arena_base" width="121" height="117"/>
+			<com_main:GeneralPvpHeadItem id="m_pGeneral4" x="-254.91" y="36.65" currentState="arena_base" scaleX="0.65" scaleY="0.65" width="121" height="117"/>
+			<e:layout>
+				<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:Group>
+		<com_main:CLabel id="m_pLPower" text="98987" y="47.5" scaleX="1" scaleY="1" size="24" fontFamily="Microsoft YaHei" textColor="0xd7e7a7" left="727" anchorOffsetX="0" width="112" textAlign="center"/>
+		<com_main:ComItemNew y="20" skinName="com_item_new" id="m_pReward_0" scaleX="0.75" scaleY="0.75" left="863" currentState="count"/>
+		<com_main:ComItemNew id="m_pReward_1" y="20" skinName="com_item_new" scaleX="0.75" scaleY="0.75" left="945" currentState="count"/>
+		<com_main:ComRankNumItem id="m_pRankItem" y="24" skinName="ComRankNumItemSkin" left="15"/>
+		<com_main:ComState id="m_comState" x="129" y="42" skinName="ComStateSkin"/>
+	</e:Group>
+</e:Skin>

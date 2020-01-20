@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipLevelCompSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="base,max" >
+	<e:Group id="m_pRoot" width="418" height="500" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="border_039_png" scale9Grid="15,14,34,18" left="0" top="0" bottom="0" right="0" touchEnabled="false"/>
+		<e:Image source="border_1014_png" alpha="0.4" horizontalCenter="0" bottom="0" touchEnabled="false"/>
+        <e:Image source="border_1013_png" left="0" right="0" top="-9" scale9Grid="184,20,175,15"/>
+		<e:Group y="9" touchEnabled="false" touchChildren="false" horizontalCenter="0">
+			<e:Label id="m_labEquipName" text="武器" y="0" size="26" textColor="0xe8d7a6" x="0"/>
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+		<e:Group y="61" width="374" x="26" touchChildren="false" touchEnabled="false" height="240">
+			<e:Image source="border_026_png" y="0" width="100%" x="0" anchorOffsetX="0" anchorOffsetY="0" height="100%" scale9Grid="14,16,40,36" alpha="0.35" scaleX="1" scaleY="1"/>
+			<e:Image source="general_skill_flag_png" y="101.98" x="139"/>
+			<e:Group y="22.01" horizontalCenter="0">
+				<e:Label text="等级：" x="0" y="0" size="24" textColor="0xabb7d1"/>
+				<e:Label id="m_labCurNum" text="26 " x="72" y="0" textColor="0xE9E9E6" size="24"/>
+			</e:Group>
+			<e:Group y="161" horizontalCenter="0">
+				<e:Label text="等级：" x="0" y="0" size="24" textColor="0xabb7d1"/>
+				<e:Label id="m_labNextNum" text="26 " x="72" y="0" size="24" textColor="0x00ff00"/>
+			</e:Group>
+			<e:Label id="m_labCurAttri" text="攻击：+99" y="58" size="20" horizontalCenter="0" textColor="0xabb7d1"/>
+			<e:Label id="m_labNextAttri" text="攻击：+99" y="195.36" size="20" horizontalCenter="0" textColor="0xabb7d1"/>
+		</e:Group>
+		<e:Group y="314" width="374" x="26" touchChildren="false" touchEnabled="false" height="147" visible.base="false">
+			<e:Image source="border_026_png" y="0" width="100%" x="0" anchorOffsetX="0" anchorOffsetY="0" height="100%" scale9Grid="14,16,40,36" alpha="0.35" scaleX="1" scaleY="1"/>
+			<e:Label id="m_nextLvTips" text="武将提升到xx级" size="24" verticalCenter="17.5" horizontalCenter="0" textColor="0xe9e9e6"/>
+		</e:Group>
+		<com_main:ComResCost id="m_comResCost0" x="23" y="318" skinName="ComResCostSkin" visible.max="false"/>
+		<com_main:ComResCost id="m_comResCost1" x="221" y="318" skinName="ComResCostSkin" visible.max="false"/>
+		<e:Label text="穿戴对应装备生效" y="462.83" size="20" horizontalCenter="0" textColor="0xabb7d1"/>
+		<com_main:ComButton id="m_btnUp" y="420" skinName="com_button" currentState="style6" anchorOffsetX="72.5" anchorOffsetY="30" x="220" visible.max="false"/>
+	</e:Group>
+</e:Skin>

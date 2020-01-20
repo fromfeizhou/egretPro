@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="bag_detail_view" width="650" height="688" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Scroller id="m_pScroll" anchorOffsetY="0" anchorOffsetX="0" left="20" top="20" right="20" bottom="20" scrollPolicyH="off" scrollPolicyV="on">
+		<e:List id="m_listItemView">
+			<e:layout>
+				<e:TileLayout orientation="rows" horizontalAlign="center" horizontalGap="52" paddingRight="10" paddingLeft="10" paddingTop="10" paddingBottom="10" verticalGap="6" rowHeight="100" columnWidth="100"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

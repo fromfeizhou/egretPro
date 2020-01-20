@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HangBossWndSkin" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group anchorOffsetY="0" anchorOffsetX="0" width="995" height="562" touchEnabled="false">
+		<e:Group height="518" width="850" right="0" bottom="0">
+			<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size3" anchorOffsetX="0" width="850" height="518" y="0" x="0"/>
+			<com_main:CImage source="bossbg_png" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="15,50,92,22" scaleX="1" scaleY="1" top="73" bottom="8" left="8" right="8"/>
+			<e:Label id="m_labDes" size="24" text="在线挂机可以召唤入侵BOSS，击杀后可获得大量奖励！" lineSpacing="12" anchorOffsetX="0" width="524" anchorOffsetY="0" x="287" y="80" textAlign="left" textColor="0xaac7ff" touchEnabled="false" scaleX="1" scaleY="1"/>
+			<com_main:CImage source="line_1006_png" scaleX="-1" scaleY="1" y="158" x="824" width="542"/>
+			<com_main:CImage source="line_1006_png" scaleX="-1" scaleY="1" y="359" x="824" width="542"/>
+			<com_main:CImage scaleX="1" scaleY="1" y="165" source="line_007_png" x="324"/>
+			<e:Label text="击杀奖励" y="174.99" x="494" textColor="0xe9e9e6" size="28"/>
+			<e:Label id="m_labAwardNum" text="今日奖励次数" y="214" x="401" size="20" textColor="0xabb7d1" width="298" textAlign="center"/>
+			<com_main:CImage scaleX="-1" scaleY="1" y="165" source="line_007_png" rotation="0" x="778"/>
+			<e:List id="m_listAward" y="248" horizontalCenter="123">
+				<e:layout>
+					<e:HorizontalLayout paddingLeft="0"/>
+				</e:layout>
+			</e:List>
+		</e:Group>
+		<com_main:ComGenCard id="m_genCard" skinName="ComGenCardSkin" x="-63.39" y="-65" scaleX="0.85" scaleY="0.85"/>
+		<com_main:ComCostTextButton id="m_btnBuy" currentState="size3" y="507" skinName="com_cost_text_button" anchorOffsetX="124.5" anchorOffsetY="41" scaleX="1" scaleY="1" horizontalCenter="196"/>
+		<e:Group id="m_pFight" y="415.99" width="589" height="136" x="399">
+			<e:Label id="m_labFightDes" text="BOSS现身" y="20" size="24" textColor="0xe7c772" horizontalCenter="0"/>
+			<com_main:ComButton id="m_btnFight" y="92" skinName="com_button" currentState="style2" anchorOffsetX="120" anchorOffsetY="37.5" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pProcess" y="415.99" width="589" height="136" x="399" visible="false">
+			<e:Label text="召唤进度" y="20" size="24" horizontalCenter="0" textColor="0xaac7ff"/>
+			<e:Label id="m_labProDes" text="击杀1000波小兵可召唤BOSS" y="87" size="20" horizontalCenter="0" textColor="0xabb7d1"/>
+			<e:Group x="41" y="55" height="24" width="520">
+				<e:Image source="pro_005_png" scale9Grid="3,3,18,18" width="100%" height="100%"/>
+				<e:Image id="m_imgPro" source="pro_006_png" x="0" height="100%" y="0" width="414"/>
+				<e:Label id="m_labPro" text="500/1000" size="20" textColor="0xe9e9e6" stroke="1" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<!--<com_main:CImage source="frame_201_png" anchorOffsetY="0" height="116.67" width="842" horizontalCenter="0"
+		                     bottom="2" />
+		-->
+		<!--<com_main:CImage scaleX="1" scaleY="1" source="line_003_png" y="196" horizontalCenter="-88" />
+		-->
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipRecycleSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="675" height="490">
+	<e:Group>
+		<com_main:APopUp id="m_APopUp" skinName="APopUpSkin" currentState="size7" anchorOffsetY="0" scaleX="1" scaleY="1" y="0.35" x="-6.65" anchorOffsetX="0" width="681.33" height="489.34"/>
+		<e:Scroller scrollPolicyH="off" width="645" anchorOffsetX="0" x="14" height="188" y="193.4" anchorOffsetY="0">
+			<e:List id="m_ItemList" left="0" top="-3" bottom="3" right="0.36000000000001364">
+				<e:layout>
+					<e:TileLayout horizontalGap="84" paddingLeft="20" paddingRight="0" paddingTop="3" rowHeight="98"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Label text="请选择一键出售条件" y="87.92" anchorOffsetX="0" anchorOffsetY="0" size="20" horizontalCenter="-217.5" x="298" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+		<e:Group x="511.32" y="73.34">
+			<e:Label text="全选" y="12.59" anchorOffsetX="0" anchorOffsetY="0" size="20" x="65.68" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xABB7D1"/>
+			<e:Group id="m_TickRooot" x="-8" y="0">
+				<e:Image source="com_wzk6_png" x="8" y="0" scaleX="0.7" scaleY="0.7"/>
+				<e:Image id="m_imgTick" source="common_ys_png" x="0" y="6" visible="false"/>
+			</e:Group>
+		</e:Group>
+		<e:Group x="41" y="115.33">
+			<e:Image source="border_1013_png" y="0" x="0"/>
+			<e:Label text="装备等级" y="17.25" anchorOffsetX="0" anchorOffsetY="0" size="26" scaleX="1" scaleY="1" textColor="0xABB7D1" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+		</e:Group>
+		<com_main:ComButton id="m_btnConfirm" y="436.24" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" horizontalCenter="-5.5" currentState="style2" x="217" scaleX="1" scaleY="1"/>
+		<e:Image source="line_1006_png" y="385" horizontalCenter="0.5"/>
+		<e:CheckBox label="CheckBox" x="496" y="79"/>
+	</e:Group>
+</e:Skin>

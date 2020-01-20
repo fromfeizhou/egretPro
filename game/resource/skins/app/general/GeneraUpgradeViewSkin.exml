@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneraUpgradeViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" width="850" height="530">
+	<e:Group id="m_pRoot" width="850" height="530">
+		<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size8" width="850" height="530"
+		                 horizontalCenter="0" verticalCenter="0" />
+		<e:Image source="zyt_10_png" horizontalCenter="-3" y="-98" alpha="0.9" width="746" height="165" touchEnabled="false" />
+		<e:Image source="lb_tp_png" horizontalCenter="0" y="-9" />
+		<e:Image/>
+		<e:Group y="67" horizontalCenter="0.5" anchorOffsetY="0" height="263">
+			<e:Image source="hang_bg_png" horizontalCenter="0" y="5" width="831"  anchorOffsetY="0" height="250"/>
+			<e:Group horizontalCenter="0.5" y="21" height="40">
+				<e:Image source="world_title_png" horizontalCenter="0" verticalCenter="0"  scale9Grid="51,6,311,36" width="600" height="40"/>
+				<e:Group height="40" horizontalCenter="0">
+				<e:Label text="等级上限:" x="99" size="26" textColor="0xfefbd2" verticalCenter="0" />
+				<e:Label id="m_curLev" text="300" size="26" textColor="0xe9e9e9" verticalCenter="3" />
+				<e:Image source="com_state_up_png"   rotation="90"/>
+				<e:Label id="m_nextLev" text="315" size="26" textColor="0x00ff00" verticalCenter="3" />
+					<e:layout>
+						<e:HorizontalLayout verticalAlign="middle" gap="20"/>
+					</e:layout>
+				</e:Group>
+			</e:Group>
+			<e:List id="m_listAttri" y="71" anchorOffsetX="0" scaleX="1" scaleY="1" itemRendererSkinName="GeneralUpgradeItemRender" width="692" horizontalCenter="0.5">
+				<e:ArrayCollection>
+				<e:Array>
+					<e:Object sss="null"/>
+					<e:Object sss="null"/>
+					<e:Object sss="null"/>
+					<e:Object sss="null"/>
+				</e:Array>
+				</e:ArrayCollection>
+				<e:layout>
+					<e:VerticalLayout gap="7"/>
+				</e:layout>
+			</e:List>
+		</e:Group>
+		<com_main:ComResCost id="m_comResCost" y="353" skinName="ComResCostSkin" horizontalCenter="0.5"/>
+	<com_main:ComButton id="m_upgreBtn" skinName="com_button" currentState="style2" horizontalCenter="0" verticalCenter="199.5"/>
+	</e:Group>
+</e:Skin>

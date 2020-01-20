@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="tab_headQuar" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"  width="140" height="74">
+	<e:Group x="-1" y="0" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="m_imgBg" source="btn_106_png" verticalCenter="0" horizontalCenter="0"/>
+		<com_main:CLabel id="m_labTitle" xmlns:com_main="com_main.*" horizontalCenter="0" verticalCenter="0" size="24" touchEnabled="false" textColor="0xFEFEC4" width="111" textAlign="center" text="123"/>
+	</e:Group>
+</e:Skin>

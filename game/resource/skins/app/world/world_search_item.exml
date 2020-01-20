@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_search_item" width="572.5" height="94" currentState="visit" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  states="fight,visit,resource" >
+	<e:Image source="border_018_png" scale9Grid="28,35,54,49" anchorOffsetY="0" height="93" anchorOffsetX="0" width="574" x="0" y="2"/>
+	<e:Image id="m_pBtnPoint" source="tb-dbdw_png" left="2" verticalCenter="6" anchorOffsetX="35.5" anchorOffsetY="26"/>
+	<e:Image source="line_1004_png" verticalCenter="0" left="74"/>
+	<e:Label id="m_labTitleName" text="{武将名称}" size="22" textColor="0xE9E9E6" right="233"  verticalCenter="2"/>
+	<e:Label id="m_labCityName" size="22" textColor="0xE9E9E6" verticalCenter="2"  left="84" text="{地方名}"/>
+	<e:Label id="m_labLevel" size="22" left="191" verticalCenter="3" textColor="0xFFFF99" text="Lv 99"   visible.visit="false"/>
+	<e:Group id="m_pBtnGroup" width="108" height="47" anchorOffsetY="23.5" right="22" verticalCenter="0" anchorOffsetX="54">
+		<e:Image id="m_pbtn" width="100%" height="100%" source="btn_006_up_png"/>
+		<e:Label id="m_labBtnTitle" text="战斗" textColor="0xE9E9E6" size="22" stroke="2" strokeColor="0x24629A" horizontalCenter="0.5" verticalCenter="0.5"/>
+	</e:Group>
+	<e:Label id="m_labTips" size="22" verticalCenter="2" textColor="0x8a8a9e" horizontalCenter="215.25" text="采集中"/>
+	<e:Group id="m_pGAward" width="79" height="73" x="352" y="11" anchorOffsetX="0" anchorOffsetY="0"   visible.visit="false" visible.resource="false">
+		<e:Image y="-6" source="bx-jin_png" scaleX="0.8" scaleY="0.8" horizontalCenter="0.5"/>
+		<com_main:CImage scaleX="1" scaleY="1" source="border_1001_png" anchorOffsetY="0" y="48" anchorOffsetX="0" x="-6" width="92"/>
+		<e:Label text="奖励" y="49" textColor="0x00FF00" size="20" horizontalCenter="0.5"/>
+	</e:Group>
+	<com_main:ComItemNew id="m_itemAward" x="353" y="8" skinName="com_item_new" scaleX="0.8" scaleY="0.8"  visible.fight="false" visible.visit="false" currentState="base"/>
+	<com_main:GeneralHeadRender id="m_genHead" x="353" y="8" skinName="com_general_head_render" currentState="none" scaleX="0.6" scaleY="0.6"  visible.fight="false" visible.resource="false"/>
+
+</e:Skin>

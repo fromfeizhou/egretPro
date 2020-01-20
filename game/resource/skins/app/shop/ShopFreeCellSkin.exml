@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopFreeCellSkin" width="192" height="278" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="192" height="278" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group left="0" top="0" bottom="0" right="0" touchChildren="false" touchEnabled="false">
+			<e:Image source="border_018_png" scale9Grid="24,21,71,75" alpha="1" left="0" top="0" right="0" bottom="0"/>
+			<e:Image source="border_035_png" scale9Grid="16,9,74,55" anchorOffsetY="0" left="5" right="7" bottom="7" height="71"/>
+			<e:Image source="border_1029_png" left="4" right="6" top="2"/>
+			<e:Image source="line_1005_png" width="3" top="12" bottom="12" left="2"/>
+			<e:Image source="line_1005_png" width="3" top="12" bottom="12" right="3"/>
+		</e:Group>
+		<com_main:ComItemNew id="m_item" y="59" skinName="com_item_new" currentState="count" x="47"/>
+		<e:Label id="m_labName" text="物品名字" size="24" horizontalCenter="1" y="15"/>
+		<e:Label id="m_labBuyTime" text="限购次数" horizontalCenter="0" size="20" textColor="0xe9e9e6" y="170.32"/>
+		<e:Group id="m_btnBuy" x="97.5" y="236.5" anchorOffsetX="75.5" anchorOffsetY="33.5" visible="false">
+			<e:Image source="btn_001_up_png" y="0" x="0"/>
+			<e:Group touchChildren="false" touchEnabled="false" horizontalCenter="0" verticalCenter="0">
+				<e:Group x="0" y="0" height="20" width="20">
+				<e:Image source="icon_source_gold_png" scaleX="0.8" scaleY="0.8" verticalCenter="0" horizontalCenter="0"/>
+				</e:Group>
+				<e:BitmapLabel id="m_labCost" x="60" y="13" text="100" font="font_vip_fnt" scaleX="0.8" scaleY="0.8" letterSpacing="-4"/>
+				<e:layout>
+				<e:HorizontalLayout/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Image id="m_imgSoldOut" source="lb_ysq_png" y="220" x="54" visible="false"/>
+	</e:Group>
+</e:Skin>

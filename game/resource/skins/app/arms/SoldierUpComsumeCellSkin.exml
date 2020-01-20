@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SoldierUpComsumeCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="45" width="529">
+	<e:Group id="m_GoldGroup" width="527.67" height="43.94" anchorOffsetY="0" anchorOffsetX="0">
+		<com_main:CImage id="m_Icon" x="3.7" y="7.87" scaleX="1" scaleY="1" source="common_att_png"/>
+		<com_main:CImage x="332.04" y="10" source="com_state_up_png" rotation="90"/>
+		<e:Label id="m_CurParm" text="攻击" x="42" y="9" textColor="0x8a8a9e" size="26" fontFamily="Microsoft YaHei"/>
+		<e:Label id="m_CurAtt" text="18540" y="10" size="26" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" left="125"/>
+		<e:Label id="m_PreAtt" text="1001" y="8" size="26" fontFamily="Microsoft YaHei" textColor="0x00ff00" horizontalCenter="155.67"/>
+	</e:Group>
+</e:Skin>

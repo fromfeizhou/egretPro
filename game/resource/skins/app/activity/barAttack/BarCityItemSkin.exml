@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BarCityItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="184" height="200">
+	<e:Group id="m_pRoot" width="184" height="200" touchEnabled="true" touchChildren="false" horizontalCenter="0" verticalCenter="0">
+		<e:Image id="m_imgBg" source="zyt_gj_sg_png" scaleX="0.6" scaleY="0.6" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="m_imgIcon" source="map_build_2_1_png" horizontalCenter="-5" verticalCenter="15" scaleX="0.65" scaleY="0.65"/>
+		<e:Image source="zyt_22_png" x="-30" y="50"/>
+		<e:Group x="16" y="20">
+			<e:Image source="zyt_20_png" x="13" y="0" alpha="0.8" width="145"/>
+			<e:Label id="m_labName" text="北海" textColor="0xe7c772" size="20" horizontalCenter="11" y="6"/>
+			<com_main:ComState id="m_comSate" skinName="ComStateSkin" x="8" y="-3"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

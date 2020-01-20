@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionRankViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="683" width="1161">
+	<e:Group id="m_pViewRoot" width="1151" height="683" verticalCenter="0" horizontalCenter="0" touchEnabled="false">
+    <e:Group left="0" right="0" top="70">
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" y="0" source="btn_023_up_png" scale9Grid="165,29,7,2" height="76.61" left="-2" right="-2"/>
+		<e:Label text="排名" x="87" y="21.55" scaleX="1" scaleY="1" size="30" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+		<e:Label text="职位" x="243" y="20.55" scaleX="1" scaleY="1" size="30" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+		<e:Label text="玩家名称" x="445" y="20.55" scaleX="1" scaleY="1" size="30" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+		<e:Label text="今日在线" y="20.55" scaleX="1" scaleY="1" size="30" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" x="883"/>
+	</e:Group>
+	<com_main:CScroller anchorOffsetY="0" anchorOffsetX="0" top="140" bottom="113" left="0" right="0">
+		<e:List id="m_pRankList" anchorOffsetX="0" anchorOffsetY="0" name="m_finishList" x="0" y="40" itemRendererSkinName="LegionRankCellSkin">
+			<e:layout>
+				<e:TileLayout horizontalGap="0" verticalGap="0"/>
+			</e:layout>
+			<e:ArrayCollection>
+				<e:Array>
+					<e:Object asd="null"/>
+					<e:Object asd="null"/>
+				</e:Array>
+			</e:ArrayCollection>
+		</e:List>
+	</com_main:CScroller>
+	<e:Group bottom="0" anchorOffsetX="0" anchorOffsetY="0" height="112" width="1151" x="0">
+		<e:Image anchorOffsetY="0" anchorOffsetX="0" bottom="0" scaleX="1" scaleY="1" source="border_009_png" scale9Grid="25,29,13,15" left="0" right="0" top="0"/>
+		<e:Group x="-3" y="-8.96">
+			<e:Image x="0" y="0" source="legionRankMybg_png" scaleX="1" scaleY="1"/>
+			<e:Label text="我的排名" x="7" y="12" size="25" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+		</e:Group>
+		<e:Group width="1151" height="100" y="16.65">
+			<e:Label id="m_labPos" y="35" fontFamily="Microsoft YaHei" textColor="0xe7d7a7" text="【盟主】" width="160" textAlign="center" x="190.98"/>
+	<e:Label id="m_labOnline" y="35" fontFamily="Microsoft YaHei" textColor="0x8a8a9e" text="12345" textAlign="center" width="235" x="824.02"/>
+	<e:Group x="46" y="10" width="130">
+		<com_main:CImage id="m_imgRankNum" source="Icon_List_NO1_png" y="0" horizontalCenter="0"/>
+		<com_main:CLabel id="m_labRankNum" text="12" scaleX="1" scaleY="1" verticalAlign="middle" textAlign="center" stroke="2" strokeColor="0xE1A42E" bold="true" y="26.01" size="35" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group x="426.38" y="8.85" width="355">
+		<e:Label id="m_labName" y="26.15" x="111.59" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" text="玩家名字"/>
+		<e:Group x="0" y="0">
+			<com_main:PlayerImage id="m_imgHead" width="75" height="72" x="4.57" y="3.91" anchorOffsetY="0" anchorOffsetX="0"/>
+			<e:Image x="0" y="0" source="legionRankheadkuang_png" anchorOffsetY="0" height="82" anchorOffsetX="0" width="85"/>
+		</e:Group>
+	</e:Group>
+	<e:Image x="1" y="98.01" source="line_008_png" width="1156"/>
+		</e:Group>
+		<com_main:CLabel id="m_labRankState" text="尚未上榜" scaleX="1" scaleY="1" verticalAlign="middle" textAlign="center" stroke="0" strokeColor="0x000000" size="35" textColor="0xf7e0b7" fontFamily="Microsoft YaHei" y="48.09" x="41.24"/>
+	</e:Group>
+	<com_main:ComTabTopGroup id="m_comTabTopGroup" skinName="com_tab_top_group" currentState="state2" left="0" right="0" top="0" height="70"/>
+	</e:Group>
+</e:Skin>

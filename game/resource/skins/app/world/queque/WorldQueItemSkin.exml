@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldQueItemSkin" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="base,move" width="324" width.move="343">
+	<e:Group width="75">
+		<e:Image id="m_imgTouch" x="0" source="com_tpk_png" y="0"/>
+		<e:Image id="m_imgLock" y="25" source="com_lock_png" x="18" touchEnabled="false"/>
+		
+		<e:Group id="m_pHeadRoot" x="8.5" y="8.5" touchChildren="false" touchEnabled="false" visible="false">
+			<e:Image id="m_imgHeadMask" width="59" height="59" source="fight_battle_mask105_png" scaleX="1" scaleY="1" x="0" y="0"/>
+			<e:Image id="m_imgHead" source="icon_wj_11_png" scaleX="0.4" scaleY="0.4" x="0.5" y="0.5"/>
+		</e:Group>
+		<e:Group id="m_pStateRoot" y="55.8" width="46" height="14" x="15" touchEnabled="false" touchChildren="false" visible="false">
+		<e:Image source="border_1030_png" y="0" alpha="0.8" width="100%" x="0" height="100%"/>
+		<e:Label id="m_labState" text="" size="14" textColor="0xE9E9E6" horizontalCenter="0" y="0"/>
+		</e:Group>
+		<e:Image id="m_imgSel" source="com_circle_sel_png" x="-6" y="-6" touchEnabled="false" visible="false"/>
+	</e:Group>
+	<e:Group id="m_pOperaRoot" x="79" y="44" anchorOffsetY="34" touchEnabled="false" visible="false">
+		<e:Image y="0" source="world_tbd_png" anchorOffsetX="0" scale9Grid="26,7,36,45" alpha="0.6" left="0" right="36"/>
+		<e:Image id="m_pAccBtn" source="world_icon_js_png" x="224" y="30" scaleX="1" scaleY="1" anchorOffsetX="38" anchorOffsetY="37.5" includeIn="move"/>
+		<e:Image id="m_pPosBtn" source="world_icon_dw_png" x="134" y="30" scaleX="1" scaleY="1" anchorOffsetX="38" anchorOffsetY="37.5"/>
+		<e:Image id="m_pEmBtn" source="world_icon_bd_png" x="44" y="30" anchorOffsetX="38" anchorOffsetY="37.5"/>
+	</e:Group>
+	<e:Image id="m_imgXYState"  y="-1" source="icon_xiang_png" x="44" touchEnabled="false" visible="false"/>
+</e:Skin>

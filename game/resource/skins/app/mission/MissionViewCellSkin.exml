@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MissionViewCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*">
+	<e:Group x="0" y="0" >
+		<e:Group x="0" y="-2.5" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_pImgSelectbg0" anchorOffsetX="0" anchorOffsetY="0" width="1047.47" source="border_014_png" height="158.17" y="-3.17" x="0" scale9Grid="39,37,3,4"/>
+			<com_main:CImage id="m_pImgSelectbg" anchorOffsetX="0" anchorOffsetY="0" source="welfareLogintipcellbg_png" y="15.75" width="1075.99" x="19.44"/>
+			<com_main:CLabel id="m_pTitleText" text="武将升级" size="24" y="24.84" x="34.07" textColor="0xcececc" fontFamily="Microsoft YaHei"/>
+			<e:Group id="m_pIsGet" x="893.96" y="56.19" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1">
+				<com_main:CImage source="welfareLogintipState_png" anchorOffsetX="0" width="138.67" anchorOffsetY="0" height="83.34"/>
+				<com_main:CLabel text="已完成" y="40.5" rotation="-19" x="32.5" textColor="0xad7777" fontFamily="Microsoft YaHei" size="24"/>
+			</e:Group>
+			<com_main:CLabel id="m_pLbDesc" text="使用武将兵书" x="33" y="73.83" textColor="0xe5e3e3" fontFamily="Microsoft YaHei" size="20" scaleX="1" scaleY="1"/>
+			<e:Group x="34" y="111.33" scaleX="1" scaleY="1">
+				<com_main:CImage id="m_pProgressBg" x="0" y="1.17" width="472" scale9Grid="11,11,4,2" anchorOffsetY="0" height="22" anchorOffsetX="0" source="proBg_003_png"/>
+				<com_main:CImage id="m_pImageProgress" x="1" y="2.17" width="470" scale9Grid="7,7,4,6" height="20" anchorOffsetX="0" source="pro_003_png"/>
+				<com_main:CLabel id="m_progressText" text="5/100" size="20" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="2"/>
+			</e:Group>
+			<e:Scroller width="372" height="85" x="509" y="62" scrollPolicyH="auto" scrollPolicyV="off">
+				<e:viewport>
+					<e:Group id="m_RewardRoot">
+						<e:layout>
+							<e:HorizontalLayout verticalAlign="middle" gap="10"/>
+						</e:layout>
+					</e:Group>
+				</e:viewport>
+				</e:Scroller>
+		</e:Group>
+		<e:Group x="890.99" y="22.14" scaleX="1" scaleY="1">
+			<com_main:CLabel id="m_pLbActiveNum" text="活跃的+2" size="22" y="5.32" x="24.83" fontFamily="Microsoft YaHei" textColor="0xe7d7a7"/>
+			<com_main:ComButton id="m_pBtn" x="72.17" y="78.89" skinName="com_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

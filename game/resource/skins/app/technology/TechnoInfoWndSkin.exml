@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TechnoInfoWndSkin" width="1046" height="612" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*"  states="base,max,inSpeed" ><!---->
+	<e:Group y="0" x="0">
+		<com_main:APopUp id="m_pPopUp" skinName="APopUpSkin" currentState="size3" x="2" y="0" locked="true"/>
+		<com_main:TechnoCell id="m_technoCell" x="161.32" y="180.66" skinName="TechnoCellSkin" anchorOffsetX="94" anchorOffsetY="100"/>
+		<e:Label text="科技对应战斗力：" y="104.33" size="30" x="305" textColor="0xaac7ff" fontFamily="Microsoft YaHei" x.base="305"/>
+		<e:Label id="m_labPower" text="1000" y="106.99" size="30" x="548.62" textColor="0xFFFFFF"/>
+		<com_main:CLabel id="m_labDec" text="弓兵" x="305" y="158.29" size="24" anchorOffsetX="0" width="500" anchorOffsetY="0" height="61" textColor="0xabb7d1" fontFamily="Microsoft YaHei" x.base="305"/>
+		<e:Group x="305" y="212">
+		<com_main:CLabel id="m_labCurDesc" text="当前等级"  height="25" size="22" anchorOffsetX="0" fontFamily="Microsoft YaHei" textColor="0xaac7ff" />
+		<!--<com_main:CLabel id="m_labCurLv" text="0%" x="417.29" y="212.28" height="25" size="22" anchorOffsetX="0" fontFamily="Microsoft YaHei" textColor="0xffffff" x.base="417.29"/>-->
+		<com_main:CLabel id="m_labNextDesc" text="下一等级" height="25" size="22" anchorOffsetX="0" fontFamily="Microsoft YaHei" textColor="0xaac7ff" />
+		<e:layout>
+				<e:HorizontalLayout gap="200"/>
+			</e:layout>
+		</e:Group>
+		<!--<com_main:CLabel id="m_labNextLv" text="1%" x="617.99" y="213.62" height="25" size="22" anchorOffsetX="0" textColor="0xffffff" fontFamily="Microsoft YaHei" x.base="617.99"/>-->
+		<e:Group x="521.65" y="221.63" visible.max="false" x.base="521.65">
+		</e:Group>
+		<e:Label text="需求" y="281.1" size="28" x="485" textColor="0xfcfcfc"/>
+		<e:Image x="798.5" y="290.1" anchorOffsetY="0" height="17" width="200" source="line_003_png" scaleY="1" scaleX="-1"/>
+		<e:Image x="233" y="289" anchorOffsetY="0" height="17" width="200" source="line_003_png"/>
+		<e:Group id="m_pBtnRoot" anchorOffsetX="0" width="690" y="466.37" x="188" height="113" visible.max="false">
+		</e:Group>
+		<com_main:ComCostTextButton id="m_btnStudyNow" currentState="size3" y="533.68" skinName="com_cost_text_button" anchorOffsetX="124.5" anchorOffsetY="41" scaleX="1" scaleY="1" horizontalCenter="-214.5" includeIn="base"/>
+		<com_main:ComCostTextButton id="m_btnStudy" currentState="size4" y="533.68" skinName="com_cost_text_button" anchorOffsetX="124.5" anchorOffsetY="41" scaleX="1" scaleY="1" horizontalCenter="203.5" includeIn="base,inSpeed" horizontalCenter.inSpeed="0"/>
+		<com_main:CScroller anchorOffsetY="0" anchorOffsetX="0" width="1030.67" y="321" height="143.33" visible.inSpeed="false" visible.max="false" x="8">
+			<e:List id="m_pList" width="973.34" anchorOffsetX="0" height="293.58" anchorOffsetY="0" name="m_finishList" x="32" y="0">
+			<e:layout>
+				<e:TileLayout columnWidth="450" rowHeight="55" columnWidth.base="450" verticalGap.base="15" paddingLeft.base="34" paddingTop.base="8" horizontalGap.base="50" horizontalGap="50" verticalGap="15" paddingLeft="34" paddingTop="8"/>
+			</e:layout>
+			</e:List>
+		</com_main:CScroller>
+	</e:Group>
+</e:Skin>

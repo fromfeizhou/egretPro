@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TavernBuyDlgSkin" width="676" height="490" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<e:Group width="676" height="490.76" horizontalCenter="0" verticalCenter="0" touchEnabled="false">
+		<com_main:APopUp id="m_PopUp" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" height="487.58" width="673" currentState="size6"/>
+		<e:Image x="0" y="99" anchorOffsetY="0" anchorOffsetX="0" source="border_1008_png" width="675.03" scaleX="1" scaleY="1"/>
+		<e:Image x="0" y="179" anchorOffsetY="0" anchorOffsetX="0" width="675.03" source="line_1006_png" scaleX="1" scaleY="1"/>
+		<e:Image x="0" y="278.96" anchorOffsetY="0" anchorOffsetX="0" source="line_1006_png" width="675.03" scaleX="1" scaleY="1"/>
+		<com_main:ComCostTextButton id="m_btnCost" currentState="size3" y="419" skinName="com_cost_text_button" anchorOffsetX="124.5" anchorOffsetY="41" horizontalCenter="0" x="214" scaleX="1" scaleY="1"/>
+		<com_main:ComItemNew id="m_comItem" x="29" y="73" currentState="base" skinName="com_item_new" scaleX="1" scaleY="1"/>
+		<com_main:CLabel id="m_labName" text="物品名字" x="137" y="81" size="26" scaleX="1" scaleY="1"/>
+		<com_main:CLabel id="m_labDes" text="物品描述物品描述述物品描述物品描述物品描述物品描述物品描述物品描述" y="190.33" anchorOffsetY="0" anchorOffsetX="0" size="26" x="27" textColor="0x8a8a9e" width="625.63" height="77.51" scaleX="1" scaleY="1"/>
+		<com_main:CLabel text="拥有：" textAlign="left" verticalAlign="middle" size="26" y="134.77" anchorOffsetX="0" anchorOffsetY="0" x="140.42" textColor="0x8A8A9E" scaleX="1" scaleY="1"/>
+		<com_main:CLabel id="m_labNum" text="5" textAlign="left" verticalAlign="middle" size="28" y="134.77" anchorOffsetX="0" anchorOffsetY="0" x="213.68" scaleX="1" scaleY="1"/>
+		<e:Image x="32.12" y="303.88" source="border_006_png" anchorOffsetY="0" height="41" anchorOffsetX="0" width="128" scaleX="1" scaleY="1"/>
+		<e:Group y="314.88" horizontalCenter="0" x="270" scaleX="1" scaleY="1">
+			<com_main:CLabel text="购买数量：" textAlign="left" verticalAlign="middle" size="26" y="4" anchorOffsetX="0" anchorOffsetY="0" x="0" textColor="0x8A8A9E"/>
+			<com_main:CLabel id="m_labSelNum" text="5" textAlign="left" verticalAlign="middle" size="28" y="-2" anchorOffsetX="0" anchorOffsetY="0" height="38" x="119.62"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

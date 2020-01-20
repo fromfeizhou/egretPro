@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionDonationTitleCellSkin" width="1150" height="79" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<w:Config id="1598d236115"/>
+	<e:Group anchorOffsetY="0" anchorOffsetX="0" left="0" right="0" top="0" bottom="0">
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" y="0.45" source="btn_023_up_png" scale9Grid="165,29,7,2" height="79.64" left="-2" right="-2"/>
+		<e:Label id="m_openText" text="已开启科技" x="53.87" y="24.11" textColor="0xFFFFE6" stroke="1" strokeColor="0x000000" fontFamily="Microsoft YaHei"/>
+		<e:Label id="m_limitText" text="(需要联盟达到4级)" y="28.59" textColor="0xBFBFBF" strokeColor="0x000000" x="218" size="25" fontFamily="Microsoft YaHei"/>
+		<e:Label id="playerScore" text="个人积分：99999" y="24.11" strokeColor="0x000000" textColor="0xbfbfbf" right="32"/>
+	</e:Group>
+</e:Skin>

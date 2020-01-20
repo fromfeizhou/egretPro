@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="battle_general_list" width="680" height="150" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group id="generalList" width="681" height="150" right="0" bottom="0">
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="right" paddingLeft="0" paddingRight="7" gap="-2"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

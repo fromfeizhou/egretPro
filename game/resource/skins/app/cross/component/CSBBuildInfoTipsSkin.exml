@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CSBBuildInfoTipsSkin" width="334" height="237" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="our,emeny,none" >
+	<e:Image source="frame_401_png" x="3" y="1" width="468" height="335" scaleX="0.7" scaleY="0.7" scale9Grid="51,69,101,19"/>
+	<e:Label id="m_lbName" text="城池中心" y="11" size="24" textColor="0xffff99" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+	<e:Image x.emeny="107" x.our="107" y="51" source="border_1001_png" height="30" anchorOffsetX="0" width="193" width.none="216" horizontalCenter.none="0"/>
+
+    <e:Image id="m_flagImg" x="61" y="46" source="zyt_vs_red_png" source.our="zyt_vs_blue_png" visible.none="false"/>
+	<e:Label id="m_faction" text="敌" x="81.66" y="58.68" size="24" strokeColor="0x961717" stroke="2" fontFamily="Microsoft YaHei" strokeColor.our="0x173e96" text.our="我" visible.none="false"/>
+	<e:Label text="我方占领" x="134" y="53" textColor="0xaac7ff" size="22" fontFamily="Microsoft YaHei" text.emeny="敌方占领" text.none="无人占领" horizontalCenter.none="0"/>
+	<e:Label text="防守驻军：" x="117" y="103" size="20" fontFamily="Microsoft YaHei"/>
+	<e:Label id="m_lbDef" text="10" x="218" y="103" size="20" fontFamily="Microsoft YaHei" text.none="0"/>
+	<e:Label text="防御箭塔：" x="117" y="134" size="20" fontFamily="Microsoft YaHei"/>
+	<e:Label id="m_lbDefTower" text="0" x="218" y="133" size="20" fontFamily="Microsoft YaHei"/>
+	<e:Label text="进攻部队：" x="117" y="165" size="20" fontFamily="Microsoft YaHei"/>
+	<e:Label id="m_lbaAtk" text="1" x="217" y="165" size="20" fontFamily="Microsoft YaHei" text.none="0"/>
+</e:Skin>

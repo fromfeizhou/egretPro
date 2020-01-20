@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComBoxInfoViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="692" height="493">
+		<com_main:APopUp id="m_APopUp" x="0" skinName="APopUpSkin" anchorOffsetY="0" scaleX="1" scaleY="1" currentState="size6" top="0" bottom="0"/>
+		<e:Scroller y="86.38" scaleX="1" scaleY="1" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="1">
+			<e:Group id="m_groupAward" y="1.5" width="670" height="273">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="25"/>
+				</e:layout>
+
+			</e:Group>
+		</e:Scroller>
+		<com_main:ComButton id="m_btnUse" y="421" skinName="com_button" currentState="style2" x="346" anchorOffsetX="120" anchorOffsetY="37.5"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="soldierHpBarSkin" width="38" height="9" xmlns:e="http://ns.egret.com/eui">
+        <e:Image id="hpBg_image" source="proBg_003_png" horizontalCenter="0" width="34" height="7" verticalCenter="0"/>
+		<e:Image id="HP_image" source="pro_017_png" height="5" width="32" verticalCenter="0" x="3"/>
+</e:Skin>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ArmsUpgradeSkin" width="1164" height="684" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<w:Config id="16a67f4fa0f"/>
+	<e:Group scaleX="1" scaleY="1" height="627" width="474" verticalCenter="9.5" x="660" y="38">
+		<com_main:CImage source="frame_001_jpg" left="0" right="0" top="0" x="-371" y="32" scaleX="1" scaleY="1"/>
+		<com_main:CImage source="frame_101_jpg" scale9Grid="16,13,89,80" top="62" bottom="0" right="0" left="0" x="-365" y="12" scaleX="1" scaleY="1" anchorOffsetY="0" alpha="0.6"/>
+		<e:Image source="line_1006_png" x="26" y="256" width="421"/>
+		<com_main:CLabel id="m_pLbTitle" text="弓兵训练" textAlign="center" width="320" height="40" anchorOffsetX="160" anchorOffsetY="20" horizontalCenter="2" verticalAlign="middle" size="28" fontFamily="Microsoft YaHei" top="12" stroke="1" textColor="0xFFFF99"/>
+		<com_main:CImage source="frame_201_png" bottom="3" scaleX="1" scaleY="1" anchorOffsetY="0" width="552" x="0" left="3" right="3"/>
+		<com_main:CLabel text="升阶效果" textAlign="center" width="320" height="40" anchorOffsetX="160" anchorOffsetY="20" verticalAlign="middle" size="24" fontFamily="Microsoft YaHei" stroke="0.5" y="96.68" horizontalCenter="8" textColor="0xabb7d1"/>
+		<com_main:CLabel text="需要材料" textAlign="center" width="320" height="40" anchorOffsetX="160" anchorOffsetY="20" verticalAlign="middle" size="24" fontFamily="Microsoft YaHei" stroke="0.5" y="292.68" textColor="0xabb7d1" scaleX="1" scaleY="1" horizontalCenter="1"/>
+		<com_main:CScroller anchorOffsetY="0" anchorOffsetX="0" width="474" scaleX="1" scaleY="1" horizontalCenter="0.5" y="126">
+		<e:List id="m_materialList" anchorOffsetY="0" height="132" itemRendererSkinName="SoldierUpComsumeCellSkin" width="100%" scaleX="0.8" scaleY="0.8">
+			<e:layout>
+			<e:VerticalLayout gap="3" paddingLeft="45"/>
+			</e:layout>
+			<e:ArrayCollection>
+			<e:Array>
+				<e:Object data="1"/>
+				<e:Object data="2"/>
+				<e:Object data="3"/>
+			</e:Array>
+			</e:ArrayCollection>
+		</e:List>
+		</com_main:CScroller>
+		<e:Group id="m_consumeGroup" width="474" height="111" y="315" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="-1.5">
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="8"/>
+		</e:layout>
+		</e:Group>
+		<com_main:CImage scaleX="1" scaleY="-1" anchorOffsetY="0" y="554" anchorOffsetX="0" source="border_1008_png" left="13" right="13"/>
+		<e:Group width="474" height="54" y="442" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="6">
+		<com_main:CImage scaleX="1" scaleY="1" anchorOffsetY="0" y="9" anchorOffsetX="0" source="border_1001_png" width="379" height="37" horizontalCenter="0"/>
+		<e:Group y="14" horizontalCenter="-6" width="163">
+			<com_main:CImage id="m_consumeIcon" x="-16.33" y="-10.66" source="icon_source_sliver_png"/>
+			<com_main:CLabel id="m_consumeValue" size="22" stroke="1" strokeColor="0x885A2A" verticalAlign="middle" textAlign="center" borderColor="0x000000" text="1234.9万/13万" y="1.33" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" left="39"/>
+		</e:Group>
+		</e:Group>
+		<com_main:ComButton id="m_btnUp" skinName="com_button" currentState="style2" anchorOffsetX="120" anchorOffsetY="37.5" scaleX="1" scaleY="1" y="572.5" x="237"/>
+	</e:Group>
+</e:Skin>

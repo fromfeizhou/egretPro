@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_fund_item" width="234" height="488" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+	</w:Declarations>
+	<com_main:CImage x="0" y="0" width="100%" height="100%" source="pay_box_02_png"/>
+	<e:Group y="15" horizontalCenter="0">
+		<e:Label text="大殿达到" stroke="1" strokeColor="0x604F4F" size="25" textColor="0xFFFFFF" textAlign="center" x="0" y="2" height="30" verticalAlign="middle"/>
+		<e:Label id="m_pLbLevel" text="5" stroke="1" strokeColor="0x000000" size="30" textAlign="center" textColor="0xffee00" x="113" y="0"/>
+		<e:Label text="级" stroke="1" strokeColor="0x604F4F" size="25" textColor="0xFFFFFF" textAlign="center" x="0" y="2" height="30" verticalAlign="middle"/>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+	<e:Group horizontalCenter="0" y="138">
+		<e:Image source="Qualitykuang2_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image anchorOffsetX="0" width="121" anchorOffsetY="0" height="111" scaleX="1" scaleY="1" source="common_prop_1_png" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<com_main:ComButton id="m_pBtnGet" skinName="com_button" currentState="style1" y="401" x="45"/>
+	<e:Label text="进度" stroke="1" strokeColor="0x604f4f" size="20" textColor="0xFFFFFF" x="70" y="362"/>
+	<e:Label id="m_pLbPercent" text="5/5" stroke="1" strokeColor="0x0a0a0a" size="22" textColor="0x8ee5b8" y="362" left="123"/>
+</e:Skin>

@@ -1,0 +1,12 @@
+{"file":"giftBag.png","frames":{
+"：":{"x":90,"y":43,"w":7,"h":18,"offX":6,"offY":5,"sourceW":19,"sourceH":26},
+"0":{"x":6,"y":41,"w":17,"h":25,"offX":1,"offY":1,"sourceW":19,"sourceH":26},
+"1":{"x":62,"y":79,"w":11,"h":24,"offX":2,"offY":1,"sourceW":19,"sourceH":26},
+"2":{"x":35,"y":43,"w":16,"h":24,"offX":1,"offY":1,"sourceW":19,"sourceH":26},
+"3":{"x":35,"y":79,"w":15,"h":25,"offX":2,"offY":1,"sourceW":19,"sourceH":26},
+"4":{"x":6,"y":6,"w":19,"h":23,"offX":0,"offY":2,"sourceW":19,"sourceH":26},
+"5":{"x":63,"y":43,"w":15,"h":24,"offX":2,"offY":2,"sourceW":19,"sourceH":26},
+"6":{"x":6,"y":78,"w":17,"h":25,"offX":1,"offY":1,"sourceW":19,"sourceH":26},
+"7":{"x":95,"y":6,"w":17,"h":23,"offX":1,"offY":2,"sourceW":19,"sourceH":26},
+"8":{"x":66,"y":6,"w":17,"h":25,"offX":1,"offY":1,"sourceW":19,"sourceH":26},
+"9":{"x":37,"y":6,"w":17,"h":25,"offX":1,"offY":1,"sourceW":19,"sourceH":26}}}

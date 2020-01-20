@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="com_progressbar" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="base"  width.base="500" height.base="34">
+	<com_main:CImage includeIn="base" left="0" top="0" bottom="0" right="0" source="pro_005_png" scale9Grid="3,3,18,18" width="319"/>
+	<com_main:CImage id="m_Bar" includeIn="base" left="0" top="0" bottom="0" source="pro_006_png" fillMode="clip" scale9Grid="3,3,313,28" width="319"/>
+
+
+
+
+
+</e:Skin>

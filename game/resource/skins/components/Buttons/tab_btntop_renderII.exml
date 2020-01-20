@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="tab_btntop_renderII" height="66"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" width="192" states="up,down" >
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image source="btn_007_up_png" visible.up="false" width="202" x="-4" height="76" y="-4"/>
+		<e:Label text="{data.name}" size="28" textColor="0x8a8a9e" verticalAlign="middle" textAlign="center" textColor.down="0xe9e9e6" left="0" top="0" bottom="0" right="0" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

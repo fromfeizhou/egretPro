@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionDonationViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="683" width="1161">
+	<e:Group id="m_pViewRoot" width="1161" height="683" touchEnabled="false" horizontalCenter="0" verticalCenter="0">
+		<e:Group anchorOffsetY="0" anchorOffsetX="0" width="1161" height="683" y="0" x="0" scaleX="1" scaleY="1">
+			<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" source="btn_023_up_png" scale9Grid="165,29,7,2" height="80" left="-2" right="-4"/>
+			<e:Label text="已开启科技" x="53.87" y="24.11" textColor="0xFFFFE6" stroke="1" strokeColor="0x000000" fontFamily="Microsoft YaHei"/>
+			<e:Label text="个人贡献：" y="24" strokeColor="0x000000" textColor="0xbfbfbf" x="875"/>
+			<e:Label id="m_labScore" text="99999" y="24" strokeColor="0x000000" textColor="0xBFBFBF" x="1018"/>
+		</e:Group>
+		<e:Scroller scaleX="1" scaleY="1" top="71" bottom="0" left="5" right="5">
+			<e:List id="m_pTeachList" itemRendererSkinName="LegionDonationCellSkin">
+				<e:layout>
+					<e:TileLayout horizontalGap="2" paddingLeft="12" paddingTop="15" verticalGap="10"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

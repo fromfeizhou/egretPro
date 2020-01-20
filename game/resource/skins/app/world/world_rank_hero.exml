@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_rank_hero" width="337" height="170" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage source="wxzdx_png" touchEnabled="false" visible="false"/>
+	<com_main:CImage id="m_pLight" source="xzdx_png" x="7.58" y="3.75" touchEnabled="false"/>
+</e:Skin>

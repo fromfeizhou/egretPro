@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="rank_list_page" currentState="power" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="power,general,legion,militory,country" width="1159" height="692">
+	<e:Group id="m_pGroup" x="0" y="0" width="100%" height="100%">
+		<e:Group height="60" width="100%" y="0" x="0">
+			<com_main:CImage scaleX="1" scaleY="1" left="0" top="0" bottom="-5" right="0" source="border_007_png" bottom.legion="-5" source.power="border_007_png"/>
+			<com_main:CImage scaleX="1" scaleY="1" left="0" right="0" source="border_1008_png" top="0" bottom="0"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x.power="576" x.general="576" x="576" verticalCenter.militory="0.5" x.militory="890" verticalCenter.country="0.5" x.country="716"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="231" x.power="250" x.general="250" x.legion="250" verticalCenter.militory="0.5" x.militory="581" verticalCenter.country="0.5" x.country="531"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x="231" x.general="850" x.legion="850" x.power="850" verticalCenter.militory="0.5" x.militory="171" verticalCenter.country="0.5" x.country="189"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" bottom.legion="0" left.legion="0" right.legion="0" bottom="0" left="0" right="0" height="5"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" verticalCenter="0" x.country="930" verticalCenter.country="0.5"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="line_1004_png" left="0" right="0" top="0" height="5"/>
+			<com_main:CLabel text="排名" x="99.41" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0x8a8a9e" verticalCenter.militory="0" x.militory="64.41" verticalCenter.country="0" x.country="80.41"/>
+			<com_main:CLabel text="玩家名称" x="193" verticalCenter="0" text.country="国王" text.general="武将名称" text.legion="联盟名称" x.power="350" x.general="350" x.legion="350" size="24" fontFamily="Microsoft YaHei" textColor="0x8a8a9e" verticalCenter.militory="0" x.militory="332" verticalCenter.country="0" x.country="303"/>
+			<com_main:CLabel text="战斗力" x="428" verticalCenter="0" text.country="都城" x.power="975" x.general="675" x.legion="675" size="24" fontFamily="Microsoft YaHei" textColor="0x8a8a9e" text.power="国家" text.militory="总战力" verticalCenter.militory="0" x.militory="693" verticalCenter.country="0" x.country="602" text.legion="战斗力"/>
+			<com_main:CLabel text="战斗力" x="428" verticalCenter="0" text.country="郡城" text.general="所属玩家" x.general="975" text.legion="国家" text.militory="总杀敌" x.legion="975" x.power="675" size="24" fontFamily="Microsoft YaHei" textColor="0x8a8a9e" textAlign.legion="center" textAlign.general="center" anchorOffsetX.general="0" verticalCenter.militory="0" x.militory="987" verticalCenter.country="0" x.country="800"/>
+			<com_main:CLabel text="战斗力" x="428" verticalCenter="0" text.country="县城"   verticalCenter.country="0" x.country="1033" textColor="0x8a8a9e" size="24" visible.power="false" visible.general="false" visible.legion="false"/>
+		</e:Group>
+		<e:Scroller bottom.general="0" left="0" top="60" bottom="130" right="0" scrollPolicyH="off">
+			<e:List id="m_ItemList" left="0" top="0" bottom="0" right="0" itemRendererSkinName="RankItemRenderSkin">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Group includeIn="power,legion,militory" width="100%" x="0" bottom="0">
+			<com_main:CImage left="0" top="0" bottom="0" right="0" includeIn="power,general,legion,militory" source="border_009_png"/>
+			<com_main:RankItemRender id="m_ownerItem" bottom="0" skinName="RankItemRenderSkin" currentState.power="power" currentState.general="general" currentState.legion="legion" currentState.militory="exploit" height="127" width="1155" x="0" includeIn="power,legion,militory" visible="false"/>
+		</e:Group>
+	</e:Group>
+	
+</e:Skin>

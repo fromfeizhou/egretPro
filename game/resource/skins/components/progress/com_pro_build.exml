@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="com_pro_build" width="125" height="40" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+
+
+	<e:Group left="0" right="0" top="0" bottom="0" anchorOffsetX="0">
+		<e:Group id="m_pProRoot" scaleX="1" scaleY="1" verticalCenter="0" anchorOffsetX="0" width="87" x="36.25">
+			<e:Image source="proBg_015_png" scaleX="1" scaleY="1" x="0" y="0"/>
+			<com_main:CImage id="m_pPro" height="12" source="pro_003_png" anchorOffsetY="0" scale9Grid="4,4,6,5" scaleX="1" scaleY="1" anchorOffsetX="0" fillMode="scale" width="81" x="2.75" y="2.75"/>
+			<e:Label id="m_pLabel" text="11" textColor="0xffffff" size="14" textAlign="center" width="80" anchorOffsetX="0" stroke="1" horizontalCenter="0" verticalCenter="2" x="-138" y="0" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Image id="m_ingIcon" source="rk_icon_1_png" x="0" y="0" scaleX="1" scaleY="1"/>
+	</e:Group>
+
+</e:Skin>

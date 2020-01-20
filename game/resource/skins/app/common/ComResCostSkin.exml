@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComResCostSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="197">
+	<e:Group width="100%">
+		<e:Image source="line_002_png" y="11" height="36" left="27" right="0" scale9Grid="137,5,495,33"/>
+		<e:Label id="m_labCost" text="26 " x="62" y="16.67" textColor="0xE9E9E6" size="24"/>
+		<e:Group x="0" y="0">
+		<e:Image source="border_016_png" x="0" y="0"/>
+		<e:Image id="m_imgIcon" scaleX="0.5" scaleY="0.5" horizontalCenter="0" verticalCenter="0" source="common_prop_26_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

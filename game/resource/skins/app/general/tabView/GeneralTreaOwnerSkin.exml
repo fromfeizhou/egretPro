@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralTreaOwnerSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="0">
+		<e:Group x="0" y="0" width="106" height="175">
+		<e:Image source="border_1024_png" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="106" height="175" scale9Grid="4,52,179,48" x="0" y="0"/>
+		<e:Label text="专属武将" y="21" size="18" textColor="0xE9E9E6" x="17"/>
+		<com_main:GeneralHeadRender id="m_generalHead" xmlns:com_main="com_main.*" skinName="com_general_head_render" currentState="none" scaleX="0.6" scaleY="0.6" y="53" x="13"/>
+		<e:Label id="m_labGenName" text="刘备" y="143" size="18" x="35"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_tgift_item" width="1100" height="197" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" rotation="359.75" source="welfareLogintipcellbg_png"/>
+	<e:Label id="m_pLbName" text="礼包" size="25" y="9" x="13" textColor="0xCECECC" stroke="1" strokeColor="0x707070"/>
+	<e:Label text="(限购次数：   )" size="25" y="10" x="136" textColor="0xCECECC" stroke="1" strokeColor="0x707070"/>
+	<e:Label id="m_pLbNum" text="4/5" x="265.5" y="9" textColor="0xE4BF66" stroke="1" strokeColor="0x383838" size="25"/>
+	<e:Group id="m_cangetGroup" width="171" height="67" x="842" y="102.67" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Image id="m_pBtnBuy" source="btn_001_up_png"/>
+		<e:Label text="￥" y="25.33" horizontalCenter="-20.5" size="24" stroke="1"/>
+		<e:Label id="m_pLbPrice" text="6" y="15.33" horizontalCenter="5.5" size="36" stroke="1"/>
+	</e:Group>
+	<e:Label text="原价：" x="836" y="62.5" stroke="1" strokeColor="0x383838" size="25" textColor="0xBFBFBF"/>
+	<e:Label id="m_pLbRPrice" text="2560元" x="905" y="61" stroke="1" strokeColor="0x383838" size="28" textColor="0xBFBFBF"/>
+	<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" rotation="359.75" x="828.52" y="73.28" source="line_006_png" width="180" height="2.5"/>
+</e:Skin>

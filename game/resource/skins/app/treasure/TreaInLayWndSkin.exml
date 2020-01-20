@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaInLayWndSkin" width="1044" height="556" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="1044" height="556">
+		<com_main:APopUp id="m_APopUp" skinName="APopUpSkin" currentState="size3" anchorOffsetY="0" height="556" alpha="1" y="0"/>
+		<e:Scroller anchorOffsetX="0" anchorOffsetY="0" height="333" y="74.01" left="14" right="14">
+			<e:List id="m_pItemList" width="100%" height="100%">
+				<e:layout>
+					<e:TileLayout paddingLeft="11" paddingRight="4" paddingTop="5" paddingBottom="3"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<com_main:ComButton id="m_btnEquip" x="402" y="438.7" skinName="com_button" currentState="style2"/>
+		<com_main:ComButton id="m_btnUnEquip" x="402" y="438.7" skinName="com_button" currentState="style3"/>
+		<e:Label text="提示：选中列表显示可用宝石镶嵌" y="518.71" size="22" textColor="0x8a8a9e" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

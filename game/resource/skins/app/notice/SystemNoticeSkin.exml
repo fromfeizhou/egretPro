@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SystemNoticeSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="534">
+	<e:Group x="0" y="0" touchChildren="false" touchEnabled="false">
+		<e:Image id="m_imgMask" source="pro_001_png" height="100%" width="100%" visible="false"/>
+		<e:Group id="m_pRoot" x="0" y="0" width="534">
+			<e:Image id="m_imgBg" source="border_011_png" y="0" horizontalCenter="0" height="40"/>
+			<e:Label id="m_labMsg" text="" size="30" textColor="0xe9e9e6" x="284" y="4"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

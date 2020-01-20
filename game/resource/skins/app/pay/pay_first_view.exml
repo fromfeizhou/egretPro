@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_first_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group horizontalCenter="0" verticalCenter="0" height="750" width="1334">
+		<e:Group id="m_closeBg" x="0" y="0">
+			<e:Image x="1.33" y="135.98" source="acti_first_bg_png" width="1334" height="495" />
+			<!--<com_main:CImage x="18.18" y="18.84" source="icon_wj_b_3_png" scaleX="0.85" scaleY="0.85" />-->
+			<com_main:ComGenCard id="m_genCard" skinName="ComGenCardSkin" scaleX="0.85" scaleY="0.85" horizontalCenter="-378" y="27" anchorOffsetY="0" anchorOffsetX="0"/>
+			<e:Group y="90.98" x="499" anchorOffsetX="0" width="544">
+				<e:Image id="m_tIcon" source="lb_sc_dl_png" y="18" x="67"  scaleX="1.2" scaleY="1.2"/>
+				<e:Label id="m_tPriceLab" text="首充60元宝" size="40" x="346.7" y="42.35" fontFamily="Microsoft YaHei" scaleX="1"
+				         scaleY="1" textColor="0xefe4b1" stroke="2" strokeColor="0x2a1a03" rotation="-1" />
+				<e:layout>
+					<e:HorizontalLayout verticalAlign="middle"  gap="0"/>
+				</e:layout>
+			</e:Group>
+			<e:Group y="160" horizontalCenter="64.5">
+				<e:Image id="m_awardDesc" source="lb_sc_zsjpwj_png" y="11" x="0" />
+				<e:Image id="m_award" source="lb_zy_png" x="344.03" y="0" />
+				<e:layout>
+					<e:HorizontalLayout verticalAlign="middle"  gap="-55"/>
+				</e:layout>
+			</e:Group>
+			<e:Group y="331.99" x="611">
+				<e:Image source="lb_sc_hkhjz_png" x="0" y="6" />
+				<e:BitmapLabel id="m_labPlayerVip" x="151" y="4" font="font_vip_fnt" text="8888" />
+				<e:Image source="lb_sc_ybdlb_png" x="244.36" y="6" />
+				<e:layout>
+					<e:HorizontalLayout verticalAlign="middle" gap="1"/>
+				</e:layout>
+			</e:Group>
+			<e:Group y="652" x="652">
+				<e:Image source="border_1001_png" y="0" scaleX="1" scaleY="1" scale9Grid="13,3,78,21" anchorOffsetX="0" width="318"
+				         x="0" />
+				<e:Label text="点击任意区域关闭" size="22" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0x8A8A9E" y="2"
+				         horizontalCenter="0" />
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_groupAward" width="597.41" height="142.43" y="379.64" anchorOffsetX="0" anchorOffsetY="0"
+		         horizontalCenter="140.5">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="22" />
+			</e:layout>
+		</e:Group>
+		<com_main:ComButton id="m_btnGoto" skinName="com_button" currentState="style4" horizontalCenter="150"
+		                    verticalCenter="224.5" />
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TurnTableItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group>
+		<e:Group x="12" y="11">
+			<e:Image id="m_imgBg" source="zyt_35_png" scaleX="1" scaleY="1"/>
+			<com_main:ComItemNew id="m_pComItem" y="10" skinName="com_item_new" horizontalCenter="0" currentState="count"/>
+			<e:Label id="m_labName" text="青龙的小刀" textColor="0xE9E9E6" size="24" horizontalCenter="0" y="114" fontFamily="Microsoft YaHei" x="41" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="m_RareRoot" scaleX="0.8" scaleY="0.8" y="4.01" x="4.19">
+			<e:Image source="RedWale01_png" scaleX="1.4" scaleY="1.4"/>
+			<e:Label text="稀有物品" textColor="0xE9E9E6" size="24" y="67" fontFamily="Microsoft YaHei" x="0" scaleX="1" scaleY="1" rotation="-45"/>
+		</e:Group>
+		<e:Group id="m_CountRoot" x="152" y="13" visible="false">
+			<e:Image source="zyt_jb_png" x="0" y="0"/>
+			<e:BitmapLabel id="m_labFight" x="6.68" y="8.34" text="x20" anchorOffsetX="0" anchorOffsetY="0" scaleX="0.35" scaleY="0.35" font="role_level_fnt" letterSpacing="-5"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

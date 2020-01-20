@@ -1,0 +1,74 @@
+<e:Skin class="CrossServerDetailWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="750" width="1334">
+	<w:Config id="1598d7ea2ba"/>
+	<e:Image source="border_004_jpg" left="0" top="0" right="0" bottom="0"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" top="0" horizontalCenter="0" left="0" right="0"/>
+	<e:Group id="m_pRoot" y="60" touchEnabled="false">
+		<e:Group width="1334" height="690" touchEnabled="false" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0">
+			<com_main:CImage id="m_bRule" source="btn_093_up_png" width="64" height="64" top="5" left="160"/>
+			<com_main:CLabel text="查看规则" fontFamily="Microsoft YaHei" size="22" verticalAlign="middle" textAlign="right" height="36" textColor="0xabb7d1" left="232" top="18"/>
+			<e:Group horizontalCenter="0" y="18">
+			<com_main:CLabel text="争夺城池:" fontFamily="Microsoft YaHei" size="30" verticalAlign="middle" textAlign="right" height="30" textColor="0xffff99"/>
+			<com_main:CLabel id="m_lbCity" text="郡城【樊城】" fontFamily="Microsoft YaHei" size="30" verticalAlign="middle" textAlign="right" height="30" textColor="0xffff99"/>
+			<e:layout>
+				<e:HorizontalLayout gap="15"/>
+			</e:layout>
+			</e:Group>
+			<com_main:ComButton id="m_pBtn" skinName="com_button" currentState="style6" anchorOffsetX="72.5" anchorOffsetY="30" right="221" top="10"/>
+			<e:Group id="m_btnWelfare" width="92.67" height="97.67" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="565" verticalCenter="-310" scaleX="0.8" scaleY="0.8">
+			<e:Image source="border_1007_png" touchEnabled="false" scaleX="1.5" scaleY="1.5" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image y="4.67" scaleX="-1" scaleY="1" source="bx-jinl_png" x="91.66"/>
+			<e:Image x="3" y="75" source="lb_mrfl_png"/>
+		</e:Group>
+			<e:Image source="line_009_png" y="73.23" width="80%" horizontalCenter="0"/>
+			<e:Image source="zyt_13_png" y="80.83" horizontalCenter="0"/>
+			<e:Group top="80" bottom="0">
+			<com_main:CrossServerJobCell id="m_ownKing" skinName="CrosssServerJobCellSkin" currentState="Level_0" horizontalCenter="0" top="5"/>
+			<com_main:CrossServerJobCell id="m_ownGeneral_0" skinName="CrosssServerJobCellSkin" currentState="Level_1" left="0" top="359"/>
+			<com_main:CrossServerJobCell id="m_ownGeneral_1" skinName="CrosssServerJobCellSkin" currentState="Level_1" horizontalCenter="0" top="359"/>
+			<com_main:CrossServerJobCell id="m_ownGeneral_2" skinName="CrosssServerJobCellSkin" currentState="Level_1" left="311" top="359"/>
+			<com_main:CLabel text="我方" fontFamily="Microsoft YaHei" size="30" verticalAlign="middle" textAlign="right" horizontalCenter="0" textColor="0x9ee2ff" stroke="3" strokeColor="0x162848" top="5" bold="true"/>
+			<e:Group id="m_ownResult" horizontalCenter="0" top="40" visible="false">
+				<e:Image source="zyt_02_png" horizontalCenter="0" verticalCenter="0" width="70" height="70"/>
+				<e:Image id="m_ownResultImg" source="lb_ty1_s_png" horizontalCenter="1" verticalCenter="-2" width="60" height="58"/>
+			</e:Group>
+			</e:Group>
+			<e:Group top="80" bottom="0" right="0">
+			<com_main:CrossServerJobCell id="m_enemyKing" skinName="CrosssServerJobCellSkin" currentState="Level_0" horizontalCenter="0" top="5"/>
+			<com_main:CrossServerJobCell id="m_enemyGeneral_0" skinName="CrosssServerJobCellSkin" currentState="Level_1" right="311" width="180" top="359" height="246"/>
+			<com_main:CrossServerJobCell id="m_enemyGeneral_1" skinName="CrosssServerJobCellSkin" currentState="Level_1" horizontalCenter="0" top="359"/>
+			<com_main:CrossServerJobCell id="m_enemyGeneral_2" skinName="CrosssServerJobCellSkin" currentState="Level_1" right="0" width="180" top="359"/>
+			<com_main:CLabel text="敌方" fontFamily="Microsoft YaHei" size="30" verticalAlign="middle" textAlign="right" horizontalCenter="0" textColor="0xff9e9e" stroke="3" strokeColor="0x511117" top="5" bold="true"/>
+			<e:Group id="m_enemyResult" horizontalCenter="0" top="40" visible="false">
+				<e:Image source="zyt_02_png" horizontalCenter="0" verticalCenter="0" width="70" height="70"/>
+				<e:Image id="m_enemyResultImg" source="lb_ty4_b_png" horizontalCenter="1" verticalCenter="-2" width="60" height="58"/>
+			</e:Group>
+			</e:Group>
+			<e:Group horizontalCenter="0" top="200">
+			<com_main:CImage source="zyt_gj_wg_png" horizontalCenter="0"/>
+			<com_main:CImage id="m_cityIcon" horizontalCenter="-4.5" top="84" scaleX="0.9" scaleY="0.9" source="map_build_icon21_png"/>
+			<e:Group horizontalCenter="0.5" verticalCenter="77.5" height="43">
+				<com_main:CImage source="com_wzk5_png" scaleX="1.3" scaleY="1.2"/>
+				<com_main:CImage source="icon_czf_png" verticalCenter="0" x="-9"/>
+				<com_main:CLabel id="m_cityName" text="敬请期待" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right" textColor="0xaac7ff" verticalCenter="1.5" horizontalCenter="0"/>
+			</e:Group>
+			</e:Group>
+			<e:Group horizontalCenter="0" top="120" id="m_pAWard">
+			<com_main:CLabel text="占领全服奖励" fontFamily="Microsoft YaHei" size="26" verticalAlign="middle" textAlign="right" horizontalCenter="0" textColor="0xffff99"/>
+			<e:Scroller width="450" height="85" x="0" y="50" scrollPolicyH="auto" scrollPolicyV="off">
+				<e:viewport>
+				<e:Group id="m_RewardRoot">
+					<e:layout>
+					<e:HorizontalLayout verticalAlign="middle" gap="10" horizontalAlign="center"/>
+					</e:layout>
+				</e:Group>
+				</e:viewport>
+			</e:Scroller>
+			</e:Group>
+			<e:Group id="m_pGTime" horizontalCenter="0" top="513" height="30">
+			<e:Image source="line_1013_png" height="30" width="350"/>
+			<com_main:CLabel id="m_openTime" text="12月6日 周日 9:00" fontFamily="Microsoft YaHei" size="24" verticalAlign="middle" textAlign="right" horizontalCenter="0" textColor="0xf8cb8b" bottom="3"/>
+			</e:Group>
+			<com_main:ComButton id="m_pStateBtn" skinName="com_button" currentState="style2" anchorOffsetX="120" anchorOffsetY="35.5" horizontalCenter="0" top="557"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

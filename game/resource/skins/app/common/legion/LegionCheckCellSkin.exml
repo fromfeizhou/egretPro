@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionCheckCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group>
+		<com_main:ComHeadItem id="m_comHead" width="115" height="127" y="0" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<com_main:ComFightItem id="m_comFightItem" skinName="ComFightItemSkin" y="166.28" scaleX="0.6" scaleY="0.6" horizontalCenter="0"/>
+		<e:Label id="m_labName" text="玩家名字" y="137.99" size="20" textColor="0xE9E9E6" horizontalCenter="0" textAlign="center" fontFamily="Microsoft YaHei"/>
+	</e:Group>
+</e:Skin>

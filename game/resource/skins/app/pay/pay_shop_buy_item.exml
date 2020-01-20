@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_shop_buy_item" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" height="248">
+		<e:Group y="0" width="334" height="220" x="0">
+			<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scale9Grid="17,25,8,4" touchEnabled="false" y="0" source="border_018_png" width="100%" x="0" height="100%"/>
+			<e:Image source="border_1029_png" x="0" y="0" anchorOffsetX="0" width="328"/>
+			<e:Image source="line_1005_png" x="2" y="17" height="185" width="4" scale9Grid="1,48,7,292"/>
+			<e:Image source="line_1005_png" x="327" y="17" height="185" width="4" scale9Grid="1,48,7,292"/>
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" touchChildren="false" touchEnabled="false" y="56" horizontalCenter="0">
+				<e:Image id="m_imgItemBg" source="yj_zyd_png" x="0" y="120" scaleY="-1"/>
+			<com_main:CImage id="m_pItem" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="yb_06_png" y="-7" horizontalCenter="0"/>
+				<e:Group id="m_ext" y="90" left="0" right="0">
+					<e:Image source="border_1001_png" y="-2" scaleX="1" scaleY="1" x="0" width="100%" anchorOffsetY="0" height="33" alpha="0.8"/>
+					<e:Group id="m_pGGoldMore" anchorOffsetX="0" anchorOffsetY="0" touchChildren="false" touchEnabled="false" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="0">
+						<e:Label id="m_pLbGoldMoreTile" text="首次购买额外赠送" x="-0.5" y="5" stroke="1" strokeColor="0x383838" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xe7d7a7"/>
+						<e:Label id="m_pLbGoldMore" text="6000" stroke="1" strokeColor="0x383838" size="20" scaleX="1" scaleY="1" textAlign="center" verticalAlign="justify" y="17.5" x="219" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+						<e:Label text="元宝" x="9.5" y="15" stroke="1" strokeColor="0x383838" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xe7d7a7"/>
+						<e:layout>
+						<e:HorizontalLayout verticalAlign="middle"/>
+						</e:layout>
+					</e:Group>
+				</e:Group>
+			</e:Group>
+			<e:Group id="m_pGDouble" width="117" height="117" touchChildren="false" touchEnabled="false" x="-11" y="-11" anchorOffsetX="0" anchorOffsetY="0">
+			<com_main:CImage y="0" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" width="110" height="110" x="0" source="zyt_15_png"/>
+			<e:Label text="首充双倍" rotation="315.9" size="24" horizontalCenter="-17.5" verticalCenter="-16.5" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" touchChildren="false" y="6" height="44" width="118" horizontalCenter="0">
+				<e:Image id="m_typeImg" source="icon_source_gold_png"/>
+			<e:BitmapLabel id="m_pLbName" x="45" y="8" font="font_vip_fnt" text="300"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pBtnBuy" width="171" height="66" anchorOffsetX="85" anchorOffsetY="33" y="215" horizontalCenter="0">
+			<com_main:CImage scaleX="1" scaleY="1" scale9Grid="31,10,187,62" left="0" top="0" bottom="0" right="0" source="btn_002_up_png"/>
+			<e:Group horizontalCenter="0" verticalCenter="0" touchChildren="false" touchEnabled="false">
+			<e:Label id="m_pLbPrice" text="60" stroke="2" strokeColor="0x885a2a" size="24" x="24" verticalCenter="0" textColor="0xe9e9e6" fontFamily="Microsoft YaHei"/>
+			<e:Label text="￥" x="0" stroke="2" strokeColor="0x885a2a" size="24" verticalCenter="0" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

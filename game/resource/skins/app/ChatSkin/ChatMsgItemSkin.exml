@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChatMsgItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="left,right,system"  width="704">
+	<e:Group width="100%" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false">
+		<com_main:ComHeadItem id="m_comHead" right.right="0" left.left="0" width="115" height="127" left.system="0" width.system="0" height.system="0" visible.system="false"/>
+		<e:Group id="m_pMsgRoot" y.right="70" y.left="70" right.right="137" left.left="137" width="25" touchEnabled="false" left.system="0" y.system="3">
+			<e:Image id="m_imgMsgBg" source="lt_dhk_png" left.left="-20" scale9Grid="15,33,37,10" scaleX.right="-1" y="0" right.right="-20" touchEnabled="false" left.system="-20" visible.system="false"/>
+			<e:Label id="m_labMsg" text="" size="24" textColor="0xe9e9e6" verticalCenter="0"  left.left="0" right.right="-10"  left.system="0"/>
+		</e:Group>
+		<e:Group id="m_pTitleRoot" x.left="125" y="14" right.right="125" touchChildren="false" touchEnabled="false" x.system="125" y.system="0" visible.system="false">
+			<com_main:ComState id="m_comState" x="0" y="0" skinName="ComStateSkin"/>
+			<e:Label id="m_labTitle" text="一二三" x="61" y="13" textColor="0xabb7d1" size="22"/>
+			<e:Label id="m_labSpace" text="" x="71" y="23" textColor="0xABB7D1" size="22"/>
+			<e:Label id="m_labTime" text="8小时前" x="81" y="33" size="22" textColor="0x8a8a9e"/>
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle" gap="6"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

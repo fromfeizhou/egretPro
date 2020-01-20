@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CampNorViewSKin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" states="normal,history">
+	<com_main:TeamPanel id="m_teamPanel" skinName="TeamPanelSkin" horizontalCenter="0" verticalCenter="0" width="100%"
+	                    height="100%" />
+	<e:Group id="m_pBtnBack" width="194" height="65" anchorOffsetY="32.5" anchorOffsetX="97" left="0" top="0">
+		<com_main:CImage width="100%" height="100%" scaleX="1" scaleY="1" source="btn_008_up_png" />
+	</e:Group>
+	<e:Group id="m_ptips" horizontalCenter="-105" bottom="142" width="600" height="33">
+		<com_main:CImage source="border_1001_png" x="0" y="0" width="100%" height="100%" />
+		<e:Group horizontalCenter="0" verticalCenter="0" id="m_plb" includeIn="history">
+			<com_main:CLabel id="m_lbNation" size="24" textColor="0xe9e9e9" text="禁止势力:群" />
+			<com_main:CLabel id="m_lbtype" size="24" textColor="0xe9e9e9" text="禁止势力:刀兵" />
+			<e:layout>
+				<e:HorizontalLayout gap="20" verticalAlign="middle" />
+			</e:layout>
+		</e:Group>
+		<com_main:CLabel id="m_lbPve" size="24" textColor="0xe9e9e9" text="最强战力的武将未上阵" verticalCenter="0" horizontalCenter="0"
+		                 includeIn="normal" />
+	</e:Group>
+</e:Skin>

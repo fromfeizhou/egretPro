@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaInlayStoneSkin" currentState="common" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="lock,empty,common" >
+	<e:Group id="m_groupBase">
+		<com_main:CImage id="m_imgBg" anchorOffsetY="0" anchorOffsetX="0" source="Qualitykuang2_png" width="104" height="104" x="0" y="0"/>
+		<e:Label id="m_labPos" text="1" size="100" textColor="0x000000" alpha="0.5" horizontalCenter="0" verticalCenter="0" visible.common="false"/>
+		<com_main:CImage source="btn_treasureAdd_png" touchEnabled="false" x.common="22.66" y.common="22" visible.common="false" width.empty="62" height.empty="62" source.lock="com_lock2_png" horizontalCenter.lock="2.5" verticalCenter.lock="0" horizontalCenter.empty="2" verticalCenter.empty="1" width.lock="43" height.lock="52"/>
+		<com_main:CImage id="m_imgIcon" source="common_prop_2007_png" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0" verticalCenter="0" visible.lock="false" visible.empty="false"/>
+	</e:Group>
+</e:Skin>

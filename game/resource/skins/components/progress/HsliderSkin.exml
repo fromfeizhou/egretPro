@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HsliderSkin" width="260" height="32" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" maxWidth="0">
+	<e:Image source="pro_005_png" scale9Grid="3,3,18,18" height="22" left="-2" right="-2" verticalCenter="0"/>
+		<e:Image id="track" scale9Grid="4,9,28,18" height="22" verticalCenter="0" source="" width="100%"/>
+		<e:Image id="trackHighlight" source="pro_003_png" anchorOffsetX="0" height="18" x="2" scale9Grid="4,7,15,9" verticalCenter="0"/>
+	<e:Group id="thumb" width="0" height="0" verticalCenter="0" x="20">
+		<e:Image width="48" height="48" source="btn_013_up_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

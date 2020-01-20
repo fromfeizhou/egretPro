@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainCrossBarSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="base,wall" >
+	<e:Image id="m_btnBack" source="btn_008_up_png" top="0" left="0"/>
+	<com_main:CrossQueView id="m_teamView" y="111" skinName="WorldQueViewSkin"  left="16"/>
+
+
+
+	<e:Group right="0" width="100" height="330" top="124" touchEnabled="false">
+		<e:Group id="m_btnTeam" x="42" y="42" width="84" height="84" anchorOffsetX="42" anchorOffsetY="42" scaleX="1" scaleY="1">
+			<e:Image source="btn_051_up_png" x="0" y="0" touchEnabled="false"/>
+			<e:Image source="lb_jt_png" touchEnabled="false" horizontalCenter="0" bottom="0"/>
+		</e:Group>
+		<e:Group id="m_btnFigthRecord" x="42" y="142" width="84" height="84" anchorOffsetX="42" anchorOffsetY="42" scaleX="1" scaleY="1" includeIn="base">
+			<e:Image x="0" y="0" touchEnabled="false" source="btn_113_png"/>
+			<e:Image touchEnabled="false" source="lb_zk_png" bottom="0" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_btnRank" x="42" y="242" width="84" height="84" anchorOffsetX="42" anchorOffsetY="42" scaleX="1" scaleY="1" y.wall="142">
+			<e:Image x="0" y="0" touchEnabled="false" source="btn_096_up_png"/>
+			<e:Image touchEnabled="false" source="lb_pm_png" horizontalCenter="0" bottom="0"/>
+		</e:Group>
+		<e:Group id="m_btnBuff" x="42" y="342" width="84" height="84" anchorOffsetX="42" anchorOffsetY="42" scaleX="1" scaleY="1" y.wall="242" visible="false">
+			<e:Image x="0" y="0" touchEnabled="false" source="btn_149_png"/>
+			<e:Image touchEnabled="false" source="lb_BUFF_png" horizontalCenter="0" bottom="0"/>
+		</e:Group>
+
+
+
+	</e:Group>
+	<e:Image id="m_imgBuffAtk" source="cityBuff_11_png" x="243.33" y="0" width="60" height="60" visible="false"/>
+	<e:Image id="m_imgBuffDef" source="cityBuff_12_png" x="316.33" y="0" height="60" width="60" visible="false"/>
+</e:Skin>

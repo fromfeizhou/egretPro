@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComAttriRenderSkin" currentState="style22" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="style18,style18b,style20,style20b,style20c,style22,style22b" >
+	<e:Group>
+		<e:Label id="m_labName" text="攻击：" x="16" y="14" size="20" textColor="0xabb7d1" size.style18="18" size.style22b="22" size.style22="22" textColor.style20b="0x44d0f3" size.style18b="18" textColor.style20c="0x00ff00"/>
+		<e:Label id="m_labVal" text="18540" x="110" y="69" size="20" textColor="0xe9e9e6" textColor.style22b="0x00ff00" size.style18="18" size.style22b="22" size.style22="22" textColor.style20b="0x00ff00" size.style18b="18" textColor.style18b="0x00ff00" textColor.style20c="0x00ff00"/>
+		<e:layout>
+			<e:HorizontalLayout gap="1"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

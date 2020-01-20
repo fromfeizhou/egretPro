@@ -1,0 +1,13 @@
+{"file":"baojiNum.png","frames":{
+"0":{"x":172,"y":4,"w":34,"h":45,"offX":0,"offY":6,"sourceW":34,"sourceH":56},
+"1":{"x":89,"y":64,"w":25,"h":45,"offX":0,"offY":6,"sourceW":25,"sourceH":56},
+"2":{"x":214,"y":4,"w":33,"h":45,"offX":0,"offY":6,"sourceW":33,"sourceH":56},
+"3":{"x":46,"y":119,"w":32,"h":45,"offX":1,"offY":6,"sourceW":33,"sourceH":56},
+"4":{"x":4,"y":66,"w":36,"h":45,"offX":0,"offY":6,"sourceW":36,"sourceH":56},
+"5":{"x":46,"y":172,"w":31,"h":45,"offX":0,"offY":6,"sourceW":31,"sourceH":56},
+"6":{"x":4,"y":119,"w":34,"h":45,"offX":0,"offY":6,"sourceW":34,"sourceH":56},
+"7":{"x":4,"y":172,"w":34,"h":45,"offX":0,"offY":6,"sourceW":34,"sourceH":56},
+"8":{"x":130,"y":4,"w":34,"h":45,"offX":0,"offY":6,"sourceW":34,"sourceH":56},
+"9":{"x":48,"y":66,"w":33,"h":45,"offX":1,"offY":6,"sourceW":34,"sourceH":56},
+"暴":{"x":66,"y":4,"w":56,"h":52,"offX":0,"offY":3,"sourceW":56,"sourceH":56},
+"击":{"x":4,"y":4,"w":54,"h":54,"offX":1,"offY":1,"sourceW":56,"sourceH":56}}}

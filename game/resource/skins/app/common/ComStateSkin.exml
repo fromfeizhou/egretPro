@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComStateSkin" currentState="mini" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="mini,nor5" >
+	<e:Group touchChildren="false" touchEnabled="false">
+		<e:Image id="m_imgFlag" x="0" y="0" source="common_country2_1_png" source.nor5="common_country5_1_png"/>
+		<e:Label id="m_labName" text="魏" size="22" horizontalCenter="0" stroke="1" textColor="0x44d0f3" strokeColor="0x000000" verticalCenter="0" visible.nor5="false" width="22" textAlign.mini="center" textAlign="center"/>
+	</e:Group>
+</e:Skin>

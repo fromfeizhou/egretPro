@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="arena_sandan_result" width="1334" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="750">
+	<com_main:APopUp id="m_PopUpBoard" currentState="size3" anchorOffsetY="0" height="674" horizontalCenter="0" verticalCenter="0" skinName="APopUpSkin"/>
+	<com_main:CScroller id="m_pScroll" width="1044" height="588" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="23">
+		<e:Group id="group_rewardList" anchorOffsetX="0" width="1030" anchorOffsetY="0" height="476">
+		<e:layout>
+			<e:VerticalLayout horizontalAlign="center" gap="36"/>
+		</e:layout>
+		</e:Group>
+	</com_main:CScroller>
+	
+</e:Skin>

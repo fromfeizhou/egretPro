@@ -1,0 +1,13 @@
+{"file":"baguanSkillImage.png","frames":{
+"baguaSkill_0":{"x":221,"y":510,"w":181,"h":233,"offX":104,"offY":36,"sourceW":400,"sourceH":400},
+"baguaSkill_1":{"x":253,"y":2,"w":249,"h":282,"offX":72,"offY":21,"sourceW":400,"sourceH":400},
+"baguaSkill_2":{"x":2,"y":2,"w":246,"h":289,"offX":74,"offY":11,"sourceW":400,"sourceH":400},
+"baguaSkill_3":{"x":506,"y":2,"w":216,"h":210,"offX":91,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_4":{"x":2,"y":510,"w":214,"h":210,"offX":92,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_5":{"x":444,"y":431,"w":213,"h":210,"offX":93,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_6":{"x":662,"y":431,"w":212,"h":211,"offX":95,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_7":{"x":506,"y":217,"w":215,"h":210,"offX":91,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_8":{"x":222,"y":295,"w":218,"h":206,"offX":89,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_9":{"x":726,"y":2,"w":218,"h":208,"offX":88,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_10":{"x":2,"y":295,"w":216,"h":210,"offX":91,"offY":68,"sourceW":400,"sourceH":400},
+"baguaSkill_11":{"x":2,"y":724,"w":214,"h":210,"offX":92,"offY":68,"sourceW":400,"sourceH":400}}}

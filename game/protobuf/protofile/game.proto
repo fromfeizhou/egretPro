@@ -1,0 +1,7552 @@
+package gameProto ;          // 定义了package的名字 
+
+
+//**********************数据结构定义***********************
+//属性
+message SysKeyValue{
+	required int32 key = 1;
+	required int64 value = 2;
+	optional int32 isFloat = 3;//1是浮点 0是整数 如果是浮点型，除以10000
+}
+
+message PointInfo{
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+
+// 单个物品变更结果
+message ValuesMessage {
+	required int32 baseType = 1; 	//物品类型:1数值类型例如，银两，金币，经验 2道具
+	required int32 itemId = 2; 		//编码，例如:道具id,装备id,资源id link ItemConfig.id
+	required int64 count = 3; 		//数量
+	optional int32 operate = 4; 	//物品操作 0修改，1删除 ，2新建
+	optional int32 position = 5; 	// 位置，例如：背包格子id,装备位置,根据物品类型决定
+	optional int64 uuid = 6; // 物品的唯一id，不一定有值
+    optional int32 level = 7;		//等级
+}
+
+//提示内容
+message NoticeInfo{
+	required int32 id = 1; //公告id
+	repeated string param = 2; //公告参数
+}
+
+// 玩家简短信息，用于查询显示
+message PlayerBriefInfo{
+	optional int64 playerId = 1;
+	optional int32 head = 2;
+	optional string name = 3; //名称
+  	optional int32 countryId = 4; //国家 1-魏 2-蜀 3-吴
+	optional int32 level = 5; // 等级
+	optional int32 governmentPost = 6; //官职id
+	optional int32 vipLevel = 7; //vip等级
+	optional int64 guildId = 8; //联盟id
+}
+
+// 战斗属性
+message Attribute{
+	optional int32 addType = 1;	//属性加成类型
+	optional float atk = 2;		//攻击
+	optional float def = 3;		//防御
+	optional float hp = 4;		//血量
+	optional float crit = 5;	//暴击
+	optional float dodge = 6;	//闪避
+	optional float atkRate = 7;	//攻击加成比例
+	optional float defRate = 8;	//防御加成比例
+	optional float hpRate = 9;	//气血加成比例
+}
+
+//头像信息
+message HeadPortrait{
+	required int64 playerId=1;			//角色ID
+	required int32 type = 2; 			//0角色id，1武将ID，2自定义
+	required string url=3;				//头像地址
+	required string playerName=4;		//玩家名字
+	required int32 countryId=6;			//国家
+	
+	optional int32 vip=5;				//vip
+	optional int32 official=7;			//官职
+	optional int64 labourUnionId=8;		//加入的军团ID
+	optional string labourUnionName=9;	//加入的军团名字
+}
+
+//**********************协议定义***********************
+
+//推送公告(NOTICE_PUSH = 20)
+message NoticePushResp{
+	repeated NoticeInfo notice = 1; //公告
+}
+
+// 物品变更推送 (PUSH_VALUES_MESSAGE = 30)
+message ValuesMessageSet{
+	optional int32 cmd = 1;	// 变更发生的cmd
+	optional string consumes = 2;	//消耗串
+	repeated ValuesMessage consumeMessage = 3;//消耗结果
+	optional string rewards = 4;	//奖励串
+	repeated ValuesMessage rewardMessage = 5;//奖励结果
+	optional bool isReport = 6;		//是否需要报告给玩家
+}
+
+
+message C2S_FUNCTION_INFO{
+}
+
+// 功能开放推送(S2C_FUNCTION_INFO = 41) 
+message S2C_FUNCTION_INFO{
+	repeated int32 funtionIds = 1;	//功能开放id列表
+}
+
+// 武将技能枚举
+enum GeneralSkillEnum {
+	NORMAL_SKILL = 0; // 普通技能
+	BORN_SKILL = 1; // 天赋技能
+	LEVEL_SKILL = 2; // 等级技能
+	CHOSEN_SKILL = 3; // 自选技能
+	PARTICULAR_SKILL = 4; // 魔化技能
+}
+
+//城市基本信息
+message CityInfo{
+	required int32 id = 1; 		//城池id
+	required int32 country = 2; //国家(1:魏,2:蜀,3:吴,0其他)
+	required int32 playerGarrisonCount = 3; //用户驻军数量（队伍数量）
+	required int32 npcGarrisonCount = 4; //NPC驻军数量（队伍数量）
+	required int32 npcLv = 5; //NPC等级
+	required int32 status = 6; 		//0正常，1战斗中，2休战中
+	required string prefect = 7; // 太守名字
+	required int32 atkCountry = 8; 	//当前正在攻击该城池的国家
+	repeated int32 raidCountry = 9; // 将该城池列为突袭目标的国家的id 插旗子 先不做	
+	optional bool hasBeenOccupied = 10; //
+	optional int32 unlockTaskId = 11;
+	optional bool locked = 12;	
+	optional int32 warStartTime=13;		//战斗开始时间，前端用来倒计时
+}
+
+//事件信息
+message EventInfo{
+	required int32 index = 1; //事件点坐标 index
+	optional int32 id = 2;    //事件 id
+}
+
+message AttributeValue{
+	required int32 key = 1;		//属性id
+	required int32 value=2;		//属性值
+}
+
+//武将窗口信息
+message GeneralWinInfo{
+	   required int32 generalId = 1;//武将id
+	   required int32 level = 2;	//武将等级
+	   required int32 star = 3;		//武将星星
+	   required int32 fight = 4;	//战力
+	   optional int32 quality = 5;	//武将品质
+}
+
+//查询新手进度(1401)
+message C2S_GUIDE_RECORD{
+}
+//查询新手进度(1402)
+message S2C_GUIDE_RECORD{
+	repeated int32 records = 1;
+}
+
+//新手指引提交(1403)
+message C2S_GUIDE_COMMIT{
+	required int32 id = 1;
+}
+
+//PUSH_VALUES_MESSAGE 数值型资源推送
+message S2C_NUMBER_VALUES{
+	required int32 cmd = 1;			// 变更发生的cmd
+	repeated ValuesMessage valuesMessage=2;//当前资源值
+}
+
+//跨天时间
+message S2C_CROSS_DAY{
+	required int64 serverTime = 1;
+}
+
+//键值对
+message Tuple{
+	required int32 key = 1;
+	required int32 value = 2;
+}
+
+//充值配置表，字段一一对应
+message RechargeConfig{
+	required int32 id = 1;
+	required int32 shopId = 2;
+	required int32 price = 3;
+	repeated Tuple reward = 4;
+	required int32 firstRecharge = 5;
+	required int32 vipExp = 6;
+	required string name = 7;
+	required string description = 8;
+	required int32 count = 9;
+	required int32 shopType = 10;
+}
+
+//商城信息
+message MerchantInfo{
+	required int32 storeId = 1;//商城id
+	repeated Tuple autoRefresh = 2; //自动刷新时间：
+	required bool handRefresh = 3;//能否手动刷新
+	required int32 refreshAmount = 4;//最大刷新次数
+	required Tuple coumses = 5;//刷新消耗
+	required int32 refreshNum = 6;//剩余手动刷新数量
+	repeated GoodsInfo goods = 7;//商品信息
+	required int32 freeRefreshNum = 8; //免费刷新次数
+	
+}
+
+//商品信息
+message GoodsInfo{
+	required int32 id = 1;//配置id
+	required int32 itemId = 2;//物品id
+	required Tuple coumses = 3;//消耗
+	required int32 stock = 4;//现有库存
+	required int32 stockMax = 5;//最大库存
+	required int32 vipLevel = 6;//vip等级限制
+	required int32 discount = 7;//折扣
+	optional int32 ondGroupCount = 8;//一捆数量
+}
+
+message PlayerWarData{
+	required int32 countryId=1;		//国家
+	required int64 playerId=2;		//用户ID
+	required string userName=3;		//用户昵称
+	required int32 generalId=4;		//武将ID
+	required int64 teamId=5;		//队伍ID
+	required int64 teamForce=6;		//队伍战斗力
+	required int32 teamGeneral=7;	//队伍武将数量
+	required int64 battleId=8;		//战场ID，0表示队列中
+	required bool isNpc = 9;   		//是否NPC，npc武将id从怪物表读取
+}
+
+//国战结算数据
+message CountryOverData{
+	required int32 surplusHero=1;	//剩余武将
+	required int32 lossHero=2;		//损失武将
+	required int32 countryId=3;		//势力ID
+}
+enum MessageID {
+	//登录流程
+	// 心跳
+	C2S_SYS_HEARTBEAT = 1;
+	S2C_SYS_HEARTBEAT = 2;
+	// 登录
+    C2S_PLAYER_LOGIN_ACT = 3;
+	// 登录
+    S2C_PLAYER_LOGIN_ACT = 7;
+	//推荐国家
+	C2S_PLAYER_RECOMMEND_COUNTRY = 4;
+	//随机角色名
+	C2S_PLAYER_RANDOM_NAME = 5;
+	// 创建角色
+    C2S_PLAYER_CREATE = 6;
+	
+    // 错误码推送
+    ERROR_CODE = 10;
+	//功能次数
+	C2S_SYS_FUNCOUNT=11;
+	S2C_SYS_FUNCOUNT=12;
+	
+
+    // 公告推送
+    NOTICE_PUSH = 20;
+    
+    // 物品变更推送
+    PUSH_VALUES_MESSAGE = 30;
+	// 新的物品变更推送
+	S2C_NUMBER_VALUES=31;
+   
+    
+    // 推送功能开放信息
+    C2S_FUNCTION_INFO = 40;
+	S2C_FUNCTION_INFO = 41;
+	
+	//申请怪物数据
+	C2S_SYS_GENERAL_WIN_INFO=50;
+	S2C_SYS_GENERAL_WIN_INFO=51;
+	//属性通知
+	S2C_SYS_GENERAL_ATTRIBUTES_NOTICE=52;
+	
+	//GM模式重入战场
+	C2S_GM_REENTRY_BATTLE=61;
+	S2C_GM_REENTRY_BATTLE=62;
+	//GM战斗
+	C2S_GM_WAR=63;
+	S2C_GM_WAR=64;
+	S2C_GM_WAR_OVER=65;
+	
+	
+
+	//登录
+    S2C_PLAYER_CREATE_NOTICE=101;	//创角通知
+	S2C_PLAYER_RECOMMEND_COUNTRY=102;//推荐国家返回
+	S2C_PLAYER_RANDOM_NAME=103;	//随机名字返回
+	S2C_PLAYER_LOGIN_DATA=106;	//登录成功后
+	C2S_DATAINIT_START=107;		//请求数据初始化开始（请求之后将用户激活）
+	C2S_DATAINIT_END=108;		//登录完成
+	S2C_DATAINIT_END=109;
+
+	
+	//角色
+    PUSH_LOGIN_GIFT = 131;		//推送登录礼包
+    RECEIVE_LOGIN_GIFT = 132;	//领取登录礼包
+    PUSH_FATIGUE_INFO = 141;	//推送疲劳信息
+    PUSH_REMOTE_LOGIN = 142;	//推送异地登录
+	PUSH_FORBID_LOGIN = 143; 	//封号
+   	PLAYER_BATTLE_LIST = 151;  //玩家登录返回战斗信息给前端
+	C2S_PLAYER_INTEGRATED_INFORMATION=161;//玩家综合信息
+	S2C_PLAYER_INTEGRATED_INFORMATION=162;
+	
+	//改名
+	C2S_PLAYER_RESET_NICKNAME = 163;
+	S2C_PLAYER_RESET_NICKNAME = 164;
+	//玩家设置，目前仅头像
+	C2S_PLAYER_SETTING = 165;
+	S2C_PLAYER_SETTING = 166;
+   	
+    //gift
+	GIFT_EXCHANGE = 201;	//兑换礼包
+	RECEIVE_AWARD = 202;	//领取奖励
+
+	//战场服指令
+	S2C_WAR_BATTLE_INIT=501;	//战场初始化（不管中途还是开始进入，都有个战场初始化过程）
+	S2C_WAR_COMBAT_UNIT=502;	//实时战斗数据推送
+	S2C_WAR_DEATH=503;			//死亡
+	S2C_WAR_FOLLOW_UP=504;		//后续部队加入(持久类型才会有)
+	S2C_WAR_MOVE_SYNC=505;		//移动同步
+	S2C_WAR_SYNC_MOVE_SPEED=506;//同步移动速度
+	S2C_WAR_BUFF_ADD=507;	//
+	S2C_WAR_BUFF_UN=508;	//取消buff
+	S2C_WAR_BUFF_OFFSET=509;//BUFF偏移
+	S2C_WAR_BUFF_BLOOD=510;	//BUFF气血
+	S2C_WAR_ELEMENT_BLOOD=511;//更新元素气血
+	S2C_WAR_BUFF_BLOOD_THUNDER_HALBERD=512;	//BUFF气血（雷戟专用）
+	S2C_WAR_GUIDE=513;	//引导通知
+	//S2C_WAR_QUERY_HERO_DATA=514;	//查看武将属性
+	S2C_WAR_SKILL_FAIL=516;			//技能释放失败
+	
+	S2C_WAR_PROMPT_QUEUE_INIT=517;//提示队列初始化(上)
+	S2C_WAR_PROMPT_QUEUE_PAGE=518;//返回前端的提示数据（分页）
+	S2C_WAR_PROMPT_QUEUE_ADD=519;//添加提示队列(上)
+	S2C_WAR_PROMPT_QUEUE_DEL=520;//删除提示队列(上)
+	S2C_WAR_PROMPT_LOWER_QUEUE_ADD=521;//添加提示队列(下)，只推送给对应的个人
+	S2C_WAR_COUNTRY_OVER=522;			//战斗完成
+	S2C_WAR_KILL_SOLDIERS_COUNT=523;	//攻击方总击杀通知
+	S2C_WAR_OVER=524;					//战斗完成
+	S2C_WAR_OVER_HP=525;				//战斗完成血量
+	
+	//战场内部指令
+	C2S_WARPROXY_CREATE_BATTLEFIELD=530;
+	S2C_WARPROXY_CREATE_BATTLEFIELD=531;
+	C2S_WARPROXY_GLOBAL_ATTRIBUTE=532;
+	S2C_WARPROXY_GLOBAL_ATTRIBUTE=533;
+	C2S_WARPROXY_ADD_CORPS=534;
+	S2C_WARPROXY_ADD_CORPS=535;
+	C2S_WARPROXY_INIT_BATTLEFIELD=536;
+	S2C_WARPROXY_INIT_BATTLEFIELD=537;
+	C2S_WARPROXY_REENTRY_BATTLE=538;
+	S2C_WARPROXY_REENTRY_BATTLE=539;
+	C2S_WARPROXY_QUIT_BATTLE=540;
+	S2C_WARPROXY_QUIT_BATTLE=541;
+	C2S_WARPROXY_ANGER_SKILL=542;
+	S2C_WARPROXY_OVER=543;
+	S2C_WARPROXY_CONTINUE_WAR=544;
+	S2C_WARPROXY_ROUND_OVER=545;
+	S2C_WARPROXY_SOLDIER_BLOOD_NOTICE=546;
+	S2C_WARPROXY_HERO_DEATH_NOTICE=547;
+	C2S_WARPROXY_DOWN_NOTICE=548;
+	C2S_WARPROXY_PROMPT_QUEUE_PAGE=549;
+	C2S_WARPROXY_EVACUATE=550;
+	S2C_WARPROXY_EVACUATE=551;
+	C2S_WARPROXY_RETREAT=552;
+	S2C_WARPROXY_RETREAT=553;
+	C2S_WARPROXY_ONE_VS_ONE=554;
+	S2C_WARPROXY_ONE_VS_ONE=555;
+	C2S_WARPROXY_START_WAR=556;
+	S2C_WARPROXY_START_WAR=557;
+	S2C_WAR_MAKE_WAR_NOTICE=558;
+	S2C_WARPROXY_FEAT_NOTICE=559;
+	C2S_WARPROXY_QUICK_BATTLE=560;
+	S2C_WARPROXY_QUICK_BATTLE=561;
+	C2S_WARPROXY_STOP_BATTLE=562;
+	S2C_WARPROXY_STOP_BATTLE=563;
+	C2S_WARPROXY_AUTO=564;
+	S2C_WARPROXY_AUTO=565;
+	S2C_WARPROXY_ENCIRCLE_CITY=566;
+	C2S_WARPROXY_CHECK_BATTLE=567;
+	S2C_WARPROXY_CHECK_BATTLE=568;
+	C2S_WARPROXY_ISCOUNTRY_PARTICIPATE=569;
+	S2C_WARPROXY_ISCOUNTRY_PARTICIPATE=570;
+	C2S_WARPROXY_OFFICIAL_NOTICE=571;
+	S2C_WARPROXY_OFFICIAL_NOTICE=572;
+	C2S_WARPROXY_QUERY_HERO_DATA=573;
+	C2S_WARPROXY_GUIDE_UNFROZEN=574;
+	C2S_WARPROXY_CREATE_CITY_BATTLEFIELD=575;
+	S2C_WARPROXY_CREATE_CITY_BATTLEFIELD=576;
+	//国战
+	C2S_WARPROXY_CITY_ADD_CORPS=577;
+	S2C_WARPROXY_CITY_ADD_CORPS=578;
+	S2C_WARPROXY_CITY_OVER=579;
+	C2S_WARPROXY_CITY_WAR_GO=580;
+	C2S_WARPROXY_CITY_WAR_CONFRONTATION_LIST=582;
+	C2S_WARPROXY_CITY_WATCH_WAR_TEAM=583;
+	S2C_WARPROXY_CITY_BATTLE_SYNC=584;
+	C2S_WARPROXY_CITY_WAR_MYTEAM=585;
+	C2S_WARPROXY_CHECK_BATTLE_SERVER=586;
+	S2C_WARPROXY_CHECK_BATTLE_SERVER=587;
+
+	
+
+
+    //citybattle
+    CITY_BATTLE_LOAD_WORLD_MAP = 601;
+	CITY_BATTLE_EXIT_WORLD_MAP = 630; //离开世界地图界面
+	S2C_CITY_UPDATE=602;			//城市更新通知
+
+	
+    //chat
+    CHAT_SEND = 701; //发送聊天
+    CHAT_PUSH = 702; //推送聊天
+    CHAT_SEARCH_PLAYER = 703; //查找玩家
+    GET_CHAT_MSG = 704; //获取聊天记录
+    CHAT_PRIVATE_CONTACT_LIST = 705;//获取私聊联系人列表
+    ADD_CHAT_PRIVATE_CONTACT = 706;//加入私聊联系人列表
+	C2S_CHAT_RECORD_LIST=707;//获取聊天记录
+	S2C_CHAT_RECORD_LIST=708;
+	C2S_CHAT_PUSH=709;//聊天推送
+	S2C_CHAT_PUSH=710;
+	C2S_CHAT_PRIVATE_LIST=711;//私聊列表
+	S2C_CHAT_PRIVATE_LIST=712;
+	S2C_CHAT_PRIVATE_HEAD=713;
+	C2S_CHAT_PRIVATE_RECORD_LIST=714;//获取私聊记录
+	S2C_CHAT_PRIVATE_RECORD_LIST=715;
+	C2S_CHAT_PRIVATE_CLEAN=716;//清除私聊列表成员
+	S2C_CHAT_PRIVATE_CLEAN=717;
+	C2S_CHAT_BLACKLIST=718;//获取黑名单
+	S2C_CHAT_BLACKLIST=719;
+	C2S_CHAT_ADD_BLACKLIST=720;//添加黑名单
+	S2C_CHAT_ADD_BLACKLIST=721;
+	C2S_CHAT_DEL_BLACKLIST=722;//删除黑名单
+	S2C_CHAT_DEL_BLACKLIST=723;
+	C2S_CHAT_REPORT=724;		//举报
+	S2C_CHAT_REPORT=725;
+
+	C2S_CHAT_LOG_PUSH=750;		//邮件日志推送
+    
+    //tavern
+    TAVERN_INFO = 801;	//获取酒馆信息
+    TAVERN_ATTRACT = 802; //招揽客人
+	C2S_SCORE_EXCHANGE = 803; //兑换红将
+	S2C_SCORE_EXCHANGE = 804; 
+    
+	
+    //general
+    GENERAL_ALL = 902; //获取招募的武将列表
+    GENERAL_DETAIL = 903; //根据武将id，获取武将信息
+    GENERAL_USE_EXP_BOOK = 921; //武将使用经验书
+    GENERAL_UP_STAR = 922; //武将升星
+    RECRUITED_GENERAL = 923; // 招募武将 合成武将
+    GENERAL_SKILL_LIST = 931; // 获取武将技能列表
+    OPEN_SKILL = 932; // 开启技能
+    GENERAL_TREASURE_WEAR = 933; //武将宝物佩戴
+    GENERAL_UPGRADE = 934;
+	C2S_GENERAL_REBIRTH = 935;		//武将重生
+	S2C_GENERAL_REBIRTH = 936;
+    
+    // building
+    C2S_BUILDING_INFO = 1001;	// 获取建筑信息
+	S2C_BUILDING_INFO  =1002;
+    C2S_BUILDING_ACTIVATED = 1003;	//激活建筑
+	S2C_BUILDING_ACTIVATED=1004;
+    C2S_BUILDING_UPLEVEL = 1005;	//建筑升级
+	S2C_BUILDING_UPLEVEL=1006;
+    C2S_BUILDING_SPEED = 1007;		//建筑加速
+	S2C_BUILDING_SPEED=1008;
+    BUILDING_CLEAN_COOLING = 1009;		//建筑清CD
+    C2S_BUILDING_LEVY = 1010;		//征收
+	S2C_BUILDING_LEVY = 1011;
+    MANUFACTURE_PROPS = 1012;	// 制造策略道具
+    GET_PROPS = 1013;		//领取道具
+    GET_BUILDING_ITEM = 1014;	//领取君主升级道具
+    PUSH_BUILDING_OPEN = 1021;	//推送建筑开放信息
+    PUSH_BUILDING_ITEM = 1022;	//推送君主升级道具
+    C2S_TRAINING_ARMY = 1023;	//练兵
+	S2C_TRAINING_ARMY=1024;
+	C2S_TRAINING_SPEED=1025;
+	S2C_TRAINING_SPEED=1026;
+    TRAINING_CLEAN_COOLING = 1027;//练兵清CD
+    C2S_TRAINING_GET = 1028;//收货士兵
+	S2C_TRAINING_GET=1029;
+    C2S_TOUCH_BUILDING = 1030;
+
+	// mailbox
+	MAILBOX_LIST = 1101; //加载邮件列表
+	MAILBOX_DELETE = 1102; //删除邮件
+	MAILBOX_GET_ATTACHMENT = 1103; //领取附件
+	MAILBOX_NEW = 1104; //新邮件通知
+	MAILBOX_READ = 1105; //读取邮件
+	MAILBOX_BATCH_DEL = 1106; //TODO 待删除
+	
+	//new mailbox
+	C2S_MAILBOX_TITLE_LSIT=1110;
+	S2C_MAILBOX_TITLE_LSIT=1111;
+	S2C_MAILBOX_TITLE_UP=1112;
+	C2S_MAILBOX_INFO=1113;
+	S2C_MAILBOX_INFO=1114;
+	C2S_MAILBOX_DEL=1115;
+	S2C_MAILBOX_DEL=1116;
+	C2S_MAILBOX_ALLDEL=1117;
+	S2C_MAILBOX_ALLDEL=1118;
+	C2S_MAILBOX_ALLREAD=1119;
+	S2C_MAILBOX_ALLREAD=1120;
+	S2C_MAILBOX_NOTICE=1121;
+	C2S_MAILBOX_ATTACHMENT=1122;
+	S2C_MAILBOX_ATTACHMENT=1123;
+	
+	//task
+	TASK_MILITARY_VIEW = 1201;
+	TASK_MILITARY_CHANGE = 1202;
+	TASK_ABANDON = 1203;
+	TASK_COMMIT = 1204;
+	MILITARY_POWER_RANK = 1205;
+	MILITARY_POWER_DIVINATION = 1206;
+	TASK_MILITARY_SPEED = 1207;
+	TASK_MILITARY_REFRESH = 1208;
+	
+	//backpack
+    BACKPACK_QUERY = 1301;		//查询背包
+	BACKPACK_USE_ITEM = 1302;	//使用物品
+	BACKPACK_SAFE_USE = 1303;	//安全使用物品
+	BACKPACK_DEL_ITEM = 1304;	//删除物品
+	S2C_BACKPACKGRID_CHANGE = 1306; // grid change
+    
+    //novice
+	C2S_GUIDE_RECORD = 1401;	//查询新手进度
+    S2C_GUIDE_RECORD = 1402; 	//查询新手进度，
+    C2S_GUIDE_COMMIT = 1403;	//新手指引提交
+	S2C_CROSS_DAY=1404;			//跨天
+    
+    //valuebuff
+    VALUEBUFF_TYPE_ADD = 1501; //获取资源加成
+    
+    // decisiveBattle
+	DECISIVE_BATTLE = 1601;	//决战信息
+	DECISIVE_BATTLE_INSPIRE	=	1602;	//鼓舞
+	DECISIVE_BATTLE_BUILD = 1603;	//建设
+	DECISIVE_BATTLE_APPLY = 1604;	//申请
+	DECISIVE_BATTLE_EXAMINE = 1605;	//审核
+	DECISIVE_BATTLE_APPROVE = 1606;	//批准
+	DECISIVE_BATTLE_ACCEPT_PRIZE = 1607;	//领奖
+	PUSH_DECISIVE_BATTLE = 1608;	//推送决战信息
+	PUSH_RESOURCE_REWARD = 1609;	//推送资源奖励信息
+	
+	// celebration 
+	GET_CELEBRATION = 1701;	//获取庆典信息
+	CEREMONIES = 1702;		//举办庆典
+	LIGHT_LANTERN = 1703;	//点灯笼
+	RECEIVE_CELEBRATION_AWARD = 1704;	//领取奖励
+	START_CELEBRATION = 1705;		//开始庆典
+    
+	// arena
+    ARENA_ID = 1801;  //擂台等级
+    ENTER_ARENA_BATTLE = 1802;  //进入擂台战斗
+    CLEAN_UP_ARENA_BATTLE = 1803;//擂台扫荡
+    ARENA_RESET = 1804;//擂台重置
+    ARENA_REWARD_LIST = 1805;//擂台奖励列表
+    ARENA_GET_REWARD = 1806;//擂台领取奖励
+    ARENA_BATTLE_REWARD = 1807;//擂台战斗奖励
+	C2S_ARENA_BUY_RESET = 1809; //
+	S2C_ARENA_BUY_RESET = 1810; //
+
+    
+	// gemstone
+    GEMSTONE_ALL_INFO = 1901; //宝石列表
+    GEMSTONE_UP = 1902; //宝石升级
+    GEMSTONE_STOP_UP = 1903; //取消宝石自动升级
+    
+    // sellactivity
+    SELL_ACTIVITY_INFO = 2001; // 获取盛典档次记录信息
+    SELL_ACTIVITY_FREE = 2002; //免费获取盛典档次
+    SELL_ACTIVITY_BUY = 2003; //购买盛典档次
+    
+    // tank
+    TANK_INFO = 2101; // 获取战车信息
+    TANK_STRENGTHEN = 2102; // 战车强化
+    TANK_USE = 2103; // 使用战车
+    TANK_BUY = 2104; // 购买战车
+    
+    // boatArrow
+    BOAT_ARROW_INFO = 2201; // 获取草船借箭信息
+    BOAT_FREE = 2202; // 免费领取草船
+    BOAT_BUY = 2203; // 购买草船
+    BOAT_ARROW_GEMSTONE = 2204; // 箭矢兑换宝石
+	
+	// country
+	COUNTRY_ALLIANCE = 2301; //国家结盟或解除联盟
+	COUNTRY_OFFICIAL_CHANGE  = 2302; //国家玩家官职改变
+	
+	// expedition
+	EXPEDITION_PLAYER_LIST = 2401; //对战筛选名单
+	EXPEDITION_BATTLE = 2402; // 发起挑战
+	EXPEDITION_BATTLE_RESULT = 2403; // 战斗结果
+	EXPEDITION_PLAYER_REFRESH_LIST = 2404; //对战筛选名名单刷新
+	EXPEDITION_SEARCH_BOOK = 2405;  //对战搜刮兵书
+	
+	//technology
+	//TECHNOLOGY_VIEW = 2501; //科技视图
+	//TECHNOLOGY_UPGRADE = 2502; //科技升级
+	//TECHNOLOGY_RESET = 2503;//科技重置
+	//TECHNOLOGY_INFO = 2504;
+        //TECHNOLOGY_UPGRADE_BY_GOLD = 2505;
+
+	// technology new protocol
+	C2S_TECHNOLOGY_VIEW = 2507;
+	S2C_TECHNOLOGY_VIEW = 2508;
+
+	C2S_TECHNOLOGY_UPGRADE = 2509;
+	S2C_TECHNOLOGY_UPGRADE = 2510;
+
+	C2S_TECHNOLOGY_INFO = 2511;
+	S2C_TECHNOLOGY_INFO = 2512;
+
+	C2S_TECHNOLOGY_SPEEDUP = 2513;
+	S2C_TECHNOLOGY_SPEEDUP = 2514;
+	
+	//warart
+	WARART_VIEW = 2601;
+	WARART_STRENGTHEN = 2602;
+	
+	//rank
+	RANK_VIEW = 2701;
+	
+	//silverDial
+	SILVER_DIAL_VIEW = 2801;
+	SILVER_DIAL_DRAW = 2802;
+	
+	// buyreward
+	BUY_REWARD_INFO = 2901; // 获取消费送礼活动信息
+	BUY_REWARD_TAKE = 2902; // 领取奖励
+	
+	// secretary
+	SECRETARY_INFO = 3001; // 获取小秘书信息
+	OPEN_OR_STOP = 3002; // 开启或者暂停小秘书
+	SECRETARY_RENEW = 3003; // 续费小秘书
+	OBTAIN_REWARD = 3004; // 获取奖励
+	
+	// 三顾茅庐
+	THREE_VISITS_ADD_FREE_COUNT = 3101;  //三顾茅庐可免费寻访
+	THREE_VISITS_REFRESH = 3102; //三顾茅庐 寻访
+	THREE_VISITS_GAIN_REWARD = 3103; // 三顾茅庐 获取奖励
+	THREE_VISITS_UP_STAR = 3104; // 三顾茅庐 升星
+	THREE_VISITS_AUTO_REWARD = 3105; // 三顾茅庐 自动获取奖励
+	THREE_VISITS_GET_REWARD = 3106;  // 三顾茅庐 查询玩家上次是否有奖励
+	
+	//寺庙
+	TEMPLE_VIEW = 3201; //寺庙界面
+	TEMPLE_SACRIFICE = 3202; //祭祀
+	TEMPLE_BOX_OPEN = 3203; //开宝箱
+	
+	//七擒孟获
+	SEVEN_MENG_VIEW = 3301; //七擒孟获界面
+	SEVEN_MENG_DRAW = 3302; //七擒孟获抽取
+	
+	//曹操起兵
+	CAO_RISE_VIEW = 3401; //曹操起兵界面
+	CAO_RISE_REWARD = 3402; //曹操起兵领奖
+	
+	// 任务
+	C2S_TASK_LIST=3501;//获取任务列表
+	S2C_TASK_LIST=3502;	//返回任务列表
+	C2S_TASK_RECEIVE=3503;//接取任务请求
+	S2C_TASK_RECEIVE=3504;//返回任务请求
+	C2S_TASK_REWARD=3505;//领取奖励
+	S2C_TASK_REWARD=3506;//返回奖励
+	C2S_LIVENESS_INFO=3520;//活跃度奖励列表
+	S2C_LIVENESS_INFO=3521;
+	C2S_LIVENESS_RECEIVE=3522;//领取活跃度奖励
+	S2C_LIVENESS_RECEIVE=3523;
+	C2S_TASK_REWARD_MULTI = 3525;
+	S2C_TASK_REWARD_MULTI = 3526;
+	S2C_TASK_PROGRESS=3535;			//任务进度
+	C2S_ACTIVITY_TASK_LIST=3536;			//活动任务列表
+	S2C_ACTIVITY_TASK_LIST=3537;
+
+	
+	//废弃任务
+	GET_PLAYER_MISSION = 3510; //获取任务
+	UPDATE_MISSION = 3511; // 更新任务
+	GET_MISSION_REWARD = 3512; //获取任务奖励
+	ADD_MISSION = 3513; //  添加 一个任务
+	ACTIVATION_STATUS = 3514; //活跃度状态结果
+	ACTIVATION_REWARD = 3515; //领取活跃度奖励
+	
+	// 公会
+	CREATE_GUILD = 3601; //创建公会
+	GET_GUILD_INFO= 3602; // 获取自己所在的公会的信息
+	GUILD_LIST = 3603; // 获取公会列表
+	APPLY_JOIN_GUILD = 3604; // 申请加入公会
+	OTHER_APPLY_JOIN_GUILD = 3605; // 别人申请加入公会
+	CHANGE_JOIN_CHECK = 3606; // 改变加入是否需要审核的设置
+	ACCEPT_APPLY_JOIN_GUILD = 3607; // 接受别人加入公会
+	JOIN_GUILD = 3608;  // 加入公会
+	KICK_OUT_GUILD = 3609; // 把别人踢出公会
+	KICK_OUT_FROM_GUILD = 3610; // 踢出公会
+	CHANGE_GUILD_LEADER = 3611; // 改变公会团长
+	CHANGE_NAME = 3612;  // 改变公会名称
+	CHANGE_DECLARATION = 3613; // 改变公会宣言
+	GET_GUILD_LIST_BY_NAME = 3614; // 通过搜索名称获取公会列表
+	APPOINT_POSITION = 3615;//任命公会职位
+	BE_APPOINT_POSITION = 3616;//任命工会职位(发给被任命的人)
+	CHECK_APPLY_JOIN_GUILD = 3617;//申请入会待审核
+	DISSOLVE_GUILD = 3618;//解散军团
+	GUILD_TECH_DONATE = 3619;//军团捐献
+	REFRESH_GUILD_TREASURE = 3631; // 公会更新宝藏信息
+	GET_OTHERS_TREASURE_INFO = 3632; // 公会获取其他人的需要帮助的宝藏列表
+	HELP_OTHERS_TREASURE = 3633; // 公会获取其他人的需要帮助的宝藏列表
+	HELP_TREASURE = 3634; // 公会帮助挖宝
+	GET_TREASURE_REWARD = 3635; // 获取挖宝奖励
+	GET_OTHERS_BUILDING_DATA = 3636; // 公会获取其他人的需要帮助的建筑列表
+	HELP_OTHERS_BUILDING_DATA = 3637; // 公会帮助其他人的需要帮助的建筑
+	LEAVE_GUILD = 3638; // 退出公会
+	APPLY_GUILD_LEADER = 3639; // 申请公会会长
+	C2S_ACCUSE_GUILD = 3640;//弹劾盟主
+	S2C_ACCUSE_GUILD = 3641;//弹劾盟主
+	C2S_RANK_GUILD = 3642;//查看排行榜联盟信息
+	S2C_RANK_GUILD = 3643;//查看排行榜联盟信息
+
+	
+	//公告
+	ANNOUNCE_INFO_LIST = 3701; //获取
+	ANNOUNCE_DEL = 3702; 	//移除公告
+	ANNOUNCE_HORSELAMP = 3703; 	//推送跑马灯公告
+	
+	//获得商城信息
+	GET_MERCHANT = 3805;
+	//手动刷新
+	HAND_REFRESH_MERCHANT = 3806;
+	//商城购买物品
+	MERCHANT_BUY_GOODS = 3807;
+	//商城免单通知
+	MERCHANT_FREE = 3808;
+	
+	//快速商店购买前获取商品
+	C2S_GET_QUCKLY_SHOP_BUY_GOODS = 3850;
+	S2C_GET_QUCKLY_SHOP_BUY_GOODS = 3851;
+	//快速商店购买
+	C2S_QUCKLY_SHOP_BUY_GOODS = 3852;
+	S2C_QUCKLY_SHOP_BUY_GOODS = 3853;
+	
+	
+	//宝物
+	TREASURE_ALL_INFO = 3901;//宝物列表
+	//宝物升级
+	TREASURE_UPGRADE = 3902;
+	//宝物升星
+	TREASURE_UPGRADE_STAR = 3903;
+	//宝物装配宝石
+	TREASURE_ASSEMBLING_GEMSTONE = 3904;
+	//获得宝物
+	GAIN_TREASURE = 3905;
+	//武将装配宝物
+	TREASURE_ASSEMBLING_GENERAL = 3906;
+	
+	
+	//兵种
+	GET_ARMY = 4001;//获得兵种信息
+	//兵种升级
+	ARMY_UPGRADE_LEVEL = 4002;
+			
+	//聚宝盆
+	
+	C2S_TREASURE_WASHBOWL_INFO = 4101 ;//基本信息
+	S2C_TREASURE_WASHBOWL_INFO = 4102 ;//基本信息
+	C2S_TREASURE_WASHBOWL_USE = 4103; //使用聚宝盆
+	S2C_TREASURE_WASHBOWL_USE = 4104; //使用聚宝盆
+	C2S_TREASURE_WASHBOWL_EXTRAGOLD = 4105; //额外元宝
+	S2C_TREASURE_WASHBOWL_EXTRAGOLD = 4106;
+	
+	//军团科技
+	GUILD_TECHNOLOGY_VIEW = 4201; //科技视图
+	GUILD_TECHNOLOGY_DONATION = 4203;//军团捐献返回
+	GUILD_TECHNOLOGY_LEVEL_UP = 4204; //军团科技升级返回
+	GUILD_MATERIAL_DONATION_COUNT = 4205;//军团材料捐献次数刷新
+	
+	//签到
+	GET_SIGN_UP = 4301;//请求签到信息
+	SIGN_UP = 4302;//签到
+	SUPPLEMENT_SIGN_UP = 4303;//补签
+	RECEIVE_SIGN_UP_EXTRA_REWARD = 4304;//请求获得额外奖励
+	PATCH_COLLAR_REWARD = 4305;//当天补领
+	
+	//成长基金
+	GET_SHOP_MESSAGE = 4401;//获得商城信息
+	GET_SHOP_ORDER = 4402;//获得订单(人民币购买的物品)
+	BUY_GOODS = 4403;//购买商品(游戏内部货币购买)
+	DELIVERY_GOODS_BY_RMB = 4404;//通知发货(人民币购买的物品发货)
+	FIRST_RECHARGE_REWARD = 4405;//首冲奖励
+	RECEIVE_DAY_CARD_REWARD = 4406;//领取周卡月卡每日奖励
+	BUY_GROW_FUND = 4407;//购买成长基金
+	RECEIVE_GROW_FUND_REWARD = 4408;//领取成长基金奖励
+	
+	//每日登陆
+	DAILY_LOGIN_ACT = 4501;//每日登陆
+	DAILY_LOGIN_ACT_REWARD = 4502;//每日登陆领奖
+	
+	//转盘抽奖
+	TURN_TABLE_VIEW = 4601;//转盘状态
+	SPIN_TURN_TABLE = 4602;//抽奖结果
+	
+	//行营
+	//获得行营信息
+	HQ_GET_INFO = 4701;
+	//行营扫荡信息
+	HQ_CLEAN_UP = 4702;
+	//行营挑战信息
+	HQ_CHALLENGES = 4703;
+	//获得宝箱
+	HQ_RECEIVE_BOX = 4704;
+	//行营挑战胜利结算信息
+	HQ_CHANLLNGES_REWARD = 4705;
+	//行营购买挑战次数
+	HQ_BUY_RESET_COUNT = 4706;
+
+	HQ_UPDATE_CHAPTER = 4708;
+
+	HQ_CHAPTER_INFO = 4709;
+
+	HQ_BUY_CHALLENGE = 4710;
+	
+	//=========队伍team.proto============
+	C2S_TEAM_LIST=4860;
+	S2C_TEAM_LIST=4861;
+	C2S_TEAM_UP=4862;
+	S2C_TEAM_UP=4863;
+	C2S_TEAM_SUPPLEMENTARY_TROOPS=4864;
+	S2C_TEAM_SUPPLEMENTARY_TROOPS=4865;
+	C2S_TEAM_GOLD_SUPPLEMENTARY_TROOPS=4866;
+	S2C_TEAM_GOLD_SUPPLEMENTARY_TROOPS=4867;
+	C2S_TEAM_COUNT=4873;
+	S2C_TEAM_COUNT=4868;
+	C2S_TEAM_SELECT=4869;
+	S2C_TEAM_SELECT=4870;
+
+	C2S_TEAM_SET_AUTOFILL = 4871;
+	S2C_TEAM_SET_AUTOFILL = 4872;
+	
+	//=========世界地图 worldMap.proto========
+	//队伍移动 
+	C2S_TEAMMOVE_TO=4801;//队伍移动到目标
+	S2C_TEAMMOVE_TO=4802;//队伍移动到目标
+	C2S_TEAMMOVE_LIST=4803;//移动数据列表
+	S2C_TEAMMOVE_LIST=4804;//移动数据列表
+	C2S_TEAMMOVE_QUICKEN=4805;//移动加速
+	S2C_TEAMMOVE_QUICKEN=4806;//移动加速
+	C2S_TEAMMOVE_RETURN=4807;//返回
+	S2C_TEAMMOVE_RETURN=4808;//返回
+	S2C_TEAMMOVE_DEL=4809;//移除
+	
+	C2S_WORLDMAP_EVENT_ACT=4810;//世界地图事件操作
+	S2C_WORLDMAP_EVENT_ACT=4811;
+	S2C_WORLDMAP_EVENT_OVER=4812;//事件完成
+	S2C_WORLDMAP_EVENT_WAR_OVER=4813;//事件战斗完成
+	C2S_WORLDMAP_EVENT_COLLECTION_QUICKEN=4814;
+	S2C_WORLDMAP_EVENT_COLLECTION_QUICKEN=4815;
+	C2S_WORLDMAP_INFORMATION=4816;//情报
+	S2C_WORLDMAP_INFORMATION=4817;
+	S2C_WORLDMAP_INFORMATION_MASS_NOTICE=4818;//集结信号
+
+	C2S_MILITARYMERITS_REWARD_INFO = 4819;
+	S2C_MILITARYMERITS_REWARD_INFO = 4820;
+	C2S_MILITARYMERITS_REWARD_RECEIVE = 4821;
+	S2C_MILITARYMERITS_REWARD_RECEIVE = 4822;
+
+	C2S_GET_MAP_EVENT_DATA = 4823;
+	S2C_GET_MAP_EVENT_DATA = 4824;
+
+	C2S_UNLOCK_CITY = 4825;
+	S2C_UNLOCK_CITY = 4826;
+		
+	C2S_MAP_EVENT_BUY = 4827;
+	S2C_MAP_EVENT_BUY = 4828;
+	//城市对应国家
+	C2S_COUNTRY_CITY = 4829;
+	S2C_COUNTRY_CITY = 4830;
+	
+	//查看城池的部队信息
+	C2S_CITY_ITEM_INFO = 4831;
+	S2C_CITY_ITEM_INFO = 4832;
+	
+	//广播队伍数量
+	S2C_CITY_ITEM_COUNT=4833;
+
+	//城池建造
+	C2S_CITY_MADE_INFO = 4835; //玩家城市建造信息
+	S2C_CITY_MADE_INFO = 4836;
+	
+	C2S_CITY_MADE = 4837;//建造
+	S2C_CITY_MADE = 4838;
+	
+	C2S_CITY_MADE_SPEED = 4839;//建造加速
+	S2C_CITY_MADE_SPEED = 4840;
+	
+	C2S_CITY_MADE_REWARD = 4841;//领取奖励
+	S2C_CITY_MADE_REWARD = 4842;
+	
+	//国家
+	COUNTRY_INFO = 4901;//国家信息
+    COUNTRY_EDITOR_NOTICE = 4902;//公告编辑
+    COUNTRY_JOB_APPLY_UP = 4903;//官职任命
+    COUNTRY_CITY_APPLY_UP = 4904;//城池任命
+    COUNTRY_APPLY_LIST = 4905;//玩家任命列表
+    COUNTRY_ABDICATE = 4907;//禅让
+
+
+	C2S_COUNTRY_CITY_INFO = 4909;
+	S2C_COUNTRY_CITY_INFO = 4910;
+
+	C2S_COUNTRY_KING_CHANGE_STAMP = 4911;
+	S2C_COUNTRY_KING_CHANGE_STAMP = 4912;
+
+	C2S_COUNTRY_START_IMPEACH = 4913;
+	S2C_COUNTRY_START_IMPEACH = 4914;
+	C2S_COUNTRY_VOTE_IMPEACH = 4915;
+	S2C_COUNTRY_VOTE_IMPEACH = 4916;
+
+	C2S_COUNTRY_SALARY = 4917;
+	S2C_COUNTRY_SALARY = 4918;
+	
+	C2S_COUNTRY_CITY_REVENUE = 4919;
+	S2C_COUNTRY_CITY_REVENUE = 4920;
+	
+	C2S_COUNTRY_EMPEROR_INFO = 4921;
+	S2C_COUNTRY_EMPEROR_INFO = 4922;
+	
+	S2C_COUNTRY_CITY_REVENUE_STATUS = 4923;
+	
+    S2C_EMPEROR_CHANE_NOTICE = 4924;
+
+    C2S_CITY_CHANGE_INFO_LIST = 4925;//请求城池变动信息列表
+	S2C_CITY_CHANGE_INFO_LIST = 4926;//收到城池变动信息列表
+	S2C_CITY_CHANGE_INFO = 4927;//收到城池变动信息
+	
+    //工会
+    CHECK_PLAYER_DETAILS = 5001;//查看玩家详情
+	INVITE_JOIN_GUILD = 5002;//邀请加入军团:邀请人
+	BE_INVITE_JOIN_GUILD = 5003;//邀请加入军团:被邀请人
+	SURE_INVITE_JOIN_GUILD = 5004;//确定被邀请加入军团:邀请人
+	BE_SURE_INVITE_JOIN_GUILD = 5005;//确定被邀请加入军团:被邀请人
+	JOIN_GUILD_STATUS = 5006;//入团设置
+	GUILD_ICON_STATUS = 5007;//军团标志设置	
+	GUILD_INFORMATION = 5008;//军团消息
+    
+    //主城上阵
+    //主城武将上阵
+	BGB_GENERAL_GO = 5101;
+	//获得主城上阵武将信息
+	GET_BGB_GENERAL_INFO = 5102;
+	//主城一键上阵
+	BGB_ONE_CLICK_GO_BATTLE = 5103;
+
+	/**  竞技场 */
+	//取得本人的竞技场信息
+	APK_GET_MY_APK=5201;
+
+	//取得玩家可挑战的玩家信息列表
+	APK_GET_CHALLENGE_LIST=5202;
+
+	//挑战
+	APK_CHALLENGE=5203;
+
+	//购买次数
+	APK_BUY_COUNT=5204;
+
+	//取得排行榜
+	APK_GET_RANK_LIST=5205;
+
+	//取得战斗记录
+	APK_GET_CHALLENGE_HIS=5206;
+	
+	//扫荡
+	APK_CHALLENGE_FAST=5207;
+	
+	//挑战结束
+	APK_CHALLENGE_RESULT=5208;
+	//挑战检查
+	APK_CHALLENGE_CHECK=5209;
+	
+	C2S_RANK_COMM =5210;
+	S2C_RANK_COMM =5211;
+	
+	//膜拜信息
+	C2S_WORSHIP_INFO = 5251;
+	S2C_WORSHIP_INFO = 5252;
+	
+	//膜拜
+	C2S_WORSHIP = 5253;
+	S2C_WORSHIP = 5254;
+	
+	////////////////////////巡查信息---挂机信息/////////////////
+	//获得巡查信息
+	C2S_GET_PATROL = 5301;
+	S2C_GET_PATROL = 5302;
+	//巡查挑战,挑战关卡
+	C2S_PATROL_CHALLENGE = 5303;
+	//巡查挑战完获得奖励
+	S2C_PATROL_CHALLENGE_REWARD = 5304;
+	//巡查喝酒--加速
+	C2S_PATROL_WINE = 5307;
+	S2C_PATROL_WINE = 5308;
+	//客户端随机一些玩家在地图上跑
+	C2S_PATROL_GET_RANDOM_PLAYERS = 5309;
+	S2C_PATROL_GET_RANDOM_PLAYERS = 5310;
+
+	//领取宝箱奖励
+	C2S_RECEIVE_PATROL_REWARD = 5317;
+	S2C_RECEIVE_PATROL_REWARD = 5318;
+
+	//挑战巡查Boss
+	C2S_PATROL_CHALLENGE_BOSS = 5321;
+	S2C_PATROL_CHALLENGE_BOSS = 5322;
+	S2C_PATROL_CHALLENGE_BOSS_REWARD = 5323;
+
+	//领取武将奖励 
+	C2S_PATROL_REWARD_GENERAL = 5324;
+	S2C_PATROL_REWARD_GENERAL = 5325;
+	//购买Boss次数
+	C2S_PATROL_BUY_BOSS_COUNT = 5326;
+	S2C_PATROL_BUY_BOSS_COUNT = 5327;
+
+	//获得boss信息
+	C2S_GET_BOSS= 5401;
+	//返回boss信息
+	S2C_GET_BOSS= 5402;
+	//挑战boss请求 
+	C2S_CHALLENGE_BOSS= 5403;
+	//boss挑战结束
+	S2C_CHALLENGE_BOSS= 5404;
+	//请求扫荡 
+	C2S_CLEAR_BOSS = 5405;
+	//返回扫荡信息
+	S2C_CLEAR_BOSS = 5406;
+	//请求购买boss挑战次数 
+	C2S_BUY_BOSS_CHALLENGE_COUNT = 5407;
+	//返回购买boss挑战次数 
+	S2C_BUY_BOSS_CHALLENGE_COUNT = 5408;
+	//推送boss死亡 
+	S2C_BOSS_IS_DIED = 5409;
+	//请求领取宝箱 
+	C2S_RECEIVE_BOSS_BOX = 5410;
+	//领取宝箱返回 
+	S2C_RECEIVE_BOSS_BOX = 5411;
+	
+	    /////////////////////////系统公告【55】//////////////////////////
+    //获取公告信息
+    SYSTEM_NOTICE_INFO_LIST = 5501;
+    //移除公告信息
+    SYSTEM_NOTICE_DEL = 5502;
+    //推送跑马灯公告
+    SYSTEM_NOTICE_HORSELAMP = 5503;
+
+    ///////////////////////// 精炼【56】//////////////////////////
+    //获取装备信息
+    C2S_EQUIPMENT_INFO = 5601;
+    S2C_EQUIPMENT_INFO = 5602;
+
+    //获取武将装备信息
+    C2S_GET_GENERAL_EQUIPMENT = 5603;
+    S2C_GET_GENERAL_EQUIPMENT = 5604;
+
+    //装备格子升级
+    C2S_EQUIPMENT_SLOT_UPGRADE = 5605;
+    S2C_EQUIPMENT_SLOT_UPGRADE = 5606;
+
+    //武将格子装备
+    C2S_GENERAL_EQUIP = 5607;
+    S2C_GENERAL_EQUIP = 5608;
+
+    //合成装备
+    C2S_EQUIPMENT_COMPOSE = 5609;
+    S2C_EQUIPMENT_COMPOSE = 5610;
+
+    //分解装备
+    C2S_EQUIPMENT_DECOMPOSE = 5611;
+    S2C_EQUIPMENT_DECOMPOSE = 5612;
+    
+    //装备背包
+    C2S_GET_EQUIPMENT_LIST = 5613;
+    S2C_GET_EQUIPMENT_LIST = 5614;
+
+    //装备变化列表
+    S2C_EQUIPMENT_CHANGE = 5616;
+
+    //武将装备变化列表
+    S2C_GENERAL_EQUIPMENT_CHANGE = 5618;
+
+    //一键装备
+    C2S_GENERAL_EQUIP_ALL = 5619;
+    S2C_GENERAL_EQUIP_ALL = 5620;
+
+    S2C_EQUIPMENT_ADD = 5622;
+    S2C_EQUIPMENT_DEL = 5624;
+	
+	///////////////////////// 战斗通用【57】//////////////////////////
+	//开始战斗
+	C2S_WAR_START=5701;
+	S2C_WAR_START=5702;
+	
+	//重新进入战场
+	C2S_WAR_REENTRY_BATTLE=5703;
+	S2C_WAR_REENTRY_BATTLE=5704;
+	
+	//推出战场
+	C2S_WAR_QUIT_BATTLE=5705;
+	S2C_WAR_QUIT_BATTLE=5706;
+	
+	//快速获取结果
+	C2S_WAR_QUICK_BATTLE=5707;
+	S2C_WAR_QUICK_BATTLE=5708;
+	
+	//怒气技能
+	C2S_WAR_ANAGER_SKILL=5713;
+	S2C_WAR_ANAGER_SKILL=5714;
+	
+	//设置是否自动战斗
+	C2S_WAR_AUTO=5709;
+	S2C_WAR_AUTO=5710;
+	C2S_WAR_AUTO_LIST=5711;
+	S2C_WAR_AUTO_LIST=5712;
+	C2S_WAR_QUERY_HERO_DATA=5715;
+	S2C_WAR_QUERY_HERO_DATA=5716;
+	
+	 ///////////////////////// 拜访【58】 //////////////////////////
+	//拜访请求
+	S2C_VISIT_EVENT_UPDATE = 5802;
+	C2S_GENERAL_VISIT = 5803;
+	S2C_GENERAL_VISIT = 5804;
+	C2S_VISIT_DATA_REFRESH = 5805;
+	S2C_VISIT_DATA_REFRESH = 5806;
+	C2S_VISIT_CD_SPEED = 5807;
+	S2C_VISIT_CD_SPEED = 5808;
+	
+	///////////////////////// 城市战（国战）【59】 //////////////////////////
+	//进入城市战场
+	C2S_CITY_WAR_GO = 5901;
+	S2C_CITY_WAR_GO = 5902;
+	//根据城市ID，获取我攻击的所有队伍
+	C2S_CITY_WAR_MYTEAM	=5903;
+	S2C_CITY_WAR_MYTEAM	=5904;
+	//获取为打仗的队伍数据
+	C2S_CITY_WAR_TEAM	=5905;
+	S2C_CITY_WAR_TEAM	=5906;
+	//退出战场
+	C2S_CITY_WAR_OUT	=5907;
+	S2C_CITY_WAR_OUT	=5908;
+	//城市战斗，单场完成
+	S2C_CITY_WAR_SINGLE_OVER=5909;
+	//国战总结算
+	S2C_CITY_WAR_SETTLEMENT=5910;
+	//国战对战列表
+	C2S_CITY_WAR_CONFRONTATION_LIST=5911;
+	S2C_CITY_WAR_CONFRONTATION_LIST=5912;
+
+	C2S_CITY_WAR_DMG_RANK = 5913;
+	S2C_CITY_WAR_DMG_RANK = 5914;
+	//获取别的队伍战斗情况（前端观战完成时才调用）
+	C2S_CITY_WATCH_WAR_TEAM=5915;
+	S2C_CITY_WATCH_WAR_TEAM=5916;
+
+	///////////////////////// 材料副本【60】 //////////////////////////
+	// 信息
+	C2S_MATERIAL_INFO = 6001;
+	S2C_MATERIAL_INFO = 6002;
+	// 挑战 扫荡
+	C2S_MATERIAL_CHALLENGE = 6003;
+	S2C_MATERIAL_CHALLENGE = 6004;
+	// 购买次数
+	C2S_MATERIAL_BUY = 6005;
+	S2C_MATERIAL_BUY = 6006;
+
+	///////////////////////// 充值【61】 //////////////////////////
+	// recharge
+
+	// 充值信息
+	C2S_RECHARGE_INFO = 6101;
+	S2C_RECHARGE_INFO = 6102;
+
+	// 充值
+	C2S_RECHARGE = 6103;
+	S2C_RECHARGE = 6104;
+
+	// vip每日奖励
+	C2S_VIP_DAILY_REWARD = 6105;
+	S2C_VIP_DAILY_REWARD = 6106;
+
+	// vip等级奖励
+	C2S_VIP_LEVEL_REWARD = 6107;
+	S2C_VIP_LEVEL_REWARD = 6108;
+	
+	C2S_PLAY_ORDERNO = 6109;
+	S2C_PLAY_ORDERNO = 6110;
+	
+	C2S_RECHARGE_CONFIGS = 6111;
+	S2C_RECHARGE_CONFIGS = 6112;
+
+	//使用元宝购买
+	C2S_GOLD_BUY = 6113;
+	///////////////////////// 活动【62】 //////////////////////////
+	// 打开收集活动页面
+	C2S_ACTIVITY_LIST = 6201;
+	S2C_ACTIVITY_LIST = 6202;
+	
+	// 领取活动奖励
+	C2S_GET_COLLECT_REWARD = 6203;
+	S2C_GET_COLLECT_REWARD = 6204;
+	
+	//活动配置
+	S2C_ACTIVITY_COUNT_CONFIG = 6205;
+	
+	// 通用活动记录列表
+	S2C_ACTIVITY_INFO = 6206;
+	
+	//活动进度更新
+	S2C_ACTIVITY_UPDATE = 6207;
+	
+	
+	//单笔充值活动信息
+	C2S_ACTIVITY_GET_SINGLE_PAY_INFO = 6208;
+	S2C_ACTIVITY_GET_SINGLE_PAY_INFO = 6209;
+	C2S_ACTIVITY_GET_SINGLE_PAY_REWARD = 6210;
+	S2C_ACTIVITY_GET_SINGLE_PAY_REWARD = 6211;
+	
+	
+	//累计充值活动信息
+	C2S_ACTIVITY_GET_TOTAL_PAY_INFO = 6212;
+	S2C_ACTIVITY_GET_TOTAL_PAY_INFO = 6213;
+	C2S_ACTIVITY_GET_TOTAL_PAY_REWARD = 6214;
+	S2C_ACTIVITY_GET_TOTAL_PAY_REWARD = 6215;
+	
+	
+	//消费好礼活动信息
+	C2S_ACTIVITY_GET_CONSUME_GIFT_INFO = 6216;
+	S2C_ACTIVITY_GET_CONSUME_GIFT_INFO = 6217;
+	C2S_ACTIVITY_GET_CONSUME_GIFT_REWARD = 6218;
+	S2C_ACTIVITY_GET_CONSUME_GIFT_REWARD = 6219;
+
+	
+	//每日登录活动信息
+	C2S_ACTIVITY_GET_LOGIN_DAYS_INFO = 6220;
+	S2C_ACTIVITY_GET_LOGIN_DAYS_INFO = 6221;
+	C2S_ACTIVITY_GET_LOGIN_DAYS_REWARD = 6222;
+	S2C_ACTIVITY_GET_LOGIN_DAYS_REWARD = 6223;
+	
+	//首充活动信息
+	C2S_ACTIVITY_GET_FIRTS_PAY_INFO = 6224;
+    S2C_ACTIVITY_GET_FIRTS_PAY_INFO = 6225;
+	C2S_ACTIVITY_GET_FIRTS_PAY_REWARD = 6226;
+	S2C_ACTIVITY_GET_FIRTS_PAY_REWARD = 6227;
+		
+	//成长基金活动信息
+	C2S_ACTIVITY_BUY_GROWTH_FUND = 6228;
+    S2C_ACTIVITY_BUY_GROWTH_FUND = 6229;
+	C2S_ACTIVITY_GET_GROWTH_FUND_INFO = 6230;
+    S2C_ACTIVITY_GET_GROWTH_FUND_INFO = 6231;
+	C2S_ACTIVITY_GET_GROWTH_FUND_REWARD = 6232;
+	S2C_ACTIVITY_GET_GROWTH_FUND_REWARD = 6233;
+		
+	//周卡月卡活动信息
+	C2S_ACTIVITY_BUY_WEEK_MONTH_CARD = 6234;
+    S2C_ACTIVITY_BUY_WEEK_MONTH_CARD = 6235;
+	C2S_ACTIVITY_GET_WEEK_MONTH_CARD_INFO = 6236;
+    S2C_ACTIVITY_GET_WEEK_MONTH_CARD_INFO = 6237;
+	C2S_ACTIVITY_GET_WEEK_MONTH_CARD_REWARD = 6238;
+	S2C_ACTIVITY_GET_WEEK_MONTH_CARD_REWARD = 6239;
+	
+	//封王战倒计时
+	S2C_ACTIVITY_KING_FIGHT_COUNT_DOWN = 6240;
+	
+	//活动id列表[未领奖的活动]
+	S2C_ACTIVITY_CAN_REWARD_IDS = 6241;
+	
+	//南蛮入侵（黄巾攻城）
+	C2S_BARBARIAN_BREAKOUT_EVENT=6242;
+	S2C_BARBARIAN_BREAKOUT_EVENT=6243;
+	
+	//一元购活动
+	C2S_ACTIVITY_GET_ONE_RMB_BUY_INFO = 6244;
+	S2C_ACTIVITY_GET_ONE_RMB_BUY_INFO = 6245;
+	C2S_ACTIVITY_GET_ONE_RMB_BUY_REWARD = 6246;
+	S2C_ACTIVITY_GET_ONE_RMB_BUY_REWARD = 6247;
+	
+	//襄阳战信息
+	C2S_XIANGYANG_INFO=6248;
+	S2C_XIANGYANG_INFO=6249;
+	C2S_XIANGYANG_RECEIVE=6250;
+	S2C_XIANGYANG_RECEIVE=6251;
+	C2S_XIANGYANG_EMPROR_COUNTRY_REWARD=6252;
+	S2C_XIANGYANG_EMPROR_COUNTRY_REWARD=6253;
+	S2C_XIANGYANG_RECEIVE_NOTICE=6266;
+	
+	//活动通用
+	C2S_ACTIVITY_COMM_CONFIG=6254;
+	S2C_ACTIVITY_COMM_CONFIG=6255;
+	
+	//幸运转盘
+	C2S_ACTIVITY_GET_PRIZE_INFO = 6256;
+	S2C_ACTIVITY_GET_PRIZE_INFO = 6257;
+	C2S_ACTIVITY_PRIZE_PLAY = 6258;
+	S2C_ACTIVITY_PRIZE_PLAY = 6259;
+	C2S_ACTIVITY_DRAW_PRIZE_REWARD = 6260;
+	S2C_ACTIVITY_DRAW_PRIZE_REWARD = 6261;
+	
+	//直购礼包
+	C2S_ACTIVITY_ZHI_GOU_INFO = 6262;
+	S2C_ACTIVITY_ZHI_GOU_INFO = 6263;
+	
+	C2S_ACTIVITY_NOTICE_CONFIGS = 6264;
+	S2C_ACTIVITY_NOTICE_CONFIGS = 6265;
+	
+	//聚宝盆
+	C2S_ACTIVITY_TREASEURE_BOWL_INFO = 6274;
+	S2C_ACTIVITY_TREASEURE_BOWL_INFO = 6275;
+	C2S_ACTIVITY_TREASEURE_BOWL_REWARD = 6276;
+	S2C_ACTIVITY_TREASEURE_BOWL_REWARD = 6277;
+	
+		///////////////////////// 在线奖励【628】 //////////////////////////
+	//在线奖励活动信息
+	C2S_ONLINE_INFO = 6280;
+	S2C_ONLINE_INFO = 6281;
+	C2S_ONLINE_REWARD = 6282;
+	S2C_ONLINE_REWARD = 6283;
+	
+	///////////////////////// 功能预览【63】 //////////////////////////
+	
+	//功能开放后，第一次点击该功能
+	C2S_FUNCTION_PREVIEW = 6301;
+	S2C_FUNCTION_PREVIEW = 6302;	
+	
+	///////////////////////// GM操作【64】 //////////////////////////
+
+	//GM操作
+	S2C_GM_OPERATE = 6401;
+	//GM更新玩家等级
+	S2C_GM_UPDATE_LEVEL = 6402;
+	//GM更新玩家vip等级
+	S2C_GM_UPDATE_VIP_LEVEL = 6403;
+	//GM更新玩家昵称
+	S2C_GM_UPDATE_NICK_NAME = 6404;
+	//GM更新玩家经验
+	S2C_GM_UPDATE_EXP = 6405;
+	
+	///////////////////////// 个人限时礼包【65】 //////////////////////////
+	C2S_TIME_LIMI_GIFT_BAG_INFO = 6501;
+	S2C_TIME_LIMI_GIFT_BAG_INFO = 6502;
+	C2S_TIME_LIMI_GIFT_BAG_AWARD = 6503;
+	S2C_TIME_LIMI_GIFT_BAG_AWARD = 6504;
+		//推送单个限时礼包
+	S2C_SINGLE_TIME_LIMI_GIFT_BAG_INFO = 6505;
+	C2S_TIME_LIMI_GIFT_BAG_BUY = 6506;
+	S2C_TIME_LIMI_GIFT_BAG_BUY = 6507;
+	
+	///////////////////////// CDKEY【66】 //////////////////////////
+	C2S_GET_ACTIVITY_CDKEY = 6601;
+	S2C_GET_ACTIVITY_CDKEY = 6602;
+	C2S_GET_ACTIVITY_CDKEY_REWARD = 6603;
+	S2C_GET_ACTIVITY_CDKEY_REWARD = 6604;
+	C2S_GET_ACTIVITY_CDKEY_LIST = 6605;
+	S2C_GET_ACTIVITY_CDKEY_LIST = 6606;
+	
+	///////////////////////// 个人限时礼包【67】 //////////////////////////
+	C2S_RELATION_LIST = 6701;
+	S2C_RELATION_LIST = 6702;
+	C2S_RELATION_EFFECT = 6703;
+	S2C_RELATION_EFFECT = 6704;
+	
+	///////////////////////// 玉石超市【675】	//////////////////////////
+	//玉石超市
+	C2S_JADE_BUY = 6750;
+
+	///////////////////////// 历史战役【68】 //////////////////////////
+	//请求获得历史战役信息
+	C2S_GET_HISTORY_WAR_INFO = 6801;
+	//返回历史战役信息
+	S2C_GET_HISTORY_WAR_INFO = 6802;
+	//请求扫荡
+	C2S_HISTORY_WAR_CLEAN_UP = 6803;
+	//返回扫荡
+	S2C_HISTORY_WAR_CLEAN_UP = 6804;
+	//请求挑战
+	C2S_HISTORY_WAR_FIGHT = 6805;
+	//领取宝箱
+	C2S_HISTORY_WAR_GET_BOX = 6806; 
+	//返回领取宝箱信息
+	S2C_HISTORY_WAR_GET_BOX = 6807; 
+	//返回挑战结果信息
+	S2C_HISTROY_WAR_BATTLE_INFO = 6808;
+	//购买扫荡次数
+	C2S_HISTORY_WAR_CLEAN_UP_COUNT = 6809;
+	//5点重置
+	S2C_HISTORY_WAR_RESET = 6810;
+	
+	///////////////////////// 新武将【69】 //////////////////////////
+	
+	//获取信息
+	C2S_ACTIVITY_NEW_GENERAL_INFO = 6901;
+	S2C_ACTIVITY_NEW_GENERAL_INFO = 6902;
+	//选择奖励
+	C2S_ACTIVITY_NEW_GENERAL_CHOOSE_REWARD = 6903;
+	S2C_ACTIVITY_NEW_GENERAL_CHOOSE_REWARD = 6904;
+	//拜访
+	C2S_ACTIVITY_NEW_GENERAL_VISIT_REWARD = 6905;
+	S2C_ACTIVITY_NEW_GENERAL_VISIT_REWARD = 6906;
+	//领取宝箱
+	C2S_ACTIVITY_NEW_GENERAL_BOX_REWARD = 6907;
+	S2C_ACTIVITY_NEW_GENERAL_BOX_REWARD = 6908;
+	//购买礼包 
+	C2S_ACTIVITY_BUY_GENERAL_BAG = 6909;
+	S2C_ACTIVITY_BUY_GENERAL_BAG=6910;
+	//领取礼包
+	C2S_ACTIVITY_AWARD_GENERAL_BAG=6911;
+	S2C_ACTIVITY_AWARD_GENERAL_BAG=6912;
+	
+	///////////////////////// 特惠商城【70】 //////////////////////////
+	//获得特惠商城信息
+	C2S_ACTIVITY_PREFERENTAIL_STORE_INFO = 7001;
+	S2C_ACTIVITY_PREFERENTAIL_STORE_INFO = 7002;
+	//手动刷新
+	C2S_ACTIVITY_PREFERENTAIL_REFRESH = 7003;
+	S2C_ACTIVITY_PREFERENTAIL_REFRESH = 7004;
+	//商城购买物品
+	C2S_ACTIVITY_PREFERENTAIL_STORE_BUY = 7005;
+	S2C_ACTIVITY_PREFERENTAIL_STORE_BUY = 7006;
+
+
+	///////////////////////// 跨服战【80】 //////////////////////////
+	//跨服战更新阵形
+	C2S_CROSS_SERVER_WAR_TEAM_UPDATE=8001;		
+	S2C_CROSS_SERVER_WAR_TEAM_UPDATE=8002;
+	//跨服战补兵
+	C2S_CROSS_SERVER_WAR_TEAM_SUPPLEMENTARY_TROOPS=8003; 
+	S2C_CROSS_SERVER_WAR_TEAM_SUPPLEMENTARY_TROOPS=8004;
+	//获得总兵力信息
+	S2C_CROSS_SERVER_WAR_TROOPS_INFO=8005;
+	//进入退出跨服场景
+	C2S_CROSS_SERVER_WAR_ENTER=8007;
+	S2C_CROSS_SERVER_WAR_ENTER=8008;
+	
+	
+	//请求跨服匹配
+	C2S_CROSS_SERVER_WAR_DATA=8009;
+	S2C_CROSS_SERVER_WAR_DATA=8010;
+	
+	//获取军团信息
+	C2S_CROSS_SERVER_ARMY_GROUP=8011;
+	S2C_CROSS_SERVER_ARMY_GROUP=8012;
+	//获取对战信息
+	C2S_CROSS_SERVER_WAR_RIVAL_INFO=8013;
+	S2C_CROSS_SERVER_WAR_RIVAL_INFO=8014;
+	//获得沙盘信息
+	C2S_CROSS_SERVER_WAR_SAND_INFO=8015;
+	S2C_CROSS_SERVER_WAR_SAND_INFO=8016;
+	//获取跨服战信息，进入游戏请求一次，后续改变后端推送
+	C2S_CROSS_SERVER_INFO=8017;
+	S2C_CROSS_SERVER_INFO=8018;
+	//内城信息变化
+	S2C_CROSS_SERVER_CITY_CHANGE=8019;
+	//派遣队伍
+	C2S_CROSS_SERVER_TEAM_MOVE=8021;
+	S2C_CROSS_SERVER_TEAM_MOVE=8022;
+	//跨服通信===更新城池队伍数量(驻军和军团)
+	C2S_CROSS_SERVER_UPDATE_CITY_TEAM=8023;
+	S2C_CROSS_SERVER_UPDATE_CITY_TEAM=8024;
+	//通知对方进入国战
+	S2C_CROSS_SERVER_ENTER_WAR=8025;
+	//大厅服通知国战结束
+	C2S_CROSS_SERVER_WAR_VOER=8027;
+	S2C_CROSS_SERVER_WAR_VOER=8028;
+	//攻击城门
+	C2S_CROSS_SERVER_ATTACK_GATE=8029;
+	//跨服报名
+	C2S_CROSS_SERVER_SIGNUP=8031;
+	S2C_CROSS_SERVER_SIGNUP=8032;
+	//推送城门血量信息,进入外城推送
+	S2C_CROSS_SERVER_GATE_HP=8034;
+	//推送Buffer,进入内外城推送
+	S2C_CROSS_SERVER_BUFFER_INFO=8036;
+	//城门信息
+	S2C_CROSS_SERVER_GATE_INFO=8038;
+	//购买箭塔
+	C2S_CROSS_SERVER_BUY_TOWER=8039;
+	//购买Buffer
+	C2S_CROSS_SERVER_BUY_BUFFER=8041;
+	///跨服战结束，同步信息
+	C2S_CROSS_SERVER_WAR_END=8043;
+	S2C_CROSS_SERVER_WAR_END=8044;
+	//军团信息状态推送
+	S2C_CROSS_SERVER_ARMY_STATUS=8046;
+	//城池状态
+	S2C_CROSS_SERVER_CITY_STATUS=8048;
+	//同步我的血量给敌方服务器
+	S2C_CROSS_SERVER_GATE_HP_TO_ENEMY=8050;
+	//军团血量变化
+	C2S_CROSS_SERVER_ARMY_HP=8051;
+	S2C_CROSS_SERVER_ARMY_HP=8052;
+	//推送玩家累计荣誉
+	S2C_CROSS_SERVER_GET_HONOR=8054;
+	//领取荣誉宝箱
+	C2S_CROSS_SERVER_GET_HONOR_BOX=8055;
+	S2C_CROSS_SERVER_GET_HONOR_BOX=8056;
+	//领取每日奖励
+	C2S_CROSS_SERVER_GET_DAY_REWARD=8057;
+	S2C_CROSS_SERVER_GET_DAY_REWARD=8058;
+	//通知对方城池被直接占领
+	S2C_CROSS_SERVER_UPDATE_CITY_OCCUPANT=8060;
+	//跨服战结算指令
+	S2C_CROSS_SERVER_SETTLEMENT_DATA=8062;
+	//跨服战国战总结算
+	S2C_CROSS_SERVER_BATTLE_SETTLEMENT=8064;
+	//大厅服启动同步城池数据
+	C2S_CROSS_SERVER_SYNC_CITY_DATA=8065;
+	S2C_CROSS_SERVER_SYNC_CITY_DATA=8066;
+
+	///////////////////////// 惊喜商城【81】 //////////////////////////
+	//获取商品数据
+	C2S_SURPRISE_MARKET = 8100;
+	S2C_SURPRISE_MARKET = 8101;}
+
+
+//**********************数据结构定义***********************
+//错误码提示(ERROR_CODE = 10)
+message ErrorCodeResp {
+	required int32 cmd = 1; //对应的请求协议号
+	required int32 code = 2; //错误码
+	repeated string param = 3; //提示语参数(替换错误码里的特殊符号)
+}
+
+//公告信息
+message AnnounceInfo {
+	required int32 id = 1;  // 公告id
+	required int32 announceType = 2;  // 公告类型 1跑马灯,2活动公告,3登录公告
+	optional string title = 3;  // 标题
+	optional string content = 4;  // 内容
+	optional int32 stime = 5;  // 公告展示开始时间(秒)
+	optional int32 etime = 6;  // 公告展示结束时间(秒)
+	optional int32 level = 7;  //等级,数值越大，优先级越高
+	optional int32 diffTime = 8;  //播放时间间隔(以秒为单位, 0无时间间隔)
+	optional int32 showCount = 9;//展示的次数
+}
+
+//跑马灯信息
+message HorseLampInfo{
+	required int32 id = 1; //前端语言表id
+    repeated string params = 2;//内容
+	required int32 times = 3;//播放次数
+}
+
+//*************************协议定义****************************
+
+//获取公告信息(ANNOUNCE_INFO_LIST = 3701)
+message AnnounceInfoListReq {
+}
+
+//获取公告信息(ANNOUNCE_INFO_LIST = 3701)
+message AnnounceInfoListResp {
+	repeated AnnounceInfo announceInfo = 1;  // 公告列表
+}
+
+//移除公告信息(ANNOUNCE_DEL = 3702)
+message AnnounceDelResp {
+	required int32 id = 1;  // 公告id
+}
+
+//推送跑马灯公告(ANNOUNCE_HORSELAMP = 3703)
+message AnnounceHorseLampResp {
+	repeated HorseLampInfo info = 1;  // 跑马灯
+}
+
+//*************************数据结构定义****************************
+
+//活动奖励数据结构
+message ActivityAward{
+	 required int32 resultCode = 1; // 返回错误码 0 成功 
+	 optional int32 avtivityId = 2; //活动Id
+	 optional int32 stepId = 3; //步骤id
+	 repeated ValuesMessage message = 4;//奖励
+	 repeated int32 awardRecord = 5;//领奖记录
+}
+
+// 开启的活动信息
+message ActivityInfo{
+ required int32 id = 1;//活动id
+ required int32 viewType = 2;//显示类型
+ repeated int32 rechargeIds = 3;//活动关联的商品（直购类）
+ required int32 btnId = 4;//显示类型
+ required int64 preViewDate = 5;//活动预告时间
+ required int64 openDate = 6;//活动开始时间
+ required int64 closeDate = 7;//活动结束时间
+ required int64 closeIconDate = 8;//icon关闭时间
+}
+
+message WeekMonthCardInfo{
+ required bool canReceive = 1;//true=可以领取 false=不可以领取
+ required int32 cardType = 2; //卡类型
+ required int32 rewardCount = 3;//剩余奖励次数
+}
+
+message WeekMonthRewardInfo{
+ required int32 resultCode = 1;
+ optional int32 avtivityId = 2; //活动Id
+ repeated WeekMonthCardInfo cardInfo = 3;
+ repeated ValuesMessage message = 4;//奖励
+}
+
+message PrizeInfo{
+    required int32 account = 1; //累计抽奖次数
+    required int32 luncky = 2; // 幸运值
+    repeated PrizeAccumulate accumulates = 3; //累积奖励领取记录
+	required int32 playNum = 4; //抽奖数字
+	required int32 fireNum = 5; //免费次数
+}
+
+message PrizeAccumulate{
+	required int32 accumulate = 1;
+	required int64 accumulateDate = 2;
+}
+
+message ActivityNotiseConfig{
+	required int32 type = 1;
+	required string openDate = 2;
+	required string closeDate = 3;
+	required string url = 4;
+}
+
+message TreasureBowl{
+ required int32 totalCount = 1;  	//剩余聚宝次数
+ required int32 totalCost = 2;  	//已经聚宝次数
+ required int32 curCount = 3;  	    //当前聚宝次数
+ required int32 activityId = 4;  	
+}
+
+//***********************************协议*****************************************
+
+// 开放活动列表推送(C2S_ACTIVITY_LIST = 6201)
+message C2S_ACTIVITY_LIST{
+
+}
+// 开放活动列表推送(S2C_ACTIVITY_LIST = 6202)
+message S2C_ACTIVITY_LIST{
+ repeated ActivityInfo activityList = 1; //活动信息列表
+ optional bool isReset = 2;				//是否重置
+}
+
+//活动通用配表
+message C2S_ACTIVITY_COMM_CONFIG {
+	required int32 activityId = 1;
+}
+
+message S2C_ACTIVITY_COMM_CONFIG {
+	required int32 activityId = 1;
+	repeated string tableData = 2;//json结构
+}
+
+//跨天标记
+message S2C_ACTIVITY_CROSS {
+
+}
+
+//获取单笔充值活动状态
+message C2S_ACTIVITY_GET_SINGLE_PAY_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_SINGLE_PAY_INFO {
+ repeated int32 paySet = 1; //活动充值记录
+ repeated int32 awardRecordSet = 2; //活动领奖记录
+ optional int32 activityId = 3; //活动id
+}
+//领取单笔充值活动奖励
+message C2S_ACTIVITY_GET_SINGLE_PAY_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 stepId = 2; //奖励配置id
+}
+message S2C_ACTIVITY_GET_SINGLE_PAY_REWARD {
+ optional ActivityAward activityAward = 1;
+}
+
+
+//获取累计充值活动状态
+message C2S_ACTIVITY_GET_TOTAL_PAY_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_TOTAL_PAY_INFO {
+ optional int32 paySum = 1; //活动充值记录
+ repeated int32 awardRecordSet = 2; //活动领奖记录
+ optional int32 activityId = 3; //活动id
+}
+//领取累计充值活动奖励
+message C2S_ACTIVITY_GET_TOTAL_PAY_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 stepId = 2; //奖励配置id
+}
+message S2C_ACTIVITY_GET_TOTAL_PAY_REWARD {
+ optional ActivityAward activityAward = 1;
+}
+
+
+//获取消费好礼活动状态
+message C2S_ACTIVITY_GET_CONSUME_GIFT_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_CONSUME_GIFT_INFO {
+ optional int64 consumeSum = 1; //消费总额
+ repeated int32 awardRecordSet = 2; //活动领奖记录
+ optional int32 activityId = 3; //活动id
+}
+//领取消费好礼活动奖励
+message C2S_ACTIVITY_GET_CONSUME_GIFT_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 stepId = 2; //奖励配置id
+}
+message S2C_ACTIVITY_GET_CONSUME_GIFT_REWARD {
+ optional ActivityAward activityAward = 1;
+}
+
+
+//获取每日登录活动状态
+message C2S_ACTIVITY_GET_LOGIN_DAYS_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_LOGIN_DAYS_INFO {
+ repeated int32 loginDaySet = 1; //登录天数
+ repeated int32 awardRecordSet = 2; //活动领奖记录
+ optional int32 activityId = 3; //活动id
+}
+//领取每日登录活动奖励
+message C2S_ACTIVITY_GET_LOGIN_DAYS_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 stepId = 2; //奖励配置id
+}
+message S2C_ACTIVITY_GET_LOGIN_DAYS_REWARD {
+ optional ActivityAward activityAward = 1;
+}
+
+
+//获取首充活动状态
+message C2S_ACTIVITY_GET_FIRTS_PAY_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_FIRTS_PAY_INFO {
+	required int32 activityId = 1; //活动id
+	repeated int32 paySet = 2; //充值后生成的奖励档次
+	repeated int32 awardRecordSet = 3; //活动领奖记录
+	optional int32 configId = 4;//当前生效的首充配置Id
+}
+//领取首充活动奖励
+message C2S_ACTIVITY_GET_FIRTS_PAY_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 stepId = 2; //奖励配置id
+}
+message S2C_ACTIVITY_GET_FIRTS_PAY_REWARD {
+	required int32 activityId = 1; //活动id
+	optional ActivityAward activityAward = 2;
+	optional int32 configId = 3;//当前生效的首充配置Id
+}
+
+//购买基金活动状态
+message C2S_ACTIVITY_BUY_GROWTH_FUND {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_BUY_GROWTH_FUND {
+ optional bool buyGrowthFund = 1;//是否购买
+ repeated int32 paySet = 2; //档次
+ repeated int32 awardRecordSet = 3; //活动领奖记录
+ optional int32 activityId = 4; //活动id
+}
+//获取成长基金活动状态
+message C2S_ACTIVITY_GET_GROWTH_FUND_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_GROWTH_FUND_INFO {
+ optional bool buyGrowthFund = 1;//是否购买
+ repeated int32 paySet = 2; //档次
+ repeated int32 awardRecordSet = 3; //活动领奖记录
+ optional int32 activityId = 4; //活动id
+}
+//领取活动奖励
+message C2S_ACTIVITY_GET_GROWTH_FUND_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 stepId = 2; //奖励配置id
+}
+message S2C_ACTIVITY_GET_GROWTH_FUND_REWARD {
+ optional ActivityAward activityAward = 1;
+ optional int32 configId = 2;//当前生效的配置Id
+}
+
+
+//购买周卡月卡
+message C2S_ACTIVITY_BUY_WEEK_MONTH_CARD {
+ optional int32 activityId = 1; //活动id
+ optional int32 cardType = 2; //卡类型
+}
+message S2C_ACTIVITY_BUY_WEEK_MONTH_CARD {
+ optional int32 code = 1;//0=购买成功
+ optional int32 activityId = 2; //活动id
+ optional int32 cardType = 3; //卡类型
+ optional int32 rewardCount = 4;//剩余奖励次数
+ optional bool canReceive = 5;//发送今天是否可领取奖励
+}
+//获取周卡月卡信息
+message C2S_ACTIVITY_GET_WEEK_MONTH_CARD_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_WEEK_MONTH_CARD_INFO {
+ repeated WeekMonthCardInfo cardInfo = 1;//卡数据
+ optional int32 activityId = 2; //活动id
+}
+//领取活动奖励
+message C2S_ACTIVITY_GET_WEEK_MONTH_CARD_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 cardType = 2;//卡类型
+}
+message S2C_ACTIVITY_GET_WEEK_MONTH_CARD_REWARD {
+ optional WeekMonthRewardInfo activityAward = 1;
+}
+
+//获取一元购活动状态
+message C2S_ACTIVITY_GET_ONE_RMB_BUY_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_GET_ONE_RMB_BUY_INFO {
+ repeated int32 paySet = 1; //档次
+ repeated int32 awardRecordSet = 2; //活动领奖记录
+ optional int32 activityId = 3; //活动id
+}
+//领取活动奖励
+message C2S_ACTIVITY_GET_ONE_RMB_BUY_REWARD {
+ required int32 activityId = 1; //活动id
+ required int32 stepId = 2; //奖励配置id
+}
+message S2C_ACTIVITY_GET_ONE_RMB_BUY_REWARD {
+ optional ActivityAward activityAward = 1;
+}
+
+//获取所有直购礼包信息
+message C2S_ACTIVITY_ZHI_GOU_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_ZHI_GOU_INFO {
+ repeated Tuple idCount = 1;//k=直购礼包id v=对应购买数量
+ optional int32 activityId = 2; //活动id
+}
+
+//封王战倒计时
+message S2C_ACTIVITY_KING_FIGHT_COUNT_DOWN{
+	required int32 countDown = 1;//封王战倒计时（单位秒），大于0=显示倒计时，小于0=已经开始
+}
+
+//南蛮入侵事件数据
+message BbEvent{
+	required int32 cityId = 1; //城市ID
+	required int32 yellowArmyConfigId=2;	//黄巾军ID
+	repeated int32 npcId=3;					//NPCID方便前端查询它的头像
+	required int32 armyCount=4;	//军队数量
+	required int32 armyForce=5;	//军队战斗力
+	required int32 drop=6;		//掉落道具或资源(只能是功勋)
+	required bool isOver=7;		//是否完成
+}
+
+
+//南蛮入侵事件
+message C2S_BARBARIAN_BREAKOUT_EVENT{
+	
+}
+
+//返回本国的攻城列表
+message S2C_BARBARIAN_BREAKOUT_EVENT{
+	repeated BbEvent bEvent=3;	//时间具体内容
+}
+
+//襄阳战个人排行
+message C2S_XIANGYANG_INFO{
+}
+
+message S2C_XIANGYANG_INFO{
+	repeated CommRank commRank=1;	//玩家战功排行榜
+	required int64 wei = 2; 		//魏国总战功
+	required int64 shu = 3; 		//蜀国总战功
+	required int64 wu = 4;  		//吴国总战功
+	required int32 warCount=5;		//当前玩家战斗次数,用于兑换奖励(个人奖励)
+	required int32 receiveId=6;		//是否领取个人奖励
+	required bool emperorCountryReard = 7;		//是否可以领取皇帝国家成员奖 true=可以，false = 不可以
+}
+
+//领奖
+message C2S_XIANGYANG_RECEIVE{
+	required int32 receiveId=1;
+}
+
+message S2C_XIANGYANG_RECEIVE{
+	required int32 state =1;		//状态 0正常 大于0错误码
+	required int32 receiveId=2;		//领取的奖励ID，就是前端传来的
+	repeated ValuesMessage valuesMessage=3;	//领取倒的奖励
+}
+
+//可领奖通知
+message S2C_XIANGYANG_RECEIVE_NOTICE{
+	required int32 receiveId=1;		//领取的奖励ID，就是前端传来的
+}
+
+
+
+
+//皇帝国家的国家成员登录领取奖励
+message C2S_XIANGYANG_EMPROR_COUNTRY_REWARD{
+}
+
+message S2C_XIANGYANG_EMPROR_COUNTRY_REWARD{
+	repeated ValuesMessage message = 1;//奖励
+}
+
+//册封皇帝公告
+message S2C_EMPEROR_CHANE_NOTICE {
+    optional int32 countryId = 1;
+    optional string playerName = 2;
+    optional int32 changeStamp = 3;
+}
+
+// 获取幸运转盘玩家个人信息
+message C2S_ACTIVITY_GET_PRIZE_INFO{
+	required int32 activityId = 1; //活动id
+}
+
+message S2C_ACTIVITY_GET_PRIZE_INFO{
+	optional PrizeInfo prizeInfo = 1;
+	optional int32 activityId = 2; //活动id
+}
+
+// 玩幸运转盘
+message C2S_ACTIVITY_PRIZE_PLAY{
+	required int32 activityId = 1; //活动id
+	required int32 type = 2; //类型
+}
+
+message S2C_ACTIVITY_PRIZE_PLAY{
+	repeated ValuesMessage message = 1;//奖励
+	optional PrizeInfo prizeInfo = 2; //玩法信息
+	optional int32 activityId = 3; //活动id
+}
+
+
+// 领取幸运转盘累积奖励
+message C2S_ACTIVITY_DRAW_PRIZE_REWARD{
+	required int32 id = 1; // 奖励配置唯一id
+	optional int32 activityId = 2; //活动id
+}
+
+message S2C_ACTIVITY_DRAW_PRIZE_REWARD{
+	 optional ActivityAward activityAward = 1;
+}
+
+//活动公告
+message C2S_ACTIVITY_NOTICE_CONFIGS{
+	
+}
+message S2C_ACTIVITY_NOTICE_CONFIGS{
+	repeated ActivityNotiseConfig activityNotiseConfigs = 1;
+}
+
+//新武将活动信息
+message C2S_ACTIVITY_NEW_GENERAL_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_NEW_GENERAL_INFO {
+ required int32 todayCostKeepsake = 1;  	//今日消耗信物数量
+ repeated int32 boxReardRecord = 2; 		//宝箱领奖记录（配置Id）
+ optional int32 activityId = 3; 			//活动id
+ repeated Tuple chooseRewardList = 4;		//已选奖励列表
+ optional int32 generalBagStatu = 5; 			//0=未购买，1=已购买，2=购买并领取
+}
+
+//新武将选择奖励
+message C2S_ACTIVITY_NEW_GENERAL_CHOOSE_REWARD {
+ required int32 activityId = 1; 	//活动id
+ repeated int32 items = 2; 			//选择奖励
+}
+message S2C_ACTIVITY_NEW_GENERAL_CHOOSE_REWARD {
+ optional int32 code = 1;	//0=成功
+ repeated Tuple items = 2; 
+ required int32 activityId = 3; 	//活动id
+}
+
+//新武将拜访
+message C2S_ACTIVITY_NEW_GENERAL_VISIT_REWARD {
+ required int32 activityId = 1; 		//活动id
+ required int32 visitType = 2; 		//拜访类型 1=拜访1次，2拜访10次
+}
+message S2C_ACTIVITY_NEW_GENERAL_VISIT_REWARD {
+ optional int32 todayCostKeepsake = 1;  //今日消耗信物数量
+ optional int32 activityId = 2; 			//活动id
+ repeated ValuesMessage message = 3;//奖励
+}
+
+//新武将领取宝箱奖励
+message C2S_ACTIVITY_NEW_GENERAL_BOX_REWARD {
+ required int32 activityId = 1; //活动id
+ optional int32 step = 2;		//步骤id
+}
+message S2C_ACTIVITY_NEW_GENERAL_BOX_REWARD {
+ optional int32 code = 1;		//0=成功
+ optional int32 activityId = 2;		//活动id
+ repeated ValuesMessage message = 3;//奖励
+ repeated int32 boxReardRecord = 4; 	//宝箱领奖记录（配置Id）
+}
+
+//购买新武将礼包 
+message C2S_ACTIVITY_BUY_GENERAL_BAG {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_BUY_GENERAL_BAG {
+ required int32 code = 1; //0=成功
+ optional int32 activityId = 2; //活动id
+ optional int32 generalBagStatu = 3; //0=未购买，1=已购买，2=购买并领取
+}
+//领取新武将礼包 
+message C2S_ACTIVITY_AWARD_GENERAL_BAG {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_AWARD_GENERAL_BAG {
+ required int32 code = 1; //0=成功
+ optional int32 generalBagStatu = 2; //0=未购买，1=已购买，2=购买并领取
+ optional int32 activityId = 3; //活动id
+ repeated ValuesMessage message = 4;//奖励
+}
+
+//聚宝盆活动信息
+message C2S_ACTIVITY_TREASEURE_BOWL_INFO {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_TREASEURE_BOWL_INFO {
+ required TreasureBowl treasureBowl = 1;//聚宝盆信息
+}
+
+//聚宝盆活动摇奖
+message C2S_ACTIVITY_TREASEURE_BOWL_REWARD {
+ optional int32 activityId = 1; //活动id
+}
+message S2C_ACTIVITY_TREASEURE_BOWL_REWARD {
+ required int32 code = 1;  	// 0=成功
+ repeated ValuesMessage message = 2;//奖励
+ required TreasureBowl treasureBowl = 3;//聚宝盆信息
+ 	
+}
+
+//获得特惠商城信息
+message C2S_ACTIVITY_PREFERENTAIL_STORE_INFO{
+	required int32 storeId = 1;//特惠商城id
+}
+//获得特惠商城信息
+message S2C_ACTIVITY_PREFERENTAIL_STORE_INFO{
+	required MerchantInfo info = 1;
+}
+
+//手动刷新
+message C2S_ACTIVITY_PREFERENTAIL_REFRESH{
+	required int32 storeId = 1;//商城id
+}
+//手动刷新
+message S2C_ACTIVITY_PREFERENTAIL_REFRESH{
+	required MerchantInfo info = 1;
+}
+
+//商城购买物品
+message C2S_ACTIVITY_PREFERENTAIL_STORE_BUY{
+	required int32 storeId = 1;//商城id
+	required int32 id = 2;//商品id（不是道具id）
+	required int32 num = 3;//数量
+}
+//商城购买物品
+message S2C_ACTIVITY_PREFERENTAIL_STORE_BUY{
+	required int32 storeId = 1;//商城id 
+	required GoodsInfo goodsInfo =2;//购买后商品信息
+}
+
+
+
+//*************************数据结构定义****************************
+
+//挑战记录
+message ApkChallengeHisVo{
+	required int64 playerId = 1;//玩家ID
+	required string playerName = 2;//玩家名
+	required int32 head = 3;	//头像
+	required int32 modifyRank = 4;// 本次发生变更的排行 (+为上升 -为下降)
+	required int32 force = 5;//战力
+	required int64 challengeTime = 6; //挑战时间
+	required bool challengeWin =7; //true胜利,false 失败
+	required int32 countryId = 8;//国家ID
+}
+
+//排行榜数据
+message ApkRankVo{
+	required int64 playerId = 1;//玩家ID
+	required string playerName = 2;//玩家名
+	required int32 head = 3; //头像
+	required int32 rank = 4;//排行
+	required int32 force = 5;//战力
+	repeated GeneralWinInfo generalWinInfo = 6; //武将列表
+	required int32 countryId = 7;//国家ID
+}
+
+//*************************协议定义********************************
+
+//取得本人的竞技场信息(APK_GET_MY_APK = 5201)
+message GetMyApkReq {
+	
+}
+
+//取得本人的竞技场信息(APK_GET_MY_APK = 5201)
+message GetMyApkResp {
+	optional int32 challengeCount =1;//当天已挑战次数
+	optional int32 buyCount = 2;//当天已购买次数
+	optional bool challenged = 3;//是否曾经挑战过竞技场(0=否,1=是)
+	optional int32 rank=4;//我的排名
+}
+
+//取得玩家可挑战的玩家信息列表(APK_GET_CHALLENGE_LIST = 5202)
+message GetChallengeListReq {
+	
+}
+
+//取得玩家可挑战的玩家信息列表(APK_GET_CHALLENGE_LIST = 5202)
+message GetChallengeListResp {
+	 repeated ApkRankVo apkRankVoList = 1;
+}
+
+
+//发起挑战 (APK_CHALLENGE = 5203)
+message ChallengeReq {
+		required int32 rank = 1;//发起挑战的位置 
+}
+
+//发起挑战 (APK_CHALLENGE = 5203)
+message ChallengeResp {
+	 required int32 battleId = 1; //战斗id
+}
+
+//挑战结束 (APK_CHALLENGE_RESULT = 5208)
+message ChallengeResultResp {
+	 repeated ApkRankVo apkRankVoList = 1;
+	 required bool result = 2;
+	 repeated ValuesMessage message = 3;//奖励
+	 required int64 battleId = 4;//战斗id
+}
+
+
+
+//购买次数 (APK_BUY_COUNT = 5204)
+message GetBuyCountReq {
+		required int32 num =1;//购买的次数
+}
+
+//购买次数 (APK_BUY_COUNT = 5204)
+message GetBuyCountResp {
+ 	required int32 challengeCount =1;//当天已挑战次数
+	required int32 buyCount = 2;//当天已购买次数
+}
+
+//获取排行榜列表 (APK_GET_MY_APK = 5205)
+message GetRankListReq {
+		required int32 count = 1;//显示多少条榜单
+}
+
+//获取排行榜列表 (APK_GET_MY_APK = 5205)
+message GetRankListResp {
+	 repeated ApkRankVo apkRankVoList = 1;
+	 optional ApkRankVo apkRankVo =2; //10000名之内才有数据
+}
+
+
+//取得战斗记录 (GET_CHALLENGE_HIS = 5206)
+message GetChallengeHisReq {
+	required int32 count = 1;//显示多少条记录
+}
+
+//取得战斗记录 (GET_CHALLENGE_HIS = 5206)
+message GetChallengeHisResp {
+	 repeated ApkChallengeHisVo apkChallengeHisVoList = 1;
+}
+
+//扫荡 (APK_CHALLENGE_FAST = 5207)
+message ChallengeFastReq {
+		required int32 rank = 1;//发起挑战的位置 
+}
+
+//扫荡 (APK_CHALLENGE_FAST = 5207)
+message ChallengeFastResp {
+   repeated ValuesMessage message = 1;//奖励
+}
+
+
+//挑战检查 (APK_CHALLENGE_CHECK = 5209)
+message ChallengeCheckReq {
+	required int32 rank = 1;//排名
+	required int32 playerId = 2;//玩家id
+}
+
+//挑战检查 (APK_CHALLENGE_CHECK = 5209)
+message ChallengeCheckResp {
+   required bool refresh = 1;//是否刷新
+}
+//*************************数据结构定义****************************
+
+message CleanUpArenaInfo{
+	required int32 arenaId = 1;//擂台id(-1：表示擂台达到最高关卡)
+	repeated ValuesMessage values = 2;//奖励的物品
+}
+
+//*************************协议定义********************************
+
+//获取玩家擂台关数(ARENA_ID = 1801)
+message ArenaIdIdReq {
+	
+}
+
+//获取玩家擂台关数结果(ARENA_ID = 1801)
+message ArenaIdResp {
+	required int32 arenaId = 1; //擂台id(-1：表示擂台达到最高关卡)
+	required bool canCleanUp = 2;// 是否可以扫荡
+	required int32 resetCount = 3;//可以重置的次数
+	repeated int32 firstRewarded = 4;
+}
+
+//进入擂台战斗(ENTER_ARENA_BATTLE = 1802)
+message EnterArenaBattleReq {
+	required int32 armyId = 1;//部队id
+}
+
+//进入擂台战斗结果(ENTER_ARENA_BATTLE = 1802)
+message EnterArenaBattleResp {
+	required int32 battleId = 1; //战斗id
+}
+
+//擂台扫荡(CLEAN_UP_ARENA_BATTLE = 1803)
+message CleanUpArenaBattleReq {
+	
+}
+
+//擂台扫荡结果(CLEAN_UP_ARENA_BATTLE = 1803)
+message CleanUpArenaBattleResp {
+	required int32 arenaId = 1; //擂台id(-1：表示擂台达到最高关卡)
+	repeated CleanUpArenaInfo values = 2;//奖励的物品
+}
+
+//擂台重置(ARENA_RESET = 1804)
+message ArenaResetReq {
+
+}
+
+//擂台重置结果(ARENA_RESET = 1804)
+message ArenaResetResp {
+	required int32 arenaId = 1; //擂台id(-1：表示擂台达到最高关卡)
+}
+
+//擂台奖励列表(ARENA_REWARD_LIST = 1805)
+message ArenaRewardListReq {
+}
+
+//擂台奖励列表返回(ARENA_REWARD_LIST = 1805)
+message ArenaRewardListResp {
+	repeated int32 arenaId = 1;//可领奖的擂台id
+}
+
+//擂台领取奖励(ARENA_GET_REWARD = 1806)
+message ArenaGetRewardReq {
+	required int32 arenaId = 1;//可领奖的擂台id
+}
+
+//擂台领取奖励返回(ARENA_GET_REWARD = 1806)
+message ArenaGetRewardResp {
+	required int32 arenaId = 1;//可领奖的擂台id
+	required bool result = 2;//结果
+}
+
+//擂台战斗奖励返回(ARENA_BATTLE_REWARD = 1807)
+message ArenaBattleRewardResp {
+	required int32 arenaId = 1;//擂台id
+	repeated ValuesMessage reward = 2;//奖励的物品
+	required bool result = 3;//战斗结果
+	required int64 battleId = 4;//战斗id
+}
+
+// C2S_ARENA_BUY_RESET = 1809;
+message C2S_ARENA_BUY_RESET {
+}
+
+// S2C_ARENA_BUY_RESET = 1810;
+message S2C_ARENA_BUY_RESET {
+	optional int32 resetCount = 1;
+	optional int32 buyResetCount = 2;
+}
+//*************************数据结构定义****************************
+
+//兵种信息
+message ArmyMessage{
+	required int32 armyType = 1; //armyType
+	required int32 num = 2;//库存
+	required int32 level = 3;//等级
+	repeated AttributeValue soldierAttribute = 4;	//小兵属性 
+}
+
+//请求兵种信息(GET_ARMY = 4001)
+message GetArmyReq{
+	
+}
+
+//返回兵种信息(GET_ARMY = 4001)
+message GetArmyResp{
+	repeated ArmyMessage armys = 1;
+}
+
+//兵种升级(ARMY_UPGRADE_LEVEL = 4002)
+message ArmyUpgradeLevelReq{
+	required int32 armyType = 1;//兵种类型
+}
+
+//兵种升级(ARMY_UPGRADE_LEVEL = 4002)
+message ArmyUpgradeLevelResp{
+	required int32 armyType = 1;//兵种type
+	required int32 level = 2;//等级
+}
+//*************************数据结构定义**************************
+
+// 背包格子信息
+message BackpackGrid{
+	required int32 itemId = 1;				//道具id
+	required int64 count = 2;				//数量
+	required int64 uuid = 3;                //玩家道具id
+	optional int32 level = 4;				//等级
+}
+
+
+//*************************协议定义*****************************
+
+//查询背包(BACKPACK_QUERY = 1301)
+message BackpackQueryReq {
+}
+
+// 返回背包信息（BACKPACK_QUERY = 1301）
+message BackpackQueryResp{
+	repeated BackpackGrid backpackGrids = 1;	//背包格子列表
+}
+
+//使用物品(BACKPACK_USE_ITEM = 1302)
+message BackpackItemUseReq {
+	required int32 itemId = 1;				//道具id
+	required int64 count = 2;				//数量
+}
+
+// 返回使用物品结果（BACKPACK_USE_ITEM = 1302）
+message BackpackItemUseResp{
+	required bool result = 1;		//使用结果
+	repeated ValuesMessage message = 2;//奖励
+}
+
+//安全使用物品(BACKPACK_SAFE_USE = 1303)
+message BackpackSafeUseReq {
+}
+
+// 返回安全使用物品结果（BACKPACK_SAFE_USE = 1303）
+message BackpackSafeUseResp{
+	required bool result = 1;		//使用结果
+}
+
+//删除物品(BACKPACK_DEL_ITEM = 1304)
+message BackpackDeleteItemReq {
+	required BackpackGrid item = 1;		//道具
+}
+
+// 返回删除物品结果（BACKPACK_DEL_ITEM = 1304）
+message BackpackDeleteItemResp {
+	required bool result = 1;		//使用结果
+}
+
+message S2C_BACKPACKGRID_CHANGE {
+	repeated BackpackGrid grids = 1; // count == 0 delete
+}
+message C2S_WAR_START{
+	required int64 battleId = 1;		//战场ID
+}
+
+message S2C_WAR_START{
+	required int64 status = 1;		//状态
+}
+
+//怒气技能
+message C2S_WAR_ANAGER_SKILL{
+	required int64 battleId = 1;//战场ID
+	required int32 elementId=2;
+	required int32 baseSkillId=3;
+}
+
+//重新进入战场
+message C2S_WAR_REENTRY_BATTLE{
+	required int64 battleId = 1;//战场ID
+}
+
+message S2C_WAR_REENTRY_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//推出战场
+message C2S_WAR_QUIT_BATTLE{
+	required int64 battleId = 1;//战场ID
+}
+
+message S2C_WAR_QUIT_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//快速获取结果
+message C2S_WAR_QUICK_BATTLE{
+	required int64 battleId = 1;		//战场ID
+}
+
+//快速战斗返回结果
+message S2C_WAR_QUICK_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//战斗自动状态
+message WarAutoState{
+	required int32 warType = 1; //战斗类型
+	required bool autoState = 2; //自动状态
+}
+
+//设置是否自动战斗
+message C2S_WAR_AUTO{
+	required int64 battleId = 1;    //战场ID
+	required bool autoState = 2; //自动状态
+}
+message S2C_WAR_AUTO{
+	required int32 state = 1; //状态:0-成功,1-失败
+}
+//获取各个战斗类型的自动状态
+message C2S_WAR_AUTO_LIST{
+}
+message S2C_WAR_AUTO_LIST{
+	repeated WarAutoState list = 1;  
+}
+
+//查看武将属性
+message C2S_WAR_QUERY_HERO_DATA{
+	required int64 battleId = 1;	//战场ID
+	repeated int32 elementId=2;		//元素ID
+}
+
+//GM指令 1003
+message C2S_GM_REENTRY_BATTLE{
+	required int64 battleId=1;			//战场ID
+}
+
+//GM指令 1003
+message S2C_GM_REENTRY_BATTLE{
+	optional int32 status=1;  //返回状态 0成功，1失败
+}
+
+message HeroUnit
+{
+	required int32 heroPosition=1;  //英雄所在队伍中的位置
+	required int32 heroMaxTroops=2; //兵力上限
+	required int32 heroTroops=3; 	//当前兵力
+	required int32 baseId=4;		//配置表ID
+	required int64 id=5;			//唯一ID
+	required int32 anager=8;		//怒气
+	required int32 soldierType=9;		//带兵类型
+	repeated SysKeyValue passiveSkill=6;	//被动技能列表{id:lv}
+	repeated SysKeyValue attribute=7;		//属性{属性id:value}
+}
+
+
+message TeamUnit
+{
+	required int64 id=2;
+	repeated HeroUnit heroUnit=1;
+}
+
+//GM指令战斗    63
+message C2S_GM_WAR
+{
+	required TeamUnit att=1;  	//攻击方
+	required TeamUnit def=2; 	//防守方
+	optional int32 terrainId=3;	//场景ID
+	optional bool isNotSoldier=4;	//是否不生成小兵 true不生成小兵
+	optional bool isSingleSoldier=5;//是否只生成一个小兵
+	optional bool isDefendAuto=6;	//敌方是否自动技能
+	optional bool isSkillStop=7;	//强制技能暂停
+}
+
+//GM指令战斗    64
+message S2C_GM_WAR
+{
+	required int32 status=1;  //返回状态 0成功，1失败
+	required int64 battleId=2;  //战场ID
+}
+
+//GM指令战斗    65
+message S2C_GM_WAR_OVER
+{
+	required int32 isVictory=1;  //1攻击方胜利，0攻击方失败
+}
+
+
+
+//战斗代理协议 在框架里
+//每条C2S指令里必须有个uid，否则服务器无法识别是谁发的
+
+//战斗服务器关闭
+message C2S_WARPROXY_WAR_SERVER_CLOSE{
+	
+}
+message S2C_WARPROXY_WAR_SERVER_CLOSE{
+	
+}
+
+
+
+//创建一个战场    118
+message C2S_WARPROXY_CREATE_BATTLEFIELD{
+	required int64 uid=1;				//用户ID
+	required int32 warType = 2;  		//战斗类型  1001野外战斗 1002竞技场 1003国战
+	required int32 terrainId = 3;		//地形ID
+	optional int32 cityId = 4;			//城池id
+	optional int32 attCountryId = 5;	//攻方国家id
+	optional int32 defCountryId= 6;		//守方国家id
+	optional bool isNotSoldier=7;		//是否不生成小兵 true不生成小兵
+	optional bool isSkillStop=8;		//强制技能暂停
+	repeated bytes sceneElementData = 9;//场景元件
+	optional bytes globalAttribute=10;	//全局属性
+	optional int32 guideId= 11;			//引导ID
+}
+
+message S2C_WARPROXY_CREATE_BATTLEFIELD{
+	required int64 battleId=1;		//战场ID 0失败，大于0就是战场ID
+}
+
+//中途添加/删除全局属性
+message C2S_WARPROXY_GLOBAL_ATTRIBUTE{
+	required int64 battleId=1;			//战场ID
+	required bytes globalAttribute=11;	//全局属性
+}
+
+message S2C_WARPROXY_GLOBAL_ATTRIBUTE{
+	required int32 ret = 1;	//状态0正常 大于0失败
+}
+
+
+//加入战场  120
+message C2S_WARPROXY_ADD_CORPS{
+	required int64 battleId=1;			//战场ID
+	required bytes teamData = 2;		//战斗参与人数据一个类封装好了的数据
+}
+
+message S2C_WARPROXY_ADD_CORPS{
+	required int32 ret = 1;	//数据注入结果
+}
+
+//启动战斗  123
+message C2S_WARPROXY_INIT_BATTLEFIELD{
+	required int64 battleId = 1;		//战场ID
+	required int64 uid=2;				//用户ID
+}
+
+message S2C_WARPROXY_INIT_BATTLEFIELD{
+	required int32 ret = 1;	//状态0正常 大于0失败
+}
+
+
+//重新进入战场    125
+message C2S_WARPROXY_REENTRY_BATTLE{
+	required int64 battleId = 1;//战场ID
+	required int64 uid=2;				//用户ID
+}
+message S2C_WARPROXY_REENTRY_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//推出战场  126
+message C2S_WARPROXY_QUIT_BATTLE{
+	required int64 battleId = 1;//战场ID
+	required int64 uid=2;				//用户ID
+}
+
+message S2C_WARPROXY_QUIT_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//使用怒气技能    124
+message C2S_WARPROXY_ANGER_SKILL{
+	required int64 battleId = 1;	//战场ID
+	required int32 elementId=2;		//元素ID
+	required int32 baseSkillId=3; 	//唯一ID
+}
+
+
+//战斗完成  121
+message S2C_WARPROXY_OVER{
+	required int64 battleId = 1;		//战场ID
+	required bytes overData = 2;		//完成后的结果
+	required int32 countryId=3;			//战胜方的势力ID
+}
+
+//攻击方胜利，但有多个国家，继续战斗
+message S2C_WARPROXY_CONTINUE_WAR{
+	required int64 battleId = 1;		//战场ID
+	required int32 attCountryId=2;		//攻击方
+	required int32 defCountryId=3;		//防守方
+	required bytes overData = 4;		//完成后的结果
+}
+
+//战斗回合结算
+message S2C_WARPROXY_ROUND_OVER{
+	required int64 battleId = 1;		//战场ID
+	required bytes overData = 2;		//完成后的结果
+	required int32 countryId=3;			//战胜方的势力ID
+	required int32 roundNumber=4;		//回合数
+}
+
+//战斗元素定位数据
+message WarElementPosition{
+	required bool attack = 1;		//是否攻击方
+	required bool npc = 2;			//是否NPC
+	required int64 teamId = 3;		//队伍ID
+	required int64 heroId = 4;		//英雄ID用户是唯一ID，npc是系统id
+	required int32 soldierIndex = 5;//小兵索引 主将就是-1
+	required int32 countryId=6;		//国家ID
+	optional int64 uid = 7;			//用户ID
+}
+
+//血气通知单元
+message BloodNoticeUnit{
+	required int32 type=2;					//类型 1武将 2小兵 3城墙 4箭塔(箭塔和城墙共享血量)
+	required WarElementPosition attack=3;	//攻击者数据
+	required WarElementPosition defense=4;	//受击者数据
+	required int32 blood = 5;				//剩余血量
+}
+
+//战斗队伍气血通知（死亡一个单位的时候触发）  122
+message S2C_WARPROXY_SOLDIER_BLOOD_NOTICE{
+	required int64 battleId = 1;			//战场ID
+	repeated BloodNoticeUnit bloodNoticeUnit=2;	//血气数据 
+}
+
+//死亡通知单元
+message DeathNoticeUnit{
+	required WarElementPosition defense=2;	//死亡者基本数据
+	required int32 killHeroCount=3;			//死亡者杀敌将领数量
+	required int32 killSoldiersCount=4;		//死亡者杀敌兵力（气血）
+	required int32 lossSoldiersCount=5;		//死亡者损失兵力（气血），残血进入战场有用
+}
+
+//英雄死亡通知（整个英雄，包括所有小兵）  139
+message S2C_WARPROXY_HERO_DEATH_NOTICE{
+	required int64 battleId = 1;			//战场ID
+	repeated DeathNoticeUnit deathNoticeUnit=2;	//死亡通知单元
+}
+
+//用户下线通知    127
+message C2S_WARPROXY_DOWN_NOTICE{
+	required int64 uid=1;				//用户ID
+	required int64 battleId=2;			//战场ID列表
+}
+
+//前端请求下一页的提示数据  128
+message C2S_WARPROXY_PROMPT_QUEUE_PAGE{
+	required int64 battleId=1;		//战场ID列表
+	required bool attack = 2;       //是否为攻击方
+	required int64 uid=3;				//用户ID
+	required int32 userOrder=4;			//用户orderID,自这个ID取后20条数据
+	required int32 npcOrder=5;			//NPc的orderID,自这个ID取后20条数据
+}
+
+//从战场撤出队伍
+message C2S_WARPROXY_EVACUATE{
+	required int64 battleId = 1;	//战场ID
+	message Param{
+		required int32 mode = 2;        //1攻击方 2防守方
+		required int32 multiple=3;		//倍数 通常传0，突进需要检查我方兵力是对方的几倍才可以突进
+		required int64 teamId = 4;		//队伍ID（0的时候由战场决定）
+		required int64 uid = 5;			//用户ID（0的时候由战场决定）
+		required int32 unitType = 6;    //单位类型 1用户队伍，2NPC队伍，3用户或者NPC
+	}
+	repeated Param param = 7;		//参数列表
+	
+}
+
+message S2C_WARPROXY_EVACUATE{
+	required int32 state=1;		//返回 1:失败 0:成功
+	message TeamData
+	{
+		required int64 teamId = 2;		//队伍ID（0的时候由战场决定）
+		required bool attack = 3;       //是否攻击方
+		required bool isNpc = 4;       	//是否NPC
+	}
+	repeated TeamData teamData = 5;		//队伍ID（0的时候由战场决定）
+}
+
+//撤退
+message C2S_WARPROXY_RETREAT{
+	required int64 battleId = 1;	//战场ID
+	required int64 teamId = 2;		//队伍ID
+	required int32 multiple=3;		//倍数 通常传0，突进需要检查我方兵力是对方的几倍才可以突进
+	required bool attack = 4;       //是否为攻击方
+}
+
+message S2C_WARPROXY_RETREAT{
+	required int32 state=1;		//返回 1:失败 0:成功 
+	optional bytes retreatData = 2;//撤退数据
+}
+
+//单挑
+message C2S_WARPROXY_ONE_VS_ONE{
+	required int64 battleId = 1;//战场ID
+	required int64 uid = 2;		//uid
+	required bool attack = 3;   //是否为攻击方
+	required int32 mode=4;		//模式  1单挑对方玩家，2单挑对方玩家和NPC
+}
+
+
+message S2C_WARPROXY_ONE_VS_ONE{
+	required int32 state=1;				//返回 1:失败 0:成功 
+	optional bytes attackData = 2;		//攻击方数据
+	optional bytes defenseData = 3;		//防守方数据
+}
+
+//开战
+message C2S_WARPROXY_START_WAR{
+	required int64 battleId = 1;	//战场ID
+}
+
+//开战
+message S2C_WARPROXY_START_WAR{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//队伍进入战斗场景通知
+message S2C_WAR_MAKE_WAR_NOTICE{
+	required int64 battleId = 1;//战场ID
+	required int64 teamId =2;   //队伍ID
+}
+
+
+//战功通知
+message S2C_WARPROXY_FEAT_NOTICE{
+	required int64 battleId = 1;//战场ID
+	required int64 uid = 2;		//用户ID
+	message FeatData
+	{
+		required int64 tid = 3;		//队伍ID
+		required int32 feat = 4;	//战功
+	}
+
+	repeated FeatData featData = 5;	//战功数据
+}
+
+
+//快速获取结果    119
+message C2S_WARPROXY_QUICK_BATTLE{
+	required int64 battleId = 1;		//战场ID
+}
+
+//快速战斗返回结果
+message S2C_WARPROXY_QUICK_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//终止本场战斗并返回结果    135
+message C2S_WARPROXY_STOP_BATTLE{
+	required int64 battleId = 1;		//战场ID
+	required int64 uid=2;				//用户ID
+}
+
+//终止本场战斗并返回结果
+message S2C_WARPROXY_STOP_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+	required bytes ret = 2;		//战斗结果 一个类封装
+}
+
+
+//自动使用怒气    136
+message C2S_WARPROXY_AUTO{
+	required int64 battleId = 1;		//战场ID
+	required int64 uid=2;				//用户ID
+	required bool autoAnger=3;			//是否自动怒气技能
+}
+
+//自动使用怒气
+message S2C_WARPROXY_AUTO{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//围城的数据
+message EncircleCityHeroData{
+	required int64 teamId = 1;		//英雄配置表id
+	required int64 heroId = 2;		//英雄唯一id
+	required bool isNpc = 3;		//是否NPC
+}
+
+//围城
+message S2C_WARPROXY_ENCIRCLE_CITY{
+	repeated EncircleCityHeroData heroData=1;	//前12个英雄信息 heroBaseId(32位)，countryId(32位)
+}
+
+//检查战场是否存在
+message C2S_WARPROXY_CHECK_BATTLE{
+	required int64 battleId = 1;		//战场ID
+}
+
+message S2C_WARPROXY_CHECK_BATTLE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//检查战场服务器是否正常
+message C2S_WARPROXY_CHECK_BATTLE_SERVER{
+
+}
+
+message S2C_WARPROXY_CHECK_BATTLE_SERVER{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+
+//判断国家是否在战场上
+message C2S_WARPROXY_ISCOUNTRY_PARTICIPATE{
+	required int64 battleId = 1;		//战场ID
+	required int32 countryId=2;			//国家ID
+}
+
+message S2C_WARPROXY_ISCOUNTRY_PARTICIPATE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//官职通知
+message C2S_WARPROXY_OFFICIAL_NOTICE{
+	required int64 battleId = 1;		//战场ID
+	required int32 country=2;			//国家ID
+	required int32 officialId=3;		//官职ID
+	required int32 state=4;				//状态 1加入 0移除
+	required bool isAtt = 5;			//是否攻击方
+}
+
+message S2C_WARPROXY_OFFICIAL_NOTICE{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//查看武将属性
+message C2S_WARPROXY_QUERY_HERO_DATA{
+	required int64 battleId = 1;	//战场ID
+	repeated int32 elementId=2;		//元素ID
+	required int64 uid = 3;			//用户ID
+}
+
+//取消冻结场景
+message C2S_WARPROXY_GUIDE_UNFROZEN{
+	required int64 battleId = 1;		//战场ID
+}
+
+/////////////////////////////////////////国战////////////////////////////////////////
+message WarTeamInfo{
+	required int64 playerId = 1;		//玩家ID
+	required int64 teamId = 2;			//队伍ID
+	required bool npc = 3;				//是否NPC
+}
+
+//创建一个城市战场
+message C2S_WARPROXY_CREATE_CITY_BATTLEFIELD{
+	required int32 terrainId = 1;		//地形ID
+	required int32 cityId = 2;			//城池id
+	required int32 cityCountryId = 3;	//城池属国id
+	required int32 atkCountryId = 4;	//攻击国家id
+	repeated bytes sceneElementData = 5;//场景元件
+	optional bytes globalAttribute=6;	//全局属性
+}
+
+message S2C_WARPROXY_CREATE_CITY_BATTLEFIELD{
+	required int32 state=1;		//返回 1:失败 0:成功 
+}
+
+//加入战场（城市战）
+message C2S_WARPROXY_CITY_ADD_CORPS{
+	required int32 cityId=1;			//城市ID
+	required bytes teamData = 2;		//战斗参与人数据一个类封装好了的数据
+}
+
+message S2C_WARPROXY_CITY_ADD_CORPS{
+	required int32 ret = 1;	//数据注入结果
+}
+
+//城市战场同步
+message S2C_WARPROXY_CITY_BATTLE_SYNC{
+	required int32 warType = 1;			//战斗类型
+	required int64 battleId = 2;		//战场ID
+	required int32  terrainId = 3; 
+	required int32  cityId = 4;
+	required int32  attCountryId = 5;
+	required int32  countryId = 6;
+	required WarTeamInfo atkTeam=7;
+	required WarTeamInfo defTeam=8;
+}
+
+//战斗完成（城市站）
+message S2C_WARPROXY_CITY_OVER{
+	required int32 warType = 1;			//战斗类型
+	required int32 countryId=2;			//战胜方的势力ID
+	required int32 cityId = 3;
+	required bool victory=4;
+	required CountryOverData victoryData=5;	//胜利方数据
+	required CountryOverData failData=6;	//失败方数据
+}
+
+
+//进入城市战场
+message C2S_WARPROXY_CITY_WAR_GO{
+	required int32 cityId 				= 1;   	//城池ID
+	required string nickName			= 2;	//玩家昵称(回传)
+	required int32 countryId			= 3;	//玩家国家(回传)
+}
+
+
+
+//国战对战列表
+message C2S_WARPROXY_CITY_WAR_CONFRONTATION_LIST{
+	required int32 cityId 			= 1;   	//城池ID
+	required int32 page				= 2;	//第几页 从0开始
+}
+
+
+//获取别的队伍战斗情况（前端观战完成时才调用）
+message C2S_WARPROXY_CITY_WATCH_WAR_TEAM{
+	required int32 cityId 			= 1;   	//城池ID
+	required int64 playerId 		= 2;
+	required int32 teamId 			= 3;   	//队伍Id
+}
+
+//获取自己的队伍
+message C2S_WARPROXY_CITY_WAR_MYTEAM{
+	required int32 cityId 			= 1;   	//城池ID
+	required int64 playerId 		= 2;
+}
+
+
+//initBuff
+message InitBuff{
+	required int32 buffId=1;
+	required int32 buffSysId=2;
+}
+
+//战斗单元
+message CombatUnit{
+	required int32 elementId=1; 	//唯一ID
+	required int32 sysId = 2; 		//系统ID 
+	required int32 type = 3; 		//类型 1-主将,2-士兵
+	required int32 troops = 4;  	//当前兵力
+	required int32 maxTroops = 5;  	//兵力上限
+	required int32 anager = 6;		//当前怒气
+	required int32 xy=7; 			//坐标
+	repeated InitBuff initBuffList=8;	//初始化buff列表 buffId(14位)+buffSysId(22位)
+	required int32 moveSpeed=10;	//移动速度（默认500）
+	optional int32 terrainHurtAffix=11;		//地形伤害加成
+	optional int32 terrainHurtRemit=12;		//地形伤害减免
+	//optional int32 generalModelId=13;		//武将模型ID
+	optional string generalName=14;			//武将名字
+	optional int64 generalId=15;			//武将ID
+}
+
+//英雄数据
+message HeroWarData{
+	required int32 order = 1;		//顺序(英雄)
+	required int32 country = 2; 	//国家
+	required string name = 3;		//玩家名称
+	required int32 soldierType = 4;	//兵种 1步兵 2弓兵 3骑兵 4投石 5弩车 6帐篷
+	required int32 soldierLv = 5;	//小兵等级
+	required bool 	npc = 6; 		//是否NPC
+	optional int32 horseId = 7;		//坐骑id（NPC没有）
+	required int32 attOrDef = 8; 	//攻守方 1-攻(左边)  2-守（右边）
+	repeated CombatUnit combatUnit=9;//战斗元素(包含主将)
+	optional int32 heroPosition = 10; //位置
+}
+
+//场景战斗单元
+message SceneCombatUnit{
+	required int32 elementId=1; 	//唯一ID
+	required int32 soldierType = 3;	//兵种 7城墙 8箭塔 9栅栏 10召唤物
+	required int32 troops = 4;  	//当前兵力
+	required int32 maxTroops = 5;  	//兵力上限
+	required int32 xy=7; 			//坐标X（15位）+Z（16位）
+	optional int32 sysId = 8; 		//系统ID 
+}
+
+//傲气
+message ArroganceData{
+	required int64 playerId 	= 1;
+	required int64 teamId 		= 2; 	//队伍ID
+	required int32 arrogance 	= 3; 	//傲气值
+}
+
+//战场初始化（不管中途还是开始进入，都有个战场初始化过程）
+message S2C_WAR_BATTLE_INIT{
+	required int64 battleId = 1;		//战场ID
+	required int32 warType = 2;  		//战斗类型  1001野外战斗 1002竞技场 1003国战
+	required int32 continueTime = 3; 	//持续了多长时间秒
+	required int32 warContinueTime = 4; //战斗开始后的持续时间
+	required int32 terrainId = 5;		//地形ID
+	optional int32 cityId = 6;			//城池id 国战必须包含城池ID
+	optional int32 roundNumber=7;		//回合数(中途进去需要处理)
+	
+	repeated HeroWarData attack=8;		//左队
+	repeated HeroWarData defense=9;		//右队
+	repeated SceneCombatUnit sceneCombatUnit=10;		//场景作战单元
+	optional int32 guideId = 11;		//剧情ID 101，201，301，401
+	optional ArroganceData atkArrogance = 12;//傲气数据
+	optional ArroganceData defArrogance = 13;//傲气数据
+	optional int64 atkMaxTroops = 14;  	//兵力上限
+	optional int64 defMaxTroops = 15;  	//兵力上限
+}
+
+
+/////////////////////////////////////////////一下是战场实时指令//////////////////////////////////////////////////////
+message WarTargetExt{
+	optional int32 reboundHurt=1;	//伤害反弹
+	optional int32 absorbHurt=2;	//伤害吸收
+	optional int32 restrain=3;		//克制
+}
+
+//战斗目标
+message WarTarget{
+	required int32 value=1;	//战斗数值 目标元素ID(14位)+攻击状态（4位）+目标当前怒气(武将才有)（7位）+是否间接（1位）[1暴击 ,2闪避 ,3 免疫, 4破防, 5暴击+破防]
+	required int32 troops=2;//目标当前兵力
+	required int32 hurt=3;	//目标当前伤害
+	optional int32 xy=7; 	//技能使对方移位 状态（4位）+X轴（8）+y（7位） 状态：0.无，1 击退（往前击退） 2击飞 3冲退 4击退（往两边击退）
+	optional WarTargetExt ext=6;	//扩展字段 反弹(16位)+吸收（16位）
+}
+
+//冻结数据
+message FrozenScenesElement{
+    repeated int32 elementIdList=2;	//排除列表
+    required int32 time=3;			//剩余时间，毫秒
+}
+
+message RealTimeWarAttacker{
+	required int32 elementId =1;	//唯一ID
+	required int32 anger =2;		//攻击者当前怒气
+	required int32 isOffset =3;		//是否偏移坐标
+	required int32 offsetX =4;		//x
+	required int32 offsetZ =5;		//y
+	required int32 direction =6;	//方向
+	
+}
+
+message RealTimeWarBuff{
+	required int32 elementId =1;	//唯一ID
+	required int32 buffId=2;		//buffId
+	required int32 buffSysId=3;		//buffSysId
+	required int32 isAttackAfter=4;	//buff触发时间类型(1攻击前 2攻击后)
+	required int32 unBuff=5;		//取消buffId
+}
+
+message RealTimeWarScenesBuff{
+	required int32 buffId=1;		//buffId
+	required int32 buffSysId=2;		//buffSysId
+	required int32 isAttackAfter=3;	//buff触发时间类型(1攻击前 2攻击后)
+	required int32 x=4;				//X
+	required int32 y=5;				//Y
+}
+
+//实时战斗数据
+message RealTimeWar{
+	required RealTimeWarAttacker attacker=1;		//攻击者数据 攻击者元素ID(14位)+攻击者当前怒气(武将才有)（7位）+是否偏移坐标（1位）+X（8位）Z（7位）+方向（3位）
+	required int32 attackerTroops=2;//攻击者当前兵力
+	
+	repeated WarTarget warTarget=3;	//战斗目标
+	required int32 skillData=4;		//技能信息 技能ID（21位）+回合数（4位 0-15）+子回合（4位 0-15）+是否前摇(1位)+是否飘字(1位)   回合： 0表示没有回合数 1-15表示回合数
+	repeated int32 centerPoint=5;	//中心点（不一定有，X（15位）Z（16位））
+	repeated RealTimeWarBuff buff=6;			//BUFF 目标元素ID(14位)+buffId(14位)+buffSysId(20位)+buff触发时间类型(0攻击前 1攻击后)（1位）+取消buffId(14位)
+	repeated RealTimeWarScenesBuff scenesBuff=7;	//场景BUFF buffId(14位)+buffSysId(22位)+buff触发时间类型(1攻击前 2攻击后)（3位）+中心点（不一定有，X（8位）Z（7位））
+	optional FrozenScenesElement frozenScenesElement=8;	//冻结数据
+	repeated SceneCombatUnit callCombatUnit=9;			//召唤物
+}
+
+//实时战斗数据推送
+message S2C_WAR_COMBAT_UNIT{
+	required int64 battleId = 1;		//战场ID
+	required int32 flowTime = 2;		//战场流水时间（从启动战场到现在的时间毫秒）
+	repeated RealTimeWar realTimeWar=3;
+}
+
+
+//死亡数据封装
+message WarDeathData{
+	required int32 elementId =2;	//唯一ID
+	required bool isDeath = 3;		//是否真挂了
+	repeated BuffData buff=5;		//BUFF 目标元素ID(14位)+buffId(14位)+buffSysId(22位)
+	repeated int32 soldierElementId = 6;	//英雄死亡后，小兵跟着挂
+}
+
+//死亡
+message S2C_WAR_DEATH{
+	required int64 battleId = 1;//战场ID
+	required int32 flowTime = 2;
+	repeated WarDeathData warDeathData=3;	//死亡元素列表
+}
+
+//后续部队加入(持久类型才会有)
+message S2C_WAR_FOLLOW_UP{
+	required int64 battleId = 1;		//战场ID
+	required int32 flowTime = 2;
+	repeated HeroWarData heroWarData=3;	//后续加入英雄一般都是挂一个加入一个
+}
+
+
+
+//移动同步
+message S2C_WAR_MOVE_SYNC{
+	required int64 battleId = 1;//战场ID
+	required int32 flowTime = 2;
+	repeated int32 xz=3;	//要移动到的坐标点 格式：元素ID（14位 最大值16383），方向（1位）,X（占9位 最大值255）,Z(占7位 最大值127)
+}
+
+//同步移动速度
+message S2C_WAR_SYNC_MOVE_SPEED{
+	required int64 battleId = 1;	//战场ID
+	required int32 flowTime = 2;
+	repeated int32 moveSpeedData=3; //移动速度调整 目标元素ID(14位)+移动速度(14位)
+	//required int32 elementId =3;	//元素ID
+	//required int32 moveSpeed =4;	//移动速度
+}
+ 
+message BuffData{
+	required int32 elementId =1;//唯一ID
+	required int32 buffId =2;//buffId
+	required int32 buffSysId =3;//buffSysId
+}
+message S2C_WAR_BUFF_ADD{
+	required int64 battleId = 1;	//战场ID
+	required int32 flowTime = 2;
+	repeated BuffData buffData=3;	//BUFF 目标元素ID(14位)+buffId(14位)+buffSysId(22位)
+}
+
+//取消buff
+message S2C_WAR_BUFF_UN{
+	required int64 battleId = 1;	//战场ID
+	required int32 flowTime = 2;
+	repeated int32 buffData=3;	//BUFF 目标元素ID(14位)+buffId(14位)
+}
+
+message BuffOffsetXy{
+	required int32 buffId =1;//buffId
+	required int32 elementId =2;//elementId
+	required int32 offsetType=3;//buff使对方移位 状态：0.无，1 击退（往前击退） 2击飞 3冲退 4击退（往两边击退）
+	required int32 x=4;
+	required int32 y=5;
+}
+
+//BUFF偏移
+message S2C_WAR_BUFF_OFFSET{
+	required int64 battleId = 1;		//战场ID
+	required int32 flowTime = 2;
+	repeated BuffOffsetXy offsetXy=3; 	//buffID（14位 最大值16383）+元素ID（14位 最大值16383）+buff使对方移位 状态（4位）+X轴（8）+y（7位） 状态：0.无，1 击退（往前击退） 2击飞 3冲退 4击退（往两边击退）
+}
+
+message BuffBloodData{
+	required int32 buffId =1;//buffId
+	required int32 elementId =2;//elementId
+	required int32 troops =3;//当前兵力
+	required int32 anager =4;//攻击者当前怒气(武将才有)
+}
+
+//BUFF气血
+message S2C_WAR_BUFF_BLOOD{
+	required int64 battleId = 1;		//战场ID
+	required int32 flowTime = 2;
+	repeated BuffBloodData bloodData=3;	//buffID（14位 最大值16383）+元素ID（14位 最大值16383）+当前兵力（28位）+攻击者当前怒气(武将才有)（7位）
+}
+
+//更新元素气血
+message S2C_WAR_ELEMENT_BLOOD{
+	required int64 battleId = 1;	//战场ID
+	required int32 flowTime = 2;
+	repeated int32 anger=3; 			//元素ID（14位 最大值16383）+攻击者当前怒气(武将才有)（7位）
+}
+
+//BUFF气血（雷戟专用）
+message S2C_WAR_BUFF_BLOOD_THUNDER_HALBERD{
+	required int64 battleId = 1;	//战场ID
+	required int32 flowTime = 2;
+	repeated BuffBloodData bloodData=3; 	//buffID（14位 最大值16383）+元素ID（14位 最大值16383）+当前兵力（28位）+攻击者当前怒气(武将才有)（7位）
+	repeated int32 xz=4;			//雷戟的两个坐标
+}
+
+
+//引导通知
+message S2C_WAR_GUIDE{
+	required int64 battleId = 1;	//战场ID
+	required int32 flowTime = 2;
+	repeated int32 guideId =3;		//引导ID
+}
+
+
+
+
+
+
+
+//////////////////////////////////////////一下是战场辅助指令//////////////////////////////////////////////
+//移动路径(得到路径后立即行走)   29115
+message S2C_WAR_MOVE_PATH{
+	required int64 battleId = 1;//战场ID
+	required int32 elementId=3; //唯一ID
+	repeated int32 pathNode=4;	//路径节点列表 两个shot（X,Z）拼接成一个int类型
+}
+
+//移动停止，并附带停止所在的坐标,用于前端修正
+message S2C_WAR_MOVE_STOP{
+	required int64 battleId = 1;//战场ID
+	required int32 elementId=3; //唯一ID
+	required int32 xz=4;		//坐标	
+}
+
+message QueryHeroBuffData{
+	required int32 buffId=1;	//buff唯一ID
+	required int32 buffSysId=2;	//buff配置表ID
+	required int32 attributeId=3;	//属性ID
+	required int32 attributeValue=4;//属性值
+}
+
+message QueryHeroData{
+	required int32 elementId	=1;	//元素ID
+	required int64 heroId		=2;	//英雄唯一ID
+	required int32 heroSysId	=3;	//英雄配置表ID
+	
+	repeated SysKeyValue keyValue 	=4;	//基础属性
+	repeated QueryHeroBuffData buffData=5;//buff属性
+}
+
+
+//查看武将属性
+message S2C_WAR_QUERY_HERO_DATA{
+	required int64 battleId = 1;	//战场ID
+	repeated QueryHeroData heroData=2;		//英雄数据
+}
+
+//怒气技能使用
+message S2C_WAR_ANAGER_SKILL{
+	required int64 battleId = 1;//战场ID
+	required int32 state=3;		//0成功  大于0就是错误码
+}
+
+//技能释放失败
+message S2C_WAR_SKILL_FAIL{
+	required int64 battleId = 1;	//战场ID
+	required int32 elementId=2; 	//唯一ID
+	required int32 errId	=3;		//错误ID
+}
+
+//战场上面的提示数据
+message OrderBattlePromptData{
+	required int32 country = 1; 	//国家
+	required int32 sysId = 2; 		//将领配置表ID
+	required string name = 3;		//玩家名
+	required int32 order = 4;		//顺序
+	
+	required int32 heroTroops = 5;  	//将领兵力
+	required int32 heroMaxTroops = 6;  	//将领最大兵力
+	required int32 soldierTroops = 7;  	//小兵当前兵力
+	required int32 soldierMaxTroops = 8;//小兵最大兵力上限
+	
+	optional int32 anager = 9;		//怒气
+	required bool 	npc = 10; 		//是否NPC
+}
+
+//战场下面的提示数据
+message OrderBattlePromptLowerData{
+	required int32 sysId = 2; 			//将领配置表ID
+	required int32 order = 4;			//顺序
+	required int32 heroTroops = 5;  	//将领兵力
+	required int32 heroMaxTroops = 6;  	//将领最大兵力
+	required int32 anager = 9;			//怒气
+	required bool attack = 10;			//是否攻击方
+}
+
+//提示队列初始化(上)    cmd:29117
+message S2C_WAR_PROMPT_QUEUE_INIT{
+	required int64 battleId = 1;	//战场ID
+	repeated OrderBattlePromptData attack=2;	//攻击方队列
+	repeated OrderBattlePromptData defense=3;	//防守方队列
+	repeated int32 attackOrderList=6;		//排序列表
+	repeated int32 defenseOrderList=7;		//排序列表
+	repeated OrderBattlePromptLowerData ownOrderList=9;	//自己的列表
+}
+
+//返回前端的提示数据（分页）cmd:29121
+message S2C_WAR_PROMPT_QUEUE_PAGE{
+	required int64 battleId = 1;	//战场ID
+	required bool attack=2;			//是否攻击方
+	repeated OrderBattlePromptData data=3;	//方队列
+}
+
+//添加提示队列(上)    cmd:29118
+message S2C_WAR_PROMPT_QUEUE_ADD{
+	required int64 battleId = 1;	//战场ID
+	required bool attack = 2;		//是否攻击方
+	repeated int32 order = 4;	    //序列号
+}
+
+
+//删除提示队列(上)    cmd:29119
+message S2C_WAR_PROMPT_QUEUE_DEL{
+	required int64 battleId = 1;	//战场ID
+	required bool attack = 2;		//是否攻击方
+	required int32 order = 5;		//顺序
+
+}
+
+//添加提示队列(下)，只推送给对应的个人    cmd:29122
+message S2C_WAR_PROMPT_LOWER_QUEUE_ADD{
+	required int64 battleId = 1;	//战场ID
+	repeated OrderBattlePromptLowerData ownOrderList=9;	//自己的列表
+}
+
+
+//战斗完成  CMD:29131
+message S2C_WAR_COUNTRY_OVER{
+	required int64 battleId = 1;	//战场ID
+	required bool victory = 2;		//是否攻击方胜利
+	required CountryOverData victoryData=4;	//胜利方数据
+	required CountryOverData failData=5;	//失败方数据
+}
+
+message S2C_WAR_OVER{
+	required int64 battleId = 1;	//战场ID
+	required int32 flowTime = 2;
+	required bool victory = 3;		//是否攻击方胜利
+	required int64 attCountHp = 4;		//攻击方当前总血量
+	required int64 defCountHp = 5;		//防守方当前总血量
+}
+
+//攻击方总击杀通知
+message S2C_WAR_KILL_SOLDIERS_COUNT{
+	required int64 battleId = 1;		//战场ID
+	required int32 killSoldiersCount=2;	//攻击方总击杀兵力统计
+	
+}
+
+message S2C_WAR_OVER_HP{
+	required int64 battleId = 1;	//战场ID
+	required int64 attCountHp = 4;		//攻击方当前总血量
+	required int64 defCountHp = 5;		//防守方当前总血量
+}
+
+
+
+
+
+
+
+
+
+
+///////////////////国战//////////////////////////////
+//攻防概要
+message AttDefOutline{
+	required int32 surplusSoldiersCount =3;	//总剩余部队数量
+	required int64 lossSoldiersCount	=4;	//总损失
+	required int32 countryId=5;				//国家
+}
+
+message MyTeamWar{
+    required int64 battleId 	= 1;	//战场ID
+	required int32 teamId 		= 2; 	//队伍ID
+}
+
+//进入国战地图
+message S2C_CITY_WAR_GO{
+	required int32 state 			= 1;   	//状态0正常 大于0就是错误信息
+	required int32 countDownTime	= 2;	//倒计时
+	required string attName			= 4;	//攻击方玩家名字
+	required int32 attDef			= 5;	//1攻击方 2防守方
+	required int32 cityId 			= 6;   	//城池ID
+	
+	required int32 atkTeamCount = 7;   	//攻击方队伍数量
+	required int32 defTeamCount = 8;   	//防守方队伍数量
+}
+
+//国战对战列表
+message S2C_CITY_WAR_CONFRONTATION_LIST{
+	required int32 cityId 			= 1;   		//城池ID
+	required int32 page				= 2;		//第几页 从0开始
+	required AttDefOutline attData 		= 3;	//攻击方信息
+	required AttDefOutline defData 		= 4;   	//防守方信息
+	repeated PlayerWarData attPlayerWarData=5;	//攻击方数据
+	repeated PlayerWarData defPlayerWarData=6;	//防守方数据
+	optional int32 order				= 7;	//自己的order
+}
+
+//获取别的队伍战斗情况（前端观战完成时才调用）
+message S2C_CITY_WATCH_WAR_TEAM{
+	required int32 cityId 			= 1;   	//城池ID
+	required int64 playerId 		= 2;
+	required int32 teamId 			= 3;   	//队伍Id
+	required int64 battleId			= 4;	//战场ID，0表示队列中
+	required int32 state			= 5;	//0成功 大于0失败
+}
+
+message S2C_CITY_WAR_MYTEAM{
+	required int32 cityId 			= 1;   	//城池ID
+	required int64 playerId 		= 2;   	//用户ID
+	repeated MyTeamWar myTeamWar    = 3;	//我的已经进入战场的队伍队列
+}
+
+//城市战队伍数量
+message S2C_CITY_ITEM_COUNT{
+	required int32 cityId = 1;   	//城池ID
+	required int32 atkTeamCount = 2;   	//攻击方队伍数量
+	required int32 defTeamCount = 3;   	//防守方队伍数量
+}
+
+
+//个人boss信息
+message PersonalBossInfo{
+	required int32 bossId = 1;//已经通关的bossId
+	required int32 freeCount = 2;//剩余免费扫荡次数
+	required int32 buyCount = 3;//剩余购买次数
+}
+
+//排名boss信息
+message RankBossInfo{
+	required int32 bossId = 1;//bossId
+	required double bossHp = 2;//血量剩余比例
+	repeated BossRankingListInfo bossRankingListInfo = 3;//上榜信息
+	required int64 bossReviveTime = 4;//boss复活结束时间
+	required int64 hurt = 5;//自己对boss的伤害
+	
+}
+
+message WorldBossInfo {
+	required int32 bossId = 1;//bossId
+	required double bossHp = 2;//血量剩余比例
+	repeated BossRankingListInfo bossRankingListInfo = 3;//上榜信息
+	required int64 hurt = 4;//自己对boss的伤害
+}
+
+message BossRankingListInfo{
+	required int32 ranking = 1;//名次
+	required string name = 2;//名字
+	required int32 fight = 3;//玩家战力
+	required int64 hurt = 4;//总伤害
+	required int64 playerId = 5;//玩家id
+	required int32 countryId = 6;//国家id
+}
+
+//获得怪物信息(C2S_GET_BOSS= 5401)
+message C2S_GET_BOSS{
+
+}
+
+//获得怪物信息(S2C_GET_BOSS = 5402)
+message S2C_GET_BOSS{
+	repeated PersonalBossInfo personalBossInfo = 1;//个人boss信息
+	repeated RankBossInfo rankBossInfo = 2;//排名boss信息
+	required int64 rankBossPlayerStartReviveTime = 3;//玩家排名boss挑战次数恢复倒计时开始时间
+	required int64 rankBossPlayerEndReviveTime = 4;//玩家排名boss挑战次数恢复倒计时结束时间
+	repeated WorldBossInfo worldBossInfo = 5;//世界boss
+	repeated int32 boxIds = 6;//已经领取的boxId
+	required int64 worldSumHurt = 7;//今日对所有世界boss的总伤害
+}
+
+//挑战boss请求 C2S_CHALLENGE_BOSS= 5403
+message C2S_CHALLENGE_BOSS{
+	required int32 bossId = 1;
+}
+
+//boss挑战结束 S2C_CHALLENGE_BOSS= 5404
+message S2C_CHALLENGE_BOSS{
+	required bool success = 1;//是否成功
+	repeated ValuesMessage valuesMessage = 2;//奖励信息
+	required int64 battleId = 3;//战斗id
+	required int32 bossType = 4;//boss类型
+	optional bool lastHit = 5;
+	optional int32 rank = 6;
+	optional int64 damage = 7;
+}
+
+//请求扫荡 C2S_CLEAR_BOSS = 5405
+message C2S_CLEAR_BOSS{
+	required int32 bossId = 1;
+	required int32 type = 2;//1免费扫荡,2材料,3金币
+}
+
+//返回扫荡信息 S2C_CLEAR_BOSS = 5406
+message S2C_CLEAR_BOSS{
+	required PersonalBossInfo personalBossInfo = 1;//boss信息
+	repeated ValuesMessage valuesMessage = 2;//奖励信息
+}
+
+//请求购买boss挑战次数 C2S_BUY_BOSS_CHALLENGE_COUNT = 5407
+message C2S_BUY_BOSS_CHALLENGE_COUNT {
+	required int32 type = 1;//2为排名boss,3为世界boss
+}
+
+//返回购买boss挑战次数 S2C_BUY_BOSS_CHALLENGE_COUNT = 5408
+message S2C_BUY_BOSS_CHALLENGE_COUNT{
+	required int32 buyCount = 1;//剩余购买次数
+	required int32 challengeCount = 2;//剩余挑战次数
+	required int32 type = 3;//2为排名boss,3为世界boss
+	required int64 rankBossPlayerStartReviveTime = 4;//玩家排名boss挑战次数恢复倒计时开始时间
+	required int64 rankBossPlayerEndReviveTime = 5;//玩家排名boss挑战次数恢复倒计时结束时间
+	required int32 rankingBossFreeBuyCount = 6;//排名boss剩余免费购买次数
+}
+
+//推送boss死亡 S2C_BOSS_IS_DIED = 5409
+message S2C_BOSS_IS_DIED{
+	required int32 bossId = 1;//bossId
+}
+
+//请求领取宝箱 C2S_RECEIVE_BOSS_BOX = 5410;
+message C2S_RECEIVE_BOSS_BOX{
+	required int32 boxId = 1;
+}
+
+//领取宝箱返回 S2C_RECEIVE_BOSS_BOX = 5411;
+message S2C_RECEIVE_BOSS_BOX{
+	repeated ValuesMessage valuesMessage = 1;//奖励信息
+	repeated int32 boxIds = 2;//已经领取的bossid
+}
+
+
+
+//*************************数据结构定义****************************
+
+
+// 单个兑换码信息
+message CDkeyList{
+ repeated CDkeyInfo cdkeyinfos = 1; //兑换码列表
+}
+
+
+// 单个兑换码信息
+message CDkeyInfo{
+ required int32 activityId = 1;//活动id
+ required string cdKey = 2;//兑换码
+ required int64 createDate = 3;//获取兑换码时间
+ required int64 drawDate = 4;//兑换奖励时间
+ required bool exChange = 5;//是否已经兑换
+}
+
+
+
+//**********************************协议定义***************************************
+
+
+//获取活动兑换码请求
+message C2S_GET_ACTIVITY_CDKEY {
+	required int32 id = 1;	                //活动id
+}
+
+//获取活动兑换码响应
+message S2C_GET_ACTIVITY_CDKEY {
+	required int32 code = 1;				// 返回码
+	required int32 id = 2;					//活动id
+	required string cdKey = 3;				//兑换码
+}
+
+//兑换领取奖励请求
+message C2S_GET_ACTIVITY_CDKEY_REWARD {
+	required string cdKey = 1;				//兑换码
+}
+
+//兑换领取奖励响应
+message S2C_GET_ACTIVITY_CDKEY_REWARD {
+	required int32 code = 1;					// 返回码
+	repeated ValuesMessage reward = 2;          //奖励的物品
+}
+
+//获取玩家所有兑换码信息请求
+message C2S_GET_ACTIVITY_CDKEY_LIST {
+					
+}
+
+//获取玩家所有兑换码信息响应
+message S2C_GET_ACTIVITY_CDKEY_LIST {
+	required int32 code = 1;					// 返回码
+	repeated CDkeyList cdkeyList = 2;          //兑换码列表
+}
+
+
+
+//聊天日志推送
+message C2S_CHAT_LOG_PUSH{
+	optional int32 platformId = 1; 			//注册渠道Id
+	optional int32 serverId = 2; 			//服务器ID
+	optional int64 player_id = 3; 			//玩家ID
+	optional string nick_name = 4; 			//玩家昵称
+	optional int32 vip_lv = 5; 				//玩家Vip等级
+	optional int32 country_id = 6; 			//玩家国家ID
+	optional string country = 7; 			//玩家国家名称
+	optional int64 to_player_id = 8; 		//私聊对象ID
+	optional string to_nick_name = 9; 		//私聊对象昵称
+	optional int32 chat_type = 10; 			//频道类型
+	optional string chat_type_name = 11; 	//频道名称
+	optional string content = 12; 			//聊天内容
+	optional int32 time = 13; 				//聊天时间戳（单位：秒）
+	optional int32 level = 14; 				//玩家等级
+	optional int64 fight = 15; 				//玩家战力
+	optional int32 to_level = 16; 			//玩家等级
+	optional int32 to_vip_lv = 17; 			//玩家Vip等级
+	optional int64 to_fight = 18; 			//玩家战力
+	optional int32 eye_is_open = 19; 		//天眼是否开启（0：开启、1：关闭）
+
+}
+
+
+//*************************数据结构定义****************************
+message MsgData{
+	required HeadPortrait headPortrait=1;//头像信息
+	required string msg=2;	//聊天信息
+	required int32 time=3;	//时间戳
+	optional int32 msgType=4; //聊天数据类型
+}
+
+message PlayerHeadPortrait{
+	required HeadPortrait headPortrait=1;//头像信息
+	required int32 lastTime=3;			//最后一条消息时间戳
+}
+
+//获取聊天记录
+message C2S_CHAT_RECORD_LIST{
+}
+
+message S2C_CHAT_RECORD_LIST{
+	repeated MsgData countryData=1;		//聊天内容(国家)
+	repeated MsgData labourUnionData=2;	//聊天内容(工会)
+}
+
+//聊天推送
+message C2S_CHAT_PUSH{
+	required int32 type = 1; 		//1国家 2公会 3世界 4私聊
+	required string msg=2;			//聊天内容
+	optional int64 targetPlayerId=3;//目标
+	optional int32 msgType=4; //聊天数据类型
+}
+
+message S2C_CHAT_PUSH{
+	required int32 type = 1; 	//1国家 2公会 3世界 4私聊
+	required MsgData data=2;	//聊天内容
+	optional int64 targetPlayerId=3;	//目标用户ID
+}
+
+//私聊列表
+message C2S_CHAT_PRIVATE_LIST{
+}
+
+message S2C_CHAT_PRIVATE_LIST{
+	repeated PlayerHeadPortrait playerHeadPortrait=1;
+}
+
+message S2C_CHAT_PRIVATE_HEAD{
+	required PlayerHeadPortrait playerHeadPortraitAdd=1;
+}
+
+//获取私聊记录
+message C2S_CHAT_PRIVATE_RECORD_LIST{
+	required int64 playerId=1;			//角色ID
+}
+
+message S2C_CHAT_PRIVATE_RECORD_LIST{
+	required int64 playerId=1;	//角色ID
+	repeated MsgData data=2;			//聊天内容
+}
+
+//清除私聊列表成员
+message C2S_CHAT_PRIVATE_CLEAN{
+	required int64 playerId=1;	//角色ID 传0清空所有
+}
+
+message S2C_CHAT_PRIVATE_CLEAN{
+	required int32 state = 1; 	//0-成功 1-失败
+	required int64 playerId=2;	//角色ID 传0清空所有
+}
+
+
+//获取黑名单
+message C2S_CHAT_BLACKLIST{
+}
+
+message S2C_CHAT_BLACKLIST{
+	repeated HeadPortrait headPortrait=1;		//黑名单头像
+
+}
+
+message C2S_CHAT_ADD_BLACKLIST{
+	required int64 playerId=1;	//角色ID
+}
+
+message S2C_CHAT_ADD_BLACKLIST{
+	required int32 state = 1; 	//0-成功 1-失败
+	required HeadPortrait headPortrait=2;	//角色ID
+}
+
+//删除黑名单
+message C2S_CHAT_DEL_BLACKLIST{
+	required int64 playerId=1;	//角色ID 传0清空所有
+}
+
+message S2C_CHAT_DEL_BLACKLIST{
+	required int32 state = 1; 	//0-成功 1-失败
+	required int64 playerId=2;	//角色ID 传0清空所有
+}
+
+//举报
+message C2S_CHAT_REPORT{
+	required int64 playerId=1;	//角色ID
+}
+
+message S2C_CHAT_REPORT{
+	required int32 state = 1; 	//0-成功 1-失败
+}
+
+
+//*************************协议定义********************************
+message CityWarPlayerDamageRank {
+	optional int32 rank = 1;
+	optional int64 playerId = 2;
+	optional string playerName = 3;
+	optional int64 damage = 4;			//损失
+	optional int32 countryId = 5;	
+}
+
+message CityWarGuildDamageRank {
+	optional int32 rank = 1;
+	optional int64 guildId = 2;
+	optional string guildName = 3;
+	optional int64 damage = 4;			//损失
+	optional int32 countryId = 5;
+}
+
+//进入城市战场
+message C2S_CITY_WAR_GO{
+	required int32 cityId 					= 1;   	//城池ID
+}
+
+//国战对战列表
+message C2S_CITY_WAR_CONFRONTATION_LIST{
+	required int32 cityId 			= 1;   	//城池ID
+	required int32 page				= 2;	//第几页 从0开始
+}
+
+//获取别的队伍战斗情况（前端观战完成时才调用）
+message C2S_CITY_WATCH_WAR_TEAM{
+	required int32 cityId 			= 1;   	//城池ID
+	required int64 playerId 		= 2;
+	required int32 teamId 			= 3;   	//队伍Id
+}
+
+//根据城市ID，获取我攻击的所有队伍
+message C2S_CITY_WAR_MYTEAM{
+	required int32 cityId 			= 1;   	//城池ID
+}
+
+//获取为打仗的队伍数据
+message C2S_CITY_WAR_TEAM{
+	required int32 cityId 			= 1;   	//城池ID
+	required int32 teamId 			= 2;   	//队伍Id
+}
+
+message S2C_CITY_WAR_TEAM{
+	required TeamData teamData		= 1;	//我方匹配中的队伍
+}
+
+//退出战场
+message C2S_CITY_WAR_OUT{
+	required int32 cityId 			= 1;   	//城池ID
+}
+
+message S2C_CITY_WAR_OUT{
+	required int32 state 			= 1;   	//状态0正常 大于0就是错误信息
+	required int32 cityId 			= 2;   	//城池ID
+}
+
+//单场战斗完成通知
+message S2C_CITY_WAR_SINGLE_OVER{
+	required bool isVictory 	= 1;   	//攻击方胜负
+	required int64 attData 		= 2;   	//攻击方信息
+	required int64 defData 		= 3;   	//防守方信息
+	
+	required int64 attMilitaryMerits 		= 4;   	//攻击方获得战功
+	required int64 defMilitaryMerits 		= 5;   	//防守方获得战功
+	
+	required int32 cityId 		= 6;   	//城池ID
+}
+
+//我的国战数据
+message MyCityWarData{
+	required int64 killSoldiersCount=1;//击杀
+	required int64 lossSoldiersCount=2;//损失
+	required int32 warMerits=3;			//战功
+}
+
+//攻击方数据或防守放数据
+message AttDefData{
+	required int64 surplusSoldiersCount =1;	//总剩余兵力
+	required int32 lossSoldiersCount	=2;	//总损失
+	required int32 countryId=3;				//国家
+}
+
+//国战总结算
+message S2C_CITY_WAR_SETTLEMENT{
+	required bool isVictory 	= 1;   			//攻击方胜负
+	required AttDefData attData 		= 2;	//攻击方信息
+	required AttDefData defData 		= 3;   	//防守方信息
+	required int32 cityId 				= 4;   	//城池ID
+	optional MyCityWarData myCityWarData=5;		//我的国战数据
+}
+
+
+// 5913
+message C2S_CITY_WAR_DMG_RANK {
+	optional int32 cityId = 1;
+}
+
+// 5914
+message S2C_CITY_WAR_DMG_RANK {
+	repeated CityWarPlayerDamageRank playerRank = 1;
+	repeated CityWarGuildDamageRank guildRank = 2;
+}
+
+//查询城池驻军信息
+message C2S_CITY_ITEM_INFO{
+	required int32 cityId = 1;   	//城池ID
+}
+
+message S2C_CITY_ITEM_INFO{
+	repeated PlayerWarData defPlayerWarData = 1;		//驻军数据
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*****************************************自定义对象*****************************************
+//国家协议
+//	大国崛起结盟：任意国家，拥有的城池数量达到70，则另外两个国家自动结盟。
+//	弱国自动结盟：任意国家，城池数量小于16，则自动跟当前城数少的那一国家结盟。
+// 		当两国结盟后，双方城池数之>=80时，当前结盟自动解除。
+//国家结盟或解除联盟（COUNTRY_ALLIANCE  = 2301)
+message CountryAllianceResp{
+	required bool isAlliance = 1; 	//(true表示联盟，false表示联盟解除)
+	optional int32 countryOne = 2;   	//结盟的国家id(isAlliance为true才有值）
+	optional int32 countryTwo = 3;	  	//结盟的国家id(isAlliance为true才有值）
+}
+
+//查询国家结盟状态信息（COUNTRY_ALLIANCE  = 2301)
+message CountryAllianceReq{
+}
+
+//国家玩家官职改变（COUNTRY_OFFICIAL_CHANGE  = 2302)
+message CountryOfficialChangeResp{
+	required int64 playerId = 1; // 玩家id
+	optional int32 officialId = 2; // 玩家官职
+}
+
+//城池变更信息
+message CityChangeInfo{
+	optional int32 time = 1;		//城池变更时间戳（单位：秒）
+	optional int32 cityId = 2;		//城池ID
+	optional int32 countryId = 3;	//国家ID（对方国家ID）
+	optional int32 type = 4;		//1攻克对方城池，2我方城池被占领
+}
+
+
+//*************************数据结构定义****************************
+message CountryPlayerInfo{
+    optional int64 	playerId	= 1;	//编号
+    optional string name 		= 2;	//名字
+    optional string legionName	= 3;	//军团名字
+    optional int32 	roleHead 	= 4; 	//头像ID
+    optional int32	jobId		= 5;	//官职
+    optional int32 fight = 6; //
+    optional int32 warMerits = 7; //
+    repeated int32 cities = 8; //
+    optional int32 kingChangeStamp = 9;
+    repeated KingChangeNotice kingchange = 10;
+}
+
+message KingChangeNotice {
+    optional int32 countryId = 1;
+    optional string playerName = 2;
+    optional int32 changeStamp = 3;
+}
+
+message CountryJobInfo{
+    required int32 jobId 					= 1;	//官职ID
+    optional CountryPlayerInfo playerInfo 	= 2; 	//玩家ID
+}
+
+message CountryCityInfo{
+    required int32 cityId 					= 1;   	//城池ID
+    optional CountryPlayerInfo playerInfo 	= 2; 	//玩家ID
+}
+
+
+//*************************协议定义********************************
+
+//国家信息(COUNTRY_INFO = 4901)
+message CountryInfoReq{
+	
+}
+//国家信息(COUNTRY_INFO = 4901)
+message CountryInfoResp{
+	optional string notice						= 1;	//公告
+	optional CountryPlayerInfo kingPlayerInfo	= 2;	//君王信息
+	optional CountryPlayerInfo selfPlayerInfo	= 3;	//玩家信息
+	repeated CountryJobInfo jobInfos 			= 4;	//官职信息
+	repeated CountryCityInfo cityInfos 			= 5;	//城池信息
+	optional int32 kingLastLogin = 8;				// 国王最后登陆
+    optional int32 impeachStamp = 9;				// 弹劾发起时间
+    optional int64 impeachStarter = 10;				// 弹劾发起id
+	optional string impeachStarterName = 11;			// 弹劾发起名字
+	repeated int64 impeachVote = 12;     				// 弹劾同意列表
+    optional int32 salaryStamp = 13;	 // 工资领取时间
+    optional int32 salaryJobId = 14;	 // 工资可以领取的
+
+
+	
+}
+
+//公告编辑(COUNTRY_NOTICE = 4902)
+message CountryNoticeReq{
+	optional string notice	= 1;	//公告
+}
+//公告编辑(COUNTRY_NOTICE = 4902)
+message CountryNoticeResp{
+	optional string notice	= 1;	//公告	
+}
+
+//官职任命(COUNTRY_APPLY_JOB = 4903)
+message CountryApplyJobReq{
+	optional int32 jobId	= 1;	//官职ID
+	optional int64 playerId	= 2;	//玩家ID（0：为卸任）
+}
+//官职任命(COUNTRY_APPLY_JOB = 4903)
+message CountryApplyJobResp{
+	repeated CountryJobInfo jobInfos = 1;//官职信息
+}
+
+//城池任命(COUNTRY_APPLY_CITY = 4904)
+message CountryApplyCityReq{
+	optional int32 cityId	= 1;	//城池ID
+	optional int64 playerId	= 2;	//玩家ID（0：为卸任）
+}
+//城池任命(COUNTRY_APPLY_CITY = 4904)
+message CountryApplyCityResp{
+	repeated CountryCityInfo cityInfos = 1;//城池信息
+}
+
+//玩家任命列表(COUNTRY_APPLY_LIST = 4905)
+message CountryApplyListReq{
+	optional int32 listType	= 1;	//(0:官职任命；1：城镇任命,2:禅让）
+	optional int32 jobId = 2;			//任命官职ID
+
+}
+//玩家任命列表(COUNTRY_APPLY_LIST = 4905)
+message CountryApplyListResp{
+	repeated CountryPlayerInfo playerInfoList = 1;//城池信息
+}
+
+
+//禅让(COUNTRY_ABDICATE = 4907)
+message CountryAbdicateReq{
+	required int64 playerId	= 1;	//玩家ID
+}
+
+// C2S_COUNTRY_CITY_INFO = 4909;
+message C2S_COUNTRY_CITY_INFO {
+}
+
+// S2C_COUNTRY_CITY_INFO = 4910;
+message S2C_COUNTRY_CITY_INFO {
+	repeated CountryCityInfo cities = 1;
+}
+
+// 4911
+message C2S_COUNTRY_KING_CHANGE_STAMP {
+}
+// 4912
+message S2C_COUNTRY_KING_CHANGE_STAMP {
+}
+
+// 4913
+message C2S_COUNTRY_START_IMPEACH {
+}
+
+message S2C_COUNTRY_START_IMPEACH {
+	optional int32 errorCode = 1;
+}
+// 4915
+message C2S_COUNTRY_VOTE_IMPEACH {
+}
+
+message S2C_COUNTRY_VOTE_IMPEACH {
+	optional int32 errorCode = 1;
+}
+
+message C2S_COUNTRY_SALARY {
+}
+
+message S2C_COUNTRY_SALARY {
+	optional int32 errorCode = 1;
+	repeated ValuesMessage message = 2;//奖励
+}
+
+//城池税收
+message C2S_COUNTRY_CITY_REVENUE {
+}
+//城池税收
+message S2C_COUNTRY_CITY_REVENUE {
+	optional int32 errorCode = 1;
+	repeated ValuesMessage message = 2;//奖励
+}
+//服务器主动推送是否可以领取城池税收
+message S2C_COUNTRY_CITY_REVENUE_STATUS {
+	required bool canReceiveCityRevenue = 1;//true=可以领 false=不可
+}
+
+//皇帝信息
+message C2S_COUNTRY_EMPEROR_INFO {
+}
+//皇帝信息
+message S2C_COUNTRY_EMPEROR_INFO {
+	optional string nickName = 1;	//昵称
+	optional int32 head = 2;		//头像
+	optional int64 fight = 3;		//战力
+	optional int32 country = 4;		//国家
+	optional string guild = 5;		//帮会
+}
+
+
+
+
+//请求城池变动信息列表
+message C2S_CITY_CHANGE_INFO_LIST{
+	
+}
+message S2C_CITY_CHANGE_INFO_LIST{
+	repeated CityChangeInfo infos = 1;	//城池变动信息
+}
+
+//收到城池变动信息
+message S2C_CITY_CHANGE_INFO{
+	optional CityChangeInfo infos = 1;	//城池变动信息
+}
+
+//*************************数据结构定义****************************
+//军团信息
+message ArmyGroup{
+	required int32 id=1;				//军团ID
+	required HeadPortrait head = 2;	//头像
+	required string guildName = 3;//帮会
+	required int64 fight = 4;	//战力
+	required int32 troopsRate=5;//兵力百分比，需要除以1万
+}
+//军团血量信息
+message ArmyGroupHp{
+	required int32 id=1;				//军团ID
+	required int32 troopsRate=2;//兵力百分比，需要除以1万
+}
+
+//统帅数据
+message CommanderDataVo{
+	optional int64 playerId = 1;		//玩家ID
+	optional int32 head = 2;			//玩家头像
+	optional string nickName = 3;	//玩家昵称
+	optional int32 vipLevel = 4;		//玩家VIP等级
+	optional int32 troopNum = 5;		//玩家部队数
+}
+//对战信息
+message ServerWarVo{
+	required int32 serverId = 1;					//服务器ID
+	optional CommanderDataVo emperorData = 2;	//皇帝数据
+	optional CommanderDataVo weiKingData = 3;	//魏国数据
+	optional CommanderDataVo shuKingData = 4;	//蜀国数据
+	optional CommanderDataVo wuKingData = 5;	//吴国数据
+}
+//对战区域同步信息
+message ServerWarAreaSyncVo{
+	required int32 id = 1;					//唯一ID
+	required int32 occupant = 2;			//拥有者，0中立，1A方，2B方		城门类型没有这个属性
+	required int32 teamNumA=3;				//A组数量
+	required int32 teamNumB=4;				//B组数量
+	required int32 battleServerId=5;		//战斗 服ID
+}
+
+//对战区域信息
+message ServerWarAreaVo{
+	required int32 id = 1;					//唯一ID
+	required int32 areaId = 2;					//配置文件ID
+	required int32 type = 3;					//1外城城门，2内城
+	required int32 occupant = 4;			//拥有者，0中立，1A方，2B方		城门类型没有这个属性
+}
+
+
+//服务器状态列表
+message WarsandServerVo{
+	required int32 serverId=1;	//服务器ID
+	required int32 status=2;	//1战区未占领，2占领成功,3占领失败
+}
+//沙盘城市信息
+message WarSandCityVo{
+	required int32 cityId=1;	//城市ID
+	repeated WarsandServerVo servers=2;	//占领的服务器列表
+
+}
+//战斗内城区域信息
+message WarAreaVo{
+	required int32 areaId=1;	//内城区域ID，只是给前端读配置表
+	optional int32 occupant=2;	//占领者，0 中立，1 A方，2 B方
+	required int32 warAreaId=3;	//区域战斗ID，唯一的，用于通迅
+	optional int32 defTeamNum=4;	//守军数量
+	optional int32 attTeamNum=5;	//攻击数量
+	repeated bool towerNum=6;	//箭塔数量,index 0表示左塔，1表示右塔
+	required int32 status=7;	//0和平状态，1战斗中
+}
+
+
+
+//*************************协议定义********************************
+
+//获得总兵力信息
+message S2C_CROSS_SERVER_WAR_TROOPS_INFO{
+	required int64 totalTroops = 1;		//现在兵库总兵力
+}
+
+//进入退出跨服内城场景
+message C2S_CROSS_SERVER_WAR_ENTER{
+	required int32 enter = 1;		//1进入内城，2退出内城，3进入外城，4退出外城
+}
+//最后推送
+message S2C_CROSS_SERVER_WAR_ENTER{
+	repeated WarAreaVo areaList = 1; 		//内战区域列表
+	optional int32 group = 2;			//1A组，2B组
+}
+
+//推送城门血量信息,进入外城推送 1
+message S2C_CROSS_SERVER_GATE_HP{
+	required int32 myHpRate=1;			//我方血量 万分比
+	required int32 enemyHpRate=2;		//敌方血量 万分比
+}
+
+
+
+//推送Buffer,进入内外城推送 2
+message S2C_CROSS_SERVER_BUFFER_INFO{
+	
+}
+//军团信息状态推送
+message S2C_CROSS_SERVER_ARMY_STATUS{
+	required bool isWar = 1;				//是否攻击中
+}
+//城池对战状态
+message S2C_CROSS_SERVER_CITY_STATUS{
+	optional bool isGate =1;			//是否城门
+	optional int32 cityId=2;			//城池ID
+	optional int32 status = 3;   		// 状态，0未开战，1开战
+}
+
+
+//城门信息 最后推送
+message S2C_CROSS_SERVER_GATE_INFO{
+	required string nickName=1;			//皇帝昵称
+	required string guildName=2;		// 联盟昵称
+	required int32 countryId=3;			//国家ID
+	optional int32 group = 4;			//1A组，2B组
+	optional int32 cityId = 5;   		//城门ID
+}
+
+//更新阵形
+message C2S_CROSS_SERVER_WAR_TEAM_UPDATE{
+	required int32 order=1;		//编组排序 0-1,跨服战队伍
+	repeated int32 generalId  = 2;//武将列表 [武将1,0,武将2,0,0]
+}
+message S2C_CROSS_SERVER_WAR_TEAM_UPDATE{
+
+}
+
+//补充兵力
+message C2S_CROSS_SERVER_WAR_TEAM_SUPPLEMENTARY_TROOPS{
+	required int32 order=1;		//编组排序 0-1，跨服战队伍
+}
+message S2C_CROSS_SERVER_WAR_TEAM_SUPPLEMENTARY_TROOPS{
+}
+
+//获得对战信息
+message C2S_CROSS_SERVER_WAR_RIVAL_INFO{
+}
+message S2C_CROSS_SERVER_WAR_RIVAL_INFO{
+	required int32 warCityId=1;		//对战主城ID
+	optional ServerWarVo warA=2;	//我方对战信息
+	optional ServerWarVo warB=3;	//对方对战信息，如果为空，表示轮空
+	optional int32 win = 4;			//0未出结果，1胜利，2失败
+}
+
+
+//获得沙盘信息
+message C2S_CROSS_SERVER_WAR_SAND_INFO{
+}
+
+message S2C_CROSS_SERVER_WAR_SAND_INFO{
+	repeated WarSandCityVo cityList=1;		//城市列表
+}
+
+//获取军团信息
+message C2S_CROSS_SERVER_ARMY_GROUP{
+}
+message S2C_CROSS_SERVER_ARMY_GROUP{
+	required int32	armyType = 1;				//0皇帝，1魏国，2蜀国，3吴国
+	required int32	status = 2;				//0表示你不是军团长，1=全军覆没 2=空闲状态 3=战斗中
+	repeated ArmyGroup armyGroup = 3; 		//军团成员信息
+}
+//军团血量变化
+message C2S_CROSS_SERVER_ARMY_HP{
+}
+message S2C_CROSS_SERVER_ARMY_HP{
+	required int32	status = 1;				//0表示你不是军团长，1=全军覆没 2=空闲状态 3=战斗中
+	repeated ArmyGroupHp armyGroupHp=2;//兵力百分比，需要除以1万
+}
+
+
+//获取跨服战信息，进入游戏请求一次，后续改变后端推送
+message C2S_CROSS_SERVER_INFO{
+	
+}
+message S2C_CROSS_SERVER_INFO{
+	optional int32 status = 1;		//当前状态，0准备期，1已报名，2条件不符合，报名失败,3匹配完成，4跨服进行中-攻城门，5跨服进行中-攻内城	，6跨服战结束
+	optional int32 rewardStatus=2;	//占领方每日福利  0不可领取，1可领取，2已领取
+	optional int32 openTime=3;		//活动开战时间戳，单位：秒 
+	optional int32 closeTime=4;		//活动结束时间戳，单位：秒 
+	repeated int32 honorBoxIds=5;	//已经领取的荣誉宝箱列表
+
+}
+
+//内城信息变化,在内城UI界面的玩家，会实时推送同步数据
+message S2C_CROSS_SERVER_CITY_CHANGE{
+	required WarAreaVo areaData = 1; 		//内战区域列表
+}
+
+
+
+//派遣队伍
+message C2S_CROSS_SERVER_TEAM_MOVE{   
+	required int32 teamType =1 ;		//1自己的部队，2军团部队
+	required int32 teamId  = 2; 		//队伍ID，对应部队或军团的ID
+	required int32 toCityId = 3;			//目标城市ID
+}
+//派遣队伍成功，此指令会广播场景内所有玩家
+message S2C_CROSS_SERVER_TEAM_MOVE{
+	required string playerName  = 1; 		//玩家名字
+	required int32 occupant=2;				//队伍拥有者，1A组，2B组
+	required int32 fromCityId = 3;			//起始城市ID
+	required int32 toCityId = 4;			//目标城市ID
+}
+
+
+//攻击城门
+message C2S_CROSS_SERVER_ATTACK_GATE{
+	required int32 teamType =1 ;		//1自己的部队，2军团部队
+	required int32 teamId  = 2; 		//队伍ID，对应部队或军团的ID
+}
+
+
+
+//购买箭塔,数量由城池信息推送
+message C2S_CROSS_SERVER_BUY_TOWER{
+	required int32 index=1;			//0表示左塔，1表示右塔
+	required int32 areaId=2;		//内城区域ID
+}
+
+//购买Buffer
+message C2S_CROSS_SERVER_BUY_BUFFER{
+	required int32 id=1;			//购买的BufferID
+}
+
+//推送玩家累计荣誉
+message S2C_CROSS_SERVER_GET_HONOR{
+	required int32 honor=1;		//当前荣誉值
+}
+//领取荣誉宝箱
+message C2S_CROSS_SERVER_GET_HONOR_BOX{
+	required int32 boxId=1;		//宝箱ID
+}
+message S2C_CROSS_SERVER_GET_HONOR_BOX{
+	required int32 boxId=1;		//领取成功的宝箱ID
+}
+//领取每日奖励
+message C2S_CROSS_SERVER_GET_DAY_REWARD{
+	
+}
+message S2C_CROSS_SERVER_GET_DAY_REWARD{
+	required int32 duanWei=1;	//领取哪个段位的奖励
+}
+//结算指令
+message S2C_CROSS_SERVER_SETTLEMENT_DATA{
+	required bool isWin=1;				//是否胜利
+	required int32 duanWei=2;			//当前段位
+	repeated string bestList=3;			//最佳表现玩家
+}
+
+//战斗总结算
+message S2C_CROSS_SERVER_BATTLE_SETTLEMENT{
+	required bool isVictory 	= 1;   			//攻击方胜负
+	required AttDefData attData 		= 2;	//攻击方信息
+	required AttDefData defData 		= 3;   	//防守方信息
+	required int32 cityId 				= 4;   	//城池ID
+	optional MyCityWarData myCityWarData=5;		//我的国战数据
+	optional bool isAttack =6;					//我方是否攻击方
+}
+
+/////////////////////////////////与跨服管理器通讯////////////////////////
+//大厅服启动同步城池数据
+message C2S_CROSS_SERVER_SYNC_CITY_DATA{
+	
+}
+message S2C_CROSS_SERVER_SYNC_CITY_DATA{
+	repeated ServerWarAreaSyncVo areaLists =1;				//区域列表
+}
+//跨服报名
+message C2S_CROSS_SERVER_SIGNUP{
+	required int32 openServerTime = 1;			//开服时间
+	optional CommanderDataVo emperorData = 2;	//皇帝数据
+	optional CommanderDataVo weiKingData = 3;	//魏国数据
+	optional CommanderDataVo shuKingData = 4;	//蜀国数据
+	optional CommanderDataVo wuKingData = 5;	//吴国数据
+}
+message S2C_CROSS_SERVER_SIGNUP{
+	required int32 ret = 1;		//报名返回，0成功，1失败
+	required int32 duanWei=2;		//报名同步下服务器当前段位
+}
+
+//请求跨服对战匹配数据
+message C2S_CROSS_SERVER_WAR_DATA{
+	required int32 serverId = 1;				//服务器ID
+	optional int32 msgId = 2;				//哪个指令发出的请求
+}
+
+//对战匹配数据
+message S2C_CROSS_SERVER_WAR_DATA{
+	optional ServerWarVo warVo = 1;			//对手信息，空为轮空
+	optional int32 warCityId = 2;			//对战城市ID
+	optional int32 msgId = 3;				//哪个指令发出的请求
+	optional int32 group = 4;				//1A组，2B组
+	repeated ServerWarAreaVo areaLists =5;				//区域列表
+}
+
+
+//更新城市队伍
+message C2S_CROSS_SERVER_UPDATE_CITY_TEAM{
+	optional int32 type=1;			//1进驻队伍，2失败返回城门，3离开驻地
+	optional int32 cityAreaId=2;		//城市区域ID 0表示回到城门
+	optional int32 teamNum = 3;		//队伍数量(驻军和军团)
+
+}
+message S2C_CROSS_SERVER_UPDATE_CITY_TEAM{
+	required int32 ret=1;				//0错误，1进驻我方，2占领区域，3启动国战，4攻击方进入国战,5国战中，不能离开,6回城门，7防守方进入国战
+	optional int32 cityAreaId=2;		//城市区域ID 0表示回到城门,-1表示战斗失败，遣返城门
+	required int32 occupant = 3;			//拥有者，0中立，1A方，2B方,管理服同步拥有方,如果不一样，需要同步回来
+	required int32 battleId=4;			//战斗服ID
+}
+
+
+//通知对方进入国战防守
+message S2C_CROSS_SERVER_ENTER_WAR{
+	optional int32 cityAreaId=1;		//城市区域ID 进入国战
+	required int32 occupant = 2;			//拥有者，0中立，1A方，2B方,管理服同步拥有方,如果不一样，需要同步回来
+	required int32 battleId=3;			//战斗服ID
+}
+//通知对方城池被直接占领
+message S2C_CROSS_SERVER_UPDATE_CITY_OCCUPANT{
+	optional int32 cityAreaId=1;		//城市区域ID
+	optional int32 occupant=2;			//拥有者，0中立，1A方，2B方,
+}
+//大厅服通知国战战斗结束
+message C2S_CROSS_SERVER_WAR_VOER{
+	optional int32 cityAreaId=1;		//城市区域ID
+}
+message S2C_CROSS_SERVER_WAR_VOER{
+	optional int32 cityAreaId=1;		//城市区域ID
+	optional int32 occupant=2;			//拥有者，0中立，1A方，2B方,
+}
+
+//同步我的血量给敌方服务器
+message S2C_CROSS_SERVER_GATE_HP_TO_ENEMY{
+	required int32 hpRate=1;			//我方血量 万分比
+}
+
+//跨服战结束，同步信息
+message C2S_CROSS_SERVER_WAR_END{
+}
+message S2C_CROSS_SERVER_WAR_END{
+	optional int32 duanWei=1;		//服务器当前段位
+	optional int32 isWin=2;			//0未有结果，1胜利，2失败
+}
+// 装备
+message Equipment {
+	optional int64 uuid = 1; // 唯一id
+	optional int32 equipmentId = 2; // 装备配置id
+	optional int32 slotType = 3; // 格子类型 0-3 ： 0-武器,1-装甲,2-头盔,3-靴子 
+	optional int32 generalId = 4; // 未装备时为 0
+}
+
+// 装备格子
+message EquipmentSlot {
+	optional int32 id = 1; // 格子类型 0-3 ： 0-武器,1-装甲,2-头盔,3-靴子
+	optional int64 equipmentUuid = 2; //  装备 uuid
+	optional int32 strengthen = 3; // 强化等级
+	optional int32 grade = 4; // 升阶等级
+	optional int32 wrought = 5; // 精炼等级
+}
+
+// 武将装备
+message GeneralEquipment {
+	optional int32 generalId = 1; // 武将id
+	repeated EquipmentSlot slots = 2; // 装备格子 size=4
+}
+
+//获取装备信息
+// C2S_EQUIPMENT_INFO = 5601;
+message C2S_EQUIPMENT_INFO {
+}
+
+// S2C_EQUIPMENT_INFO = 5602;
+message S2C_EQUIPMENT_INFO {
+	repeated GeneralEquipment generalEquipment = 1;
+	optional int32 decomposeLevel = 2; //设置装备分解等级
+}
+
+//装备格子升级
+// C2S_EQUIPMENT_SLOT_UPGRADE = 5605;
+message C2S_EQUIPMENT_SLOT_UPGRADE {
+	optional int32 generalId = 1;
+	optional int32 slotType = 2;
+	optional int32 upgradeType = 3; // 升级类型 0-2 : 0-强化, 1-升阶, 2-精炼
+}
+
+// S2C_EQUIPMENT_SLOT_UPGRADE = 5606;
+message S2C_EQUIPMENT_SLOT_UPGRADE {
+	optional int32 generalId = 1;
+	optional int32 upgradeType = 2;
+	repeated EquipmentSlot slotUpgraded = 3;
+}
+
+//武将格子装备
+// C2S_GENERAL_EQUIP = 5607;
+message C2S_GENERAL_EQUIP {
+	optional int32 generalId = 1;
+	optional int64 equipmentUuId = 2; // 0 卸下装备
+	optional int32 slotType = 3; 
+}
+
+// S2C_GENERAL_EQUIP = 5608;
+message S2C_GENERAL_EQUIP {
+	optional int32 errorCode = 1;
+}
+
+//合成装备
+// C2S_EQUIPMENT_COMPOSE = 5609;
+message C2S_EQUIPMENT_COMPOSE {
+	optional int32 equipmentId = 1;
+}
+
+// S2C_EQUIPMENT_COMPOSE = 5610;
+message S2C_EQUIPMENT_COMPOSE {
+	optional int32 errorCode = 1;
+	optional ValuesMessageSet valuesMessageSet = 2;
+}
+
+//分解装备
+// C2S_EQUIPMENT_DECOMPOSE = 5611;
+message C2S_EQUIPMENT_DECOMPOSE {
+	repeated int64 equipmentUuId = 1;
+}
+
+// S2C_EQUIPMENT_DECOMPOSE = 5612;
+message S2C_EQUIPMENT_DECOMPOSE {
+	optional int32 errorCode = 1;
+}
+
+//装备列表
+// C2S_GET_EQUIPMENT_LIST = 5613;
+message C2S_GET_EQUIPMENT_LIST {
+}
+
+// S2C_GET_EQUIPMENT_LIST = 5614;
+message S2C_GET_EQUIPMENT_LIST {
+	repeated Equipment equipments = 1;
+}
+
+//装备变化列表
+//S2C_EQUIPMENT_CHANGE = 5616;
+message S2C_EQUIPMENT_CHANGE {
+	repeated Equipment equipments = 1;
+}
+
+//武将装备变化列表
+//S2C_GENERAL_EQUIPMENT_CHANGE = 5618;
+message S2C_GENERAL_EQUIPMENT_CHANGE {
+	repeated GeneralEquipment generalEquipments = 1;
+}
+
+// 一键装备
+// C2S_GENERAL_EQUIP_ALL = 5619;
+message C2S_GENERAL_EQUIP_ALL {
+	optional int32 generalId = 1;
+	repeated int64 equipmentUuid = 2;
+}
+
+// S2C_GENERAL_EQUIP_ALL = 5620;
+message S2C_GENERAL_EQUIP_ALL {
+	optional int32 errorCode = 1;
+}
+
+// S2C_EQUIPMENT_ADD = 5622;
+message S2C_EQUIPMENT_ADD {
+	repeated Equipment equipments = 1;
+}
+
+// S2C_EQUIPMENT_DEL = 5624;
+message S2C_EQUIPMENT_DEL {
+	repeated int64 equipmentUuid = 1;
+}
+
+//******************数据结构定义**********************
+// 建筑信息
+message Building{
+	required int32 id = 1;		//建筑id
+	required int32 level = 2;	//建筑等级	
+	required int32 type = 3;	//建筑类型
+	
+	required int32 status = 4;	//状态 0正常 1忙碌中（建造中或者招募中）
+	required int32 buildStartTime = 5;	//建造开始时间
+	required int32 buildEndTime = 6;	//建造结束时间
+	required int32 speedTime = 7;		//加速时间
+}
+
+// 征收数据
+message LevyData{
+	required int32 type = 1;		//类型
+	required int64 count = 2;	//收获数量
+	
+}
+
+
+// 建筑征收信息
+message BuildingLevy{
+	required int32 bid = 1;			//建筑id
+	required int32 harvestTime = 2;	//收获时间
+}
+
+//练兵信息
+message TrainArmy{
+	required int32 bId = 1;
+	required int32 armyType = 2;	// 兵种id
+	required int32 startTime = 3;	//开始时间
+	required int32 endTime = 4; 	//结束时间
+	required int32 num = 5;			// 数量
+	required int32 speedTime = 6;	// 加速时间
+} 
+
+//*****************协议定义***************************
+
+// 请求建筑信息 1001
+message C2S_BUILDING_INFO {
+}
+
+// 建筑信息响应 1001
+message S2C_BUILDING_INFO {
+	required int32 buildQueueCount = 1;		//允许建造队列数
+	repeated Building buildings = 2;		//建筑列表	
+	repeated BuildingLevy buildingLevy = 3; // 征收数据
+	repeated TrainArmy trainArmys = 4;		//练兵营信息
+	
+}
+
+// 请求建筑激活 1002
+message C2S_BUILDING_ACTIVATED{
+	required int32 bId = 1; //建筑id
+}
+
+// 建筑信息 1002 
+message S2C_BUILDING_ACTIVATED {
+	required Building building = 1; //建筑信息
+	optional BuildingLevy buildingLevy = 3; // 征收数据
+	optional TrainArmy trainArmys = 4;		//练兵营信息
+}
+
+// 请求建筑升级 1003
+message C2S_BUILDING_UPLEVEL{
+	required int32 bId = 1;	//建筑id
+}
+
+// 建筑升级响应 1003
+message S2C_BUILDING_UPLEVEL {
+	required int32 resultCode = 1;//错误码 0=成功
+	required int32 bId = 2; //升级的建筑id
+	required int32 buildStartTime = 3;	//建造开始时间
+	required int32 buildEndTime = 4;	//建造结束时间
+	required int32 newLevel = 5;		//升级后的等级
+}
+
+// 请求建筑加速 1004
+message C2S_BUILDING_SPEED{
+	required int32 bId = 1; //建筑id
+	optional int32 itemId = 2;	//加速道具  0--立刻完成  其他代表道具id
+	optional int32 itemNum = 3;	//加速道具数量
+}
+
+// 建筑加速响应 1004
+message S2C_BUILDING_SPEED {
+	optional int32 retCode = 1;//0=成功
+	required int32 bId = 2; //建筑id 
+	required int32 speedTime = 3; // 加速时间
+
+}
+
+// 推送建筑开放信息 PUSH_BUILDING_OPEN = 1021;
+message BuildingOpenInfo{
+	repeated Building building = 1; //新开放的建筑列表
+}
+
+// 1027
+message C2S_TOUCH_BUILDING {
+	required int32 bId = 1; //建筑id 
+}
+
+
+
+// 征收资源 1006
+message C2S_BUILDING_LEVY{
+	required int32 type = 1;	//同类型一键征收
+}
+
+
+
+// 征收响应1006
+message S2C_BUILDING_LEVY{
+	repeated BuildingLevy buildingLevy = 1;
+	required LevyData levyData = 2; //收获数据
+	optional int32 errorCode = 3;
+}
+
+
+// 请求训练士兵 1023
+message C2S_TRAINING_ARMY{
+	required int32 bId = 1;	//建筑id
+	required int32 num = 2;	//士兵数量
+}
+
+// 请求训练士兵 1023
+message S2C_TRAINING_ARMY {
+	required TrainArmy trainArmy = 1;//练兵信息
+} 
+
+// 加速练兵 1024
+message C2S_TRAINING_SPEED{
+	required int32 bId = 1; 	//建筑id
+	optional int32 itemId = 2;	//加速道具  0--立刻完成  其他代表道具id
+	optional int32 itemNum = 3;	// 数量 练兵数量
+}
+
+// 加速练兵响应 1024
+message S2C_TRAINING_SPEED {
+	required int32 bId = 1; 		//建筑id
+	optional int32 speedTime = 2; 	//加速时间
+	optional int32 itemId = 3;		//加速道具  0--立刻完成  其他代表道具id
+	
+	
+}
+
+//请求收兵 1025
+message C2S_TRAINING_GET {
+	required int32 bId = 1;		//建筑id
+}
+
+//返回收兵结果 1025
+message S2C_TRAINING_GET{
+	required int32 bId = 1;
+	required int32 armyType = 2;
+	required int32 trainNum = 3;
+	required int32 allNum = 4;
+}
+
+
+
+//*************************协议定义*****************************
+
+//点击开放新开放的功能，用于后端记录( 6301)
+message C2S_FUNCTION_PREVIEW {
+	optional int32 functionId = 1; //功能id
+}
+message S2C_FUNCTION_PREVIEW {
+	repeated int32 newFunctionId = 1; //已开启且未点击的功能列表
+	optional int32 nextFunctionid = 2; //下一个未开启功能id
+}
+
+
+//*************************数据结构定义****************************
+
+message GemstoneInfo {
+	required int32 gemstoneId = 1; //宝石星级
+	required int32 failNumber = 2; //升级失败次数
+}
+
+//*************************协议定义********************************
+
+// 获取宝石列表信息(GEMSTONE_ALL_INFO = 1901)
+message GemstoneAllReq {
+	
+}
+
+//获取宝石列表信息结果(GEMSTONE_ALL_INFO = 1901)
+message GemstoneAllResp {
+	repeated GemstoneInfo gemstoneInfo = 1; // 宝石信息列表
+}
+
+//宝石合成(GEMSTONE_UP = 1902)
+message GemstoneUpReq {
+	required int32 gemstoneId = 1; //合成星级
+	required int32 count = 2; //要合成的数量
+}
+
+//宝石升级结果(GEMSTONE_UP = 1902)
+message GemstoneUpResp {
+	required int32 sumNumber = 1; //升级宝石数目
+	required int32 successNumber = 2; //升级成功的次数
+}
+
+//*************************数据结构定义****************************
+
+message GeneralInfo {
+	required int32 generalId = 1; 	//武将id
+	required int32 level = 2; 		//武将当前等级
+	required int32 quality = 3; 	//武将品质
+	required int32 treasureId = 4;	//玩家宝物id
+	required int32 curExp = 5; 	//当前武将经验值
+	required int32 star = 6; 	// 当前星数,当前星数为0 ，表示没这个英雄
+	required int32 fight=7;		//将战力
+	repeated AttributeValue attributeList = 8;			//英雄属性 
+	repeated AttributeValue soldierAttribute = 9;	//小兵属性 
+	repeated GeneralSkillDto skills = 10; 			// 玩家武将技能列表
+	optional GeneralEquipment generalEquipment = 11;//装备
+	optional int32 upgradeLevel = 12;
+	required int32 treasureStar = 13;	//玩家宝物星级
+}
+ 
+message GeneralRecover {
+	required int32 generalId = 1; //武将id
+	required float sumHp = 2; //武将总血量
+	required float nowHp = 3; //武将当前血量
+	required bool  isFinish = 4; //是否快速跳过该武将
+}
+
+// 经验书对象
+message ExpBookDto{
+	required int32 id = 1; // 经验书id
+	required int32 count = 2; // 数量
+}
+
+// 玩家武将信息
+message PlayerGeneralInfo {
+	required int64 playerId = 1; //玩家id
+	repeated GeneralInfo generalInfo = 2; //上阵武将列表
+}
+
+// 武将技能信息
+message GeneralSkillDto{
+	required int32 sequence = 1; // 技能序号  标记它属于什么技能
+	optional int32 skillId = 2; // 技能id ，该值为0或没有值，表示还未获得
+	optional int32 level  = 3;  //技能等级
+}
+
+//*************************协议定义********************************
+
+//获取招募的武将(GENERAL_ALL = 902)
+message GeneralAllReq {
+	
+}
+
+//获取招募的武将结果(GENERAL_ALL = 902)
+message GeneralAllResp {
+	repeated GeneralInfo generalInfo = 1; // 武将信息列表
+}
+
+//根据武将id，获取武将信息(GENERAL_DETAIL = 903)
+message GeneralDetailReq {
+	required int64 targetId = 1; //玩家id
+	required int32 generalId = 2; //武将id
+}
+
+//根据武将id，获取武将信息(GENERAL_DETAIL = 903)
+message GeneralDetailResp {
+	required GeneralInfo generalInfo = 1; // 武将信息
+}
+
+//武将使用经验书(GENERAL_USE_EXP_BOOK = 921)
+message GeneralUseExpBookReq{
+	required int32 generalId = 1; //武将id
+	repeated ExpBookDto items = 2; // 经验书
+	required bool isAll = 3;// 是否是单独使用经验书
+}
+
+//武将使用经验书(GENERAL_USE_EXP_BOOK = 921)
+message GeneralUseExpBookResp{
+	required GeneralInfo generalInfo = 1; //升级武将的结果
+}
+
+//武将升星(GENERAL_UP_STAR = 922)
+message GeneralUpStarReq{
+	required int32 generalId = 1; //武将id
+}
+
+//武将升星(GENERAL_UP_STAR = 922)
+message GeneralUpStarResp{
+	required GeneralInfo generalInfo = 1; //升星武将的结果
+}
+
+// 招募武将（RECRUITED_GENERAL = 923）
+message RecruitedGeneralReq{
+	required int32 generalId = 1; //武将id
+}
+
+// 招募武将（RECRUITED_GENERAL = 923）
+message RecruitedGeneralResp{
+	required GeneralInfo generalInfo = 1; //新招募的武将信息
+}
+
+// 获取武将可学习技能列表(GENERAL_SKILL_LIST = 931)
+message GeneralSkillListReq{
+}
+
+// 获取武将可学习技能列表(GENERAL_SKILL_LIST = 931)
+message GeneralSkillListResp{
+	repeated int32 skillList = 1; // 可学习的技能列表
+}
+
+// 技能升级（OPEN_SKILL = 932)
+message OpenSkillReq{
+	required int32 generalId = 1; //武将id
+	required int32 sequence = 2; // 技能序号  标记它属于什么技能
+	optional int32 skillId = 3;   // 自选技能，该值才有值，为玩家选择的技能的
+}
+
+// 技能升级（OPEN_SKILL = 932)
+message OpenSkillResp{
+	required int32 generalId = 1; //武将id
+	required int32 sequence = 2; // 技能序号  标记它属于什么技能
+	required int32 skillId = 3;
+	required int32 level  = 4;  //技能升级后等级
+}
+
+//武将宝物佩戴(GENERAL_TREASURE_WEAR = 933)
+message GeneralTreasureWearReq {
+	required int32 generalId = 1; //武将id
+	required int32 treasureId = 2; //玩家宝物id (若为0，则为卸下宝物)
+}
+
+//武将宝物佩戴(GENERAL_TREASURE_WEAR = 933)
+message GeneralTreasureWearResp {
+	repeated GeneralInfo generalInfo = 1;//武将id
+}
+
+// 934
+message GeneralUpgradeReq {
+	optional int32 generalId = 1;
+}
+
+// 934
+message GeneralUpgradeResp {
+	optional GeneralInfo generalInfo = 1;
+}
+	
+//武将重生	
+message C2S_GENERAL_REBIRTH {
+	required int32 generalId = 1; //武将id
+}
+
+message S2C_GENERAL_REBIRTH {
+	required GeneralInfo generalInfo = 1; //重生后的武将信息
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+//*************************数据结构定义****************************
+//一个限时礼包的数据
+message GiftBag{
+	optional int32 giftBagId = 1;//礼包唯一id
+	optional int32 giftBagType = 2;//礼包类型
+	optional int32 giftBagStatus = 4;//礼包状态，0=激活 1=购买 2=已领奖
+	optional int32 giftBagEffectTime = 5;//礼包激活时间(秒)
+	required int32 type = 6;//限时活动类型
+	optional int32 continueTime = 7;//持续时间(秒)
+	optional int32 condition = 8;//条件
+	optional RechargeConfig rechargeConfig = 9;//充值表配置
+}
+
+//***********************************协议*****************************************
+
+
+//玩家个人限时礼包信息
+message C2S_TIME_LIMI_GIFT_BAG_INFO {
+	required int32 type = 1;//限时活动类型 1=限时礼包， 2=限时商店
+ 
+}
+//返回玩家所有限时礼包列表
+message S2C_TIME_LIMI_GIFT_BAG_INFO {
+	repeated GiftBag giftList = 1;		//玩家各个限时礼包（服务器过滤超时，过滤已领奖）
+}
+
+//单独推送多个礼包(不是全部礼包，一次可能激活多个限时礼包)
+message S2C_SINGLE_TIME_LIMI_GIFT_BAG_INFO {
+	repeated GiftBag gifgBag = 1;		//多个限时礼包
+}
+
+//玩家个人限时礼包购买
+message C2S_TIME_LIMI_GIFT_BAG_BUY {
+	required int32 shopId = 1;//礼包id
+ 
+}
+message S2C_TIME_LIMI_GIFT_BAG_BUY {
+	required int32 shopId = 1;//礼包id
+	required int32 giftBagStatus = 2;//礼包状态，0=激活 1=购买 2=已领奖
+}
+
+//玩家个人限时礼包领取
+message C2S_TIME_LIMI_GIFT_BAG_AWARD {
+ required int32 giftBagId = 1; //限时礼包配置Id
+}
+//领奖返回
+message S2C_TIME_LIMI_GIFT_BAG_AWARD {
+	optional int32 resultCode = 1; 		// 返回错误码 0 成功 
+	repeated ValuesMessage message = 2;	//奖励
+	optional int32 giftbagId = 3;		//限时礼包配置Id
+	
+}
+
+
+
+
+//*************************数据结构定义****************************
+//公会信息
+message GuildInfo{
+	required uint64 id = 1; // 帮会的唯一id
+	required string name = 2; // 帮会名称
+	repeated GuildMemberInfo guildMemberInfo = 3;
+	required uint64 configId = 4; // 帮会的对应公会配置表的id
+	optional string declaration = 5; // 公会宣言
+	optional uint64 fund = 6; // 公会资金
+	optional uint32 buildingLevel = 7;//大殿等级（加入公会条件）
+	optional uint32 joinStatus = 8;//0：自由加入1：需要审核（加入公会条件）
+	optional uint32 iconStatus = 9;//公会标志
+	required uint32 capacity = 10; // 当前公会可容纳的成员数量
+	required uint64 guildPower = 11;//公会总战力
+	required uint32 memberCount = 12; // 当前公会成员数量
+	required string guildLeader = 13; // 公会会长
+	repeated GuildTechInfo guildTechInfo = 14;//军团科技信息
+	required uint32 donateResourceCount = 15;//今日捐献材料次数 
+}
+//公会信息（未进工会前的信息）
+message GuildData{
+	required uint64 id = 1; // 帮会的唯一id
+	required string name = 2; // 帮会名称
+	required GuildMemberInfo guildMemberInfo = 3;//会长单个信息
+	required uint64 configId = 4; // 帮会的对应公会配置表的id
+	optional string declaration = 5; // 公会宣言
+	required uint32 memberCount = 6; // 当前公会成员数量
+	required uint32 capacity = 7; // 当前公会可容纳的成员数量
+	required uint64 guildPower = 8;//公会总战力
+}
+
+
+//公会成员信息
+message GuildMemberInfo{
+	required uint64 playerId = 1; //玩家id
+	required string name = 2; // 玩家名称
+	required uint32 level = 3; // 玩家等级
+	required uint32 position = 4; // 玩家官职
+	optional uint64 joinTime = 6; // 入团时间
+	optional uint64 onlineTime = 7;  // 在线时长
+	optional uint64 power = 9; // 战力
+	optional bool offline =12; // 是否离线
+	optional uint64 offlineTime =13; // 离线时间
+	optional int64 donate = 14; // 联盟贡献
+	required uint32 head = 5; //头像
+	optional uint32 vip = 15;//vip
+}
+
+//军团科技信息
+message GuildTechInfo{
+	required uint32 id = 1; //科技id
+	required uint32 exp = 2; //科技经验
+	required uint32 type = 3; //科技类型
+}
+
+
+// 公会商店商品的结构体
+message GuildShopGoods{
+	required uint32 id = 1; //在商店的第几个格子
+	required uint32 itemId = 2; // 道具id
+	required uint32 count = 3; // 数量
+	
+}
+
+
+//查看玩家信息
+message CheckPlayerInfo{
+	required uint64 playerId = 1; //玩家id
+	required string name = 2; // 玩家名称
+	required uint32 level = 3; // 玩家等级
+	required uint32 position = 4; // 玩家官职    
+	optional uint64 power = 5; // 战力
+  	required uint32 head = 6; //头像
+	required uint32 buildingLevel = 7;//主城等级
+	repeated GeneralDetails generalList = 8;
+	optional string guildName = 9;//公会名字
+	required uint32 countryId = 10;//国家id
+}
+	
+//玩家武将信息
+message GeneralDetails{
+    required int32 id = 1; //武将ID
+    required int32 star = 2; //星级
+    required int32 armyId = 3; //兵种编号
+    required int32 level = 4;//武将等级
+}
+
+//公会消息类型
+enum GuildInformationType{
+    createGuild = 1;//军团创建
+    joinGuild = 2;//玩家加入军团
+    leaveGuild = 3;//玩家退出军团
+    kickOutFromGuild = 4;//踢出军团
+    appointPosition = 5;//任命职位
+    changeGuildLeader = 6;//军团转让
+    changeName = 7;//改变军团名（团长操作）
+    applyGuildLeader = 8;//申请军团长（取代）
+}
+
+//公会消息栏
+message GuildInformationBar{
+    required uint64 msgTime = 1;//信息记录时间
+    optional uint32 type = 2;//信息类型   参考枚举GuildInformationType
+    required string guildName = 3;//军团名
+    required string playerName = 4;//玩家名
+    required string positionName = 5;//职位名
+    required string positionPlayerName = 6;//有职位的玩家名
+}
+
+//待审核入会
+message StayApplyJoinGuild{
+    required uint64 playerId = 1;//待申请人id
+    required string name = 2;//待申请人名字
+    required uint32 level = 3;//玩家等级
+    required uint64 power = 4;//战力   
+}
+
+
+//排行榜联盟信息
+message RankGuildInfo{
+    required uint64 id = 1; // 帮会的唯一id
+	required string name = 2; // 帮会名称
+	optional uint32 iconStatus = 3;//公会标志
+	required uint64 guildPower = 4;//公会总战力
+	required uint32 rank = 5; // 战力排名
+	required GuildMemberInfo leaderInfo = 6;//会长单个信息
+	repeated GuildMemberInfo guildMemberInfo = 7; //最强战力列表
+}
+
+
+//*****************************公会协议*******************************//
+//创建公会（CREATE_GUILD = 3601）
+message CreateGuildReq{
+	optional string name = 1; // 名称
+	optional string declaration = 2; // 公会宣言
+}
+
+//创建公会（CREATE_GUILD = 3601）
+message CreateGuildResp{
+	required GuildInfo guildInfo = 1; // 公会信息
+}
+
+// 获取自己所在的公会的信息(GET_GUILD_INFO= 3602)
+message GetGuildInfoReq{
+	optional uint64 id = 1; // 公会id 查看别人的公会的信息时候才需要赋值
+}
+
+// 获取自己所在的公会的信息(GET_GUILD_INFO= 3602)
+message GetGuildInfoResp{
+	optional GuildInfo guildInfo = 1; // 公会信息 如果没有加入任何帮会，该变量没有值
+	optional uint64 id = 2; // 公会id 查看别人的公会的信息时候才需要赋值
+}
+
+// 获取公会列表（GUILD_LIST = 3603）
+message GuildListReq{
+	
+}
+
+// 获取公会列表（GUILD_LIST = 3603）
+message GuildListResp{
+	repeated GuildData guildData = 1; 
+}
+
+// 申请加入公会（APPLY_JOIN_GUILD = 3604）申请者发送给服务器
+message ApplyJoinGuildReq{
+	required uint64 id = 1; // 帮会的唯一id
+}
+
+// 申请加入公会（APPLY_JOIN_GUILD = 3604） 服务器发送给申请者（需要审核和直接加入）
+message ApplyJoinGuildResp{
+	required uint64 id = 1; // 帮会的唯一id
+    required uint32 join = 2; // 公会是否立即加入， 不是立即加入就等待审核后才加入0：自由1：需要审核
+    required uint32 GuildBuildingLevel = 3;//大殿等级
+}
+
+// 别人申请加入公会（OTHER_APPLY_JOIN_GUILD = 3605） 服务器发送给公会的团长等有权限的人
+message OtherApplyJoinGuildResp{
+	required uint64 playerId = 1; //玩家id
+	required string name = 2; // 玩家名称
+	required uint32 level = 3; // 玩家等级
+}
+
+// 审核接受别人加入公会（ACCEPT_APPLY_JOIN_GUILD = 3607）同意申请的人发送给服务器
+message AcceptApplyJoinGuildReq{
+	required uint64 playerId = 1;  //被审核的玩家id
+	required uint32 status = 2;//0:同意，1：拒绝
+	required uint32 type = 3;//前端需求的字段用来往返
+}
+
+// 审核接受别人加入公会（ACCEPT_APPLY_JOIN_GUILD = 3607） 服务器发送给同意申请的人
+message AcceptApplyJoinGuildResp{
+	required uint64 playerId = 1;  //被审核的玩家id
+	required uint32 status = 2;//0:同意，1：拒绝
+	required uint32 type = 3;//前端需求的字段用来往返
+}
+
+// 加入公会（JOIN_GUILD = 3608） 服务器发送给申请的人（审核过了的）
+message JoinGuildResp{
+	required GuildInfo guildInfo = 1; // 公会信息
+}
+
+// 把别人踢出公会（KICK_OUT_GUILD = 3609）公会的团长等有权限的人发送给服务器
+message KickOutGuildReq{
+	required uint64 playerId = 1; //玩家id
+}
+
+// 把别人踢出公会（KICK_OUT_GUILD = 3609）服务器发送给公会的团长等有权限的人
+message KickOutGuildResp{
+	required uint64 playerId = 1; //玩家id
+}
+
+// 踢出公会（KICK_OUT_FROM_GUILD = 3610）服务器发送给被踢的成员
+message KickOutFromGuildResp{
+	required uint64 playerId = 1; //玩家id
+}
+
+// 改变公会团长（CHANGE_GUILD_LEADER = 3611）
+message ChangeGuildLeaderReq{
+	required uint64 newLeaderId = 1; // 新团长id
+}
+
+// 改变公会团长（CHANGE_GUILD_LEADER = 3611）
+message ChangeGuildLeaderResp{
+	required uint64 leaderId = 1; // 旧团长id
+	required uint64 newLeaderId = 2; // 新团长id
+}
+
+// 改变公会名称（CHANGE_NAME = 3612）
+message ChangeNameReq{
+	required string newName = 1; // 公会新名称
+}
+
+// 改变公会名称（CHANGE_NAME = 3612）
+message ChangeNameResp{
+	required string newName = 1; // 公会新名称
+}
+
+// 改变公会宣言（CHANGE_DECLARATION = 3613）
+message ChangeDeclarationReq{
+	required string newDeclaration = 1; // 公会新宣言
+}
+
+// 改变公会宣言（CHANGE_DECLARATION = 3613）
+message ChangeDeclarationResp{
+	required string newDeclaration = 1; // 公会新宣言
+}
+
+// 通过搜索名称获取公会列表（GET_GUILD_LIST_BY_NAME = 3614）
+message GetGuildListByNameReq{
+	required string name = 1;
+}
+
+// 通过搜索名称获取公会列表（GET_GUILD_LIST_BY_NAME = 3614）
+message GetGuildListByNameResp{
+	repeated GuildData guildData = 1; 
+}
+
+
+// 退出公会（LEAVE_GUILD = 3638）
+message LeaveGuildReq{
+}
+
+// 退出公会（LEAVE_GUILD = 3638）
+message LeaveGuildResp{
+}
+
+// 申请公会会长（APPLY_GUILD_LEADER = 3639）
+message ApplyGuildLeaderReq{
+}
+
+// 申请公会会长（APPLY_GUILD_LEADER = 3639）
+message ApplyGuildLeaderResp{
+	required uint64 oldLeaderId = 1; // 旧会长的id
+	required uint64 newLeaderId = 2; // 新会长的id
+}
+
+// 任命公会职位（APPOINT_POSITION = 3615）公会的团长等有权限的人发送给服务器
+message AppointPositionReq{
+	required uint64 playerId = 1; //被任命玩家id
+	required uint32 positionId = 2; //职位id
+}
+
+// 任命公会职位（APPOINT_POSITION = 3615）服务器发送给公会的团长等有权限的人
+message AppointPositionResp{
+	required uint64 playerId = 1; //任命玩家id
+	required uint32 positionId = 2; //职位id
+}
+
+//任命工会职位（BE_APPOINT_POSITION = 3616）服务器发送给被任命的人
+message BeAppointPositionResp{
+    required uint64 playerId = 1;//被任命的玩家id
+    required uint32 positionId = 2; //职位id
+}
+
+//查看玩家详情（CHECK_PLAYER_DETAILS = 5001）
+message CheckPlayerDetailsReq{
+    required uint64 playerId = 1; //被查看玩家id
+}
+
+//查看玩家详情（CHECK_PLAYER_DETAILS = 5001）
+message CheckPlayerDetailsResp{
+    required CheckPlayerInfo checkPlayerInfo = 1;//玩家信息
+}
+
+//邀请加入军团（INVITE_JOIN_GUILD = 5002）邀请人
+message InviteJoinGuildReq{
+	required uint64 beInvitePlayerId = 1; // 被邀请人id
+}
+
+//邀请加入军团（INVITE_JOIN_GUILD = 5002）邀请人
+message InviteJoinGuildResp{
+	required uint64 beInvitePlayerId = 1; // 被邀请人id
+	required uint64 guildId = 2;    //工会id
+	required string name = 3;    //工会名称
+}
+
+//邀请加入军团（BE_INVITE_JOIN_GUILD = 5003）被邀请人
+message BeInviteJoinGuildReq{
+   
+}
+
+//邀请加入军团（BE_INVITE_JOIN_GUILD = 5003）被邀请人
+message BeInviteJoinGuildResp{
+    required uint64 playerId = 1; // 邀请人id
+	required uint64 guildId = 2;    //工会id
+	required string name = 3;    //工会名称
+}
+
+//确定被邀请加入军团（SURE_INVITE_JOIN_GUILD = 5004）邀请人
+message SuerInviteJoinGuildReq{
+
+}
+
+//确定被邀请加入军团（SURE_INVITE_JOIN_GUILD = 5004）邀请人
+message SuerInviteJoinGuildResp{
+	required uint64 beInvitePlayerId = 1; // 被邀请人id
+	required uint64 guildId = 2;    //工会id
+	required string name = 3;    //工会名称
+}
+
+//确定被邀请加入军团（BE_SURE_INVITE_JOIN_GUILD = 5005）被邀请人
+message BeSuerInviteJoinGuildReq{
+	required uint64 playerId = 1; // 邀请人id
+	required uint64 guildId = 2;    //工会id
+	required string name = 3;    //工会名称
+}
+
+//确定被邀请加入军团（BE_SURE_INVITE_JOIN_GUILD = 5005）被邀请人
+message BeSuerInviteJoinGuildResp{
+    required uint64 playerId = 1; // 邀请人id
+	required uint64 guildId = 2;    //工会id
+	required string name = 3;    //工会名称
+}
+
+//入团设置（JOIN_GUILD_STATUS = 5006）
+message JoinGuildStatusReq{
+    required uint32 buildingLevel = 1;//大殿等级
+    required uint32 joinStatus = 2;//0：自由1：需要审核
+}
+
+//入团设置（JOIN_GUILD_STATUS = 5006）
+message JoinGuildStatusResp{
+    required uint32 buildingLevel = 1;//大殿等级
+    required uint32 joinStatus = 2;//0：自由1：需要审核
+}
+
+//军团标志设置（GUILD_ICON_STATUS = 5007）
+message GuildIconStatusReq{
+    required uint32 iconStatus = 1;//军团标志
+}
+
+//军团标志设置（GUILD_ICON_STATUS = 5007）
+message GuildIconStatusResp{
+    required uint32 iconStatus = 1;//军团标志
+}
+
+//军团消息（GUILD_INFORMATION = 5008）
+message GuildInformationReq{
+    required uint64 giildId = 1;//军团ID
+    required uint32 page = 2;//页数
+}
+
+//军团消息（GUILD_INFORMATION = 5008）
+message GuildInformationResp{
+    repeated GuildInformationBar information = 1;//军团消息
+    required uint32 page = 2; //分页
+	required uint32 totalPage = 3; //总页数
+}
+
+//申请入会待审核（CHECK_APPLY_JOIN_GUILD = 3617） 公会的团长等有权限的人请求服务器读取未审核的人
+message CheckApplyJoinGuildReq{
+    required uint32 page = 1;//页数
+}
+
+//申请入会待审核（CHECK_APPLY_JOIN_GUILD = 3617） 
+message CheckApplyJoinGuildResp{
+    repeated StayApplyJoinGuild stayApplyJoin = 1;//待审核
+    required uint32 page = 2; //分页
+	required uint32 totalPage = 3; //总页数
+}
+
+//解散军团（DISSOLVE_GUILD = 3618）
+message DissolveGuildReq{
+    required uint64 giildId = 1;//军团ID
+}
+
+//解散军团（DISSOLVE_GUILD = 3618）
+message DissolveGuildResp{
+    required uint32 status = 1;//返回0：解散成功1：解散失败
+}
+
+//军团捐献(GUILD_TECH_DONATE = 3619)
+message GuildTechDonateReq {
+	required int32 techType = 1;//科技类型
+	required int32 valueType = 2;//捐献材料类型,1金币,2材料
+}
+
+//军团捐献返回(GUILD_TECH_DONATE = 3619)
+message GuildTechDonateResp {
+	required GuildTechInfo guildTechInfo = 1;//军团科技信息
+	required uint32 donateResourceCount = 2;//今日捐献材料次数 
+}
+
+//弹劾盟主请求(ACCUSE_GUILD = 3640)
+message AccuseReq{
+}
+
+//弹劾盟主返回(ACCUSE_GUILD = 3640)
+message AccuseResp{
+	required uint64 giildId = 1;//联盟ID
+	required uint64 newLeaderId = 2; // 新会长的id
+}
+
+//弹劾盟主请求
+message C2S_ACCUSE_GUILD {
+					
+}
+
+//弹劾盟主返回
+message S2C_ACCUSE_GUILD {
+	required uint64 giildId = 1;//联盟ID
+}
+
+//查看排行榜联盟信息请求
+message C2S_RANK_GUILD {
+	required uint64 giildId = 1;//联盟ID
+}
+
+//查看排行榜联盟信息返回
+message S2C_RANK_GUILD {
+	required RankGuildInfo rankGuildInfo = 2;//联盟信息
+}
+
+//军团科技结构
+message GuildTechnologyMessage{
+	required int32 id = 1; //科技id
+	required int64 exp = 2; //科技经验
+}   
+
+//**********************************协议定义***************************************
+
+//军团科技面板请求(GUILD_TECHNOLOGY_VIEW = 4201)
+message GuildTechnologyViewReq {
+}
+
+//军团科技面板请求(GUILD_TECHNOLOGY_VIEW = 4201)
+message GuildTechnologyViewResp {
+	repeated GuildTechnologyMessage techList = 1;//科技内容列表
+}
+
+
+//军团捐献(GUILD_TECHNOLOGY_DONATION = 4203)
+message GuildTechnologyDonationReq {
+	required int32 id = 1;//科技id	
+	required int32 technologyType = 3;//科技类型id
+}
+
+//军团捐献返回(GUILD_TECHNOLOGY_DONATION = 4203)
+message GuildTechnologyDonationResp {
+	required int32 id = 1;//科技id
+	required int64 exp = 2;//科技exp
+    required int32 paidCount = 3;//付费次数
+    required int32 materialCount = 4;//材料次数
+}
+
+//军团科技升级返回(GUILD_TECHNOLOGY_LEVEL_UP = 4204)
+message GuildTechnologyLevelUpResp {
+	required int32 idBefore = 1;//升级前科技id
+	required int32 idAfter = 2;//升级后科技id
+}
+
+//军团捐献次数刷新（GUILD_MATERIAL_DONATION_COUNT = 4205）
+message GuildMaterialDonationCountReq {
+
+}
+
+//军团捐献次数刷新返回（GUILD_MATERIAL_DONATION_COUNT = 4205）
+message GuildMaterialDonationCountResp {
+    required int32 paidCount = 1;//付费次数
+    required int32 materialCount = 2;//材料次数  
+}
+
+//*************************数据结构定义****************************
+
+//行营信息
+message HQInfo{
+ optional int32 norCopyId = 1;//普通关卡id
+ optional int32 hdCopyId = 2; //困难关卡id
+ repeated ChapterInfo chapterInfos = 3;//章节信息
+ optional int32 norLastTime = 4;	//上一次增加次数的时间
+ optional int32 hdLastTime = 5;		//上一次增加次数的时间
+}
+
+//行营章节信息
+message ChapterInfo{
+ optional int32 chapterId = 1;//章节类型
+ repeated CheckPointInfo checkPointInfos = 2;//行营关卡信息
+ repeated int32 receivedBoxs = 3;//已经领取的宝箱id
+ optional int32 moduleId = 4;
+}
+
+//行营关卡信息
+message CheckPointInfo{
+ optional int32 id = 1;//关卡id
+ repeated int32 condition = 2;//达标的条件编号
+ optional int32 count = 3;
+}
+
+//*************************协议定义********************************
+
+//请求获得行营信息(HQ_GET_INFO = 4701)
+message GetHeadQuartersInfoReq{
+	optional HQInfo info = 1; // unused
+	optional int32 chapterId = 2;
+}
+
+//返回行营信息(HQ_GET_INFO = 4701)
+message GetHeadQuartersInfoResp{
+	optional HQInfo info = 1;
+}
+
+//请求行营扫荡信息(HQ_CLEAN_UP = 4702)
+message CleanUpHQReq{
+	optional int32 id = 1;//章节类型
+}
+
+//返回行营扫荡信息(HQ_CLEAN_UP = 4702)
+message CleanUpHQResp{
+	required int32 resetCount = 1;//可重置次数
+	repeated ValuesMessage valuesMessage = 2;//奖励信息
+	required int32 bossCount = 3;//单个boss扫荡次数
+}
+
+//行营请求挑战信息(HQ_CHALLENGES = 4703)
+message ChallengesHQReq{
+	required int32 id = 1;//章节类型
+	required int32 armyId = 2;//部队id
+}
+
+//返回行营挑战信息(HQ_CHALLENGES = 4703)
+message ChallengesHQResp{
+	required int64 battleId = 1; //战斗id
+	required int32 bossCount = 2;//单个boss扫荡次数
+}
+
+//获得宝箱(HQ_RECEIVE_BOX = 4704)
+message HQReceiveBoxReq {
+	required int32 starRewardId = 1;//宝箱Id
+}
+
+//获得宝箱(HQ_RECEIVE_BOX = 4704)
+message HQReceiveBoxResp {
+	repeated ValuesMessage valuesMessage = 1;//奖励信息
+	required ChapterInfo info = 2;//宝箱Id
+}
+
+
+//行营挑战胜利结算信息(HQ_CHANLLNGES_REWARD = 4705)
+message HQChanllngesRewardResp{
+	repeated ValuesMessage valuesMessage = 1;//奖励信息
+	optional int32 star = 2;//星星数量
+	repeated int32 condition = 3;//达标的条件编号
+	required bool result = 4;
+	required int32 id = 5;//
+	required int64 battleId = 6;//战斗id
+}
+
+//行营购买挑战次数(HQ_BUY_RESET_COUNT = 4706)
+message HQBuyResetCountReq{
+	optional int32 moduleId = 1;
+
+}
+
+//行营购买挑战次数(HQ_BUY_RESET_COUNT = 4706)
+message HQBuyResetCountResp{
+	 optional int32 resetCount = 1;//可重置次数
+	 optional int32 buyCount = 2;//今日已经购买次数
+	 optional int32 moduleId = 3;
+}
+
+//HQ_UPDATE_CHAPTER = 4708;
+message HQUpdateChapter {
+	optional HQInfo info = 1;
+}
+
+// HQ_CHAPTER_INFO = 4709;
+message GetHeadQuarterChapterInfoReq {
+	optional int32 chapterId = 1;
+}
+
+// HQ_CHAPTER_INFO = 4709;
+message GetHeadQuarterChapterInfoResp {
+	optional ChapterInfo chapterInfo = 1;
+}
+
+// HQ_BUY_CHALLENGE = 4710
+message HQBuyChallengeReq {
+	optional int32 moduleId = 1;
+}
+
+message HQBuyChallengeResp {
+	optional int32 moduleId = 1;
+	optional int32 buyCount = 2;
+	optional int32 availCount = 3;
+}
+
+//*************************数据结构定义****************************
+
+//章节信息
+message HisChapterInfo{
+	required int32 chapterId = 1;		//章节ID
+	repeated HisLevelInfo LevelInfos = 2;	//关卡信息
+	repeated int32 receivedBoxs = 3;	//已经领取的宝箱id
+}
+
+//关卡信息
+message HisLevelInfo{
+	required int32 id = 1;//关卡id
+	required int32 star = 2;//当前星级评定
+	required int32 fightNum = 3;//可挑战次数
+}
+
+//*************************协议定义********************************
+
+//请求获得历史战役信息
+message C2S_GET_HISTORY_WAR_INFO{
+	
+}
+
+//返回历史战役信息
+message S2C_GET_HISTORY_WAR_INFO{
+	repeated HisChapterInfo chapterInfos = 1;//章节信息列表
+}
+
+//请求扫荡
+message C2S_HISTORY_WAR_CLEAN_UP{
+	required int32 levelId = 1;//扫荡章节关卡ID
+}
+
+//返回扫荡
+message S2C_HISTORY_WAR_CLEAN_UP{
+	required int32 levelId = 1;//扫荡章节关卡ID
+	required int32 fightNum = 2;//可挑战次数
+	repeated ValuesMessage valuesMessage = 3;//物品奖励信息
+}
+
+//请求挑战
+message C2S_HISTORY_WAR_FIGHT{
+	required int32 levelId = 1;//挑战章节关卡ID
+}
+//返回挑战结果信息
+message S2C_HISTROY_WAR_BATTLE_INFO{
+	optional bool result = 1;			//战斗结果
+	optional int64 battleId = 2;		//战斗ID
+	optional HisLevelInfo levelInfo = 3;//挑战后关卡信息
+	repeated ValuesMessage valuesMessage = 4;//物品奖励信息
+	optional HisChapterInfo chapterInfo = 5;//如果挑战完成后，进入新章节，这里是新章节信息，如果没有进入新章节，此变量为空
+}
+
+
+//领取宝箱
+message C2S_HISTORY_WAR_GET_BOX {
+	required int32 starRewardId = 1;//要领取的宝箱Id
+}
+
+//返回领取宝箱信息
+message S2C_HISTORY_WAR_GET_BOX {
+	required int32 chapterId = 1;		//章节ID
+	repeated int32 receivedBoxs = 2;	//已经领取的宝箱id
+	repeated ValuesMessage valuesMessage = 3;//奖励信息
+}
+
+//购买扫荡次数
+message C2S_HISTORY_WAR_CLEAN_UP_COUNT{
+	
+}
+//5点重置
+message S2C_HISTORY_WAR_RESET{
+	
+}
+
+
+
+
+
+
+//*************************数据结构定义**************************
+//聚宝(C2S_TREASURE_WASHBOWL_USE = 4103)
+message C2S_TREASURE_WASHBOWL_USE{
+}
+
+//聚宝结果返回(S2C_TREASURE_WASHBOWL_USE = 4104)
+message S2C_TREASURE_WASHBOWL_USE{
+	//required int32 count =1;//当前聚宝次数
+	required int64 coin = 1;//得到银币数量
+}
+
+//额外元宝(Extra_Gold = 4105)
+message C2S_TREASURE_WASHBOWL_EXTRAGOLD{
+}
+
+//额外元宝结果返回(Extra_Gold = 4106)
+message S2C_TREASURE_WASHBOWL_EXTRAGOLD{
+	required int64 refreshTime =1;//刷新时间
+}
+
+//聚宝基本信息(C2S_TREASURE_WASHBOWL_INFO = 4101)
+message C2S_TREASURE_WASHBOWL_INFO{
+}
+
+//聚宝基本信息结果返回(S2C_TREASURE_WASHBOWL_INFO = 4102)
+message S2C_TREASURE_WASHBOWL_INFO{
+	//optional int32 count =1;//当天聚宝次数
+	optional int64 refreshTime =1;//额外金币刷新倒计时
+}
+//*************************数据结构定义**************************
+// 邮件
+message MailInfo {
+	required int64 id = 1;
+	required string title = 3; //标题
+	optional int32 configId = 4; //邮件id，对应y_邮件表的id
+	repeated string param = 5; //文本内容参数
+	required int64 sendTime = 6; //发送时间
+	required bool read = 8; //是否已经读取
+	optional string attachment = 9; //附件
+	optional bool recieved = 10; //是否已经领取附件
+	required bool custom = 11; //是否使用自定义邮件 是true  false模板
+	optional string text = 12; //文本内容
+
+}
+
+//邮件标题
+message MailTitle {
+	required int32 type = 1; //邮件类型 1系统 2战报 3野怪 4城市战 5采集
+	required int64 id = 2;					//ID
+	required string title = 3; 				//标题
+	required int32 sendTime = 4; 			//发送时间
+	required bool isRead = 5; 				//是否已经读取
+	required bool isAttachmentState = 6; 	//附件状态
+	optional int32 attachmentType = 7;      //附件类型 0没有 1:奖励 2:没想到以后在说
+	optional string titleInfo = 8;      	//标题辅助信息{"victory":1,"eventDataId":1}
+}
+
+//*************************协议定义*****************************
+//邮件标题列表
+message C2S_MAILBOX_TITLE_LSIT{
+
+}
+
+
+message S2C_MAILBOX_TITLE_LSIT{
+	repeated MailTitle mailTitle=2;
+}
+
+//状态更新(用于一键阅读)
+message S2C_MAILBOX_TITLE_UP{
+	repeated MailTitle mailTitle=2;
+}
+
+//邮件内容
+message C2S_MAILBOX_INFO{
+	required int64 id = 1; //邮件ID
+}
+
+message S2C_MAILBOX_INFO{
+	required int64 id = 1; 		//邮件ID
+	required int32 textType = 2;//邮件内容类型 1系统 2战报 3野怪 4城市战 5采集
+	required string text = 3; 	//邮件内容
+	optional int32 attachmentType = 4; 	//附件类型 1:奖励 2:没想到以后在说
+	optional string attachment = 5; 	//附件内容
+}
+
+
+//删除邮件
+message C2S_MAILBOX_DEL{
+	required int64 id = 1; //邮件ID
+}
+
+message S2C_MAILBOX_DEL{
+	required int32 status=1;	//返回状态 0成功，1失败
+	optional int64 id = 2; 		//邮件ID
+	repeated ValuesMessage attachment=3;//附件列表 前端自己合并相同内容
+}
+
+//一键删除
+message C2S_MAILBOX_ALLDEL{
+	required int32 type = 1; //邮件类型 1系统 2战报 3野怪 4城市战 5采集
+}
+
+message S2C_MAILBOX_ALLDEL{
+	required int32 status=1;	//返回状态 0成功，1失败
+	repeated int64 delId =2; 	//删除成功的列表
+	repeated ValuesMessage attachment=3;//附件列表 前端自己合并相同内容
+}
+
+//一键阅读
+message C2S_MAILBOX_ALLREAD{
+	required int32 type = 1; //邮件类型 1系统 2战报 3野怪 4城市战 5采集
+}
+
+message S2C_MAILBOX_ALLREAD{
+	required int32 status=1;	//返回状态 0成功，1失败
+	repeated ValuesMessage attachment=2;//附件列表 前端自己合并相同内容
+}
+
+
+//新邮件通知
+message S2C_MAILBOX_NOTICE{
+	required MailTitle mailTitle=1;	//邮件标题
+}
+
+
+
+//领取附件
+message C2S_MAILBOX_ATTACHMENT{
+	required int64 id = 1; //邮件id
+}
+
+message S2C_MAILBOX_ATTACHMENT{
+	required int32 status=1;	//返回状态 0成功，1失败
+	repeated ValuesMessage attachment=2;//附件列表 前端自己合并相同内容
+	optional int64 mailId=3;//邮件Id 
+}
+
+
+
+
+
+
+
+
+//请求邮件列表(MAILBOX_LIST = 1101)
+message MailBoxListReq {
+	required int64 minId = 1; //邮件列表中最小id，初始传0
+}
+
+//请求邮件列表结果(MAILBOX_LIST = 1101)
+message MailBoxListResp {
+	repeated MailInfo mail = 1; // 邮件列表
+}
+
+//删除邮件(MAILBOX_DELETE = 1102)
+message MailBoxDeleteReq {
+	repeated int64 ids = 1; //待删除的邮件 id, 传0删除没有附件的已阅读邮件
+}
+
+//删除邮件结果(MAILBOX_DELETE = 1102)
+message MailBoxDeleteResp {
+	repeated int64 ids = 1; //结果 ids
+}
+
+//领取附件(MAILBOX_GET_ATTACHMENT = 1103)
+message MailBoxGetAttachmentReq{
+	required int64 id = 1; //需要领取附件的邮件的id, 传0领取所有邮件的附件
+}
+
+//领取附件(MAILBOX_GET_ATTACHMENT = 1103)
+message MailBoxGetAttachmentResp{
+	repeated int64 ids = 1; //已经领取附件的邮件的ids
+}
+
+//通知新邮件(MAILBOX_NEW = 1104)
+message MailBoxNewResp{
+	required MailInfo mail = 1; //新邮件
+}
+
+//读取邮件(MAILBOX_READ = 1105)
+message MailBoxReadReq{
+	required int64 id = 1; //需要读取的邮件的 id, 传0阅读所有邮件
+}
+
+//读取邮件结果(MAILBOX_READ = 1105)
+message MailBoxReadResp{
+	repeated int64 ids = 1; //读取的邮件的 id
+}
+message MaterialType {
+	optional int32 type = 1; // 类型
+	optional int32 used = 2; // 使用次数
+	optional int32 bought = 3; // 购买次数
+}
+
+// 信息
+message C2S_MATERIAL_INFO {
+}
+
+message S2C_MATERIAL_INFO {
+	repeated MaterialType metrialType = 1;
+	repeated int32 passed = 2; // 挑战通过id
+}
+
+// 挑战 扫荡
+message C2S_MATERIAL_CHALLENGE {
+	optional int32 id = 1;	
+	optional bool sweep = 2; // 扫荡: true 挑战: false
+}
+
+message S2C_MATERIAL_CHALLENGE {
+	optional bool success = 1;//是否成功
+	repeated ValuesMessage valuesMessage = 2;//奖励信息
+	optional int64 battleId = 3;//战斗id
+	optional MaterialType type = 4; //material type
+	optional bool sweep = 5; 
+}
+
+// 购买次数
+message C2S_MATERIAL_BUY {
+	optional int32 type = 1;
+	optional int32 count = 2;
+}
+
+message S2C_MATERIAL_BUY {
+	optional MaterialType materialType = 1;
+}
+//*************************数据结构定义**************************
+
+//*************************协议定义*****************************
+//获得商城信息(GET_MERCHANT = 3805)
+message GetMerchantReq{
+	required int32 storeId = 1;//商城id
+}
+
+//获得商城信息(GET_MERCHANT = 3805)
+message GetMerchantResp{
+	required MerchantInfo info = 1;
+}
+
+//手动刷新(HAND_REFRESH_MERCHANT = 3806)
+message HandRefreshMerchantReq{
+	required int32 storeId = 1;//商城id
+}
+
+//手动刷新(HAND_REFRESH_MERCHANT = 3806)
+message HandRefreshMerchantResp{
+	required MerchantInfo info = 1;
+}
+
+//商城购买物品(MERCHANT_BUY_GOODS = 3807)
+message MerchantBuyGoodsReq{
+	required int32 storeId = 1;//商城id
+	required int32 id = 2;//商品id（不是道具id）
+	required int32 num = 3;//数量
+}
+
+//商城购买物品(MERCHANT_BUY_GOODS = 3807)
+message MerchantBuyGoodsResp{
+	required int32 storeId = 1;//商城id 
+	required GoodsInfo goodsInfo =2;//购买后商品信息
+	repeated ValuesMessage message = 3;//奖励
+}
+
+//商城免单通知(MERCHANT_FREE = 3808)
+message MerchantFreeResp{
+	repeated ValuesMessage valuesMessage = 1;//退还货币
+}//*************************结构定义*****************************
+
+
+
+
+
+//*************************协议定义*****************************
+//新手进程（NOVICE_COMMIT = 1401）
+message NoviceViewReq {
+}
+
+//查询新手进程返回（NOVICE_COMMIT = 1401）
+message NoviceViewResp{
+	repeated int32 guideId = 1;//指引id
+}
+
+
+//提交新手进程(NOVICE_COMMIT = 1402)
+message NoviceCommitReq {
+	required int32 guideId = 1; //指引id
+	optional int32 stepId = 2; //步骤id
+}
+
+//提交新手进程返回（NOVICE_COMMIT = 1402）
+message NoviceCommitResp{
+	optional int32 guideId = 1;//指引id
+	optional int32 stepId = 2; //步骤id
+}
+
+//跳过新手进程(NOVICE_IGNORE = 1403)
+message NoviceIgnoreReq {
+}
+
+//提交新手进程返回（NOVICE_IGNORE = 1403)
+message NoviceIgnoreResp{
+	required bool finsh = 1;
+}
+
+//新手战斗(NOVICE_BATTLE = 1404)
+message NoviceBattleReq {
+	required int32 cpId = 1; // 关卡id
+}
+
+//新手战斗(NOVICE_BATTLE = 1404)
+message NoviceBattleResp{
+	required int32 battleId = 1;
+	repeated int32 generals = 2;
+}
+
+//NOVICE_DATA = 1405
+message NoviceDataReq {
+	required string data = 1;
+}
+
+//NOVICE_DATA = 1405
+message NoviceDataResp {
+	required bool result = 1;
+}
+//*************************数据结构定义****************************
+
+//***********************************协议*****************************************
+
+//获取在线奖励状态
+message C2S_ONLINE_INFO {
+
+}
+message S2C_ONLINE_INFO {
+ optional int32 onlineTime = 1; //在线时长(秒)
+ repeated int32 awardRecordSet = 2; //领奖记录
+}
+//领取在线奖励
+message C2S_ONLINE_REWARD {
+ required int32 stepId = 1; //奖励配置id
+}
+message S2C_ONLINE_REWARD {
+ required int32 resultCode = 1; // 返回错误码 0 成功 
+ optional int32 stepId = 2; //步骤id
+ repeated ValuesMessage message = 3;//奖励
+ repeated int32 awardRecord = 4;//领奖记录
+}
+
+
+
+//////////////////////结构体//////////////
+//敌将入侵
+message PatrolBossInfo{
+	optional int32 bossId = 1;	//当前BossId,也就是巡查表关卡ID
+	optional int32 bossTime = 2;	//boss累计已经挂机时间
+	optional int32 generalId = 3;	//部队头像，武将表ID
+	optional string bossReward = 4;	//当前Boss的掉落奖励
+	optional bool bossFirst = 5;	//是否游戏中第一次挑战Boss
+
+}
+//可领取武将信息
+message PatrolGenInfo{
+	optional int32 rewardLevelNum=10;			//领取武将目标关卡数（编号）
+	optional int32 rewardGenId=11;		//下一次可领取武将id
+	optional int32 rewardState = 12;	//武将领取状态 0不能领取，1可领取，2已领取（最后一关才有的状态）
+}
+
+//巡查信息
+message PatrolInfo {
+	optional int32 patrolId = 1;		//当前关卡ID
+	optional string description =2;		//当前关卡名称 
+	optional int32 levelLimit = 3;		//当前关卡等级限制
+	optional bool isPass = 4;			//当前关卡是否通关，正常情况，是False的，只有到最后一关，这里才是True
+	optional string npcMod = 5;			//每关挂机动画中npc的外观
+	repeated Tuple timeReward=6;		//挂机产出奖励:（奖励内容，按次数奖励，目前12秒一次）
+	optional int32 score=7;				//击杀数（表现用）
+	optional string  map=8;				//挂机地图资源
+	optional int32 boxGetTime = 9;	//上次领取宝箱的时间戳（单位：秒）
+	optional PatrolBossInfo bossInfo=10;	//当前Boss的信息
+	optional PatrolGenInfo genInfo=11;	//当前可领取武将的信息
+}
+//前端地图形象
+message PatrolRandomPlayer {
+	optional int64 playerId = 1;
+	optional int32 countryId = 2;
+	optional string nickName = 3;
+	optional string guildName = 4;
+	optional int32 jobId = 5;
+}
+/////////////协议////////////////////
+//获得巡查信息(C2S_GET_PATROL = 5301)
+message C2S_GET_PATROL{
+
+}
+
+//返回巡查信息(S2C_GET_PATROL = 5302)
+message S2C_GET_PATROL{
+	required PatrolInfo info = 1;//
+}
+
+
+//领取宝箱奖励
+message C2S_RECEIVE_PATROL_REWARD {
+}
+
+//领取宝箱奖励
+message S2C_RECEIVE_PATROL_REWARD {
+	repeated ValuesMessage message = 1;
+}
+
+//巡查挑战
+message C2S_PATROL_CHALLENGE{
+}
+
+//巡查挑战完获得奖励(S2C_PATROL_CHALLENGE_REWARD = 5304)
+message S2C_PATROL_CHALLENGE_REWARD{
+	required bool result = 1;
+	repeated ValuesMessage message = 2;//奖励
+	optional int64 battleId = 3;
+}
+//客户端随机一些玩家在地图上跑
+message C2S_PATROL_GET_RANDOM_PLAYERS {
+}
+
+
+
+message S2C_PATROL_GET_RANDOM_PLAYERS {
+	repeated PatrolRandomPlayer players = 1;
+}
+
+
+
+//挑战巡查Boss
+message C2S_PATROL_CHALLENGE_BOSS {
+}
+message S2C_PATROL_CHALLENGE_BOSS {
+	optional int32 bossTime = 1;	//如果挑战失败，返回boss累计挂机时间给前端做兼容
+}
+//返回巡查Boss奖励
+message S2C_PATROL_CHALLENGE_BOSS_REWARD {
+	optional bool result = 1;
+	repeated ValuesMessage message = 2;//奖励
+	optional int64 battleId = 3;
+}
+
+//巡查喝酒，实际就是使用加速时间
+message C2S_PATROL_WINE {
+}
+
+message S2C_PATROL_WINE {
+	optional bool result = 1;
+	repeated ValuesMessage message = 2;
+}
+
+// 领取关卡的武将奖励
+message C2S_PATROL_REWARD_GENERAL {
+	optional int32 patrolId = 1;
+}
+
+// 
+message S2C_PATROL_REWARD_GENERAL {
+	optional int32 patrolId = 1;
+	optional int32 generalId = 2;
+	optional PatrolGenInfo info =3;//下一个可领取武将信息
+}
+//购买BOSS次数
+message C2S_PATROL_BUY_BOSS_COUNT {
+}
+message S2C_PATROL_BUY_BOSS_COUNT {
+
+}
+//*************************数据结构定义****************************
+
+//玩家基础数据
+message PlayerInfo{
+  	required int64 playerId = 1; 	//玩家id
+  	required int32 countryId = 2; 	//1-魏 2-蜀 3-吴
+ 	required string nickName = 3;		//角色昵称	
+	required int32 sex = 28;				//性别 0=男 1=女，默认0
+	required int32 level = 4;			// 等级
+	required int32 head = 5;				//头像id
+	required int32 headType = 6;			//头像类型，目前没用，暂定1
+	required int32 createTimestamp = 7;		//角色创建时间戳
+	required int64 guildContribute = 8; 	//军团捐献
+	required int64 wood = 9; 				//木材
+	optional bool recharge = 10;				// 默认充值角色
+	optional int64 exp = 11;				// 经验
+	optional int32 governmentPost = 12;		//官职id
+	optional int32 vipLevel = 13;			//vip等级
+	optional int32 vipIntegral = 14;		//vip积分
+	optional int64 gold = 15;				//金币
+	optional int64 silver = 16;				//银币
+	optional int64 grain = 17;				//粮食
+	optional int64 iron = 18;               // 铁
+	optional int64 silver_draw = 19;        //银币转盘免费次数
+	optional int64 medal = 20; // medal
+	optional int64 recruitVolumn = 21; // 招募令
+	optional int64 militaryMeritsGain = 22; 	 //累计军功
+	optional int64 militaryMeritsAvailiable = 23;//战功值（用于消耗）
+	optional int64 militaryMeritsWeek = 24; 	 //周军功
+	optional int64 arenaPoint = 25;	
+	optional int32 offlineStamp = 26;
+	optional int64 generalSoulCoin = 27;
+	repeated WorshipState worshipState = 29 ; 	//玩家各个排行榜膜拜情况
+	optional bool hasCityRevenue = 30;				//是否可以领取城池税收
+	optional int64 jade = 31; 				//勾玉
+	optional int64 militaryMeritsDay = 32; 				//日累计战功
+	optional bool crossServerDaylyReward = 33;				//true=可以领，false= 不可以领
+	optional int64 honor = 34;               // 荣誉
+}
+
+//玩家各个排行榜膜拜情况
+message WorshipState
+{
+	optional int32 worshipType = 1; //1:皇帝 2：战力排行
+	optional bool canWorship = 2;//是否可以膜拜 false=不可以 true=可以
+}
+
+//**********************************协议定义***************************************
+
+//玩家心跳请求(C2S_SYS_HEARTBEAT = 1)
+message C2S_SYS_HEARTBEAT {
+}
+
+//玩家心跳返回结果(S2C_SYS_HEARTBEAT = 110)
+message S2C_SYS_HEARTBEAT {
+	required int64 serverTime = 1; //服务器时间
+}
+
+//玩家登录请求(C2S_PLAYER_LOGIN_ACT  = 2)
+message C2S_PLAYER_LOGIN_ACT {
+	required string	param = 1;	//登录参数,isp为0时，就是账号，大于0时就是sdk登录参数(sdk参数是一个json格式)
+	
+	required string	device =2;		//设备信息 华为，苹果，
+	required string	deviceSys =3;	//设备系统 ios,安卓
+	required string	deviceBrand =4;	//设备品牌 苹果,华为,vivo等
+	required string deviceType  =5;	//设备型号 iphone8,iphoneX,iphone11,华为mate10等
+	required int32	ISP =6;			//运营商Id
+	required int32	platform =7;	//渠道ID
+	optional int32  loginFlag = 8;	//客户端启动后，生成唯一标志，后端用于区分是否闪断重连（可以用系统时间作为标志就可以了，后端必须保证客户端启动后生成，然后就不再改变。）。
+	optional string distinctId  =9;	//游客id
+}
+
+message S2C_PLAYER_LOGIN_ACT {
+	optional int32 isp=1;		//运营商ID
+	optional string param = 2;	//参数{"uid":10010}
+}
+
+
+//创角通知(S2C_PLAYER_CREATE_NOTICE = 101)
+message S2C_PLAYER_CREATE_NOTICE {
+
+}
+
+
+//创建角色(C2S_PLAYER_CREATE = 5)
+message C2S_PLAYER_CREATE {
+	required string nikeName = 1;	//昵称
+	required int32 head = 2; 		//头像编号
+	required int32 countryId = 3;	//国家
+	optional int32 gender = 4;		//性别 0=男 1=女，默认0
+}
+
+//登录成功后发送(S2C_PLAYER_LOGIN_DATA = 106)
+message S2C_PLAYER_LOGIN_DATA{
+	required PlayerInfo playerInfo = 1;
+	required int64 serverTime = 2; //服务器时间
+	optional int64 openServerTime = 3; //开服时间
+}
+
+// 获取推荐国家(C2S_PLAYER_RECOMMEND_COUNTRY = 3)
+message C2S_PLAYER_RECOMMEND_COUNTRY{
+	
+}
+
+// 获取推荐国家(S2C_PLAYER_RECOMMEND_COUNTRY = 102)
+message S2C_PLAYER_RECOMMEND_COUNTRY{
+	required int32 countryId = 1;	//人数最少的国家id
+}
+
+//获取随机昵称请求(C2S_PLAYER_RANDOM_NAME = 4)
+message C2S_PLAYER_RANDOM_NAME {
+	optional int32 gender = 1;//1=男，0=女，默认0
+}
+
+//获取随机昵称结果(S2C_PLAYER_RANDOM_NAME = 103)
+message S2C_PLAYER_RANDOM_NAME {
+	required string nickName = 1;
+}
+
+//请求数据初始化开始（请求之后将用户激活）
+message C2S_DATAINIT_START{
+
+}
+
+//登录结束
+message C2S_DATAINIT_END{
+
+}
+message S2C_DATAINIT_END{
+
+}
+
+
+
+//玩家综合信息
+message C2S_PLAYER_INTEGRATED_INFORMATION{
+	required int64 playerId=1;			//角色ID
+}
+
+message S2C_PLAYER_INTEGRATED_INFORMATION{
+	required HeadPortrait headPortrait=1;//玩家头像
+	required int64 fight=2;	//玩家战力
+	repeated GeneralWinInfo generalWinInfo =3;//武将头像列表
+	optional int32 level = 4; // level
+	optional int32 labourUnionOfficial = 5; // 军团官职
+}
+
+//玩家修改玩家昵称
+message C2S_PLAYER_RESET_NICKNAME{
+	required string nickName = 1;
+}
+
+message S2C_PLAYER_RESET_NICKNAME{
+	required int32 code = 1;//0=成功
+	optional string nickName = 2;
+}
+
+//玩家设置，目前仅头像
+message C2S_PLAYER_SETTING{
+	required int32 headPic = 1;
+	required int32 headType = 2;
+}
+
+message S2C_PLAYER_SETTING{
+	required int32 code = 1;//0=成功
+	optional int32 headPic = 2;
+	
+}
+
+//****************************************推送信息*********************************
+
+// 推送角色异地登录(PUSH_REMOTE_LOGIN = 142)
+message PushRemoteLogin{
+
+}
+
+
+
+
+//*************************协议定义*****************************
+
+//获取快速商店商品可购买数量，价格区间( 3850)
+message C2S_GET_QUCKLY_SHOP_BUY_GOODS {
+	required int32 goodsId =1;					//商品id
+}
+
+//获取快速商店商品可购买数量，价格区间( 3851)
+message S2C_GET_QUCKLY_SHOP_BUY_GOODS {
+	required int32 goodsId =1;						//商品id
+	required int32 priceIndex =2;					//价格区间 从0开始
+	required int32 canButCount =3;					//可购买数
+	required int32 resultCode = 4; 					//错误码提示
+}
+
+
+//购买快速商店商品( 3852)
+message C2S_QUCKLY_SHOP_BUY_GOODS {
+	required int32 goodsId =1;					//商品id
+	required int32 num = 2; 					//购买数量
+}
+
+//购买快速商店商品结果( 3853)
+message S2C_QUCKLY_SHOP_BUY_GOODS {
+	required int32 resultCode = 1;					//根据错误码提示
+}
+	
+//将领排行信息
+message HeroRank
+{
+	required int64 heroId = 1;              //将领ID
+	required int32 heroLv = 2;           	//将领等级
+	required int32 heroQuality = 3;       	//将领当前星级
+	required int32 heroStar = 4;       		//将领当前星级
+	required int64 value = 5;         		//武将排行值
+	required int32 rank = 6;                //玩家战力排行
+	required int32 countryId = 7;			//国家id
+	required int64 playerId = 8;			//玩家ID
+	required string nickName = 9;			//玩家昵称
+
+}
+
+//通用排行信息
+message CommRank
+{
+	required HeadPortrait playerHead = 1; 	// 头像
+	required int32 rank = 2;                //玩家战力排行
+ 	required int64 value = 5;          		//排行数值	
+}
+
+//联盟
+message RankLegionMessage{
+	required int32 rank = 1; 		//排名
+	optional int64 legionId = 2; 	//联盟id
+	optional string legionName = 3; //联盟名称
+	optional int32 legionIcon = 4;	//联盟图标
+	optional int64 value = 5; 		//排行数据
+	required int32 countryId = 6;	//国家id
+}
+
+//国家排行
+message RankCountryMessage {
+	required int32 countryId = 1;
+	repeated int32 citySize = 2;
+	optional HeadPortrait kingHead = 3; 	//国王头像
+}
+
+
+
+//获取通用排行榜 cmd:22102
+message C2S_RANK_COMM
+{
+	required int32 rankId = 1;          //排行榜Id
+	required int32 page=2;				//页码
+}
+
+//获取通用排行榜
+message S2C_RANK_COMM
+{
+	required int32 rankId=1;			//排行榜Id
+	repeated bytes rankData = 3;		//排行信息列表
+	required int32 page=4;				//页码
+	optional bytes userRankData = 5;	//玩家信息
+}
+
+message RechargeInfo {
+	optional int64 rechargeGold = 1; // 充值元宝
+	optional int64 rechargeMoney = 2; // 充值金额
+	optional int32 vipExp = 3; // vip经验
+	optional int32 vipLevel = 4; // vip等级
+	optional bool vipDailyReward = 5; // vip每日奖励
+	repeated int32 receivedVipLevelReward = 6; // vip等级奖励已领取 
+}
+
+message RechargeItemCount {
+	optional int32 itemId = 1;
+	optional int32 count = 2;
+}
+
+message C2S_RECHARGE_INFO {
+}
+
+message S2C_RECHARGE_INFO {
+	optional RechargeInfo rechargeInfo = 1;
+	repeated int32 rechargeIds = 2;//已充值过shopid
+}
+
+message C2S_RECHARGE {
+	optional int32 id = 1;
+}
+
+//使用玉石购买
+message C2S_JADE_BUY {
+ optional int32 shopId = 1; //商品id
+}
+
+//使用元宝购买
+message C2S_GOLD_BUY {
+ optional int32 shopId = 1; //商品id
+}
+
+
+//发货
+message S2C_RECHARGE {
+	optional int32 id = 1;
+	repeated ValuesMessage reward = 2;
+	
+}
+
+message C2S_VIP_DAILY_REWARD {
+}
+
+message S2C_VIP_DAILY_REWARD {
+	optional int32 errorCode = 1;
+	optional RechargeInfo rechargeInfo = 2;
+}
+
+message C2S_VIP_LEVEL_REWARD {
+	optional int32 level = 1;
+}
+
+message S2C_VIP_LEVEL_REWARD {
+	optional int32 errorCode = 1;
+	optional RechargeInfo rechargeInfo = 2;
+}
+
+//获取订单
+message C2S_PLAY_ORDERNO {
+	required int32 itemId = 1;
+}
+
+message S2C_PLAY_ORDERNO {
+	required int64 orderNo = 1;		//订单号
+	required int32 itemId = 2;		//重置道具ID
+	required int32 price = 3;		//价格
+	required string name = 4;		//名称
+}
+
+//请求充值表配置信息
+message C2S_RECHARGE_CONFIGS{
+	repeated int32 rechargeIds = 1;
+	optional int32 activityId = 2;
+}
+
+//返回充值表配置信息
+message S2C_RECHARGE_CONFIGS{
+	repeated RechargeConfig rechargeConfig = 1;
+	optional int32 activityId = 2;
+}
+
+
+//*************************数据结构定义****************************
+
+
+
+//***********************************协议*****************************************
+//激活缘分
+message C2S_RELATION_EFFECT {
+	required int32 id = 1;//缘分id
+}
+//激活缘分
+message S2C_RELATION_EFFECT {
+	required int32 id = 1;//缘分id
+	required int32 code = 2;//0=成功 1=失败
+}
+
+//已激活的缘分列表
+message C2S_RELATION_LIST {
+	
+}
+//已激活的缘分列表
+message S2C_RELATION_LIST {
+	repeated int32 relationList = 5;//
+}
+
+
+
+
+//*************************数据结构定义****************************
+
+//
+message RechargeRewardMessage{
+	repeated int32 generalIds = 1;
+	repeated ValuesMessage message = 2;
+}
+
+//请求获得商城信息(GET_SHOP_MESSAGE = 4401)
+message GetShopMessageReq{
+
+}
+
+//请求获得商城信息(GET_SHOP_MESSAGE = 4401)
+message GetShopMessageResp{
+	required bool canReceiveWeekCard = 1;//今日是否可以领取周卡
+	required bool canReceiveMonthCard = 2;//今日是否可以领取月卡
+	required int32 weekCardDays = 3;//周卡剩余有效天数
+	required int32 monthCardDays = 4;//月卡剩余有效天数
+	required int32 rechargeNum = 5;// 累计充值金币额
+	required bool buy = 6;//是否已经购买成长基金
+	repeated int32 alreadyReceive = 7;//已经领取奖励对应的配置表id
+	required int32 buyGiftBagTimes = 8;//购买礼包次数
+	required int32 nextChargeId = 9;//下个充值编号,-1代表无
+}
+
+//请求获得订单(人民币购买的物品)(GET_SHOP_ORDER = 4402)
+message GetOrderReq{
+	required int32 goodsId = 1;//商品id
+	required int32 type = 2;//商店类型
+}
+
+//返回订单(人民币购买的物品)(GET_SHOP_ORDER = 4402)
+message GetOrderResp{
+	required string sign = 1;
+}
+
+//请求购买商品(游戏内部货币购买)(BUY_GOODS = 4403)
+message BuyGoodsReq{
+	required int32 goodsId = 1;
+}
+
+//返回购买商品信息(游戏内部货币购买)(BUY_GOODS = 4403)
+message BuyGoodsResp{
+	repeated ValuesMessage message = 1;
+}
+
+//通知发货(人民币购买的物品发货)(DELIVERY_GOODS_BY_RMB = 4404)
+message DeliveryGoodsByRMBResp{
+	repeated ValuesMessage message = 1;//奖励
+	required int32 type = 2;//商店类型
+}
+
+//累计充值奖励(ACCUMULATIVE_RECHARGE_REWARD = 4405)
+message AccumulativeRechargeRewardResp{
+	optional RechargeRewardMessage message = 1;
+}
+
+//请求获得周卡月卡每日奖励(RECEIVE_DAY_CARD_REWARD = 4406)
+message ReceiveDayCardRewardReq{
+	required int32 type = 1;//类型（2周卡，3月卡）
+}
+
+//返回获得周卡月卡每日奖励(RECEIVE_DAY_CARD_REWARD = 4406)
+message ReceiveDayCardRewardResp{
+	repeated ValuesMessage message = 1;
+}
+
+//购买成长基金(BUY_GROW_FUND = 4407)
+message BuyGrowFundReq{
+
+}
+
+//购买成长基金返回(BUY_GROW_FUND = 4407)
+message BuyGrowFundResp{
+	required bool result = 1;//true表示成功
+}
+
+//领取h成长基金奖励(RECEIVE_GROW_FUND_REWARD = 4408)
+message ReceiveGrowFundRewardReq{
+	required int32 id = 1;//配置表id
+}
+
+//领取成长基金奖励返回(RECEIVE_GROW_FUND_REWARD = 4408)
+message ReceiveGrowFundRewardResp{
+	repeated ValuesMessage values = 1;//奖励信息
+}
+
+//首冲奖励(FIRST_RECHARGE_REWARD = 4409)
+message FirstRechargeRewardResp{
+	optional RechargeRewardMessage message = 1;
+}
+//*************************数据结构定义****************************
+
+
+//*************************协议定义********************************
+
+//请求签到信息(GET_SIGN_UP = 4301)
+message GetSignUpReq{
+
+}
+
+//返回签到信息(GET_SIGN_UP = 4301)
+message GetSignUpResp{
+	required int32 times = 1;//签到次数
+	required bool supplement = 2;//是否需要补签
+//	required bool signUp = 3;//今日是否签到
+	required int32 lastTime = 3;//上次签到时间
+	repeated int32 notReceiveExtras = 4;//可以获得的额外奖励列表
+	repeated int32 receiveExtras = 5;//已经领取的额外奖励
+	optional int32 supplementTimes = 6;
+	optional int32 rewardStatus = 7;//可补领状态，0：不能补领，1：能补领
+}
+
+//签到(SIGN_UP = 4302)
+message SignUpReq{
+	
+}
+
+//签到返回(SIGN_UP = 4302)
+message SignUpResp{
+	repeated ValuesMessage vaule = 1;
+	required bool supplement = 2;//是否需要补签
+	
+}
+
+//补签(SUPPLEMENT_SIGN_UP = 4303)
+message SupplementSignUpReq{
+
+}
+
+//补签返回(SUPPLEMENT_SIGN_UP = 4303)
+message SupplementSignUpResp {
+	repeated ValuesMessage vaule = 1;
+	required bool supplement = 2;//是否需要补签
+	optional int32 supplementTimes = 3;
+}
+
+//请求获得额外奖励(RECEIVE_SIGN_UP_EXTRA_REWARD = 4304)
+message ReceiveSignUpExTraRewardReq {
+	required int32 id = 1;//要获取的额外奖励的id
+}
+
+//获得额外奖励返回(RECEIVE_SIGN_UP_EXTRA_REWARD = 4304)
+message ReceiveSignUpExTraRewardResp {
+	repeated ValuesMessage vaule = 1;
+}
+
+//补领(PATCH_COLLAR_REWARD = 4305)
+message PatchCollarReq {
+
+}
+
+//补领返回(PATCH_COLLAR_REWARD = 4305)
+message PatchCollarResp {
+	repeated ValuesMessage vaule = 1;
+}
+//*************************数据结构定义****************************
+
+message ShopData{
+ required RechargeConfig rechargeConfigs = 1; //商品数据
+ required int32 buyCount = 2;//该商品的购买次数
+}
+
+//***********************************协议*****************************************
+
+//获取商城商品数据
+message C2S_SURPRISE_MARKET {
+
+}
+message S2C_SURPRISE_MARKET {
+ repeated ShopData shopdata = 1; //商品数据
+ required bool update = 2;//true:更新，false：未更新
+ }
+
+
+
+
+//*************************数据结构定义****************************
+
+
+//方法次数
+message FunCount{
+	required int32 id = 1;						//方法ID
+	required int32 useCount = 2;				//已使用次数
+	required int32 maxCount = 3;				//可以最大使用次数
+	required int32 buyAmountCount = 4;			//购买动作次数
+	required int32 maxBuyAmountCount = 5;		//最大购买动作次数
+	optional int32 reCount = 6;					//剩余次数
+	optional int32 reBuyAmountCount = 7;		//剩余购买次数
+}
+
+//申请怪物数据
+message C2S_SYS_GENERAL_WIN_INFO{
+	required int32 npcId = 1;
+}
+
+message S2C_SYS_GENERAL_WIN_INFO{
+	repeated GeneralWinInfo generalWinInfo = 1;//怪物数据
+	required int32 npcId = 2;
+}
+
+message GeneralAttribute{
+	required int32 generalId = 1;	//武将ID
+	required int32 fight=2;			//将战力
+	repeated AttributeValue allAttribute = 3;//全部属性
+	repeated AttributeValue soldierAttribute = 4;
+}
+
+//属性变更通知
+message S2C_SYS_GENERAL_ATTRIBUTES_NOTICE{
+	repeated GeneralAttribute generalAttribute = 1;//武将属性 
+}
+
+message C2S_SYS_FUNCOUNT{
+}
+
+//次数通知 11
+message S2C_SYS_FUNCOUNT{
+	repeated FunCount funCount=1;	//使用次数列表
+}
+
+message TaskCondition{
+	required int32 conditionBaseId = 1;		//任务条件配置表id
+	required int64 count = 2;				//现在已经收集到的数量或等级
+	required int32 state = 3;				//条件状态  0未完成 1已完成未领奖 2已领奖
+	optional int64 maxCount=4;				//前端存值使用，后端不用
+	optional int32 order=5;					//前端存值使用，后端不用
+}
+
+message TaskLink{
+	required int32 rewardOrderType=1;	//奖励字段模式0:rewardOrderLink 1:rewardOrder
+	optional int32 rewardOrderLink=2;	//领取到的第几个order
+	repeated int32 rewardOrder = 3;		//领取过的才发 31个 X/31
+	required int32 overOrder=4;			//任务条件领取奖励的最大order
+	required int64 count = 5;			//现在已经收集到的数量或等级
+	optional int64 nextCount = 6;		//合并后下一个为完成的条件count
+}
+
+message TaskData{
+	required int32 taskId=1;			//任务配置表ID
+	required int32 taskType=2;			//任务类型
+	optional int32 activityId=3;		//活动ID
+	repeated TaskCondition condition=4;	//任务条件
+	optional TaskLink taskLink=5;		//任务条件
+}
+
+
+message C2S_TASK_LIST{
+}
+
+// 21250
+message S2C_TASK_LIST{
+	repeated TaskData taskList=1; 	//任务数据
+}
+
+//进度更新
+message S2C_TASK_PROGRESS{
+	repeated TaskData taskList=1; 			//任务数据
+}
+
+//接取任务请求
+message C2S_TASK_RECEIVE{
+	required int32 taskId=2;			//任务配置表ID
+}
+
+//通知前端，接取任务 21252
+message S2C_TASK_RECEIVE{
+	required TaskData taskData=2;		//任务数据
+}
+
+//领取奖励 21253
+message C2S_TASK_REWARD{
+	required int32 taskId=1;			//任务配置表ID
+	required int32 taskConditionId=2;	//任务配置表条件ID
+}
+
+message C2S_TASK_REWARD_MULTI {
+	repeated int32 taskConditionId = 1;
+}
+message S2C_TASK_REWARD_MULTI {
+	repeated TaskCondition taskCondition = 1;
+}
+
+//领取奖励 21253
+message S2C_TASK_REWARD{
+	required int32 state=1;	//响应状态 0成功 1失败
+	optional int32 taskId=2;				//任务配置表ID
+	optional int32 taskConditionId=3;	//任务配置表条件ID
+	optional int32 taskType=4;			//任务类型
+	optional int32 activityId=5;		//任务活动ID
+	
+}
+
+message Liveness{
+	required int32 id = 1;					//活跃度ID
+	required int32 state = 2;				//激活状态 0-不能领取 1-可领取 2-已领取
+}
+
+
+//活跃度奖励列表 cmd:21401
+message C2S_LIVENESS_INFO{
+}
+message S2C_LIVENESS_INFO{
+	required int32 liveness = 1;  //活跃度
+	repeated Liveness infos = 2;  //活跃度信息列表
+}
+
+
+//领取活跃度奖励 cmd:21402
+message C2S_LIVENESS_RECEIVE{
+	required int32 id = 1; //活跃度ID
+}
+message S2C_LIVENESS_RECEIVE{
+	required int32 state = 1; 	//0-成功 1-失败
+	required int32 id = 2; 		//活跃度ID
+}
+
+
+//通过活动ID获得这个活动的任务列表
+message C2S_ACTIVITY_TASK_LIST{
+	required int32 activityId=1;	//活动ID
+}
+
+message S2C_ACTIVITY_TASK_LIST{
+	repeated TaskData taskList=1; 	//任务数据
+	required int32 activityId=2;	//活动ID
+}
+
+//*************************数据结构定义**************************
+
+//招募结果
+message TavernAttractResult {
+	required int32 type = 1; 	//类型(8:武将;9:道具)
+	required int32 code = 2; 	//code值根据类型决定 例如：武将id，道具id
+	required int64 value = 3; 	//值 数量
+	
+}
+
+//*************************协议定义*****************************
+
+//请求酒馆信息(TAVERN_INFO = 801)
+message TavernInfoReq {
+}
+
+//酒馆信息响应(TAVERN_INFO = 801)
+message TavernInfoResp {
+	optional int32 attractNum = 1;
+	optional int32 freeAttract = 2;
+	required int32 score = 3;
+}
+
+//招揽请求(TAVERN_TEN_ATTRACT = 802)
+message TavernAttractReq{
+    required int32 tavernType = 1 ;	// 0--1次  1---10次
+}
+
+//招揽结果(TAVERN_TEN_ATTRACT = 802)
+message TavernAttractResp{
+	required int32 tavernType = 1 ;	// 0--1次  1---10次
+	repeated TavernAttractResult result = 2; // 获得奖励
+}
+
+//积分兑换红将
+message C2S_SCORE_EXCHANGE{	
+	
+}
+
+message S2C_SCORE_EXCHANGE{
+	repeated TavernAttractResult result = 2; // 获得奖励
+}
+
+
+
+//*************************数据结构定义****************************
+
+// 编组  4801 - 4829
+
+
+//编组数据元
+message TeamGeneralData{
+	required int32 generalId  = 1;	//武将ID(兵力由配置表提供，不做补兵处理)
+	required int32 position  = 2;	//武将阵位1-5
+	repeated int32 minSoldierCount=3;//武将所带的小兵，index:小兵数量 (兵力由补兵获得)
+	required int32 minSoldierTotalCount=4;//小兵所有血量
+	required int32 generalLevel = 5; 		//武将当前等级
+	required int32 generalStar = 6;   //武将当前星级
+}
+
+message TeamData{
+	required int32 id=1;		//编组唯一ID
+	required int32 order=2;		//编组排序 0-9
+	required int32 teamType=3;	//编组类型 1世界 2关卡 3擂台 4巡查 5竞技场 6竞技场防守 7boss挑战
+	required int32 state=4;		//编组状态 0空闲 1队列 2国战中 4行走 5战斗中
+	repeated TeamGeneralData teamGeneralData=5;	//编组队伍列表
+	required int32 cityId=6;	//部队所在城市 非世界类型的均为0
+	optional bool autoFill = 7;
+}
+
+
+message C2S_TEAM_LIST{
+	required int32 teamType=1;	//编组类型 1世界 2关卡部队 3竞技场部队
+	required int64 targetId=2;  //查看其他玩家部队信息（默认为0）
+}
+
+message S2C_TEAM_LIST{
+	repeated TeamData teamList=1;		//队伍列表
+	required int32 defaultTeamOrder=2;	//默认编组order
+}
+
+//选择通用队伍默认order
+message C2S_TEAM_SELECT{
+	required int32 order=2;		//编组排序 0-5
+}
+
+message S2C_TEAM_SELECT{
+	required int32 state=1;	//0成功 大于0就是错误原因
+}
+
+//获取队伍最大数
+message C2S_TEAM_COUNT{
+}
+message S2C_TEAM_COUNT{
+	required int32 maxCount=2;		//允许组建的最大编组数
+}
+
+//更新
+message C2S_TEAM_UP{
+	required int32 teamType=1;	//编组类型 1世界 2关卡部队 3竞技场部队
+	required int32 order=2;		//编组排序 0-9 只有世界才有0-9，其他类型只有一个队伍，直接传0
+	repeated int32 generalId  = 3;//武将列表 [武将1,0,武将2,0,0]
+}
+
+message S2C_TEAM_UP{
+	required int32 state=1;	//0成功 大于0就是错误原因
+}
+
+//补充兵力
+message C2S_TEAM_SUPPLEMENTARY_TROOPS{
+	required int32 soldierType=1;	//补兵类型 0全部 1步兵 2骑兵 3弓箭兵
+	required int32 order=2;		//编组排序 0-9 只有世界才有0-9，其他类型只有一个队伍，直接传0
+}
+
+message S2C_TEAM_SUPPLEMENTARY_TROOPS{
+	required int32 state=1;	//0成功 大于0就是错误原因
+}
+
+
+//Gold补充兵力(金币补兵不从兵营取兵)
+message C2S_TEAM_GOLD_SUPPLEMENTARY_TROOPS{
+	required int32 order=2;		//编组排序 0-9 只有世界才有0-9，其他类型只有一个队伍，直接传0
+}
+
+message S2C_TEAM_GOLD_SUPPLEMENTARY_TROOPS{
+	required int32 state=1;	//0成功 大于0就是错误原因
+}
+
+// 4871
+message C2S_TEAM_SET_AUTOFILL {
+	optional int32 order = 1;
+	optional bool flag = 2;
+}
+// 4872
+message S2C_TEAM_SET_AUTOFILL {
+	optional int32 order = 1;
+	optional bool flag = 2;
+}
+//*************************数据结构定义****************************
+
+message Technology {
+	optional int32 id = 1;
+	optional int32 level = 2;
+}
+
+message TechnologyUpgradeState {
+	optional int32 id = 1;
+	optional int32 start = 2;
+	optional int32 end = 3;
+	optional int32 speed = 4;
+}
+//**********************************协议定义***************************************
+
+// C2S_TECHNOLOGY_VIEW = 2507;
+message C2S_TECHNOLOGY_VIEW {
+
+}
+
+// S2C_TECHNOLOGY_VIEW = 2508
+message S2C_TECHNOLOGY_VIEW {
+	repeated Technology technoloyList = 1;
+	optional TechnologyUpgradeState upgradeState = 2;
+}
+
+// C2S_TECHNOLOGY_UPGRADE = 2509;
+message C2S_TECHNOLOGY_UPGRADE {
+	optional int32 id = 1;
+	optional bool gold = 2;
+}
+
+// S2C_TECHNOLOGY_UPGRADE = 2510;
+message S2C_TECHNOLOGY_UPGRADE {
+	optional int32 errorCode = 1;
+	optional bool gold = 2;
+	optional TechnologyUpgradeState upgradeState = 3;
+	optional Technology technology = 4;
+}
+
+// C2S_TECHNOLOGY_INFO = 2511;
+message C2S_TECHNOLOGY_INFO {
+	optional int32 id = 1;
+}
+
+// S2C_TECHNOLOGY_INFO = 2512;
+message S2C_TECHNOLOGY_INFO {
+	optional Technology technology = 1;
+}
+
+// C2S_TECHNOLOGY_SPEEDUP = 2513;
+message C2S_TECHNOLOGY_SPEEDUP {
+	optional int32 id = 1;
+	optional int32 itemId = 2;
+	optional int32 num = 3;
+}
+
+// S2C_TECHNOLOGY_SPEEDUP = 2514;
+message S2C_TECHNOLOGY_SPEEDUP {
+	optional int32 errorCode = 1; // 0 success
+	optional TechnologyUpgradeState state = 2;
+}
+//*************************数据结构定义****************************
+
+//宝物信息
+message TreasureMessageInfo{
+	optional int32 itemId = 2;//道具id
+	optional string mainAttribute = 3;//主属性
+	repeated TreasureSkillInfo skillInfos = 4;//技能id
+	optional int32 quality = 5;//品质
+	optional int32 level = 6;//等级
+	optional int32 generalId = 7;//拥有改宝物的武将
+	optional int32 star = 8;//宝物星级
+	repeated TreasureHoleInfo holes = 9;//宝物孔镶嵌的宝石id,定长，若无则赋值为0
+	optional int32 suitId = 10;//套装id
+	optional string allAttribute = 11;//全部属性
+	repeated int32 secondAttrId = 12; // second attr id	
+}
+
+//宝物技能信息
+message TreasureSkillInfo{
+	optional int32 skillId = 2; // 技能id ，该值为0或没有值，表示还未获得
+	optional int32 level  = 3;  //技能等级
+}
+
+//宝物孔位信息
+message TreasureHoleInfo{
+	required int32 pos = 1;//位置
+	required int32 gemstoneId = 2;//装配的宝石
+}
+
+//请求列表(TREASURE_ALL_INFO = 3901)
+message GetTreasureMessageInfoReq{
+	
+}
+
+//返回列表(TREASURE_ALL_INFO = 3901)
+message GetTreasureMessageInfoResp{
+	repeated TreasureMessageInfo infos = 1;//宝物信息
+}
+
+//宝物升级(TREASURE_UPGRADE = 3902)
+message TreasureUpgradeReq{
+	required int32 itemId = 1;//玩家宝物id
+}
+
+//宝物升级(TREASURE_UPGRADE = 3902)
+message TreasureUpgradeResp{
+	required TreasureMessageInfo info = 1;//宝物信息
+	required bool success = 2;//是否成功
+	required bool critSuccess = 3;//是否暴击
+	required int32 level = 4;//增加或者回退的等级，增加为正，回退为负
+}
+
+//宝物升星(TREASURE_UPGRADE_STAR = 3903)
+message TreasureUpgradeStarReq{
+	required int32 itemId = 1;//玩家宝物id
+}
+
+//宝物升星(TREASURE_UPGRADE_STAR = 3903)
+message TreasureUpgradeStarResp{
+	required TreasureMessageInfo info = 1;//宝物信息
+}
+
+//宝物装配宝石(TREASURE_ASSEMBLING_GEMSTONE = 3904)
+message TreasureAssemblingGemstoneReq {
+	required int32 itemId = 1;//玩家宝物id
+	required int32 pos  = 2; //位置
+	optional int32 gemstoneId = 3;//宝石id，若无为卸下宝石，宝石id为道具表内的id
+}
+
+//宝物装配宝石(TREASURE_ASSEMBLING_GEMSTONE = 3904)
+message TreasureAssemblingGemstoneResp {
+	required TreasureMessageInfo info = 1;//宝物信息 
+}
+
+//获得宝物(GAIN_TREASURE = 3905)
+message GainTreasureResp{
+	repeated TreasureMessageInfo infos = 1;//宝物信息
+}
+
+//武将装配宝物(TREASURE_ASSEMBLING_GENERAL = 3906)
+message TreasureAssemblingGeneralResp {
+	required TreasureMessageInfo info = 1;//宝物信息 
+}
+//*************************数据结构定义**************************
+
+
+//*************************协议定义*****************************
+//获取资源加成(VALUEBUFF_TYPE_ADD = 1501)
+message ValueBuffAddReq {
+	required int32 type = 1 ;		//资源类型（1：金币；2：银两；3：粮食；4：军工；5：经验；6：大理石；7：铁） 
+}
+
+//加成结果(VALUEBUFF_TYPE_ADD = 1501)
+message ValueBuffAddResp {
+	required double sumAdd = 1 ;		//总的加成，小数
+}
+
+
+//*************************数据结构定义****************************
+
+// 世界地图  4801 - 4829
+
+
+//地图事件数据里的用户信息
+message UserMapEventData{
+	required int32 teamId  = 1; 		//队伍ID
+	required int32 startTime  = 2; 		//
+	required int32 endTime  = 3; 		//
+	required int32 speedTime=4;			//加速时间
+	required int64 battleId  = 5; 		//战场ID
+}
+
+//地图事件数据元
+message MapEventData{
+	required int32 eventCoordinatesId=1;
+	required int32 eventDataId = 2;
+	optional UserMapEventData userMapEventData = 3;
+}
+
+//拜访数据
+message VisitEventData{
+	required int32 visitId=1;
+	required int32 cityId=2;
+	optional int32 generalId = 3; // visiting general
+	optional int32 refreshStamp = 4;
+	optional int32 speed = 5;
+	optional int32 refreshCount = 6;
+}
+
+message PlayerMadeInfo{
+    required int32 generalId = 1; //武将id        
+    required int32 cityId = 2; //城池id
+    required int64 startDate = 3; //开始建造时间        
+    repeated int32 levelReward = 4; //等级奖励领取记录（城市等级1,2,3,3,4.....）
+    required int32 sumExp = 5; //城池总经验
+    required int64 endDate = 6; //结束建造时间
+    required int32 madeLevel = 7; //开始建造时城池等级
+    required int64 speedTime = 8; //加速时间
+    
+
+}
+
+message CityProgress{
+	required int32 cityId = 1; //城池id        
+    required int32 progress = 2; //当前城池经验值
+
+}
+
+//**********************************协议定义***************************************
+
+//请求世界地图数据(CITY_BATTLE_LOAD_WORLD_MAP = 601)
+message CityBattleLoadWorldMapReq {
+	optional int32 version = 1; //城池缓存的数据版本
+}
+
+//请求世界地图数据结果(CITY_BATTLE_LOAD_WORLD_MAP = 601)
+message CityBattleLoadWorldMapResp {
+	repeated CityInfo cityInfo = 1; 		//城池列表
+	repeated MapEventData mapEventData=2;	//世界地图事件列表
+	repeated VisitEventData visitEventData=3;//拜访事件列表
+	repeated int32 mapUnLock=4;				//解锁的城池ID列表
+	optional int32 wordLv = 5; 				//世界等级
+	optional int32 version = 6; 			//城池缓存的数据版本
+}
+//退出世界地图
+message CITY_BATTLE_EXIT_WORLD_MAP{
+}
+
+//城市变更
+message S2C_CITY_UPDATE{
+	repeated CityInfo cityInfo=1;//城市更新信息
+}
+
+//移动请求数据元
+message TeamMoveData{
+	required int32 teamId  = 3; 		//队伍ID
+	repeated int32 cityPath= 6;		//城市路径 从A点到X点，队伍当前所在城市点为A点
+}
+
+//移动基础数
+message TeamMoveDataResp{
+	required int32 moveType  = 1; 		//移动类型 1去城市 2回
+	required int64 playerId  = 2; 		//玩家ID
+	required string playerName  = 10; 		//玩家名字
+	required int32 teamId  = 3; 		//队伍ID
+	required string teamName  = 4; 		//队伍名字
+	required int32 teamHeadId  = 5; 	//队伍头像 第一个武将头像
+	repeated int32 cityPath= 6;		//城市路径
+	required int32 startTime=7;		//A点开始走的时间
+	required int32 endTime=8;		//A点到B点的结束时间
+	required int32 countryId=9;		//国家ID
+}
+
+message TeamValueKey{
+	required int32 countryId = 1;		//国家ID
+	required int64 playerId  = 2; 		//玩家ID
+	required int32 teamId  = 3; 		//队伍ID
+ }
+
+
+//队伍移动到目标 4816
+message C2S_TEAMMOVE_TO{
+	repeated TeamMoveData teamMoveData  = 1; 	//移动基础数据
+	optional int32 cityId  = 2;                 //城池id
+}
+
+message S2C_TEAMMOVE_TO{
+	repeated TeamMoveDataResp teamMoveDataResp  = 1; 	//移动基础数据
+}
+
+//移动数据列表 4818
+message C2S_TEAMMOVE_LIST{
+	repeated TeamValueKey teamValueKey=1; //空的话就是从新生成 非空就补充到额定数量队伍
+}
+
+message S2C_TEAMMOVE_LIST{
+	repeated TeamMoveDataResp teamMoveDataResp  = 1; 	//移动基础数据
+}
+
+//移动加速 4820
+message C2S_TEAMMOVE_QUICKEN{
+	required int32 teamId  = 1; 	//队伍ID
+	required int32 type    = 2; 	//加速类型，1道具加速 2金币加速(没有道具的时候自动转换成金币)
+	required int32 itemId  = 3; 	//道具ID
+}
+
+message S2C_TEAMMOVE_QUICKEN{
+	optional TeamMoveDataResp teamMoveDataResp  = 1; 	//移动基础数据
+}
+
+//队伍请求返回 4822
+message C2S_TEAMMOVE_RETURN{
+	required int32 teamId  = 1; 	//队伍ID
+	required int32 itemId  = 2; 	//道具ID
+}
+
+message S2C_TEAMMOVE_RETURN{
+	required TeamMoveDataResp teamMoveDataResp  = 1; 	//移动基础数据
+}
+
+//移除队伍
+message S2C_TEAMMOVE_DEL{
+	required int64 playerId  = 1; 		//玩家ID
+	required int32 teamId  = 2; 		//队伍ID
+}
+
+
+//世界地图事件操作
+message C2S_WORLDMAP_EVENT_ACT{
+	required int32 eventCoordinatesId=1;
+	required int32 eventDataId=2;
+	required int32 teamId  = 3; 		//队伍ID
+	optional int32 cityId  = 4;         //城池ID
+}
+
+message S2C_WORLDMAP_EVENT_ACT{
+	required int32 state=1;	//0成功 大于0就是错误原因
+	optional MapEventData mapEventData=2;	//世界地图事件列表
+}
+
+//事件完成
+message S2C_WORLDMAP_EVENT_OVER{
+	required int32 eventCoordinatesId=1;
+	required int32 eventDataId=2;
+	required string rewards=3;
+	optional int32 teamId = 4;
+}
+
+//事件战斗完成
+message S2C_WORLDMAP_EVENT_WAR_OVER{
+	required int32 eventCoordinatesId=1;
+	required int32 eventDataId=2;
+	required int64 battleId=3;
+	required bool isVictory=4;//	是否胜利
+	repeated ValuesMessage valuesMessage = 5;//奖励信息
+	optional MapEventData mapEventData = 6;
+	optional int32 teamId = 7;
+}
+
+//采集加速
+message C2S_WORLDMAP_EVENT_COLLECTION_QUICKEN{
+	required int32 eventCoordinatesId=1;
+	required int32 itemId  = 2; 	//道具ID 0则是元宝加速
+	required int32 count  = 3; 		//个数
+}
+
+message S2C_WORLDMAP_EVENT_COLLECTION_QUICKEN{
+	required int32 state=1;	//0成功 大于0就是错误原因
+	optional MapEventData mapEventData=2;	//世界地图事件列表
+}
+
+//拜访系统 5800+
+
+// 5802
+message S2C_VISIT_EVENT_UPDATE {
+	optional int32 state = 1; // 0: fail , 1:win
+	optional VisitEventData visitEventData = 2; 
+}
+
+// 5803
+message C2S_GENERAL_VISIT {
+	optional int32 cityId = 1;
+	optional int32 generalId = 2;
+}
+
+// 5804
+message S2C_GENERAL_VISIT {
+	optional int32 errorCode = 1;
+}
+
+//情报
+message C2S_WORLDMAP_INFORMATION{
+	required int32 countryId  = 1; 	//国家ID
+}
+
+message MassMap{
+	required int32 cityId=1;		//目标城市
+    required int32 teamCount=2;		//总的部队数
+    required int32 timeArrival=3;	//最近的到达时间
+}
+
+message DefCity{
+	required int32 countryId  = 1; 	//国家ID
+	required int32 cityId=2;		//城市
+}
+
+message S2C_WORLDMAP_INFORMATION{
+	repeated int32 atkCity=1;
+	repeated DefCity defCity=2;
+	repeated MassMap massMap=3;
+	repeated MassMap enemyMassMap=5;
+}
+
+//集结信号
+message S2C_WORLDMAP_INFORMATION_MASS_NOTICE{
+	required int32 enemyAndUs	= 1;	//敌我 1攻击方 2防守
+	required int32 countryId 	= 2; 	//发生事件的国家
+	required int32 targetCity	= 3;	//发生事件城市
+}
+
+// C2S_MILITARYMERITS_REWARD_INFO = 4819;
+message C2S_MILITARYMERITS_REWARD_INFO {
+}
+// S2C_MILITARYMERITS_REWARD_INFO = 4820;
+message S2C_MILITARYMERITS_REWARD_INFO {
+	repeated int32 receivedIds = 1;
+}
+// C2S_MILITARYMERITS_REWARD_RECEIVE = 4821;
+message C2S_MILITARYMERITS_REWARD_RECEIVE {
+	optional int32 id = 1;
+}
+// S2C_MILITARYMERITS_REWARD_RECEIVE = 4822;
+message S2C_MILITARYMERITS_REWARD_RECEIVE {
+	optional int32 errorCode = 1;
+	optional int32 id = 2;
+}
+
+//C2S_GET_MAP_EVENT_DATA = 4823;
+message C2S_GET_MAP_EVENT_DATA {
+	repeated int32 eventCoordinatesId = 1;
+}
+
+//S2C_GET_MAP_EVNET_DATA = 4824;
+message S2C_GET_MAP_EVENT_DATA {
+	repeated MapEventData mapEventData = 1;
+}
+
+
+// C2S_VISIT_DATA_REFRESH = 5805;
+message C2S_VISIT_DATA_REFRESH {
+	optional int32 cityId = 1;
+}
+
+message S2C_VISIT_DATA_REFRESH {
+	optional VisitEventData visitEventData = 1;
+}
+
+// C2S_VISIT_CD_SPEED = 5807;
+message C2S_VISIT_CD_SPEED {
+	optional int32 cityId = 1;
+	optional bool gold = 2;
+	optional int32 itemId = 3;
+	optional int32 itemCount = 4;
+}
+
+message S2C_VISIT_CD_SPEED {
+	optional VisitEventData visitEventData = 1;
+}
+
+// C2S_UNLOCK_CITY = 4825
+message C2S_UNLOCK_CITY {
+	optional int32 cityId = 1;
+	optional int32 teamId = 2;
+}
+
+// S2C_UNLOCK_CITY = 4826
+message S2C_UNLOCK_CITY {
+	optional int32 cityId = 1;
+	optional int32 errorCode = 2;
+}
+
+//购买事件次数(采集，剿匪，收集)
+message C2S_MAP_EVENT_BUY{
+	required int32 type=1; //1采集 2收集 3野战
+}
+
+message S2C_MAP_EVENT_BUY{
+	required int32 state=1;
+}
+
+
+//城市对应国家
+message C2S_COUNTRY_CITY{
+	
+}
+
+message S2C_COUNTRY_CITY{
+	repeated DefCity defCity=1; //1采集 2收集 3野战
+}
+
+//查看玩家城池建造信息
+message C2S_CITY_MADE_INFO{
+    required int32 cityId = 1; //当前城池id
+}
+
+message S2C_CITY_MADE_INFO{
+    repeated PlayerMadeInfo playerMadeInfo = 1; //建造列表
+    optional int32 sumExp = 2; //当前城池总经验
+	repeated CityProgress cityProgress = 3; //城池建造信息
+	optional int32 npcLevel = 4; //NPC守军等级
+}
+
+//城池建造
+message C2S_CITY_MADE{
+	required int32 generalId = 1; //武将id	
+	required int32 cityId = 2; //城池id
+	required bool isNow = 3;//是否立刻完成
+}
+
+message S2C_CITY_MADE{
+	repeated PlayerMadeInfo playerMadeInfo = 1;//当前武将城池建造信息
+}
+
+//城池建造加速
+message C2S_CITY_MADE_SPEED{
+    required int32 cityId = 1; //城池id
+    required int32 itemId = 2; //道具id
+    required int32 num = 3; //数量
+}
+
+message S2C_CITY_MADE_SPEED{
+    repeated PlayerMadeInfo playerMadeInfo = 1;//当前武将城池建造信息
+}
+
+//领取城池升级奖励
+message C2S_CITY_MADE_REWARD{
+	required int32 cityId = 1; //城池id
+	required int32 generalId = 2; //城池id
+}
+
+message S2C_CITY_MADE_REWARD{
+	required string rewards=1;
+}
+
+message worshipData
+{
+	required int32 worshipType=1;		//膜拜类型
+	optional int64 playerId = 2;		//玩家Id
+	optional int32 rank = 3;			//排名（目前战力榜专用）
+	optional int32 beWorshipCount = 4;  //被膜拜次数
+}
+
+
+//膜拜信息
+message C2S_WORSHIP_INFO
+{
+	required int32 worshipType=1;		//膜拜类型
+}
+
+//膜拜信息
+message S2C_WORSHIP_INFO
+{
+	repeated worshipData datas = 1; 
+}
+
+
+//膜拜
+message C2S_WORSHIP
+{
+	required int32 worshipType=1;		//膜拜类型 1：皇帝 2:战力排行
+	optional int32 rank=2;			    //膜拜第几名(目前战力榜专用,其它膜拜传0)
+}
+
+//膜拜
+message S2C_WORSHIP
+{
+	optional int32 ret=1;			    //膜拜结果0=成功
+	optional int32 worshipType=2;		//膜拜类型
+    optional bool canWorship = 3;		//是否可以膜拜 false=不可以 true=可以
+	repeated ValuesMessage message = 4; //奖励
+}
+
+
+
+

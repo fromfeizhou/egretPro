@@ -1,0 +1,41 @@
+<e:Skin class="ChatMainWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*"  height="750" width="1334">
+	<e:Image source="border_004_jpg" left="0" top="0" right="0" bottom="0"/>
+	<com_main:ComTabGroup id="m_comTabGroup" skinName="com_tab_group" left="0" top="0" bottom="0" width="174"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<e:ViewStack id="m_tabViewStack" bottom="0" selectedIndex="1" left="174" top="0" right="0" touchEnabled="false"/>
+	<e:Group id="m_pWordRoot" left="175" right="0" bottom="0" touchEnabled="false">
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" height="97" source="border_009_png" scale9Grid="25,27,8,6" y="176" width="100%" x="0"/>
+		<e:Group anchorOffsetY="0" anchorOffsetX="0" height="62" y="197" left="17" right="257">
+		<com_main:CImage width="100%" height="100%" x="0" y="0" scale9Grid="5,6,3,46" source="chatInputbg_png" anchorOffsetX="0"/>
+		<e:Label id="m_labInput" text="请在此输入文本" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" height="99%" textAlign="left" verticalAlign="middle" size="25" type="input" bold="true" textColor="0xAFA992" width="99%" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group width="248" height="84" anchorOffsetY="0" right="0" bottom="0">
+		<com_main:CImage id="m_btnFace" source="legionchatMessIcon_png" x="40" y="38.5" scaleX="1" scaleY="1" anchorOffsetX="40" anchorOffsetY="37.5"/>
+		<com_main:ComButton id="m_btnSend" anchorOffsetX="72.5" anchorOffsetY="30" skinName="com_button" x="156" y="40" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="m_pFaceRoot" width="855" height="190" anchorOffsetX="0" anchorOffsetY="0" x="65" y="0" visible="false">
+		<com_main:CImage height="100%" y="0" x="0" source="border_026_png" scale9Grid="6,6,17,18" width="100%"/>
+		<e:Group id="m_pFaces" width="100%" height="100%" y="0" x="0">
+			<com_main:CImage source="FChat_01_png" x="10" y="9" name="01" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_02_png" x="341" y="187" name="02" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_03_png" x="434" y="302" name="03" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_04_png" x="514" y="246" name="04" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_05_png" x="449" y="267" name="05" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_06_png" x="449" y="291" name="06" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_07_png" x="387" y="335" name="07" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_08_png" x="366" y="340" name="08" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_09_png" x="326" y="324" name="09" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_10_png" x="490" y="346" name="10" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_11_png" x="466" y="334" name="11" scaleX="2" scaleY="2"/>
+			<com_main:CImage source="FChat_12_png" x="410" y="330" name="12" scaleX="2" scaleY="2"/>
+			<e:layout>
+			<e:TileLayout paddingLeft="6" horizontalGap="16"/>
+			</e:layout>
+		</e:Group>
+		</e:Group>
+	</e:Group>
+	<e:Group id="m_pTipsRoot" bottom="0" left="175" right="0" visible="false">
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" height="97" source="border_009_png" scale9Grid="25,27,8,6" width="100%" x="0" y="0"/>
+		<e:Label id="m_labTips" text="未加入联盟前不能在联盟频道发言" y="40" size="24" textColor="0xABB7D1" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

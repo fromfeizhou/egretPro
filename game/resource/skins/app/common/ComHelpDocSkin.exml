@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComHelpDocSkin" width="870" height="540" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+    <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="8" top="9" bottom="6" right="11"/>
+	<e:Image source="border_1008_png" left="0" right="0" top="72" scaleY="-1"/>
+	<e:Scroller width="728.79" height="383.33" x="64" y="108" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group>
+			<e:Label id="m_lbContent" text="" y="5" textColor="0xabb7d1" size="20" fontFamily="Microsoft YaHei" lineSpacing="2" anchorOffsetX="0" scaleX="1" scaleY="1" width="725" x="0"/>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

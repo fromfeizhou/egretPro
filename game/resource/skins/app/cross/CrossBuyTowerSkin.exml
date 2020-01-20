@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossBuyTowerSkin" width="678" height="490" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+    <e:Group width="682" height="491" x="0" y="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="0" top="0" bottom="0" right="0"/>
+			<e:Label id="m_lbMain" text="可为本服在战场中建造箭塔防守占领区。建造者可立即获得1000荣誉值奖励" x="37" y="84" textColor="0xabb7d1" fontFamily="Microsoft YaHei" size="24" anchorOffsetX="0" width="615" anchorOffsetY="0" height="67" lineSpacing="10"/>
+			<e:Image x="39" y="156" source="border_1013_png"/>
+			<e:Label id="m_buildName" text="樊城东部城区" x="261" y="173" size="26" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+			<e:Group id="m_tower0" width="324" height="267" x="11" y="213" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image x="-11" y="-56" source="zyt_gj_wg_png" alpha="0.8"/>
+				<e:Image x="74" y="16" source="border_031_png" scale9Grid="24,24,31,33" anchorOffsetX="0" width="171" anchorOffsetY="0" height="243" alpha="0.6"/>
+				<e:Image x="73" y="40" source="line_1005_png" width="4" height="172"/>
+				<e:Image x="242" y="40" source="line_1005_png" width="4" height="172"/>
+				<e:Label text="1号箭塔" x="123" y="21" size="20" fontFamily="Microsoft YaHei" textColor="0xaac7ff"/>
+				<e:Group id="m_modelGroup0" width="149" height="187" x="83" y="26" anchorOffsetX="0" anchorOffsetY="0">
+				</e:Group>
+                <com_main:ComCostButton id="m_btnbuy0" y="194" skinName="com_cost_button" currentState="style1" x="87"/>
+				<e:Image id="m_lbBuilded0" x="116" y="209" source="lb_yjz_png" visible="false"/>
+			</e:Group>
+			<e:Group id="m_tower1" width="324" height="267" x="350" y="213" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image x="-11" y="-56" source="zyt_gj_wg_png" alpha="0.8"/>
+				<e:Image x="74" y="16" source="border_031_png" scale9Grid="24,24,31,33" anchorOffsetX="0" width="171" anchorOffsetY="0" height="243" alpha="0.6"/>
+				<e:Image x="73" y="40" source="line_1005_png" width="4" height="172"/>
+				<e:Image x="242" y="40" source="line_1005_png" width="4" height="172"/>
+				<e:Label text="2号箭塔" x="123" y="21" size="20" fontFamily="Microsoft YaHei" textColor="0xAAC7FF"/>
+				<e:Group id="m_modelGroup1" width="149" height="187" x="83" y="26" anchorOffsetX="0" anchorOffsetY="0"/>
+				<com_main:ComCostButton id="m_btnbuy1" y="194" skinName="com_cost_button" currentState="style1" x="87"/>
+				<e:Image id="m_lbBuilded1" x="116" y="209" source="lb_yjz_png" visible="false"/>
+			</e:Group>
+			<e:Image x="338" y="221" source="line_1007_png" height="250"/>
+	</e:Group>
+</e:Skin>

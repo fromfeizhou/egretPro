@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_army_time" width="140" height="90" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="base,none" >
+	<e:Image y="67.2" source="proBg_003_png" width="90" height="16" horizontalCenter="0"/>
+	<e:Image id="m_pPross" y="68.2" width="88" horizontalCenter="0" height="14" source="pro_003_png"/>
+	<e:Group y="10" horizontalCenter="0">
+		<com_main:ComState id="m_comState" x="0" y="15" skinName="ComStateSkin"/>
+		<e:Label id="m_pLbNum" text="玩家" y="0" size="18" includeIn="base" x="14" textColor="0x00C6FF" height="40" verticalAlign="middle" stroke="2" strokeColor="0x000000"/>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+	<e:Label id="m_pLbTime" text="00:00:00" y="66" size="18" horizontalCenter="0.5" textColor="0xe9e9e6"/>
+	<e:Image y="2" horizontalCenter="1" scaleX="1" scaleY="1" source="border_016_png" width="32" height="32" includeIn="base" visible="false"/>
+
+</e:Skin>

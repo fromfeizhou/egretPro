@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionInfoViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="683" width="1161">
+	<e:Group id="m_pViewRoot" verticalCenter="0" horizontalCenter="0" width="1151" height="683" touchEnabled="false">
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" width="787" height="675" y="9" x="366">
+			<com_main:CScroller id="m_Scroller" anchorOffsetY="0" anchorOffsetX="0" width="772" horizontalCenter="-0.5" top="84" bottom="104">
+			<e:List id="m_pMemberList" width="100%" anchorOffsetX="0" height="100%" anchorOffsetY="0" name="m_finishList" x="0" y="4" itemRendererSkinName="LegionInfoCellSkin">
+				<e:layout>
+				<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+			</com_main:CScroller>
+			<com_main:ComTabTopGroup id="m_comTabTopGroup" skinName="com_tab_top_group" top="4" left="0" right="0" height="70"/>
+		</e:Group>
+		<e:Group id="m_bottomGroup" anchorOffsetX="0" anchorOffsetY="0" height="99" y="585" left="366" right="0">
+			<e:Image anchorOffsetX="0" anchorOffsetY="0" height="99.22" bottom="0" source="border_009_png" scale9Grid="22,27,12,9" right="0" left="0"/>
+			<com_main:ComButton id="m_BtnApply" anchorOffsetX="72" anchorOffsetY="30.67" currentState="style1" skinName="com_button" right="225" bottom="16"/>
+			<com_main:ComButton id="m_settingBtn" anchorOffsetX="72" anchorOffsetY="30.67" currentState="style1" skinName="com_button" right="426" bottom="16"/>
+			<com_main:ComButton id="m_BtnMessage" anchorOffsetX="72" anchorOffsetY="30.67" currentState="style1" skinName="com_button" right="27" bottom="16"/>
+		</e:Group>
+		<e:Group id="m_infoGroup" height="100%" width="366" x="0" y="3">
+			<com_main:CImage scaleX="1" scaleY="1" source="border_019_png" scale9Grid="27,27,9,9" anchorOffsetX="0" anchorOffsetY="0" top="0" right="0" bottom="0" left="17"/>
+			<com_main:CImage y="0" scaleX="1" scaleY="1" source="legionCmmInfobg_png" anchorOffsetX="0" left="18" right="7"/>
+			<com_main:CImage id="m_pImgIcon" y="32" scaleX="1" scaleY="1" horizontalCenter="3" source="tb_jt_1_png"/>
+			<com_main:CImage y="313.97" scaleX="1" scaleY="1" source="border_1001_png" width="234" height="38" horizontalCenter="2" anchorOffsetY="0"/>
+			<e:Label id="m_labLegionName" text="大家好才是真的好" y="315.97" scaleX="1" scaleY="1" horizontalCenter="2" fontFamily="Microsoft YaHei" textColor="0xe7d7a7"/>
+			<e:Label id="m_labMzName" text="盟主：lili" y="366.65" scaleX="1" scaleY="1" size="25" left="112" fontFamily="Microsoft YaHei" textColor="0x8a8a9e"/>
+			<e:Label id="m_labPeopleNum" text="成员：200" y="403.21" scaleX="1" scaleY="1" size="25" left="112" fontFamily="Microsoft YaHei" textColor="0x8a8a9e"/>
+			<e:Group width="304" height="66" y="234" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="21">
+			<e:Image y="-5" source="legion_fightbg_png" x="12" scaleX="1" scaleY="1"/>
+			<e:BitmapLabel id="m_labGuildFight" font="fight_font_fnt" text="1222" y="11" letterSpacing="-12" x="118" scaleX="1" scaleY="1"/>
+			</e:Group>
+
+			<e:Group bottom="12" anchorOffsetX="175.64" anchorOffsetY="112.61" horizontalCenter="1" left="9" right="7">
+			<com_main:CImage y="106.06" scaleX="1" scaleY="1" source="border_020_png" height="217" scale9Grid="29,28,7,5" anchorOffsetY="106.06" anchorOffsetX="159.27" left="21" right="9"/>
+			<com_main:CImage y="27.21" scaleX="1" scaleY="1" source="line_007_png" anchorOffsetX="57.25" anchorOffsetY="21.21" width="104.12" horizontalCenter="-112"/>
+			<com_main:CImage y="27.21" scaleX="-1" scaleY="1" source="line_007_png" anchorOffsetX="61.41" anchorOffsetY="21.21" width="110.18" horizontalCenter="118"/>
+			<e:Label text="联盟宣言" y="18.2" scaleX="1" scaleY="1" size="25" horizontalCenter="-2" fontFamily="Microsoft YaHei" textColor="0xe9e9e6"/>
+			<e:Scroller anchorOffsetY="0" anchorOffsetX="0" height="171.18" y="52.03" left="14" right="-13" horizontalCenter="13.5">
+				<e:Group anchorOffsetX="0" anchorOffsetY="0" width="100%">
+				<e:Label id="m_declarationtext" text="" scaleX="1" scaleY="1" textAlign="left" width="309" height="159" size="24" anchorOffsetY="0" anchorOffsetX="0" lineSpacing="8" y="7" fontFamily="Microsoft YaHei" horizontalCenter="-2" textColor="0x8a8a9e"/>
+				</e:Group>
+			</e:Scroller>
+			<e:Image id="m_changeDes" source="tb-xg_png" right="6" bottom="1"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pOperaRoot" x="876.93" anchorOffsetX="0" y="514" width="220" visible="false">
+			<e:Image scaleX="1" scaleY="1" source="legionMBottomtip_png" scale9Grid="66,28,105,7" top="0" bottom="-15" left="0" right="0"/>
+			<e:List id="m_pOperaList" anchorOffsetX="0" anchorOffsetY="0" width="180" y="15" horizontalCenter="0" itemRendererSkinName="LegionOpreaRdSkin">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="top" gap="6"/>
+			</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Group>
+</e:Skin>

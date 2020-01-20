@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HistoryBattlesSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="border_004_jpg" left="0" right="0" top="0" bottom="0"/>
+	<e:Group id="m_Group" verticalCenter="0">
+		<com_main:HistoryBattleChapter id="m_PrevChapter" scaleX="1" scaleY="1" skinName="HistoryBattleChapterSkin" x="-1334"/>
+		<com_main:HistoryBattleChapter id="m_CurChapter" y="0" scaleX="1" scaleY="1" skinName="HistoryBattleChapterSkin"/>
+		<com_main:HistoryBattleChapter id="m_NextChapter" scaleX="1" scaleY="1" skinName="HistoryBattleChapterSkin" x="1334"/>
+	</e:Group>
+	<com_main:HistoryBattlesReward id="m_RewardBar" skinName="HistoryBattleRewardSkin" bottom="0" width="100%" x="0"/>
+	<e:Group horizontalCenter="0" top="10" width="584" height="60">
+		<com_main:CImage source="border_1001_png" top="0" left="0" right="0" bottom="0"/>
+		<com_main:CImage source="line_1003_png" horizontalCenter="0" top="0" scaleY="-1"/>
+		<com_main:CImage source="line_1005_png" rotation="-90" horizontalCenter="0" bottom="0"/>
+		<e:Label id="m_Title" text="标题" left="0" right="0" top="0" bottom="0" verticalAlign="middle" textAlign="center"/>
+	</e:Group>
+	<com_main:CImage id="m_BtnBack" left="0" top="0" source="btn_008_up_png"/>
+	<com_main:CImage id="m_BtnPrev" source="btn_024_up_png" left="50" verticalCenter="0"/>
+	<com_main:CImage id="m_BtnNext" source="btn_024_up_png" rotation="180" right="50" verticalCenter="0"/>
+	<e:Image id="m_ImgNotch" source="border_006_png" top="0" bottom="0" width="0" x="0"/>
+</e:Skin>

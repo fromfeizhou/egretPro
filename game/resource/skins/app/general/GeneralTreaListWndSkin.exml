@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralTreaListWndSkin" width="1044" height="556" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="1044" height="556">
+		<com_main:APopUp id="m_APopUp" skinName="APopUpSkin" currentState="size3" anchorOffsetY="0" height="556" alpha="1" y="0"/>
+		<e:Scroller anchorOffsetX="0" anchorOffsetY="0" height="333" y="74.01" left="14" right="14">
+			<e:List id="m_pItemList">
+				<e:layout>
+					<e:TileLayout paddingLeft="17" paddingTop="13" horizontalGap="22" verticalGap="25" paddingBottom="20"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<com_main:ComButton id="m_btnEquip" x="402" y="438.7" skinName="com_button" currentState="style2"/>
+		<e:Label text="提示：选中对应宝物装备" y="518.71" size="22" textColor="0x8a8a9e" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

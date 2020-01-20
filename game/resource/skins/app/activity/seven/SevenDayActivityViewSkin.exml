@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenDayActivityViewSkin" width="654" height="470" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Group id="m_pViewRoot" touchEnabled="false" width="100%" height="100%" anchorOffsetY="0" x="0">
+			<e:Scroller id="m_itemScroll" height="100%" y="0" anchorOffsetY="0" x="0" width="654">
+				<e:List id="m_actiList" width="654" anchorOffsetX="0" anchorOffsetY="0"
+				        itemRendererSkinName="SevenDayActivityCellSkin">
+					<e:layout>
+						<e:VerticalLayout/>
+					</e:layout>
+					<e:ArrayCollection>
+						<e:Array>
+							<e:Object name="第一天" />
+							<e:Object name="第二天" />
+							<e:Object name="第三天" />
+							<e:Object name="第四天" />
+							<e:Object name="第五天" />
+							<e:Object name="第六天" />
+							<e:Object name="第七天" />
+						</e:Array>
+					</e:ArrayCollection>
+				</e:List>
+			</e:Scroller>
+		</e:Group>
+	</e:Group>
+</e:Skin>

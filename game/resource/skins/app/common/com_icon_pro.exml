@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="com_icon_pro" width="53" height="55" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="state1,state2,state3,state4"  width.state4="53" height.state4="55">
+	<com_main:CImage id="m_imgBg" width="53" height="55" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source.state4="tavern_general_type_bj_png" width.state4="53" height.state4="55" source="tavern_general_type_bj_png"/>
+	<com_main:CImage width="29" height="29" verticalCenter.state3="0" horizontalCenter.state3="0" source="tavern_wj_B2-1_png" source.state1="general_wj_B-1_png" width.state1="40" height.state1="40" horizontalCenter.state1="0" verticalCenter.state1="0" source.state2="general_wj_B-3_png" width.state2="40" height.state2="40" horizontalCenter.state2="0" verticalCenter.state2="0" source.state3="general_wj_B-2_png" width.state3="40" height.state3="40" source.state4="general_wj_B-4_png" width.state4="40" height.state4="40" horizontalCenter.state4="3.5" verticalCenter.state4="-1.5"/>
+</e:Skin>

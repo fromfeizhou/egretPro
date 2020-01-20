@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="item_source_view" width="606" height="610" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group left="0" top="0" bottom="0" right="0">
+		<com_main:APopUp id="m_apopUp" x="0" skinName="APopUpSkin" anchorOffsetY="0" scaleX="1" scaleY="1" currentState="size4" top="0" bottom="0"/>
+		<e:Image source="border_1008_png" y="125.67" left="10" right="10"/>
+		<com_main:ComItemNew id="m_itemView" x="42" y="78.99" skinName="com_item_new" currentState="base"/>
+		<e:Label id="m_labName" text="刘备碎片" y="99.66" size="24" x="154.3" scaleX="1" scaleY="1" textColor="0xe9e9e6" textAlign="left"/>
+		<e:Label id="m_labNum" text="0" y="145.33" size="24" x="236.3" scaleX="1" scaleY="1" textColor="0xE9E9E6" textAlign="left"/>
+		<e:Label text="已拥有" x="154.3" y="145.33" size="22" textColor="0x8A8A9E" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="m_labDes" text="武将兵书.........." x="49.5" y="218" size="20" textColor="0x8a8a9e" anchorOffsetY="0" height="58.33" anchorOffsetX="0" width="511.61" scaleX="1" scaleY="1"/>
+		<e:Scroller width="526" height="303.94" y="297.33" scaleX="1" scaleY="1" horizontalCenter="0" anchorOffsetY="0" x="17">
+			<e:Group id="m_groupRender" anchorOffsetY="0">
+			<e:layout>
+				<e:VerticalLayout gap="6" verticalAlign="top"/>
+			</e:layout>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

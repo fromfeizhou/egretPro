@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HeadQuartersRewardSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1334">
+	<com_main:CImage height="100%" source="border_009_png" y="4" width="100%" x="0"/>
+	<e:Group height="20" verticalCenter="0.5" y="90" scaleX="1" scaleY="1" width="489" x="544">
+		<com_main:CImage id="m_imgProBg" source="pro_005_png" top="0" bottom="0" scale9Grid="3,3,18,18" width="489" x="0"/>
+		<com_main:CImage id="m_imgPro" source="pro_006_png" scale9Grid="3,4,313,26" x="-2" y="-2" scaleX="1" scaleY="1" width="205.5" height="24"/>
+		<com_main:HeadQuartersRewardBox id="m_Box0" skinName="HeadQuartersRewardBoxSkin" verticalCenter="0" y="17" scaleX="1" scaleY="1" width="150" x="76.25"/>
+		<com_main:HeadQuartersRewardBox id="m_Box1" skinName="HeadQuartersRewardBoxSkin" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" y="17" scaleX="1" scaleY="1" width="150" x="247.75"/>
+		<com_main:HeadQuartersRewardBox id="m_Box2" skinName="HeadQuartersRewardBoxSkin" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" y="17" scaleX="1" scaleY="1" width="150" x="399"/>
+	</e:Group>
+	<e:Group height="62" verticalCenter="0.5" anchorOffsetX="0" y="69" scaleX="1" scaleY="1" width="150" x="395">
+		<com_main:CImage source="border_006_png" scaleX="1" scaleY="1" right="0" left="0" top="0" bottom="0"/>
+		<com_main:CImage source="border_008_png" scaleX="1" scaleY="1" right="0" left="0" top="0" bottom="0"/>
+		<com_main:CImage scaleX="1" scaleY="1" left="0" verticalCenter="0" source="common_star_png"/>
+		<com_main:CLabel id="m_labCur" text="9/" verticalAlign="middle" textAlign="right" fontFamily="Microsoft YaHei" size="26" anchorOffsetX="0" textColor="0xf4ca7c" width="49" x="40" height="62" verticalCenter="0"/>
+		<com_main:CLabel id="m_labAllS" text="12" verticalAlign="middle" textAlign="left" fontFamily="Microsoft YaHei" anchorOffsetX="0" size="22" width="40" height="62" x="91" verticalCenter="0"/>
+	</e:Group>
+	<e:Group x="33" verticalCenter="-5" width="313" height="63">
+		<e:Group width="283" x="0" height="62" y="0" touchChildren="false" touchEnabled="false">
+			<com_main:CLabel text="剩余扫荡次数" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="26" textColor="0xabb7d1" verticalCenter="0" x="0"/>
+			<e:Group x="166" verticalCenter="0">
+				<com_main:CImage source="border_006_png" scaleX="1" scaleY="1" x="0" y="0" height="50" width="110"/>
+				<com_main:CLabel id="m_ResetTime" text="9" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="26" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group x="249" y="0">
+			<com_main:CImage id="m_BtnBuyTimes" source="btn_011_up_png" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" width="64" y="56" scaleX="1" scaleY="1" horizontalCenter="0" height="63"/>
+		</e:Group>
+	</e:Group>
+	<e:Image id="m_imgEquip" source="city_icon_dz_png" verticalCenter="0" anchorOffsetX="55" anchorOffsetY="50" right="17"/>
+	<e:Image id="m_imgGen" source="city_icon_wj_png" verticalCenter="0" anchorOffsetX="55" anchorOffsetY="50" right="134"/>
+	<com_main:CLabel id="m_labTime" text="剩余扫荡次数" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="20" textColor="0xABB7D1" verticalCenter="33.5" x="33"/>
+</e:Skin>

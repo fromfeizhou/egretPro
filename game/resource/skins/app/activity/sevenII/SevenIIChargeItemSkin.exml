@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIIChargeItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group anchorOffsetX="0" y="0" x="0">
+		<e:Image source="zyt_30_png" anchorOffsetY="0" height="130" anchorOffsetX="0" width="1026"/>
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" scaleX="1" scaleY="1" y="15" right="38" width="265" height="98">
+			<e:Label id="m_labBuyNum" text="进度：200000/300000" textColor="0xE4BF66" stroke="1" strokeColor="0x383838" size="24" anchorOffsetX="0" textAlign="center" fontFamily="Microsoft YaHei" y="0" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Group id="m_pState" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:Image id="m_imgBg" source="com_wzk8_png" scaleX="0.7" scaleY="0.7" rotation="-15" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label id="m_labState" text="已领取" size="24" textColor="0xE9E9E9" rotation="-20" fontFamily="Microsoft YaHei" x="40" y="47"/>
+			</e:Group>
+			<com_main:ComButton id="m_pBtnGet" xmlns:com_main="com_main.*" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" y="65" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_group" x="292.48" y="17.96" anchorOffsetX="0">
+			<e:layout>
+			<e:HorizontalLayout gap="24"/>
+			</e:layout>
+		</e:Group>
+		<e:Group x="100" y="7">
+			<e:Group x="7" y="56">
+				<e:Image source="zyt_31_png" x="0" y="0"/>
+				<e:BitmapLabel id="m_pLbGold" font="font_vip_fnt" text="100" y="5" horizontalCenter="0"/>
+			</e:Group>
+			<e:Image id="m_imgTitle" source="lb_dbczyb_png" x="0" y="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

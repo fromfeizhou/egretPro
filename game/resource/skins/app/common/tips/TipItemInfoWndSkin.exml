@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TipItemInfoWndSkin" width="504" height="525" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="equip,trea,public"  height.public="282">
+	<e:Group height="525" anchorOffsetX="0" anchorOffsetY="0" width="504" height.public="282">
+		<e:Group id="m_pEquipInfo" height="100%" y="0" width="504" x="0" height.public="282">
+			<e:Image source="border_039_png" scale9Grid="15,14,34,18" left="0" top="0" bottom="0" right="0" touchEnabled="false" anchorOffsetY="0"/>
+			<e:Image source="border_1008_png" x="0" y="355" anchorOffsetX="0" width="502" scaleY="-1" anchorOffsetY="0" height="352" scale9Grid="119,9,83,57" height.public="100%" y.public="282"/>
+			<e:Image source="border_1008_png" x="3" y="355" anchorOffsetX="0" width="497" scaleY="-1" anchorOffsetY="0" height="352" scale9Grid="119,9,83,57" alpha="0.5" height.public="100%" y.public="282" width.public="502" x.public="0"/>
+			<e:Group y="170" includeIn="public" anchorOffsetX="0" width="467" anchorOffsetY="0" height="100" x="19">
+				<com_main:CLabel id="m_labDes" text="顶顶" verticalAlign="middle" lineSpacing="5" stroke="0" size="20" fontFamily="Microsoft YaHei" textAlign="left" scaleX="1" scaleY="1" textColor="0xabb7d1"/>
+				<e:layout>
+				<e:VerticalLayout paddingBottom="17" paddingRight="20" horizontalAlign="left" paddingLeft="5"/>
+				</e:layout>
+			</e:Group>
+			<e:Image source="line_1006_png" y="160" right="0" left="0" x="0" scaleX="1" scaleY="1" left.public="0" right.public="0" y.public="149"/>
+			<e:Image source="line_1006_png" y="372" right="0" left="0" x="-600" scaleX="1" scaleY="1" includeIn="equip,trea" left.trea="0" right.trea="0" y.trea="354"/>
+
+			<e:Label id="m_labEquipName" text="装备名称" x="136.4" y="22.52" size="26" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" y.public="32.52"/>
+			<e:Label text="拥有：" x="136.4" y="77.52" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" includeIn="public" textColor="0xabb7d1"/>
+			<e:Label id="m_labNum" text="3" x="194.4" y="78.52" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" includeIn="public"/>
+			<e:Group x="136" y="56.67" scaleX="1" scaleY="1" includeIn="equip,trea">
+			<e:Image source="border_1036_png" y="1" height="30" includeIn="equip,trea"/>
+			<e:Image x="0" y="0" scaleX="0.8" scaleY="0.8" source="common_fight2_png" includeIn="equip,trea"/>
+			<e:Label id="m_labFight" text="战力：99999" x="30" y="7" size="20" textColor="0xffff99" includeIn="equip,trea"/>
+			</e:Group>
+			<e:Group x="136" y="89.4" scaleX="1" scaleY="1" includeIn="equip,trea">
+			<e:Image source="border_1036_png" y="1" height="30" includeIn="equip,trea" width.trea="150"/>
+			<e:Image id="m_imgAttriIcon" x="0" scaleX="0.8" scaleY="0.8" verticalCenter="1.5" source="common_armyhp_png" includeIn="equip,trea"/>
+			<e:Label id="m_labAttri" text="战力：99999" x="30" size="20" textColor="0x00ff00" y="7" includeIn="equip,trea"/>
+			</e:Group>
+			<e:List id="m_listSkill" y="71" anchorOffsetX="0" anchorOffsetY="0" width="100%" x="0" scaleX="1" scaleY="1" itemRendererSkinName="ComAttriRenderSkin" y.trea="238">
+				<e:layout>
+				<e:VerticalLayout paddingLeft.public="75" paddingLeft.equip="75" gap="13" horizontalAlign.trea="center" paddingLeft.trea="0" verticalAlign.trea="middle" gap.trea="15"/>
+				</e:layout>
+			</e:List>
+			<e:Group x="26" y="22.34">
+				<e:Label id="m_labLevel" text="装备名称" y="106.18" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textAlign="center" horizontalCenter="0" textColor="0xabb7d1"/>
+				<com_main:ComItemNew id="m_euipItem" x="1" y="1" skinName="com_item_new"/>
+			</e:Group>
+			<e:Image alpha="1" scaleX="1" scaleY="1" source="border_1013_png" width="100%" y="348" includeIn="trea"/>
+			<e:Group id="m_pGenRoot" y="356" width="100%" includeIn="trea">
+				<e:Label text="专属武将" size="24" scaleX="1" scaleY="1" y="13" x="204" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+				<com_main:GeneralHeadRender id="m_generalHead" skinName="com_general_head_render" currentState="none" scaleX="0.65" scaleY="0.65" y="57" x="75"/>
+				<e:Label id="m_labGenName" text="曹操" size="20" scaleX="1" scaleY="1" y="59" x="171" textColor="0xE9E9E6"/>
+				<e:List id="m_listAttriGen" y="96.04" anchorOffsetX="0" anchorOffsetY="0" itemRendererSkinName="ComAttriRenderSkin" x="170.52">
+				<e:layout>
+					<e:VerticalLayout gap="6"/>
+				</e:layout>
+				</e:List>
+			</e:Group>
+			<e:Group x="318" y="89.4" scaleX="1" scaleY="1" includeIn="trea">
+				<e:Image source="border_1036_png" y="1" height="30" includeIn="equip,trea" anchorOffsetX="0" width="150"/>
+				<e:Image id="m_imgAttriIcon0" x="0" scaleX="0.8" scaleY="0.8" verticalCenter="1.5" source="common_armyhp_png" includeIn="equip,trea"/>
+				<e:Label id="m_labAttri0" text="战力：99999" x="30" size="20" textColor="0x00FF00" y="7" includeIn="equip,trea"/>
+			</e:Group>
+			<e:Image source="border_1013_png" includeIn="trea" y="152" width="100%"/>
+			<e:Image source="border_1013_png" includeIn="trea" y="152" width="100%"/>
+			<e:Image source="border_1013_png" y="152" width="100%" includeIn="equip,trea"/>
+			<e:Label id="m_labSuitName" text="套装" y="175.2" size="24" textColor="0x8a8a9e" scaleX="1" scaleY="1" horizontalCenter="0" fontFamily="Microsoft YaHei" includeIn="equip,trea" text.trea="宝物技能" horizontalCenter.trea="0" y.trea="170.2" horizontalCenter.equip="0" y.equip="173.2" textColor.trea="0xabb7d1" textColor.equip="0xabb7d1"/>
+
+
+			<com_main:EquipItem id="m_suitItem0" x="26" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1" includeIn="equip"/>
+			<com_main:EquipItem id="m_suitItem1" x="142.02" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1" includeIn="equip"/>
+			<com_main:EquipItem id="m_suitItem2" x="260.03" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1" includeIn="equip"/>
+			<com_main:EquipItem id="m_suitItem3" x="374.66" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1" includeIn="equip"/>
+			<e:Group id="m_pAttriCon" height="94" y="397.02" anchorOffsetX="0" anchorOffsetY="0" width="454" horizontalCenter="0" includeIn="equip">
+			<e:layout>
+				<e:VerticalLayout gap="0"/>
+			</e:layout>
+			</e:Group>
+
+
+		</e:Group>
+	</e:Group>
+</e:Skin>

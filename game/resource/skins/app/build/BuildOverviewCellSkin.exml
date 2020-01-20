@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuildOverviewCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="590" x="0" y="0">
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" source="line_008_png" width="590" bottom="2"/>
+		<com_main:CLabel id="m_pTitleText" xmlns:com_main="com_main.*" text="科技研究" fontFamily="Microsoft YaHei" size="26" top="20" left="96"/>
+		<e:Group width="47" height="35" left="33" top="17">
+			<com_main:CImage id="m_pTitelIcon" xmlns:com_main="com_main.*" anchorOffsetX="0" anchorOffsetY="0" source="" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pCellRoot" width="590" x="0" top="69">
+		<e:layout>
+			<e:VerticalLayout/>
+		</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

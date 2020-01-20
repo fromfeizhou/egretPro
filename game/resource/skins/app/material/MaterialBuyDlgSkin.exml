@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MaterialBuyDlgSkin" height="490.67" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="676">
+	<e:Group height="490.67" width="676" x="0" y="0">
+		<com_main:APopUp id="m_PopUp" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" height="487.58" width="673"/>
+		<e:Image x="0" y="209" anchorOffsetY="0" anchorOffsetX="0" width="675.03" source="line_1006_png" scaleX="1" scaleY="1"/>
+		<com_main:ComCostTextButton id="m_comCostTextButton" currentState="size3" y="419" skinName="com_cost_text_button" anchorOffsetX="124.5" anchorOffsetY="41" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<com_main:CLabel id="m_description" text="(提升贵族等级可增加购买次数)" y="147.77" anchorOffsetY="0" anchorOffsetX="0" size="26" textColor="0x8A8A9E" width="357.63" height="48.51" horizontalCenter="0" x="-571" scaleX="1" scaleY="1"/>
+		<e:Group y="106.77" scaleX="1" scaleY="1" horizontalCenter="0">
+			<com_main:CLabel text="今天剩余可购买次数：" textAlign="left" verticalAlign="middle" size="26" y="0" anchorOffsetX="0" anchorOffsetY="0" textColor="0x8A8A9E" width="312" horizontalCenter="-0.5"/>
+			<com_main:CLabel id="m_itemNum" text="5" textAlign="left" verticalAlign="middle" size="28" y="0" anchorOffsetX="0" anchorOffsetY="0" x="255.58"/>
+		</e:Group>
+		<e:Image x="24.12" y="265.5" source="border_006_png" anchorOffsetY="0" height="41" anchorOffsetX="0" width="128" scaleX="1" scaleY="1"/>
+		<e:Image x="24.12" y="264.88" anchorOffsetY="0" height="41" anchorOffsetX="0" width="128" source="border_008_png" scale9Grid="52,17,13,13" scaleX="1" scaleY="1"/>
+		<com_main:CLabel id="m_itemSelectNum" text="1/10" textAlign="left" verticalAlign="middle" size="28" y="268.88" anchorOffsetX="0" anchorOffsetY="0" height="38" x="63.12" scaleX="1" scaleY="1"/>
+		<e:Group id="m_trainGroup" x="154.07" y="253.58" scaleX="1" scaleY="1">
+			<e:Image id="m_btnSub" x="0" y="-2" source="btn_010_up_png"/>
+			<e:Image id="m_btnAdd" x="417.34" y="-2" source="btn_011_up_png"/>
+			<ns1:Hslider id="m_slider" xmlns:ns1="*" x="92.38" y="12.02" anchorOffsetX="0" width="308" skinName="HsliderSkin" scaleX="1" scaleY="1" height="38"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

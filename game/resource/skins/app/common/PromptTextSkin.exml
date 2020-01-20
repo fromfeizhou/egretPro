@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PromptTextSkin" width="500" height="48" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetY="0" left="0" right="0" top="0" bottom="0" touchEnabled="false" touchChildren="false">
+		<e:Image id="m_pTextbg" source="border_1030_png" anchorOffsetX="249" anchorOffsetY="29" left="0" top="0" right="0" bottom="0" alpha="0.6" scale9Grid="20,3,62,21"/>
+		<e:Image id="m_pTextline1" source="line_009_png" alpha="0.65" scale9Grid="144,1,123,7" top="-3" left="14" right="14" height="6"/>
+		<e:Image id="m_pTextline2" source="line_009_png" alpha="0.65" scale9Grid="125,1,139,7" left="14" right="14" bottom="-5" height="6"/>
+		<com_main:CLabel id="m_pTextLabel" text="" verticalAlign="middle" textAlign="center" lineSpacing="5" stroke="0" size="40" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

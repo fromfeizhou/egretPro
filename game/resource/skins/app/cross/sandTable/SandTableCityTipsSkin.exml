@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SandTableCityTipsSkin" width="550" height="680" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="680" y="0" width="550" x="0">
+		<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size1" left="2" top="2" bottom="2" right="2"/>
+
+		<e:Scroller width="480" height="80" horizontalCenter="0" y="200">
+			<e:Group id="m_pItemsRoot0">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Scroller width="480" height="80" horizontalCenter="0" y="332">
+			<e:Group id="m_pItemsRoot1">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center"/>
+			</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Scroller width="480" height="80" horizontalCenter="0" y="464">
+			<e:Group id="m_pItemsRoot2">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center"/>
+			</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<com_main:CImage y="146" source="border_1013_png" horizontalCenter="0.5"/>
+		<com_main:CImage y="276" source="border_1013_png" horizontalCenter="0.5"/>
+		<com_main:CImage y="406" source="border_1013_png" horizontalCenter="0.5"/>
+		<com_main:CLabel id="m_labEmperor" text="占领服皇帝奖励" y="166" size="24" horizontalCenter="0"/>
+		<com_main:CLabel id="m_labAllServer" text="占领服全服奖励" y="296" size="24" horizontalCenter="0"/>
+		<com_main:CLabel id="m_labDay" text="占领服每日奖励" y="426" size="24" horizontalCenter="0"/>
+		<com_main:ComButton id="m_btnSure" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" horizontalCenter="0" bottom="30" currentState="style2"/>
+
+		<com_main:CLabel id="m_labCityLv" text="城市等级 1级" y="80" size="24" x="50" textColor="0xabb7d1"/>
+		<com_main:CLabel id="m_labCityZone" text="占领方：1区" y="118" size="24" x="50" textColor="0xabb7d1"/>
+	</e:Group>
+</e:Skin>

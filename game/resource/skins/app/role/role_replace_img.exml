@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="role_replace_img" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" height="654" width="1045">
+		<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" currentState="size3" y="0" x="1" height="653.33"/>
+		<e:Label text="获取武将后解锁形象" y="88.26" size="22" fontFamily="Microsoft YaHei" textColor="0xABB7D1" horizontalCenter="0.5"/>
+		<com_main:ComButton id="m_btnSure" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style2" scaleX="0.7" scaleY="0.7" y="591.93" horizontalCenter="0.5"/>
+		<e:Scroller y="126" anchorOffsetX="0" width="1009.33" anchorOffsetY="0" height="390" horizontalCenter="0">
+			<e:List id="m_List" anchorOffsetX="0" x="-317" y="0" anchorOffsetY="0" width="1011.33">
+				<e:layout>
+					<e:TileLayout paddingBottom="50"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Image source="border_1019_png" y="401.01" horizontalCenter="-0.5" alpha="0.7" anchorOffsetX="0" width="1027.99" touchEnabled="false" height="122"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionInfoCellSkin" width="765" height="76" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="base,offline" >
+	<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" y="-1" x="-4" width="770" height="75" source="border_023_png" alpha="0"/>
+	<e:Group id="m_pSelectedRoot" x="-16" y="-12" visible="false">
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" y="15" x="17" width="763" height="71" alpha="1" source="border_1023_png" scale9Grid="28,31,11,15" name="kuang"/>
+		<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" y="0" x="0" width="798" name="kuang" source="SelectKuang_png" height="98" scale9Grid="60,3,4,117"/>
+	</e:Group>
+	<e:Label id="m_labPos" y="25" size="23" fontFamily="Microsoft YaHei" text="【盟主】" width="158" textAlign="center" x="2" textColor="0x00f700" textColor.offline="0xe9e9e6"/>
+	<e:Label id="m_labName" y="26" size="23" fontFamily="Microsoft YaHei" text="牛牛牛" width="158" textAlign="center" x="161" textColor="0x00f700" textColor.offline="0xe9e9e6"/>
+	<e:Label id="m_labFight" y="26" size="23" fontFamily="Microsoft YaHei" text="2134567" textAlign="center" width="158" x="319" textColor="0x00f700" textColor.offline="0xffff99"/>
+	<e:Label id="m_labContriNum" y="27" size="23" horizontalCenter="173.5" fontFamily="Microsoft YaHei" text="12346" width="158" textAlign="center" textColor="0x00f700" textColor.offline="0xe9e9e6"/>
+	<e:Label id="m_labState" y="27" size="23" fontFamily="Microsoft YaHei" text="离线" width="158" textAlign="center" x="631" textColor="0x00f700" textColor.offline="0xe9e9e6"/>
+	<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" y="72" x="3" name="kuang" source="line_008_png" width="758"/>
+</e:Skin>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="bag_panel" width="700" height="550" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<e:Image width="690" height="537.49" x="3" y="6" source="img_cellbg001_png" anchorOffsetY="0" scale9Grid="185,87,296,17"/>
+	<e:Image id="m_btnBack" x="617" y="5.48" anchorOffsetY="0" source="btn_009_up_png"/>
+	<e:Image id="m_titleImg" x="268.04" y="21.56" anchorOffsetY="0" source="legion_useTitle_png"/>
+	<e:Image x="4" y="236.48" anchorOffsetY="0" source="img_linebg_png" anchorOffsetX="0" width="685" scaleY="-1" height="168"/>
+	<com_main:BagInfoWidget id="m_pWidget" width="121" height="150" x="29.69" y="100.1" skinName="bag_info_widget"/>
+	<e:Label id="m_pLbName" text="科技名" y="116.1" size="30" x="178" textColor="0xffffff"/>
+	<e:Label id="m_des" text="等级：" y="165.1" size="22" textColor="0xb9b7a2" x="178"/>
+	<e:Label text="请选择数量" y="269.1" size="25" textColor="0xB9B7A2" x="204"/>
+	<ns1:Hslider id="m_slider" x="170" y="330" anchorOffsetX="0" width="368" skinName="HsliderSkin"/>
+	<e:Image id="m_btnSub" x="61" y="304" source="btn_010_up_png"/>
+	<e:Image id="m_btnAdd" x="559" y="306" source="btn_011_up_png"/>
+	<e:Label id="m_pValueLabel" text="999/999" y="268.1" textColor="0xFFF7DD" size="25" x="353"/>
+	<e:Group anchorOffsetX="0" width="690" y="430" x="3" height="113">
+		<e:Image anchorOffsetY="0" anchorOffsetX="0" width="686" height="128" y="-20" scaleX="1" scaleY="1" source="img_cellbgup005_png" scale9Grid="52,57,8,31" x="1"/>
+		<e:Image anchorOffsetY="0" anchorOffsetX="0" x="17" y="95" scaleX="-1" scaleY="1" source="icon_jiao_png"/>
+		<e:Image anchorOffsetY="0" anchorOffsetX="0" x="672" y="94" scaleY="1" source="icon_jiao_png"/>
+		<e:Group id="m_btnUse" width="308" height="114" y="57" anchorOffsetY="61" anchorOffsetX="154" x="345">
+			<e:Image anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" source="btn_004_up_png"/>
+			<e:Label text="使用" textColor="0xFFF7DD" size="30" y="41.68" horizontalCenter="-1"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ArmsTrain" width="1164" height="684" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="474" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="627" verticalCenter="9.5" x="660" y="38">
+		<com_main:CImage source="frame_001_jpg" left="0" right="0" top="0" x="-371" y="32" scaleX="1" scaleY="1"/>
+		<com_main:CImage source="frame_101_jpg" scale9Grid="16,13,89,80" top="62" bottom="0" right="0" left="0" x="-365" y="12" scaleX="1" scaleY="1" anchorOffsetY="0" alpha="0.6"/>
+		<com_main:CLabel id="m_pLbTitle" text="弓兵训练" textAlign="center" width="320" height="40" anchorOffsetX="160" anchorOffsetY="20" horizontalCenter="0" verticalAlign="middle" size="28" fontFamily="Microsoft YaHei" top="12" stroke="1" textColor="0xFFFF99"/>
+		<com_main:CImage source="frame_201_png" bottom="5" scaleX="1" scaleY="1" anchorOffsetY="0" width="552" x="0" left="3" right="3"/>
+		<com_main:CScroller id="m_Scroller" anchorOffsetY="0" anchorOffsetX="0" width="470" scaleX="1" scaleY="1" bottom="313" horizontalCenter="1.5" top="67">
+		<e:List id="m_materialList" anchorOffsetX="0" width="534" itemRendererSkinName="com_levelup_conditions_skin" y="-2" x="1">
+			<e:layout>
+			<e:TileLayout requestedColumnCount="1" verticalGap="-2" paddingLeft="0" horizontalGap="6"/>
+			</e:layout>
+			<e:ArrayCollection>
+			<e:Array>
+				<e:Object data="1"/>
+				<e:Object data="2"/>
+				<e:Object data="3"/>
+			</e:Array>
+			</e:ArrayCollection>
+		</e:List>
+		</com_main:CScroller>
+		<e:Group width="472" height="190" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" horizontalCenter="0" bottom="116">
+		<e:Image x="1.52" y="127.5" source="border_1008_png" anchorOffsetX="0" width="472" height="128" scaleY="-1"/>
+		<e:Group id="m_trainGroup" y="117.22" width="439" x="23" visible="false">
+			<e:Image id="m_btnSub" y="-2" source="btn_010_up_png" left="0"/>
+			<e:Image id="m_btnAdd" y="-2" source="btn_011_up_png" right="0"/>
+			<ns1:Hslider id="m_slider" xmlns:ns1="*" y="12.02" anchorOffsetX="0" width="280" skinName="HsliderSkin" scaleX="1" scaleY="1" height="38" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_TrainingGroup" width="474" height="70" x="0" y="110">
+			<com_main:CLabel id="m_trainLastTime" text="00:00:00" size="30" textColor="0xFFFF99" horizontalCenter="60.5" x="-54" scaleX="1" scaleY="1" top="16"/>
+			<com_main:CLabel text="倒计时" size="30" horizontalCenter="-61" x="-97" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" top="14" textColor="0xFFFFFF"/>
+			<e:Image source="pro_002_png" scale9Grid="7,8,8,6" width="420" scaleX="1" scaleY="1" bottom="1" height="12" left="24"/>
+			<e:Image id="m_curgreesImg" source="pro_003_png" scale9Grid="10,8,2,6" width="257" scaleX="1" scaleY="1" bottom="1" height="12" left="24"/>
+		</e:Group>
+		<e:Group scaleX="1" scaleY="1" width="447" y="39" x="13">
+			<com_main:CLabel id="m_curSoldier" text="18540" size="20" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" x="235.67" y="5"/>
+			<com_main:CLabel text="当前兵力：" size="20" fontFamily="Microsoft YaHei" textColor="0xabb7d1" x="132.67" y="5"/>
+			<com_main:CLabel text="生产数量：" y="38.19" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xabb7d1" x="132.67"/>
+			<com_main:CLabel id="m_trainNum" text="999" y="40.24" size="20" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xe9e9e6" x="235.67"/>
+		</e:Group>
+		</e:Group>
+		<com_main:ComButton id="m_btnOnce" skinName="com_button" currentState="style2" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="123" y="539.5"/>
+		<com_main:ComCostTextButton id="m_btnGold" x="124" y="576" skinName="com_cost_text_button" currentState="size6" anchorOffsetX="100" anchorOffsetY="41"/>
+		<com_main:ComCostTextButton id="m_btnTrain" x="361" y="576" skinName="com_cost_text_button" currentState="size5" anchorOffsetX="100" anchorOffsetY="41"/>
+	</e:Group>
+</e:Skin>

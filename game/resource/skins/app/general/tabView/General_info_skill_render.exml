@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="General_info_skill_render" width="654" height="140" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="open,lock" >
+	<e:Rect left="0" top="0" right="0" bottom="0" fillAlpha="0.1"/>
+	<com_main:CImage source="line_008_png" left="25" right="25" y="136"/>
+	<com_main:CLabel id="m_labSkillName" text="技能1 （被动）" x="155" y="37" textColor="0xe9e9e6" size="24"/>
+	<com_main:CLabel id="m_labSkillDes" text="对范围200范围内单位对范围200范围内单位对范围200范围内单位对范围200范围内单位" x="155" y="83" textColor="0x8a8a9e" size="22" anchorOffsetX="0" width="482" anchorOffsetY="0" height="48"/>
+	<com_main:GeneralSkillIconView id="m_skillIcon" x="35" y="20" skinName="General_skill_icon_view" currentState="base"/>
+</e:Skin>

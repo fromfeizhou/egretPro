@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RepeatActivityWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="750" width="1334">
+	<e:Image source="border_004_jpg" left="0" top="0" right="0" bottom="0"/>
+	<com_main:ComTabGroup id="m_comTabGroup" skinName="com_tab_group" left="0" top="0" bottom="0" width="174"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<e:Group y="61" x="174">
+		<e:Image id="m_imgPic" width="1161" x="0" height="149" y="0" source="hd_5_jpg"/>
+		<e:Group x="26" y="43">
+		<e:Image source="border_1058_png" verticalCenter="0.5"/>
+		<e:Label id="m_lbTime" text="2月17日7时-2月28日9时" size="20" textColor="0xE9E9E6" touchEnabled="false" verticalCenter="0.5" horizontalCenter="0" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="m_pViewRoot" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" top="221" height="537" width="1159" x="173">
+		<e:ViewStack id="m_tabViewStack" selectedIndex="1"  touchEnabled="false"  height="537" width="1159"/>
+	</e:Group>
+</e:Skin>

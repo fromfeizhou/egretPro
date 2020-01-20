@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaItemRenderSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="m_pRoot" anchorOffsetX="0" anchorOffsetY="0" width="308" height="280">
+		<e:Image source="trea_dz_png" y="185" x="23"/>
+		<com_main:TreaIconView id="m_treaIcon" skinName="TreaIconViewSkin" y="29" x="4"/>
+		<e:Group id="m_pOwnerName" y="2.32" x="80">
+			<e:Image source="com_wzk5_png" x="0" y="0" alpha="1" width="164" height="28"/>
+			<e:Group horizontalCenter="0" verticalCenter="0">
+			<e:Label text=" 佩戴者：" x="0" y="0" size="18" textColor="0xabb7d1"/>
+			<e:Label id="m_labOwner" text="马超" x="10" y="10" size="18" textColor="0xe9e9e6"/>
+			<e:layout>
+				<e:HorizontalLayout gap="-8"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pStartRoot" height="30" y="220.67" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:layout>
+				<e:HorizontalLayout gap="-3"/>
+			</e:layout>
+		</e:Group>
+		<e:Group y="249.98" horizontalCenter="0">
+			<e:Label id="m_labName" text="青龙刀" x="0" y="0" size="22"/>
+			<e:Label id="m_labLevel" text="+6" x="10" y="10" size="22" textColor="0x00ff00"/>
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

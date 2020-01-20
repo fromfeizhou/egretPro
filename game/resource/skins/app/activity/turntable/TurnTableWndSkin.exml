@@ -1,0 +1,7 @@
+<e:Skin class="TurnTableWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="750" width="1334">
+	<e:Image source="border_004_jpg" left="0" top="0" right="0" bottom="0"/>
+	<e:ViewStack id="m_tabViewStack" bottom="0" selectedIndex="1" left="170" top="62" right="0" anchorOffsetY="0">
+	</e:ViewStack>
+	<com_main:ComTabGroup id="m_comTabGroup" skinName="com_tab_group" width="174" x="0" height="100%" y="0"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+</e:Skin>

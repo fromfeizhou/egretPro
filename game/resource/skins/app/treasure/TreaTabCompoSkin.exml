@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaTabCompoSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1158" height="685">
+	<w:Config id="166b9cd6795"/>
+	<e:Group right="0" bottom="0" top="0" left="0">
+		<e:Group width="504" anchorOffsetX="0" height="685" right="0" verticalCenter="0" x="654" y="0" scaleX="1" scaleY="1">
+			<e:Image source="border_006_png" width="100%" height="100%"/>
+			<e:Image source="line_008_png" rotation="90" left="0" y="0" width="685"/>
+			<e:Group x="-23" touchChildren="false" touchEnabled="false" y="6">
+				<e:Image source="border_1008_png" width="550" height="340" touchEnabled="false" scaleY="-1" scaleX="1" x="0" y="327.65" locked="true"/>
+				<e:Image source="line_011_png" y="17.65" alpha="0.5" scaleX="1" scaleY="1" x="69.56"/>
+				<e:Image source="line_011_png" y="17.65" scaleX="-1" alpha="0.5" scaleY="1" x="490.07"/>
+				<e:Label text="宝石合成" y="13.65" size="26" scaleX="1" scaleY="1" textColor="0xE9E9E6" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group id="m_pCompoRoot" width="100%" height="100%">
+				<e:Image source="line_009_png" x="250.99" y="139.45" rotation="90" width="181" scaleX="1" scaleY="1"/>
+				<e:Image source="line_005_png" y="115" x="69.38" scaleX="1" scaleY="1"/>
+				<com_main:ComItemNew id="m_comItem0" x="51.03" y="84.48" skinName="com_item_new" currentState="name_num" scaleX="1" scaleY="1"/>
+				<com_main:ComItemNew id="m_comItem1" x="327.03" y="84.48" skinName="com_item_new" currentState="name_num" scaleX="1" scaleY="1"/>
+				<com_main:ComItemNew id="m_comItem" skinName="com_item_new" currentState="name_num" horizontalCenter="0" top="247" scaleX="1.3" scaleY="1.3" x="172" y="247"/>
+				<com_main:ComResCost id="m_comResAll" x="27.26" y="466.92" skinName="ComResCostSkin" scaleX="1" scaleY="1"/>
+				<com_main:ComResCost id="m_comResOne" x="277.38" y="466.92" skinName="ComResCostSkin" scaleX="1" scaleY="1"/>
+				<com_main:ComButton id="m_btnAll" x="54.88" y="547.52" skinName="com_button" currentState="style6" scaleX="1" scaleY="1"/>
+				<com_main:ComButton id="m_btnOne" x="306.88" y="547.52" skinName="com_button" scaleX="1" scaleY="1"/>
+				<e:Group id="m_pEffRes" width="10" height="10" y="314.11" touchEnabled="false" scaleX="1" scaleY="1" touchChildren="false" x="254.63"/>
+				<e:Group id="m_pEffLeft" width="10" height="10" x="133.01" y="127.14" touchEnabled="false" scaleX="1" scaleY="1" touchChildren="false"/>
+				<e:Group id="m_pEffRight" width="10" height="10" x="345.01" y="127.14" touchEnabled="false" scaleX="-1" scaleY="1" touchChildren="false"/>
+			</e:Group>
+		</e:Group>
+		<e:Scroller left="0" top="0" bottom="0" right="508" anchorOffsetX="0">
+			<e:List id="m_listItem">
+				<e:layout>
+					<e:TileLayout paddingTop="26" horizontalGap="18" verticalGap="11" paddingLeft="0" paddingBottom="60"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Image source="border_1019_png" left="-2" bottom="-2" right="502" anchorOffsetX="0" touchEnabled="false" height="122"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossRankPageSLSkin" currentState="single" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="single,legion" width="1159" height="692">
+	<e:Group id="m_pGroup" x="0" y="0" width="100%" height="100%">
+		<e:Group height="60" width="100%" y="0" x="0">
+			<com_main:CImage left="0" top="0" bottom="-5" right="0" source="border_007_png"/>
+			<com_main:CImage left="0" right="0" source="border_1008_png" top="0" bottom="0"/>
+			<com_main:CImage source="line_1004_png" verticalCenter="0.5" x="180"/>
+			<com_main:CImage source="line_1004_png" verticalCenter="0.5" x="486"/>
+
+			<com_main:CImage source="line_1004_png" verticalCenter="0.5" x="660"/>
+			<com_main:CImage source="line_1004_png" bottom="0" left="0" right="0" height="5"/>
+			<com_main:CImage source="line_1004_png" verticalCenter="0"/>
+			<com_main:CImage source="line_1004_png" left="0" right="0" top="0" height="5"/>
+			<com_main:CLabel text="排名" x="80" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0xAAC7FF"/>
+			<com_main:CLabel text="玩家名称" x="294" verticalCenter="0" text.legion="联盟名称" size="24" fontFamily="Microsoft YaHei" textColor="0xAAC7FF"/>
+			<com_main:CLabel text="荣誉" x="551" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0xAAC7FF"/>
+			<com_main:CLabel text="奖励" x="900" verticalCenter="0" size="24" fontFamily="Microsoft YaHei" textColor="0xAAC7FF"/>
+		</e:Group>
+		<com_main:CScroller left="0" top="60" bottom="2" right="0" scrollPolicyH="off">
+			<e:List id="m_itemList" left="0" top="0" bottom="0" right="0" itemRendererSkinName="RankItemRenderSkin" itemRendererSkinName.single="CrossRankCellSkin">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+		</com_main:CScroller>
+		<com_main:CImage source="border_1019_png" bottom="0" height="122" touchEnabled="false" left="0" right="0"/>
+	</e:Group>
+</e:Skin>

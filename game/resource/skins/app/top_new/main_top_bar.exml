@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="main_top_bar" width="1334" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="160">
+	<com_main:CImage id="m_bgImg" y="57" anchorOffsetX="0" anchorOffsetY="0" source="border_009_png" rotation="0" height="57" scaleY="-1" left="0" right="0"/>
+	<e:Image source="zyt_05_png" x="0" y="1"/>
+	<e:Group id="m_leftGroup" width="325" height="117" x="0" y="0" anchorOffsetY="0">
+		<com_main:CImage x="93" y="56" source="border_1006_png" anchorOffsetX="0" width="244.67" anchorOffsetY="0" height="34.72" scaleX="1" scaleY="1"/>
+		<e:Group id="m_pVipRoot" x="29" y="1.52" width="200" height="60" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<com_main:CImage scale9Grid="3,3,20,21" source="top_vip_bg_png" y="-17"/>
+			<com_main:CImage x="72.65" y="12.7" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="lb_gz_png"/>
+			<e:BitmapLabel id="m_labelVipNum" width="43" height="29" x="140" y="14" font="font_vip_fnt" text="0" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-3"/>
+		</e:Group>
+		<e:Group id="m_pPowerRoot" x="85.84" y="59.68" scaleX="1" scaleY="1">
+			<com_main:CImage x="0" y="0.36" source="lb_zdl_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+			<e:BitmapLabel id="m_labelFight" width="196.67" height="44" x="67.33" y="0" font="fight_font_fnt" text="999999888" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-15" scaleX="0.75" scaleY="0.75"/>
+		</e:Group>
+		<com_main:ComHeadItem id="m_comHead" x="-6.5" y="-12.73" scaleX="0.92" scaleY="0.92" width="115" height="127"/>
+		<com_main:ComState id="m_comState" x="64.5" y="-2" skinName="ComStateSkin" scaleX="1" scaleY="1"/>
+		<e:Group width="65" height="12" x="0" y="83" scaleX="1" scaleY="1">
+			<e:Image source="pro_005_png" scale9Grid="3,3,18,18" height="9" y="0" width="100%" x="0"/>
+			<com_main:CImage id="m_expPro" source="pro_006_png" scale9Grid="3,4,313,26" scaleX="1" scaleY="1" width="50" x="-2" height="13" y="-2"/>
+		</e:Group>
+		<e:Group x="57.31" y="63.93" touchEnabled="false" touchChildren="false" scaleX="1" scaleY="1">
+			<e:Image source="border_1051_png" x="0" y="0"/>
+			<e:Label id="m_labLevel" text="22" size="20" horizontalCenter="0.5" textColor="0xe7d7a7" y="9.99"/>
+		</e:Group>
+		<e:Image id="m_imgWorldIcon" source="btn_132_png" x="333" y="84" anchorOffsetX="33" anchorOffsetY="37"/>
+		<e:Image id="m_imgMilitoryIcon" source="btn_146_png" x="408" y="84" anchorOffsetX="33" anchorOffsetY="37"/>
+	</e:Group>
+
+	<e:Group id="m_groupSource" anchorOffsetX="0" anchorOffsetY="0" top="0" height="57" width="845" x="255">
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" gap="15"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

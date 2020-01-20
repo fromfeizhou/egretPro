@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipStrengViewSkin" width="1164" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Group id="m_pViewRoot" touchEnabled="false" horizontalCenter="0" width="1164" verticalCenter="79" height="666">
+			<e:Image source="equip_bg_png" x="0" y="0"/>
+			<e:Group x="124" y="45">
+				<e:Image id="m_imgRole" source="icon_wj_b_10_png" scaleX="0.7" scaleY="0.7" horizontalCenter="0" verticalCenter="4"/>
+			</e:Group>
+			<e:Image id="m_imgRoleBg" source="equip_rw_png" x="190.35" y="44.67" visible="false"/>
+			<com_main:EquipItem id="m_equip0" x="119.93" y="87.92" skinName="EquipItemSkin" currentState="info" width="102"/>
+			<com_main:EquipItem id="m_equip1" x="480.93" y="144.26" skinName="EquipItemSkin" currentState="info" width="102"/>
+			<com_main:EquipItem id="m_equip2" x="119.93" y="221.92" skinName="EquipItemSkin" currentState="info" width="102"/>
+			<com_main:EquipItem id="m_equip3" x="480.93" y="278.92" skinName="EquipItemSkin" currentState="info" width="102"/>
+			<e:Group id="m_pTipsCon" x="542" y="64.26">
+				<e:Group anchorOffsetX="0" horizontalCenter="0">
+					<e:Image y="0" source="city_icon_dz_png" width="110" x="0" scaleX="0.7" scaleY="0.7"/>
+				</e:Group>
+				<e:Group horizontalCenter="0" y="50">
+					<e:Image source="border_1030_png" height="20" y="0" x="0" width="114"/>
+					<e:Label id="m_labUpLv" text="强化大师+3000" size="16" touchEnabled="false" fontFamily="Microsoft YaHei" textColor="0xe7d7a7" horizontalCenter="0" verticalCenter="0"/>
+				</e:Group>
+			</e:Group>
+			<com_main:EquipMainComp id="m_equipViewComp0" skinName="EquipMainCompSkin" y="77.26" x="660"/>
+			<com_main:EquipLevelComp id="m_equipViewComp1" skinName="EquipLevelCompSkin" y="77.26" x="660"/>
+			<com_main:EquipGradeComp id="m_equipViewComp2" skinName="EquipLevelCompSkin" y="77.26" x="660"/>
+			<com_main:EquipWroughtComp id="m_equipViewComp3" skinName="EquipWroughtCompSkin" y="77.26" x="660"/>
+			<e:Group y="408.2" touchEnabled="false" touchChildren="false" x="149.93" scaleX="1" scaleY="1" width="358" height="72">
+				<com_main:ComFightItem id="m_comFightItem" skinName="ComFightItemSkin"/>
+				<e:Group id="m_pFightEffRoot" x="195" y="-2"/>
+			</e:Group>
+			<e:Group id="m_pTabView0" y="507.26" width="375" x="139.59">
+				<com_main:ComButton id="m_btnEquip" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style2" scaleX="1" scaleY="1" y="24.16" x="188"/>
+				<e:Label text="点击装备进行装备或卸下" y="74" size="20" textColor="0xe9e9e6" horizontalCenter="0" touchEnabled="false"/>
+			</e:Group>
+			<e:Group id="m_pTabView1" y="507.26" width="375" x="139.93">
+				<com_main:ComButton id="m_btnAllUpLv" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style2" scaleX="1" scaleY="1" y="24.16" x="188"/>
+				<e:Label text="选中部位后即可进行强化" y="74" size="20" textColor="0xE9E9E6" horizontalCenter="0" touchEnabled="false"/>
+			</e:Group>
+			<e:Group id="m_pTabView2" y="507.26" width="375" x="139.93">
+				<com_main:ComButton id="m_btnAllUpGrade" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style2" scaleX="1" scaleY="1" y="24.16" x="188"/>
+				<e:Label text="选中部位后即可进行升阶" y="74" size="20" textColor="0xE9E9E6" horizontalCenter="0" touchEnabled="false"/>
+			</e:Group>
+			<e:Group id="m_pTabView3" y="507.26" width="375" x="139.93">
+				<com_main:ComButton id="m_btnAllWrought" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style2" scaleX="1" scaleY="1" y="24.16" x="188"/>
+				<e:Label text="选中部位后即可进行强化" y="74" size="20" textColor="0xE9E9E6" horizontalCenter="0" touchEnabled="false"/>
+			</e:Group>
+		</e:Group>
+		<e:Group left="130" right="130" anchorOffsetX="0" anchorOffsetY="0" height="115" top="65" x="95" y="65" scaleX="1" scaleY="1">
+			<e:Image source="zyt_01_png" left="0" right="0" top="-5" bottom="5"/>
+			<e:Scroller id="m_itemScroll" height="100" y="6.68" left="2" right="2">
+			<e:List id="m_listGenHead" width="883" y="-0.67">
+				<e:layout>
+				<e:HorizontalLayout paddingLeft="50" gap="32" paddingRight="50" verticalAlign="middle"/>
+				</e:layout>
+			</e:List>
+			</e:Scroller>
+			<e:Image source="line_009_png" alpha="0.7" left="0" right="0" bottom="0" touchEnabled="false"/>
+			<e:Image source="line_009_png" alpha="0.7" left="0" right="0" bottom="106" touchEnabled="false"/>
+		</e:Group>
+		<e:Group y="68.18" left="0" right="0" touchEnabled="false">
+			<e:Image anchorOffsetX="0" touchEnabled="false" source="equip_left_png" x="0" y="0"/>
+			<e:Image anchorOffsetX="0" touchEnabled="false" source="equip_right_png" y="0" right="0"/>
+			<e:Group y="23.86" width="43" height="60" left="82">
+			<e:Image id="m_btnLeft" source="btn_024_up_png" x="21.5" y="30" anchorOffsetX="21.5" anchorOffsetY="30"/>
+			</e:Group>
+			<e:Group y="23.86" height="60" width="43" scaleX="-1" right="82">
+			<e:Image id="m_btnRight" source="btn_024_up_png" x="21.5" y="30" anchorOffsetX="21.5" anchorOffsetY="30"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

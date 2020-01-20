@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="map_build_rk" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="80" height="80">
+	<com_main:CImage x="0" y="0" source="common_btn_bg_3_png" width="138" height="144" visible="false"/>
+	<com_main:CImage id="m_pIcon" horizontalCenter="-1.5" verticalCenter="-4.5" scaleX="0.8" scaleY="0.8" source=""/>
+	<e:Label id="m_pName" text="详情" size="20" textColor="0xfffddd" horizontalCenter="-1" verticalCenter="26" stroke="2"/>
+</e:Skin>

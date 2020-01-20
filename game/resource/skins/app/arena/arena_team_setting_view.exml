@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="arena_team_setting_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<com_main:CImage id="BackGround" source="border_004_jpg" left="0" right="0" top="0" bottom="0"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<com_main:CImage id="bottom_background" source="border_009_png" bottom="0" left="0" right="0" anchorOffsetY="0" height="130"/>
+	<e:Group id="Bottom" height="130" bottom="0" width="1334" horizontalCenter="0">
+		<com_main:CLabel id="txt_label" text="每天6点自动重置关卡进度" y="57.53" scaleX="1" scaleY="1" left="169" textColor="0x8a8a9e" size="24" fontFamily="Microsoft YaHei"/>
+		<com_main:ComButton id="m_BtnMoppingUp" y="67.68" skinName="com_button" currentState="style6" anchorOffsetX="72.5" anchorOffsetY="30" horizontalCenter="-71.5"/>
+		<com_main:ComButton id="m_BtnEmbattle" y="67.67" skinName="com_button" currentState="style6" anchorOffsetX="72.5" anchorOffsetY="30" horizontalCenter="116.5"/>
+		<com_main:ComButton id="m_BtnBattle" skinName="com_button" currentState="style2" scaleX="1" scaleY="1" anchorOffsetX="120" anchorOffsetY="75" y="105.47" horizontalCenter="447"/>
+		<e:Image id="m_imgShop" source="city_icon_sc_png" y="69.5" x="82" anchorOffsetX="38" anchorOffsetY="38"/>
+	</e:Group>
+	<e:Scroller id="m_Scroller" anchorOffsetX="0" left="10" right="10" verticalCenter="-36">
+		<e:List id="m_ItemList">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle" gap="30"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

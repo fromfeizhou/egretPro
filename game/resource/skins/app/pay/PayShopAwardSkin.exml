@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PayShopAwardSkin" width="1143" height="512" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Scroller anchorOffsetX="0" anchorOffsetY="0" left="0" top="0" right="0" bottom="0">
+		<e:Group id="m_pGSroller">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

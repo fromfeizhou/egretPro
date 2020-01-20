@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralSkillViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="653" height="604">
+	<e:Group left="0" top="0" x="0" y="0">
+		<com_main:GeneralInfoSkillRender id="m_skillRender1" x="0" y="0" skinName="General_info_skill_render"/>
+		<com_main:GeneralInfoSkillRender id="m_skillRender2" x="10" y="10" skinName="General_info_skill_render"/>
+		<com_main:GeneralInfoSkillRender id="m_skillRender3" x="20" y="20" skinName="General_info_skill_render"/>
+		<com_main:GeneralInfoSkillRender id="m_skillRender4" x="30" y="30" skinName="General_info_skill_render"/>
+		<e:layout>
+		<e:VerticalLayout gap="8"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

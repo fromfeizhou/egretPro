@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipBonusPropCompSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="418" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="border_1013_png" width="100%"/>
+		<e:Label text="套装属性" y="16" size="26" fontFamily="Microsoft YaHei" anchorOffsetY="0" height="30" verticalAlign="middle" horizontalCenter="0" textColor="0xe8d7a6"/>
+		<e:List id="m_listSuit" y="65" itemRendererSkinName="EquipSuitDesSkin" width="418">
+			<e:layout>
+				<e:VerticalLayout gap="13"/>
+			</e:layout>
+		</e:List>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankItemRenderSkin" currentState="power" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="power,exploit,general,legion,country"  height.exploit="80" width="1155" height.country="132" height.general="132">
+	<e:Group width="100%" height="100%" x="0" y="0">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="0" right="0" source="line_008_png"/>
+		<e:Group width="70" verticalCenter="0" height="70" y="-35" scaleX="1" scaleY="1" left="85" left.country="56" verticalCenter.country="0">
+		<com_main:CImage xmlns:com_main="com_main.*" source="border_1034_png" alpha="0.4" scaleX="1" scaleY="1" width="132" height="132" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" horizontalCenter="0"/>
+		<com_main:CLabel id="m_RankLab" xmlns:com_main="com_main.*" text="999" verticalCenter="0" horizontalCenter="0" textColor="0xE9E9E6" fontFamily="Microsoft YaHei" size="32"/>
+		<com_main:CImage id="m_RankImg" xmlns:com_main="com_main.*" horizontalCenter="0" verticalCenter="0" source="Icon_List_NO1_png"/>
+		</e:Group>
+		<com_main:CLabel id="m_labPower" xmlns:com_main="com_main.*" text="99999" x="575" textColor="0xFFFF99" size="24" fontFamily="Microsoft YaHei" includeIn="power,general,legion" width="276" textAlign="center" verticalCenter="0"/>
+		<com_main:CLabel id="m_labExploit" text="99999" textColor="0xFFFF99" size="24" fontFamily="Microsoft YaHei" textAlign="center" includeIn="exploit" width="276" x="590" verticalCenter="0"/>
+		<com_main:CLabel id="m_labKillNum" text="99999" textColor="0xE9E9E9" size="24" fontFamily="Microsoft YaHei" includeIn="exploit" width="240" textAlign="center" x="900" verticalCenter="0"/>
+		<com_main:CImage id="m_imgLegion" scaleX="0.35" scaleY="0.35" x="286" includeIn="legion" verticalCenter="0" source="tb_jt_2_png"/>
+		<com_main:CLabel id="m_labName" x="221" text="飞龙在天" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" size="24" verticalCenter="0" y="8" x.power="417" y.power="52" x.general="408" y.general="54" x.legion="400" y.legion="52" verticalCenter.exploit="0" x.exploit="262.33" includeIn="power,general,legion"/>
+		<com_main:CLabel id="m_labCapi" text="99999" textColor="0xFFFF99" size="24" fontFamily="Microsoft YaHei" textAlign="center" includeIn="country" width="144" x="550" verticalCenter="0" anchorOffsetX="0"/>
+		<com_main:CLabel id="m_labtown" text="99999" textColor="0xFFFF99" size="24" fontFamily="Microsoft YaHei" textAlign="center" includeIn="country" width="144" x="725" verticalCenter="0" anchorOffsetX="0"/>
+		<com_main:CLabel id="m_labCoun" text="99999" textColor="0xFFFF99" size="24" fontFamily="Microsoft YaHei" textAlign="center" includeIn="country" width="144" x="990" verticalCenter="0" anchorOffsetX="0"/>
+		<e:Group x="189" verticalCenter="0" width.exploit="380" width.legion="36" x.legion="980" x.general="940" x.power="980" width.power="36" verticalCenter.country="0" x.country="308">
+			<com_main:ComState id="m_comState" skinName="ComStateSkin" x="0" x.power="978" y.power="44" y.exploit="20" x.general="941" y.general="44" x.legion="978" y.legion="44" verticalCenter.exploit="0" x.exploit="230.33" y="0" currentState="mini" x.country="12"/>
+			<com_main:CLabel id="m_labPlayerName" x="83.33" text="飞龙在天" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" size="24" y="8" includeIn="exploit,general,country"/>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+		<com_main:GeneralHeadRender id="m_genHead" x="287" skinName="com_general_head_render" currentState="none" scaleX="0.75" scaleY="0.75" includeIn="general" verticalCenter="0"/>
+		<com_main:ComHeadItem id="m_comHead" xmlns:com_main="com_main.*" x="287.71" verticalCenter="0" includeIn="power,country" x.general="288" y.general="0" verticalCenter.country="0.5" x.country="195.71" width="115" height="127"/>
+		<e:Group includeIn="power" y="43" x="1043">
+			<com_main:ComButton id="m_pBtnMb" skinName="com_button" currentState="style1" includeIn="power" scaleX="0.7" scaleY="0.7" left="0" right="0" top="0" bottom="0"/>
+			<com_main:CLabel id="m_labMobai" text="膜拜人数：30" textColor="0xFFFF99" size="16" fontFamily="Microsoft YaHei" textAlign="center" includeIn="power" x="1" anchorOffsetX="0" y="13"/>
+		</e:Group>
+	</e:Group>
+
+</e:Skin>

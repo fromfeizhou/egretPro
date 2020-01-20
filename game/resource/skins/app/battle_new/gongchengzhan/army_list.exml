@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="army_list" height="140" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bg_image" source="border_1041_png" y="5" width="100%" scale9Grid="27,16,16,97"/>
+	<e:Group x="0" y="0">
+		<e:Group id="headList_group" height="140" x="0" y="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+	
+			<e:layout>
+			<e:HorizontalLayout gap="13" paddingLeft="11" paddingTop="14"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="jiantou_group" height="140" x="606" y="7">
+			<e:Image id="jiantou_image" source="btn_024_up_png" y="63" scaleX="-1" scaleY="1" anchorOffsetX="22" anchorOffsetY="30" x="22"/>
+		</e:Group>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

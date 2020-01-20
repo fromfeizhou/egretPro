@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TagLeftItemRendererSkin" width="173" height="103" states="up,down,disabled"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*">
+	<e:Image  x="" y="0" source="btn_014_sel_png" source.down="btn_014_sel_png" source.up="btn_014_sel_png" alpha.up="0"/>
+	<com_main:CLabel  verticalAlign="bottom" size="30"  fontColor.up="White" fontColor.down="TagdownYellow"     textAlign.up="left" textAlign.down="left" y="36" horizontalCenter="-1.5" text="{data.text}" textColor="0xfff7dd"/>
+	<e:Image source="line_001_png" y="99" x="4" source.up="line_001_png" source.down="line_001_png" source.disabled="line_001_png"/>
+</e:Skin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldCityLockCompSkin" width="74" height="90" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*">
+	<com_main:CImage scaleX="1" scaleY="1" source="build_pp_png" verticalCenter="0" />
+	<com_main:CImage scaleX="1" scaleY="1" source="build_pp_ccjs_png" verticalCenter="-8" horizontalCenter="0" />
+	<com_main:CImage scaleX="1" scaleY="1" source="lb_jscc_png" top="-21" horizontalCenter="0.5" />
+</e:Skin>

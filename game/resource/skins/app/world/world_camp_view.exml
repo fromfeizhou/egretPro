@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_camp_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage source="world_camp_bg_jpg" touchEnabled="true" scaleX="1" scaleY="1" width="100%" height="100%"/>
+	<e:Group id="m_pRoot" height="750" touchEnabled="true" width="1334" horizontalCenter="0" verticalCenter="0">
+
+		<com_main:ComGenCard id="m_genCard" skinName="ComGenCardSkin" x="452.61" y="95.16" scaleX="0.85" scaleY="0.85"/>
+		<com_main:ComButton id="m_pBtnJoin" y="675.5" skinName="com_button" currentState="style4" anchorOffsetX="135" anchorOffsetY="47.5" x="667"/>
+		<e:Group id="m_btnRoot" y="559" anchorOffsetX="0" width="335" height="63" x="500">
+			<e:Group x="0" width="335" anchorOffsetX="0" y="0" height="56">
+
+				<e:Image source="com_wzk6_png" scale9Grid="10,8,42,46" anchorOffsetX="0" width="335" anchorOffsetY="0" height="55.5" alpha="0.7" y="0" x="0"/>
+				<e:EditableText id="m_labInput" width="236" horizontalCenter="-12.5" verticalCenter="0" height="30" fontFamily="Microsoft YaHei" textAlign="center" anchorOffsetX="0" prompt="请输入姓名" verticalAlign="top" text=""/>
+				<e:Image source="line_1012_png" x="267.02" y="9.96"/>
+			</e:Group>
+			<e:Image id="m_btnRandom" x="310.14" scaleX="1" scaleY="1" anchorOffsetX="32" anchorOffsetY="32" verticalCenter="-3" source="icon_sz_png" width="43" height="43"/>
+		</e:Group>
+		<e:List id="m_tabBtn" x="41" y="480" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="tab_gender" scaleX="1" scaleY="1">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+			<e:ArrayCollection>
+				<e:Array>
+					<e:Object ss="null"/>
+					<e:Object ss="null"/>
+				</e:Array>
+			</e:ArrayCollection>
+		</e:List>
+		<e:Group x="1039" y="13.11">
+			<e:Image source="zyt_21_png" x="0" y="0"/>
+			<e:Image source="lb_xzgj_png" y="68" horizontalCenter="0"/>
+			<e:Group id="m_pItemRoot" horizontalCenter="0" y="133">
+				<com_main:GuideSelectItem id="m_item0" skinName="world_select_Item" horizontalCenter="0" scaleX="0.8" scaleY="0.8" y="0"/>
+				<com_main:GuideSelectItem id="m_item1" skinName="world_select_Item" horizontalCenter="0" scaleX="1" scaleY="1" y="160"/>
+				<com_main:GuideSelectItem id="m_item2" skinName="world_select_Item" y="360" horizontalCenter="0" scaleX="0.8" scaleY="0.8"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

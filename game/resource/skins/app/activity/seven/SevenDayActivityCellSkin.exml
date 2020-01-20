@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenDayActivityCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*">
+	<e:Group width="654" height="139" anchorOffsetY="0" anchorOffsetX="0">
+		<com_main:CImage scaleX="1" scaleY="1" source="hd_7d_border04_png" alpha="0.5" anchorOffsetX="0" x="7" width="582"
+		                 y="1" />
+		<e:Group x="17" verticalCenter="-50.5" anchorOffsetX="0" width="562" anchorOffsetY="0" height="38">
+			<e:Label id="m_labName" text="行营活动" size="20" fontFamily="Microsoft YaHei" textColor="0xaac7ff" alpha="0.7"  verticalCenter="0"/>
+			<e:Label id="m_labCount" text="10" size="20" fontFamily="Microsoft YaHei" textColor="0xaac7ff" right="5"
+			         alpha="0.7"  verticalCenter="0"/>
+		</e:Group>
+		<e:Scroller width="408" height="85" x="18" y="48" scrollPolicyH="auto" scrollPolicyV="off" anchorOffsetX="0"
+		            anchorOffsetY="0">
+			<e:viewport>
+				<e:Group id="m_RewardRoot" y="-1" anchorOffsetX="0" width="408" x="-43" anchorOffsetY="0" height="84">
+					<e:layout>
+						<e:HorizontalLayout verticalAlign="middle" gap="10" />
+					</e:layout>
+				</e:Group>
+			</e:viewport>
+		</e:Scroller>
+		<com_main:ComButton id="m_pBtn" right="28" y="91.89" skinName="com_button" currentState="style1" anchorOffsetX="72.5"
+		                    anchorOffsetY="30" />
+		<e:Group y="43" x="483" id="m_pIsGet" scaleX="0.8" scaleY="0.8">
+			<e:Image source="hd_7d_border06_png" y="-4" x="-5" />
+			<e:Label id="m_LboxState" text="已领取" size="24" textColor="0xe9e9e9" rotation="-20" horizontalCenter="0"
+			         verticalCenter="-3" />
+		</e:Group>
+		<e:Label id="m_openDay" text="1天后开启" size="24" textColor="0xe9e9e6" alpha="0.7" horizontalCenter="230" stroke="2" strokeColor="0x322c23"
+		         verticalCenter="15.5" />
+	</e:Group>
+</e:Skin>

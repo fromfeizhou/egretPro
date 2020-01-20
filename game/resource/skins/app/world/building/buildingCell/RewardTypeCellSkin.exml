@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RewardTypeCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*"  width="300">
+	<e:Group x="0" y="0">
+		<com_main:CLabel id="m_labDes" text="经验+100" size="18" fontFamily="Microsoft YaHei" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" width="300" textColor="0xabb7d1"/>
+	</e:Group>
+</e:Skin>

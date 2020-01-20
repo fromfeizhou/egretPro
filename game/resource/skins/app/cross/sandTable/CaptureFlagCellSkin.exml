@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CaptureFlagCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="own,other" >
+	<e:Group>
+		<e:Image source.own="com_wzk9_png" source.other="com_wzk4_png" x="0" y="0" source="com_wzk9_png" height="80" width="32"/>
+		<e:Label id="m_labServer" text="92服" size="21" width="24" textAlign="center" horizontalCenter="0" textColor="0xffffff" stroke="2" strokeColor.own="0x074569" strokeColor.other="0x911f00" strokeColor="0x074569" y="4"/>
+	</e:Group>
+</e:Skin>

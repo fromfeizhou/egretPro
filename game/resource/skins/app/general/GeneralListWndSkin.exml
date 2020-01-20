@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralListWndSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Image source="border_004_jpg" left="0" bottom="0" right="0" top="0"/>
+	<com_main:ComTabGroup id="m_comTabGroup" skinName="com_tab_group" top="0" bottom="0" left="0"/>
+	<com_main:MainTopNew id="m_mainTop" skinName="new_top_main" width="100%"/>
+	<e:Scroller id="m_itemScroll" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="20" left="196" top="72">
+		<e:Group width="100%">
+			<e:Group y="26" left="0" x="-176" scaleX="1" scaleY="1" width="100%">
+				<com_main:CLabel text="已招募" y="24" textColor="0xe9e9e6" horizontalCenter="0"/>
+				<com_main:CImage y="36" source="line_003_png" horizontalCenter="-180"/>
+				<com_main:CImage y="36" source="line_003_png" scaleX="-1" horizontalCenter="180"/>
+				<e:Group id="group_hava_general" y="72" width="1118" x="0">
+					<e:layout>
+						<e:TileLayout horizontalGap="40" verticalGap="20" rowHeight="190" columnWidth="142"/>
+					</e:layout>
+				</e:Group>
+			</e:Group>
+			<e:Group y="36" left="0" x="-166" scaleX="1" scaleY="1" width="100%">
+				<com_main:CLabel text="未招募" y="24" textColor="0xE9E9E6" horizontalCenter="0"/>
+				<com_main:CImage y="36" source="line_003_png" horizontalCenter="-180"/>
+				<com_main:CImage y="36" source="line_003_png" scaleX="-1" horizontalCenter="180"/>
+				<e:Group id="group_no_general" anchorOffsetX="0" y="72" width="1118" x="0">
+					<e:layout>
+						<e:TileLayout horizontalGap="40" verticalGap="20" rowHeight="190" columnWidth="142"/>
+					</e:layout>
+				</e:Group>
+			</e:Group>
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpArenaRankViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1044" scaleX="1" scaleY="1" height="638">
+		<com_main:APopUp id="m_pApopUp" skinName="APopUpSkin" currentState="size3" scaleX="1" scaleY="1" x="0" top="0" bottom="0"/>
+		<e:Group id="m_titleRoot" height="58" anchorOffsetY="0" width="1032" anchorOffsetX="0" scaleX="1" scaleY="1" top="64" x="6">
+		<com_main:CImage anchorOffsetY="0" anchorOffsetX="0" width="58" source="line_008_png" rotation="90" x="128"/>
+		<com_main:CImage anchorOffsetY="0" anchorOffsetX="0" width="58" source="line_008_png" rotation="90" x="312"/>
+		<com_main:CImage anchorOffsetY="0" anchorOffsetX="0" width="58" source="line_008_png" rotation="90" x="719"/>
+		<com_main:CImage anchorOffsetY="0" anchorOffsetX="0" width="58" source="line_008_png" rotation="90" x="856"/>
+		<com_main:CLabel text="排行" x="41" y="18" size="24" fontFamily="Microsoft YaHei" textColor="0x8a8a9e"/>
+		<com_main:CLabel text="玩家名称" x="170.33" y="18" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E"/>
+		<com_main:CLabel text="部队战力" x="741.34" y="18" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E"/>
+		<com_main:CLabel text="部队名称" x="463.66" y="18" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E"/>
+		<com_main:CLabel text="每日奖励" x="906" y="18" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E"/>
+		</e:Group>
+		<e:Scroller anchorOffsetY="0" top="125" bottom="128" width="1044" scrollPolicyH="off" scrollPolicyV="on" horizontalCenter="6">
+		<e:List id="m_pList"/>
+		</e:Scroller>
+		<com_main:PvpArenaRankCell id="m_pCurRankCell" skinName="PvpArenaRankCellSkin" bottom="6" horizontalCenter="1"/>
+	</e:Group>
+</e:Skin>

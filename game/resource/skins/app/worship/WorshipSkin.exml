@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorshipSkin" width="1334" height="750" xmlns:com_main="com_main.*" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="zyt_dxmb_jpg" left="0" right="0" top="0" bottom="0"/>
+	<e:Image id="m_closeBtn" source="btn_008_up_png" left="0" top="0"/>
+	<e:Group width="366" height="270" x="8" y="86" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group width="322" height="62" x="4" y="18" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image id="m_cImg" source="common_country1_3_png" x="-1" y="2"/>
+			<e:Image source="border_1030_png" x="32" y="12" anchorOffsetX="0" width="278" anchorOffsetY="0" height="36" alpha="0.5"/>
+			<e:Label id="m_pName" text="" y="17" textColor="0xffff99" size="24" fontFamily="Microsoft YaHei" left="78"/>
+		</e:Group>
+		<e:Group width="322" height="62" x="4" y="103" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+			<e:Image source="border_1030_png" x="32" y="12" anchorOffsetX="0" width="278" anchorOffsetY="0" height="36" alpha="0.5"/>
+			<e:Label text="称号：" y="20" size="22" fontFamily="Microsoft YaHei" left="81" textColor="0xe7d722"/>
+			<e:Image source="border_016_png" x="6" y="2"/>
+			<e:Image source="icon_ch_png" x="10" y="5"/>
+			<e:Image source="lb_ccml_big_png" x="130" y="-31" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="322" height="62" x="4" y="87" anchorOffsetX="0" anchorOffsetY="0">
+            <com_main:ComFightItem id="m_comFightItem" skinName="ComFightItemSkin" y="-6" horizontalCenter="-5"/>
+		</e:Group>
+		<e:Group width="322" height="62" x="4" y="165" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="border_1030_png" x="32" y="12" anchorOffsetX="0" width="278" anchorOffsetY="0" height="36" alpha="0.5"/>
+			<e:Label text="联盟：" y="20" size="22" fontFamily="Microsoft YaHei" left="81" textColor="0xe7d7a7"/>
+			<e:Label id="m_legionLb" text="1" y="19" size="24" fontFamily="Microsoft YaHei" left="150" textColor="0xffff99"/>
+			<e:Image source="border_016_png" x="6" y="2"/>
+			<e:Image x="10" y="5" source="icon_lm_png"/>
+		</e:Group>
+	</e:Group>
+	<!--<e:Image id="m_pImg" source="icon_wj_b_40_png" y="-39.74" scaleX="1.1" scaleY="1.1" horizontalCenter="-5"/>-->
+	<com_main:ComGenCard id="m_pImg" skinName="ComGenCardSkin" horizontalCenter="-5" y="-23" scaleX="1.1" scaleY="1.1"/>
+	<e:Image source="border_1019_png" bottom="0" right="0" left="0" height="182"/>
+	<e:Group id="m_p" width="670" height="750" y="0" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-5">
+        <!--<com_main:ComButton id="m_pBtnWorship" skinName="com_button" currentState="style4" y="645.66" horizontalCenter="0" anchorOffsetX="135" anchorOffsetY="48"/>-->
+        <e:Group id="m_pBtnWorship" y="650" anchorOffsetX="154" anchorOffsetY="57" width="308" height="114" horizontalCenter="0">
+            <e:Image source="btn_004_up_png" touchEnabled="true" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+					<e:Label text="膜拜" horizontalCenter="0" verticalCenter="0" fontFamily="Microsoft YaHei" size="32" strokeColor="0xa03333" stroke="2"/>
+        </e:Group>
+		<e:Label id="m_lb_num" text="" y="638" horizontalCenter="0" size="30" fontFamily="Microsoft YaHei" textColor="0xaac7ff"/>
+		<e:Label id="m_desLb" text="" y="705" size="22" textColor="0xaac7ff" fontFamily="Microsoft YaHei" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

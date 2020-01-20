@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComTreaItemSkin" width="145" height="188" currentState="base" xmlns:e="http://ns.egret.com/eui"  xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="base,icon"  height.icon="150">
+	<e:Group x="0" y="0" width="145" height="188">
+		<e:Image id="m_imgBg" source="com_trea_quality1_png" alpha="1"/>
+		<e:Image id="m_imgIcon" horizontalCenter="0.5" verticalCenter="-25" width="126" height="126" source=""/>
+		<e:Group id="m_groupOwner" y="101" horizontalCenter="0.5" anchorOffsetX="0" width="122">
+			<e:Image source="border_1030_png" left="0" right="0" top="0" bottom="0" anchorOffsetY="0"/>
+			<e:Label id="m_labOwnerName" text="刘备" size="24" textColor="0xe9e9e6" y="2" horizontalCenter="0"/>
+		</e:Group>
+		<e:Image id="m_imgSelect" source="com_trea_sel_png" x="-12" y="-12" visible="false"/>
+		<e:Group id="m_groupStart" anchorOffsetX="0" anchorOffsetY="0" y="128.33" height="30" width="145" horizontalCenter="0">
+			<e:layout>
+			<e:HorizontalLayout horizontalAlign="center" gap="-5" verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+		<e:Label id="m_labName" text="宝物名字" size="24" textColor="0xE9E9E6" y="154.11" horizontalCenter="0.5" x="322.93" scaleX="1" scaleY="1" visible.icon="false"/>
+	</e:Group>
+</e:Skin>

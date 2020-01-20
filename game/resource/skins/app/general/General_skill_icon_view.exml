@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="General_skill_icon_view" width="126" height="135" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="base,name,baselock,namelock,name1,basebuff"  width.base="96" height.base="99" width.baselock="96" height.baselock="99">
+	<e:Group y="4" horizontalCenter="0">
+		<e:Image source="Image_general_open_kuang_png" y="0" x="3" source.baselock="Image_general_noOPen_kuang_png" source.namelock="Image_general_noOPen_kuang_png" source.basebuff="Image_general_noOPen_kuang_png"/>
+		<e:Image id="m_imgSkillIcon" y="0" x="3" anchorOffsetX="0" anchorOffsetY="0" source="icon_jn_1_png"/>
+		<e:Group id="m_groupLv" y="61" x="0" visible.baselock="false" visible.namelock="false" visible.basebuff="false">
+		<e:Image source="border_016_png" x="0" y="0" width="38" height="38"/>
+		<com_main:CLabel id="m_labLevel" text="99" size="22" textAlign="center" textColor="0xE9E9E6" verticalAlign="middle" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+	</e:Group>
+	<e:Image source="border_1001_png" left="0" right="0" bottom="23" scale9Grid="13,3,78,21" includeIn="basebuff"/>
+	<e:Label id="m_labName" text="名字" y="106.5" size="24" textColor="0xE9E9E6" anchorOffsetX="0" textAlign="center" verticalAlign="top" anchorOffsetY="0" height="44" includeIn="name,namelock,name1,basebuff" textColor.namelock="0xff0000" width="126" horizontalCenter="0" horizontalCenter.name1="0" y.name1="114.5" textColor.basebuff="0xffffff" horizontalCenter.basebuff="0" y.basebuff="83.5" size.basebuff="24" stroke.basebuff="1"/>
+</e:Skin>

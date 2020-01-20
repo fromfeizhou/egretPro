@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_select_Item" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group horizontalCenter="0">
+		<e:Image id="m_imgCountry" scaleX="0.4" scaleY="0.4" horizontalCenter="0" source="common_country5_3_png"/>
+		<e:Group id="m_pTjBox" x="0" y="144">
+			<e:Image id="m_TuijianBg" source="zyt_xj_wg_png" x="0" y="5" anchorOffsetX="0"/>
+			<e:Label id="m_LbGold" text="100" x="128" y="14" size="24" stroke="2" fontFamily="Microsoft YaHei" textColor="0xe7c772"/>
+			<com_main:CImage scaleX="1" scaleY="1" y="0" source="icon_source_gold_png" touchEnabled="false" x="78"/>
+			<com_main:CLabel id="m_labTile" text="奖励" y="14" textAlign="center" anchorOffsetX="2.67" anchorOffsetY="0" verticalAlign="middle" size="24" stroke="2" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xe7c772" x="27"/>
+		</e:Group>
+		<e:Group id="m_pEffRoot" horizontalCenter="-9" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

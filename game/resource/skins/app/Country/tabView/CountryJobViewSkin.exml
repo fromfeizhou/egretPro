@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryJobViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="1160">
+	<e:Scroller bounces="false" height="689" width="1160" x="0" y="0">
+		<e:Group height="1554">
+			<e:Group horizontalCenter="-58" top="0" width="1010" height="1259">
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" rotation="60" scaleX="1" scaleY="1" source="t-tl_png" height="270" width="5" x="395" y="287.52"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" rotation="-60" scaleX="1" scaleY="1" source="t-tl_png" height="270" width="5" x="619.91" y="293.65"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" rotation="31" scaleX="1" scaleY="1" source="t-tl_png" height="150" width="5" x="476.47" y="365.66"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" rotation="-31" scaleX="1" scaleY="1" source="t-tl_png" height="150" width="5" x="534.61" y="366.92"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="80.62" y="650"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="323.62" y="724"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="82" y="929"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="686" y="724"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="929" y="645.44"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="324" y="996"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="684" y="995"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="t-tl_png" height="46" x="929" y="927"/>
+			</e:Group>
+			<e:Group y="0" horizontalCenter="-58" height="1300">
+				<com_main:CountryJobCell id="m_Item0" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="0" currentState="Level_0" top="0" x="362" y="0"/>
+				<com_main:CountryJobCell id="m_Item1" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="-311" y="85" x="160" currentState="Level_1" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item2" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="312" y="85" x="840" currentState="Level_1" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item3" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" y="423" currentState="Level_2" width="160" height="215" horizontalCenter="-423" x="60"/>
+				<com_main:CountryJobCell id="m_Item4" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" y="493" currentState="Level_2" width="160" height="215" horizontalCenter="-177" x="300"/>
+				<com_main:CountryJobCell id="m_Item5" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="181" y="493" x="700" currentState="Level_2" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item6" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="425" y="423" x="940" currentState="Level_2" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item7" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="-423" y="699" x="60" currentState="Level_3" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item8" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="-176" y="770" x="300" currentState="Level_3" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item9" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="182" y="770" x="700" currentState="Level_3" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item10" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" y="699" x="849" currentState="Level_3" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item11" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" y="973" currentState="Level_3" width="160" height="215" horizontalCenter="-421" x="60"/>
+				<com_main:CountryJobCell id="m_Item12" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="-178" y="1044" x="300" currentState="Level_3" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item13" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" horizontalCenter="182" x="700" y="1044" currentState="Level_4" width="160" height="215"/>
+				<com_main:CountryJobCell id="m_Item14" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" skinName="CountryJobCellSkin" x="849" y="973" currentState="Level_4" width="160" height="215"/>
+				<e:Group id="m_tanheGroup" width="583.06" height="155.52" x="208" y="324" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+					<e:Group id="m_tanheBg" width="583.06" x="0" height="155.52" y="0">
+						<e:Image y="67" source="border_1001_png" horizontalCenter="4.47" width="564" height="70" x="14" scaleX="1" scaleY="1"/>
+						<e:Image y="62" source="line_009_png" horizontalCenter="4" width="500" x="46" scaleX="1" scaleY="1"/>
+						<e:Image y="134" source="line_009_png" horizontalCenter="4.47" width="500" x="46" scaleX="1" scaleY="1"/>
+						<e:Label id="m_lbTanhe" text="大番薯正在发起弹劾（支持者1/3）" y="79" size="22" fontFamily="Microsoft YaHei" horizontalCenter="4.47" x="124" scaleX="1" scaleY="1"/>
+						<e:Label id="m_lbTime" text="剩余时间:222222" y="107" size="20" fontFamily="Microsoft YaHei" horizontalCenter="4" x="218" scaleX="1" scaleY="1"/>
+					</e:Group>
+					<com_main:ComButton id="m_btnTanhe" skinName="com_button" currentState="style6" scaleX="1" scaleY="1" verticalCenter="-44.76" horizontalCenter="3.97"/>
+				</e:Group>
+			</e:Group>
+		</e:Group>
+	</e:Scroller>
+	<e:Group id="btn_bzsm" width="92.67" height="97.67" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="520.5" verticalCenter="-249.5">
+		<e:Image x="5" y="5" source="btn_093_up_png" scaleX="1" scaleY="1"/>
+		<e:Image x="2.99" y="67.33" source="lb_bzsm_png" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="btn_jrfl" width="92.67" height="97.67" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="520.5" verticalCenter="-123.5">
+		<e:Image source="border_1007_png" touchEnabled="false" scaleX="1.5" scaleY="1.5" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image y="6.33" scaleX="-1" scaleY="1" source="bx-jinl_png" x="95"/>
+		<e:Image x="2.99" y="75.33" scaleX="1" scaleY="1" source="lb_jrfl_png"/>
+	</e:Group>
+</e:Skin>

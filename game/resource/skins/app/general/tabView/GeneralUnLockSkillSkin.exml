@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralUnLockSkillSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*"  width="1334" height="750">
+	<w:Declarations>
+		<tween:TweenGroup id="actionGroup">
+			<tween:TweenItem target="{group0}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{0.3}" scaleX="{0.3}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250" ease="backOut">
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleY="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="250"/>
+				<tween:Set/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object scaleY="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{group1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="300"/>
+				<tween:Set/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<com_main:CImage id="m_BackGround" top="0" left="1" right="-1" bottom="0" alpha="0.1" source="border_006_png"/>
+	<e:Group horizontalCenter="0" verticalCenter="22.5">
+		<e:Group id="group" height="216" scaleX="1" scaleY="1" width="1080" x="0" y="0">
+			<e:Image scaleX="1" scaleY="1" top="0" left="0" bottom="0" right="0" source="border_1030_png"/>
+			<e:Image scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" top="-24" left="100" right="100"/>
+			<e:Image scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" left="100" right="100" bottom="-16"/>
+			<e:Group x="0" y="0" touchEnabled="false" touchChildren="false" anchorOffsetY="0" height="251">
+			<e:Image source="border_1008_png" y="278" scaleY="-1" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="40,9,242,57" height="278" alpha="1" width="1080" x="0"/>
+			<e:Image source="border_1008_png" y="278" scaleY="-1" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="40,9,242,57" height="278" alpha="1" width="1080" x="0"/>
+			</e:Group>
+
+			<e:Group id="group1" scaleX="1" scaleY="1" horizontalCenter="0" y="59">
+				<com_main:CLabel id="m_labSkillName" text="技能1 （被动）" x="123.04" y="7.88" textColor="0xE9E9E6" size="24"/>
+				<com_main:CLabel id="m_labSkillDes" text="对范围200范围内单位对范围200范围内单位对范围200范围内单位对范围200范围内单位" x="115.44" y="49.37" textColor="0x8A8A9E" size="22" anchorOffsetX="0" width="482" anchorOffsetY="0" height="48"/>
+				<com_main:GeneralSkillIconView id="m_skillIcon" x="0" y="0" skinName="General_skill_icon_view" currentState="base"/>
+			</e:Group>
+
+		</e:Group>
+
+
+		<e:Group id="group0" width="1" height="1" anchorOffsetX="0" anchorOffsetY="0" y="26" x="540">
+			<e:Image source="lb_jnjs_png" y="-81" horizontalCenter="0.5"/>
+
+
+		</e:Group>
+		<com_main:CLabel id="m_labTips" text="点击任意区域关闭" fontFamily="Microsoft YaHei" size="24" touchEnabled="false" textColor="0x8A8A9E" y="227" x="444"/>
+	</e:Group>
+</e:Skin>

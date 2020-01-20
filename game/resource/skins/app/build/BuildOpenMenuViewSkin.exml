@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuildOpenMenuViewSkin" width="80" height="80" currentState="open" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="open,lock" >
+	<e:Group anchorOffsetX="0" width="80" anchorOffsetY="0" height="80">
+		<e:Group id="m_groupIcon" anchorOffsetX="40" anchorOffsetY="40" width="80" height="80" x="40" y="40">
+			<e:Image source="buildOpenIcon_png" source.lock="buildOpenIconLocked_png" alpha.lock="0.9"/>
+			<e:Image id="m_imgEffect" source="buildOpenIconMask_png" x="40.5" y="40.5" anchorOffsetX="54.5" anchorOffsetY="55.5" visible.lock="false" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

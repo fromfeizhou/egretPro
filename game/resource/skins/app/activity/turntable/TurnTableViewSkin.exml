@@ -1,0 +1,93 @@
+<e:Skin class="TurnTableViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" >
+
+	<e:Group id="m_pRoot" width="1159" height="685" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Group x="8.55" y="8">
+			<e:Label id="m_labTip" text="幸运值越高越容易获得稀有物品" size="22" y="13.7" fontFamily="Microsoft YaHei" textColor="0xabb7d1" x="56.45" scaleX="1" scaleY="1"/>
+			<e:Group scaleX="0.7" scaleY="0.7">
+				<e:Image source="com_tpk_png"/>
+				<e:Image source="build_pp_ccjs_png" x="6.42" y="7.44"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pCheckBox" anchorOffsetX="0" width="138" x="477.12" y="8.32" scaleX="1" scaleY="1">
+			<e:Label id="m_labSkip" text="跳过动画" verticalCenter="0" size="22" x="48.48" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+			<e:CheckBox id="m_checkBox" label="" x="-3.04" y="-1.52">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image source="btn_031_up_png"/>
+				<e:Image includeIn="down" source="btn_031_sel_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:CheckBox>
+		</e:Group>
+		<e:Group x="754.04" y="21.96">
+			<e:Label id="m_turnTime" text="活动倒计时:7722天08时55分" size="24" textColor="0xABB7D1" x="-86" fontFamily="Microsoft YaHei" y="0" textAlign="right"/>
+
+		</e:Group>
+		<e:Group width="157" height="668.18" x="999.81" y="13.24" anchorOffsetY="0">
+			<e:Group scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:Label id="m_labCount" text="额外奖励累计100次" size="22" textColor="0xABB7D1" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" wordWrap="true" width="124" lineSpacing="5" anchorOffsetX="0" textAlign="center"/>
+			</e:Group>
+
+
+
+			<e:Group x="0" y="53.58" width="157" height="613">
+				<e:Image source="border_1041_png" scale9Grid="8,16,51,97" anchorOffsetY="0" width="157" x="0" height="610" y="2.42"/>
+				<e:Image source="line_1005_png" y="16.42" height="588" scaleX="0.4" alpha="0.5" x="5.32"/>
+				<e:Image source="line_1005_png" y="16.42" height="588" x="149.33" scaleX="0.4" alpha="0.5"/>
+				<e:Image source="line_009_png" y="-0.06" x="0" width="100%" scaleX="1" scaleY="0.5"/>
+				<e:Image source="border_1002_png" right="0" bottom="0" left="0" anchorOffsetY="0"/>
+				<e:Image source="border_1014_png" rotation="-90" left="12" right="16" y="437" alpha="0.4"/>
+			</e:Group>
+			<e:Scroller width="142" y="65.33" anchorOffsetY="0" height="592" horizontalCenter="0">
+				<e:List id="m_TurnBoxList" anchorOffsetX="0" width="152" anchorOffsetY="0" height="594.67" itemRendererSkinName="TurnTableBoxSkin">
+					<e:layout>
+						<e:VerticalLayout verticalAlign="middle" horizontalAlign="center" gap="7"/>
+					</e:layout>
+					<e:ArrayCollection>
+						<e:Array>
+							<e:Object s="null"/>
+							<e:Object s="null"/>
+							<e:Object s="null"/>
+							<e:Object s="null"/>
+							<e:Object s="null"/>
+						</e:Array>
+					</e:ArrayCollection>
+				</e:List>
+			</e:Scroller>
+
+		</e:Group>
+		<e:Group x="-2.66" y="54.67">
+			<com_main:TurnTableItem id="m_turnItem0" skinName="TurnTableItemSkin" y="0" x="0"/>
+			<com_main:TurnTableItem id="m_turnItem1" skinName="TurnTableItemSkin" y="0" x="199.34"/>
+			<com_main:TurnTableItem id="m_turnItem2" skinName="TurnTableItemSkin" y="0" x="400.02"/>
+			<com_main:TurnTableItem id="m_turnItem3" skinName="TurnTableItemSkin" y="0" x="600"/>
+			<com_main:TurnTableItem id="m_turnItem4" skinName="TurnTableItemSkin" y="0" x="800"/>
+			<com_main:TurnTableItem id="m_turnItem5" skinName="TurnTableItemSkin" y="154.67" x="800"/>
+			<com_main:TurnTableItem id="m_turnItem6" skinName="TurnTableItemSkin" y="310.64" x="800"/>
+			<com_main:TurnTableItem id="m_turnItem7" skinName="TurnTableItemSkin" y="466.36" x="800"/>
+			<com_main:TurnTableItem id="m_turnItem8" skinName="TurnTableItemSkin" y="466.36" x="597.35"/>
+			<com_main:TurnTableItem id="m_turnItem9" skinName="TurnTableItemSkin" y="466.36" x="397.67"/>
+			<com_main:TurnTableItem id="m_turnItem10" skinName="TurnTableItemSkin" y="466.36" x="197.33"/>
+			<com_main:TurnTableItem id="m_turnItem11" skinName="TurnTableItemSkin" y="466.36" x="0"/>
+			<com_main:TurnTableItem id="m_turnItem12" skinName="TurnTableItemSkin" y="310.64" x="0"/>
+			<com_main:TurnTableItem id="m_turnItem13" skinName="TurnTableItemSkin" y="154.67" x="0"/>
+
+		</e:Group>
+		<e:Group x="203.99" y="214.68">
+			<e:Image source="border_014_png" x="0" y="0" scale9Grid="23,22,33,35" anchorOffsetX="0" width="598.67" anchorOffsetY="0" height="314.66"/>
+			<e:Image source="border_1037_png" x="145.05" y="14.19" alpha="2" scaleX="1.2" scaleY="1.2" touchEnabled="false"/>
+			<com_main:ComButton id="m_btnOne" y="265.98" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" scaleX="1" scaleY="1" currentState="style6" x="139.78"/>
+			<com_main:ComResCost id="m_comCost0" y="177.97" skinName="ComResCostSkin" x="42.01"/>
+			<com_main:ComButton id="m_btnTen" y="265.98" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" scaleX="1" scaleY="1" currentState="style1" x="441.84"/>
+			<com_main:ComResCost id="m_comCost1" y="177.97" skinName="ComResCostSkin" x="341.01"/>
+			<e:Image source="lb_xyz_png" x="251.99" y="144.64"/>
+			<e:BitmapLabel id="m_lablunckNum" y="66.29" text="0" anchorOffsetX="0" anchorOffsetY="0" font="role_level_fnt" letterSpacing="-5" horizontalCenter="0"/>
+		</e:Group>
+
+	</e:Group>
+
+
+
+
+</e:Skin>

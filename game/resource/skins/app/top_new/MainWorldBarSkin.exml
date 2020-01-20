@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainWorldBarSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="normal,xiangyang">
+	<com_main:CImage id="m_BtnBack" x="0" y="0" source="btn_008_up_png" visible.normal="false"/>
+	<com_main:WorldQueView id="m_teamView" y="111" skinName="WorldQueViewSkin"  left="16"/>
+	<e:Group y="58" right="0" visible.xiangyang="false">
+		<e:Group height="31" y="14" touchChildren="false" touchEnabled="false" width="200" x="0">
+			<e:Image source="border_1006_png" width="100%" height="100%"/>
+			<com_main:ComState id="m_comStateWei" skinName="ComStateSkin" x="-3" y="-1"/>
+			<e:Label id="m_labNumWei" text="19" y="6.96" size="22" textColor="0xffff99" horizontalCenter="-52"/>
+		</e:Group>
+		<e:Group height="31" y="67.03" touchChildren="false" touchEnabled="false" width="200" x="0">
+			<e:Image source="border_1006_png" width="100%" height="100%"/>
+			<com_main:ComState id="m_comStateShu" skinName="ComStateSkin" x="-3" y="-1"/>
+			<e:Label id="m_labNumShu" text="19" y="6.96" size="22" textColor="0xFFFF99" horizontalCenter="-52"/>
+		</e:Group>
+		<e:Group height="31" y="119.48" touchChildren="false" touchEnabled="false" width="200" x="0">
+			<e:Image source="border_1006_png" width="100%" height="100%"/>
+			<com_main:ComState id="m_comStateWu" skinName="ComStateSkin" x="-3" y="-1"/>
+			<e:Label id="m_labNumWu" text="19" y="6.96" size="22" textColor="0xFFFF99" horizontalCenter="-52"/>
+		</e:Group>
+		<com_main:WorldMinMapView id="m_worldMinMap" skinName="WorldMinMapViewSkin" x="66" y="0"/>
+		<e:Group id="m_menuGroup" touchEnabled="false" width="243" height="56" anchorOffsetX="0" x="74" y="168">
+			<e:Group x="20" y="153" width="56" height="56">
+			<e:Group id="m_pArmyBtn" height="56" width="56" anchorOffsetX="28" anchorOffsetY="28" x="28" y="28">
+				<e:Image source="map_icon_zg_png"/>
+			</e:Group>
+			</e:Group>
+			<e:Group x="10" y="143" width="56" height="56">
+			<e:Image id="m_pSearchBtn" x="28" y="28" source="map_icon_ss_png" anchorOffsetX="28" anchorOffsetY="28" width="56" height="56"/>
+			</e:Group>
+			<e:Group x="0" y="133" width="56" height="56">
+			<e:Group id="m_pWarmBtn" height="56" width="56" anchorOffsetX="28" anchorOffsetY="28" x="28" y="28">
+				<e:Image source="map_icon_jb_png" scaleX="1" scaleY="1"/>
+			</e:Group>
+			</e:Group>
+			<e:Group x="0" y="133" width="56" height="56">
+			<e:Group id="m_pMiniBtn" height="56" width="56" anchorOffsetX="28" anchorOffsetY="28" x="28" y="28">
+				<e:Image scaleX="1" scaleY="1" source="map_icon_qb_png"/>
+			</e:Group>
+			</e:Group>
+			<e:layout>
+			<e:HorizontalLayout gap="6"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+	<e:Group id="m_pBtnHelp" width="74" height="74" anchorOffsetX="37" anchorOffsetY="37"  right="22" y="259" visible.normal="false" right.xiangyang="28" y.xiangyang="135">
+			<com_main:CImage source="btn_093_up_png" horizontalCenter="0" verticalCenter="0" width="74" height="74"/>
+			<com_main:CImage horizontalCenter="0" y="55" source="lb_gze_png"/>
+		</e:Group>
+	<e:Group id="btn_rank" width="94" height="106" right="13" bottom="322" visible.normal="false">
+		<e:Image x="3" y="5" source="btn_096_up_png"/>
+		<e:Image x="17" y="69" source="lb_ph_png" horizontalCenter.xiangyang="0"/>
+	</e:Group>
+	<e:Group id="btn_battleInfo" width="94" height="106" right="13" bottom="196" visible.normal="false" right.xiangyang="13" bottom.xiangyang="444">
+		<e:Image x="3" y="6" source="btn_039_up_png"/>
+		<e:Image x="16" y="67" source="lb_zc_png" source.xiangyang="lb_zk_png" horizontalCenter.xiangyang="0.5" y.xiangyang="69"/>
+	</e:Group>
+	<e:Group width="450" height="50" y="40" horizontalCenter="0" includeIn="xiangyang" scaleY.xiangyang="0.7" scaleX.xiangyang="0.7" horizontalCenter.xiangyang="0" y.xiangyang="10">
+		<com_main:CImage scaleX="1" scaleY="1" source="border_1001_png" scale9Grid="46,8,12,9" width="100%" height="50" horizontalCenter="0" anchorOffsetY="0" alpha="0.8"/>
+		<com_main:CImage scaleX="1" scaleY="1" y="-1" anchorOffsetY="0" height="8.6" horizontalCenter="0" source="line_009_png" width="100%"/>
+		<com_main:CImage scaleX="1" scaleY="-1" y="9" horizontalCenter="0" source="line_1003_png"/>
+		<com_main:CImage scaleX="1" scaleY="1" y="45" anchorOffsetY="0" height="8.6" horizontalCenter="0" source="line_009_png" width="100%"/>
+		<com_main:CImage scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" height="20.6" horizontalCenter="0" width="228" y="37"/>
+		<!--<e:Label text="距离襄阳城开战剩余：" size="26" x="46" verticalCenter="0" textColor="0xe7c772"/>-->
+		<e:Label id="m_pLbTime" size="26" text="00:00:00" verticalCenter="0" textColor="0xe9e9e6" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group width="600" height="30" y="40" horizontalCenter="0" includeIn="xiangyang" scaleY.xiangyang="0.7" scaleX.xiangyang="0.7" horizontalCenter.xiangyang="1" y.xiangyang="55">
+		<com_main:CImage scaleX="1" scaleY="1" source="border_1001_png" scale9Grid="46,8,12,9" width="100%" height="30" horizontalCenter="0" anchorOffsetY="0" alpha="0.8"/>
+		<e:Label text="请在出生点创建和回城部队" size="24" verticalCenter="1" textColor="0xe7d7a7" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group id="m_pTaskRoot" y="287.34" right="0" width="176" height="74" visible.xiangyang="false">
+		<e:Image source="world_taskbg_jpg"/>
+		<e:Label id="m_labTaskName" text="皇城血战" y="16.34" size="22" stroke="3" horizontalCenter="0" textColor="0xffff99"/>
+		<e:Group x="36" y="39.66">
+			<e:Image source="border_1001_png" y="0" x="0"/>
+			<e:Label id="m_labTaskPro" text="1/1" y="6.34" size="20" stroke="2" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pEffRoot" width="0" height="0" y="37" x="88" touchChildren="false" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

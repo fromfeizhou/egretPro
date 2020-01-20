@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="battle_head_render" width="134" height="150" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+          
+ 
+
+	<e:Image id="bg" x="5" y="5" source="common_zdbg_2_png"/>
+	<e:Image id="generalHead" horizontalCenter="0" verticalCenter="-8" source="rgh0_png" width="103" height="103"/>
+
+
+	<e:Image id="rage" x="11" touchEnabled="false" y="10" source="ra10_png" width="113" height="112"/>
+	<e:Image id="blood_bg" x="11" y="126" source="proBg_014_png"/>
+	<e:Image id="bloodPro" x="13" y="128" touchEnabled="false" source="pro_014_png" width="108"/>
+ 
+	<e:Image id="angerMaxEffect" x="12" y="11" width="106" height="105" touchEnabled="false" source="" scaleX="1.05" scaleY="1.08"/>
+	<e:Image x="87.02" y="77.71" scaleX="0.8" scaleY="0.8" touchEnabled="false" source="gt_bg_png"/>
+	<e:Image id="generalType" x="89.32" y="74.3" touchEnabled="false" source="general_type_bubing2_png"/>
+</e:Skin>

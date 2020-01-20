@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldMenuBarAtkSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:AGame="AGame.*" width="557" height="463">
+	<e:Group width="557" height="465">
+		<e:Group id="m_pGInfo" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" touchChildren="false" touchEnabled="false" x="0">
+			<e:Image anchorOffsetX="0" anchorOffsetY="0" left="0" top="0" right="0" bottom="0" source="frame_401_png" scale9Grid="74,64,54,28"/>
+			<e:Label text="黄巾乱军" y="13" size="32" textColor="0xFFFF99" horizontalCenter="0"/>
+			<e:Label id="m_labCount" text="敌军部队数量：300" y="79" size="26" textColor="0xabb7d1" strokeColor="0x000000" horizontalCenter="0"/>
+				<e:Image source="line_1003_png" y="116"  horizontalCenter="0.5" scaleX="1" scaleY="1" rotation="180"/>
+			<!--<com_main:CImage x="124.34" y="65.36" source="lb_zdl_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="0.7" scaleY="0.7"/>-->
+			<!--<e:BitmapLabel id="m_labelFight" width="182" height="44" y="62.33" font="fight_font_fnt" text="99999" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-15" scaleX="0.6" scaleY="0.6" left="175"/>-->
+			<e:Label text="概率掉落奖励" y="249" size="24" horizontalCenter="0" textColor="0xe9e9e6"/>
+			<e:Group id="m_pGHead" y="123" horizontalCenter="0" scaleX="0.8" scaleY="0.8">
+				<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="-14"/>
+				</e:layout>
+			</e:Group>
+			<e:Image source="line_007_png" y="246" width="78" height="20" x="110"/>
+			<e:Image source="line_007_png" y="245" width="78" height="20" scaleX="-1" x="442"/>
+			<e:Group id="m_pAward" y="289" anchorOffsetY="0" horizontalCenter="0" scaleX="0.75" scaleY="0.75">
+				<e:layout>
+					<e:HorizontalLayout gap="12"/>
+				</e:layout>
+			</e:Group>
+			<e:Image source="border_1001_png" x="91" y="385" width="369"/>
+			<e:Image source="lb_tjzl_png" x="160" y="382"/>
+			<e:Group x="255" y="375.1" scaleX="0.8" scaleY="0.8">
+				<com_main:CImage y="0" source="border_016_png" x="0"/>
+				<com_main:CImage y="4.64" source="common_fight_png" x="7.5"/>
+				<e:BitmapLabel id="m_labfightNum" text="999" font="fight_font_fnt" letterSpacing="-15" scaleX="1" scaleY="1" x="59" verticalCenter="-1.5"/>
+			</e:Group>
+			<e:Image source="border_006_png" height="32" left="4" right="4" bottom="4"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="build_level_up_view_skin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" width="1334" height="750">
+	<w:Declarations>
+		<tween:TweenGroup id="m_pShowAni">
+			<tween:TweenItem target="{m_imgTitle}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0}" scaleY="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object scaleX="{1.4}" scaleY="{1.4}"/>
+					</tween:props>
+				</tween:To>
+				<tween:Wait duration="50"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_pRootMask}">
+				<tween:Set>
+					<tween:props>
+						<e:Object height="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="200"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object height="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object height="{388}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{m_pTipsRoot}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="600"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Group id="m_pRoot" horizontalCenter="0" verticalCenter="15" height="388">
+			<com_main:CImage id="m_pBg" horizontalCenter="0" source="border_1039_png" anchorOffsetY="0" scale9Grid="154,133,924,15" height="388" top="0"/>
+			<e:Group id="m_pLvUpRoot" y="46" horizontalCenter="0">
+				<e:Group y="30" x="91">
+					<com_main:CImage source="border_1049_png" x="0" y="0"/>
+					<com_main:CImage id="m_pEffectIcon" source="border_1050_png"/>
+					<com_main:CLabel id="m_pLbLv" text="2" verticalCenter="0" horizontalCenter="0" fontFamily="Microsoft YaHei" size="60"/>
+				</e:Group>
+				<com_main:CLabel id="m_pDesc" text="武将等级上限提升至" y="266" fontFamily="Microsoft YaHei" size="30" x="59"/>
+				<com_main:CLabel id="m_pDescValue" text="22" x="335.5" y="266" fontFamily="Microsoft YaHei" size="30" textColor="0xe7c772"/>
+			</e:Group>
+			<com_main:CLabel id="m_labBuildTitle" text="所有建筑等级提升至14级,可解锁以下建筑" fontFamily="Microsoft YaHei" size="24" textColor="0xFFFFFF" y="77" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Scroller anchorOffsetX="0" anchorOffsetY="0" width="1232" height="401" horizontalCenter="0" verticalCenter="25.5" x="0" y="66" scaleX="1" scaleY="1">
+				<e:Group id="m_pBuildGroup" x="42" y="0">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" gap="-150"/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<com_main:CImage id="m_imgTitle" source="lb_dddjts_png" anchorOffsetX="210" anchorOffsetY="58" horizontalCenter="3" verticalCenter="-170"/>
+		<e:Group id="m_pTipsRoot" anchorOffsetY="0" height="51" horizontalCenter="0" verticalCenter="221.5">
+			<com_main:CImage width="364" height="52" source="border_1001_png" x="0" y="0"/>
+			<com_main:CLabel text="点击任意区域关闭" fontFamily="Microsoft YaHei" size="22" horizontalCenter="0" verticalCenter="0"/>
+			<com_main:CLabel id="m_labTime" text="5" fontFamily="Microsoft YaHei" size="25" y="15" x="285"/>
+		</e:Group>
+		<com_main:CImage id="m_pRootMask" horizontalCenter="0" anchorOffsetY="0" height="388" x="10" source="border_006_png" width="1232" top="196"/>
+		<e:Group id="m_pMaskBtn" left="0" top="0" right="0" bottom="0"/>
+	</e:Group>
+</e:Skin>

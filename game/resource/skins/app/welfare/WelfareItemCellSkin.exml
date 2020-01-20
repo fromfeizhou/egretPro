@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WelfareItemCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="100" width="100">
+	<com_main:ComItemNew id="m_comItem" currentState="count" skinName="com_item_new" horizontalCenter="0" verticalCenter="0"/>
+	<e:Rect id="m_mask" fillAlpha="1" strokeAlpha="0" scaleX="1" scaleY="1" right="0" bottom="3" top="1" left="0"/>
+	<com_main:CImage id="m_black" left="0" right="0" anchorOffsetY="0" scaleY="1" alpha="0.6" top="1" bottom="3" source="border_005_jpg" x="0" y="0"/>
+	<e:Group id="m_groupGetFlag" y="40" horizontalCenter="0" touchChildren="false" touchEnabled="false" visible="false">
+		<com_main:CImage anchorOffsetX="0" scaleX="1" scaleY="1" source="welfare_tips_png"/>
+		<e:Label id="m_labGetFlag" text="已领取" size="25" scaleX="1" scaleY="1" horizontalCenter="0.5" textColor="0xe9e9e6"/>
+	</e:Group>
+</e:Skin>

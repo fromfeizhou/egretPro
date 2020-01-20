@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_hero_panel" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  states="base,visit,cross"  width="1110" height="600">
+
+	<e:Group x="0" y="0">
+		<com_main:APopUp id="m_aPopUp" skinName="APopUpSkin" currentState="size2" x="0" y="0"/>
+		<e:Group id="m_pGSatus" width="279" y="514" touchEnabled="false" touchChildren="false" x="9" visible.visit="false" visible="false">
+			<e:Label id="m_pLbTime" text="00:00:00" y="11.66" textColor="0xe9e9e6" size="24" scaleX="1" scaleY="1" left="20"/>
+			<com_main:CImage id="m_pIcoFood" y="-1.68" anchorOffsetY="0" anchorOffsetX="0" source="icon_source_food_png" x="166" scaleX="1" scaleY="1"/>
+			<e:Label id="m_pLbFood" text="0" y="11.33" size="24" textColor="0x00ff00" x="215" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Scroller id="m_pSroller" width="1026" height="370" x="43.67" y="90" anchorOffsetX="0" anchorOffsetY="0">
+			<e:List id="m_pList" anchorOffsetY="0" height="366.33">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="top"/>
+			</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Group id="m_pBtnGo" width="249" height="82" y="534.34" anchorOffsetX="124.5" anchorOffsetY="41" horizontalCenter="0" visible.visit="false" includeIn="base,visit">
+			<com_main:CImage scaleX="1" scaleY="1" source="btn_002_up_png" horizontalCenter="0"/>
+			<e:Label text="前   往" y="27.34" textColor="0xe9e9e6" stroke="2" strokeColor="0x885a2a" horizontalCenter="0"/>
+		</e:Group>
+		<e:Label y="523.66" textColor="0xE9E9E6" size="30" horizontalCenter="0" text="点击武将即进行比武！" visible.base="false" text.cross="点击部队出征！"/>
+		<e:Label text="攻城战可以派出多支队伍" y="525" size="24"  x="708" scaleX="1" scaleY="1" textColor="0x8a8a9e" visible.visit="false" visible.cross="false"/>
+	</e:Group>
+</e:Skin>

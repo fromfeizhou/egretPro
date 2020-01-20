@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="map_icon" width="233" height="142" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+
+
+	<com_main:CImage id="m_pG" horizontalCenter="-1.5" verticalCenter="22.5" source="" width="208" height="138"/>
+	<com_main:CImage id="m_pIcon" x="0" source="map_main_build40_png"/>
+	<com_main:CImage id="m_pH" verticalCenter="-34" x="5" y="-2" source="" visible="false"/>
+	<com_main:CImage id="m_pTitle" width="57" height="29" horizontalCenter="0" verticalCenter="-46" x="28" y="44" source=""/>
+
+	<e:Group id="m_pTitleGroup" x="85" y="-23">
+		<com_main:CImage id="m_pNameBG" y="0" source="border_1028_png" scale9Grid="8,3,50,24" left="-11" right="-11"/>
+		<e:Label id="m_pName" text="" size="16" fontFamily="Microsoft YaHei" textAlign="center" horizontalCenter="0" verticalCenter="-1" textColor="0xfffbd0"/>
+	</e:Group>
+	<com_main:CImage id="m_pD" verticalCenter="-10.5" source="" x="-6" visible="false"/>
+</e:Skin>

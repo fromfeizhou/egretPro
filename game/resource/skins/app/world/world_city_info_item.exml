@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_city_info_item" width="506" height="105" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scale9Grid="15,50,92,22" scaleX="1" scaleY="1" source="line_1001_png" rotation="270" height="505" bottom="2"/>
+	<com_main:ComItemNew id="m_pItem" x="8" y="6" skinName="com_item_new" currentState="base" scaleX="0.9" scaleY="0.9"/>
+	<e:Label id="m_pLbName" text="名字" x="107" y="40" textColor="0x00FF00" size="24"/>
+	<e:Label id="m_pLbNum" text="X 99999" x="382" y="40" size="24" textColor="0xE9E9E6"/>
+</e:Skin>

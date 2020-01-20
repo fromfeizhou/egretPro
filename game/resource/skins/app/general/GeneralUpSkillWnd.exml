@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralUpSkillWnd" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="560" height="704"  states="normal,full" >
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" width="560" height="704" horizontalCenter="0" verticalCenter="0">
+		<com_main:APopUp id="m_apopup" skinName="APopUpSkin" anchorOffsetY="0" scaleX="1" scaleY="1" width="560" top="0" bottom="0"/>
+		<e:Group x="25" y="266.07" width="505" height="197.27" anchorOffsetY="0" visible.full="false">
+			<e:Image anchorOffsetX="0" anchorOffsetY="0" source="border_031_png" scale9Grid="22,24,36,33" bottom="8" top="8" left="8" right="8"/>
+			<com_main:CLabel id="m_labNextName" text="巧变斩" y="25" size="24" textAlign="left" textColor="0xE9E9E6" verticalAlign="top" anchorOffsetY="0" anchorOffsetX="0" lineSpacing="5" x="160"/>
+			<com_main:CLabel id="m_labNextLv" text="1级" y="25" size="24" textAlign="left" textColor="0xE9E9E6" verticalAlign="top" anchorOffsetY="0" anchorOffsetX="0" lineSpacing="5" x="288"/>
+			<com_main:CLabel id="m_labNextDes" text="对当前目标对当前目标对当前目标对当前目标对当前目标" y="57.36" size="20" textAlign="left" textColor="0x8A8A9E" verticalAlign="top" anchorOffsetY="0" height="122.67" anchorOffsetX="0" width="324.34" lineSpacing="5" x="159"/>
+			<com_main:GeneralSkillIconView id="m_nextSkillIcon" x="34.68" y="45" skinName="General_skill_icon_view" currentState="base"/>
+			<e:Group id="m_conEffectNext" width="0" height="0" x="78" y="100"/>
+		</e:Group>
+		<e:Image y="245.94" source="general_skill_flag_png" horizontalCenter="0" visible.full="false"/>
+		<e:Group x="25" y="65.07" width="505" height="197.27" anchorOffsetY="0" y.full="194.72">
+		<e:Image anchorOffsetX="0" anchorOffsetY="0" source="border_031_png" scale9Grid="22,24,36,33" bottom="8" top="8" left="8" right="8"/>
+			<com_main:CLabel id="m_labCurName" text="巧变斩" y="25" size="24" textAlign="left" verticalAlign="top" anchorOffsetY="0" anchorOffsetX="0" lineSpacing="5" x="160" textColor="0xe9e9e6"/>
+			<com_main:CLabel id="m_labCurLv" text="1级" y="25" size="24" textAlign="left" textColor="0xE9E9E6" verticalAlign="top" anchorOffsetY="0" anchorOffsetX="0" lineSpacing="5" x="288"/>
+		<com_main:CLabel id="m_labCurDes" text="对当前目标对当前目标对当前目标对当前目标对当前目标" y="57.36" size="20" textAlign="left" textColor="0x8a8a9e" verticalAlign="top" anchorOffsetY="0" height="122.67" anchorOffsetX="0" width="324.34" lineSpacing="5" x="159"/>
+			<com_main:GeneralSkillIconView id="m_curSkillIcon" x="35" y="45" skinName="General_skill_icon_view" currentState="base"/>
+			<e:Group id="m_conEffect" width="0" height="0" x="78" y="100"/>
+		</e:Group>
+		<e:Group x="105" y="459.34" visible.full="false" height="92" width="205" visible="false">
+			<com_main:CLabel id="m_costItemName" text="物品名字" size="16" textAlign="left" textColor="0xE9E9E6" verticalAlign="middle" y="76" horizontalCenter="9.5"/>
+			<com_main:CLabel id="m_labCost" text="5/10" size="24" textAlign="left" textColor="0xE9E9E6" verticalAlign="middle" y="25.66" left="158"/>
+			<com_main:CLabel text="消耗：" size="24" textAlign="left" textColor="0xE9E9E6" verticalAlign="middle" y="25.66" x="0"/>
+			<com_main:ComItemNew id="m_comItem" y="0" skinName="com_item_new" currentState="base" scaleX="0.7" scaleY="0.7" horizontalCenter="9.5"/>
+		</e:Group>
+		<com_main:CLabel text="消耗：" size="24" textAlign="left" textColor="0xE9E9E6" verticalAlign="middle" y="501" x="28"/>
+		<e:Group id="m_gItemConsume" y="475" horizontalCenter="30">
+			<e:Group id="m_gpItem0" x="70" y="0">
+				<com_main:ComItemNew id="m_comItem0" y="0" skinName="com_item_new" currentState="name_ex" scaleX="0.7" scaleY="0.7" x="0"/>
+				<com_main:CLabel id="m_labCost0" text="5/10" size="16" textAlign="left" verticalAlign="middle" y="50" textColor="0xffffff" right="10" touchEnabled="false"/>
+			</e:Group>
+			<e:Group id="m_gpItem1" x="174.99666666666667" y="0">
+				<com_main:ComItemNew id="m_comItem1" y="0" skinName="com_item_new" currentState="name_ex" scaleX="0.7" scaleY="0.7" x="0"/>
+				<com_main:CLabel id="m_labCost1" text="5/10" size="16" textAlign="left" verticalAlign="middle" y="50" textColor="0xffffff" right="10" touchEnabled="false"/>
+			</e:Group>
+			<e:Group id="m_gpItem2" x="279.00333333333333" y="0">
+				<com_main:ComItemNew id="m_comItem2" y="0" skinName="com_item_new" currentState="name_ex" scaleX="0.7" scaleY="0.7" x="0"/>
+				<com_main:CLabel id="m_labCost2" text="5/10" size="16" textAlign="left" verticalAlign="middle" y="50" textColor="0xffffff" right="10" touchEnabled="false"/>
+			</e:Group>
+			<e:Group id="m_gpItem3" x="384" y="0">
+				<com_main:ComItemNew id="m_comItem3" y="0" skinName="com_item_new" currentState="name_ex" scaleX="0.7" scaleY="0.7" x="0"/>
+				<com_main:CLabel id="m_labCost3" text="5/10" size="16" textAlign="left" verticalAlign="middle" y="50" textColor="0xffffff" right="10" touchEnabled="false"/>
+			</e:Group>
+			<e:layout>
+				<e:HorizontalLayout gap="20"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="m_gConsume" bottom="127" horizontalCenter="0" visible="false">
+			<com_main:ComResCost id="m_costItem0" y="0" skinName="ComResCostSkin" x="0"/>
+			<com_main:ComResCost id="m_costItem1" y="0" skinName="ComResCostSkin" x="0"/>
+			<com_main:ComResCost id="m_costItem2" y="0" skinName="ComResCostSkin" x="0"/>
+			<com_main:ComResCost id="m_costItem3" y="0" skinName="ComResCostSkin" x="0"/>
+			<e:layout>
+				<e:TileLayout horizontalGap="60" requestedColumnCount="2" verticalGap="0"/>
+			</e:layout>
+		</e:Group>
+		<com_main:ComButton id="m_btnUpLv" skinName="com_button" horizontalCenter="0.5" bottom="30" currentState="style2"/>
+		<com_main:CLabel text="已满级" y="122.67" size="30" textAlign="left" verticalAlign="top" anchorOffsetY="0" anchorOffsetX="0" lineSpacing="5" textColor="0xE9E9E6" includeIn="full" horizontalCenter="0"/>
+		<e:Group id="m_pFightNumRoot" width="0" height="0" y="423" x="280"/>
+	</e:Group>
+</e:Skin>

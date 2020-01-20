@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EmperorBattleAdvanceSkin" width="1120" height="644" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1120" height="644" x="0" y="0">
+        <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="2" top="2" bottom="2" right="2"/>
+		<e:Image y="139" scaleY="-1" horizontalCenter="0" width="1072" source="border_1008_png"/>
+		<e:Image source="bj_xyz_hdyg_jpg" horizontalCenter="0.5" y="74"/>
+		<e:Image id="m_imgPic" y="73" source="lb_qyjjjzxy_png" horizontalCenter="0"/>
+		<e:Group id="m_xyCity" width="353" height="296" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" horizontalCenter="0" verticalCenter="100">
+			<e:Image id="m_imgXy" source="map_build_1_png" horizontalCenter="-3.5" verticalCenter="23.5"/>
+			<e:Group y="24" horizontalCenter="0">
+				<e:Image source="com_wzk5_png" y="11" left="-20" right="-20" scale9Grid="25,4,155,28"/>
+				<e:Label id="m_labEmp" text="所属：中立" y="18" size="22" fontFamily="Microsoft YaHei" textColor="0xffffff" horizontalCenter="0"/>
+				<e:Image id="m_imgCountry" source="common_country1_1_png" x="-64" y="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group x="20" y="296" width="357">
+			<e:Image source="border_1006_png" height="310" verticalCenter="0" left="0"/>
+			<com_main:CImage source="line_009_png" top="0" height="4" left="0" right="0"/>
+			<com_main:CImage source="line_009_png" bottom="0" height="4" left="0" right="0"/>
+			<com_main:CImage y="125" source="line_1006_png" horizontalCenter="0" width="300"/>
+			<e:Image source="line_011_png" y="25" width="100" height="13" horizontalCenter="-104"/>
+			<e:Label id="m_labPrivilege" text="称帝特权" size="22" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xffff99" y="20" horizontalCenter="0"/>
+			<e:Image source="line_011_png" y="25" width="100" height="13" scaleX="-1" horizontalCenter="104"/>
+			<e:Image source="line_011_png" y="148" width="100" height="13" horizontalCenter="-104"/>
+			<e:Label id="m_labEffect" text="称帝效果" size="22" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xFFFF99" y="144" horizontalCenter="0"/>
+			<e:Image source="line_011_png" y="148" width="100" height="13" scaleX="-1" horizontalCenter="104"/>
+			<com_main:CLabel id="m_labPrivilegeContent" text="1" x="30" y="60" size="22" fontFamily="Microsoft YaHei" lineSpacing="10"/>
+			<com_main:CLabel id="m_labEffectContent" text="1" x="30" y="184" size="20" fontFamily="Microsoft YaHei" lineSpacing="10" width="260"/>
+			<com_main:CLabel id="m_labEffectNum" text="1" y="184" size="20" fontFamily="Microsoft YaHei" lineSpacing="10" right="30"/>
+			<com_main:CImage id="m_btnEmp" source="btn_093_up_png" width="44" height="44" top="10" right="10"/>
+		</e:Group>
+		<e:Group y="296" right="20" width="357">
+			<e:Image source="border_1006_png" height="310" horizontalCenter="0" verticalCenter="0" scaleX="-1"/>
+			<com_main:CImage source="line_009_png" top="0" height="4" left="0" right="0"/>
+			<com_main:CImage source="line_009_png" bottom="0" height="4" right="0" left="0"/>
+			<e:Label id="m_labReward" text="胜利国全国每日奖励" size="22" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xFFFF99" y="20" horizontalCenter="0"/>
+			<com_main:CImage width="340" height="140" alpha="0.35" source="border_026_png" scale9Grid="8,8,50,50" y="65" horizontalCenter="0"/>
+			<e:Group id="m_awardList" height="95" y="88" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+				<e:layout>
+					<e:HorizontalLayout gap="16"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<com_main:CImage source="zyt_34_png" x="766" y="257" width="330" scale9Grid="38,17,2,1"/>
+		<e:Label id="m_labTime" text="距离襄阳战开放还剩2天" size="24" fontFamily="Microsoft YaHei" x="800" textColor="0xffefce" bottom="357"/>
+		<e:Group id="m_pBtnInfo" width="74" height="74" anchorOffsetX="37" anchorOffsetY="37" horizontalCenter="-490" verticalCenter="-196">
+			<com_main:CImage source="btn_093_up_png" horizontalCenter="0" verticalCenter="0" width="74" height="74"/>
+			<com_main:CImage horizontalCenter="0" y="55" source="lb_gze_png"/>
+		</e:Group>
+		<com_main:ComButton id="m_pBtnGet" right="126" skinName="com_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" bottom="61"/>
+		<com_main:ComButton id="m_pBtnJoin" skinName="com_button" currentState="style2" horizontalCenter="0" bottom="36"/>
+		<e:Label id="m_labDes" text="襄阳战开始后，第一队世界编队将自动参战" size="20" horizontalCenter="0" textColor="0xabb7d1" touchEnabled="false" bottom="10"/>
+	</e:Group>
+</e:Skin>

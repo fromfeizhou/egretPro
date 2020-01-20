@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComIndexBarSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="264" height="42">
+		<e:Image source="border_1030_png" alpha="0.4" anchorOffsetX="0" width="232" height="30" y="6" horizontalCenter="0"/>
+		<e:Group id="m_pPoints" horizontalCenter="2" y="6" height="30" width="200">
+		</e:Group>
+		<e:Group id="m_pRightBtn" verticalCenter="0" right="0">
+			<e:Image source="btn_024_up_png" x="0" y="0" scaleX="-0.7" scaleY="0.7"/>
+		</e:Group>
+		<e:Group id="m_pLeftBtn" left="0" verticalCenter="0">
+			<e:Image source="btn_024_up_png" x="0" y="0" scaleX="0.7" scaleY="0.7"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

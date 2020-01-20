@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralInfoWndSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:tween="egret.tween.*">
+	
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" top="36" bottom="0" left="0" right="0">
+		<e:Image anchorOffsetX="0" anchorOffsetY="0" source="border_004_jpg" top="19" left="0" right="0" bottom="0"/>
+	</e:Group>
+	<e:Group id="m_pViewRoot" horizontalCenter="-4.5" width="1172" height="691" verticalCenter="29.5" touchEnabled="false">
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" width="648" right="0" top="0" bottom="0">
+			<e:ViewStack id="m_tabViewStack" top="87" bottom="0" x="0" width="653">
+			</e:ViewStack>
+			<com_main:ComTabTopGroup id="m_comTabTopGroup" x="0" y="15" skinName="com_tab_top_group" width="648" height="70"/>
+			<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" right="-9" bottom="0" source="line_1004_png" top="15"/>
+		</e:Group>
+		<e:Group width="522" x="0" height="686" y="5">
+			<e:Image id="m_imgGeneralCardBg" anchorOffsetX="0" anchorOffsetY="0" source="general_card_bg3_jpg" width="100%" height="100%"/>
+			<com_main:GeneralSliderRende id="m_genCard" skinName="General_slider_render" scaleX="1" scaleY="1" height="100%"/>
+			<e:Image source="line_1005_png" height="100%" x="517"/>
+			<e:Image source="line_1005_png" height="100%" x="-4"/>
+		</e:Group>
+		
+	</e:Group>
+	<e:Group id="btn_left" verticalCenter="0" left="0" anchorOffsetY="0" height="300" anchorOffsetX="0" width="80">
+		<e:Image source="btn_024_up_png" verticalCenter="0" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group id="btn_right" verticalCenter="0" right="0" width="80" height="300" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="btn_024_up_png" verticalCenter="0" horizontalCenter="0" scaleX="-1"/>
+	</e:Group>
+	<com_main:MainTopNew id="m_mainTop" skinName="new_top_main" width="100%"/>
+</e:Skin>

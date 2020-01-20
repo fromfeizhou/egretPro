@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComRankNumItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="102" height="74" anchorOffsetX="51" anchorOffsetY="37" x="51" y="37">
+		<com_main:CImage id="m_pImageRank" source="Icon_List_NO2_png" horizontalCenter="-0.5" verticalCenter="0" visible="false"/>
+		<com_main:CLabel id="m_pTextRank" text="Label" left="0" right="0" top="0" bottom="0" textAlign="center" verticalAlign="middle" fontFamily="Microsoft YaHei" size="30" visible="false"/>
+	</e:Group>
+</e:Skin>

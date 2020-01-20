@@ -1,0 +1,13 @@
+{"file":"kezhiNum_grey.png","frames":{
+"8":{"x":80,"y":111,"w":30,"h":41,"offX":0,"offY":6,"sourceW":30,"sourceH":52},
+"9":{"x":42,"y":111,"w":30,"h":41,"offX":0,"offY":6,"sourceW":30,"sourceH":52},
+"克":{"x":4,"y":4,"w":52,"h":51,"offX":0,"offY":1,"sourceW":52,"sourceH":52},
+"制":{"x":64,"y":4,"w":50,"h":50,"offX":0,"offY":1,"sourceW":52,"sourceH":52},
+"0":{"x":4,"y":112,"w":30,"h":41,"offX":0,"offY":6,"sourceW":30,"sourceH":52},
+"1":{"x":75,"y":209,"w":21,"h":41,"offX":1,"offY":4,"sourceW":22,"sourceH":52},
+"2":{"x":80,"y":160,"w":29,"h":41,"offX":0,"offY":6,"sourceW":30,"sourceH":52},
+"3":{"x":4,"y":161,"w":28,"h":41,"offX":0,"offY":6,"sourceW":28,"sourceH":52},
+"4":{"x":64,"y":62,"w":33,"h":41,"offX":0,"offY":4,"sourceW":33,"sourceH":52},
+"5":{"x":40,"y":209,"w":27,"h":41,"offX":1,"offY":6,"sourceW":28,"sourceH":52},
+"6":{"x":4,"y":63,"w":30,"h":41,"offX":0,"offY":6,"sourceW":30,"sourceH":52},
+"7":{"x":42,"y":160,"w":30,"h":41,"offX":0,"offY":6,"sourceW":30,"sourceH":52}}}

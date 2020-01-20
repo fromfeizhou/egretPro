@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CheckBox" states="up,down,disabled,upAndSelected,downAndSelected" xmlns:e="http://ns.egret.com/eui">
+        <e:Image  source="btn_031_up_png"/>
+        <e:Image includeIn="upAndSelected,downAndSelected"  horizontalCenter="0" verticalCenter="0" source="btn_031_sel_png"/>
+        <e:Label id="labelDisplay" size="20" textColor="0x707070" textAlign="center" verticalAlign="middle"
+                    fontFamily="Tahoma"/>
+	
+</e:Skin>

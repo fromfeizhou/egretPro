@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpNoticeViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1044" height="610">
+		<com_main:APopUp id="m_pApopUp" skinName="APopUpSkin" currentState="size3" anchorOffsetY="0" x="0" y="0" height="610"/>
+		<e:Scroller anchorOffsetY="0" width="1044" scrollPolicyH="off" scrollPolicyV="on" x="0" y="62" height="536.33">
+		<e:List id="m_pList" y="-0.5" anchorOffsetY="0" height="536.34">
+		</e:List>
+		</e:Scroller>
+		<com_main:CImage source="border_1019_png" anchorOffsetX="0" width="1027.2" x="6.67" y="478.65" touchEnabled="false" height="122"/>
+	</e:Group>
+</e:Skin>

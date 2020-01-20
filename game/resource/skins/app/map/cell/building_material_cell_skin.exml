@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="building_material_cell_skin" width="516" height="70" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="516" height="70" x="0" y="0" anchorOffsetY="0" anchorOffsetX="0">
+		<com_main:CImage id="m_icon" source="icon_source_food_png" horizontalCenter="-212" verticalCenter="0"/>
+		<com_main:CLabel id="m_pLbDesc" text="龙哥图 等级 : 2" verticalAlign="middle" anchorOffsetY="0" left="85" size="22" anchorOffsetX="0" width="196" verticalCenter="0" fontFamily="Microsoft YaHei"/>
+		<com_main:CImage id="m_imageIsCan" source="common_y_png" horizontalCenter="54.5" verticalCenter="0"/>
+		<com_main:ComButton id="m_pBtnGoto" currentState="style1" skinName="com_button" horizontalCenter="176.5" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

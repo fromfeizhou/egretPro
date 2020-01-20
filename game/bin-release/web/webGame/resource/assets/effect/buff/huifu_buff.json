@@ -1,0 +1,10 @@
+{"file":"huifu_buff.png","frames":{
+"huifu_buff_0":{"x":174,"y":152,"w":64,"h":51,"offX":18,"offY":80,"sourceW":100,"sourceH":165},
+"huifu_buff_1":{"x":90,"y":426,"w":66,"h":67,"offX":18,"offY":69,"sourceW":100,"sourceH":165},
+"huifu_buff_2":{"x":90,"y":319,"w":73,"h":101,"offX":16,"offY":52,"sourceW":100,"sourceH":165},
+"huifu_buff_3":{"x":174,"y":3,"w":76,"h":143,"offX":15,"offY":22,"sourceW":100,"sourceH":165},
+"huifu_buff_4":{"x":3,"y":323,"w":81,"h":144,"offX":11,"offY":16,"sourceW":100,"sourceH":165},
+"huifu_buff_5":{"x":3,"y":3,"w":81,"h":158,"offX":11,"offY":2,"sourceW":100,"sourceH":165},
+"huifu_buff_6":{"x":3,"y":167,"w":81,"h":150,"offX":11,"offY":8,"sourceW":100,"sourceH":165},
+"huifu_buff_7":{"x":90,"y":3,"w":78,"h":150,"offX":11,"offY":7,"sourceW":100,"sourceH":165},
+"huifu_buff_8":{"x":90,"y":159,"w":74,"h":154,"offX":13,"offY":0,"sourceW":100,"sourceH":165}}}

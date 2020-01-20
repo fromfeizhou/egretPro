@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MaterialViewSkin" width="1164" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*"  >
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Scroller anchorOffsetX="0" anchorOffsetY="0" left="32" right="32" y="80" height="550">
+			<e:List id="m_listCard" y="-22">
+				<e:layout>
+					<e:HorizontalLayout gap="5"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Group height="116" width="100%" x="0" y="634">
+			<e:Image source="border_009_png" scale9Grid="7,7,46,46" height="100%" anchorOffsetY="0" y="0" x="0" width="100%"/>
+			<e:Label id="m_labReset" text="每日凌晨6点重置" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" textColor="0xABB7D1" x="66.41" y="47.48"/>
+			<e:Group width="331.81" height="100" anchorOffsetX="0" y="14" scaleX="1" scaleY="1" right="46">
+				<e:Image source="border_006_png" x="124" y="23" scaleX="1" scaleY="1" anchorOffsetY="0" height="49" anchorOffsetX="0" width="104.33"/>
+				<e:Label text="挑战次数" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" top="34" left="6" textColor="0xabb7d1"/>
+				<e:Label id="m_labPro" text="8/8" size="26" textColor="0xE9E9E6" fontFamily="Microsoft YaHei" y="35" horizontalCenter="10"/>
+				<e:Image id="m_btnAdd" source="btn_011_up_png" x="250.56" anchorOffsetX="32" anchorOffsetY="31.5" scaleX="1" scaleY="1" y="47.47"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

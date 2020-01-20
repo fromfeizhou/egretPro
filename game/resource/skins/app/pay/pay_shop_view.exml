@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="pay_shop_view" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1334" height="750">
+	<w:Config id="164f5bcdc8d"/>
+	<e:Group x="0" y="0" width="100%" height="100%">
+		<com_main:CImage source="border_004_jpg" width="100%" height="100%" x="0" y="0"/>
+		<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+
+
+		<e:Group id="m_pRoot" horizontalCenter="0" verticalCenter="27">
+			<e:Scroller anchorOffsetX="0" anchorOffsetY="0" width="1316" height="523" y="159" x="10">
+				<e:Group id="m_pGSroller">
+				<e:layout>
+					<e:TileLayout paddingLeft="119" horizontalGap="29" paddingTop="20" verticalGap="17" paddingBottom="70" horizontalAlign="center" verticalAlign="middle"/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+			<e:Group id="m_pViewRoot" touchEnabled="false" y="0" x="0">
+				<e:Group x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="100%">
+				<com_main:CImage source="border_1011_png" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="164" fillMode="scale" y="0"/>
+				<com_main:CImage source="line_009_png" anchorOffsetX="0" width="94%" anchorOffsetY="0" y="155.65" horizontalCenter="0"/>
+				<e:BitmapLabel id="m_labPlayerVip" x="276" y="63.1" font="font_vip_fnt" text="贵族10"/>
+				<e:Label id="m_labTaget" text="充值2000000元宝 即可升级到vip11" size="20" y="42.5" fontFamily="Microsoft YaHei" x="588" textColor="0xE9E9E6"/>
+				<e:Label id="m_lbExp" text="1000/2000" size="20" y="98" fontFamily="Microsoft YaHei" x="767" textColor="0xE9E9E6"/>
+				<e:Group x="412" y="70" anchorOffsetY="0" anchorOffsetX="0" width="510">
+					<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="proBg_001_png" width="100%" height="24" scale9Grid="46,12,61,0" rotation="359.95"/>
+					<com_main:CImage id="m_imgVipPro" x="36" source="pro_006_png" anchorOffsetY="0" height="21" verticalCenter="0" anchorOffsetX="0" width="436"/>
+				</e:Group>
+				<com_main:ComButton id="m_btnRecharge" x="1051.48" skinName="com_button" currentState="style2" anchorOffsetX="120" anchorOffsetY="37.5" y="78"/>
+				</e:Group>
+				<e:Image id="m_imgVip" y="77" anchorOffsetX="81" anchorOffsetY="80.5" scaleX="1" scaleY="1" source="vip_png" x="189"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

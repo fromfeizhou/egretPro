@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="tab_btn_render" width="173" height="99" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  states="up,down" >
+	<e:Group x="-1" y="0">
+		<com_main:CImage source="btn_014_sel_png" visible.up="false" right="0" bottom="0"/>
+		<com_main:CImage source="line_001_png" visible.down="false" right="8" bottom="0"/>
+		<com_main:CLabel text="{data.name}" horizontalCenter="0" verticalCenter="0" size="26" touchEnabled="false" textColor.down="0xe0d5ab" textColor="0xe0d5ab" textColor.up="0xe0d5ab"/>
+	</e:Group>
+</e:Skin>

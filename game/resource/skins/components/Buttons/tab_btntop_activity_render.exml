@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="tab_btntop_activity_render" height="65"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" width="130" states="up,down" >
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image source="hd_7d_border02_png" scale9Grid="10,10,10,10" width="130" height="57" y="3" horizontalCenter="0" alpha="0.7" alpha.up="0.75"/>
+		<e:Image source="btn_109_png" visible.up="false"  width="140" height="62" horizontalCenter="0" verticalCenter="-2.5"/>
+		<e:Image source="line_1005_png" visible.up="true"  visible="false" horizontalCenter="65" verticalCenter="-0.5" width="6" height="52" alpha="0.2"/>
+		<e:Label text="{data.name}" size="24" textColor="0xe9e9e6" verticalAlign="middle" textAlign="center" textColor.down="0xe9e9e6" left="-1" top="-3" right="1" bottom="5" touchEnabled="false" alpha="1" anchorOffsetY="0"/>
+	</e:Group>
+</e:Skin>

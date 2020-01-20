@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryJobInfoWndSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage left="0" top="0" bottom="0" right="0" source="border_004_jpg"/>
+	<e:Group id="m_pViewRoot" horizontalCenter="0" verticalCenter="29">
+		<e:Group width="530" anchorOffsetX="0" height="692" y="0" x="0">
+			<com_main:CImage id="m_RoleImg" scaleX="0.9" scaleY="0.9" horizontalCenter="0" verticalCenter="0" source="icon_wj_b_10_png"/>
+			<e:Group height="109" bottom="0" left="0" right="0">
+			<com_main:CImage bottom="0" left="0" right="0" x="-161" scaleX="1" scaleY="1" top="0" source="border_012_png"/>
+			<com_main:CImage scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="line_1003_png"/>
+			<com_main:CLabel id="m_LegionName" text="军团名" scaleX="1" scaleY="1" horizontalCenter="0" textAlign="center" top="17" fontFamily="Microsoft YaHei" textColor="0x8a8a9e" size="26"/>
+			<com_main:CLabel id="m_PlayerName" text="玩家名字" scaleX="1" scaleY="1" horizontalCenter="0" bottom="9" fontFamily="Microsoft YaHei" size="28"/>
+			</e:Group>
+		</e:Group>
+		<e:Group anchorOffsetX="0" width="560" x="582" height="690" y="2">
+			<com_main:APopUp id="m_PopUp" currentState="size1" scaleX="1" scaleY="1" horizontalCenter="0" skinName="APopUpSkin" top="0" bottom="0"/>
+			<e:Group width="190" height="39" scaleX="1" scaleY="1" horizontalCenter="-1" top="18" anchorOffsetX="0">
+			<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="border_1025_png" scale9Grid="62,0,0,0" scaleX="1" scaleY="1" left="0" top="0" bottom="0" right="0"/>
+			<com_main:CLabel id="m_TitleJobName" text="国家官职" scaleX="1" scaleY="1" left="0" top="0" right="0" bottom="0" textAlign="center" verticalAlign="middle"/>
+			</e:Group>
+			<e:Group height="200" anchorOffsetX="0" anchorOffsetY="0" left="25" right="25" top="94">
+			<com_main:CLabel id="m_JobLabel" text="官职效果" top="5" horizontalCenter="0" size="24" fontFamily="Microsoft YaHei"/>
+			<com_main:CImage source="border_005_jpg" top="39" left="0" right="0" bottom="0"/>
+			<com_main:CImage source="line_003_png" top="8" anchorOffsetX="0" left="0"/>
+			<com_main:CImage source="line_003_png" scaleX="-1" top="8" right="0"/>
+			<com_main:CLabel id="m_JobDes" text="官职效果官职效果官职效果官职效果官职效果官职效果官职效果" top="60" size="20" fontFamily="Microsoft YaHei" bottom="20" left="40" right="40" lineSpacing="5" textColor="0xabb7d1"/>
+			</e:Group>
+			<e:Group height="250" anchorOffsetX="0" anchorOffsetY="0" left="25" right="25" top="327">
+			<com_main:CLabel text="任职条件" top="5" horizontalCenter="0" size="24" fontFamily="Microsoft YaHei"/>
+			<com_main:CImage source="border_005_jpg" top="39" left="0" right="0" bottom="0"/>
+			<com_main:CImage source="line_003_png" top="8" anchorOffsetX="0" left="0"/>
+			<com_main:CImage source="line_003_png" scaleX="-1" top="8" right="0"/>
+			<com_main:CLabel id="m_ConditionDes" text="官职效果" top="60" size="22" fontFamily="Microsoft YaHei" bottom="20" left="40" right="40" lineSpacing="5" textColor="0xabb7d1"/>
+			</e:Group>
+			<com_main:ComButton id="m_Btn" bottom="30" horizontalCenter="0" skinName="com_button"/>
+		</e:Group>
+	</e:Group>
+	<com_main:MainTopNew id="m_MainTop" skinName="new_top_main" width="100%"/>
+</e:Skin>

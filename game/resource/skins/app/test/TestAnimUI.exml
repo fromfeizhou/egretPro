@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TestAnimUI" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:ns1="*">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<e:Group id="test_group" width="100%" height="100%" x="0" y="0" visible="false">
+		<e:Label id="test_label" text="Label" x="150" y="530" size="41"/>
+	</e:Group>
+	<e:Group width="491" height="218" x="19" y="15" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<ns1:Hslider id="m_fliter_r" y="26" anchorOffsetX="0" width="280" skinName="HsliderSkin" scaleX="1" scaleY="1" height="38" x="46"/>
+		<ns1:Hslider id="m_fliter_g" y="83" anchorOffsetX="0" width="280" skinName="HsliderSkin" scaleX="1" scaleY="1" height="38" x="43"/>
+		<ns1:Hslider id="m_fliter_b" y="148" anchorOffsetX="0" width="280" skinName="HsliderSkin" scaleX="1" scaleY="1" height="38" x="46"/>
+		<e:Label id="m_lab_r" text="Label" x="366" y="35" scaleX="1" scaleY="1"/>
+		<e:Label id="m_lab_g" text="Label" x="366" y="91" scaleX="1" scaleY="1"/>
+		<e:Label id="m_lab_b" text="Label" x="366" y="152" scaleX="1" scaleY="1"/>
+		<e:Image id="m_test_image" x="445" y="197" source="common_country5_2_png"/>
+	</e:Group>
+	<e:Group width="1334" height="750" x="0" y="0" touchEnabled="false">
+		<e:Group id="btnStand" width="200" height="69.33" anchorOffsetY="0" y="29.8" right="0" x="1134" scaleX="1" scaleY="1">
+			<e:Image source="btn_003_up_png" left="0" right="0" top="0" bottom="0"/>
+			<e:Label text="待机" y="29" textAlign="center" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="btnWalk" width="200" height="69.33" anchorOffsetY="0" y="97.02" right="0" x="1134" scaleX="1" scaleY="1">
+			<e:Image source="btn_003_up_png" left="0" right="0" top="0" bottom="0" locked="true"/>
+			<e:Label text="行走" y="29" textAlign="center" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="btnAttack" width="200" height="69.33" anchorOffsetY="0" y="164.49" right="0" x="1134" scaleX="1" scaleY="1">
+			<e:Image source="btn_003_up_png" left="0" right="0" top="0" bottom="0" locked="true"/>
+			<e:Label text="攻击" y="29" textAlign="center" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="btnDead" width="200" height="69.33" anchorOffsetY="0" y="233.3" right="0" x="1134" scaleX="1" scaleY="1">
+			<e:Image source="btn_003_up_png" left="0" right="0" top="0" bottom="0" locked="true"/>
+			<e:Label text="死亡" y="29" textAlign="center" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="btnFly" width="200" height="69.33" anchorOffsetY="0" y="301.52" right="0" x="1134" scaleX="1" scaleY="1">
+			<e:Image source="btn_003_up_png" left="0" right="0" top="0" bottom="0" locked="true"/>
+			<e:Label text="击飞" y="29" textAlign="center" horizontalCenter="0"/>
+		</e:Group>
+		<e:Label id="lbScale" text="缩放： 100%" size="57" bold="true" textAlign="left" textColor="0xffffff" right="3" bottom="0" x="995" y="693" scaleX="1" scaleY="1"/>
+		<com_main:DropList id="dropListView" x="176.88" y="99.67" skinName="DropList" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+		<com_main:DropList id="dropListView2" x="489.88" y="99.67" skinName="DropList" scaleX="1" scaleY="1"/>
+		<com_main:DropList id="dropListView3" x="344.88" y="99.67" skinName="DropList" scaleX="1" scaleY="1"/>
+		<com_main:DropList id="dropListView4" x="19.88" y="99.67" skinName="DropList" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+		<com_main:DropList id="dropListView5" x="620.18" y="94.64" skinName="DropList" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+		<com_main:DropList id="dropListView6" x="935" y="153.13" skinName="DropList" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+		<e:Group id="btnClean" width="136" height="62" x="927" y="67.42" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image width="100%" height="100%" x="0" y="0" source="btn_003_up_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" locked="true"/>
+			<e:Label text="清场" textAlign="center" verticalCenter="0" horizontalCenter="0" size="40"/>
+		</e:Group>
+		<e:Group id="btnCreate" width="192" height="62" y="374.06" anchorOffsetX="0" anchorOffsetY="0" right="0" x="1142" scaleX="1" scaleY="1">
+			<e:Image width="100%" height="100%" x="0" y="0" source="btn_003_up_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" locked="true"/>
+			<e:Label text="添加特效" textAlign="center" verticalCenter="0" horizontalCenter="0" size="40"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

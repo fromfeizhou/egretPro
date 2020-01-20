@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="com_tab_top_activity_group" height="50" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" width="650">
+	<e:Group top="0" left="0" right="0" bottom="0" anchorOffsetX="0">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1" scaleY="1" top="2"
+		                 source="border_1008_png" scale9Grid="152,36,10,9" height="48"  visible="false"/>
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" left="0" right="-2" x="0" scaleX="1" scaleY="1" top="2"
+		                 source="border_1008_png" scale9Grid="152,36,10,9" height="49"  visible="false"/>
+		<com_main:CImage source="line_009_png" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1"
+		                 scaleY="1" top="-2"  width="650"/>
+		
+		<e:Group id="m_groupLine" right="-12" left="130" top="0" bottom="0" anchorOffsetX="0" visible="false">
+			<e:layout>
+				<e:HorizontalLayout gap="155" />
+			</e:layout>
+		</e:Group>
+		<e:TabBar id="m_tabBtn" top="0" bottom="0" left="0" right="6" itemRendererSkinName="tab_btntop_activity_render" anchorOffsetX="0">
+			<e:ArrayCollection>
+				<e:Array>
+					<e:Object name="等级提升" />
+					<e:Object name="将星云集" />
+					<e:Object name="物产丰饶" />
+					<e:Object name="占地领取" />
+					<e:Object name="科技提升" />
+				</e:Array>
+			</e:ArrayCollection>
+			<e:layout>
+				<e:HorizontalLayout gap="0" />
+			</e:layout>
+		</e:TabBar>
+		<com_main:CImage source="line_009_png" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" x="0" scaleX="1"
+		                 scaleY="1" bottom="-13"  width="650"/>
+	</e:Group>
+</e:Skin>

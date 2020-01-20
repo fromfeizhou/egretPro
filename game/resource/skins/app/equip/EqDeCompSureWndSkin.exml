@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EqDeCompSureWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" xmlns:AGame="AGame.*"    >
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" height="490">
+		<com_main:APopUp id="m_APopUp" skinName="APopUpSkin" currentState="size6" anchorOffsetY="0" top="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Group width="692" height="490" y="0" x="0" touchEnabled="false" touchChildren="false">
+			<e:Label id="m_labTips" text="回收" y="98.18" anchorOffsetX="0" width="600" anchorOffsetY="0" height="78.49" size="24" horizontalCenter="0" textColor="0x8a8a9e" x="46" scaleX="1" scaleY="1"/>
+			<e:Label text="回收获得" y="190.61" anchorOffsetX="0" anchorOffsetY="0" size="24" horizontalCenter="0" x="298" scaleX="1" scaleY="1" textColor="0xe9e9e6"/>
+			<e:Image source="line_003_png" y="189" x="67" scaleX="1" scaleY="1"/>
+			<e:Image source="line_003_png" y="189" width="200" x="625" scaleX="-1" scaleY="1"/>
+			<e:Group id="m_pRewardItems" width="616.67" height="113.64" y="232" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="52"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<com_main:ComButton id="m_btnConfirm" y="427.58" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" horizontalCenter="-9" currentState="style2" x="217" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

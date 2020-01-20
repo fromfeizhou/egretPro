@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionSetWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="554" height="423">
+	<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" width="553.61" height="418.07"/>
+	<e:Label text="大殿等级≥" x="116" y="109" textColor="0xc1c1c1" fontFamily="Microsoft YaHei"/>
+	<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="0.8" scaleY="0.8" source="border_008_png" scale9Grid="16,5,98,34" width="171.57" height="54.31" x="280" y="102.52"/>
+	<e:EditableText id="InputLabel" restrict="0-9"  width="126" height="37" promptColor="0xBFBEBB" textColor="0xFFFFFF" anchorOffsetX="0" anchorOffsetY="0" size="30" verticalAlign="middle" y="104.52" scaleX="1" scaleY="1" text="1" x="285" textAlign="center" displayAsPassword="false" fontFamily="Microsoft YaHei"/>
+	<e:Group id="check_join" x="47" y="197.38" anchorOffsetX="0" width="192" anchorOffsetY="0" height="45">
+		<e:Label text="自由加入" x="59" y="7" fontFamily="Microsoft YaHei" size="32" textColor="0xffffff"/>
+		<e:CheckBox id="m_checkbox0" skinName="CheckBox" selected="true"/>
+	</e:Group>
+	<e:Group id="check_examine" x="309" y="193.38" anchorOffsetX="0" width="192" anchorOffsetY="0" height="45">
+		<e:Label text="需要审核" x="59" y="7" fontFamily="Microsoft YaHei" size="32" textColor="0xFFFFFF"/>
+		<e:CheckBox id="m_checkbox1" skinName="CheckBox"/>
+	</e:Group>
+	<com_main:ComButton id="m_BtnConfirm" anchorOffsetX="0" anchorOffsetY="0" currentState="style2" skinName="com_button" y="324" horizontalCenter="-4.5"/>
+</e:Skin>

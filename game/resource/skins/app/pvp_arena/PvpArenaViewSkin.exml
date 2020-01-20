@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PvpArenaViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1334" height="750">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<com_main:CImage source="border_004_jpg" scaleX="1" scaleY="1" left="0" top="0" right="0" bottom="0"/>
+		<e:Group id="m_teamInfo" width="1038" height="166" anchorOffsetY="0" anchorOffsetX="0" top="62" horizontalCenter="-2">
+			<e:Group x="-3.04" y="8.25" anchorOffsetX="0">
+				<com_main:CImage x="0" y="0" source="common_labflag_bg_png" scale9Grid="13,13,25,58" anchorOffsetY="0" height="149"/>
+				<com_main:CLabel text="防守阵容" anchorOffsetX="0" width="35.33" fontFamily="Microsoft YaHei" size="28" anchorOffsetY="0" top="9" bottom="29" verticalAlign="justify" textAlign="center" horizontalCenter="-0.5" textColor="0xe7d7a7"/>
+			</e:Group>
+			<e:Group x="54" y="131">
+				<com_main:CLabel text="我的排名：" x="0" y="0" size="24" fontFamily="Microsoft YaHei" textColor="0x8a8a9e"/>
+				<com_main:CLabel id="m_pLbRank" text="5004" x="119.5" y="0" size="24" fontFamily="Microsoft YaHei" textColor="0xffffff"/>
+				<com_main:CLabel id="m_pLbPower" text="78445" x="467.5" y="0" size="24" fontFamily="Microsoft YaHei" textColor="0xFFFFFF"/>
+				<com_main:CLabel text="防守战力：" x="346" y="1" size="24" fontFamily="Microsoft YaHei" textColor="0x8A8A9E"/>
+			</e:Group>
+			<e:Group id="m_pGeneralRoot" width="600" height="117" x="57" y="16" anchorOffsetY="0" anchorOffsetX="0">
+				<com_main:GeneralPvpHeadItem id="m_pGeneral0" x="70.09" y="45" scaleX="1" scaleY="1" width="121" height="117"/>
+				<com_main:GeneralPvpHeadItem id="m_pGeneral1" x="80.09" y="55" scaleX="1" scaleY="1" width="121" height="117"/>
+				<com_main:GeneralPvpHeadItem id="m_pGeneral2" x="90.09" y="65" scaleX="1" scaleY="1" width="121" height="117"/>
+				<com_main:GeneralPvpHeadItem id="m_pGeneral3" x="100.09" y="75" scaleX="1" scaleY="1" width="121" height="117"/>
+				<com_main:GeneralPvpHeadItem id="m_pGeneral4" x="486" y="85" scaleX="1" scaleY="1" width="121" height="117"/>
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="left" verticalAlign="top" gap="0" paddingLeft="0" paddingTop="0"/>
+				</e:layout>
+			</e:Group>
+			<com_main:CImage y="161" source="line_009_png" scale9Grid="171,1,35,7" width="1180" horizontalCenter="0" x="-69" scaleX="1" scaleY="1"/>
+			<e:Group width="400" height="100" y="16" anchorOffsetY="0" anchorOffsetX="0" right="-46">
+				<com_main:CImage id="m_pBtnCamp" x="46" y="48" source="lb_icon_fssz_png" anchorOffsetX="38" anchorOffsetY="37.5"/>
+				<com_main:CImage id="m_pBtnRank" x="146" y="48" source="city_icon_ph_png" anchorOffsetX="38" anchorOffsetY="37.5"/>
+				<com_main:CImage id="m_pBtnRecord" x="246" y="48" source="lb_icon_zb_png" anchorOffsetX="38" anchorOffsetY="37.5"/>
+				<com_main:CImage id="m_pBtnShop" x="346" y="48" source="city_icon_sc_png" anchorOffsetX="38" anchorOffsetY="37.5"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_playerList" height="390" anchorOffsetY="0" anchorOffsetX="0" top="246" width="1193" horizontalCenter="68.5">
+			<com_main:PvpPlayerCell id="m_pPlayer0" x="6.55" y="6.85" skinName="PvpPlayerCellSkin"/>
+			<com_main:PvpPlayerCell id="m_pPlayer1" x="16.55" y="16.85" skinName="PvpPlayerCellSkin"/>
+			<com_main:PvpPlayerCell id="m_pPlayer2" x="26.55" y="26.85" skinName="PvpPlayerCellSkin"/>
+			<com_main:PvpPlayerCell id="m_pPlayer3" x="36.55" y="36.85" skinName="PvpPlayerCellSkin"/>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="left" paddingLeft="5" paddingTop="7" gap="43"/>
+			</e:layout>
+		</e:Group>
+		<e:Group height="90.67" left="0" right="0" anchorOffsetY="0" bottom="0">
+			<com_main:CImage source="border_009_png" top="0" right="0" left="0" scale9Grid="7,7,46,46" bottom="0"/>
+			<e:Group y="22" width="319" height="51" right="364">
+				<com_main:CImage y="0" source="border_1001_png" anchorOffsetY="0" height="100%" anchorOffsetX="0" width="100%" scale9Grid="33,3,28,21" x="0"/>
+				<com_main:CLabel text="可挑战次数：" y="14" fontFamily="Microsoft YaHei" size="26" textColor="0x8a8a9e" x="32.67"/>
+				<com_main:CLabel id="m_pLbChallengeNum" text="99/99" y="14" fontFamily="Microsoft YaHei" size="26" textColor="0xffffff" x="201.67"/>
+				<e:Group x="315.67" y="25" scaleX="0.7" scaleY="0.7">
+					<com_main:CImage id="m_pBtnBuy" y="0" source="btn_011_up_png" x="0" anchorOffsetX="32" anchorOffsetY="31.5"/>
+				</e:Group>
+			</e:Group>
+			<com_main:ComButton id="m_pBtnRefresh" y="9.5" skinName="com_button" currentState="style2" right="80"/>
+		</e:Group>
+		<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	</e:Group>
+</e:Skin>

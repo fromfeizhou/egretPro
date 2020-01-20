@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="StatueSkin" width="186" height="344" xmlns:com_main="com_main.*" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="battleKing,modelKing"  height.modelKing="180" width.modelKing="142" height.battleKing="300">
+	<e:Group id="m_group" left="0" right="0" top="0" bottom="0" touchEnabled="true">
+		<e:Image left="0" right="0" top="0" bottom="0" source.battleKing="border_006_png" alpha.battleKing="0"/>
+		<e:Group id="m_title" width="170" height="44" x="9" y="29" anchorOffsetX="0" anchorOffsetY="0" x.modelKing="-11" y.modelKing="26">
+			<e:Image source="zyt_20_png" y="3" horizontalCenter="0"/>
+            <com_main:ComState id="m_comState" x="3" y="1" skinName="ComStateSkin"/>
+			<e:Label id="m_pName" text="" y="11" size="20" fontFamily="Microsoft YaHei" textColor="0xff37ea" stroke="2" horizontalCenter="3"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopFreeSucSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1232" height="439">
+		<e:Group y="401" x="438" touchEnabled="false" touchChildren="false">
+			<com_main:CImage xmlns:com_main="com_main.*" source="border_1001_png" anchorOffsetY="0" height="37.67" anchorOffsetX="0" width="356.67" x="0" y="0"/>
+			<com_main:CLabel xmlns:com_main="com_main.*" text="点击任意区域关闭" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0" size="24" textColor="0x8a8a9e"/>
+		</e:Group>
+		<e:Group x="0" touchChildren="false" touchEnabled="false" y="0" height="404">
+			<e:Image source="border_1039_png" x="0" scale9Grid="154,32,924,197" anchorOffsetY="0" top="20" bottom="0"/>
+			<e:Image source="lb_md_bcgmmf_png" y="-30.85" horizontalCenter="0"/>
+			<e:Image source="border_1049_png" x="504.56" y="93.16" alpha="0.6"/>
+		</e:Group>
+		<com_main:CLabel text="恭喜主公，掌柜念于主公福泽，特此免去本次花费！" fontFamily="Microsoft YaHei" horizontalCenter="0" size="24" textColor="0x8A8A9E" touchEnabled="false" y="318"/>
+		<com_main:ComItemNew id="m_item" x="554.67" y="145.67" currentState="count" skinName="com_item_new"/>
+	</e:Group>
+</e:Skin>

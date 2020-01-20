@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIIChargePanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group>
+		<e:Image id="m_imgIcon" source="lb_7t_xsdbcz_png" x="71.25" y="0"/>
+		<com_main:CScroller id="m_scroller" anchorOffsetX="0" anchorOffsetY="0" width="1059" height="450" x="0" y="106.04">
+			<e:List id="m_pItemRoot" name="m_finishList" x="0" y="1.52" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="SevenIIChargeItemSkin">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+			</e:List>
+		</com_main:CScroller>
+	</e:Group>
+</e:Skin>

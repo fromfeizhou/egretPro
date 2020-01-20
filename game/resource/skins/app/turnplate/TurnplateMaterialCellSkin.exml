@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TurnplateMaterialCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group anchorOffsetX="0" width="106" horizontalCenter="0" height="130">
+		<com_main:ComItemNew id="m_pItem" skinName="com_item_new" scaleX="1" scaleY="1" currentState="base" horizontalCenter="0" bottom="27"/>
+		<e:Group id="m_pCostRoot" y="105" right="1" width="105">
+			<e:BitmapLabel id="m_pLbCost" font="font_vip_fnt" text="10" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-3" scaleX="0.65" scaleY="0.65" y="1" horizontalCenter="-19.5"/><!---->
+			<com_main:CImage id="m_pCostIcon" source="icon_source_gold_png" y="-15" horizontalCenter="26.5"/>
+			<com_main:CLabel text="100" x="14.97" y="1.67" textColor="0xe7d7a7" fontFamily="Microsoft YaHei" size="20" visible="false"/>
+		</e:Group>
+		<com_main:CImage id="m_pSelectState" source="SelectKuang_png" width="128" anchorOffsetY="0" height="126.2" horizontalCenter="0" bottom="15" visible="false"/>
+		<com_main:CLabel id="m_pLbAddtion" text="+100%" fontFamily="Microsoft YaHei" size="28" stroke="1" right="4" top="3"/>
+		<com_main:CLabel id="m_pCostStr" text="" y="106.8" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" textColor="0xe5bd47"/>
+	</e:Group>
+</e:Skin>

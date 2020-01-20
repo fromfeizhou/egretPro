@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MapBossSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="209" height="247">
+	<e:Group>
+		<e:Image id="m_imgBossEff" horizontalCenter="0" width="209" height="208" source="" y="39"/>
+		<e:Image id="m_imgAttEff" horizontalCenter="0" width="155" height="209" source="" y="36"/>
+		<com_main:BuildTitle id="m_titleName" skinName="buildTitleSkin" horizontalCenter="0" top="41"/>
+		<e:Image id="m_imgAttFlag" source="lb_lxwj_png" horizontalCenter="0" top="0"/>
+	</e:Group>
+</e:Skin>

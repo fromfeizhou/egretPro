@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_search_award" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*">
+	<e:Group touchChildren="false" touchEnabled="false">
+		<e:Image alpha="0.9" anchorOffsetY="0" source="border_039_png" scale9Grid="15,13,25,15" top="-16" left="0" bottom="0" right="0"/>
+		<e:Group x="0" y="0">
+			<e:Image alpha="0.7" anchorOffsetY="0" source="line_003_png" y="5" x="0"/>
+			<e:Image alpha="0.7" anchorOffsetY="0" source="line_003_png" y="5" scaleX="-1" x="516"/>
+			<e:Label text="可能获得" textColor="0xe9e9e6" size="26" y="0" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pAwardRoot" y="41.27" horizontalCenter="1.5" height="118">
+			<e:layout>
+				<e:HorizontalLayout gap="2" verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

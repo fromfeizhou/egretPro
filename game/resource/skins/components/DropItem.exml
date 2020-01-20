@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DropItem" width="200" height="50" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="100%" height="100%" x="0" y="0" source="btn_003_up_png"/>
+	<e:Label id="lbContent" text="{data}" textAlign="center" width="200" horizontalCenter="0" size="20" verticalCenter="0"/>
+</e:Skin>

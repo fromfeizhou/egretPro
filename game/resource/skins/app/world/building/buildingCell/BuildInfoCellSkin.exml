@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuildInfoCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1000" height="119" states="done,building" >
+	<e:Group y="0" x="0" width="1000" height="119">
+		<com_main:CImage id="m_pPanel" scale9Grid="33,31,14,18" source="border_018_png" left="0" right="0" top="0" bottom="0"/>
+		<com_main:GeneralHeadRender id="m_pHero" skinName="com_general_head_render" scaleX="0.7" scaleY="0.7" currentState="star" verticalCenter="-3.5" left="20"/>
+		<com_main:CLabel id="m_labName" text="张辽" size="22" left="130" textColor="0xe9e9e6" verticalCenter="0.5"/>
+		<e:Group verticalCenter="0" touchEnabled="false" left="300" width="328" height="28">
+			<com_main:CImage touchEnabled="false" verticalCenter="0" scale9Grid="13,3,78,21" left="0" right="0" source="border_1001_png" alpha="0.6"/>
+			<e:Group x="0" y="2">
+				<com_main:CImage touchEnabled="false" source="tb-cc_png" width="37" height="28" x="0" y="0"/>
+				<com_main:CLabel id="m_labBB" text="成都成都" size="24" x="40" stroke="2" textColor="0xe7c772" y="2"/>
+				<com_main:CLabel id="m_labBT" text="00:59:00" size="24" x="92" stroke="2" includeIn="building" textColor="0x00ff00" y="2"/>
+				<com_main:CLabel id="m_labBC" text="后完成建造" size="24" x="190" stroke="2" verticalCenter.done="0" x.done="92" text.done="已完成建造" textColor="0xabb7d1" y="2"/>
+				<com_main:CImage touchEnabled="false" left.done="210" verticalCenter.done="1" includeIn="done" width="37" height="28" source="common_ys_png" x="210" y="0"/>
+				<e:layout>
+					<e:HorizontalLayout gap="2"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_btnLocation" right="223" verticalCenter="0.5">
+			<com_main:CImage touchEnabled="false" source="tb-dbdw_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<com_main:ComButton id="m_cbtnDone" skinName="com_button" verticalCenter="0" right="26" currentState="style1" includeIn="done"/>
+		<com_main:ComButton id="m_cbtnBuilding" skinName="com_button" verticalCenter="0" right="26" currentState="style6" includeIn="building"/>
+	</e:Group>
+</e:Skin>

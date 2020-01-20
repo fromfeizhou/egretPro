@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralCheckBoxSkin" width="653" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="50" anchorOffsetX="0" x="492" y="0">
+		<e:CheckBox id="m_checkBox" label="" y="0">
+		<e:skinName>
+			<e:Skin states="up,down,disabled" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+			<e:Image width="100%" height="100%" source="btn_031_up_png" source.down="common_y_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:CheckBox>
+		<com_main:CLabel xmlns:com_main="com_main.*" text="屏蔽红点" x="54" y="13" textColor="0xE9E9E6" size="24" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

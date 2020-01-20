@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIILoginTabCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetX="0" y="0" horizontalCenter="0">
+		<e:Image source="zyt_7t_szp01_png"/>
+		<e:Label id="m_labNum" text="二" strokeColor="0x383838" size="32" anchorOffsetX="0" textAlign="center" fontFamily="Microsoft YaHei" y="68" textColor="0xbf2720" bold="true" horizontalCenter="0"/>
+		<com_main:ComItemNew id="m_ComItem" skinName="com_item_new" y="127" scaleX="0.85" scaleY="0.85" horizontalCenter="0" currentState="count"/>
+		<e:Image id="m_imgSelect" source="zyt_7t_szp02_png" visible="false"/>
+	</e:Group>
+</e:Skin>

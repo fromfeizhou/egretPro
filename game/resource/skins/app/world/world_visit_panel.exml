@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_visit_panel" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1106" height="627" x="120" y="90.67" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" y="0" source="frame_101_jpg" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scale9Grid="15,50,92,22"/>
+		<com_main:CImage x="615" y="37.33" scaleX="1" width="489" source="border_023_png" anchorOffsetY="0" height="573.28" anchorOffsetX="0" alpha="0.3"/>
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" y="2" source="frame_002_jpg"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="16.66" source="world_lable_01_png" horizontalCenter="1.5"/>
+		<com_main:CImage y="-53.77" horizontalCenter="-401.5" scaleX="1" scaleY="1" source="wj-yl_png"/>
+		<e:Scroller id="m_pScroller" width="480" height="442.67" x="624.56" y="64" anchorOffsetX="0" anchorOffsetY="0">
+			<e:List id="m_pList" anchorOffsetY="0" height="444"/>
+		</e:Scroller>
+		<com_main:CImage xmlns:com_main="com_main.*" x="4.55" y="503.99" source="frame_201_png" anchorOffsetY="0" height="118"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" x="1056.49" y="31.5" anchorOffsetX="57.5" anchorOffsetY="38.5">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" source="btn_009_up_png"/>
+		</e:Group>
+		<e:Label text="点 击 武 将 进 行 拜 访" y="549.34" strokeColor="0xffffff" textColor="0x8a8a9e" horizontalCenter="0"/>
+		<e:Group width="474.66" height="436" x="146.36" y="65.33" anchorOffsetX="0" anchorOffsetY="0">
+			<com_main:CImage scaleX="1" scaleY="-1" top="67" source="border_1008_png" horizontalCenter="0.17" width="100%"/>
+			<com_main:CImage scaleX="1" scaleY="1" top="109" source="border_1008_png" width="100%" y="10"/>
+			<e:Label text="拜访" y="16.67" strokeColor="0xFFFFFF" scaleX="1" scaleY="1" textColor="0xe9e9e6" horizontalCenter="2.67"/>
+			<e:Label text="奖励" y="213.37" strokeColor="0xFFFFFF" horizontalCenter="2.67" x="-315.67" scaleX="1" scaleY="1" textColor="0xE9E9E6"/>
+			<com_main:CImage y="204.68" scaleX="1" scaleY="1" horizontalCenter="-124.83" source="line_007_png"/>
+			<com_main:CImage y="204.68" scaleX="-1" scaleY="1" source="line_007_png" horizontalCenter="127.17"/>
+			<e:Label id="m_pLbContent" text="事件类型" strokeColor="0xFFFFFF" textColor="0x8A8A9E" size="24" width="403" textAlign="center" verticalCenter="-94.5" height="91" verticalAlign="middle" horizontalCenter="0"/>
+			<com_main:ComItemNew id="m_pItem" x="194.34" y="302" skinName="com_item_new" currentState="base"/>
+		</e:Group>
+		<com_main:CImage id="m_pBtnRight" x="586" y="408" source="btn_024_up_png" width="16" height="22" scaleX="-1"/>
+		<com_main:CImage id="m_pBtnLeft" x="186.67" y="408" scaleX="1" source="btn_024_up_png" width="16" height="22"/>
+	</e:Group>
+</e:Skin>

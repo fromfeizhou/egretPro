@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankActItemSkin" currentState="country" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="power,country,legion" >
+	<e:Group>
+		<com_main:CImage scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="line_008_png" width="100%" x="0" y="125"/>
+		<e:Group width="70" verticalCenter="0" height="70" y="-35" scaleX="1" scaleY="1" left="85">
+		<com_main:CImage source="border_1034_png" alpha="0.4" scaleX="1" scaleY="1" width="132" height="132" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" horizontalCenter="0"/>
+		<com_main:CLabel id="m_RankLab" text="999" verticalCenter="0" horizontalCenter="0" textColor="0xE9E9E6" fontFamily="Microsoft YaHei" size="32"/>
+		<com_main:CImage id="m_RankImg" horizontalCenter="0" verticalCenter="0" source="Icon_List_NO1_png"/>
+		</e:Group>
+		<com_main:CLabel id="m_labPower" text="99999" x="569" textColor="0xFFFF99" size="24" fontFamily="Microsoft YaHei"  width="276" textAlign="center" verticalCenter="0.5" verticalCenter.country="0.5" x.country="444" anchorOffsetX.country="0" width.country="226"/>
+		<com_main:CLabel id="m_labName" x="433" text="飞龙在天方法" fontFamily="Microsoft YaHei" textColor="0xE9E9E6" size="24" verticalCenter="0.5" y="52" includeIn="power,legion" verticalCenter.legion="0.5" x.legion="411"/>
+		<com_main:ComHeadItem id="m_comHead" x="281.71" verticalCenter="0" width="115" height="127" includeIn="power"/>
+		<com_main:CImage id="m_imgLegion" scaleX="0.35" scaleY="0.35" x="318" includeIn="legion" verticalCenter="-0.5" source="tb_jt_2_png"/>
+		<e:Scroller verticalCenter="0" x="845" width="312" height="100" verticalCenter.country="0.5" x.country="737">
+			<e:Group id="m_rItemsRoot">
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle" gap="6" horizontalAlign="center"/>
+			</e:layout>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+	<com_main:ComState id="m_comState" skinName="ComStateSkin" y="42" currentState="mini" x="398" includeIn="power"/>
+	<com_main:ComState id="m_CountryIcon" skinName="ComStateSkin" currentState="nor5" scaleX="0.25" scaleY="0.25" y="4" x="307" includeIn="country"/>
+</e:Skin>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionRankCellSkin" width="1151" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Label id="m_labPos" y="35" fontFamily="Microsoft YaHei" textColor="0xe7d7a7" text="【盟主】" width="160" textAlign="center" x="190.98"/>
+	<e:Label id="m_labOnline" y="35" fontFamily="Microsoft YaHei" textColor="0x8a8a9e" text="12345" textAlign="center" width="235" x="824.02"/>
+	<e:Group x="46" y="10" width="130">
+		<com_main:CImage id="m_imgRankNum" source="Icon_List_NO1_png" y="0" horizontalCenter="0"/>
+		<com_main:CLabel id="m_labRankNum" text="12" scaleX="1" scaleY="1" verticalAlign="middle" textAlign="center" stroke="2" strokeColor="0xE1A42E" bold="true" y="26.01" size="35" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group x="426.38" y="8.85" width="355">
+		<e:Label id="m_labName" y="26.15" x="111.59" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" text="玩家名字"/>
+		<e:Group x="0" y="0">
+			<com_main:PlayerImage id="m_imgHead" width="75" height="72" x="4.57" y="3.91" anchorOffsetY="0" anchorOffsetX="0"/>
+			<e:Image x="0" y="0" source="legionRankheadkuang_png" anchorOffsetY="0" height="82" anchorOffsetX="0" width="85"/>
+		</e:Group>
+	</e:Group>
+	<e:Image x="1" y="98.01" source="line_008_png" width="1156"/>
+</e:Skin>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_siege_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" y="89" horizontalCenter="5" width="1203.67" height="630.66">
+		<com_main:CImage xmlns:com_main="com_main.*" y="0" source="frame_101_jpg" anchorOffsetX="0" width="1201" anchorOffsetY="0" height="630.67" scale9Grid="15,50,92,22"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="-0.66" source="frame_002_jpg" anchorOffsetX="0" width="1202"/>
+		<com_main:CImage xmlns:com_main="com_main.*" x="4.01" y="559.5" source="frame_201_png" anchorOffsetY="0" height="68.38" anchorOffsetX="0" width="1194"/>
+		<com_main:CImage y="258.58" anchorOffsetY="0" anchorOffsetX="0" source="line_009_png" width="100%" horizontalCenter="0.16"/>
+		<com_main:CImage y="269.25" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="4.16" x="10" source="line_1003_png" scaleY="-1"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" y="32.82" anchorOffsetX="57.5" anchorOffsetY="38.5" right="-7.33" locked="true">
+		<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" source="btn_009_up_png" x="-0.98"/>
+		</e:Group>
+		<e:Group width="1064" height="178" x="76" y="75" anchorOffsetY="0" anchorOffsetX="0">
+			<e:Image x="-2" y="20" source="border_1034_png"/>
+			<e:Image x="39.9" y="65.33" source="lb_dt_g_png"/>
+			<e:Image x="911.03" y="19.88" source="border_1034_png"/>
+			<e:Image x="959.94" y="58.15" source="lb_dt_s_png"/>
+			<e:Image id="m_pDefeCountry" x="765.39" y="-6" scaleX="0.4" scaleY="0.4" source="common_country5_4_png"/>
+			<e:Image id="m_pAttkCountry" x="139.03" y="-6" scaleX="0.4" scaleY="0.4" source="common_country5_3_png"/>
+			<e:Image x="388.12" y="38.14" source="border_1011_png"/>
+			<e:Image x="426.79" y="64.14" source="line_1003_png"/>
+			<e:Label text="剩余部队" x="470.32" y="29.67" textColor="0x00ff00"/>
+			<e:Image x="390.12" y="118.82" source="border_1011_png"/>
+			<e:Image x="428.79" y="144.82" source="line_1003_png"/>
+			<e:Label text="死亡数量" x="472.32" y="110.35" textColor="0xff0000"/>
+			<e:Label id="m_pLbAttkLess" text="0" y="33" size="24" right="671" textColor="0xe9e9e6"/>
+			<e:Label id="m_pLbAttkDead" text="0" y="112.34" size="24" right="671" textColor="0xe9e9e6"/>
+			<e:Label id="m_pLbDefeLess" text="0" y="33" size="24" left="670" textColor="0xe9e9e6"/>
+			<e:Label id="m_pLbDefeDead" text="0" y="112.34" size="24" left="670" textColor="0xe9e9e6"/>
+			<e:Label id="m_pLbDefeCountryName" text="中" x="815.88" size="46" height="92" width="46" stroke="0" strokeColor="0x262626" verticalCenter="0" textAlign="center" verticalAlign="middle" textColor="0x798ea1" bold="true" visible="false"/>
+		</e:Group>
+		<e:Scroller id="m_pAttkScroller" width="584" height="283" x="18.33" y="272" anchorOffsetX="0" anchorOffsetY="0">
+			<e:List id="m_pAttkList" y="1">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Scroller id="m_pDefeScroller" width="584" height="283" x="605.33" y="272" anchorOffsetX="0" anchorOffsetY="0">
+			<e:List id="m_pDefeList" y="1">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Group id="m_pGQueue" width="200" height="57.58" x="506.67" y="566.33" anchorOffsetY="0">
+			<e:Label text="列队中：" x="16.33" y="15.66" textColor="0xe9e9e6"/>
+			<e:Label id="m_pLbQueue" text="0" y="16.66" left="142" textColor="0x00ff00"/>
+		</e:Group>
+		<e:Label id="m_pLbCity" text="战况" y="13" size="39" horizontalCenter="0.16" textColor="0xe7c772"/>
+	</e:Group>
+</e:Skin>

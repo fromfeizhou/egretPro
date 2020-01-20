@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldCityTroopPanelSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="546" height="674" x="392.33" y="33.33" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:CImage source="frame_101_jpg" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scale9Grid="15,50,92,22" scaleX="1" scaleY="1"/>
+		<com_main:CImage scaleX="1" scaleY="1" width="100%" source="frame_001_jpg"/>
+		<e:Group id="m_pBtnClose" width="115" height="77" x="496" y="28.67" anchorOffsetX="57.5" anchorOffsetY="38.5" scaleX="1" scaleY="1">
+			<com_main:CImage scaleX="1" scaleY="1" source="btn_009_up_png" right="0" top="0"/>
+		</e:Group>
+		<e:Group id="m_pBtnInfo" width="115" height="77" x="51" y="32.67" anchorOffsetX="57.5" anchorOffsetY="38.5" scaleX="1" scaleY="1">
+			<!--<com_main:CImage scaleX="1" scaleY="1" right="0" top="0" source="btn_040_up_png"/>-->
+		</e:Group>
+		<e:Label  text="驻军" y="16" textColor="0xffff99" horizontalCenter="0" size="34"/>
+		<e:Group y="61">
+		<com_main:CImage scaleX="1" scaleY="1"  source="border_007_png" anchorOffsetX="0" width="539" height="63" x="4" y="3"/>
+		<e:Image   source="border_1008_png" height="60" anchorOffsetX="0" y="0" anchorOffsetY="0" width="534" x="5"/>
+		<e:Image  source="line_1004_png" left="149"/>
+		<e:Label text="部队所属"  textColor="0x8A8A9E" size="24" horizontalCenter="-198.5" verticalCenter="0"/>
+		<e:Image  source="line_1004_png" left="348"/>
+		<e:Label text="部队数量"  textColor="0x8A8A9E" size="24" horizontalCenter="-18.5" verticalCenter="0.5"/>
+		<e:Label text="战斗力"  textColor="0x8A8A9E" size="24" horizontalCenter="177.5" verticalCenter="0.5"/>
+		</e:Group>
+		<e:Scroller id="m_pScroller" anchorOffsetY="0" width="529" y="127" x="10" anchorOffsetX="0" height="526">
+		<e:List id="m_List" itemRendererSkinName="WorldCityTroopCellSkin" anchorOffsetY="0"  x="103.41" y="1" anchorOffsetX="0" >
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+			<e:ArrayCollection>
+				<e:Array>
+					<e:Object />
+					<e:Object/>
+					<e:Object />
+					<e:Object />
+					<e:Object/>
+					<e:Object />
+				</e:Array>
+			</e:ArrayCollection>
+		</e:List>
+	</e:Scroller>
+	</e:Group>
+</e:Skin>

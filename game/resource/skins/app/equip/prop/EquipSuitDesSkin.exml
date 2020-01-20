@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipSuitDesSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="418">
+		<e:Label id="m_labTitle" text="100级皮军套装（2/4）" y="8" textColor="0xe9e9e6" size="20" fontFamily="Microsoft YaHei" x="30" verticalAlign="bottom" height="22"/>
+		<e:Image id="m_imgLine" source="line_1006_png" left="0" right="0" y="147"/>
+		<e:List id="m_listAttri" y="43" itemRendererSkinName="ComAttriRenderSkin" anchorOffsetX="0" width="325" x="30">
+			<e:layout>
+				<e:VerticalLayout gap="15" paddingTop="0"/>
+			</e:layout>
+		</e:List>
+	</e:Group>
+</e:Skin>

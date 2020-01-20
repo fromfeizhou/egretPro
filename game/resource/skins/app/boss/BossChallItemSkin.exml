@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossChallItem" currentState="info" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="370" height="550"  states="info,rank,world"  height.info="550">
+	<e:Group id="m_pBlood" x="29" y="0">
+		<e:Image source="pro_005_png" includeIn="rank,world" height="16" scale9Grid="3,3,18,18" anchorOffsetX="0" width="315" x="0" y="2"/>
+		<e:Image id="m_imgPro" source="pro_009_png" includeIn="rank,world" width="312" x="2" y="4"/>
+		<com_main:CLabel id="m_labPro" text="90%" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="18" includeIn="rank,world" stroke="2" x="141" y="0"/>
+	</e:Group>
+	<e:Group id="m_pRoot" width="370" height="535" anchorOffsetX="0" anchorOffsetY="0" width.rank="370" x="0" x.info="0" y.rank="18" x.rank="0" height.info="535" height.rank="535" y.info="18" y="18">
+		<e:Image source="beijing_png" scaleX="1" scaleY="1" y="2" x="29" x.rank="29" width="314" height="529"/>
+		<e:Group width="310" height="529" x="31" y="2">
+			<e:Image id="m_imgCard" scaleX="0.7" scaleY="0.7" source.info="icon_wj_b_6_png" source="" verticalCenter.info="1" horizontalCenter="0" verticalCenter="1" width="580" anchorOffsetY="0" height="755"/>
+			<e:Rect id="m_mask" fillAlpha="1" strokeAlpha="0" scaleX="1" scaleY="1" right="0" bottom="3" top="1" left="0" anchorOffsetY.world="0" left.world="0" right.world="0" top.world="1" bottom.world="3"/>
+			<com_main:CImage id="m_black" left="0" right="0" anchorOffsetY="0" scaleY="1" alpha="0.6" top="1" bottom="3" source="border_005_jpg" x="0" y="0" includeIn="info,rank"/>
+			<e:Image source="border_1019_png" anchorOffsetY="0" height="389" width="310" y.info="140" y.rank="140" x.info="31" height.rank="389" x.rank="30" touchEnabled.rank="false" touchEnabled.info="false" touchEnabled="false" horizontalCenter="0" verticalCenter="72"/>
+		</e:Group>
+		<e:Image source="border_016_png" x="0" y="0" scaleX="1" scaleY="1" x.rank="0" y.rank="0" y.info="0"/>
+		<e:Image source="border_1060_png" x="66" y="3" x.rank="66" y.rank="3"/>
+		<com_main:CLabel id="m_labLevel" text="20级" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" y.world="29" y.info="29" size="24" textColor="0xFFFF99" border="false" stroke="2" anchorOffsetX.rank="26.5" anchorOffsetY.rank="12" anchorOffsetX="26.5" x.world="28.5" x.info="28.5" anchorOffsetY="12" x.rank="28.5" y.rank="29" horizontalCenter="-156.5" verticalCenter="-238.5" horizontalCenter.info="-156.5" verticalCenter.info="-238.5"/>
+		<com_main:CLabel id="m_labTile" text="BOSS名称" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="24" border="false" textColor="0xE7D7A7" y="7" x.rank="187.5" y.rank="7" horizontalCenter="2.5" horizontalCenter.rank="2.5"/>
+		<e:Image source="border_033_png" x="343" y="2" scaleX="-1" scale9Grid="1,1,11,11"/>
+		<e:Image source="border_033_png" x="343" y="530" scale9Grid="1,1,11,11" scaleX="-1" scaleY="-1"/>
+		<e:Image source="border_033_png" x="29" y="530" scale9Grid="1,1,11,11" scaleX="1" scaleY="-1"/>
+		<com_main:ComFightItem id="m_comFightItem" y="379" skinName="ComFightItemSkin" x="0" x.info="0"/>
+	</e:Group>
+	<com_main:ComButton id="m_btnFight" y="507" skinName="com_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" x.rank="185.5" y.rank="507" x.info="186" y.info="507" x="185.5"/>
+	<e:Group id="m_pSingleAward" x="145" y="294" x.info="145" visible.rank="false" visible.world="false">
+		<e:Image id="m_btnSingle" y="54" includeIn="info" anchorOffsetX="48.5" anchorOffsetY="50.5" x="48.5" source="bx-lanl_png"/>
+		<e:Image source="border_1001_png" x="6.5" y="80" width="85" anchorOffsetX="0" scale9Grid="13,3,78,21"/>
+		<e:Image source="lb_jsjl_png" includeIn="info" x="25" y="81"/>
+	</e:Group>
+	<e:Group id="m_pMultiAward" x="0" y="284" visible.info="false">
+		<e:Group x="49" y="10" anchorOffsetX="0" width="96" x.rank="49">
+			<e:Image id="m_btnKill" y="53" x.info="308.5" y.info="397" includeIn="rank,world" anchorOffsetX="48.5" anchorOffsetY="50.5" x="48.5" source.world="bx-lanl_png" source="bx-lanl_png"/>
+			<e:Image source="border_1001_png" x="7.5" y="79" scale9Grid="13,3,78,21" anchorOffsetX="0" width="85"/>
+			<e:Image source="lb_jsjl_png" includeIn="rank,world" x="26" y="80"/>
+		</e:Group>
+		<e:Group x="220" y="10" anchorOffsetY="0" height="108" x.rank="220" y.rank="10">
+			<e:Image id="m_btnRank" y="53" includeIn="rank,world" anchorOffsetX="48.5" anchorOffsetY="50.5" source="bx-jinl_png" horizontalCenter="0.5" horizontalCenter.rank="0.5" y.rank="53"/>
+			<e:Image source="border_1001_png" x="6.5" y="79" width="85" scale9Grid="13,3,78,21" anchorOffsetX="0" y.rank="79"/>
+			<e:Image source="lb_pmjl_png" includeIn="rank,world" y="80" x="27.5" y.rank="80"/>
+		</e:Group>
+	</e:Group>
+	<e:Label id="m_labTips" text="" y.rank="495" fontFamily="Microsoft YaHei" size="24" textColor.info="0xedede1" horizontalCenter.info="2.5" text.info="30级开启" y.info="497" horizontalCenter.rank="0" horizontalCenter="1" y="497" horizontalCenter.world="0" y.world="495" width="300" height="20" text.world="" textAlign.world="center" textAlign="center" touchEnabled="false" textColor="0xabb7d1"/>
+	<e:Group id="m_rankGroup" anchorOffsetX="0" anchorOffsetY="0" width="61" height="239" y="21" x="310" visible.info="false">
+		<e:Image source="border_1058_png" includeIn="rank,world" rotation="90" anchorOffsetX="0" width="239" scaleX="1" scaleY="1" x="61" y="0"/>
+		<com_main:CLabel text="当前排名" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="24" includeIn="rank,world" anchorOffsetY="0" height="109" textAlign="right" verticalAlign="top" anchorOffsetX="0" width="27" lineSpacing="2" x="16" y="19"/>
+		<com_main:CLabel id="m_wsbtxt" text="未上榜" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" size="24" includeIn="rank,world" anchorOffsetY="0" height="92" textAlign="right" verticalAlign="top" anchorOffsetX="0" width="27" textColor="0x290000" x="17" y="146"/>
+		<e:BitmapLabel id="m_rankCunt" height="36" text="71" anchorOffsetX="23.5" anchorOffsetY="18" scaleX="1" scaleY="1" includeIn="rank,world" font="font_vip_fnt" verticalCenter="56.5" horizontalCenter="0" letterSpacing="-5"/>
+		<e:Image source="dain_png" includeIn="rank,world" x="27" y="132" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Image id="m_imgLocked" source="tb-suo_png" horizontalCenter="0" verticalCenter="-29" includeIn="info,rank"/>
+</e:Skin>

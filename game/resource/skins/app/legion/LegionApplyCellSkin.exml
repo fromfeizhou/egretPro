@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionApplyCellSkin" width="952" height="100"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage x="0" y="0" source="border_005_jpg" scale9Grid="7,7,49,49" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scaleX="1" scaleY="1"/>
+	<com_main:CLabel id="m_Name" text="玩家的名字" size="25" y="37" x="24" fontFamily="Microsoft YaHei"/>
+	<com_main:CLabel id="m_NumInfo" text="等级：" scaleX="1" scaleY="1" verticalCenter="0" x="231" textColor="0xc6c6c6" size="25" fontFamily="Microsoft YaHei"/>
+	<com_main:CLabel id="m_lv" text="99" size="25" y="37" x="305" fontFamily="Microsoft YaHei"/>
+	<e:Group id="m_BtnConfirm" width="151" height="67" x="632" y="16" anchorOffsetY="0">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="btn_006_up_png"/>
+		<com_main:CLabel id="m_pTitleLabel" text="同意" size="25" y="22" x="52" textColor="0xe9e9e6" stroke="2" strokeColor="0x24629a" textAlign="center" verticalAlign="middle" touchEnabled="false"/>
+	</e:Group>
+	<com_main:ComButton id="m_BtnReject" anchorOffsetX="72" anchorOffsetY="30.67" currentState="style1" verticalCenter="0" skinName="com_button" x="873"/>
+	<com_main:CImage x="405.67" y="30.03" source="lb_zdl_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+	<e:BitmapLabel id="m_labelFight" width="182" height="44" x="474.34" y="31.36" font="fight_font_fnt" text="99999" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-15" scaleX="0.75" scaleY="0.75"/>
+	<!--<com_main:CLabel  verticalAlign="bottom" size="40" textAlign="center"  fontColor.up="White" fontColor.down="TagdownYellow" horizontalCenter="-60" verticalCenter="-12.5" text="{data}"  />-->
+</e:Skin>

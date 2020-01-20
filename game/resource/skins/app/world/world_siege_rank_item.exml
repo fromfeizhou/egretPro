@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_siege_rank_item" width="536" height="76" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*">
+	<e:Image source="line_008_png" width="100%" bottom="0" horizontalCenter="0"/>
+	<e:Image source="border_1034_png" scaleX="0.65" scaleY="0.65" x="19" y="-13"/>
+	<e:Image id="m_pNum" scaleX="0.65" scaleY="0.65" x="36" y="15" source="Icon_List_NO2_png"/>
+	<com_main:ComState id="m_comState" x="180" y="17" skinName="ComStateSkin"/>
+	<e:Label id="m_pLbName" text="{name}" y="23" size="28" left="224" stroke="1" strokeColor="0x111111"/>
+	<e:Label id="m_pLbAttack" text="{num}" y="24" left="405" textColor="0xFFFF99" size="28"/>
+	<e:Label id="m_pLbNum" text="4" y="25" horizontalCenter="-200.5"/>
+</e:Skin>

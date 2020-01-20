@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipWearInfoWndSkin" width="504" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group height="600" anchorOffsetX="0" anchorOffsetY="0" width="504">
+		<e:Group id="m_pEquipInfo" height="600" y="0" width="504" x="0">
+			<e:Image source="border_039_png" scale9Grid="15,14,34,18" left="0" top="0" bottom="0" right="0" touchEnabled="false"/>
+			<e:Image source="border_1008_png" x="0" y="355" anchorOffsetX="0" width="502" scaleY="-1" anchorOffsetY="0" height="352" scale9Grid="119,9,83,57"/>
+			<e:Image source="border_1008_png" x="3" y="355" anchorOffsetX="0" width="497" scaleY="-1" anchorOffsetY="0" height="352" scale9Grid="119,9,83,57" alpha="0.5"/>
+			<e:Image source="line_1006_png" y="160" right="0" left="0" x="0" scaleX="1" scaleY="1"/>
+			<e:Image source="line_1006_png" y="372" right="0" left="0" x="-600" scaleX="1" scaleY="1"/>
+			<e:Image right="4" left="3" x="-600" scaleX="1" scaleY="1" source="border_009_png" bottom="4" height="100" scale9Grid="7,7,46,46" width="480" anchorOffsetX="0"/>
+			<e:Label id="m_labEquipName" text="装备名称" x="147.4" y="18.52" size="26" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei"/>
+			<e:Group x="145" y="56.67" scaleX="1" scaleY="1">
+			<e:Image source="border_1036_png" x="18" y="1" height="30"/>
+			<e:Image x="0" y="0" scaleX="0.8" scaleY="0.8" source="common_fight2_png"/>
+			<e:Label id="m_labFight" text="战力：99999" x="30" y="7" size="20" textColor="0xffff99"/>
+			</e:Group>
+			<e:Group x="145" y="89.4" scaleX="1" scaleY="1">
+			<e:Image source="border_1036_png" x="18" y="1" height="30"/>
+			<e:Image id="m_imgAttriIcon" x="0" scaleX="0.8" scaleY="0.8" verticalCenter="1.5" source="common_armyhp_png"/>
+			<e:Label id="m_labAttri" text="战力：99999" x="30" size="20" textColor="0x00ff00" y="7"/>
+			</e:Group>
+			<e:Label id="m_labSuitName" text="套装" y="175.2" size="24" textColor="0x8a8a9e" scaleX="1" scaleY="1" horizontalCenter="0" fontFamily="Microsoft YaHei"/>
+			<e:Group x="26" y="22.34">
+				<e:Label id="m_labLevel" text="装备名称" y="106.18" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textAlign="center" horizontalCenter="0" textColor="0xabb7d1"/>
+				<com_main:EquipItem id="m_euipItem" x="0" y="0" skinName="EquipItemSkin" currentState="normal" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<com_main:EquipItem id="m_suitItem0" x="26" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1"/>
+			<com_main:EquipItem id="m_suitItem1" x="142.02" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1"/>
+			<com_main:EquipItem id="m_suitItem2" x="260.03" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1"/>
+			<com_main:EquipItem id="m_suitItem3" x="374.66" y="209" skinName="EquipItemSkin" currentState="equip" scaleX="1" scaleY="1"/>
+			<e:Group id="m_pAttriCon" height="94" y="397.02" anchorOffsetX="0" anchorOffsetY="0" width="454" horizontalCenter="0">
+			<e:layout>
+				<e:VerticalLayout gap="0"/>
+			</e:layout>
+			</e:Group>
+			<com_main:ComButton id="m_btnReplace" y="548.78" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" x="374.17"/>
+			<com_main:ComButton id="m_btnUnload" y="549.45" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" x="120.16" currentState="style6"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

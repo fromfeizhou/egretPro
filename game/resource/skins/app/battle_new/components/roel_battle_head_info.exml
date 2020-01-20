@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="roel_battle_head_info" width="136" height="42" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="100%" height="100%" x="0" y="0">
+		<!--<com_main:CImage id="m_imgHeadBg" width="136" height="41" x="0" y="0" source="battle_head_bg_1"/>-->
+		<!--<com_main:CImage id="m_imgHead" width="37" height="38" verticalCenter="0" horizontalCenter="-47.5" source="role_b_1_1_png"/>-->
+		<e:Image id="hpBg_image" source="proBg_003_png" y="29" horizontalCenter="0.5" width="65" height="7"/>
+		<e:Image id="HP_image" source="pro_017_png" y="30" height="5" width="63" x="37"/>
+		<e:Group height="28" y="0" scaleX="1" scaleY="1" horizontalCenter="0">
+			<e:Image source="border_1059_png" x="0" y="3" scaleX="1" scaleY="1" alpha="0.6"/>
+			<e:Label id="m_lbName" text="吕布" size="18" textAlign="left" stroke="2" strokeColor="0x000000" fontFamily="Microsoft YaHei" textColor="0x00c6ff" y="7" scaleX="1" scaleY="1" left="28"/>
+			<e:Label id="country" text="蜀" x="4" y="6" size="18" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+		<!--<e:Label id="m_lbLevel" text="1" size="16" textAlign="center" horizontalCenter="-47" verticalCenter="18" stroke="1" strokeColor="0x5e3c16" textColor="0xf4e170"/>-->
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CityChangeRenderSkin" width="1061" height="52" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="m_info" text="" y="12" size="24" fontFamily="Microsoft YaHei" left="56"/>
+	<e:Image id="m_flagImg" source="zyt_qz01_png" x="23" y="16"/>
+</e:Skin>

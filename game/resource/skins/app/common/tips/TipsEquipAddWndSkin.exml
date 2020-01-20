@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TipsEquipAddWndSkin" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" states="base,max"  width="555" height="681">
+	<e:Group anchorOffsetY="0" anchorOffsetX="0" width="555">
+		<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" currentState="size1" height="681" width="555" y="0" x="0"/>
+		<com_main:TipsEquipItem id="m_addItem0" skinName="TipsEquipAddItemSkin" y="130" x="36"/>
+		<com_main:TipsEquipItem id="m_addItem1" skinName="TipsEquipAddItemSkin" x="162" y="130"/>
+		<com_main:TipsEquipItem id="m_addItem2" skinName="TipsEquipAddItemSkin" x="291.03" y="130"/>
+		<com_main:TipsEquipItem id="m_addItem3" skinName="TipsEquipAddItemSkin" x="417.66" y="130"/>
+		<e:Group y="65" left="0" right="0">
+			<e:Image source="border_1013_png" scale9Grid="184,20,175,15" left="0" right="0" top="0" bottom="0"/>
+			<com_main:CLabel id="m_labtitle0" text="精炼进度" textAlign="left" size="28" fontFamily="Microsoft YaHei" textColor="0xabb7d1" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group y="287" left="0" right="0">
+			<e:Image source="border_1013_png" scale9Grid="184,20,175,15" left="0" right="0" top="0" bottom="0"/>
+			<com_main:CLabel id="m_labtitle1" text="精炼阶段" textAlign="left" size="28" fontFamily="Microsoft YaHei" textColor="0xABB7D1" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:List id="m_listAttri" anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" itemRendererSkinName="TipsEquipAddAttriSkin" width="100%" x="0" y="394" includeIn="base">
+			<e:layout>
+			<e:VerticalLayout gap="16" horizontalAlign="center" paddingLeft="16"/>
+			</e:layout>
+			<e:ArrayCollection>
+			<e:Array>
+				<e:Object asdasd="null"/>
+				<e:Object asdasd="null"/>
+				<e:Object asdasd="null"/>
+			</e:Array>
+			</e:ArrayCollection>
+		</e:List>
+		<e:List id="m_listMax" anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" width="100%" x="0" y="394" itemRendererSkinName="ComAttriRenderSkin" includeIn="max">
+			<e:layout>
+			<e:VerticalLayout gap="16" horizontalAlign="center" paddingLeft="16" paddingLeft.max="-32"/>
+			</e:layout>
+			<e:ArrayCollection>
+				<e:Array>
+					<e:Object asdasd="null"/>
+					<e:Object asdasd="null"/>
+					<e:Object asdasd="null"/>
+				</e:Array>
+			</e:ArrayCollection>
+		</e:List>
+		<com_main:CLabel id="m_labCurLv" text="当前 精炼阶段 2" y="359" textAlign="left" size="24" fontFamily="Microsoft YaHei" textColor="0xABB7D1" x="50" x.max="191"/>
+		<com_main:CLabel id="m_labNextLv" text="下一级精炼阶段 3" y="358" textAlign="left" size="24" fontFamily="Microsoft YaHei" textColor="0xABB7D1" x="319" includeIn="base"/>
+		<com_main:ComButton id="m_btnUp" y="609" skinName="com_button" currentState="style2" anchorOffsetX="72.5" anchorOffsetY="30" horizontalCenter="0.5" visible.max="false"/>
+		<com_main:CLabel id="m_labfull" text="已满级" textAlign="left" size="28" fontFamily="Microsoft YaHei" textColor="0xABB7D1" horizontalCenter="0" verticalCenter="271.5" includeIn="max"/>
+	</e:Group>
+</e:Skin>

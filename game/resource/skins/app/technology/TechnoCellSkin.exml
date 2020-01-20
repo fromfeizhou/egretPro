@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TechnoCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="210" width="188">
+	<e:Group id="m_grayGroup" width="180" height="205">
+		<com_main:CImage id="m_imgIcon" anchorOffsetX="0" horizontalCenter="0" x="0" scaleX="1" scaleY="1" source="techBB_gj02_png" verticalCenter="0"/>
+		<com_main:CImage id="m_pEffectImage" height="216" width="227" source="" x="-32" y="-37" scaleX="1" scaleY="1"/>
+		<e:Group y="158" x="9">
+			<com_main:CImage y="0" anchorOffsetX="0" source="image_kuang_png" width="163" height="58" scaleX="1" scaleY="1" x="0"/>
+			<e:Label id="m_labName" text="行军队列" size="22" y="7" fontFamily="Microsoft YaHei" textColor="0xd9c7a0" stroke="1" scaleX="1" scaleY="1" textAlign="center" horizontalCenter="0"/>
+			<e:Label id="m_labLv" text="99/99" size="20" y="32" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" scaleX="1" scaleY="1" textAlign="center" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="m_pTimeRoot" y="86" scaleX="1" scaleY="1" horizontalCenter="0">
+			<com_main:CImage y="1" source="border_1001_png" anchorOffsetX="0" width="144" alpha="1" x="4"/>
+			<com_main:CLabel id="m_labTime" text="22:00:00" stroke="2" fontFamily="Microsoft YaHei" size="24" anchorOffsetX="0" width="151" textAlign="center" textColor="0xe9e9e6" x="0" y="4"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

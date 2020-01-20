@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldMinMapViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" width="260" height="168">
+	<w:Config id="1598d7ea2ba" />
+	<e:Group width="260" height="168" x="130" y="84" touchEnabled="false">
+		<com_main:CImage source="dt_slt_png"  anchorOffsetX="130" anchorOffsetY="84"/>
+		<e:Group id="m_pCity" width="260" height="168" anchorOffsetX="130" anchorOffsetY="84"/>
+		<com_main:CImage id="m_frame" source="dt_kuang_png"  anchorOffsetY="6" anchorOffsetX="10.5" x="-102" y="-74"/>
+	</e:Group>
+</e:Skin>

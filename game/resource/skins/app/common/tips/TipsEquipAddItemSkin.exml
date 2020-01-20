@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" class="TipsEquipAddItemSkin">
+	<e:Group x="0" y="0" width="102" height="160">
+		<e:Group x="0" y="0">
+			<com_main:CImage id="m_imgBg" width="102" height="102" x="0" alpha="1" source="Qualitykuang0_png" y="0" scaleX="1" scaleY="1"/>
+			<com_main:CImage id="m_imgIcon" width="90" height="90" x="6" source="equip_icon_t_png" y="6" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Label id="m_labName" text="装备名称" y="134" size="20" horizontalCenter="0" fontFamily="Microsoft YaHei"  textColor="0xFFFFFF" x="161" scaleX="1" scaleY="1"/>
+		<e:Group x="0" y="108">
+			<e:Image source="pro_005_png" x="0" y="0" anchorOffsetY="0" height="21" anchorOffsetX="0" width="100" scale9Grid="3,3,18,18" />
+			<e:Image id="m_imgPro" source="pro_003_png" x="1.5" y="1.5" anchorOffsetX="0" width="97" anchorOffsetY="0" height="18" />
+			<e:Label id="m_labProNum" text="256/1000" size="16" fontFamily="Microsoft YaHei" anchorOffsetY="0" verticalAlign="middle"  textColor="0xFFFFFF" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

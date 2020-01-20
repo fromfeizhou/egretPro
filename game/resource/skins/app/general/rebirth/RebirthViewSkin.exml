@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RebirthViewSkin" width="1164" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="m_pViewRoot" anchorOffsetY="0" width="1164" height="750" horizontalCenter="0" verticalCenter="0">
+		<e:Group scaleX="1" scaleY="1" left="2" right="-2" top="56" bottom="-2">
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" right="0" top="0" bottom="0" width="507" touchChildren="false" touchEnabled="false">
+			<e:Image source="border_006_png" top="0" right="0" bottom="0" left="0"/>
+			<e:Image source="border_1008_png" scaleY="-1" top="0" right="0" left="0" anchorOffsetY="0" bottom="0"/>
+				<e:Image source="zyt_33_png" x="62.5" y="0"/>
+				<e:Group x="6" y="357.51">
+					<e:Image source="line_1005_png" y="0" rotation="90" width="9" x="487" height="488"/>
+					<e:Image source="line_1005_png" y="168" rotation="90" width="9" x="487" height="488"/>
+					<e:Image source="border_1008_png" x="0" y="80.39" scaleY="-1" anchorOffsetX="0" width="496.24"/>
+					<e:Image source="border_1008_png" x="0" y="80.39" scaleY="-1" anchorOffsetX="0" width="496.24"/>
+					<e:Label text="英雄重生后返还初始英雄和所有培养资源" y="17.88" size="22" textColor="0xE9E9E6" horizontalCenter="0" fontFamily="Microsoft YaHei"/>
+
+				</e:Group>
+				<e:Image source="border_1002_png" x="8.7" y="369.38" anchorOffsetX="0" anchorOffsetY="0" width="490" height="320.73"/>
+				<e:Image source="zyt_17_png" x="6" y="527.73" anchorOffsetX="0" width="492.85" anchorOffsetY="0" height="160.79"/>
+
+				<com_main:ComResCost id="m_comResCost" y="544.36" skinName="ComResCostSkin" horizontalCenter="0"/>
+				<com_main:GeneralHeadRender id="m_genInfo" x="166.2" y="105.26" skinName="com_general_head_render" scaleX="1.3" scaleY="1.3"/>
+			</e:Group>
+			<e:Scroller anchorOffsetX="0" anchorOffsetY="0" height="692" scaleX="1" scaleY="1">
+				<e:List id="m_listGen" width="656" anchorOffsetY="0" height="680" y="301.52">
+				<e:layout>
+					<e:TileLayout horizontalGap="30" rowHeight="140" columnWidth="130" paddingLeft="22" paddingTop="26" paddingBottom="100"/>
+				</e:layout>
+					<e:ArrayCollection>
+						<e:Array>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+							<e:Object dd="null"/>
+						</e:Array>
+					</e:ArrayCollection>
+				</e:List>
+			</e:Scroller>
+			<e:Scroller id="m_pScroller" anchorOffsetX="0" anchorOffsetY="0" height="106" scaleX="1" scaleY="1" width="449.33" x="687" y="410">
+				<e:Group id="m_listItem" anchorOffsetY="0" y="301.52">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" paddingLeft="0"/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+			<com_main:ComButton id="m_btnAllSure" y="638.52" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" scaleX="1" scaleY="1" currentState="style2" x="855"/>
+
+
+
+
+		</e:Group>
+	</e:Group>
+</e:Skin>

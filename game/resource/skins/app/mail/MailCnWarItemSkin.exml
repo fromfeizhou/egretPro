@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MailCnWarItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+		<e:Group width="345" height="43" touchEnabled="false" touchChildren="false">
+				<e:Group x="75.05" y="4" width="179">
+					<com_main:ComState id="m_comState" x="136" y="39" skinName="ComStateSkin"/>
+					<e:Label id="m_lbName" text="联盟的名称" x="39.63" size="22" scaleX="1" scaleY="1" textColor="0xFFFFFF" y="7"/>
+					<e:layout>
+						<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center"/>
+					</e:layout>
+				</e:Group>
+		<e:Label id="m_lbNum" text="50" size="22" scaleX="1" scaleY="1" textColor="0x00FF00" width="100" textAlign="center" x="250" y="11"/>
+		<e:Label id="m_lbRank" text="1" x="20.96" size="22" scaleX="1" scaleY="1" textColor="0xe7c772" width="25" verticalCenter="0.5" textAlign="center"/>
+	</e:Group>
+</e:Skin>

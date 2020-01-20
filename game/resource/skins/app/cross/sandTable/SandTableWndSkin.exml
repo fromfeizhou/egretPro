@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SandTableWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  height="750" width="1334">
+	<w:Config id="1598d7ea2ba"/>
+	<com_main:CImage horizontalCenter="0" verticalCenter="0" scaleX="1.42" scaleY="1.42" source="kfz_shapan_527_jpg"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" anchorOffsetX="0" right="0" left="0"/>
+	<e:Group width="1334" height="690" horizontalCenter="0" y="58">
+		<e:Group id="m_pCell" width="1334" height="690" scaleX="1" scaleY="1" horizontalCenter="0" y="0">
+			<com_main:SandTableCityCell x="655" y="325" skinName="SandTableCityCellSkin" currentState="city_1" anchorOffsetX="124" anchorOffsetY="100"/>
+			<com_main:SandTableCityCell x="868" y="230" skinName="SandTableCityCellSkin" currentState="city_2" anchorOffsetX="94" anchorOffsetY="75"/>
+			<com_main:SandTableCityCell x="441" y="449" skinName="SandTableCityCellSkin" currentState="city_2" anchorOffsetX="94" anchorOffsetY="75"/>
+			<com_main:SandTableCityCell x="539" y="185" skinName="SandTableCityCellSkin" currentState="city_3" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="297" y="302" skinName="SandTableCityCellSkin" currentState="city_3" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="784" y="511" skinName="SandTableCityCellSkin" currentState="city_3" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="1001" y="369" skinName="SandTableCityCellSkin" currentState="city_3" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="231" y="450" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="112" y="308" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="402" y="99" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="767" y="100" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="1017" y="100" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="1158" y="231" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="604" y="551" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+			<com_main:SandTableCityCell x="1005" y="519" skinName="SandTableCityCellSkin" currentState="city_4" anchorOffsetX="82" anchorOffsetY="65"/>
+		</e:Group>
+		<e:Group x="20" y="14" width="325" height="64">
+			<com_main:CImage id="m_imgRule" x="0" y="0" source="btn_093_up_png" width="64" height="64"/>
+			<e:Label id="m_labRule" text="查看规则" x="66" y="21" textColor="0xabb7d1" size="22"/>
+			<com_main:CImage id="m_imgRecord" x="170" y="0" width="64" height="64" source="btn_113_png" visible="false"/>
+			<e:Label id="m_labRecord" text="交战记录" x="237" y="21" textColor="0xabb7d1" size="22" visible="false"/>
+		</e:Group>
+		<!--<e:Group id="m_btnWelfare" width="92.67" height="97.67" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="580" verticalCenter="-280">
+			<e:Image source="border_1007_png" touchEnabled="false" scaleX="1.5" scaleY="1.5" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image y="6" scaleX="-1" scaleY="1" source="bx-jinl_png" x="95"/>
+			<e:Image x="3" y="75" source="lb_mrfl_png"/>
+		</e:Group>-->
+	</e:Group>
+</e:Skin>

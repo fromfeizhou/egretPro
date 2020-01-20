@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="guide_introduction_view_skin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Group id="m_pRoot" top="0" right="0" bottom="0" left="0" x="0" y="0" scaleX="1" scaleY="1">
+			<com_main:CImage id="m_bgImg" source="GuideIntroBg_jpg" scaleX="1" scaleY="1" left="0" top="0" right="0" bottom="0"/>
+			<e:Rect height="70" left="0" top="0" right="0" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Rect height="70" left="0" right="0" x="0" scaleX="1" scaleY="1" bottom="0"/>
+			<e:Group id="m_pTextRoot" width="1260" height="594" anchorOffsetY="0" anchorOffsetX="0" y="38" horizontalCenter="0">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="right"/>
+			</e:layout>
+			</e:Group>
+			<e:Group width="1260" height="600" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0" verticalCenter="-9">
+				<e:Group id="m_pText0" y="72.5" width="200" anchorOffsetX="100" x="863" height="409">
+					<com_main:CImage id="m_pText_s" y="0" source="lb_01_png" anchorOffsetX="27" horizontalCenter="0"/>
+					<com_main:CImage id="m_pEffect_0" y="-52.5" source="zhimoguang_png" scaleX="1" scaleY="1" horizontalCenter="0"/>
+				</e:Group>
+				<com_main:CImage id="m_pTextMask0" anchorOffsetX="99" source="border_006_png" anchorOffsetY="0" height="1" width="198" x="863" y="72"/>
+				<com_main:CImage x="771" y="130.5" anchorOffsetX="27" id="m_pText1" source="lb_02_png"/>
+				<com_main:CImage id="m_pTextMask1" x="771" anchorOffsetX="37" source="border_006_png" anchorOffsetY="0" height="0" y="131"/>
+				<com_main:CImage x="676" y="73.5" anchorOffsetX="27" id="m_pText2" source="lb_03_png"/>
+				<com_main:CImage id="m_pTextMask2" x="676" anchorOffsetX="37" source="border_006_png" anchorOffsetY="0" height="0" y="74"/>
+				<com_main:CImage x="583" y="134.5" anchorOffsetX="27" id="m_pText3" source="lb_04_png"/>
+				<com_main:CImage id="m_pTextMask3" x="583" anchorOffsetX="37" source="border_006_png" anchorOffsetY="0" height="0" y="135"/>
+				<com_main:CImage x="494" y="72.5" anchorOffsetX="27" id="m_pText4" source="lb_05_png"/>
+				<com_main:CImage id="m_pTextMask4" x="494" anchorOffsetX="37" source="border_006_png" anchorOffsetY="0" height="0" y="73"/>
+				<e:Group id="m_pText5" y="131.5" width="200" anchorOffsetX="100" x="399" height="409">
+					<com_main:CImage id="m_pText_e" y="0" anchorOffsetX="27" horizontalCenter="0" source="lb_06_png"/>
+					<com_main:CImage id="m_pEffect_1" y="311.5" source="zhimoguang_png" scaleX="1" scaleY="1" horizontalCenter="6"/>
+				</e:Group>
+				<com_main:CImage id="m_pTextMask5" anchorOffsetX="100" source="border_006_png" anchorOffsetY="0" height="0" y="132" horizontalCenter="-229" width="200"/>
+				<com_main:CImage source="zhimoguang_png" id="m_pEffect_2" anchorOffsetX="109" anchorOffsetY="60" x="863" y="72.5" visible="false"/>
+			</e:Group>
+			<e:Group id="m_pClick" left="0" top="0" right="0" bottom="0" touchEnabled="true" touchThrough="false">
+			</e:Group>
+			<e:Group id="m_pSkipRoot" right="-115" top="130" x="1168" y="109" scaleX="1" scaleY="1">
+				<e:Image source="border_1047_png" right="0" top="0"/>
+				<e:Image source="btn_098_up_png" y="8" x="37"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

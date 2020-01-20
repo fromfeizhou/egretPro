@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossServerWarNameCompSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="m_title" width="148" height="68"  anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" x="13"
+	         scaleX="0.8" scaleY="0.8">
+		<e:Image source="border_11028_png" y="10.33" width="88" height="33" scale9Grid="17,0,37,26" x="53" />
+		<e:Image id="m_flagImg" x="3" y="5" source="zyt_vs_red_png" />
+		<e:Label id="m_faction" text="敌" x="23.66" y="17.68" size="24" strokeColor="0x961717" stroke="2"
+		         fontFamily="Microsoft YaHei" />
+		<e:Label id="m_cityName" text="东部城区" y="17.67" size="16" fontFamily="Microsoft YaHei" horizontalCenter="23" />
+	</e:Group>
+</e:Skin>

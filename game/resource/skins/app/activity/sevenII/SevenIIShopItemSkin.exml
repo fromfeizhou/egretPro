@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIIShopItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetX="0" y="0" horizontalCenter="0" width="186" height="222">
+		<e:Image source="zyt_32_png" width="100%" height="100%" y="0" x="0"/>
+		<e:Label id="m_labItemName" text="物品的名称" textColor="0xE4BF66" stroke="1" strokeColor="0x383838" size="24" anchorOffsetX="0" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="9"/>
+		<e:Label id="m_labLimit" text="限购5/5" stroke="1" strokeColor="0x383838" size="16" anchorOffsetX="0" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="141" textColor="0xffffff"/>
+		<com_main:ComCostButton id="m_btnbuy" y="185" skinName="com_cost_button" scaleX="0.8" scaleY="0.8" anchorOffsetX="72.5" anchorOffsetY="30" horizontalCenter="0"/>
+		<com_main:ComItemNew id="m_ComItem" skinName="com_item_new" y="47" scaleX="0.85" scaleY="0.85" horizontalCenter="0" currentState="count" width="100" height="100"/>
+		<e:Group id="m_pFoldRoot" x="-8.98" y="33.01" touchEnabled="false" touchThrough="false">
+			<e:Image id="m_discountbg" x="0" y="0" source="border_1040_png"/>
+			<e:Label id="m_labFold" text="7折" textColor="0xE4BF66" stroke="1" strokeColor="0x383838" size="22" anchorOffsetX="0" textAlign="center" fontFamily="Microsoft YaHei" y="33.32" rotation="-45" x="12.67"/>
+		</e:Group>
+		<e:Image id="m_imgSoldOut" source="lb_ysq_png" horizontalCenter="0" y="169"/>
+	</e:Group>
+</e:Skin>

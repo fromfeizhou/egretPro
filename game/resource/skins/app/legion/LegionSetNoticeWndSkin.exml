@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionSetNoticeWndSkin" width="723" height="540" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<com_main:APopUp id="m_PopUp" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" height="534.79" width="724"/>
+	<e:Group anchorOffsetY="0" anchorOffsetX="0" width="706.66" height="236.82" y="115" x="13">
+		<com_main:CImage x="105.31" y="8.82" anchorOffsetY="0" anchorOffsetX="0" source="border_020_png" scale9Grid="32,32,6,6" width="485" height="183.7"/>
+		<com_main:CImage x="97.64" y="2.67" anchorOffsetX="0" source="border_014_png" width="502" anchorOffsetY="0" height="199" scale9Grid="41,39,2,5"/>
+		<e:EditableText id="InputLabel1" width="450" height="151" promptColor="0xc6c6c6" textColor="0xffffff" anchorOffsetX="0" anchorOffsetY="0" size="25" verticalAlign="top" text="" x="123" y="27" scaleX="1" scaleY="1" multiline="true"/>
+		<e:Label id="m_coinLabel4" text="联盟宣言最多可输入100字符" size="22" y="232.1" x="212.31" textColor="0xafafaf" fontFamily="Microsoft YaHei"/>
+	</e:Group>
+	<com_main:ComButton id="m_BtnConfirm" anchorOffsetX="0" anchorOffsetY="0" currentState="style2" skinName="com_button" x="246.33" y="433.35"/>
+</e:Skin>

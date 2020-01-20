@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="battle_debuff_info" width="491" height="328" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bg" x="4" y="2" source="border_039_png" scale9Grid="16,14,33,20" width="483" height="325" alpha="0.7"/>
+	<e:Image y="145" source="line_1006_png" horizontalCenter="0.5" width="471" alpha="0.7"/>
+	<e:Group width="2500" height="1350" x="-1000" y="-200"/>
+	<e:Group id="aktArr" width="99" height="99" y="27" anchorOffsetX="0" anchorOffsetY="0" x="19">
+		<e:Image x="0" y="0" source="Image_general_open_kuang_png"/>
+		<e:Image x="0" y="0" source="cityBuff_13_png"/>
+	</e:Group>
+	<e:Label id="m_lbNum" text="2" x="190" y="76" size="24"/>
+	<e:Label id="m_lbName" text="傲气" x="134" y="34" fontFamily="Microsoft YaHei" size="26" textColor="0xffff99"/>
+	<e:Label text="层数" x="133" y="76" fontFamily="Microsoft YaHei" size="24" textColor="0xabb7d1"/>
+	<e:Label id="m_lbEff" text="攻防：-60%" x="129" y="106" textColor="0xff0000" size="22" fontFamily="Microsoft YaHei"/>
+	<e:Label id="m_lbContent" text="" x="21" y="165" size="24" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="454" anchorOffsetY="0" height="151" textColor="0xabb7d1" lineSpacing="13"/>
+</e:Skin>

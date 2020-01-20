@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryTaskViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="1160" height="690">
+	<com_main:CImage id="m_bgRole" verticalCenter="-13" source="icon_wj_b_10_png" scaleX="0.9" scaleY="0.9" right="-43"/>
+	<e:Group id="m_textGroup" scaleX="1" scaleY="1" width="802.55" x="40" y="37" anchorOffsetX="0" anchorOffsetY="0" height="507.97">
+		<com_main:CImage scaleX="1" scaleY="1" source="jz_png" x="0" y="0"/>
+		<com_main:CLabel id="m_Title" text="天下大势" anchorOffsetY="0" textAlign="center" verticalAlign="middle" fontFamily="Microsoft YaHei" anchorOffsetX="0" size="36" textColor="0x916631" y="83" lineSpacing="10" horizontalCenter="-5.27"/>
+		<com_main:CLabel id="m_Describe" text="Label" fontFamily="Microsoft YaHei" size="30" textColor="0x916631" width="573.22" x="109.33" height="247.97" y="150.69" anchorOffsetX="0"/>
+		<com_main:CLabel id="m_labPro" text="" y="448" size="22" fontFamily="Microsoft YaHei" horizontalCenter="4.725000000000023"/>
+
+		<com_main:ComProgressBar id="m_ProgressBar" height="18" skinName="com_progressbar" currentState="base" width="564" x="112" y="479"/>
+	</e:Group>
+	<e:Group height="150" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" bottom="0" right="0" left="0">
+		<com_main:CImage scaleX="1" scaleY="1" left="0" right="0" bottom="0" source="border_011_png" x="-444.02" top="0"/>
+		<e:Scroller width="688" height="100%" y="0" anchorOffsetX="0" horizontalCenter="-153">
+			<e:Group id="m_ItemRoot">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="bottom"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+	<com_main:ComButton id="m_BtnFinish" anchorOffsetX="0" anchorOffsetY="0" skinName="com_button" right="100" bottom="44" currentState="style2"/>
+</e:Skin>

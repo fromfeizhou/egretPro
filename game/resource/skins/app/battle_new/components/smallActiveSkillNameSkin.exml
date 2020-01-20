@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="smallActiveSkillNameSkin" width="342" height="140" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="animation">
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.1}" rotation="{0.1}" y="{105}" scaleX="{0.3}" scaleY="{0.3}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150" ease="sineIn">
+					<tween:props>
+						<e:Object alpha="{1}" scaleX="{1.73}" scaleY="{1.73}" y="{-135}"/>
+					</tween:props>
+				</tween:To>
+				<tween:Wait duration="50"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1.4}" scaleY="{1.4}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<w:Config id="169e2584e39"/>
+	<e:Group id="group" y="70" x="171" width="342" height="140" anchorOffsetY="70" anchorOffsetX="171">
+		<e:Image id="heng_bg" x="78" y="48.5" scaleX="1" scaleY="1" source="battle_skill_bg_2_png"/>
+		<e:Image id="bg" x="57" y="19" scaleX="0.77" scaleY="0.77" source="battle_head_bg_122_png"/>
+
+		<e:Image id="headImage" x="61" y="23" source="rgh1_png" scaleX="0.85" scaleY="0.85"/>
+		<e:Image id="headFrame" x="56" y="18" scaleX="0.77" scaleY="0.77" source="battle_head_bg_2_png"/>
+		<e:Image id="skillNameImage" y="50" left="144" x="144" scaleX="1" scaleY="1" source="lb_skill_01_png"/>
+	</e:Group>
+</e:Skin>

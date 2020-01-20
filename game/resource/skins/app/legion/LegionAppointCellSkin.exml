@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LegionAppointCellSkin" width="500" height="100"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CLabel id="m_Name" text="职位" size="24" y="38" horizontalCenter="-203" fontFamily="Microsoft YaHei"/>
+	<com_main:CLabel id="m_NumInfo" text="1/99" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="0" fontFamily="Microsoft YaHei"/>
+	<com_main:CImage left="0" right="0" bottom="0" source="line_1001_png" height="2"/>
+	<com_main:ComButton id="m_BtnConfirm" anchorOffsetX="0" anchorOffsetY="0" currentState="style6" right="0" verticalCenter="0" skinName="com_button"/>
+	<!--<com_main:CLabel  verticalAlign="bottom" size="40" textAlign="center"  fontColor.up="White" fontColor.down="TagdownYellow" horizontalCenter="-60" verticalCenter="-12.5" text="{data}"  />-->
+</e:Skin>

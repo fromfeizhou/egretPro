@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_cityname_widget" width="246" height="66" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="world,xiangyang" width.xiangyang="209">
+	<e:Image id="bg" source="zyt_20_png" x="23" y="16" anchorOffsetX.xiangyang="0" width.xiangyang="197"/>
+	<com_main:CImage id="m_pCountry" x="2" y="3" source="common_country1_1_png" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Label id="m_pLbName" text="东门" textAlign="center" y="23.31" fontFamily="Microsoft YaHei" size="22" horizontalCenter="5.5" anchorOffsetX="0" width="149" stroke="1" horizontalCenter.xiangyang="22.5" width.xiangyang="120" y.xiangyang="23.31" textColor="0xe9e9e6"/>
+	<com_main:CImage id="m_pTeam" y="3" source="tb_bd_png" anchorOffsetX="0" anchorOffsetY="0" right="-3" visible="false"/>
+	<e:Group id="m_pBuild" y="3" right="-58" visible="false">
+		<com_main:CImage y="0" anchorOffsetX="0" anchorOffsetY="0" source="tb_js_png" x="0"/>
+		<com_main:CImage y="0" anchorOffsetX="0" anchorOffsetY="0" source="tb_js_png" x="0"/>
+	</e:Group>
+	<com_main:CImage id="m_pKing" y="-13" source="tb_wc_png" anchorOffsetX="0" anchorOffsetY="0" visible="true" horizontalCenter="0" includeIn="world"/>
+</e:Skin>

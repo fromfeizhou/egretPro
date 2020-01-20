@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryApplyListWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  width="1334" height="750"  states="Job,Manage" >
+	<com_main:CImage source="border_004_jpg" top="0" left="0" right="0" bottom="0"/>
+
+	<e:Group id="m_pRoot" width="1334" height="692" x="0" y="58">
+		<e:Group y="0" left="0" right="0">
+			<com_main:CImage source="btn_023_up_png" y="0" right="-30" scale9Grid="170,0,10,0" left="-30"/>
+			<com_main:CLabel text="玩家名字" x="92" textAlign="center" verticalAlign="middle" verticalCenter="0" verticalCenter.Manage="0" x.Manage="110.7"/>
+			<com_main:CLabel text="战斗力" x="443.34" textAlign="center" verticalAlign="middle" verticalCenter="0"/>
+			<com_main:CLabel text="战功" x="669" textAlign="center" verticalAlign="middle" verticalCenter="0"/>
+			<com_main:CLabel text="当前官职" x="890" textAlign="center" verticalAlign="middle" verticalCenter="0" x.Manage="833.67" verticalCenter.Manage="0"/>
+			<com_main:CLabel text="拥有城池" x="1006.33" textAlign="center" verticalAlign="middle" verticalCenter="0" includeIn="Manage" y="10"/>
+		</e:Group>
+		<e:Scroller scrollPolicyH="off" top="62" right="0" left="0" bottom="0">
+			<e:List id="m_ItemList" itemRendererSkinName="CountryApplyItemSkin" y="-2.67" x="-1.33"/>
+		</e:Scroller>
+	</e:Group>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+</e:Skin>

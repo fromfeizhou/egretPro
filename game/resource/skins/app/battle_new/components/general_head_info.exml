@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="general_head_info" width="136" height="39" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="100%" height="39" x="0" y="0" anchorOffsetY="0">
+		<e:Image id="hpBg_image" y="29" width="72" height="7" x="36" source="proBg_016_png" scale9Grid="4,3,2,3"/>
+		<e:Image id="HP_image" source="pro_017_png" y="30" height="5" width="70" x="37"/>
+		<e:Label id="m_lbName" text="吕布" size="18" textAlign="left" stroke="2" strokeColor="0x000000" fontFamily="Microsoft YaHei" textColor="0x00c6ff" scaleX="1" scaleY="1" y="7" horizontalCenter="3"/>
+		<!--<e:Label id="m_lbLevel" text="1" size="16" textAlign="center" horizontalCenter="-47" verticalCenter="18" stroke="1" strokeColor="0x5e3c16" textColor="0xf4e170"/>-->
+	</e:Group>
+
+</e:Skin>

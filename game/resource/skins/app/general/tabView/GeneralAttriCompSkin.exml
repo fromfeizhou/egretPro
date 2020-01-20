@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralAttriCompSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="653" states="main,other" >
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" y="0" x="0" width="653">
+		<e:Image source="border_1013_png" left="0" right="0" top="-9" scale9Grid="184,20,175,15"/>
+		<e:Label id="m_labTitle" text="主属性" y="5" size="26" fontFamily="Microsoft YaHei" anchorOffsetY="0" height="30" verticalAlign="middle" horizontalCenter="0" textColor="0xe8d7a6"/>
+		<e:List id="m_listAttri" y="41" anchorOffsetX="0" x="0" itemRendererSkinName="GeneralAttriRenderSkin" width="653">
+			<e:layout>
+				<e:TileLayout requestedColumnCount="3" horizontalGap="4" paddingTop="34" verticalGap.main="27" paddingBottom="12" columnWidth="203" horizontalAlign.main="left" paddingLeft.main="19" columnWidth.main="221" horizontalAlign.other="left" paddingLeft.other="41" columnWidth.other="221" paddingTop.other="30" paddingBottom.other="30" verticalGap.other="27" paddingBottom.main="30" paddingTop.main="30"/>
+			</e:layout>
+		</e:List>
+	</e:Group>
+</e:Skin>

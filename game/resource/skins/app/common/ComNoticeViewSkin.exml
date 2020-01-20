@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComNoticeViewSkin" width="1050" height="570" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+    <com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" left="8" top="9" bottom="6" right="11"/>
+    <e:Image id="m_nImg"  source=""  y="84" x="26"/>
+    <e:Label id="m_lbTime" text="" size="24" textColor="0xffe555" horizontalCenter="0" y="109" visible="false"/>
+</e:Skin>

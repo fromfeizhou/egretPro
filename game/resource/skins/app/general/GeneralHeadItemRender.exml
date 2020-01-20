@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralHeadItemRender" width="142" height="190" currentState="owner" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="owner,collect" >
+          
+	<e:Image id="Image_back_di" source="general_bg0_png"/>
+	<e:Image id="Image_head" horizontalCenter="0" source="icon_wj_0_png" top="8"/>
+	<e:Image id="Image_mask" scale9Grid="51,59,38,46" x="0" y="-1.34" anchorOffsetY="0" anchorOffsetX="0" source="general_head_mask1_png" height="131.67"/>
+	<e:Group x="2" y="5" visible.collect="false">
+		<e:Image x="0" source="border_1009_png" y="0"/>
+		<e:Label id="lb_level_before" text="13级" y="1.99" size="24" textAlign="left" x="15.99" textColor="0xe9e9e6" y.owner="3.99"/>
+	</e:Group>
+	<e:Group y="131" height="20" left="7" right="7" visible.collect="false">
+		<e:Image source="border_011_png" left="0" top="0" right="0" bottom="0" visible.owner="false"/>
+		<e:Group id="m_group_startbg" left="6" top="0" right="6" bottom="0">
+			<e:layout>
+			<e:HorizontalLayout gap="0" horizontalAlign="left"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="m_group_start" anchorOffsetX="0" anchorOffsetY="0" left="6" right="6" top="0" bottom="0">
+			<e:layout>
+			<e:HorizontalLayout horizontalAlign="left" gap="0"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+	<e:Group y="104" left.owner="7" right="7" visible.owner="false" left.collect="7" left="7">
+		<e:Image left="0" right="0" source="pro_002_png" y="31" height="13" source.collect="pro_005_png" scale9Grid.collect="3,3,18,18" left.collect="0" right.collect="0" height.collect="13" y.collect="27"/>
+		<e:Image y="3" anchorOffsetY="0" height="22.66" source="border_011_png" left="0" right="0"/>
+		<e:Label id="lb_suipian_num" text="0/10" y="4.01" size="22" textColor="0xe9e9e6" horizontalCenter="0"/>
+		<e:Image id="Image_pro_yellow" source="pro_001_png" x="1" y="28" width="126" height="11"/>
+	</e:Group>
+	<e:Label id="lb_name_before" text="某某某" y="153.67" size="24" textColor="0xe9e9e6" horizontalCenter="0"/>
+	<e:Group id="m_groupCollectFlag" includeIn="collect" x="-20.98" y="-1">
+		<e:Image source="common_labflag_bg_png" includeIn="collect" x="0" y="0"/>
+		<e:Label text="合成" y="25.34" size="24" textColor="0xE9E9E6" includeIn="collect" anchorOffsetX="0" width="26.67" horizontalCenter="0.5" lineSpacing="2"/>
+	</e:Group> 
+</e:Skin>

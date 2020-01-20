@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="rank_main_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:CImage top="0" left="0" right="0" bottom="0" source="Img_List_Bg_png"/>
+	<com_main:ComTabGroup id="m_TagGroup" skinName="com_tab_group" left="0" top="0" bottom="0"/>
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<e:ViewStack id="m_ViewStack" left="175" selectedIndex="2" top="58" right="0" bottom="0">
+	</e:ViewStack>
+</e:Skin>

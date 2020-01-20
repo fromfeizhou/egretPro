@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GeneralUpgradeItemRender" width="692" height="37"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"  >
+<e:Group horizontalCenter="0.5">
+			<e:Image   source="hang_ct_png" height="37"/>
+				<e:Label id="m_AttName" text="攻击" x="99" size="24" textColor="0xfefbd2" verticalCenter="1" />
+				<e:Label id="m_curVal" text="1000" x="180" size="24" textColor="0xe9e9e9" verticalCenter="1" />
+				<e:Image source="com_state_up_png"   rotation="90" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label  x="464" id="m_nextVal" text="315" size="24" textColor="0x00ff00" verticalCenter="1" />
+			</e:Group>
+</e:Skin>

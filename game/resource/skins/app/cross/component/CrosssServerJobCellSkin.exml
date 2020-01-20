@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrosssServerJobCellSkin" currentState="Level_0" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="246" width="180" states="Level_0,Level_1,Level_2,Level_3,Level_4,Level_3_BG,WithOutBG"  width.Level_0="436" height.Level_0="474">
+	<com_main:CImage includeIn="Level_0" horizontalCenter="0" top="0" source="common_country4_3_png" scaleX="1" scaleY="1"/>
+	<e:Group horizontalCenter="0" width="155" height="210" top.Level_3_BG="0" bottom.Level_3_BG="0" touchChildren.Level_0="false" touchEnabled.Level_0="false" touchEnabled.Level_3_BG="false" touchThrough.Level_3_BG="false" horizontalCenter.Level_0="1" width.Level_0="180" y.WithOutBG="5" y.Level_3_BG="5" y.Level_4="5" y.Level_3="5" y.Level_2="5" y.Level_1="5" height.Level_0="250" top.Level_0="70" scaleX.Level_0="0.9" scaleY.Level_0="0.9" scaleX.Level_1="0.9" scaleY.Level_1="0.9">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" top="0" bottom="0" left="0" right="0" source="border_018_png" scale9Grid="20,17,78,84" includeIn="Level_0,Level_1,Level_2,Level_3,Level_4,Level_3_BG"/>
+		<com_main:ComHeadItem id="m_RoleHead" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" visible.Level_3_BG="false" y="9" horizontalCenter.Level_0="0.5" horizontalCenter="0.5" width="115" height="127" y.Level_0="17"/>
+		<e:Group width="125" height="39" horizontalCenter="0.5" y="129" includeIn="Level_0,Level_1,Level_2,Level_3,Level_4,WithOutBG" horizontalCenter.Level_0="0.5" y.Level_0="150">
+		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="border_1025_png" scaleX="1" scaleY="1" left="0" top="0" bottom="0" right="0" includeIn="Level_1,Level_2,Level_3,Level_4" visible="false"/>
+		<com_main:CLabel id="m_JobName" text="车骑将军" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" fontFamily.Level_1="Microsoft YaHei" textColor.Level_1="0xe7d7a7" fontFamily.Level_3="Microsoft YaHei" textColor.Level_0="0xe7d7a7" fontFamily.Level_0="Microsoft YaHei" fontFamily.Level_2="Microsoft YaHei" textColor.Level_2="0xe7d7a7" textColor.Level_3="0xe7d7a7" textColor.Level_4="0xe7d7a7" fontFamily.Level_4="Microsoft YaHei" fontFamily.WithOutBG="Microsoft YaHei" textColor.WithOutBG="0xe7d7a7" touchEnabled="false" width="125" height="39" y="0" x="0" horizontalCenter.Level_0="0" size="28" textColor="0xe7d7a7" fontFamily="Microsoft YaHei" bold.Level_0="true" y.Level_0="2"/>
+		</e:Group>
+		<com_main:CLabel id="m_PlayerName" text="玩家的名字" horizontalCenter="0" fontFamily="Microsoft YaHei" y="171" includeIn="Level_0,Level_1,Level_2,Level_3,Level_4,WithOutBG" touchEnabled="false" size="24" horizontalCenter.Level_0="0" y.Level_0="198"/>
+		<e:Group scaleX="1" scaleY="1" left="0" top="0" right="0" bottom="0" includeIn="Level_0,Level_1,Level_2,Level_3,Level_4,Level_3_BG" touchChildren="false" touchEnabled="false">
+			<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scale9Grid="20,17,78,84" scaleX="1" scaleY="1" source="line_1005_png" left="0" top="0" bottom="0"/>
+			<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scale9Grid="20,17,78,84" scaleX="1" scaleY="1" source="line_1005_png" top="0" bottom="0" right="-2" width="9" right.Level_0="-2"/>
+			<e:Group includeIn="Level_0" left="0" right="0" top="0">
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" top="0" x="-100" y="-83" source="hw-jblz01_png"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="1" top="0" y="-83" source="hw-jblz01_png" right="0" width="33" x="80"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="hw-jblt01_png" horizontalCenter="0" x="-52" top="-36"/>
+			</e:Group>
+			<e:Group scaleX="1" scaleY="1" left="0" top="0" bottom="0" right="0" touchEnabled="false" touchChildren="false">
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" top="0" includeIn="Level_4" x="0" y="0" source="hw-jb05_png"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="1" source="hw-jb05_png" top="0" includeIn="Level_4" y="10" right="0" width="53"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="-1" source="hw-jb05_png" left="0" includeIn="Level_4" x="20" bottom="0"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="-1" source="hw-jb05_png" includeIn="Level_4" right="0" bottom="0"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" top="0" x="0" y="0" source="hw-jb04_png" includeIn="Level_3,Level_3_BG"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="1" top="0" y="10" source="hw-jb04_png" includeIn="Level_3,Level_3_BG" right="0" width="53"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="-1" left="0" x="20" source="hw-jb04_png" includeIn="Level_3,Level_3_BG" bottom="0"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="-1" source="hw-jb04_png" includeIn="Level_3,Level_3_BG" right="0" width="53" bottom="0"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" includeIn="Level_2" source="hw-jb03_png" top="0" left="0"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="1" includeIn="Level_2" source="hw-jb03_png" top="0" y="10" right="0" width="53"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="-1" includeIn="Level_2" source="hw-jb03_png" left="0" x="20" bottom="0"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="-1" includeIn="Level_2" source="hw-jb03_png" right="0" bottom="0" height="55"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" top="0" source="hw-jb02_png" x.Level_0="0" y.Level_0="0" scaleX.Level_0="1" scaleY.Level_0="1" includeIn="Level_0,Level_1"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="1" top="0" source="hw-jb02_png" y="10" right="0" x.Level_0="180" y.Level_0="0" scaleX.Level_0="-1" scaleY.Level_0="1" includeIn="Level_0,Level_1"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="-1" source="hw-jb02_png" bottom="0" left="0" x.Level_0="0" y.Level_0="210" scaleX.Level_0="1" scaleY.Level_0="-1" includeIn="Level_0,Level_1"/>
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="-1" scaleY="-1" source="hw-jb02_png" right="0" bottom="0" x.Level_0="180" y.Level_0="210" scaleX.Level_0="-1" scaleY.Level_0="-1" includeIn="Level_0,Level_1"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+		<e:Group  horizontalCenter="0" top="211" horizontalCenter.Level_0="0" top.Level_0="294" horizontalCenter.Level_1="0" top.Level_1="194" includeIn="Level_0,Level_1" width.Level_1="200" height.Level_1="36" width.Level_0="200" height.Level_0="36">
+			<e:Image source="zyt_20_png" y="0" alpha="1" width="200" height.Level_0="36" height.Level_1="36"/>
+				<com_main:CLabel id="m_troopCout" text="统领30部队" horizontalCenter="0.5" fontFamily="Microsoft YaHei" includeIn="Level_0,Level_1" touchEnabled="false" size="20" horizontalCenter.Level_0="0" y.Level_0="0" verticalCenter="-1" textColor="0xe7d7a7"/>
+		</e:Group>
+</e:Skin>

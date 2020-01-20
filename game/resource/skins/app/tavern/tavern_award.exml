@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="tavern_award" width="1334" xmlns:e="http://ns.egret.com/eui" xmlns:AGame="AGame.*" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" height="750" states="base,ten" >
+	<com_main:CImage id="m_BackGround" top="0" left="1" right="-1" bottom="0" alpha="0.7" source="border_006_png" visible.base="false"/>
+	<e:Group height="480" left="0" right="0" verticalCenter="0" x="-667" y="-144" scaleX="1" scaleY="1" touchEnabled.ten="false">
+		<e:Image source="border_1001_png" scaleX="1" scaleY="1" top="0" left="0" bottom="0" right="0"/>
+		<e:Image scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" top="-24" left="100" right="100"/>
+		<e:Image scaleX="1" scaleY="1" source="line_005_png" anchorOffsetY="0" left="100" right="100" bottom="-16"/>
+		<com_main:CLabel id="m_Notice" text="抽取10次必出整将" horizontalCenter="0" verticalCenter="270" fontFamily="Microsoft YaHei" size="34" touchEnabled="false" visible.base="false" textColor="0x8a8a9e" />
+		<e:Group width="1" height="1" anchorOffsetX="0" anchorOffsetY="0" top="14" horizontalCenter="-16.5" horizontalCenter.ten="0" horizontalCenter.base="0">
+			<e:Image source="Image_general_levelup_suc_bg_png" y="-86" scaleX="1" scaleY="1" horizontalCenter="0" x="-309"/>
+			<e:Image y="-130" scaleX="1" scaleY="1" horizontalCenter="0" source="lb_gxn_png"/>
+		</e:Group>
+		<e:Group id="m_ItemRoot" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="30" verticalCenter.ten="21" horizontalCenter.ten="0">
+			<e:layout>
+			<e:TileLayout requestedRowCount="2" requestedColumnCount="5" rowHeight.ten="134" columnWidth.ten="134" verticalGap.ten="31" horizontalGap.ten="10"/>
+			</e:layout>
+			
+			<e:layout.base>
+				<e:BasicLayout/>
+			</e:layout.base>
+		</e:Group>
+	</e:Group>
+	<com_main:ComButton id="m_pBtnComfirm" skinName="com_button" currentState="style4" horizontalCenter="0" anchorOffsetX="135" anchorOffsetY="47" bottom="24" visible.ten="false"/>
+</e:Skin>

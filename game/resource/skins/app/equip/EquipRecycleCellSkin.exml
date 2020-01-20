@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipRecycleCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group>
+		<e:Label id="m_labEqLv" text="100级" y="55" anchorOffsetX="0" anchorOffsetY="0" size="20" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xABB7D1" x="-2"/>
+		<e:Group horizontalCenter="0">
+			<e:Image source="com_wzk6_png" scaleX="0.6999999999999998" scaleY="0.6999999999999998"/>
+			<e:Image id="m_imgSelect" source="common_ys_png" x="-6.65" visible="false"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

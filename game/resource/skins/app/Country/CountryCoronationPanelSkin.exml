@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountryCoronationPanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="1334" height="453.32" touchEnabled="false" anchorOffsetY="0">
+		<e:Group x="0" touchChildren="false" touchEnabled="false" y="0" height="468" anchorOffsetY="0" width="1334">
+			<e:Image source="border_043_png" horizontalCenter="0" verticalCenter="0" />
+		</e:Group>
+		<com_main:CImage xmlns:com_main="com_main.*" source="border_1001_png" anchorOffsetY="0" height="100%"
+		                 anchorOffsetX="0" width="100%" x="0" y="0" alpha="0.1" />
+		<e:Group y="456.64" touchEnabled="false" touchChildren="false" horizontalCenter="0.5" anchorOffsetY="0" height="51">
+			<com_main:CImage xmlns:com_main="com_main.*" source="border_1001_png" anchorOffsetY="0" height="53.67"
+			                 anchorOffsetX="0" width="356.67" x="0" />
+			<com_main:CLabel xmlns:com_main="com_main.*" text="点击任意区域关闭" fontFamily="Microsoft YaHei" horizontalCenter="0.5"
+			                 verticalCenter="2.5" size="24" textColor="0x8a8a9e" />
+		</e:Group>
+		<com_main:CImage scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="line_005_png" x="0" y="-20"
+		                 width="1334" />
+		<com_main:CImage scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="line_005_png" x="0" y="430"
+		                 width="1334" />
+		<e:Image id="m_pTitle" source="lb_jmww3_png" y="-69.85" horizontalCenter="0.5" />
+		<com_main:CLabel id="m_pName" text="恭喜主公，掌柜念于主公福泽." fontFamily="Microsoft YaHei" textAlign="center"
+		                 horizontalCenter="0" size="26" textColor="0xe9e9e9" lineSpacing="10" touchEnabled="false" y="408.67"
+		                 anchorOffsetX="0" width="632" />
+		<!--<com_main:CImage id="m_pIcon" y="145.67" source="city_icon_boss_png" horizontalCenter="0" />
+		-->
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="VipWndSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" height="750" width="1334">
+	<w:Config id="1598d7ea2ba" />
+	<com_main:CImage source="border_004_jpg" width="100%" height="100%" />
+	<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+	<e:Group id="m_pViewRoot" touchEnabled="false" width="1334" height="689" verticalCenter="30.5" horizontalCenter="0">
+		<e:Group x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="100%">
+			<com_main:CImage source="border_1011_png" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="164"
+			                 fillMode="scale" y="0" />
+			<com_main:CImage source="line_009_png" anchorOffsetX="0" width="94%" anchorOffsetY="0" y="155.65"
+			                 horizontalCenter="0" />
+			<e:BitmapLabel id="m_labPlayerVip" x="68" y="63.1" font="font_vip_fnt" text="贵族10" />
+			<e:Label id="m_labTaget" text="充值2000元宝 即可升级到vip11" size="20" y="42.5" fontFamily="Microsoft YaHei" x="229"
+			         textColor="0xe9e9e6" />
+			<e:Label id="m_lbExp" text="1000/2000" size="20" y="98" fontFamily="Microsoft YaHei" x="223" textColor="0xe9e9e6" />
+			<e:Group x="186" y="70" anchorOffsetY="0" anchorOffsetX="0" width="510">
+				<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="proBg_001_png" width="100%"
+				                 height="24" scale9Grid="46,12,61,0" rotation="359.95" />
+				<com_main:CImage id="m_imgVipPro" x="36" source="pro_006_png" anchorOffsetY="0" height="21" verticalCenter="0"
+				                 anchorOffsetX="0" width="436" />
+			</e:Group>
+			<com_main:ComButton id="m_btnRecharge" x="825.48" skinName="com_button" currentState="style2" anchorOffsetX="120"
+			                    anchorOffsetY="37.5" y="78" />
+			<e:Group anchorOffsetY="0" anchorOffsetX="0" y="31" x="989" width="108" height="108">
+				<com_main:CImage scaleX="1" scaleY="1" source="vip_baoxiangkuang_png" />
+				<com_main:CImage id="m_pBoxBtn" scaleX="1" scaleY="1" source="vip_baoxiang_png"  width="108" height="108" anchorOffsetX="54" anchorOffsetY="54" x="54" y="54"/>
+				<com_main:CImage id="m_pDailyRed" scaleX="1" scaleY="1" source="common_red_flag2_png" x="64" y="4" />
+				<e:Group id="m_pBoxTipsRoot" y="80" x="2">
+					<com_main:CImage scaleX="1" scaleY="1" x="0" y="0" source="border_1030_png" />
+					<e:Label id="m_labBoxTip" text="已领取" size="18" y="4" fontFamily="Microsoft YaHei" x="25" textColor="0x00ff00" />
+				</e:Group>
+			</e:Group>
+			<com_main:CImage id="m_btnVipShop" source="vip_shangcheng_png" anchorOffsetY="73" anchorOffsetX="73" x="1191" y="80" />
+		</e:Group>
+		<e:Group width="100%" anchorOffsetX="0" bottom="0" height="530">
+			<e:Group x="134" y="17">
+				<com_main:CImage source="border_1013_png" x="0" y="0" />
+				<e:BitmapLabel id="m_labPrivigeLeft" y="20" font="font_vip_fnt" text="贵族11特权" scaleX="0.8" scaleY="0.8"
+				               horizontalCenter="0" />
+			</e:Group>
+			<e:Group x="134" y="82" width="593">
+				<e:Label id="m_labMoneyTaget" text="充值2000元，即可升级到贵族11" size="20"  fontFamily="Microsoft YaHei"
+			         textColor="0xe9e9e6"  horizontalCenter="0"/>
+			</e:Group>
+			
+			<e:Group right="175" y="14">
+				<com_main:CImage source="vip_frame_png"  width="349" height="488"/>
+				<e:BitmapLabel id="m_labPrivigeRight" font="font_vip_fnt" text="贵族11礼包" y="19" x="86" />
+				<e:Group y="297.66" height="38" width="100%">
+					<com_main:CImage source="border_1001_png" y="295" anchorOffsetX="0" width="343" anchorOffsetY="0" height="38" x="0" />
+					<e:Group id="m_pOriRoot" y="0" horizontalCenter="0">
+						<e:Group x="5" y="0">
+							<e:Label text="原价" size="22" fontFamily="Microsoft YaHei" x="0" y="7" textColor="0xe9e9e6" />
+							<com_main:CImage source="icon_source_gold_png" y="0" anchorOffsetY="0" height="39" x="41" />
+							<e:Label id="m_labOri" text="668" size="22" fontFamily="Microsoft YaHei" x="84" textColor="0xe9e9e6" y="7" />
+							<e:layout>
+								<e:HorizontalLayout gap="-5" verticalAlign="middle" />
+							</e:layout>
+						</e:Group>
+						<com_main:CImage anchorOffsetY="0" height="4" source="line_006_png" y="17" left="-10" right="-10" />
+					</e:Group>
+				</e:Group>
+				<com_main:CImage source="vip_pattern02_png" y="331.33" />
+				<e:Group y="341.33" height="38" horizontalCenter="0">
+					<e:Label text="现价" size="22" fontFamily="Microsoft YaHei" verticalCenter="0" textColor="0xffff99" />
+					<com_main:CImage source="icon_source_gold_png" y="0" anchorOffsetY="0" height="39" />
+					<e:Label id="m_labPrice" text="668" size="22" fontFamily="Microsoft YaHei" verticalCenter="0" textColor="0xffff99" />
+					<e:layout>
+						<e:HorizontalLayout verticalAlign="middle" gap="-5" />
+					</e:layout>
+				</e:Group>
+				<com_main:ComButton id="m_btnBuy" skinName="com_button" currentState="style1" anchorOffsetX="0" width="145" y="400"
+				                    horizontalCenter="0" visible="true" />
+				<e:Scroller height="211" y="83" horizontalCenter="0">
+					<e:List id="m_pAwardList" itemRendererSkinName="com_item_new">
+						<e:layout>
+							<e:TileLayout horizontalGap="21" requestedColumnCount="2" />
+						</e:layout>
+					</e:List>
+				</e:Scroller>
+				<com_main:CLabel id="m_lbLevelState" size="30" text="已购买" y="400" textColor="0xe9e9e6" horizontalCenter="0"
+				                 visible="false" />
+			</e:Group>
+			<e:Group left="67" verticalCenter="-14">
+				<e:Image id="m_btnLeft" source="btn_024_up_png" x="21.5" y="30" anchorOffsetX="21.5" anchorOffsetY="30" />
+				<!--<com_main:CImage id="m_pLRed" scaleX="0.7" scaleY="0.7" source="common_red_flag2_png" x="36"  visible="false"/>-->
+			</e:Group>
+			<e:Group height="60" width="43" scaleX="-1" right="67" verticalCenter="-14">
+				<e:Image id="m_btnRight" source="btn_024_up_png" />
+				<!--<com_main:CImage id="m_pRRed" scaleX="0.7" scaleY="0.7" source="common_red_flag2_png"  x="36" visible="false"/>-->
+			</e:Group>
+			<e:Scroller id="m_pDesScoller" height="350" x="175" y="113" anchorOffsetX="0" anchorOffsetY="0" width="547">
+				<e:List id="m_pDesList" anchorOffsetY="0">
+					<e:ArrayCollection>
+						<e:Array>
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+							<e:Object task="null" />
+						</e:Array>
+					</e:ArrayCollection>
+					<e:layout>
+						<e:VerticalLayout gap="6" verticalAlign="top" />
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+		</e:Group>
+	</e:Group>
+</e:Skin>

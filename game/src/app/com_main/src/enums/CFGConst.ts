@@ -1,0 +1,957 @@
+/**
+ * 配置表预定义[本文件由工具生成]
+ */
+
+/** 属性常量 */
+enum AttriType {
+    /** 攻击 */
+    ATK = 1,
+    /** 防御 */
+    DEF = 2,
+    /** 智力 */
+    INTELLIGENCE = 3,
+    /** 统帅 */
+    LEADERSHIP = 4,
+    /** 武力 */
+    POWER = 5,
+    /** 暴击率 */
+    CRITICAL = 6,
+    /** 暴击伤害 */
+    CRIT = 7,
+    /** 闪避率 */
+    DODGE = 8,
+    /** 怒气 */
+    ANGER = 9,
+    /** 血量 */
+    HP = 10,
+    /** 兵力 */
+    SOLDIER = 11,
+    /** 伤害减免 */
+    DAMAGE_RED = 12,
+    /** 伤害加成 */
+    DAMAGE_AFFIX = 13,
+    /** 武将最大带兵数量 */
+    MAX_LEAD_SOLDIER = 14,
+    /** 攻击加成 */
+    ATK_AFFIX = 101,
+    /** 防御加成 */
+    DEF_AFFIX = 102,
+    /** 血量加成 */
+    HP_AFFIX = 110,
+    /** 兵力加成 */
+    SOLDIER_AFFIX = 111,
+    /** 重置怒气 */
+    ANGER_INITIAL = 1003,
+    /** 双击（在来一次攻击） */
+    ONE_MORE_ATTACK = 1004,
+    /** 击退格数 */
+    FLY_AWAY_COUNT = 1005,
+    /** 每秒恢复怒气 */
+    EVERY_SECOND_ANGER = 1006,
+    /** 武将掉血回怒率 */
+    GENERAL_HP_TO_ANGER = 1007,
+    /** 攻击系数 */
+    ATK_COEFFICIENT = 1101,
+    /** 防御系数 */
+    DEF_COEFFICIENT = 1102,
+    /** 兵力系数 */
+    SOLDIER_COEFFICIENT = 1103,
+    /** 血量系数 */
+    HP_COEFFICIENT = 1104,
+}
+
+/** 功能开放表 */
+enum FunctionType {
+    /** 建筑升级 */
+    BUILDING_GRADE = 1,
+    /** 建筑加速 */
+    BUILDING_GRADE_SPEED = 2,
+    /** 主城 */
+    MAIN_MAP = 3,
+    /** 世界 */
+    WORLD_MAP = 4,
+    /** 商城 */
+    SHOP = 101,
+    /** 公告 */
+    ANNOUNCEMENT = 102,
+    /** 重生 */
+    REBIRTH = 103,
+    /** 缩略图 */
+    MINIMAP = 301,
+    /** 邮件 */
+    MAIL = 401,
+    /** 排行榜 */
+    RANK = 501,
+    /** 武将招募 */
+    GENERAL_RECRUITMENT = 601,
+    /** 竞技场 */
+    APK = 701,
+    /** 科研 */
+    TECHNOLOGY = 801,
+    /** 聚宝 */
+    FREE_MONEY = 901,
+    /** 武将功能 */
+    GENERAL = 1001,
+    /** 武将等级 */
+    GENERAL_LEVELUP = 1002,
+    /** 武将升星 */
+    GENERAL_STAR = 1003,
+    /** 武将技能 */
+    GENERAL_SKILL = 1004,
+    /** 武将宝物 */
+    GENERAL_TREASURE = 1005,
+    /** 武将缘分 */
+    GENERAL_FATE = 1006,
+    /** 联盟 */
+    GUILD = 1101,
+    /** 物品 */
+    PACK = 1201,
+    /** 任务 */
+    MAIN_TASK = 1301,
+    /** 国家 */
+    COUNTRY = 1401,
+    /** 宝物 */
+    TREASURE = 1801,
+    /** 宝石合成 */
+    GEMSTONE_COMPOSE = 1802,
+    /** 宝物升级 */
+    TREASURE_UPGRADE_LEVEL = 1803,
+    /** 宝物升星 */
+    TREASURE_UPGRADE_STAR = 1804,
+    /** 宝物装配宝石 */
+    TREASURE_ASSEMBLING_GEMSTONE = 1805,
+    /** 名将副本 */
+    HEAD_QUARTERS = 2001,
+    /** 名将副本（困难） */
+    HEAD_QUARTERS_HARD = 2002,
+    /** 警报 */
+    ALERT = 2101,
+    /** 挂机 */
+    PATROL = 2201,
+    /** 敌将入侵 */
+    PATROL_BOSS = 2202,
+    /** 挂机自动跳转 */
+    PATROL_TURN = 2203,
+    /** boss */
+    BOSS = 2401,
+    /** 世界BOSS */
+    WORLD_BOSS = 2402,
+    /** 排名BOSS */
+    RANK_BOSS = 2403,
+    /** 锻造装备 */
+    EQUIPMENT = 2501,
+    /** 锻造强化 */
+    EQUIPMENT_STENG = 2502,
+    /** 锻造升阶 */
+    EQUIPMENT_GRADE = 2503,
+    /** 锻造精炼 */
+    EQUIPMENT_WROUGH = 2504,
+    /** 部队 */
+    ARMEY = 2601,
+    /** 布阵 */
+    CAMP = 2701,
+    /** 聊天 */
+    CHAT = 2801,
+    /** 在线时长奖励 */
+    ONLINE = 2901,
+    /** 材料副本 */
+    MATERIAL = 2902,
+    /** 过关斩将 */
+    ARENA = 2903,
+    /** 历史战役 */
+    HISTORY_WAR = 2904,
+    /** 瑞兽 */
+    WATER_MONSTER = 2906,
+    /** 投石车 */
+    HITWALLSOLDIER = 2907,
+    /** 弩车 */
+    BALLISTA = 2908,
+    /** 帐篷 */
+    TENT = 2909,
+    /** 船 */
+    BOOT = 2910,
+    /** 限时活动 */
+    GIFTBAG = 4001,
+    /** 神秘商人 */
+    GIFTSHOP = 4002,
+    /** 跨服联赛 */
+    CROSS_SERVER = 3301,
+    /** 国战预告 */
+    WORLD_NOTICE = 4006,
+    /** 每日惊喜 */
+    DAILY_SURPRISE = 4007,
+}
+
+/** VipPrivilleges */
+enum VipPrivillType {
+    /** 最大离线收益时间%s小时 */
+    MAX_OFFLINE_INCOME = 101,
+    /** 建筑时间减少%s分钟 */
+    BUILDING_TIME_REDUCTION = 102,
+    /** 科技时间减少%s分钟 */
+    TECHNOLOGY_TIME_REDUCTION = 103,
+    /** 募兵时间减少%s分钟 */
+    TRAINING_TIME_REDUCTION = 104,
+    /** 跳过战斗 */
+    CAN_SKIP_BATTLE = 105,
+    /** 一键建造（主城建筑） */
+    BUILDING_FAST = 106,
+    /** 一键收获（收获资源建筑） */
+    BUILDING_AWARD_FAST = 107,
+    /** 贵族每日首次十连抽额外奖励翻倍 */
+    TAVERN_EXTRA = 108,
+    /** 银两免费快捷购买%s次 */
+    QUICKSHOP_FREE_SILVER_COUNT = 109,
+    /** 粮食免费快捷购买%s次 */
+    QUICKSHOP_FREE_GRAIN_COUNT = 110,
+    /** 木材免费快捷购买%s次 */
+    QUICKSHOP_FREE_WOOD_COUNT = 111,
+    /** 铁矿免费快捷购买%s次 */
+    QUICKSHOP_FREE_IRON_COUNT = 112,
+    /** 银两免费快捷购买%s%加成 */
+    QUICKSHOP_SILVER_DISCOUNT = 113,
+    /** 粮食免费快捷购买%s%加成 */
+    QUICKSHOP_GRAIN_DISCOUNT = 114,
+    /** 木材免费快捷购买%s%加成 */
+    QUICKSHOP_WOOD_DISCOUNT = 115,
+    /** 铁矿免费快捷购买%s%加成 */
+    QUICKSHOP_IRON_DISCOUNT = 116,
+    /** 排名BOSS免费挑战次数%s */
+    BOSS_CHALLENGE = 201,
+    /** 过关斩将免费挑战次数%s */
+    ARENA_CHALLENGE = 202,
+    /** 珍宝商城免费刷新次数%s */
+    TREASURE_SHOP_REFRESH = 203,
+    /** 技能商城免费刷新次数%s */
+    SKILL_SHOP_REFRESH = 204,
+    /** 挂机收益增加%s% */
+    PATROL_REWARD_ADD_RATE = 205,
+    /** 免费双倍挂机离线收益 */
+    PATROL_FREE = 206,
+    /** 大地图收集、采集收益增加%s% */
+    MAP_COLLECTION_PROFIT = 207,
+    /** 大地图剿匪收益增加%s% */
+    MAP_FIGHT_PROFIT = 208,
+    /** 大地图额外队伍数+%s */
+    MAP_EXTRA_TEAM = 209,
+    /** 大地图剿匪可购买%s次数 */
+    BUY_MONSTER = 210,
+    /** 大地图收集可购买%s次数 */
+    BUY_COLLECT = 211,
+    /** 大地图采集可购买%s次数 */
+    BUY_GATHER = 212,
+    /** 名将副本购买次数%s */
+    BUY_HAEDQUARTER_CLEAN = 303,
+    /** 聚宝盆购买次数%s */
+    BUY_JACKPOT = 304,
+    /** 竞技场挑战购买次数%s */
+    BUY_APK = 305,
+    /** 排名BOSS挑战购买次数%s */
+    BUY_BOSS = 306,
+    /** 过关斩将重置购买次数%s */
+    BUY_ARENA = 307,
+    /** 挂机额外加速次数%s */
+    PATROL_WINE_COUNT = 308,
+    /** 银两副本挑战购买次数%s */
+    MATERIAL_SILVER_BUY = 309,
+    /** 强化副本挑战购买次数%s */
+    MATERIAL_STRENGTHEN_BUY = 310,
+    /** 升阶副本挑战购买次数%s */
+    MATERIAL_UPGRADE_BUY = 311,
+    /** 精炼副本挑战购买次数%s */
+    MATERIAL_WROUGHT_BUY = 312,
+    /** 天命副本挑战购买次数%s */
+    MATERIAL_FATE_BUY = 313,
+    /** 部队副本挑战购买次数%s */
+    MATERIAL_SOLDIER_BUY = 314,
+    /** 挂机BOSS挑战购买次数%s */
+    PATROL_BOSS_BUY = 315,
+    /** 历史战役购买次数%s */
+    HISTORY_WAR_BUY = 316,
+    /** 个人BOSS挑战购买次数%s */
+    BUY_PERSONAL_BOSS = 317,
+    /** 世界BOSS挑战购买次数%s */
+    BUY_WORLD_BOSS = 318,
+}
+
+/** 系统常量表 */
+enum IConstEnum {
+    /** 在线统计时间间隔（分） */
+    ONLINE_STATISTICS_INTERVAL = 1,
+    /** 世界等级统计的时间间隔 */
+    WORLD_LEVEL_INTERVAL_TIME = 2,
+    /** 世界等级统计的玩家数量 */
+    WORLD_LEVEL_PLAYER_NUM = 3,
+    /** 最大角色数量包含删除的 */
+    DEFAULT_MAX_ROLES_NUM = 101,
+    /** 最大有效角色数，不包含删除的  */
+    EFFECTIVE_NUMBER_ROLES = 102,
+    /** 角色数量小于等于该数时不可删除 */
+    MINIMUM_ROLES_NUMBER = 103,
+    /** 升级满仓粮食 */
+    UPLEVEL_REWARD = 113,
+    /** 推荐阵营奖励 */
+    RECOMMEND_COUNTRY = 114,
+    /** 游戏初始化武将列表，无论玩家是否可以获得，只要游戏里调用了这个武将就需要配置进去 */
+    GENERAL_LIST = 201,
+    /** 武将最大怒气 */
+    GENERAL_ANGRY_MAX = 502,
+    /** 每X秒恢复X点怒气，每累积损失X%兵力恢复X点怒气,普攻一下加X点怒气 */
+    ANGER_RECOVERY_COEF = 504,
+    /** 小兵属性计算公式[武将属性继承到兵身上的系数] */
+    SOLDIER_ATTRIBUTE_FORMULA = 506,
+    /** 属性成长系数[
+智力与血量成长系数，统帅与血量成长系数，
+武力与攻击成长系数，智力与攻击成长系数，
+武力与防御成长系数，统帅与防御成长系数，
+智力与兵力成长系数，统帅与兵力成长系数，
+] */
+    ATTRIBUTE_GROWTH_COEFFICIENT = 507,
+    /** 战力公式计算 */
+    FIGHTING_FORMULA = 508,
+    /** 战斗公式[
+将将伤害系数,将兵伤害系数,
+兵将伤害系数,兵兵伤害系数,
+] */
+    WAR_FORMULA = 509,
+    /** 伤害保底系数 */
+    DAMAGE_BOTTOM_PRESERVATION_COEFFICIENT = 510,
+    /** 每次伤害回复怒气值 */
+    GENERAL_ANGRY_ADD_HURT = 528,
+    /** 武将攻击产生的怒气 */
+    GENERALS_ATK_ANGER = 531,
+    /** 小兵攻击产生的怒气 */
+    SOLDIER_ATK_ANGER = 532,
+    /** 挂机界面骑马武将列表 */
+    HANG_GENERAL_LIST = 550,
+    /** 自己没有武将时显示的武将 */
+    HANG_NO_GENERAL_DEFINE = 551,
+    /** 挂机动画 自己武将序列帧 */
+    HANG_ACTLIST = 552,
+    /** 挂机动画 敌方武将序列帧 */
+    HANG_E_ACTLIST = 553,
+    /** 挂机动画 技能1 */
+    HANG_SKILL_1_IMAGE_LIST = 554,
+    /** 挂机动画 技能2 */
+    HANG_SKILL_2_IMAGE_LIST = 555,
+    /** 挂机动画 技能1施法动作 */
+    HANG_SKILL_1_START = 556,
+    /** 挂机动画 技能2施法动作 */
+    HANG_SKILL_2_START = 557,
+    /** 挂机动画 士兵1序列帧 */
+    HANG_SOLDIER_1 = 558,
+    /** 挂机动画 士兵2序列帧 */
+    HANG_SOLDIER_2 = 559,
+    /** 武将变大比例 */
+    BATTLE_GENREAL_SCALE = 560,
+    /** 释放技能时变大倍数 */
+    BATTLE_GENREAL_SKILL_START_SCALE = 561,
+    /** 释放技能变大时间（单位:毫秒） */
+    BATTLE_SKILL_START_TIME_1 = 562,
+    /** 释放技能闪光时间（单位:毫秒） */
+    BATTLE_SKILL_START_TIME_2 = 563,
+    /** 释放技能时间（单位:毫秒） */
+    BATTLE_SKILL_START_TIME_3 = 564,
+    /** 缩小时间（单位:毫秒） */
+    BATTLE_SKILL_START_TIME_4 = 565,
+    /** 红将施法大招黑屏时间（单位:毫秒） */
+    BATTLE_SKILL_BLACK_TIME = 566,
+    /** 地图1 进入战场后初始焦点 */
+    BATTLE_MAP_1_START_POINT = 571,
+    /** 地图1镜头往前推 */
+    BATTLE_MAP_1_MOVE_POINT = 572,
+    /** 地图推进时间 （单位 帧  1秒30帧） */
+    BATTLE_MAP_1_MOVE_TIME = 573,
+    /** 地图聚焦移动时间 （单位 帧  1秒30帧） */
+    BATTLE_AUTO_MOVE_FLAME = 574,
+    /** 焦点偏离多少个像素进行对焦 */
+    BATTLE_AUTO_MOVE_DIC = 575,
+    /** 多久检测一次聚焦（单位：毫秒） */
+    BATTLE_RUN_FOCUS_TIME = 576,
+    /** 攻墙战地图推进坐标 */
+    BATTLE_MAP_2_MOVE_POINT = 577,
+    /** 地图推进时间 （单位 帧  1秒30帧） */
+    BATTLE_MAP_2_MOVE_TIME = 578,
+    /** 城墙爆炸后推进坐标点 */
+    BATTLE_MAP_2_DESTORE_MOVE_POINT = 579,
+    /** 小兵被攻击血条显示时间 */
+    BATTLE_SOLDIER_HP_SHOW_TIME = 580,
+    /** 小兵血条小时渐变消失时间 */
+    BATTLE_SOLDIER_HP_DISAPPLLE_TIME = 581,
+    /** 小兵血条掉血量移动时间 */
+    BATTLE_SOLDIER_HP_MOVE_TIME = 582,
+    /** 武将黄条掉格时间（单位：毫秒） */
+    BATTLE_GENERAL_SOLDIER_SUB_TIEM = 590,
+    /** 第一场新手战斗 步骤1时间（单位：毫秒） */
+    FIRST_GUIDE_STEP_1 = 591,
+    /** 第一场新手战斗 步骤2时间（单位：毫秒） */
+    FIRST_GUIDE_STEP_2 = 592,
+    /** 第一场新手战斗 步骤3时间（单位：毫秒） */
+    FIRST_GUIDE_STEP_3 = 593,
+    /** 士兵死亡飞起距离(单位：像素) */
+    BATTLE_SOLDIER_DIE_DIS = 594,
+    /** 士兵死亡滑行时间（单位：毫秒） */
+    BATTLE_SOLDIER_DIE_SLIP_TIME = 595,
+    /** 士兵死亡击飞滑行时间（单位：毫秒） */
+    BATTLE_SOLDIER_DIE_FLY_TIME = 596,
+    /** 战斗完成后等待多久出现结算界面 */
+    BATTLE_SETTLE_DELAY_TIME = 597,
+    /** 小兵掉血飘字大小 */
+    BATTLE_SOLDIER_BLOOD_SCALE = 598,
+    /** 小兵变大比例 */
+    BATTLE_SOLIDER_SCALE = 599,
+    /** 第一场新手战斗 步骤4时间（单位：毫秒） */
+    FIRST_GUIDE_STEP_4 = 600,
+    /** 游戏起始兵力 */
+    INIT_TROOP = 623,
+    /** 招揽客人消耗 元宝数量 */
+    TAVERN_RECRUIT_CONSUME = 802,
+    /** 首次10连抽指定掉落内容，编号为酒馆配置表的id编号 */
+    FIRST_RECRUIT_TEN = 810,
+    /** 首次10连抽指定额外奖励内容，编号为酒馆配置表的id编号 */
+    FIRST_RECRUIT_TEN_EXTRA = 811,
+    /** 酒馆十连抽额外将魂奖励(客户端显示用) */
+    FIRST_RECRUIT_TEN_EXTRA_CONSUME = 812,
+    /** 武将设置喊话默认值 */
+    GENERAT_TALK = 906,
+    /** 武将等级最高可高于主城的等级 */
+    GENERAL_GREATER_THAN_HALL = 909,
+    /** 君主等级不足时武将等级上限 */
+    MINIMUM_GENERAL_LEVEL_LIMIT = 910,
+    /** 初始建筑队列 */
+    BUILD_QUEUE_NUM = 1003,
+    /** 庆典丰收的时间单位数 */
+    BUMPER_TIME_UNIT_NUM = 1005,
+    /** 招募兵力倍数 */
+    TRAIN_ARMY_UNIT = 1007,
+    /** 邮件上限 */
+    ID_MAX_MAIL = 1101,
+    /** 邮件列表每页显示数量 */
+    ID_MAIL_NUM_PER_PAGE = 1102,
+    /** 默认邮件上限 */
+    DEFAULT_MAX_MAIL = 1103,
+    /** 物品溢出邮件title */
+    VALUES_OVERFLOW_MAIL_TITLE = 1104,
+    /** 物品溢出邮件content */
+    VALUES_OVERFLOW_MAIL_CONTENT = 1105,
+    /** 扫荡过关斩将需要的vip等级 */
+    CLEAN_UP_BATTLE_VIP_LEVEL = 1801,
+    /** 过关斩将免费重置次数 */
+    FREE_RESET_COUNT = 1802,
+    /** 重置消耗元宝数量 */
+    RESET_CONSUME = 1803,
+    /** 判定大国崛起所需最大城池数量 */
+    COUNTRY_RISE_CITIES_MAX_COUNT = 2301,
+    /** 判定国家衰落所需最小城池数量 */
+    COUNTRY_DECLINE_CITIES_MIN_COUNT = 2303,
+    /** 大国崛起奖励邮件id */
+    COUNTRY_RISE_MAIL_ID = 2304,
+    /** 弹劾国王需要的人数 */
+    IMPEACH_NEED_NUM = 2305,
+    /** 国家城池变化信息列表保留最大信息 */
+    CITY_CHANGE_INFO_LIST_MAX_NUM = 2306,
+    /** 攻城奖励最多累积数目 */
+    MAX_CITYBATTLE_REWARD = 3003,
+    /** 联盟列表数量 */
+    GUILD_LIST_COUNT = 3601,
+    /** 联盟宝藏刷新间隔时间（单位:分钟) */
+    GUILD_TREASURE_REFRESH_PERIOD = 3602,
+    /** 联盟会长不在线xx时间，可以花费xx元宝申请成为会长（单位：秒） */
+    GUILD_LEADER_OFFLINE_TIME = 3605,
+    /** 申请成为联盟会长花费xx元宝数量 */
+    APPLY_GUILD_LEADER_CONSUME = 3606,
+    /** 联盟创建需要金币 */
+    CREATE_GUILD_GOLD = 3609,
+    /** 联盟创建需要VIP等级 */
+    CREATE_GUILD_VIP_LV = 3610,
+    /** 联盟科技捐献金币暴击概率（万分比） */
+    DONATE_GOLD_CRIT = 3612,
+    /** 联盟科技捐献材料次数上限 */
+    DONATE_RESOURCE_COUNT_UPPER = 3613,
+    /** 联盟科技捐献材料每天刷新时间 */
+    DONATE_RESOURCE_REFRESH_TIME = 3614,
+    /** 联盟科技捐献材料暴击概率（万分比） */
+    DONATE_RESOURCE_CRIT = 3615,
+    /**  */
+    GUILD_KICK_MAIL_ID = 3616,
+    /** 云游商人开始展示时间 */
+    CLOUD_SHOP_STIME = 3807,
+    /** 云游商人结束展示时间 */
+    CLOUD_SHOP_ETIME = 3808,
+    /** 兵种进阶等级最多能超过兵营的等级 */
+    MAX_LEVEL = 4001,
+    /** 聚宝盆金币抽中大奖广播次数 */
+    ANNOUNCE_TIMES = 4101,
+    /** 额外金币抽奖跑马灯 */
+    HORSE_LAMP_TEMPLATE = 4102,
+    /** 聚宝盆每日免费次数 */
+    CORNUCOPIA_FREE = 4103,
+    /** 聚宝盆每日总产出次数 */
+    JACKPOT_ALL_COUNT_LIMIT = 4104,
+    /** 月签到补签价格 */
+    SIGN_UP_PRICE = 4301,
+    /** 行营重置次数（旧功能暂时不使用） */
+    HQ_RESET_COUNT = 4701,
+    /** 名将副本扫荡的总次数 */
+    HQ_TOTAL_COUNT = 4702,
+    /** 名将副本每次购买后获得的次数 */
+    HQ_BUY_AMOUNT = 4703,
+    /** 名将副本每个关卡的每天挑战次数 */
+    HQ_SECTION_LIMIT = 4704,
+    /** 名将副本次数恢复的时间间隔（秒） */
+    HQ_REGEN_CD = 4705,
+    /** 部队加速25%,部队加速50% */
+    TEAM_GOLD_COIN_ACCELERATION = 4806,
+    /** 单个部队最多武将数量 */
+    MAX_GENERALS_NUMBER = 4810,
+    /** 拜访消耗拜帖的数量 */
+    VISIT_BATTLE_CONSUME = 4814,
+    /** 士兵价格：兵营建筑等级_对应1万兵力价格（一次购买10000个的价格，少于10000个按10000个计算） */
+    TROOP_SUPPLYMENT_PRICE = 4815,
+    /** 采集消耗元宝参数 */
+    COLLECTION_CONSUME_GOLD = 4816,
+    /** 世界地图部队编制列表开放等级,到达对应等级+1 */
+    PLAYER_LEVEL_WORLD_MAP_TEAM = 4817,
+    /** 开服后世界地图王城不能被攻击的时间（时间单位：秒） */
+    KING_CITY_PROTECT_TIME = 4818,
+    /** 比武大会每次挑战或者扫荡获得的奖励 */
+    CONST_AWARD_COMMON = 5201,
+    /** 比武大会挑战次数最大购买上限 */
+    CONST_BUY_COUNT = 5202,
+    /** 比武大会每天重置的挑战次数 */
+    CONST_CHALLENGE_NUM = 5204,
+    /** 比武大会购买次数时的元宝消耗 */
+    CONST_CHALLENGE_CONSUMES = 5205,
+    /** 巡查每次领取的时间间隔（单位时间：秒） */
+    RECEIVE_TIME = 5301,
+    /** 巡查最多可以领取的累计时间（单位时间：小时）已经废弃 */
+    MAX_RECEIVE_HOUR = 5302,
+    /** 巡查中酒的持续时间（单位时间：小时） */
+    WINE_TIME = 5303,
+    /** 巡查中使用的道具id（酒） */
+    WINE_ITEM = 5304,
+    /** 巡查喝酒消耗材料 */
+    PATROL_WINE_CONSUME_PROP = 5305,
+    /** 巡查消耗元宝的次数对应的元宝 */
+    PATROL_WINE_CONSUME_GOLD = 5306,
+    /** 来袭武将间隔时间（单位时间：秒） */
+    PATROL_BOSS_CD = 5307,
+    /** 第一次来袭武将间隔时间（单位时间：秒） */
+    PATROL_BOSS_CD_FIRST = 5308,
+    /** 宝箱被领取后显示为空宝箱的时长,宝箱挂机多久后显示为非常满的时长，宝箱已满文本显示时长（单位时间：秒） */
+    PATROL_AWARD_STATE_TIME = 5309,
+    /** 巡查加速时间（单位：小时） */
+    PATROL_SPEED_HOUR
+ = 5310,
+    /** 个人boss免费扫荡次数 */
+    PERSONAL_BOSS_FREE_CLEAN = 5407,
+    /** 个人boss扫荡最多购买次数 */
+    PERSONAL_BOSS_BUY_COUNT = 5408,
+    /** 个人boss消耗令牌 */
+    PERSONAL_BOSS_CONSUME_VOUCHER = 5409,
+    /** 个人boss消耗元宝 */
+    PERSONAL_BOSS_CONSUME_GOLD = 5410,
+    /** 排名boss玩家恢复点数的时间(单位:毫秒,例如5分钟=5*60*1000=300000) */
+    RANKING_BOSS_PLAYER_REVIVE_TIME = 5411,
+    /** 排名boss,boss恢复血量时间(单位:毫秒,例如5分钟=5*60*1000=300000) */
+    RANKING_BOSS_REVIVE_TIME = 5412,
+    /** 排名boss购买次数上限 */
+    RANKING_BOSS_BUY_COUNT = 5413,
+    /** 排名boss连续挑战次数上限 */
+    RANKING_BOSS_CHALLENGE_COUNT = 5414,
+    /** 世界boss购买次数上限 */
+    WORLD_BOSS_BUY_COUNT = 5415,
+    /** 世界boss每天挑战次数上限 */
+    WORLD_BOSS_CHALLENGE_COUNT = 5416,
+    /** 排名boss购买次数消耗令牌 */
+    RANKING_BOSS_BUY_COUNT_CONSUME_VOUCHER = 5417,
+    /** 世界boss购买次数消耗令牌 */
+    WORLD_BOSS_BUY_COUNT_CONSUME_VOUCHER = 5418,
+    /** 排名boss消耗金币 */
+    RANKING_BOSS_CONSUME_GOLD = 5419,
+    /** 世界boss消耗金币 */
+    WORLD_BOSS_CONSUME_GOLD = 5420,
+    /** 世界boss目标伤害 */
+    WORLD_WORLD_GOAL_HURT = 5421,
+    /** 装备升阶公式系数1 */
+    EQUIPMENT_SLOT_UPGRADE_ATTR_PARAM1 = 5601,
+    /** 装备升阶公式系数2 */
+    EQUIPMENT_SLOT_UPGRADE_ATTR_PARAM2 = 5602,
+    /** 城墙被动技能ID */
+    WALL_PASSIVE_SKILL = 5603,
+    /** 关卡副本定义3星和2星通关 */
+    COPY_STAR = 5604,
+    /** 墙破暂停时间(毫秒) */
+    WALL_OVER_PAUSE_TIME = 5605,
+    /** 宝物道具来源 */
+    TREA_SOURCE_ID = 5606,
+    /**  */
+    VISIT_REFRESH_PRICE = 5607,
+    /** 名将副本 普通难度 最大副本id */
+    COPY_NOR_END = 5608,
+    /** 名将副本 困难难度 最大副本id */
+    COPY_HD_END = 5609,
+    /** 聊天间隔（毫秒） */
+    CHAT_INTERVAL = 5610,
+    /** 历史副本初始副本id */
+    COPY_HIS_START = 5611,
+    /** 历史副本最大副本id */
+    COPY_HIS_END = 5612,
+    /** 玩家阵型格子解锁条件（等级） */
+    UNLOCK_POSITION = 5801,
+    /** 攻击顺序 [攻击这位置_目标位置1_目标位置2_目标位置N,_目标位置1]，1-5是部队位置，6是投石车，7是箭塔，8城墙 */
+    ATK_ORDER = 5803,
+    /** 首占奖励第一名联盟每人奖励20元宝。 */
+    WAR_CITY_TEAM_RANKING1_GUILD_REWARD = 5901,
+    /** 首占奖励军功第一名奖励10%元宝。（万分比） */
+    WAR_CITY_TEAM_RANKING1_GOLD_REWARD = 5902,
+    /** 首占奖励军功第二至十名奖励8%元宝。（万分比） */
+    WAR_CITY_TEAM_RANKING2_9_GOLD_REWARD = 5903,
+    /** 首占奖励军功第十一名以上奖励30元宝。 */
+    WAR_CITY_TEAM_FIGHT_REWARD = 5904,
+    /** 改名所需要的名称。 */
+    CHANGE_NAME = 5911,
+    /** 战斗武将数量差加速 */
+    ACCELERATE_DIFFERENCE_NUMBER_GENERALS = 5912,
+    /** 战斗公式【防御减免】参数 防御减免=守方防御/(守方防御+18000+攻方武将等级*250)+0.25 */
+    DEF_RED = 5913,
+    /** 战斗公式【等级差】参数 (0.25*1.07^(我方武将等级-敌方武将等级）+0.75) */
+    LEVEL_DIFFERENCE = 5914,
+    /** 竞技场筛选规则所需要的参数，完全根据筛选公式按顺序填写，公式文档中的排名数字不算在内 */
+    APK_CHANLLENGE_LIST_PARAM = 5915,
+    /** 封王战展示奖励 */
+    AC_KING_BATTLE_AWARD = 6001,
+    /** 元宝消耗CD，X秒一元宝 */
+    CD_GOLD = 6002,
+    /** 君主等级X级才能攻击城市 */
+    MONARCHY_LEVEL_ATTACK_CITY = 6003,
+    /** 名将副本3星条件：45秒内通关 */
+    HEAD_QUARTERS_3_STAR = 6004,
+    /** 名将副本2星条件：60秒内通关 */
+    HEAD_QUARTERS_2_STAR = 6005,
+    /** 战功计算-胜 */
+    MILITARYMERITS_COMPUTE_SUCCESS = 6006,
+    /** 战功计算-负 */
+    MILITARYMERITS_COMPUTE_FAIL = 6007,
+    /** 武将一键升级等级限制 */
+    GENERAL_UPGRADE_LIMIT = 6008,
+    /** 武将达到X级后每次只能升一级 */
+    GENERAL_UPGRADE_MAX_LIMIT = 6009,
+    /** 装备一键强化、升阶、精炼等级限制 */
+    EQUIPMENT_SLOT_UPGRADE_LIMIT = 6010,
+    /** 装备达到X级后每次只能升一级 */
+    EQUIPMENT_SLOT_UPGRADE_MAX_LIMIT = 6011,
+    /** 每X秒恢复城市一队人马，每X秒恢复城市军队X%点血量（血量是万分比） */
+    CITY_RECOVERY_FORCE = 6012,
+    /** 盟主被弹劾离线时间判定(小时) */
+    GUILD_ACCUSE_LOGINOUT_TIME = 6013,
+    /** 弹劾盟主扣费 */
+    GUILD_ACCUSE_COSTS = 6014,
+    /** 联盟排行榜最高战力人数 */
+    GUILD_RANK_FIGHT_PERSON = 6015,
+    /** 转盘消耗 元宝数量 */
+    PRIZE_RECRUIT_CONSUME = 6016,
+    /** 转盘消耗幸运转盘道具 */
+    PRIZE_RECRUIT_RECRUIT_CONSUME = 6017,
+    /** 襄阳战从准备到开战的时间（秒）废弃，直接后台控制 */
+    XIANGYANG_FIGHT_TIME = 6030,
+    /** 襄阳战等级限制 */
+    XIANGYANG_LEVEL_LIMIT = 6031,
+    /** 襄阳战怪物头像[[武将1id，星级，等级],[武将2id，星级，等级]] */
+    XIANGYANG_MONSTER = 6032,
+    /** 襄阳战最后发兵时间限制（秒） */
+    XIANGYANG_STOP_TIME = 6033,
+    /** 日战功上限 */
+    MILITARYMERITS_DAY_LIMIT = 6034,
+    /** 跨服战兵库上限，2个亿 */
+    CROSS_SERVER_WAR_MAX_TROOPS = 6040,
+    /** 多少秒恢复多少兵力，格式：秒数,兵力 */
+    CROSS_SERVER_WAR_TROOPS_RECOVER = 6041,
+    /** 皇帝队的队伍总数 */
+    CROSS_SERVER_WAR_TROOPS_EMPEROR_TEAM_NUM = 6042,
+    /** 君主队的队伍总数 */
+    CROSS_SERVER_WAR_TROOPS_COUNTRY_TEAM_NUM = 6043,
+    /** 匹配时间点，时间点必须在活动预览时间和开始时间之间 */
+    CROSS_SERVER_WAR_MATCH_TIME = 6044,
+    /** 清空数据时间点，时间点必须在预览时间之前 */
+    CROSS_SERVER_WAR_CLEAN_MATCH_TIME = 6045,
+    /** 酒馆红将重置保底 */
+    TAVERN_MINIMUM = 6046,
+    /** 酒馆红将重置保底上限 */
+    TAVERN_MAX_MINIMUM = 6047,
+    /** 酒馆兑换红将积分要求 */
+    TAVERN_EXCHANGE_SCORE = 6048,
+    /** 酒馆每招募一次增加积分 */
+    TAVERN_ADD_SCORE = 6049,
+    /** 傲气参数[攻击方系统，防守方系数],万分比 */
+    ARROGANCE_PARAM = 6050,
+    /** VIP的显示购买按钮限定等级:暂定为VIP8 */
+    HIGH_VIP_BUY_DIS = 6051,
+    /** VIP的购买限定等级:暂定为VIP10 */
+    HIGH_VIP_BUY_LV = 6052,
+    /** 人民币转换元宝价格的系数:暂定为20 */
+    HIGH_VIP_BUY_PRICE = 6053,
+}
+
+/** 模块使用次数表 */
+enum IFunCountEnum {
+    /** 普通副本扫荡次数 */
+    COPY_FREE_COUNT = 10001,
+    /** 聚宝盆次数 */
+    TREASURE_WASHBOWL_COUNT = 10002,
+    /** 困难副本扫荡次数 */
+    HQ_HARD_FREE_COUNT = 10003,
+    /** 挂机boss */
+    PATROL_BOSS = 10004,
+    /** 挂机经验购买 */
+    PATROL_WINE = 10005,
+    /** 个人boss */
+    PERSONAL_BOSS = 10006,
+    /** 每日采集次数 */
+    COLLECT_COUNT = 10007,
+    /** 每日剿匪次数 */
+    WILD_MONSTER_COUNT = 10008,
+    /** 每日收集次数 */
+    GATHER_COUNT = 10009,
+    /** 竞技场每日挑战次数 */
+    APK_CHALLENGE_COUNT = 10010,
+    /** 历史战役扫荡次数 */
+    HISTORY_WAR_COUNT = 10011,
+    /** 排名boss */
+    RANK_BOSS = 10012,
+    /** 世界boss */
+    WORLD_BOSS = 10013,
+}
+
+/** NoticeConfig */
+enum INoticeEnum {
+    /** 武将卡获得 */
+    GEN_CARD = 1,
+    /**  */
+    CITY_WAR_START = 2,
+    /**  */
+    CITY_WAR_OVER = 3,
+    /**  */
+    GEN_HIGH = 4,
+    /**  */
+    GET_TREASURE = 7,
+    /**  */
+    GEM_HIGH = 8,
+    /**  */
+    BREAKOUT_PREVIEW = 15,
+    /**  */
+    BREAKOUT_START = 16,
+    /**  */
+    VIP_LEVEL = 17,
+    /**  */
+    APK_TOP = 19,
+    /**  */
+    FIRST_RECHARGE = 21,
+    /**  */
+    VIP_4 = 23,
+    /**  */
+    VIP_8 = 24,
+    /**  */
+    VIP_14 = 25,
+    /**  */
+    VIP_15 = 26,
+    /**  */
+    CITY_FULL_DEF = 27,
+    /**  */
+    ATTACK_CITY_FAIL = 28,
+    /**  */
+    ATTACK_CITY_MVP = 29,
+    /**  */
+    BECOME_EMPROR = 30,
+    /**  */
+    XIANG_YANG_NOTICE = 31,
+    /**  */
+    XIANG_YANG_WAR = 32,
+    /**  */
+    GET_POSITION = 34,
+    /**  */
+    YELLOW_ARMY_STORM = 35,
+    /**  */
+    YELLOW_ARMY_NO_STORM = 36,
+    /**  */
+    GEN_TOP = 37,
+    /** GM专用的系统公告 */
+    SYSTEM_NOTICE = 38,
+}
+
+/** 活动ui枚举 */
+enum AcViewType {
+    /** 首充 */
+    FIRST_RECHARGE = 101,
+    /** 单笔充值 */
+    RECHARGE_SINGLE = 201,
+    /** 连续充值 */
+    RECHARGE_CONTIN = 301,
+    /** 累计充值 */
+    RECHARGE_ADD_UP = 401,
+    /** 充值兑换 */
+    RECHARGE_EXCHANGE = 501,
+    /** 精彩礼包 */
+    PURCHAGE_BAG = 601,
+    /** 一元礼包 */
+    ONE_GIFT_BAG = 5101,
+    /** 7日目标 */
+    OPEN_SEVEN = 10101,
+    /** 7天循环活动 */
+    NOR_SEVEN = 10201,
+    /** 签到 */
+    SIGN_MONTH_DAY = 10301,
+    /** 七天登录 */
+    SIGN_CONTIN_DAY_2 = 40202,
+    /** 单笔充值 */
+    RECHARGE_SINGLE_2 = 202,
+    /** 累计充值 */
+    RECHARGE_ADD_UP_3 = 403,
+    /** 特惠商店 */
+    AC_SHOP = 701,
+    /** 聚宝盆累充 */
+    RECHARGE_ADD_UP_4 = 404,
+    /** 聚宝盆抽奖 */
+    TREASEURE_BOWL = 30402,
+    /** 武将拜访 */
+    NEW_GEN_VIS = 30401,
+    /** 周卡月卡 */
+    CARD_MONTH_WEEK = 20101,
+    /** 消费好礼 */
+    CONSUME_GIFT = 30101,
+    /** 转盘 */
+    TRUN_TABLE = 30201,
+    /** 成长基金 */
+    FUND_GROWTH = 30301,
+    /** 七天登录 */
+    SIGN_CONTIN_DAY = 40201,
+    /** 战力冲榜 */
+    FIGHT_RANKING_AWARD = 50101,
+    /** 等级冲榜 */
+    LEVEL_RANKING_AWARD = 50201,
+    /** 霸王的大陆 */
+    COUNTRY_CITYS_RANKING = 50301,
+    /** 三国无双 */
+    APK_RANKING = 50401,
+    /** 最强联盟 */
+    GUILD_FORCE_RANKING = 50501,
+    /** 封王战 */
+    THRONE = 1000101,
+    /** 南蛮入侵 */
+    BARBARIANATTACK = 1000201,
+    /** 跨服联赛 */
+    CROSS_SERVICE = 1000301,
+    /** 古战场 */
+    ANCIENTBATTLEFIELD = 1000401,
+    /** 襄阳战 */
+    XIANGYANG = 1000501,
+    /** 幸运转盘 */
+    PRIZE = 1000601,
+    /** 新春七天登录 */
+    SIGN_CONTIN_DAY_3 = 40203,
+    /** 新春单笔充值 */
+    RECHARGE_SINGLE_3 = 203,
+    /** 新春累计充值 */
+    RECHARGE_ADD_UP_5 = 405,
+    /** 新春特惠商店 */
+    AC_SHOP_2 = 702,
+    /** 新春聚宝盆累充 */
+    RECHARGE_ADD_UP_6 = 406,
+    /** 新春聚宝盆抽奖 */
+    TREASEURE_BOWL_2 = 30403,
+}
+
+/** 排行榜 */
+enum RankType {
+    /** 用户等级排行 */
+    LV_RANKS = 1,
+    /** 玩家战力排行 */
+    PLAYER = 2,
+    /** 武将战力排行 */
+    GENREAL = 3,
+    /** 国内战功排行(魏) */
+    WEI_BATTLE_ACHIEVEMENT_RANKS = 5,
+    /** 联盟 */
+    LEGION = 6,
+    /** 国家城池 */
+    COUNTRY = 7,
+    /** 战功 */
+    MILLTORY = 8,
+    /** 襄阳战个人战功排行榜 */
+    XIANGYANG_PLAYER_RANKS = 9,
+    /** 竞技场排行 */
+    ARENA_POWER = 10,
+    /** 单个武将排行榜 */
+    ONEHERO = 11,
+    /** 跨服个人荣誉排行榜 */
+    CROSS_SERVER_PLAYER_RANK = 12,
+    /** 跨服联盟荣誉排行榜 */
+    CROSS_SERVER_UNION_RANK = 13,
+}
+
+/** 城池升级奖励类型 */
+enum CityRewardType {
+    /** 参数为增加的万分比 */
+    REVENUE = 1,
+    /** 参数为增加的万分比 */
+    GATHER = 2,
+    /** 参数为加成等级数，大于200时只会等于200级 */
+    NPC_LEVEL = 3,
+    /** 没有参数 */
+    NPC_NUM = 4,
+    /** 参数为减少的万分比 */
+    NPC_REGAIN = 5,
+    /** 参数为减少的万分比 */
+    MOVE = 6,
+    /** 城市可以补充兵力 */
+    REPAIR = 7,
+    /** 没有参数 */
+    NPC_HEAD = 8,
+    /** 没有参数 */
+    VISIT = 9,
+    /** 没有参数 */
+    FAMOUS = 10,
+}
+
+/** 跨服数据常量表 */
+enum CrossServerConstType {
+    /** 跨服战兵库上限，200个亿 */
+    MAX_TROOPS = 1,
+    /** 多少秒恢复多少兵力，格式：秒数,兵力 */
+    TROOPS_RECOVER = 2,
+    /** 皇帝队的队伍总数 */
+    TROOPS_EMPEROR_TEAM_NUM = 3,
+    /** 君主队的队伍总数 */
+    TROOPS_COUNTRY_TEAM_NUM = 4,
+    /** 清空数据，进入准备期 */
+    CLEAN_MATCH_TIME = 5,
+    /** 活动预览报名时间 */
+    PRE_VIEW_TIME = 6,
+    /** 匹配时间点，时间点必须在活动预览时间和开始时间之间 */
+    MATCH_TIME = 7,
+    /** 开战时间 */
+    OPEN_TIEM = 8,
+    /** 结束时间 */
+    CLOSE_TIME = 9,
+    /** 周几开放 */
+    WEEKS = 10,
+    /** 开服多少天可以参加跨服战 */
+    OPEN_SERVER_DAY = 11,
+    /** 跨服战队伍移动时间，单位：秒 */
+    TEAM_MOVE_TIME = 12,
+    /** 城门胜利一场加多少荣誉 */
+    GATE_WIN_HONOR = 13,
+    /** 城门失败（30+对方损失兵力百分比*40） */
+    GATE_FAIL_HONOR = 14,
+    /** 内城胜利一场加多少荣誉 */
+    CITY_WIN_HONOR = 15,
+    /** 内城失败（100+对方损失兵力百分比*100） */
+    CITY_FAIL_HONOR = 16,
+    /** 购买箭塔增加的荣誉值 */
+    BUY_TOWER_HONOR = 17,
+    /** 购买箭塔需要的荣誉值 */
+    BUY_TOWER_PRICE = 18,
+    /** 每场获得荣誉的最大值 */
+    MAX_HONOR = 19,
+}
+

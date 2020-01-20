@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="payYuShopSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*" width="1334" height="750">
+
+	<e:Group x="0" y="0" width="100%" height="100%">
+		<com_main:CImage source="border_004_jpg" width="100%" height="100%" x="0" y="0"/>
+		<e:Image source="zyt_hd_cz_jpg" y="60" width="100%" anchorOffsetY="0" height="685"/>
+		<com_main:MainTopNew id="m_MainTopNew" skinName="new_top_main" width="100%"/>
+		<e:Scroller id="m_pSroller" anchorOffsetX="0" anchorOffsetY="0" width="1316" height="675" y="71.78" horizontalCenter="0">
+			<e:Group id="m_list">
+			<e:layout>
+				<e:TileLayout paddingLeft="137" horizontalGap="20" paddingTop="10" verticalGap="19" paddingBottom="70" horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Image source="border_1019_png" bottom="0" width="100%" alpha="0.8" anchorOffsetY="0" height="99" x="0" touchEnabled="false"/>
+
+
+
+
+	</e:Group>
+</e:Skin>

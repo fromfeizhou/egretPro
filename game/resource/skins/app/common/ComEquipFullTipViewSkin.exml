@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComEquipFullTipViewSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Group id="m_pRoot" horizontalCenter="0" verticalCenter="15" height="388">
+		<com_main:CImage xmlns:com_main="com_main.*" horizontalCenter="0" source="border_1039_png" anchorOffsetY="0" scale9Grid="154,133,924,15" height="388" top="0"/>
+			<e:Label id="m_labDec" text="你的装备已满，请立即前往回收或调整装备。" y="194" size="24" scaleX="1" scaleY="1" anchorOffsetY="0" height="34" anchorOffsetX="0" width="529.33" textAlign="center" horizontalCenter="0" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+			<e:Label id="m_labTip" text="(回收装备获得一定数量的强化石)" y="228.65" size="24" scaleX="1" scaleY="1" anchorOffsetY="0" height="34" anchorOffsetX="0" width="529.33" textAlign="center" horizontalCenter="-0.5" fontFamily="Microsoft YaHei" textColor="0xabb7d1"/>
+			<e:Image source="city_icon_dz_png" y="82" horizontalCenter="0.5"/>
+			<com_main:ComButton id="m_btnGoto" y="306" skinName="com_button" anchorOffsetX="72.5" anchorOffsetY="30" x="619.5" currentState="style6" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Image id="m_imgTitle" source="lb_zbym_png" y="157" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

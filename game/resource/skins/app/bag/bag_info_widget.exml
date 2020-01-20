@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="bag_info_widget" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" height="88" width="88">
+	<com_main:CImage id="m_pImgTechIcon0" anchorOffsetY="0" anchorOffsetX="0" left="-8" right="-8" top="-9" bottom="-10" source="welfare_kuangbg2_png" visible="false"/>
+	<com_main:CImage anchorOffsetX="0" left="0" top="0" bottom="0" right="0" source="Qualitykuang2_png" visible="false"/>
+	<com_main:CImage id="m_pImgTechIcon" source="common_prop_2007_png" anchorOffsetY="0" anchorOffsetX="0" left="0" top="0" bottom="0" right="0"/>
+	<com_main:CImage id="m_imgSelect" anchorOffsetX="0" anchorOffsetY="0" left="-9" bottom="-8" top="-9" right="-6" source="welfare_kuangbg2_png"/>
+	<e:Label id="m_pLbLevel" text="99/99" textColor="0xfff7dd" size="20" right="0" bottom="0"/>
+</e:Skin>

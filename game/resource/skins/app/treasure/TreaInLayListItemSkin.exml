@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TreaInLayListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*" >
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" width="328" height="136">
+		<e:Image source="border_018_png" x="0" anchorOffsetX="0" width="328" anchorOffsetY="0" height="136" scale9Grid="20,19,77,79"/>
+		<e:Image source="border_1036_png" x="115" y="66.37" height="25"/>
+		<e:Label id="m_labAttri" text="生命+10" x="129" size="20" y="68" textColor="0xabb7d1"/>
+		<e:Label id="m_labName" text="绿松石" x="125.34" size="22" textColor="0xABB7D1" y="24.67"/>
+		<com_main:ComItemNew id="m_comItem" x="18" y="17.17" skinName="com_item_new" currentState="base"/>
+		<e:Group id="m_pSelTips" x="214" y="96.33" rotation="-25" touchChildren="false" touchEnabled="false">
+			<e:Image source="com_wzk8_png" x="0" y="0" scaleX="0.5" scaleY="0.5"/>
+			<e:Label text="装备中" textColor="0xe9e9e6" size="24" verticalCenter="0" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

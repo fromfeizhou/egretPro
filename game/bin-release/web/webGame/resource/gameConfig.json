@@ -1,0 +1,13 @@
+{
+	"version":"0.9.2.8",
+	"error":false,
+	"debug":false,
+	"debugSkill":false,
+	"debugBatt":false,
+	"debugGui":false,
+	"debugPb":false,
+	"isGuide":true,
+	"testGuideIds":"[]",
+	"soundBg":true,
+	"soundEff":true
+}

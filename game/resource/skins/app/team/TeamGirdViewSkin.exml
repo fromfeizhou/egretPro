@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TeamGirdViewSkin" width="337" height="170" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*">
+	<com_main:CImage id="m_pLight" source="xzdx_png" x="7.58" y="3.75" touchEnabled="false"/>
+</e:Skin>

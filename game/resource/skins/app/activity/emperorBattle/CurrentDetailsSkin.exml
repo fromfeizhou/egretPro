@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CurrentDetailsSkin" width="1159" height="676" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" top="0" right="0" bottom="0">
+		<e:Group y="20" horizontalCenter="-86">
+			<e:Image x="0" y="0" source="hang_btd_png"/>
+			<com_main:CImage scaleX="1" scaleY="1" source="lb_dqxyzlz_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<com_main:CImage source="border_1001_png" y="81" width="520" x="234"/>
+		<com_main:CLabel id="m_labTime" text="距离直接占领襄阳剩余：" textColor="0xE5E3E3" fontFamily="Microsoft YaHei" size="24" y="83" horizontalCenter="-85"/>
+		<e:Group id="m_xyCity" width="353" height="296" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" horizontalCenter="-100" verticalCenter="-22">
+			<e:Image id="m_imgXy" source="map_build_1_png" horizontalCenter="-3.5" verticalCenter="23.5"/>
+			<e:Image id="m_imgCountry" x="69" y="-55" source="common_country5_4_png" scaleX="0.5" scaleY="0.5"/>
+		</e:Group>
+		<e:Group id="m_gFighting" y="424" horizontalCenter="-85">
+			<com_main:CImage source="zyt_xj_wug_png" y="0" width="410" x="0"/>
+			<e:Image source="icon_zd_png" y="4" x="55"/>
+			<com_main:CLabel id="m_labFighting" text="襄阳战正在交战中" textColor="0xE5E3E3" fontFamily="Microsoft YaHei" size="28" y="7" stroke="2" strokeColor="0xa2220d" x="93"/>
+		</e:Group>
+		<e:Group id="m_gRankC" width="260" height="460" y="4" right="8">
+			<com_main:CImage left="0" top="0" right="0" bottom="0" source="border_1030_png" alpha="0.75" rotation="90"/>
+			<com_main:CImage source="lb_dqgjsdb_png" y="42" horizontalCenter="0"/>
+			<com_main:CImage y="80" horizontalCenter="0" source="line_1003_png" scaleY="-1"/>
+			<e:Group id="m_pBtnAll" horizontalCenter="0" bottom="40">
+				<com_main:CImage source="btn_112_png" rotation="90" y="21" horizontalCenter="0"/>
+				<com_main:CLabel id="m_labSeeDetails" text="查看详情" fontFamily="Microsoft YaHei" size="18" horizontalCenter="0" textColor="0x8a8a9e" y="0"/>
+			</e:Group>
+			<e:List id="m_listRank" width="250" height="240" itemRendererSkinName="EmperorRankCellSkin" horizontalCenter="0" verticalCenter="0">
+				<e:layout>
+					<e:VerticalLayout gap="0"/>
+				</e:layout>
+			</e:List>
+		</e:Group>
+		<e:List id="m_listDoor" width="892" height="200" x="0" y="464" itemRendererSkinName="EmperorCountryCellSkin">
+			<e:layout>
+				<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:List>
+		<com_main:CImage y="464" source="line_009_png" height="4" left="0" right="0"/>
+		<com_main:CImage source="line_009_png" height="4" left="0" right="0" bottom="10"/>
+		<e:Group id="m_gWei1" width="250" height="60" y="472" right="8">
+			<com_main:CImage source="line_005_png" bottom="-10" horizontalCenter="0" height="20"/>
+			<com_main:CImage id="m_imgWei" source="common_country1_1_png" left="5" verticalCenter="0"/>
+			<com_main:CLabel id="m_lalWei" text="攻击加成：" x="80" size="22" verticalCenter="0" textColor="0xffffff" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+		<e:Group id="m_gWei2" width="250" height="60" y="535.5" right="8">
+			<com_main:CImage source="line_005_png" bottom="-10" horizontalCenter="0" height="20" x="-54" y="-14" scaleX="1" scaleY="1"/>
+			<com_main:CImage id="m_imgWei2" source="common_country1_1_png" left="5" verticalCenter="0"/>
+			<com_main:CLabel id="m_lalWei2" text="攻击加成：" x="80" size="22" verticalCenter="0" textColor="0xFFFFFF" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+		<e:Group id="m_gWei3" width="250" height="60" y="599" right="8">
+			<com_main:CImage source="line_005_png" bottom="-10" horizontalCenter="0" height="20" x="-500" y="67" scaleX="1" scaleY="1"/>
+			<com_main:CImage id="m_imgWei3" source="common_country1_1_png" left="5" verticalCenter="0"/>
+			<com_main:CLabel id="m_lalWei3" text="攻击加成：" x="80" size="22" verticalCenter="0" textColor="0xFFFFFF" fontFamily="Microsoft YaHei"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

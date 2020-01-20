@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PayGrowFundPanelSkin" width="1159" height="530" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<com_main:ComCostTextButton id="m_btnBuy" skinName="com_cost_text_button" currentState="size4" anchorOffsetX="124.5" anchorOffsetY="41" x="1014.5" y="-59"/>
+	<e:Scroller anchorOffsetX="0" anchorOffsetY="0" left="0" top="0" right="0" bottom="0">
+		<e:Group id="m_pGSroller">
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

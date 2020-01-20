@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MyHead" width="106" height="125" currentState="base" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="base,battle" >
+	<com_main:GeneralHeadRender id="m_pHead" x="6" y="-1" currentState="none" skinName="com_general_head_render" scaleX="0.7" scaleY="0.7"/>
+	<e:Image source="border_1001_png" x="-7" y="94" width="140"/>
+	<e:Label text="战斗中" includeIn="battle" y="97" size="20" horizontalCenter="1" textColor="0xff0000"/>
+	<e:Label text="队列中:" x="10" y="94" size="20" fontFamily="Microsoft YaHei" textColor="0xe9e9e6" includeIn="base"/>
+	<e:Label id="m_pLbNum" text="1" x="90" y="95" size="20" textColor="0x00ff00" fontFamily="Microsoft YaHei" includeIn="base"/>
+</e:Skin>

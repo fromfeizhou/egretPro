@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="world_battle_view" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" left="156" top="108" right="144" bottom="99" width="1038">
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" y="0" source="frame_101_jpg" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" scale9Grid="15,50,92,22"/>
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" y="0" source="frame_002_jpg" anchorOffsetX="0" width="1034.78"/>
+		<e:Label text="情报" y="13.68" textAlign="right" size="36" horizontalCenter="0" textColor="0xffff99"/>
+		<e:Scroller id="m_pScroller" width="1002" anchorOffsetX="0" horizontalCenter="0.5" anchorOffsetY="0" top="71" bottom="11">
+			<e:List id="m_pList">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Group id="m_pBtnClose" width="115" height="77" anchorOffsetX="57.5" anchorOffsetY="38.5" right="-10" top="-7">
+			<com_main:CImage xmlns:com_main="com_main.*" scaleX="1" scaleY="1" source="btn_009_up_png"/>
+		</e:Group>
+		<com_main:CImage anchorOffsetX="0" width="1034.78" source="border_1019_png" horizontalCenter="0.5" bottom="5" touchEnabled="false" height="122"/>
+	</e:Group>
+</e:Skin>

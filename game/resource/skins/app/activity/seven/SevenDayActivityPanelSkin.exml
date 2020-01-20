@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenDayActivityPanelSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="7">
+		<com_main:CImage xmlns:com_main="com_main.*" x="0" y="0" source="hd_7d_border05_png" anchorOffsetX="0"  width="1194" height="654"/>
+		<com_main:CImage xmlns:com_main="com_main.*" y="-10" source="lb_7d_7rkfkh_png" anchorOffsetX="0"
+		                 horizontalCenter="125.5" />
+		<com_main:CImage id="m_btn_close" xmlns:com_main="com_main.*" y="40" source="btn_110_png" anchorOffsetX="0"
+		                 horizontalCenter="544" />
+		<e:Group horizontalCenter="137" y="82" width="280">
+			<e:Group horizontalCenter="0">
+				<e:Label text="结束倒计时：" size="18" fontFamily="Microsoft YaHei" textColor="0xfcf9d7" y="2" />
+				<e:Label id="m_downTime" text="6天28时03分" size="18" fontFamily="Microsoft YaHei" textColor="0x00ff00" y="2" x="103" />
+			</e:Group>
+			>
+		</e:Group>
+		<e:Group y="-24" x="-35">
+			<com_main:CImage xmlns:com_main="com_main.*" source="hd_7d_wj_dc_png" anchorOffsetX="0" x="-39"  y="-34"/>
+			<com_main:CImage xmlns:com_main="com_main.*" source="lb_7d_kf7rdc_png" anchorOffsetX="0" horizontalCenter="-45"
+			                 verticalCenter="136.5" />
+			<e:Label text="将星云集" size="36" fontFamily="Microsoft YaHei" textColor="0xfcf9d7" horizontalCenter="-46"
+			         verticalCenter="184" stroke="2" strokeColor="0x4b1e02" />
+			<com_main:CImage xmlns:com_main="com_main.*" source="lb_7d_ssj_png" anchorOffsetX="0" horizontalCenter="-67"
+			                 verticalCenter="261" />
+		</e:Group>
+		<e:Group x="440" y="111">
+			<com_main:CImage xmlns:com_main="com_main.*" source="hd_7d_border03_png" anchorOffsetX="0" x="-14" y="2" width="113" />
+			<e:ViewStack id="m_tabViewStack" selectedIndex="1" left="104" top="66" anchorOffsetX="0" width="654" anchorOffsetY="0" height="477">
+			</e:ViewStack>
+			<com_main:ComTabTopGroup id="m_comTabTopGroup" skinName="com_tab_top_activity_group" y="5" width="647" height="49"
+			                         x="99" anchorOffsetX="0" anchorOffsetY="0" />
+			<com_main:ComTabGroup id="m_comTabGroup" skinName="com_tab_activity_group" left="-9" top="63" bottom="-63"
+			                      width="111" />
+		</e:Group>
+	</e:Group>
+</e:Skin>

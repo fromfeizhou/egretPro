@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossBuffCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="own,other"  width="630" height="164">
+	<e:Group width="630" height="164" horizontalCenter="0">
+
+		<com_main:CImage touchEnabled="false" source="border_1020_png" y="0" width="630" horizontalCenter="0" height="34"/>
+		<com_main:CLabel id="m_labTitle" text="个人BUFF" x="10" y="5" textColor="0xaac7ff" size="24" fontFamily="Microsoft YaHei"/>
+		<com_main:CLabel id="m_labDesc" text="个人所有参战部队，攻击+20%，各人所有参数部队，攻击+20%" size="24" fontFamily="Microsoft YaHei" width="300" verticalCenter="16" left="140" lineSpacing="10" textColor="0xabb7d1"/>
+		<com_main:ComCostButton id="m_btnUpgrade" skinName="com_cost_button" verticalCenter="16" currentState="style1" horizontalCenter="232"/>
+		<com_main:CrossBuffIconCell id="m_pIcon" currentState="basebuff" skinName="General_skill_icon_view" verticalCenter="27.5" left="4"/>
+	</e:Group>
+</e:Skin>

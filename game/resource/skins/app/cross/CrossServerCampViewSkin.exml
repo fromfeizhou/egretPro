@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossServerCampViewSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui"
+        xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<com_main:TeamPanel id="m_teamPanel" skinName="TeamPanelSkin" width="100%" height="100%" horizontalCenter="0"
+	                    verticalCenter="0" />
+	<e:Group id="m_pBtnBack" width="194" height="65" anchorOffsetY="32.5" anchorOffsetX="97" left="0" top="0">
+		<com_main:CImage width="100%" height="100%" scaleX="1" scaleY="1" source="btn_008_up_png" />
+	</e:Group>
+
+	<com_main:ComButton id="m_pAddBtn" y="490" skinName="com_button" currentState="style1" anchorOffsetX="72.5" anchorOffsetY="30" right="63"/>
+	<e:Group id="m_pArmyStatus" width="318" height="60" horizontalCenter="0" y="539">
+		<com_main:CImage scaleX="1" scaleY="1" source="border_1001_png" width="100%" height="100%" anchorOffsetY="0" y="0"
+		                 anchorOffsetX="0" x="0" />
+		<e:Label id="m_pLbArmyStatus"  text="行军中" horizontalCenter="0" verticalCenter="0" size="36" textColor="0x00FF00" />
+		<com_main:CImage id="m_pback" scaleX="1" scaleY="1" source="icon_hc_png"  anchorOffsetY="0"
+		                 anchorOffsetX="0"  verticalCenter="0" right="0" visible="false"/>
+	</e:Group>
+	<e:Group y="66" right="0" width="279.67" height="80" anchorOffsetX="0" anchorOffsetY="0">
+		<com_main:CImage touchEnabled="false" width="279" height="100%" scaleX="1" scaleY="1" source="border_006_png" alpha="0.65"  anchorOffsetX="0" x="2" y="0" anchorOffsetY="0"/>
+		<com_main:CLabel  text="跨服战总兵库" fontFamily="Microsoft YaHei" size="18" verticalAlign="middle" textAlign="right"  horizontalCenter="0.16499999999999204" textColor="0xabb7d1" y="8"/>
+		<com_main:WorldRankTroops id="m_troop" touchEnabled="false" currentState="cross" skinName="world_rank_army" horizontalCenter="-0.33500000000000796" y="30"/>
+	</e:Group>
+		<e:Group id="m_pItemRoot" width="60" height="408" x="25.33" y="120" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false">
+			<e:Image source="border_1030_png" alpha="0.6" width="100%" height="90%" rotation="90" horizontalCenter="0" scale9Grid="24,3,57,21"/>
+			<e:Group x="-9" y="-13.63" touchEnabled="false">
+			<com_main:WorldQueTroopItem id="queItem0" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem1" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem2" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem3" skinName="WorldQueTroopItemSkin"/>
+			<com_main:WorldQueTroopItem id="queItem4" skinName="WorldQueTroopItemSkin"/>
+			<e:layout>
+				<e:VerticalLayout gap="0"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+	<e:Group right="0" top="0" width="500" height="58" touchChildren="false" touchEnabled="false" visible="false">
+	<e:Image source="border_041_png" scale9Grid="7,6,42,42" left="0" top="0" right="0" bottom="0" />
+	<e:Group width="58" height="58" y="0" x="0">
+		<e:Image source="border_016_png" />
+		<e:Image x="9.66" y="3.62" source="general_type_bubing_png" />
+		<e:Label id="m_pLbBBNum" text="3000" size="23" x="67" verticalCenter="0.5" />
+	</e:Group>
+	<e:Group width="58" height="58" y="0" x="167">
+		<e:Image source="border_016_png" />
+		<e:Image x="9.66" y="3.62" source="general_type_qibing_png" />
+		<e:Label id="m_pLbQBNum" text="3000" size="23" x="67" verticalCenter="0.5" />
+	</e:Group>
+	<e:Group width="58" height="58" y="0" x="331">
+		<e:Image source="border_016_png" />
+		<e:Image source="general_type_gongbing_png" x="9.66" y="3.62" />
+		<e:Label id="m_pLbGBNum" text="3000" size="23" x="67" verticalCenter="0.5" />
+	</e:Group>
+</e:Group>
+
+<com_main:ComIndexBar id="m_comIndexBar" right="58" bottom="136" skinName="ComIndexBarSkin"  visible="false"/>
+</e:Skin>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SevenIICornucopiaSkin" width="1059" height="557" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Group width="100%" height="100%" x="0" y="0">
+		<e:Image id="m_imgTips" source="lb_7t_zcjbcygj_png" y="3" horizontalCenter="-164"/>
+		<e:Label id="m_lb_hight" text="最高获得 999999 元宝" x="727.68" y="40.67" size="26" fontFamily="Microsoft YaHei"/>
+		<e:Image source="zyt_7t_cjbj_png" x="157" y="59"/>
+		<e:Group width="598" height="154" x="252" y="157" anchorOffsetX="0" anchorOffsetY="0">
+			<e:BitmapLabel id="m_awardNum" x="20" y="27" font="lotteryNum_fnt" text="00000" letterSpacing="41"/>
+		</e:Group>
+        <com_main:ComButton id="m_awardBtn" skinName="com_button" currentState="style4" horizontalCenter="25.5" verticalCenter="181" />
+		<e:Label id="m_lbButtonDis" text="聚宝重置10次后重置进度，您已聚宝0次" y="521" size="26" fontFamily="Microsoft YaHei" horizontalCenter="25.5" stroke="3" strokeColor="0x311616"/>
+		<e:Group y="347" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="25">
+			<e:Group x="11" y="14" height="37" scaleX="1" scaleY="1">
+				<e:Image source="lb_bcjbsy_png" x="6" y="5" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:BitmapLabel id="lb_down" y="16" font="role_level_fnt" text="4" scaleX="0.6" scaleY="0.6" letterSpacing="-6" horizontalCenter="-16.5" x="218"/>
+			<e:Group height="37" x="353" y="17" scaleX="1" scaleY="1">
+				<e:Image source="lb_hg_png" x="0" y="15" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:BitmapLabel id="lb_up" y="16" font="role_level_fnt" text="43152" scaleX="0.6" scaleY="0.6" letterSpacing="-6" horizontalCenter="156.5" x="391"/>
+			<e:Group height="37" x="553" y="11" scaleX="1" scaleY="1">
+				<e:Image source="lb_yb_png" x="5" y="5" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

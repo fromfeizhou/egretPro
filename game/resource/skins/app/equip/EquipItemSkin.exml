@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipItemSkin" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing"   states="info,normal,equip,equip_info"  height.equip="155" height.equip_info="142">
+	<e:Group cacheAsBitmap="true" width="102" x="0" x.normal="0">
+		<com_main:CImage id="m_imgBg" width="102" height="102" x="0" alpha="1" source="Qualitykuang0_png" y="0"/>
+		<com_main:CImage id="m_imgIcon" width="90" height="90" x="6" source="equip_icon_t_png" y="6"/>
+		<e:Group id="m_pInfoCon" y="5" includeIn="info" left="5" right="5" height="17" left.equip_info="5" right.equip_info="5" y.equip_info="6">
+			<e:Image x="0" anchorOffsetY="0" height="17" width="75" source="border_040_png" y="0.5" alpha="0.8"/>
+			<e:Group x="3.5" verticalCenter="1.5">
+				<e:Label id="m_labTitle" text="强化" size="14" textColor="0xE9E9E6" y="0" x="0" fontFamily="Microsoft YaHei" stroke="1"/>
+				<e:Label id="m_labLv" text="500" size="14" textColor="0xE9E9E6" y="0" x="32" fontFamily="Microsoft YaHei" stroke="1"/>
+				<e:layout>
+					<e:HorizontalLayout gap="0"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pInfoCon0" y="5" includeIn="equip_info" left="5" right="5" height="17">
+			<e:Image source="border_040_png" includeIn="equip_info" x="0" y="0.5" anchorOffsetY="0" anchorOffsetX="0" height="17" width="75" alpha="0.8"/>
+			<e:Label id="m_labQh" text="强化200" size="14" textColor="0xE9E9E6" y="3" x="3.5" fontFamily="Microsoft YaHei" stroke="1"/>
+		</e:Group>
+		<e:Group id="m_pInfoCon2" y="77" includeIn="equip_info" left="5" right="5" height="22">
+			<e:Image x="-1" anchorOffsetY="0" height="100%" source="border_1001_png" width="78"/>
+			<e:Group x="4" verticalCenter="0">
+			<e:Label id="m_labWrought" text="精炼2000" size="14" y="0" x="0" fontFamily="Microsoft YaHei" stroke="1" textColor="0x00ff00"/>
+			<e:layout>
+				<e:HorizontalLayout gap="0"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group id="m_pInfoCon1" y="103.5" includeIn="info,equip_info" left="0" right="0" height="22">
+			<e:Image x="0" anchorOffsetY="0" height="100%" source="border_1001_png" y="-1"/>
+			<e:Group verticalCenter="0" horizontalCenter="0">
+			<e:Label id="m_labName" text="强化" size="14" textColor="0xE9E9E6" y="0" x="0" fontFamily="Microsoft YaHei" stroke="1"/>
+			<e:Label id="m_labSJLv" text="5000" size="14" y="0" x="32" stroke="1" fontFamily="Microsoft YaHei" textColor="0x00ff00" includeIn="normal,equip,equip_info"/>
+			<e:layout>
+				<e:HorizontalLayout gap="0"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Image id="m_imgFight" source="com_state_up_png" x="75.67" y="8.33" includeIn="info,equip" visible="false"/>
+		<e:Group id="m_pGenCon" includeIn="equip" x="1" y="33" visible="false">
+			<e:Image source="border_1030_png" includeIn="equip" y="0" width="100" x="0"/>
+			<e:Label id="m_labGenName" text="武将名字" includeIn="equip" size="20" verticalCenter="0" horizontalCenter="0"/>
+		</e:Group>
+		<e:Label id="m_labEquipName" text="装备名称" includeIn="equip" y="130" size="20" horizontalCenter="1" fontFamily="Microsoft YaHei"/>
+		<e:Label id="m_labEquipLv" text="180级" includeIn="equip" y="107" size="20" horizontalCenter="1" fontFamily="Microsoft YaHei"/>
+		<e:Label id="m_labWear" text="已穿戴" includeIn="equip" y="7" size="18" horizontalCenter="13" fontFamily="Microsoft YaHei" textColor="0x00ff00"/>
+	</e:Group>
+	<e:Group id="m_pEffRoot" width="102" height="102" anchorOffsetX="50" anchorOffsetY="50" horizontalCenter.equip_info="0" horizontalCenter.equip="0" touchEnabled="false" y="49" y.normal="50" y.info="50" y.equip="50" y.equip_info="50" x.equip_info="50" x.equip="50" horizontalCenter.info="0" horizontalCenter.normal="0">
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="role_change_name" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" width="561" height="345">
+		<com_main:APopUp id="m_PopUp" anchorOffsetX="0" anchorOffsetY="0" skinName="APopUpSkin" scaleX="1" scaleY="1" currentState="size101" y="0" x="1"/>
+		<com_main:ComResCost id="m_comResCost" y="190" skinName="ComResCostSkin" horizontalCenter="0"/>
+		<e:Group y="130.44" horizontalCenter="0">
+			<com_main:CImage x="0" y="0" anchorOffsetX="0" width="733" anchorOffsetY="0" height="75" source="border_031_png" scale9Grid="37,39,9,5" scaleX="0.5" scaleY="0.6"/>
+			<e:EditableText id="m_labRoleName" width="350" height="38" promptColor="0x5d5f64" anchorOffsetX="0" anchorOffsetY="0" size="20" verticalAlign="middle" y="3.64" scaleX="1" scaleY="1" prompt="请输入3-5个字符" fontFamily="Microsoft YaHei" textAlign="center" horizontalCenter="0" textColor="0xe9e9e6" text=""/>
+		</e:Group>
+		<com_main:ComButton id="m_btnChange" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" currentState="style2" scaleX="0.7" scaleY="0.7" y="293.66" horizontalCenter="0"/>
+		<e:Group y="186" horizontalCenter="0" visible="false">
+			<e:Image source="line_002_png" y="11" height="36" scale9Grid="137,5,495,33" width="149" x="0" anchorOffsetX="0"/>
+			<e:Label id="m_labCost" text="26 " x="62" y="16.67" textColor="0xE9E9E6" size="24"/>
+			<e:Group x="0" y="0">
+				<e:Image source="border_016_png" x="0" y="0"/>
+				<e:Image id="m_imgIcon" scaleX="0.5" scaleY="0.5" horizontalCenter="0" verticalCenter="0" source="common_prop_26_png"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

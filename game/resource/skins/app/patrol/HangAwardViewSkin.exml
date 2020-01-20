@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HangAwardViewSkin"  xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" width="1334" height="750">
+    <e:Group id="m_pRoot" width="1334" height="750">
+		<e:Group id="group" horizontalCenter="0.5" verticalCenter="284">
+				<com_main:CImage source="border_1001_png" anchorOffsetY="0" height="37.67" anchorOffsetX="0" width="356.67" x="0" y="1"/>
+				<com_main:CLabel text="点击任意区域关闭" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0" size="24"/>
+			</e:Group>
+	<com_main:APopUp id="m_apopUp" skinName="APopUpSkin" currentState="size7" width="870" height="540" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="zyt_10_png" horizontalCenter="0" y="4" alpha="0.9" width="746" height="165"/>
+	<e:Image source="border_1008_png" left="237" right="242" top="275" scaleY="-1" anchorOffsetX="0"/>
+	<e:Image source="lb_gjjl_png" horizontalCenter="0" y="92"/>
+	<e:Image/>
+	<e:Group y="156" x="257">
+			<e:Image source="zyt_16_png" horizontalCenter="0" y="5" width="831" height="116"/>
+			<e:Image source="world_title_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label  text="挂机时间：" x="278" size="30" textColor="0xe7d7a7" verticalCenter="0"/>
+			<e:Label id="m_pTtime"  text="00:00:00" x="414" size="30" textColor="0x00ff00" verticalCenter="2.5"/>
+		
+	</e:Group>
+	<e:Image source="zyt_07_png" horizontalCenter="51" y="238" alpha="0.5" width="750" height="398"/>
+		<e:Image source="line_007_png" x="439.98" y="289"/>
+		
+	<e:Image source="line_007_png" x="890" y="289" scaleX="-1"/>
+	<e:Label  text="获得物品" size="28" textColor="0xe9e9e9" verticalCenter="-61" horizontalCenter="0"/>
+	
+	<e:Image source="zyt_17_png" horizontalCenter="0" y="474" width="816" height="163"/>
+	
+	</e:Group>
+		<e:Group id="m_itemRoot" anchorOffsetY="0"  anchorOffsetX="0"  y="356"  horizontalCenter="-17" width="700" height="226">
+			<!--<e:layout>
+				<e:TileLayout orientation="rows" requestedColumnCount="5" verticalGap="30" horizontalGap="40" horizontalAlign="center"/>
+			</e:layout>-->
+		<com_main:ComItemNew  skinName="com_item_new" currentState="base" visible="false"/>
+		<com_main:ComItemNew  skinName="com_item_new" currentState="base" x="126" anchorOffsetX="50" anchorOffsetY="50" y="50" visible="false"/>
+		<!--<com_main:ComItemNew  skinName="com_item_new" currentState="base"/>
+		<com_main:ComItemNew  skinName="com_item_new" currentState="base"/>
+		<com_main:ComItemNew  skinName="com_item_new" currentState="base"/>
+		<com_main:ComItemNew  skinName="com_item_new" currentState="base"/>
+		<com_main:ComItemNew  skinName="com_item_new" currentState="base"/>
+		<com_main:ComItemNew  skinName="com_item_new" currentState="base"/>-->
+		</e:Group>
+	<e:Group id="m_bg" horizontalCenter="0" y="500">
+	<e:Image source="border_1019_png" horizontalCenter="0" touchEnabled="false" width="850" y="15" anchorOffsetX="0" alpha="0.8" height="122"/>
+	</e:Group>
+	<e:Group id="m_pBtnShowNext" left="0" top="0" right="0" bottom="0">
+	</e:Group>
+</e:Skin>

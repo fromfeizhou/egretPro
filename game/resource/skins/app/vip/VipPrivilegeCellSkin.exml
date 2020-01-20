@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="VipPrivilegeCellSkin" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*"
+        xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*">
+	<e:Group x="0" y="0">
+		<com_main:CImage scaleX="1" scaleY="1" source="border_1020_png" width="525" anchorOffsetX="0" x="22" />
+		<com_main:CImage scaleX="1" scaleY="1" source="vip_pattern01_png" anchorOffsetX="0" verticalCenter="0" x="22" />
+		<com_main:CImage id="m_imgNew" scaleX="1" scaleY="1" source="vip_xin_png" anchorOffsetX="0" verticalCenter="0.5" x="0" />
+		<e:Group width="272" height="37" x="58" y="2" anchorOffsetY="0" anchorOffsetX="0">
+			<e:Label id="m_labDes" text="现价" size="22" fontFamily="Microsoft YaHei" textColor="0xabb7d1" verticalCenter="0.5" />
+			<com_main:CImage id="m_imgUpState" scaleX="1" scaleY="1" source="com_state_up_png" anchorOffsetX="0" verticalCenter="0.5" x="0" />
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SystemReportSkin" width="714" height="588" currentState="empty" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" states="base,empty" >
+	<e:Group horizontalCenter="0" y="3">
+	<e:Image y="28" source="junbei_line_png" horizontalCenter="-154" alpha="0.8"/>
+	<com_main:CLabel id="m_labTile" text="每日税收" y="15.14" textAlign="center" height="40" anchorOffsetX="2.67" anchorOffsetY="0" verticalAlign="middle" size="30" scaleX="1" scaleY="1" horizontalCenter="2" textColor="0xe9e9e6"/>
+	<e:Image scaleX="-1" source="junbei_line_png" y="28.68" horizontalCenter="164" x="10" alpha="0.8"/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" gap="10"/>
+		</e:layout>
+	</e:Group>
+	<e:Label text="尊敬的主公：" x="44.02" y="95.67" size="24" textColor="0xabb7d1"/>
+	<e:Label id="m_lbContent" text="       您身为洛阳的太守，对于所应付职责，已尽心低完成了，百姓对您负责的行为感到满足。" x="44.02" y="135.68" size="24" anchorOffsetX="0" width="628.33" anchorOffsetY="0" height="201.67" textColor="0xabb7d1" lineSpacing="10"/>
+	<e:Group x="0" y="363" width="100%" visible.empty="false">
+		<com_main:CLabel text="获得" y="18" textAlign="center" anchorOffsetX="2.67" anchorOffsetY="0" verticalAlign="middle" size="30" textColor="0xe9e9e6" scaleX="1" scaleY="1" x="328"/>
+		<e:Image source="line_007_png" x="144.98" y="12"/>
+		<e:Image source="line_007_png" x="574" y="12" scaleX="-1"/>
+		<e:Image source="line_1006_png" y="0" width="100%" x="0"/>
+	</e:Group>
+	<e:Scroller width="615" height="102" y="442" horizontalCenter="1.5" visible.empty="false">
+		<e:List id="m_pRewardList" x="308">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" paddingLeft="5" paddingRight="5"/>
+				</e:layout>
+			</e:List>
+	</e:Scroller>
+</e:Skin>

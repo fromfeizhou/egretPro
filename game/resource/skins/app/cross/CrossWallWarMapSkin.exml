@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CrossWallWarMapSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com_main="com_main.*">
+	<e:Image id="m_imgBg" horizontalCenter="0" source="guaji_map_1_jpg" verticalCenter="-25"/>
+	<e:Group id="m_pRoot" touchEnabled="false" touchChildren="true" y="0" x="0" width="100%" height="100%">
+		<e:Group y="0" horizontalCenter="0" touchEnabled="false" width="400">
+			<e:Image source="border_1060_png" height="63" width="389"/>
+			<e:Label id="m_labTitle" text="皇城东门" y="7" textColor="0xe7d7a7" size="30" bold="true" touchEnabled="false" horizontalCenter="0"/>
+			<e:Group y="27" touchEnabled="false" touchChildren="false" width="241" x="344" scaleX="1" scaleY="1">
+				<e:Image source="border_1030_png" alpha="0.7" width="100%"/>
+				<e:Label id="m_labEnemyHp" text="敌方剩余：10%" size="24" touchEnabled="false" horizontalCenter="0" verticalCenter="0" textColor="0xff0000"/>
+			</e:Group>
+			<com_main:ComButton id="m_btnFight" y="170" skinName="com_button" anchorOffsetX="120" anchorOffsetY="37.5" x="200.5" currentState="style3"/>
+			<e:Image id="m_btnFightView" source="btn_047_up_png" x="395" y="166" anchorOffsetX="37" anchorOffsetY="38" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group y="56.8" horizontalCenter="0" touchEnabled="false" touchChildren="false" width="240">
+			<e:Image source="proBg_015_png" width="100%" scale9Grid="10,4,67,10"/>
+			<e:Image id="m_imgPro" source="pro_018_png" y="2" x="2" height="14" width="0"/>
+			<e:Label id="m_labPro" text="100%" size="18" touchEnabled="false" horizontalCenter="0" verticalCenter="0" textColor="0xe9e9e6" stroke="1"/>
+		</e:Group>
+		<e:Group id="m_pAttTime" y="76" horizontalCenter="0" touchEnabled="false" touchChildren="false" width="241" visible="false">
+			<e:Image source="border_1030_png" alpha="0.7" width="100%"/>
+			<e:Label id="m_labAttTime" text="30:00后开始进攻" size="24" touchEnabled="false" horizontalCenter="0" textColor="0xe9e9e6" verticalCenter="0"/>
+		</e:Group>
+		<e:Group width="768" height="362" touchEnabled="false" touchChildren="false" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-61" verticalCenter="48">
+			<e:Group id="m_pGen0" width="10" height="10" x="171.88" y="168.58" touchEnabled="false"/>
+			<e:Group id="m_pGen1" width="10" height="10" x="311.88" y="242.58" touchEnabled="false"/>
+			<e:Group id="m_pGen2" width="10" height="10" x="471.88" y="319.58" touchEnabled="false"/>
+			<e:Group id="m_pGen3" width="10" height="10" x="70" y="293" touchEnabled="false"/>
+			<e:Group id="m_pGen4" width="10" height="10" x="225.88" y="371.58" touchEnabled="false"/>
+			<e:Group id="m_pGenLeader" width="10" height="10" x="421.61" y="175.91" touchEnabled="false"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>
