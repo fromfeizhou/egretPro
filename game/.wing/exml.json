@@ -1,0 +1,36 @@
+{
+  "global": {
+    "globalAutoLayerMarkEnable": true,
+    "globalBindingDataTestObj": []
+  },
+  "1598d7ea2ba": {
+    "bindingDataTestObj": []
+  },
+  "166b9cd6795": {
+    "bindingDataTestObj": [
+      {
+        "key": "name",
+        "value": "测试"
+      }
+    ]
+  },
+  "166b9de7d90": {
+    "bindingDataTestObj": []
+  },
+  "168a1d5dd2a": {
+    "guideLines": [
+      {
+        "type": "h",
+        "pos": -140
+      }
+    ]
+  },
+  "16c94818feb": {
+    "guideLines": [
+      {
+        "type": "h",
+        "pos": 756
+      }
+    ]
+  }
+}
