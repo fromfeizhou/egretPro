@@ -1,0 +1,16 @@
+{
+	"name": "egret",
+	"version": "4.0.0",
+	"modules": [
+		{
+			"name": "dragonBones",
+			"description": "dragonBones",
+			"files": [
+        		"dragonBones.min.js",
+        		"dragonBones.min.js",
+        		"dragonBones.d.ts"
+			],
+			"root": "src"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"noImplicitAny": false,
+		"sourceMap": false,
+		"declaration": true,
+		"lib": [
+			"es5",
+			"dom",
+			"es2015.promise"
+		],
+		"outFile": "bin/miniLogin.js",
+		"outFile1": "../../game/libs/modules/miniLogin/miniLogin.js"
+	},
+	"include": [
+		"src",
+		"libs"
+	]
+}
