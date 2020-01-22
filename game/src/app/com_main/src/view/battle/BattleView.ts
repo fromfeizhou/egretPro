@@ -78,12 +78,15 @@ module com_main {
 
             if ((BattleModel.isCityWar() || BattleModel.getCheckPointType() == CheckPointType.FIGHT_WILD) || this.isSiegeQueue) {
                 this.btn_back.visible = true;
-                this.lb_auto.visible = false;
-                this.img_auto.visible = false;
+                // this.lb_auto.visible = false;
+                // this.img_auto.visible = false;
+                this.btn_auto_battle.visible = false;
+                BattleProxy.send_C2S_WAR_AUTO(true);
             } else {
                 this.btn_back.visible = false;
-                this.lb_auto.visible = true;
-                this.img_auto.visible = true;
+                // this.lb_auto.visible = true;
+                // this.img_auto.visible = true;
+                this.btn_auto_battle.visible = true;
             }
 
             if (BattleModel.m_isGuideBattle) {

@@ -41,7 +41,6 @@ module com_main {
         private m_gold: number;
         private m_bIsFull: boolean; //兵力是否已满
         private isSave: boolean = false;
-        private soldiderTypeArray: number[] = [SoldierMainType.FOOTSOLDIER, SoldierMainType.RIDESOLDIER, SoldierMainType.ARROWSOLDIER, SoldierMainType.PIKEMAN]
         public constructor(data: any) {
             super();
             this.name = WorldRankView.NAME;
@@ -79,7 +78,7 @@ module com_main {
         /**补兵按钮刷新 */
         public setBtnShow(visible: boolean) {
             this.m_pAddBtn.visible = visible;
-            this.m_pQuickAddBtn.visible = visible;
+            this.m_pQuickAddBtn.visible = visible && this.m_gold > 0;
         }
 
         /**===========================================================================================================
@@ -118,6 +117,7 @@ module com_main {
             EventMgr.addEvent(TaskWorldEvent.WORLD_SAVE_AUTO_TROOP, this.onAutoUpdateTroop, this);
             EventMgr.addEvent(TaskWorldEvent.WORLD_TROOP_BTN_UPDATE, this.onUpdateBtn, this);
             EventMgr.addEvent(BuildEvent.SOLDIER_TRAIN, this.refreshTeamArmy, this);
+            EventMgr.addEvent(TaskWorldEvent.WORLD_UPDATE_LIST, this.onWorldUpdateList, this);
 
             this.m_checkBox.addEventListener(eui.UIEvent.CHANGE, this.onCheck, this);
         }
@@ -126,7 +126,18 @@ module com_main {
             EventMgr.removeEventByObject(TaskWorldEvent.WORLD_SAVE_AUTO_TROOP, this);
             EventMgr.removeEventByObject(TaskWorldEvent.WORLD_TROOP_BTN_UPDATE, this);
             EventMgr.removeEventByObject(BuildEvent.SOLDIER_TRAIN, this);
+            EventMgr.removeEventByObject(TaskWorldEvent.WORLD_UPDATE_LIST, this);
             this.m_checkBox.removeEventListener(eui.UIEvent.CHANGE, this.onCheck, this);
+        }
+
+        private onWorldUpdateList(vo: TeamVo) {
+            if (vo.teamType == TeamType.WORLD && vo.order == this.m_nIndex) {
+                this.refreshTeamArmy();
+                if (this.isSave && vo.autoFill) {
+                    this.addHandler();
+                    this.isSave = false;
+                }
+            }
         }
 
         /**改变选中 */
@@ -157,7 +168,7 @@ module com_main {
         public onUpdateBtn(visible: boolean) {
             this.m_pCheckBox.visible = visible;
             this.m_pAddBtn.visible = visible && !this.isTeamFull();
-            this.m_pQuickAddBtn.visible = visible && !this.isTeamFull();
+            this.m_pQuickAddBtn.visible = visible && !this.isTeamFull() && this.m_gold > 0;;
         }
         /**保存补兵 */
         public onAutoUpdateTroop() {
@@ -176,37 +187,32 @@ module com_main {
                 EffectUtils.showTips(GCode(CLEnum.WOR_SUPP_FAL1), 1, true);
                 return;
             }
+            if (teamVo.state != TeamState.IDLE) {
+                EffectUtils.showTips('部队状态非空闲中');
+                return;
+            }
+            //满兵力跳出
             if (this.isTeamFull())
                 return;
-            let isOpen: boolean = true;
-            for (let key of this.soldiderTypeArray) {
-                let type = Number(key);
-                if (teamVo.isSoliderNeedFillByType(type)) {
-                    if(TeamModel.getTroopsInfo(type).num > 0){
-                        isOpen = false;
-                    }
-                }
-            }
-            
-            if(isOpen){
-                Utils.open_view(TASK_UI.POP_WORLD_TROOP_PANEL, { order: this.m_nIndex });
-            }else{
+
+            //存在兵力补兵
+            if (teamVo.isSoliderCanFill()) {
                 this.addHandler(true);
+            } else {
+                Utils.open_view(TASK_UI.POP_WORLD_TROOP_PANEL, { order: this.m_nIndex });
             }
         }
+
         /**自动补兵 */
         public addHandler(isTip: boolean = false) {
             //根据哪种类型缺补哪种
             let teamVo = TeamModel.getTeamVoByType(TeamType.WORLD, this.m_nIndex);
+            if (teamVo.state != TeamState.IDLE) return;
             let canFillCity = CityBuildModel.hasCityPrivilege(teamVo.cityId, CityRewardType.REPAIR);
             if (canFillCity) {
-                for (let type of this.soldiderTypeArray) {
-                    if(TeamModel.getTroopsInfo(type).num > 0 && teamVo.isSoliderNeedFillByType(type)){
-                        TeamProxy.C2S_TEAM_SUPPLEMENTARY_TROOPS(this.m_nIndex, Number(type));
-                    }
-                }
+                if (!this.m_bIsFull && teamVo.isSoliderCanFill()) TeamProxy.C2S_TEAM_SUPPLEMENTARY_TROOPS(this.m_nIndex, 0);
             } else {
-                if(isTip)EffectUtils.showTips(GCode(CLEnum.CITY_BUILD_TIPS1), 1, true);
+                if (isTip) EffectUtils.showTips(GCode(CLEnum.CITY_BUILD_TIPS1), 1, true);
             }
         }
 
@@ -289,10 +295,7 @@ module com_main {
 
         protected listenerProtoNotifications(): any[] {
             return [
-                ProtoDef.GET_ARMY,
                 ProtoDef.S2C_TEAM_GOLD_SUPPLEMENTARY_TROOPS,
-                ProtoDef.C2S_TEAMMOVE_LIST,
-                ProtoDef.S2C_TEAM_LIST,
                 ProtoDef.S2C_TEAM_SET_AUTOFILL,
                 ProtoDef.S2C_TEAM_SUPPLEMENTARY_TROOPS
             ];
@@ -310,19 +313,6 @@ module com_main {
 
                     }
                     this.refreshTeamArmy();
-                    break;
-                }
-                case ProtoDef.C2S_TEAMMOVE_LIST:
-                case ProtoDef.GET_ARMY: {
-                    break;
-                }
-                case ProtoDef.S2C_TEAM_LIST: {
-                    this.refreshTeamArmy();
-                    let teamVo = TeamModel.getTeamVoByType(TeamType.WORLD, this.m_nIndex);
-                    if (this.isSave && teamVo.autoFill) {
-                        this.addHandler();
-                        this.isSave = false;
-                    }
                     break;
                 }
                 case ProtoDef.S2C_TEAM_SET_AUTOFILL: {
@@ -361,7 +351,7 @@ module com_main {
             this.calcuOneKeyGold();
             this.updateAddBtn();
 
-            this.m_pQuickAddBtn.visible = !this.isTeamFull();
+            this.m_pQuickAddBtn.visible = this.m_gold > 0;
             this.m_pAddBtn.visible = !this.isTeamFull();
 
         }

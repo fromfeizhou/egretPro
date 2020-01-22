@@ -629,6 +629,10 @@ enum IConstEnum {
     HEAD_QUARTERS_3_STAR = 6004,
     /** 名将副本2星条件：60秒内通关 */
     HEAD_QUARTERS_2_STAR = 6005,
+    /** 战功计算战损-胜 */
+    MILITARYMERITS_COMPUTE_LOSS_SUCCESS = 5920,
+    /** 战功计算战损-负 */
+    MILITARYMERITS_COMPUTE_LOSS_FAIL = 5921,
     /** 战功计算-胜 */
     MILITARYMERITS_COMPUTE_SUCCESS = 6006,
     /** 战功计算-负 */
@@ -691,6 +695,10 @@ enum IConstEnum {
     HIGH_VIP_BUY_LV = 6052,
     /** 人民币转换元宝价格的系数:暂定为20 */
     HIGH_VIP_BUY_PRICE = 6053,
+    /** 城市战斗结束胜利 */
+    CITY_WAR_OVER_VICTORY = 6060,
+    /** 城市战斗结束失败 */
+    CITY_WAR_OVER_FAILURE = 6061,
 }
 
 /** 模块使用次数表 */

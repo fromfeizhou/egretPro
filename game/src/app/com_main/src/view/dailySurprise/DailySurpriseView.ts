@@ -114,6 +114,8 @@ module com_main {
         public m_labStock: com_main.CLabel;
         public m_labText: com_main.CLabel;
         public m_labName: com_main.CLabel;
+        public m_pItemRoot: eui.Group;
+
 
 
         private m_tData: gameProto.IShopData;
@@ -197,12 +199,15 @@ module com_main {
             // 奖励道具
             if (isNull(cfg.reward)) return;
             let itemInfo = Utils.parseCommonItemServ(cfg.reward);
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < itemInfo.length; i++) {
                 let data = itemInfo[i];
-                let item: ComItemNew = this[`m_comItem${i}`];
+                let item = ComItemNew.create("count");
+                item.scaleX = 0.8;
+                item.scaleY = 0.8;
                 if (data) {
                     item.visible = true;
                     item.setItemInfo(data.itemId, data.count);
+                    this.m_pItemRoot.addChild(item);
                 } else {
                     item.visible = false;
                 }

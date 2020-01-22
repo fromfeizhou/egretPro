@@ -143,6 +143,7 @@ class GeneralVo extends BaseClass implements IFObject {
 		if (isUpgrade) {
 			com_main.EventMgr.dispatchEvent(GeneralEvent.GENERAL_TUPODAN, this.generalId);
 		}
+		com_main.EventMgr.dispatchEvent(GeneralEvent.GENERAL_ATTRI_CHANGE, this.generalId);
 	}
 
 	/**更新属性 */
@@ -153,7 +154,6 @@ class GeneralVo extends BaseClass implements IFObject {
 			this.attriList[attVk.key] = attVk.value;
 		}
 		com_main.EventMgr.dispatchEvent(GeneralEvent.GENERAL_ATTRI_CHANGE, this.generalId);
-
 	}
 
 	/**更新装备孔信息 */

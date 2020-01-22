@@ -48,10 +48,10 @@ module com_main {
         }
         public onTrainBtn() {
             UpManager.history();
-            if (!this.m_teamVo.isSoliderStorageFull()) {
-                Utils.open_view(TASK_UI.ARMS_PANEL);
-            } else {
+            if (!this.m_teamVo.isSoldierFull() && this.m_teamVo.isSoliderCanFill()) {
                 Utils.open_view(TASK_UI.POP_WORLD_RANK_VIEW, { id: this.m_nOrder });
+            } else {
+                Utils.open_view(TASK_UI.ARMS_PANEL);
             }
 
         }

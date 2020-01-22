@@ -2,6 +2,7 @@ interface ITeamGenData extends gameProto.TeamGeneralData {
 	minSoldierMaxCount?: number,
 	soldierType?: SoldierMainType,
 	level?: number,
+	fight?:number,
 }
 
 class TeamVo extends BaseClass implements IFObject {
@@ -17,7 +18,6 @@ class TeamVo extends BaseClass implements IFObject {
 	public autoFill: boolean;
 	//部队兵力状况
 	private headId: number; //部队头像
-	private fight: number; //部队战力
 
 	public static create() {
 		var obj: TeamVo = new TeamVo();
@@ -51,7 +51,6 @@ class TeamVo extends BaseClass implements IFObject {
 	private parseKeys(body: any) {
 		Utils.voParsePbData(this, body, TeamVo.AttriKey);
 		//部队兵力重置
-		this.fight = 0;
 		this.headId = 0;
 
 		for (let i = 0; i < this.teamGeneralData.length; i++) {
@@ -62,7 +61,18 @@ class TeamVo extends BaseClass implements IFObject {
 				data.soldierType = vo.getGeneralArmyType();
 				data.level = vo.level;
 				data.minSoldierMaxCount = vo.getGenAttriValByType(AttriType.MAX_LEAD_SOLDIER);
-				this.fight = vo.fight;
+				data.fight = vo.fight;
+			}
+		}
+	}
+	/**武将属性变动 */
+	public updateGeneral(id: number) {
+		for (let i = 0; i < this.teamGeneralData.length; i++) {
+			let data = this.teamGeneralData[i];
+			if (data.generalId == id) {
+				let vo = GeneralModel.getOwnGeneral(data.generalId);
+				data.minSoldierMaxCount = vo.getGenAttriValByType(AttriType.MAX_LEAD_SOLDIER);
+				data.fight = vo.fight;
 			}
 		}
 	}
@@ -126,16 +136,17 @@ class TeamVo extends BaseClass implements IFObject {
 
 	/**获得部队血量战力 */
 	public getTeamUiInfo(): { headId: number, fight: number, hp: number, maxHp: number } {
-		let cur = 0, max = 0;
+		let cur = 0, max = 0,fight = 0;
 		for (let i = 0; i < this.teamGeneralData.length; i++) {
 			if (this.teamGeneralData[i].generalId > 0) {
 				cur += this.teamGeneralData[i].minSoldierTotalCount;
 				max += this.teamGeneralData[i].minSoldierMaxCount;
+				fight += this.teamGeneralData[i].fight;
 			}
 		}
 		//容错 防止0
 		max = Math.max(1, max);
-		return { headId: this.headId, fight: this.fight, hp: cur, maxHp: max };
+		return { headId: this.headId, fight: fight, hp: cur, maxHp: max };
 	}
 
 	/**获得移动消耗 */
@@ -265,28 +276,27 @@ class TeamVo extends BaseClass implements IFObject {
 	}
 
 	/**判断兵库是否能补满兵*/
-	public isSoliderStorageFull(): boolean {
-		let armyNumMap = this.getArmyNumMap();
+	// public isSoliderStorageFull(): boolean {
+	// 	let armyNumMap = this.getArmyNumMap();
+	// 	for (let i = 0; i < this.teamGeneralData.length; i++) {
+	// 		let data = this.teamGeneralData[i];
+	// 		if (data.generalId > 0) {
+	// 			let level = MainMapModel.getSoliderBuildLvByType(data.soldierType)//读取建筑等级
+	// 			let lostRate = Math.ceil((data.minSoldierMaxCount - data.minSoldierTotalCount) / data.minSoldierMaxCount * 100);
+	// 			let cfg = C.ArmyUpTeamConfig[data.level] || C.ArmyUpTeamConfig[1];
+	// 			let needFillNum = cfg.armyNum * lostRate;;
+	// 			armyNumMap[data.soldierType] -= needFillNum;
+	// 			if (armyNumMap[data.soldierType] < 0) return false;
+	// 		}
+	// 	}
+	// 	return true;
+	// }
+	/**兵营有剩余兵力 可补兵 */
+	public isSoliderCanFill(): boolean {
 		for (let i = 0; i < this.teamGeneralData.length; i++) {
 			let data = this.teamGeneralData[i];
 			if (data.generalId > 0) {
-				let level = MainMapModel.getSoliderBuildLvByType(data.soldierType)//读取建筑等级
-				let lostRate = Math.ceil((data.minSoldierMaxCount - data.minSoldierTotalCount) / data.minSoldierMaxCount * 100);
-				let cfg = C.ArmyUpTeamConfig[data.level] || C.ArmyUpTeamConfig[1];
-				let needFillNum = cfg.armyNum * lostRate;;
-				armyNumMap[data.soldierType] -= needFillNum;
-				if (armyNumMap[data.soldierType] < 0) return false;
-			}
-		}
-		return true;
-	}
-	/**对应补兵类型 是否需要补兵 */
-	public isSoliderNeedFillByType(type: SoldierMainType): boolean {
-		let totalNum = TeamModel.getTroopsInfo(type).num;
-		for (let i = 0; i < this.teamGeneralData.length; i++) {
-			let data = this.teamGeneralData[i];
-			if (data.generalId > 0 && data.soldierType == type) {
-				return (data.minSoldierMaxCount - data.minSoldierTotalCount) > 0;
+				if (data.minSoldierMaxCount - data.minSoldierTotalCount > 0 && TeamModel.getTroopsInfo(data.soldierType).num > 0) return true;
 			}
 		}
 		return false;

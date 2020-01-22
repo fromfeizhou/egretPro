@@ -239,6 +239,8 @@ module com_main {
             this.m_pBtnGet1.setCostLabel(price.toString());
             this.m_pLabTip.textFlow = Utils.htmlParser(GCodeFromat(CLEnum.HEIGHT_VIP_BUY, VipModel.getHVipGoldLv()));
             this.m_vipRoot.visible = VipModel.isHVipGoldDis();
+            this.m_pBtnGet1.enabled = this.m_status == ActivityStatus.PROCESSING;
+            Utils.isGray(this.m_status !== ActivityStatus.PROCESSING, this.m_pBtnGet1);
         }
         /**领取奖励 */
         private onBtnGetHandler(e: egret.Event): void {

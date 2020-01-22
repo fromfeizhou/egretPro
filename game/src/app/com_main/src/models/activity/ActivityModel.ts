@@ -95,7 +95,8 @@ class ActivityModel {
         if (!vo) {
             //襄阳战不过滤
             if(info.id != 61000){
-                if (time < info.preViewDate || time < info.openDate) return;
+                let offIcon = info.preViewDate > 0 ? time < info.preViewDate : time < info.openDate;
+                if (offIcon) return;
                 if (time > info.closeIconDate) return;
             }
             vo = this.create(info.viewType);

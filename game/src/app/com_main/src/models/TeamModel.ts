@@ -43,11 +43,13 @@ class TeamModel {
         this.defTeamOrder = 0;
         this.otherTeamData = [];
         this.seatOpenLimit = ConstUtil.getNumArray(IConstEnum.UNLOCK_POSITION);
+        this.addEvent();
     }
 
     public static clear() {
         this.teamDic = null;
         this.teamTypeList = null;
+        this.removeEvent();
     }
 
     /**设置大地图最大队伍数量 */
@@ -130,7 +132,7 @@ class TeamModel {
     /**添加上阵武将 */
     private static addTeamGens(teamVo: TeamVo, oldList: number[]) {
         //忽略历史武将 和 竞技场防守
-        if (teamVo.teamType == TeamType.DEF_APK || teamVo.teamType == TeamType.HISTORY_WAR) return;
+        if ( teamVo.teamType == TeamType.HISTORY_WAR ||teamVo.teamType == TeamType.CROSS_SERVER) return;
 
         for (let i = 0; i < teamVo.teamGeneralData.length; i++) {
             let generalId = teamVo.teamGeneralData[i].generalId;
@@ -669,4 +671,36 @@ class TeamModel {
         }
         return false;
     }
+
+
+    /**==================================================================================================================================
+    * 事件监听 start
+    * ==================================================================================================================================
+    */
+    private static addEvent() {
+        com_main.EventMgr.addEvent(GeneralEvent.GENERAL_ATTRI_CHANGE, this.onGeneralChange, this);
+    }
+
+    private static removeEvent() {
+        com_main.EventMgr.removeStaticEvent(GeneralEvent.GENERAL_ATTRI_CHANGE, this.onGeneralChange);
+    }
+    /**武将属性变动 */
+    private static onGeneralChange(generalId: number) {
+        let list = this.teamDic[TeamType.WORLD];
+        for (let key in list) {
+            let info = list[key];
+            if (info) info.updateGeneral(generalId);
+        }
+        if (CrossModel.isWar()) {
+            list = this.teamDic[TeamType.CROSS_SERVER];
+            for (let key in list) {
+                let info = list[key];
+                if (info) info.updateGeneral(generalId);
+            }
+        }
+    }
+    /**==================================================================================================================================
+    * 事件监听 end
+    * ==================================================================================================================================
+    */
 }

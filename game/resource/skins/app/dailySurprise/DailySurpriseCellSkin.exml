@@ -8,15 +8,14 @@
 		<com_main:CImage source="line_1005_png" height="200" width="6" scale9Grid="1,48,7,292" verticalCenter="0" right="2" scaleX="-1"/>
 		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="line_1003_png" scaleY="-1" horizontalCenter="0" top="3"/>
 		<com_main:CImage anchorOffsetX="0" anchorOffsetY="0" source="line_1003_png" horizontalCenter="0" bottom="3"/>
-		<e:Group y="66" scaleX="0.8" scaleY="0.8" horizontalCenter="0">
-			<com_main:ComItemNew id="m_comItem0" x="10" y="10" currentState="count" skinName="com_item_new" width="100" scaleX="1" scaleY="1"/>
-			<com_main:ComItemNew id="m_comItem1" x="20" y="20" currentState="count" skinName="com_item_new" width="100" scaleX="1" scaleY="1"/>
-			<com_main:ComItemNew id="m_comItem2" x="30" y="30" currentState="count" skinName="com_item_new" width="100" scaleX="1" scaleY="1"/>
-			<com_main:ComItemNew id="m_comItem3" x="40" y="40" currentState="count" skinName="com_item_new" width="100" scaleX="1" scaleY="1"/>
-			<e:layout>
-			<e:HorizontalLayout gap="6"/>
-			</e:layout>
-		</e:Group>
+		<e:Scroller x="8" y="64" anchorOffsetX="0" width="341">
+			<e:Group id="m_pItemRoot">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" paddingTop="3"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+
 		<com_main:ComButton id="m_btnbuy" currentState="style1" skinName="com_button" horizontalCenter="0.5" y="220" anchorOffsetX="72" anchorOffsetY="30" horizontalCenter.high="-90"/>
 		<com_main:ComCostButton id="m_btnbuy1" currentState="style5" horizontalCenter="90" y="220" anchorOffsetX="72" anchorOffsetY="30" skinName="com_cost_button" includeIn="high"/>
 		<com_main:CImage id="m_imgSoldOut" source="lb_ysq_png" horizontalCenter="0" verticalCenter="90"/>

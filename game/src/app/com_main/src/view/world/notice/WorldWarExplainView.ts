@@ -30,6 +30,7 @@ module com_main {
 
         protected childrenCreated(): void {
             super.childrenCreated();
+            Utils.toStageBestScaleHeigt(this.m_pViewRoot);
             this.initView();
         }
 

@@ -335,10 +335,10 @@ module com_main {
                 EffectUtils.showTips(GCode(CLEnum.REBIRTH_WORLD_BATTLE), 1, true);
                 return;
             }
-            // if (TeamModel.getTeamBattleByType(this.m_currGenId, TeamType.DEF_APK)) {
-            //     EffectUtils.showTips(GCode(CLEnum.REBIRTH_APK_BATTLE), 1, true);
-            //     return;
-            // }
+            if (TeamModel.getTeamBattleByType(this.m_currGenId, TeamType.DEF_APK)) {
+                EffectUtils.showTips(GCode(CLEnum.REBIRTH_APK_BATTLE), 1, true);
+                return;
+            }
         }
 
         /**当前选中 */

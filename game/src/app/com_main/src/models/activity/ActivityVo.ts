@@ -195,7 +195,7 @@ class ActivityVo extends BaseClass implements IFObject {
 
 	/**请求活动内容(子类重写)  */
 	public requestActivityInfo() {
-
+		debug('')
 	}
 
 	/**是否预告请求 */
@@ -206,7 +206,7 @@ class ActivityVo extends BaseClass implements IFObject {
 
 	/**跨天请求 */
 	public crossDayRequest(){
-
+		debug('')
 	}
 	/**=====================================================================================
 	 * 数据配置相关 end
